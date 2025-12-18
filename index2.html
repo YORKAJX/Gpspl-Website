@@ -3,33 +3,260 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GPSPL | Global Peripheral Solution Pvt. Ltd.</title>
 
-  <link rel="stylesheet" href="css/base.css"> //contains base styles like resets and typography
-  <link rel="stylesheet" href="css/layout.css"> // grids and all 
-  <link rel="stylesheet" href="css/components.css"> // buttons,navigation 
-  <link rel="stylesheet" href="css/sections.css"> // hero,features and footer 
-  <link rel="stylesheet" href="css/responsive.css"> // media queries for responsiveness
+  <link rel="stylesheet" href="css/base.css"> 
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/responsive.css"> 
 </head>
 
 <body>
 
-  <!-- HTML partials injected here -->
-  <div id="topbar"></div>
-  <div id="navbar"></div>
-
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-contact">
+        <span>📍 Based in New Delhi, serving PAN-India deployments</span>
+        <span>✉️ <a href="mailto:khurana.s@gpspl.co.in">khurana.s@gpspl.co.in</a></span>
+        <span>🌐 <a href="https://gpspl.co.in" target="_blank">gpspl.co.in</a></span>
+      </div>
+      <div class="badge-pill">Experience You Can Trust • Since 1997</div>
+    </div>
+  </div>
+  <header>
+    <nav class="nav">
+      <div class="logo-wrap">
+        <div class="logo-mark">G</div>
+        <div>
+          <div class="logo-text-main">GPSPL</div>
+          <div class="logo-text-sub">Global Peripheral Solution Pvt. Ltd.</div>
+        </div>
+      </div>
+      <div class="nav-right">
+        <div class="nav-links" id="navLinks">
+          <a href="#solutions">Solutions</a>
+          <a href="#industries">Industries</a>
+          <a href="#partners">Partners</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Book a Consultation
+        </button>
+        <button class="burger" id="burger">
+          <div class="burger-line"></div>
+        </button>
+      </div>
+    </nav>
+  </header>
   <main>
-    <div id="hero"></div>
-    <div id="solutions"></div>
-    <div id="industries"></div>
-    <div id="partners"></div>
-    <div id="about"></div>
-    <div id="contact"></div>
-  </main>
+    <section class="hero" id="top">
+      <div class="reveal">
+        <h1>
+          Modern <span>display, audio & collaboration</span> experiences for
+          enterprises and institutions.
+        </h1>
 
-  <div id="footer"></div>
+        <p class="hero-subtitle">
+          GPSPL designs, deploys and supports complete AV-IT ecosystems — from
+          interactive classrooms to LED walls and boardrooms.
+        </p>
 
-  <script src="js/main.js"></script>
+        <div class="hero-meta">
+          <span>Interactive Displays</span>
+          <span>LED Walls</span>
+          <span>Hybrid Conferencing</span>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-primary"
+            onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+            Talk to our solutions team →
+          </button>
+
+          <button class="btn-secondary"
+            onclick="document.getElementById('solutions').scrollIntoView({behavior:'smooth'})">
+            Explore solutions
+          </button>
+        </div>
+      </div>
+
+      <aside class="hero-card reveal">
+        <div class="hero-card-header">
+          <div>
+            <div class="hero-card-title">Snapshot: GPSPL</div>
+            <div style="color:#e5e7eb;">Trusted AV & display partner</div>
+          </div>
+          <span class="hero-card-pill">ESTD. 1997</span>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric">
+            <div class="metric-label">Years of Experience</div>
+            <span class="metric-value counter" data-target="28">0</span>+
+          </div>
+          <div class="metric">
+            <div class="metric-label">OEM Brands</div>
+            <span class="metric-value counter" data-target="10">0</span>+
+          </div>
+          <div class="metric">
+            <div class="metric-label">Deployments</div>
+            <span class="metric-value counter" data-target="500">0</span>+
+          </div>
+        </div>
+      </aside>
+    </section>
+    <section id="solutions">
+      <div class="section-head reveal">
+        <div class="section-title">Solutions we deliver</div>
+        <p class="section-subtitle">
+          End-to-end AV & IT systems tailored to how teams teach, meet and collaborate.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <article class="solution-card reveal">
+          <h3 class="solution-title">Interactive Classrooms</h3>
+          <p class="solution-desc">
+            Pen displays, boards and capture systems for modern learning.
+          </p>
+        </article>
+
+        <article class="solution-card reveal">
+          <h3 class="solution-title">Boardrooms</h3>
+          <p class="solution-desc">
+            Reliable AV for executive and hybrid meetings.
+          </p>
+        </article>
+
+        <article class="solution-card reveal">
+          <h3 class="solution-title">Digital Signage</h3>
+          <p class="solution-desc">
+            LED walls and signage for lobbies and campuses.
+          </p>
+        </article>
+      </div>
+    </section>
+    <section id="industries">
+      <div class="section-head reveal">
+        <div class="section-title">Industries we serve</div>
+      </div>
+
+      <div class="pill-tabs" id="industryTabs">
+        <button class="pill-tab active" data-target="education">Education</button>
+        <button class="pill-tab" data-target="corporate">Corporate</button>
+        <button class="pill-tab" data-target="public">Government</button>
+      </div>
+
+      <div class="industry-layout">
+        <div class="industry-highlight reveal" id="industryHighlight">
+          <h3>Smart campuses & digital classrooms</h3>
+          <p>
+            Universities modernise learning spaces with GPSPL.
+          </p>
+        </div>
+
+        <ul class="industry-list reveal" id="industryList">
+          <li>Interactive boards & capture</li>
+          <li>Hybrid classrooms</li>
+          <li>Campus signage</li>
+          <li>Centralised control</li>
+        </ul>
+      </div>
+    </section>
+    <section id="partners">
+      <div class="section-head reveal">
+        <div class="section-title">Technology Partners</div>
+        <p class="section-subtitle">
+          We work with globally trusted OEMs to deliver reliable AV and IT solutions.
+        </p>
+      </div>
+
+      <div class="partners-grid reveal">
+        <div class="partner-logo"><img src="assets/images/partners/wacom.png" alt="Wacom"></div>
+        <div class="partner-logo"><img src="assets/images/partners/lenovo.png" alt="Lenovo"></div>
+        <div class="partner-logo"><img src="assets/images/partners/dell.png" alt="Dell Technologies"></div>
+        <div class="partner-logo"><img src="assets/images/partners/hp.png" alt="HP"></div>
+        <div class="partner-logo"><img src="assets/images/partners/sony.png" alt="Sony"></div>
+        <div class="partner-logo"><img src="assets/images/partners/lg.png" alt="LG Business Solutions"></div>
+        <div class="partner-logo"><img src="assets/images/partners/samsung.png" alt="Samsung"></div>
+        <div class="partner-logo"><img src="assets/images/partners/lumens.png" alt="Lumens"></div>
+        <div class="partner-logo"><img src="assets/images/partners/benq.png" alt="BenQ"></div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="section-head reveal">
+        <div class="section-title">About GPSPL</div>
+        <p class="section-subtitle">
+          Complete IT & AV solution provider with nationwide service capability.
+        </p>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-text reveal">
+          <p>
+            Global Peripheral Solution Pvt. Ltd. (GPSPL) is a New Delhi–based
+            technology solutions company established in 1997. We specialise in
+            the design, supply, installation, and support of integrated IT and
+            Audio-Visual systems for enterprises, institutions, and government
+            organisations.
+          </p>
+
+          <p>
+            Our portfolio covers everything from interactive displays, digital
+            control rooms, LED video walls, and professional AV systems to
+            enterprise servers, storage, networking, and power solutions.
+          </p>
+
+          <p>
+            In addition to sales and deployment, GPSPL provides AMC, on-site
+            support, preventive maintenance, and warranty extension services to
+            ensure long-term system reliability.
+          </p>
+        </div>
+
+        <div class="about-highlights reveal">
+          <ul>
+            <li>✔ IT & AV Sales and Services</li>
+            <li>✔ Digital Control Rooms & Command Centres</li>
+            <li>✔ LED Video Walls & Professional Displays</li>
+            <li>✔ UPS, Power Backup & Rack Solutions</li>
+            <li>✔ Servers, Storage & Networking</li>
+            <li>✔ Warranty Extension & AMC Support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="section-head reveal">
+        <div class="section-title">Start a project</div>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-card reveal">
+          <form id="contactForm">
+            <input name="name" placeholder="Your name" required />
+            <input name="email" placeholder="Email" required />
+            <textarea name="message" placeholder="Project overview"></textarea>
+            <button class="btn-primary" type="submit">Submit</button>
+            <div id="formStatus" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+    </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© <span id="year"></span> GPSPL</span>
+      <span>AV-IT solutions across India</span>
+    </div>
+  </footer>
+  <script src="JS/reveal.js"></script>
+  <script src="JS/counters.js"></script>
+  <script src="JS/industries.js"></script>
+  <script src="JS/contact.js"></script> 
+  <script src="JS/nav.js"></script>
 </body>
 </html>

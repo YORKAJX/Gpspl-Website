@@ -1,0 +1,39 @@
+/* Layout */
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4rem;
+}
+
+section {
+  padding-top: 4rem;
+}
+
+/* Section headings */
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.section-title {
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #9ca3ff;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: var(--muted);
+  max-width: 26rem;
+}
+
+/* Generic grids */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+}

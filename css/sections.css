@@ -1,0 +1,132 @@
+/* Hero */
+ .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 2.5rem;
+      align-items: center;
+      padding: 2.5rem 0 1rem;
+    }
+
+    .eyebrow {
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #a5b4fc;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.25);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 3.7vw, 3rem);
+      line-height: 1.1;
+      margin: 0.9rem 0 0.7rem;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(120deg, #60a5fa, #a855f7, #f97316);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 34rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin: 1.25rem 0 1.7rem;
+      font-size: 0.82rem;
+      color: #cbd5f5;
+    }
+
+    .hero-meta span {
+      padding: 0.22rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(129, 140, 248, 0.4);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      align-items: center;
+    }
+
+/* Industries */
+.industry-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+  gap: 1.5rem;
+}
+
+/* Partners (Simple Grid Structure) */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1.2rem;
+  padding: 1.2rem 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: radial-gradient(circle at top left, #0f172a, #020617);
+  align-items: center;
+}
+
+.partner-logo {
+  opacity: 0.65;
+  filter: grayscale(100%) brightness(1.5);
+  transition: opacity 200ms ease-out, filter 200ms ease-out;
+}
+
+.partner-logo:hover {
+  opacity: 1;
+  filter: grayscale(0%) brightness(1);
+}
+
+/* About */
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 1.6rem;
+}
+
+.about-highlights {
+  /* Added style for the simple list layout */
+  padding: 1.2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+}
+
+.about-highlights ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+/* Contact */
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.05fr);
+  gap: 1.6rem;
+}
+
+.contact-layout > .contact-card:only-child {
+  grid-column: 1 / -1;
+}
