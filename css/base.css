@@ -33,6 +33,30 @@ ul { list-style: none; }
 .section-padding { padding: 60px 0; }
 .bg-light { background-color: var(--light-color); }
 
+.logo {
+    display: flex;         
+    align-items: center;    
+    gap: 15px;   
+}           
+
+.logo-img {
+    height: 50px;         
+    width: auto;          
+}
+
+.logo-text h1 {
+    margin: 0;
+    line-height: 1;
+    color: var(--secondary);
+}
+
+.logo-text p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--primary);   
+    font-weight: bold;
+}
+
 /* --- Buttons --- */
 .btn-primary {
     background-color: var(--primary-color);
@@ -49,7 +73,8 @@ ul { list-style: none; }
 
 /* --- Top Bar --- */
 .top-bar {
-    background-color: var(--secondary-color);
+    background-color: red;
+    border: gold 1px solid;
     color: var(--white);
     padding: 10px 0;
     font-size: 14px;
@@ -188,7 +213,8 @@ header {
 }
 
 .stat-box {
-    background: var(--secondary-color);
+    background: red;
+    border: gold 2px solid;
     color: var(--white);
     padding: 20px;
     border-radius: 8px;
