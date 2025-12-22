@@ -1,14 +1,16 @@
 :root {
-  --primary-red: #c41e3a; /* Deep Red from the logo */
-  --bg-white: #ffffff;
-  --bg-soft: #f8fafc;
-  --text-main: #1e293b;
-  --text-muted: #64748b;
-  --white-pure: #ffffff;
-  --border: #e2e8f0;
+  /* Brand Palette: Deep Red, White, and Gold Lining */
+  --bg: #ffffff;                   
+  --bg-alt: #fcfcfc;                
+  --primary: #c41e3a;             
+  --primary-soft: rgba(196, 30, 58, 0.05);
+  --accent: #d4af37;               
+  --text: #1a1a1a;                  
+  --muted: #64748b;                 
+  --border: rgba(212, 175, 55, 0.3); 
   --radius-lg: 1.25rem;
   --radius-md: 0.9rem;
-  --shadow-red: 0 24px 60px rgba(196, 30, 58, 0.15);
+  --shadow-soft: 0 15px 40px rgba(196, 30, 58, 0.08);
   --transition-fast: 180ms ease-out;
 }
 
@@ -20,10 +22,11 @@
 }
 
 body {
-  background-color: var(--bg-white);
-  color: var(--text-main);
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 a {
