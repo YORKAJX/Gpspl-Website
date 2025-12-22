@@ -57,9 +57,9 @@ ul { list-style: none; }
     font-weight: bold;
 }
 
-/* --- Buttons --- */
 .btn-primary {
     background-color: var(--primary-color);
+    border: gold 2px solid;
     color: var(--white);
     padding: 10px 25px;
     border-radius: 5px;
@@ -86,7 +86,7 @@ ul { list-style: none; }
     align-items: center;
 }
 
-.contact-info span { margin-right: 20px; }
+.contact-info span { margin-right: 20px;}
 .social-icons a { margin-left: 15px; color: var(--white); }
 
 /* --- Header & Nav --- */
@@ -158,7 +158,7 @@ header {
 
 .hero-content h2 {
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 10px;
     color: #ffd700;
 }
@@ -174,7 +174,6 @@ header {
     margin-bottom: 30px;
 }
 
-/* --- Section Titles --- */
 .section-title {
     text-align: center;
     margin-bottom: 50px;
@@ -193,7 +192,6 @@ header {
     margin: 0 auto;
 }
 
-/* --- About Grid --- */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -312,13 +310,13 @@ footer {
     font-size: 14px;
 }
 
-/* --- Responsive --- */
 @media (max-width: 768px) {
     .nav-links {
         position: absolute;
         right: 0;
         top: 80px;
         background: var(--white);
+
         flex-direction: column;
         width: 100%;
         text-align: center;
