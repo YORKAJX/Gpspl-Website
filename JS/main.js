@@ -1,29 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // Function to load HTML modules
-    function loadModule(moduleId, filePath) {
-        fetch(filePath)
-            .then(response => {
-                if (!response.ok) throw new Error(`Error loading ${filePath}`);
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById(moduleId).innerHTML = data;
-                
-                // If we just loaded the header, re-attach event listeners for the mobile menu
-                if (moduleId === 'header-container') {
-                    initMobileMenu();
-                }
-            })
-            .catch(error => console.error(error));
-    }
-
-    // Load the 3 distinct modules
-    loadModule("header-container", "modules/header.html");
-    loadModule("solutions-container", "modules/solutions.html");
-    loadModule("footer-container", "modules/footer.html");
-
-    // Initialize Mobile Menu Logic (called after header loads)
     function initMobileMenu() {
         const hamburger = document.getElementById('hamburger-btn');
         const navLinks = document.getElementById('navLinks');
@@ -34,4 +9,61 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     }
+    function initStatsAnimation() {
+        const statsSection = document.getElementById('statsSection');
+        const counters = document.querySelectorAll('.counter');
+        let hasStarted = false;
+
+        if (!statsSection) return; // Exit if section not found
+
+        const startCounting = () => {
+            console.log("Stats Animation Started!"); 
+
+            counters.forEach(counter => {
+                // Force start at 0
+                counter.innerText = '0'; 
+
+                const target = +counter.getAttribute('data-target');
+                const speed = 100; // Lower number = Faster animation
+                
+                const updateCount = () => {
+                    // Get current value (clean string)
+                    const count = +counter.innerText.replace('+', '');
+                    
+                    // Calculate increment
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        // Add increment & repeat
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        // Finish: Clean up the number formatting
+                        if (target === 1997) {
+                             counter.innerText = target;
+                        } else {
+                             counter.innerText = target + "+";
+                        }
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasStarted) {
+                    startCounting();
+                    hasStarted = true;
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.2 }); 
+
+        observer.observe(statsSection);
+    }
+
+    
+    setTimeout(initStatsAnimation, 500); 
+
 });
