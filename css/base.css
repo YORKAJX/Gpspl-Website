@@ -354,8 +354,125 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     font-weight: 500;
 }
+/* --- Contact Footer Layout --- */
+#contact {
+    background-color: #f8f9fa; /* Clean light grey background */
+    padding-top: 60px;
+    color: #333; /* Dark text for readability */
+}
 
-/* --- Footer --- */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Split 50/50 */
+    gap: 60px;
+    margin-bottom: 50px;
+}
+
+/* --- Left Side: Info Box Styling --- */
+.section-title-left h2 {
+    font-size: 36px;
+    color: #222; 
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.line-left {
+    width: 60px;
+    height: 4px;
+    background: #D32F2F; /* Red Brand Color */
+    margin-bottom: 20px;
+}
+
+.contact-desc {
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* Info Items (Icons + Text) */
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+/* The circle background for icons - KEY to the clean look */
+.icon-circle {
+    width: 45px;
+    height: 45px;
+    background-color: #ffebee; /* Light red background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0; 
+}
+
+.icon-circle i {
+    font-size: 18px;
+    color: #D32F2F; /* Red Icon */
+}
+
+.info-text h4 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #222;
+    font-weight: 600;
+}
+
+.info-text p {
+    margin: 0;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* --- Right Side: Form Box Styling --- */
+.contact-form-box {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Soft Shadow */
+    border-top: 4px solid #D32F2F;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input, 
+.form-group textarea {
+    background: #fdfdfd;
+    border: 1px solid #ddd;
+    color: #333;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.full-width-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+}
+
+.map-section {
+    width: 100%;
+    margin-bottom: -7px; 
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
 footer {
     background: #222;
     color: #fff;

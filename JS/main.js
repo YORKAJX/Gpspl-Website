@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const counters = document.querySelectorAll('.counter');
         let hasStarted = false;
 
-        if (!statsSection) return; // Exit if section not found
+        if (!statsSection) return; 
 
         const startCounting = () => {
             console.log("Stats Animation Started!"); 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 counter.innerText = '0'; 
 
                 const target = +counter.getAttribute('data-target');
-                const speed = 100; // Lower number = Faster animation
+                const speed = 100000000;
                 
                 const updateCount = () => {
                     // Get current value (clean string)
