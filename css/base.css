@@ -330,32 +330,70 @@ header {
 .stat-box h3 { font-size: 28px; }
 
 /* --- Solutions Grid --- */
+/* --- Solutions Section (Card Style) --- */
 .solutions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Wider cards */
     gap: 30px;
+    margin-top: 40px;
 }
 
 .solution-card {
-    background: var(--white);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
-    text-align: center;
+    background: #ffffff;
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent; 
+    display: flex;
+    flex-direction: column; 
 }
 
 .solution-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-bottom: 4px solid #D32F2F; /* Red bottom border on hover */
 }
 
-.icon-box {
-    font-size: 40px;
-    color: var(--primary-color);
-    margin-bottom: 20px;
+.card-image {
+    width: 100%;
+    height: 220px; /* Fixed height for uniformity */
+    overflow: hidden;
 }
 
-.solution-card h3 { margin-bottom: 15px; color: var(--dark-color); }
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills box without stretching */
+    transition: transform 0.5s ease;
+}
+
+.solution-card:hover .card-image img {
+    transform: scale(1.1); /* Slight zoom on image when hovering */
+}
+
+.card-content {
+    padding: 25px;
+    text-align: center;
+    flex-grow: 1; /* Pushes content to fill space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.card-content p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
 
 /* --- Brands --- */
 .brand-grid {
