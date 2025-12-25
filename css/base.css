@@ -428,8 +428,6 @@ header {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain; /* Ensures logo fits without stretching */
-    
-    opacity: 0.7;
     transition: all 0.3s ease;
 }
 
@@ -439,19 +437,63 @@ header {
     transform: scale(1.1); /* Slight zoom on hover */
 }
 /* --- Clients --- */
+
 .clients-scroller {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    position: relative;
+    width: 100%;
+    overflow: hidden; 
+    padding: 20px 0;
+    background: #fff; 
 }
 
-.client-name {
-    background: var(--white);
-    padding: 10px 20px;
-    border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    font-weight: 500;
+.clients-track {
+    display: flex;
+    width: calc(250px * 22); 
+    animation: scroll 40s linear infinite; /* Adjust '40s' to make it faster/slower */
+}
+
+.slide-logo {
+    width: 250px; 
+    padding: 0 30px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-logo img {
+    max-width: 100%;
+    max-height: 80px; 
+    object-fit: contain;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Move left by exactly half the track width (the length of Set 1) */
+        transform: translateX(calc(-250px * 11)); 
+    }
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+    .slide-logo {
+        width: 150px;
+        padding: 0 15px;
+    }
+    
+    .clients-track {
+        /* Recalculate width for mobile size */
+        width: calc(150px * 22);
+    }
+    
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-150px * 11)); }
+    }
 }
 /* --- Contact Footer Layout --- */
 #contact {
