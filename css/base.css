@@ -47,13 +47,13 @@ ul { list-style: none; }
 .logo-text h1 {
     margin: 0;
     line-height: 1;
-    color: var(--secondary);
+    color: rgb(61, 61, 202);
 }
 
 .logo-text p {
     margin: 0;
     font-size: 12px;
-    color: var(--primary);   
+    color: rgb(61, 61, 202);
     font-weight: bold;
 }
 
@@ -111,49 +111,116 @@ ul { list-style: none; }
 }
 
 header {
-    background: var(--white);
+    background: #ffffff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.nav-container {
+.header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Pushes Logo to left, Nav to right */
+    align-items: center; /* Vertically centers everything */
+    padding: 10px 20px;
+    height: 80px; /* Enforces a fixed height for consistency */
+}
+
+.logo a {
+    display: flex;
     align-items: center;
-    height: 80px;
 }
 
-.logo h1 {
-    color: var(--secondary-color);
-    font-size: 28px;
-    font-weight: 800;
+.logo img {
+    height: 55px; /* Adjust this to fit your logo perfectly */
+    width: auto;
 }
 
-.logo p {
-    font-size: 12px;
-    color: var(--primary-color);
-    font-weight: bold;
-    letter-spacing: 1px;
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center; 
+    gap: 30px; 
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: flex; 
+    align-items: center;
 }
 
 .nav-links a {
-    white-space: nowrap;
     text-decoration: none;
-    color: #333;            
-    font-weight: 500;        
-    font-size: 16px;         
-    transition: color 0.3s ease;
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s;
 }
+
 .nav-links a:hover {
-    color: #D32F2F;         
+    color: #D32F2F;
+}
+
+.nav-links .btn-primary {
+    background-color: #D32F2F;
+    color: #ffffff !important; 
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: transform 0.2s ease, background-color 0.3s;
+    display: inline-block;
+}
+
+.nav-links .btn-primary:hover {
+    background-color: #b71c1c;
+    transform: translateY(-2px); 
+    color: #ffffff;
 }
 
 .hamburger {
     display: none;
-    font-size: 24px;
+    font-size: 26px;
     cursor: pointer;
+    color: #333;
+}
+@media (max-width: 992px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; 
+        position: absolute;
+        top: 80px; 
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        padding: 20px 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        border-top: 1px solid #f1f1f1;
+    }
+
+    .nav-links.active {
+        display: flex; 
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-links .btn-primary {
+        width: 80%; 
+        text-align: center;
+    }
 }
 
 /* --- Hero Section --- */
@@ -496,17 +563,26 @@ header {
     }
 }
 /* --- Contact Footer Layout --- */
+/* --- Contact Footer Layout --- */
 #contact {
-    background-color: #f8f9fa; /* Clean light grey background */
+    background-color: #f8f9fa;
     padding-top: 60px;
-    color: #333; /* Dark text for readability */
+    color: #333;
 }
 
 .contact-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Split 50/50 */
+    grid-template-columns: 1fr 1fr; /* Splits Left and Right side 50/50 */
     gap: 60px;
     margin-bottom: 50px;
+    align-items: start; /* Ensures both sides start at the top */
+}
+
+/* FIX: Force the left info box to stack items vertically */
+.contact-info-box {
+    display: flex;
+    flex-direction: column; /* This forces Title -> Office -> Phone -> Email */
+    justify-content: flex-start;
 }
 
 /* --- Left Side: Info Box Styling --- */
@@ -520,7 +596,7 @@ header {
 .line-left {
     width: 60px;
     height: 4px;
-    background: #D32F2F; /* Red Brand Color */
+    background: #D32F2F;
     margin-bottom: 20px;
 }
 
@@ -528,20 +604,21 @@ header {
     color: #555;
     margin-bottom: 30px;
     font-size: 16px;
+    line-height: 1.5;
 }
 
 /* Info Items (Icons + Text) */
 .info-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center; /* Aligns icon vertically with text */
     margin-bottom: 25px;
+    width: 100%; /* Ensures it takes full width of the column */
 }
 
-/* The circle background for icons - KEY to the clean look */
 .icon-circle {
     width: 45px;
     height: 45px;
-    background-color: #ffebee; /* Light red background */
+    background-color: #ffebee;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -552,7 +629,7 @@ header {
 
 .icon-circle i {
     font-size: 18px;
-    color: #D32F2F; /* Red Icon */
+    color: #D32F2F;
 }
 
 .info-text h4 {
@@ -574,35 +651,44 @@ header {
     background: #ffffff;
     padding: 35px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Soft Shadow */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     border-top: 4px solid #D32F2F;
 }
 
+.form-group {
+    margin-bottom: 15px;
+}
+
 .form-group label {
+    display: block;
+    margin-bottom: 5px;
     font-weight: 600;
     color: #444;
 }
 
 .form-group input, 
 .form-group textarea {
-    background: #fdfdfd;
-    border: 1px solid #ddd;
-    color: #333;
     width: 100%;
     padding: 10px;
+    background: #fdfdfd;
+    border: 1px solid #ddd;
     border-radius: 4px;
-    margin-top: 5px;
+    color: #333;
+    font-family: inherit;
 }
 
 .full-width-btn {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 10px;
     padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .map-section {
     width: 100%;
-    margin-bottom: -7px; 
+    margin-bottom: -7px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -610,7 +696,7 @@ header {
 
 @media (max-width: 768px) {
     .contact-wrapper {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stack vertically on mobile */
         gap: 40px;
     }
 }
