@@ -1,14 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
-    function initMobileMenu() {
-        const hamburger = document.getElementById('hamburger-btn');
+
+    function loadModule(moduleId, filePath) {
+        fetch(filePath)
+            .then(response => {
+                if (!response.ok) throw new Error(`Error loading ${filePath}`);
+                return response.text();
+            })
+            .then(data => {
+                const element = document.getElementById(moduleId);
+                if (element) {
+                    element.innerHTML = data;
+                }
+            })
+            .catch(error => console.error(error));
+    }
+
+    loadModule("header-container", "modules/header.html");
+    loadModule("solutions-container", "modules/solutions.html");
+    loadModule("footer-container", "modules/footer.html");
+
+    document.addEventListener('click', function(e) {
+        const hamburgerBtn = e.target.closest('#hamburger-btn');
         const navLinks = document.getElementById('navLinks');
 
-        if (hamburger && navLinks) {
-            hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
+        if (hamburgerBtn && navLinks) {
+            navLinks.classList.toggle('active');
         }
-    }
+
+        if (e.target.tagName === 'A' && e.target.closest('.nav-links')) {
+            if (navLinks) navLinks.classList.remove('active');
+        }
+    });
+
     function initStatsAnimation() {
         const statsSection = document.getElementById('statsSection');
         const counters = document.querySelectorAll('.counter');
@@ -17,28 +40,19 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!statsSection) return; 
 
         const startCounting = () => {
-            console.log("Stats Animation Started!"); 
-
             counters.forEach(counter => {
-                // Force start at 0
                 counter.innerText = '0'; 
-
                 const target = +counter.getAttribute('data-target');
-                const speed = 100000000;
+                const speed = 200; 
                 
                 const updateCount = () => {
-                    // Get current value (clean string)
                     const count = +counter.innerText.replace('+', '');
-                    
-                    // Calculate increment
                     const inc = target / speed;
 
                     if (count < target) {
-                        // Add increment & repeat
                         counter.innerText = Math.ceil(count + inc);
                         setTimeout(updateCount, 20);
                     } else {
-                        // Finish: Clean up the number formatting
                         if (target === 1997) {
                              counter.innerText = target;
                         } else {
@@ -62,28 +76,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
         observer.observe(statsSection);
     }
-    /* --- Hero Slideshow Animation --- */
-function initHeroSlider() {
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
-    const slideInterval = 5000; // Switch every 5 seconds
 
-    if (slides.length === 0) return;
+    function initHeroSlider() {
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+        const slideInterval = 5000; 
 
-    setInterval(() => {
-        // Hide current
-        slides[currentSlide].classList.remove('active');
-        
-        // Calculate next
-        currentSlide = (currentSlide + 1) % slides.length;
-        
-        // Show next
-        slides[currentSlide].classList.add('active');
-    }, slideInterval);
-}
+        if (slides.length === 0) return;
 
-// Call this function near the end of your main.js
-initHeroSlider();
-setTimeout(initStatsAnimation, 500); 
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, slideInterval);
+    }
 
+    initHeroSlider();
+    setTimeout(initStatsAnimation, 500); 
 });
