@@ -157,44 +157,105 @@ header {
 }
 
 /* --- Hero Section --- */
+/* --- Hero Section Styling --- */
 .hero {
-    height: 90vh;
-    background: url('https://source.unsplash.com/1600x900/?technology,conference') no-repeat center center/cover;
     position: relative;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
     display: flex;
     align-items: center;
-    color: var(--white);
+    justify-content: center;
+    overflow: hidden;
+    color: #ffffff;
+    text-align: center;
 }
 
+/* 1. Background Slider */
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Lowest layer */
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; 
+    transition: opacity 1.5s ease-in-out, transform 3s linear;
+    transform: scale(1.05); 
+}
+
+.slide.active {
+    opacity: 1; /* Visible */
+    transform: scale(1); /* Zoom out effect */
+}
+
+/* 2. Dark Overlay */
 .hero-overlay {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Darkens image by 60% so text pops */
+    z-index: 2; 
 }
 
 .hero-content {
     position: relative;
-    z-index: 1;
-    text-align: center;
-    max-width: 800px;
+    z-index: 3; /* Top layer */
+    max-width: 900px;
+    padding: 20px;
 }
 
-.hero-content h2 {
+.sub-headline {
+    color: #FFD700; 
     font-size: 24px;
-    font-weight: 400;
-    margin-bottom: 10px;
-    color: #ffd700;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+.main-headline {
+    font-size: 52px;
+    font-weight: 800;
     line-height: 1.2;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-.hero-content p {
+.hero-description {
     font-size: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.hero-btn {
+    font-size: 18px;
+    padding: 15px 35px;
+    border-radius: 50px; /* Rounded pill shape */
+    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(211, 47, 47, 0.6);
+}
+
+@media (max-width: 768px) {
+    .main-headline { font-size: 32px; }
+    .sub-headline { font-size: 18px; }
+    .hero-description { font-size: 16px; }
 }
 
 .section-title {

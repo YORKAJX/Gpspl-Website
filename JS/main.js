@@ -62,8 +62,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
         observer.observe(statsSection);
     }
+    /* --- Hero Slideshow Animation --- */
+function initHeroSlider() {
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    const slideInterval = 5000; // Switch every 5 seconds
 
-    
-    setTimeout(initStatsAnimation, 500); 
+    if (slides.length === 0) return;
+
+    setInterval(() => {
+        // Hide current
+        slides[currentSlide].classList.remove('active');
+        
+        // Calculate next
+        currentSlide = (currentSlide + 1) % slides.length;
+        
+        // Show next
+        slides[currentSlide].classList.add('active');
+    }, slideInterval);
+}
+
+// Call this function near the end of your main.js
+initHeroSlider();
+setTimeout(initStatsAnimation, 500); 
 
 });
