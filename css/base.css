@@ -427,7 +427,6 @@ nav {
 
 .stat-box h3 { font-size: 28px; }
 
-/* --- Solutions Grid --- */
 /* --- Solutions Section (Card Style) --- */
 .solutions-grid {
     display: grid;
@@ -435,7 +434,25 @@ nav {
     gap: 30px;
     margin-top: 40px;
 }
+.solution-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
 
+.solution-card-link:hover .solution-card {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-bottom: 4px solid #D32F2F;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 700;
+    color: #D32F2F;
+    font-size: 14px;
+}
 .solution-card {
     background: #ffffff;
     border-radius: 12px; 

@@ -15,9 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(error => console.error(error));
     }
 
-    loadModule("header-container", "modules/header.html");
-    loadModule("solutions-container", "modules/solutions.html");
-    loadModule("footer-container", "modules/footer.html");
+    loadModule("header-container", "/modules/header.html");
+    loadModule("footer-container", "/modules/footer.html");
+    
+    
 
     document.addEventListener('click', function(e) {
         const hamburgerBtn = e.target.closest('#hamburger-btn');
