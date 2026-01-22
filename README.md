@@ -2,7 +2,8 @@ Global Peripheral Solutions (GPSPL) Website
 
 A fully responsive, static corporate website built for Global Peripheral Solutions Pvt. Ltd, a leading AV & IT solutions provider established in 1997.
 
-Live Demo: https://idyllic-pudding-567bdf.netlify.app/  
+Live Demo: https://gpspl.co.in
+
 Status: Deployed via Netlify
 
 Overview:
