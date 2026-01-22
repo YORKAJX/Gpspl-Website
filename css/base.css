@@ -610,6 +610,73 @@ nav {
         100% { transform: translateX(calc(-150px * 11)); }
     }
 }
+/* ===== Awards: Partner Grouped ===== */
+
+.awards-section {
+    background: #f9f9f9;
+    padding: 70px 0;
+    border-top: 4px solid gold;
+}
+
+.award-group {
+    margin-bottom: 50px;
+}
+
+.award-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.award-header img {
+    height: 40px;
+    object-fit: contain;
+}
+
+.award-header h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+.award-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.award-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    text-align: center;
+    border-bottom: 4px solid #D32F2F;
+}
+
+.award-item img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    cursor: pointer;
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.15));
+}
+
+.award-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.award-item span {
+    font-size: 13px;
+    color: #777;
+}
+
 /* --- Contact Footer Layout --- */
 /* --- Contact Footer Layout --- */
 #contact {
