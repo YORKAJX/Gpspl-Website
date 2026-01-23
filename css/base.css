@@ -509,6 +509,156 @@ nav {
     line-height: 1.6;
     margin: 0;
 }
+/* ===== Recent Work / Projects ===== */
+
+.recent-work-section {
+    background: #ffffff;
+    padding: 70px 0;
+}
+
+.recent-work-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* card + shadow */
+.work-item {
+  display:flex;
+  gap:24px;
+  background:#ffffff;
+  padding:18px;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  border:1px solid #eee;
+  cursor:pointer;
+  text-decoration:none;
+  margin-bottom:20px;
+}
+.work-item:focus { outline: 3px solid rgba(25,118,210,0.15); }
+
+.work-thumb {
+  width:280px;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  border-radius:12px;
+  position:relative;
+  border:1px solid #ddd;
+  background:#000;
+}
+.work-thumb img {
+     width:100%; 
+     height:100%; 
+     object-fit:cover;
+     display:block; 
+}
+
+.play-icon {
+  position:absolute;
+   inset:0; display:flex; 
+   align-items:center; 
+   justify-content:center; 
+   pointer-events:none;
+}
+.play-icon::before {
+  content:"";
+  width:64px; 
+  height:64px; 
+  background:rgba(0,0,0,0.65); 
+  border-radius:50%; 
+  display:block;
+}
+.play-icon::after { 
+    content:"▶"; 
+    position:absolute; 
+    font-size:26px; 
+    color:#fff; 
+    margin-left:4px; 
+}
+.work-item:hover .play-icon::before { 
+    background: rgba(211,47,47,0.9); 
+}
+
+/* short badge */
+.short-badge {
+  position:absolute;
+   top:8px; right:8px; 
+   background:#ff0000; 
+   color:#fff; 
+   font-size:11px;
+   padding:4px 8px; 
+   border-radius:12px; 
+   font-weight:700;
+}
+
+/* content */
+.work-content h3 {
+     margin:0 0 6px; 
+     font-size:18px; 
+     color:#222; 
+    }
+.work-content .muted { 
+    margin:0 0 10px; 
+    color:#666; 
+    font-size:14px; 
+}
+.work-tags span { 
+    display:inline-block; 
+    background:#e53935;
+    color:#fff;
+    padding:4px 10px;
+    border-radius:20px; 
+    font-size:12px;
+    margin-right:6px; }
+
+/* responsive: stack on small screens */
+@media (max-width:768px) {
+  .work-item { flex-direction:column; }
+  .work-thumb { width:100%; aspect-ratio:16/9; }
+}
+.video-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.video-modal.active {
+  display: block;
+}
+
+.video-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+}
+
+.video-box {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  margin: 5vh auto;
+  background: #000;
+}
+
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.video-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+}
+
 
 /* --- Brands --- */
 .brand-grid {
