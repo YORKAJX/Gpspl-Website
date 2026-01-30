@@ -27,26 +27,4 @@ Tech Stack:
 * Form Handling: Web3Forms API
 * Deployment: Netlify (Continuous Deployment via GitHub)
 * Version Control: Git
-
-
-Project Structure:
-/Gpspl Website
-│
-├── index.html           * Main Landing Page
-├── brochure.pdf         * Downloadable Company Profile
-│
-├── css/
-│   └── style.css        * Global Styles & Responsive Media Queries
-│
-├── js/
-│   └── main.js          * Logic: Module Loader, Sliders, Animations
-│  
-│
-└── assests/
-    └── images/
-        └──clients        * Clients logo's
-        └──hero           * Background slides
-        └──patners        * Patners logo's
-        └──solutions      * services 
-        └──gpspl.png      * company logo
     
