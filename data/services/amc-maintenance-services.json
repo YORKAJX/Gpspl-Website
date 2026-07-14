@@ -1,0 +1,454 @@
+{
+  "cmsModules": [
+    "Service Hero",
+    "SEO Management",
+    "AMC Scope",
+    "Support Coverage",
+    "Technology Partners",
+    "Applications",
+    "Projects",
+    "Case Studies",
+    "Gallery",
+    "Downloads",
+    "FAQs",
+    "Related Services",
+    "Inquiry Forms",
+    "RFQ Forms",
+    "AMC Plans",
+    "Warranty Extension",
+    "Service Reports"
+  ],
+  "seo": {
+    "metaTitle": "AMC, Maintenance & Lifecycle Support | GPSPL",
+    "metaDescription": "GPSPL provides PAN India AMC and maintenance services for AV systems, LED walls, displays, projectors, video conferencing, UPS, automation, IT infrastructure and enterprise technology environments with preventive checks, 48-72 hour response, warranty coordination and service reporting.",
+    "keywords": "AMC services India, AV AMC, LED wall maintenance, video conferencing maintenance, projector AMC, display maintenance, UPS AMC, IT infrastructure support, enterprise technology AMC, GPSPL",
+    "canonicalUrl": "https://gpspl.co.in/amc-maintenance-services.html",
+    "openGraphImage": "https://gpspl.co.in/assests/images/products/amc-maintenance-services.webp",
+    "indexing": "index, follow",
+    "schemaType": "Service",
+    "slug": "amc-maintenance-services",
+    "offerCatalogName": "PAN India AMC, Preventive Maintenance & Enterprise Technology Support",
+    "breadcrumbParentName": "Services",
+    "breadcrumbParentUrl": "https://gpspl.co.in/#services"
+  },
+  "hero": {
+    "eyebrow": "Enterprise AMC & Lifecycle Support",
+    "title": "AMC & Maintenance Services",
+    "subtitle": "GPSPL provides preventive maintenance, troubleshooting, warranty coordination, service reporting and post-installation support for AV, collaboration, LED wall, display, projector, UPS, automation, IT infrastructure and enterprise technology systems across India.",
+    "image": "assests/images/products/amc-maintenance-services.webp",
+    "industryTags": [
+      "PAN India",
+      "48-72 Hour Response",
+      "Preventive Maintenance",
+      "Warranty Coordination",
+      "Service Reports",
+      "Lifecycle Support"
+    ],
+    "trustIndicators": [
+      {
+        "value": "Cover",
+        "label": "AV, IT, LED, UPS & Displays"
+      },
+      {
+        "value": "Respond",
+        "label": "48-72 Hours PAN India"
+      },
+      {
+        "value": "Report",
+        "label": "Health Checks & Service Notes"
+      }
+    ],
+    "ctaButtons": [
+      {
+        "label": "Request AMC Quote",
+        "url": "/contact.html",
+        "style": "primary"
+      },
+      {
+        "label": "Talk to Support",
+        "url": "tel:+919310092963",
+        "style": "secondary"
+      }
+    ],
+    "partnerLogos": [
+      {
+        "name": "Harman Professional",
+        "logo": "assests/images/patners/Harman.png"
+      },
+      {
+        "name": "Samsung",
+        "logo": "assests/images/patners/samsung.png"
+      },
+      {
+        "name": "Sony",
+        "logo": "assests/images/patners/sony.png"
+      },
+      {
+        "name": "HP Poly",
+        "logo": "assests/images/patners/hpp.png"
+      },
+      {
+        "name": "Luminous",
+        "logo": "assests/images/patners/luminous.png"
+      },
+      {
+        "name": "ATEN",
+        "logo": "assests/images/patners/aten.svg"
+      }
+    ]
+  },
+  "introduction": {
+    "heading": "Maintenance is not only repair. It is uptime planning, ownership and predictable support.",
+    "description": "GPSPL structures AMC around installed technology, usage intensity, site criticality, warranty status, spare availability and operational expectations. The objective is to keep enterprise spaces ready for meetings, teaching, monitoring, presentation, collaboration and public communication with accountable service ownership.",
+    "statistics": [
+      {
+        "value": "Scope",
+        "label": "AMC coverage for AV, IT, display, power and control systems"
+      },
+      {
+        "value": "SLA",
+        "label": "48-72 hour response target across India depending on site and scope"
+      },
+      {
+        "value": "Care",
+        "label": "Preventive checks, troubleshooting, reports and warranty coordination"
+      }
+    ],
+    "image": "assests/images/products/amc-maintenance-services.webp"
+  },
+  "approach": [
+    {
+      "icon": "fa-clipboard-list",
+      "title": "Audit",
+      "description": "Review installed systems, asset list, locations, usage patterns, warranty status, pain points and support expectations."
+    },
+    {
+      "icon": "fa-stethoscope",
+      "title": "Prevent",
+      "description": "Schedule health checks, inspection, cleaning guidance, configuration review, calibration checks and operating readiness validation."
+    },
+    {
+      "icon": "fa-screwdriver-wrench",
+      "title": "Resolve",
+      "description": "Coordinate troubleshooting, remote guidance, on-site support, OEM escalation and spare or warranty coordination where applicable."
+    },
+    {
+      "icon": "fa-file-lines",
+      "title": "Report",
+      "description": "Document service activity, observations, recommendations, pending risks, user notes and improvement actions."
+    }
+  ],
+  "sectionContent": {
+    "capabilities": {
+      "eyebrow": "AMC Scope",
+      "title": "What GPSPL Can Maintain & Support",
+      "description": "A flexible AMC structure for enterprise technology environments supplied, integrated or supported by GPSPL."
+    },
+    "caseStudies": {
+      "eyebrow": "Support Scenarios",
+      "title": "From Breakdown Risk to Dependable Operations",
+      "description": "Representative examples of how structured AMC improves reliability, accountability and user confidence."
+    }
+  },
+  "serviceCards": [
+    {
+      "icon": "fa-volume-high",
+      "title": "Professional Audio & Microphones",
+      "description": "Health checks for amplifiers, speakers, DSP, microphones, paging, conferencing audio and room audio clarity.",
+      "url": "/professional-audio-solutions.html"
+    },
+    {
+      "icon": "fa-video",
+      "title": "Video Conferencing Systems",
+      "description": "Support for cameras, codecs, speakerphones, collaboration endpoints, source connectivity and room readiness.",
+      "url": "/unified-communication-collaboration.html"
+    },
+    {
+      "icon": "fa-border-all",
+      "title": "LED Walls & Video Walls",
+      "description": "Visual checks, controller review, source testing, calibration support, module/cabinet issue coordination and AMC planning.",
+      "url": "/active-led-wall-solutions.html"
+    },
+    {
+      "icon": "fa-tv",
+      "title": "Displays, Signage & Projectors",
+      "description": "Maintenance support for commercial displays, interactive panels, signage players, projection systems and accessories.",
+      "url": "/projector-accessories.html"
+    },
+    {
+      "icon": "fa-sliders",
+      "title": "Automation & Control",
+      "description": "Control panel checks, source switching workflows, presets, automation logic review and user operation support.",
+      "url": "/control-automation.html"
+    },
+    {
+      "icon": "fa-server",
+      "title": "IT Infrastructure & Connectivity",
+      "description": "Support coordination for network readiness, racks, switching, KVM, AV connectivity and connected room infrastructure.",
+      "url": "/it-infrastructure-solutions.html"
+    },
+    {
+      "icon": "fa-bolt",
+      "title": "UPS & Power Backup",
+      "description": "AMC guidance for UPS backup systems, power-readiness checks and escalation coordination for eligible systems.",
+      "url": "/it-infrastructure-solutions.html"
+    },
+    {
+      "icon": "fa-shield-alt",
+      "title": "Warranty & OEM Coordination",
+      "description": "Warranty status tracking, eligible OEM coordination, service escalation, spare guidance and support handover.",
+      "url": "/technology-partners.html"
+    }
+  ],
+  "applications": [
+    "Corporate Offices",
+    "Boardrooms",
+    "Conference Rooms",
+    "Auditoriums",
+    "Education Campuses",
+    "Smart Classrooms",
+    "Command Centers",
+    "Healthcare Facilities",
+    "Government Institutions",
+    "Hospitality Venues",
+    "Retail & Experience Centers",
+    "Pan-India Enterprises"
+  ],
+  "partners": [
+    {
+      "name": "Harman Professional",
+      "logo": "assests/images/patners/Harman.png",
+      "category": "Professional AV systems",
+      "description": "Audio, installed systems, control and enterprise AV technologies requiring structured support."
+    },
+    {
+      "name": "Samsung",
+      "logo": "assests/images/patners/samsung.png",
+      "category": "Commercial displays",
+      "description": "Display and signage systems used in meeting, signage and enterprise communication environments."
+    },
+    {
+      "name": "Sony",
+      "logo": "assests/images/patners/sony.png",
+      "category": "Displays and imaging",
+      "description": "Professional display and imaging systems for collaboration and visual communication spaces."
+    },
+    {
+      "name": "HP Poly",
+      "logo": "assests/images/patners/hpp.png",
+      "category": "Unified collaboration",
+      "description": "Meeting room collaboration devices, conferencing endpoints and hybrid-work technology."
+    },
+    {
+      "name": "ATEN",
+      "logo": "assests/images/patners/aten.svg",
+      "category": "KVM and AV switching",
+      "description": "KVM, switching, extension and connectivity infrastructure for AV and IT environments."
+    },
+    {
+      "name": "Luminous",
+      "logo": "assests/images/patners/luminous.png",
+      "category": "UPS and power backup",
+      "description": "UPS and backup systems that support continuity for AV, IT and display environments."
+    }
+  ],
+  "process": [
+    "Asset list and site requirement review",
+    "AMC scope definition and support coverage mapping",
+    "Preventive maintenance schedule planning",
+    "System health check and operating-readiness inspection",
+    "Issue diagnosis, support visit or remote guidance",
+    "OEM warranty, spare and escalation coordination where applicable",
+    "Service report, recommendations and next-action tracking",
+    "Renewal, upgrade and upgrade planning"
+  ],
+  "features": [
+    "AMC support for AV, collaboration, LED, display, UPS, automation and IT systems",
+    "PAN India service coordination",
+    "48-72 hour response target based on site, scope and support plan",
+    "Preventive maintenance and health checks",
+    "Troubleshooting and on-site technical support",
+    "Warranty extension and OEM support coordination where applicable",
+    "Service reports and maintenance documentation",
+    "Upgrade recommendations and upgrade planning"
+  ],
+  "projects": [
+    {
+      "clientName": "Enterprise Meeting Room AMC",
+      "industry": "Corporate",
+      "solution": "Preventive checks and support readiness for boardroom AV, displays, conferencing audio and control workflow.",
+      "technologies": [
+        "Displays",
+        "Audio",
+        "Video conferencing",
+        "Control"
+      ],
+      "image": "assests/images/products/conference-room-solutions.webp"
+    },
+    {
+      "clientName": "Campus AV Support Program",
+      "industry": "Education",
+      "solution": "Maintenance planning for classrooms, projectors, interactive panels, microphones and presentation systems.",
+      "technologies": [
+        "Projectors",
+        "Interactive displays",
+        "Microphones",
+        "Training"
+      ],
+      "image": "assests/images/solutions/smartClassroom.png"
+    },
+    {
+      "clientName": "Display Wall Lifecycle Support",
+      "industry": "Command Center",
+      "solution": "Ongoing support planning for LED/video wall systems, controllers, sources, calibration checks and uptime readiness.",
+      "technologies": [
+        "LED wall",
+        "Controller",
+        "Source testing",
+        "AMC"
+      ],
+      "image": "assests/images/products/active-led-video-wall.webp"
+    }
+  ],
+  "caseStudies": [
+    {
+      "title": "Meeting-room support ownership",
+      "challenge": "Users faced inconsistent meeting-room performance because audio, display, connectivity and conferencing issues were handled separately.",
+      "solution": "GPSPL structured AMC around the complete room environment, including preventive checks, source testing, audio review and user workflow validation.",
+      "implementation": "The system was audited, common failure points were documented and periodic checks were aligned with the client's operating schedule.",
+      "results": "The client gained clearer ownership, faster issue diagnosis and more predictable meeting-room readiness."
+    },
+    {
+      "title": "LED wall preventive maintenance",
+      "challenge": "A high-visibility display was used frequently and needed ongoing assurance beyond installation.",
+      "solution": "GPSPL aligned preventive inspection, controller review, visual checks, warranty coordination and service-reporting workflow.",
+      "implementation": "The display system was checked for visual consistency, source workflow, operational readiness and support documentation.",
+      "results": "The site had a defined maintenance process and clearer escalation path for future issues."
+    },
+    {
+      "title": "Pan-India technology support",
+      "challenge": "A buyer needed support consistency across multiple sites with different AV and IT equipment mixes.",
+      "solution": "GPSPL mapped systems by location, defined AMC scope, response expectations and reporting format.",
+      "implementation": "Support workflow was structured around service tickets, preventive visits and escalation coordination.",
+      "results": "The organization gained a scalable support model for distributed enterprise technology assets."
+    }
+  ],
+  "gallery": {
+    "categories": [
+      "AMC",
+      "Preventive Maintenance",
+      "AV Support",
+      "LED Support",
+      "IT Infrastructure",
+      "Service Reports"
+    ],
+    "images": [
+      {
+        "src": "assests/images/products/amc-maintenance-services.webp",
+        "caption": "AMC and maintenance support for enterprise AV and IT systems"
+      },
+      {
+        "src": "assests/images/products/conference-room-solutions.webp",
+        "caption": "Meeting room technology support and preventive maintenance"
+      },
+      {
+        "src": "assests/images/products/active-led-video-wall.webp",
+        "caption": "LED wall support, calibration and planned maintenance"
+      },
+      {
+        "src": "assests/images/products/it-infrastructure-solutions.webp",
+        "caption": "Infrastructure support for connected enterprise technology"
+      }
+    ]
+  },
+  "downloads": [
+    {
+      "title": "GPSPL Company Profile",
+      "type": "Company Profile",
+      "url": "/brochure.pdf"
+    },
+    {
+      "title": "AMC Requirement Checklist",
+      "type": "Planning Checklist",
+      "url": "/contact.html"
+    },
+    {
+      "title": "Service Coverage Request",
+      "type": "RFQ Form",
+      "url": "/contact.html"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Which systems can GPSPL cover under AMC?",
+      "answer": "GPSPL can provide AMC and maintenance support for AV systems, video conferencing, professional audio, microphones, displays, interactive panels, projectors, active LED walls, video walls, signage, automation, UPS backup, IT infrastructure and related enterprise technology systems."
+    },
+    {
+      "question": "Does GPSPL provide PAN India AMC support?",
+      "answer": "Yes. GPSPL can coordinate AMC and maintenance support across India depending on site location, scope, service plan and project requirements."
+    },
+    {
+      "question": "What is the expected response time?",
+      "answer": "GPSPL works with a 48-72 hour response target for AMC support, depending on location, issue type, site access, support plan and spare or OEM dependency."
+    },
+    {
+      "question": "What is included in preventive maintenance?",
+      "answer": "Preventive maintenance may include inspection, health checks, source testing, cable and connectivity checks, cleaning guidance, calibration review, settings review, user workflow checks and service recommendations."
+    },
+    {
+      "question": "Does AMC include warranty support?",
+      "answer": "GPSPL can coordinate eligible OEM warranty support, warranty extension guidance, spare coordination and escalation where applicable. Coverage depends on the product, warranty status and AMC terms."
+    },
+    {
+      "question": "Can GPSPL support systems not originally installed by GPSPL?",
+      "answer": "GPSPL can review existing systems and define support scope after an audit. Final coverage depends on equipment condition, documentation, access, warranty status and availability of spares or OEM support."
+    },
+    {
+      "question": "Do you provide service reports?",
+      "answer": "Yes. AMC can include service notes, health-check observations, recommendations, issue status and follow-up actions depending on the agreed support scope."
+    }
+  ],
+  "relatedServices": [
+    {
+      "title": "Audio Visual Integration",
+      "url": "/audio-visual-integration.html"
+    },
+    {
+      "title": "Unified Communication & Collaboration",
+      "url": "/unified-communication-collaboration.html"
+    },
+    {
+      "title": "Video Wall Solutions",
+      "url": "/video-wall-solutions.html"
+    },
+    {
+      "title": "Active LED Wall Installation",
+      "url": "/active-led-wall-installation.html"
+    },
+    {
+      "title": "IT Infrastructure Solutions",
+      "url": "/it-infrastructure-solutions.html"
+    },
+    {
+      "title": "Contact GPSPL",
+      "url": "/contact.html"
+    }
+  ],
+  "cta": {
+    "headline": "Need AMC coverage for your AV, IT or display systems?",
+    "subheading": "Share your asset list, location count, system types and support expectations. GPSPL will help define AMC scope, preventive maintenance schedule and service response plan.",
+    "backgroundImage": "assests/images/products/amc-maintenance-services.webp",
+    "buttons": [
+      {
+        "label": "Request AMC Quote",
+        "url": "/contact.html",
+        "style": "primary"
+      },
+      {
+        "label": "Talk to Support",
+        "url": "tel:+919310092963",
+        "style": "secondary"
+      }
+    ]
+  }
+}

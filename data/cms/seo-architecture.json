@@ -1,0 +1,69 @@
+{
+  "pageTypes": [
+    {
+      "type": "Brand Page",
+      "route": "/brands/{brandSlug}.html",
+      "seoFields": ["title", "description", "canonicalUrl", "ogImage", "schemaType"],
+      "contentBlocks": ["brandHero", "productFamilies", "downloads", "relatedProducts", "rfqCta", "faqs"]
+    },
+    {
+      "type": "Service Page",
+      "route": "/services/{serviceSlug}.html",
+      "seoFields": ["title", "description", "canonicalUrl", "ogImage", "schemaType"],
+      "contentBlocks": ["serviceHero", "capabilities", "process", "industries", "projects", "faqs", "consultationCta"]
+    },
+    {
+      "type": "Industry Page",
+      "route": "/industries/{industrySlug}.html",
+      "seoFields": ["title", "description", "canonicalUrl", "ogImage", "schemaType"],
+      "contentBlocks": ["industryHero", "useCases", "recommendedServices", "recommendedProducts", "projects", "caseStudies", "rfqCta"]
+    },
+    {
+      "type": "Project Page",
+      "route": "/projects/{projectSlug}.html",
+      "seoFields": ["title", "description", "canonicalUrl", "ogImage", "schemaType"],
+      "contentBlocks": ["projectHero", "client", "industry", "technologiesUsed", "gallery", "description", "results", "relatedCaseStudy"]
+    },
+    {
+      "type": "Case Study Page",
+      "route": "/case-studies/{caseStudySlug}.html",
+      "seoFields": ["title", "description", "canonicalUrl", "ogImage", "schemaType"],
+      "contentBlocks": ["caseStudyHero", "challenge", "solution", "technologiesUsed", "results", "downloads", "consultationCta"]
+    },
+    {
+      "type": "Blog Page",
+      "route": "/blog/{postSlug}.html",
+      "seoFields": ["title", "description", "canonicalUrl", "ogImage", "schemaType"],
+      "contentBlocks": ["postHero", "body", "relatedBrands", "relatedProducts", "relatedServices", "leadCta"]
+    },
+    {
+      "type": "Product Catalog Page",
+      "route": "/product-catalog.html",
+      "seoFields": ["title", "description", "canonicalUrl", "ogImage", "schemaType"],
+      "contentBlocks": ["catalogHero", "categoryCards", "brandFilters", "datasheets", "brochures", "rfqCta"]
+    },
+    {
+      "type": "Team Page",
+      "route": "/team.html",
+      "seoFields": ["title", "description", "canonicalUrl", "ogImage", "schemaType"],
+      "contentBlocks": ["teamHero", "leadershipProfiles", "departmentCards", "contactCta"]
+    },
+    {
+      "type": "Careers Page",
+      "route": "/careers.html",
+      "seoFields": ["title", "description", "canonicalUrl", "ogImage", "schemaType"],
+      "contentBlocks": ["careersHero", "openingCategories", "openingsList", "applicationInfo", "faqs"]
+    },
+    {
+      "type": "Brand Detail Template",
+      "route": "/brand-detail.html?brand={brandSlug}",
+      "seoFields": ["title", "description", "canonicalUrl", "ogImage", "schemaType"],
+      "contentBlocks": ["brandHero", "categories", "deliveryModel", "downloads", "relatedProducts", "faqs", "rfqCta"]
+    }
+  ],
+  "globalSeoDefaults": {
+    "siteName": "Global Peripheral Solution Pvt. Ltd.",
+    "positioning": "AV Solutions Distributor & System Integrator Since 1997",
+    "defaultOgImage": "/assests/images/hero/image.jpg"
+  }
+}

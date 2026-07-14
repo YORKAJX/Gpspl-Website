@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 140" role="img" aria-labelledby="title">
+  <title id="title">JBL Professional</title>
+  <rect width="360" height="140" rx="22" fill="#f8fafc"/>
+  <rect x="34" y="24" width="292" height="76" rx="16" fill="#f15a24"/>
+  <text x="180" y="81" text-anchor="middle" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="54" font-weight="900" letter-spacing="3" fill="#ffffff">JBL</text>
+  <text x="180" y="122" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" letter-spacing="4" fill="#0f172a">PROFESSIONAL</text>
+</svg>

@@ -1,0 +1,531 @@
+{
+  "cmsModules": [
+    "Service Categories",
+    "Services",
+    "Applications",
+    "Technology Partners",
+    "Projects",
+    "Case Studies",
+    "Gallery",
+    "Downloads",
+    "FAQs",
+    "Related Services",
+    "SEO Management",
+    "Brochure Management",
+    "Inquiry Forms",
+    "RFQ Forms",
+    "AMC Plans"
+  ],
+  "seo": {
+    "metaTitle": "Unified Communication Supply, Integration & Support | GPSPL",
+    "metaDescription": "GPSPL supplies, designs, integrates, commissions, and supports unified communication, video conferencing, boardroom, conference room, hybrid classroom, and collaboration solutions across India.",
+    "keywords": "unified communication solutions India, video conferencing solutions, conference room setup, boardroom collaboration, hybrid workplace solutions, HP Poly video conferencing, PTZ camera integration, MAXHUB interactive display, Newline interactive display, BenQ signage, ATEN KVM, Crestron room control, Sennheiser microphone, meeting room AV, wireless presentation, GPSPL",
+    "canonicalUrl": "https://gpspl.co.in/unified-communication-collaboration.html",
+    "openGraphImage": "https://gpspl.co.in/assests/images/products/conference-room-solutions.webp",
+    "indexing": "index, follow",
+    "schemaType": "Service",
+    "slug": "unified-communication-collaboration",
+    "offerCatalogName": "Unified Communication & Collaboration Capabilities"
+  },
+  "hero": {
+    "eyebrow": "Enterprise UC & Collaboration",
+    "title": "Unified Communication & Collaboration Solutions",
+    "subtitle": "Meeting-room, boardroom, video conferencing, hybrid classroom, and enterprise collaboration environments supplied, designed, integrated, commissioned, and supported by GPSPL.",
+    "image": "assests/images/products/conference-room-solutions.webp",
+    "industryTags": [
+      "Corporate",
+      "Education",
+      "Healthcare",
+      "Government",
+      "Hospitality",
+      "Training Centers"
+    ],
+    "trustIndicators": [
+      {
+        "value": "28+",
+        "label": "Years of Excellence"
+      },
+      {
+        "value": "600+",
+        "label": "Projects Successfully Delivered"
+      },
+      {
+        "value": "16+",
+        "label": "Global Technology Partners"
+      },
+      {
+        "value": "50+",
+        "label": "Certified AV Professionals"
+      }
+    ],
+    "ctaButtons": [
+      {
+        "label": "Request UC Consultation",
+        "url": "/contact.html",
+        "style": "primary"
+      },
+      {
+        "label": "Download Company Profile",
+        "url": "/brochure.pdf",
+        "style": "secondary"
+      }
+    ],
+    "partnerLogos": [
+      {
+        "name": "HP Poly",
+        "logo": "assests/images/patners/hpp.png"
+      },
+      {
+        "name": "MAXHUB",
+        "logo": "assests/images/patners/maxhub.svg"
+      },
+      {
+        "name": "Newline",
+        "logo": "assests/images/patners/newline.svg"
+      },
+      {
+        "name": "Crestron",
+        "logo": "assests/images/patners/crestron.svg"
+      },
+      {
+        "name": "ATEN",
+        "logo": "assests/images/patners/aten.svg"
+      },
+      {
+        "name": "Samsung",
+        "logo": "assests/images/patners/samsung.png"
+      },
+      {
+        "name": "Sony",
+        "logo": "assests/images/patners/sony.png"
+      },
+      {
+        "name": "Harman Professional",
+        "logo": "assests/images/patners/Harman.png"
+      }
+    ]
+  },
+  "introduction": {
+    "heading": "We create simple, reliable collaboration environments for modern teams",
+    "description": "GPSPL helps organizations move beyond disconnected meeting-room devices. We study the space, user workflow, conferencing platform, display requirement, audio coverage, camera placement, room control, network readiness, installation scope, training needs, and long-term support plan before delivering a unified collaboration experience.",
+    "statistics": [
+      {
+        "value": "Supply",
+        "label": "Displays, cameras, microphones, audio, control and accessories"
+      },
+      {
+        "value": "Integrate",
+        "label": "Room AV, UC platforms, controls, displays and networking"
+      },
+      {
+        "value": "Support",
+        "label": "Commissioning, training, AMC and service assistance"
+      }
+    ],
+    "image": "assests/images/hero/Vconf.webp"
+  },
+  "approach": [
+    {
+      "title": "Consult",
+      "description": "We understand room type, meeting style, platform preference, participant count, acoustics, display visibility, network constraints, and existing infrastructure.",
+      "icon": "fa-comments"
+    },
+    {
+      "title": "Supply",
+      "description": "We help shortlist genuine collaboration technology products such as displays, video bars, PTZ cameras, microphones, speakers, DSP, touch panels, mounts, and accessories.",
+      "icon": "fa-boxes-stacked"
+    },
+    {
+      "title": "Integrate",
+      "description": "We install and connect audio, video, display, control, cabling, presentation, conferencing, and IT components into one dependable meeting environment.",
+      "icon": "fa-network-wired"
+    },
+    {
+      "title": "Support",
+      "description": "We commission rooms, train users, document the setup, and support the environment through warranty coordination, AMC, preventive maintenance, and upgrades.",
+      "icon": "fa-headset"
+    }
+  ],
+  "serviceCards": [
+    {
+      "icon": "fa-video",
+      "title": "Video Conferencing Room Systems",
+      "description": "Professional camera, microphone, speaker, display, and codec-based meeting-room systems for clear hybrid communication.",
+      "url": "/unified-communication-collaboration.html"
+    },
+    {
+      "icon": "fa-users",
+      "title": "Boardroom & Conference Room Setup",
+      "description": "Complete executive boardroom and conference room environments with display, audio, camera, table connectivity, wireless presentation, Crestron/AMX-style control, and support.",
+      "url": "/conference-room-solutions.html"
+    },
+    {
+      "icon": "fa-camera",
+      "title": "PTZ Cameras & Auto-Framing Systems",
+      "description": "Sony, Lumens, HP Poly, and project-fit camera solutions for boardrooms, classrooms, training rooms, and lecture capture.",
+      "url": "/video-technologies.html"
+    },
+    {
+      "icon": "fa-microphone-lines",
+      "title": "Ceiling, Table & Wireless Microphones",
+      "description": "Sennheiser, Sony and project-fit voice pickup systems planned around room size, seating layout, reverberation, conferencing needs, and audio clarity.",
+      "url": "/professional-audio-solutions.html"
+    },
+    {
+      "icon": "fa-tv",
+      "title": "Commercial Displays & Interactive Panels",
+      "description": "MAXHUB, Newline, BenQ, Samsung, Sony, LG and interactive display solutions for meeting rooms, collaboration areas, training spaces, and classrooms.",
+      "url": "/interactive-display-solutions.html"
+    },
+    {
+      "icon": "fa-wifi",
+      "title": "Wireless Presentation & Content Sharing",
+      "description": "Simple presentation workflows for meeting rooms with ATEN-style connectivity, source switching, screen sharing, Type-C connectivity, and BYOD readiness.",
+      "url": "/conference-room-solutions.html"
+    },
+    {
+      "icon": "fa-sliders",
+      "title": "Room Control & Automation",
+      "description": "Crestron, AMX and ATEN and project-fit touch panels, source control, display control, AV switching, KVM, audio routing, lighting scenes, and room automation designed for simple operation.",
+      "url": "/control-automation.html"
+    },
+    {
+      "icon": "fa-chalkboard-user",
+      "title": "Hybrid Classroom Collaboration",
+      "description": "Smart classroom and lecture-room communication systems with interactive display, camera, audio, content sharing, and training support.",
+      "url": "/smart-classroom-solutions.html"
+    },
+    {
+      "icon": "fa-screwdriver-wrench",
+      "title": "Installation, Commissioning & AMC",
+      "description": "Professional installation, cable dressing, device configuration, testing, commissioning, documentation, user training, and AMC support.",
+      "url": "/amc-maintenance-services.html"
+    },
+    {
+      "icon": "fa-building",
+      "title": "Multi-Location UC Standardization",
+      "description": "Standardized room types, product stacks, deployment playbooks, and support planning for enterprises with multiple locations.",
+      "url": "/unified-communication-collaboration.html"
+    }
+  ],
+  "sectionContent": {
+    "capabilities": {
+      "eyebrow": "Service Portfolio",
+      "title": "Unified Communication Capabilities",
+      "description": "Collaboration systems designed around meeting experience, platform readiness, room audio clarity, camera coverage, display visibility, control simplicity, and long-term support."
+    }
+  },
+  "applications": [
+    "Boardrooms",
+    "Conference Rooms",
+    "Universities",
+    "Training Centers",
+    "Healthcare Facilities",
+    "Government Institutions",
+    "Corporate Campuses",
+    "Experience Centers"
+  ],
+  "partners": [
+    {
+      "name": "HP Poly",
+      "logo": "assests/images/patners/hpp.png",
+      "category": "Video collaboration and meeting-room systems",
+      "description": "Video bars, conferencing cameras, audio devices, headsets, and enterprise meeting-room collaboration technologies."
+    },
+    {
+      "name": "Sony",
+      "logo": "assests/images/patners/sony.png",
+      "category": "Professional displays, projectors, PTZ cameras and microphones",
+      "description": "Professional visual and imaging technology for boardrooms, classrooms, auditoriums, and hybrid communication spaces."
+    },
+    {
+      "name": "Samsung",
+      "logo": "assests/images/patners/samsung.png",
+      "category": "Commercial displays and interactive collaboration",
+      "description": "Commercial display, LFD, signage, and interactive display platforms for enterprise collaboration environments."
+    },
+    {
+      "name": "Harman Professional",
+      "logo": "assests/images/patners/Harman.png",
+      "category": "Professional audio, control and installed systems",
+      "description": "JBL Professional audio, AMX control, DSP, amplification, and installed AV technologies for meeting and learning spaces."
+    },
+    {
+      "name": "JBL Professional",
+      "logo": "assests/images/patners/jbl.svg",
+      "category": "Meeting-room and venue audio",
+      "description": "Speech clarity, speaker systems, amplification, and installed audio solutions for boardrooms, classrooms, and auditoriums."
+    },
+    {
+      "name": "AMX",
+      "logo": "assests/images/patners/amx.svg",
+      "category": "Control, switching and room automation",
+      "description": "Touch control, source switching, automation, and monitoring technologies for simplified room operation."
+    },
+    {
+      "name": "Crestron",
+      "logo": "assests/images/patners/crestron.svg",
+      "category": "Control, switching and room automation",
+      "description": "Room control, touch panels, AV switching and automation systems for boardrooms, classrooms and enterprise collaboration spaces."
+    },
+    {
+      "name": "Newline",
+      "logo": "assests/images/patners/newline.svg",
+      "category": "Interactive displays and collaboration panels",
+      "description": "Interactive display and smart collaboration panel systems for classrooms, training rooms, meeting rooms and corporate collaboration."
+    },
+    {
+      "name": "MAXHUB",
+      "logo": "assests/images/patners/maxhub.svg",
+      "category": "Interactive panels and UC-ready collaboration displays",
+      "description": "Interactive flat panels, collaboration displays and meeting-room screens for connected work and learning spaces."
+    },
+    {
+      "name": "ATEN",
+      "logo": "assests/images/patners/aten.svg",
+      "category": "KVM, AV switching and connectivity",
+      "description": "KVM, AV switching, HDMI/USB extension and signal distribution products for meeting rooms, control rooms and IT/AV infrastructure."
+    },
+    {
+      "name": "BenQ",
+      "logo": "assests/images/patners/benq.svg",
+      "category": "Signage, projectors and collaboration displays",
+      "description": "Digital signage, interactive displays, projectors and professional monitors for classrooms, meeting spaces and visual communication."
+    },
+    {
+      "name": "Sennheiser",
+      "logo": "assests/images/patners/sennheiser.svg",
+      "category": "Microphones and conferencing audio",
+      "description": "Professional microphone and speech capture products for meeting rooms, classrooms and hybrid collaboration spaces."
+    },
+    {
+      "name": "Lumens",
+      "logo": "assests/images/patners/lumens.png",
+      "category": "PTZ cameras and lecture capture",
+      "description": "Professional cameras and visual communication solutions for education, healthcare, and enterprise collaboration."
+    },
+    {
+      "name": "LG Business Solutions",
+      "logo": "assests/images/patners/lgb.png",
+      "category": "Displays and collaboration screens",
+      "description": "Commercial displays, active LED, hotel TV, signage, and display technologies for professional environments."
+    }
+  ],
+  "process": [
+    "Requirement Consultation",
+    "Room & Workflow Assessment",
+    "Product Shortlisting",
+    "BOQ & Solution Design",
+    "Procurement & Supply",
+    "Installation & Cabling",
+    "Configuration & Platform Readiness",
+    "Testing & Commissioning",
+    "User Training & Documentation",
+    "AMC, Support & Lifecycle Upgrades"
+  ],
+  "features": [
+    "Distribution-first product guidance",
+    "Genuine product sourcing",
+    "Meeting-room AV engineering",
+    "Platform-ready collaboration design",
+    "Experienced technical teams",
+    "Professional installation and commissioning",
+    "Pan-India project execution",
+    "Warranty and service support",
+    "AMC and preventive maintenance",
+    "Future-ready room standardization"
+  ],
+  "projects": [
+    {
+      "clientName": "Enterprise Boardroom Collaboration Upgrade",
+      "industry": "Corporate",
+      "solution": "Executive boardroom with conferencing display, camera, microphones, speakers, table connectivity, source switching and room control.",
+      "technologies": [
+        "HP Poly",
+        "Samsung",
+        "AMX",
+        "JBL"
+      ],
+      "image": "assests/images/products/conference-room-solutions.webp"
+    },
+    {
+      "clientName": "Hybrid Classroom Communication Setup",
+      "industry": "Education",
+      "solution": "Interactive classroom with camera, display, audio, content sharing, teaching workflow support and user training.",
+      "technologies": [
+        "Interactive Display",
+        "PTZ Camera",
+        "Wireless Audio",
+        "Type-C"
+      ],
+      "image": "assests/images/solutions/smartClassroom.png"
+    },
+    {
+      "clientName": "Multi-Room Meeting Standardization",
+      "industry": "Enterprise Campus",
+      "solution": "Standardized huddle rooms, conference rooms and training rooms with repeatable product stack, installation process and support plan.",
+      "technologies": [
+        "HP Poly",
+        "Sony",
+        "Commercial Displays",
+        "DSP"
+      ],
+      "image": "assests/images/hero/Vconf.webp"
+    }
+  ],
+  "caseStudies": [
+    {
+      "title": "Boardroom meeting experience modernization",
+      "challenge": "The organization needed a reliable meeting room where executives could start calls quickly, present content easily, and communicate clearly with remote participants.",
+      "solution": "GPSPL proposed a unified collaboration setup with commercial display, professional camera, room audio, microphones, wireless presentation, table connectivity and simplified control.",
+      "implementation": "The room was installed, configured, tested across calling and presentation scenarios, documented, and handed over with user training.",
+      "results": "The meeting experience became easier to operate, audio/video quality improved, and support dependency reduced through better standardization."
+    },
+    {
+      "title": "Hybrid learning and training environment",
+      "challenge": "The client required a classroom and training setup that could support in-room teaching, remote participation, recording readiness and interactive content.",
+      "solution": "GPSPL designed a hybrid collaboration environment with interactive display, camera, audio pickup, content sharing and teacher-friendly workflows.",
+      "implementation": "The system was supplied, installed, commissioned and handed over with basic operating guidance for trainers and faculty.",
+      "results": "Training sessions became more flexible, participants could join from remote locations, and the room remained easier to support."
+    }
+  ],
+  "gallery": {
+    "categories": [
+      "Boardrooms",
+      "Conference Rooms",
+      "Hybrid Classrooms",
+      "Training Rooms",
+      "Cameras",
+      "Room Control"
+    ],
+    "images": [
+      {
+        "category": "Conference Rooms",
+        "src": "assests/images/products/conference-room-solutions.webp",
+        "caption": "Boardroom video conferencing and collaboration setup"
+      },
+      {
+        "category": "Hybrid Meetings",
+        "src": "assests/images/hero/Vconf.webp",
+        "caption": "Enterprise video conferencing environment"
+      },
+      {
+        "category": "Smart Classroom",
+        "src": "assests/images/solutions/smartClassroom.png",
+        "caption": "Hybrid learning and classroom collaboration"
+      },
+      {
+        "category": "Room Systems",
+        "src": "assests/images/solutions/conf.webp",
+        "caption": "Meeting-room AV, display and audio integration"
+      }
+    ]
+  },
+  "downloads": [
+    {
+      "title": "GPSPL Company Brochure",
+      "type": "Company Profile",
+      "url": "/brochure.pdf"
+    },
+    {
+      "title": "Conference Room Requirement Checklist",
+      "type": "Planning Guide",
+      "url": "/contact.html"
+    },
+    {
+      "title": "Unified Communication BOQ Consultation",
+      "type": "RFQ Support",
+      "url": "/contact.html"
+    },
+    {
+      "title": "AMC & Support Options",
+      "type": "Service Guide",
+      "url": "/amc-maintenance-services.html"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is Unified Communication & Collaboration?",
+      "answer": "Unified Communication & Collaboration combines video conferencing, meeting-room audio, cameras, displays, presentation sharing, room control and IT readiness into one reliable communication environment."
+    },
+    {
+      "question": "Does GPSPL only install video conferencing equipment?",
+      "answer": "No. GPSPL supports product supply, solution design, integration, commissioning, training, warranty coordination, AMC and after-sales support for complete collaboration environments."
+    },
+    {
+      "question": "Which spaces can GPSPL design for collaboration?",
+      "answer": "GPSPL can support boardrooms, conference rooms, huddle rooms, training centers, smart classrooms, hybrid learning spaces, healthcare communication rooms, government facilities and enterprise campuses."
+    },
+    {
+      "question": "Which brands does GPSPL work with for UC solutions?",
+      "answer": "GPSPL works with enterprise technology portfolios including HP Poly, Sony, Samsung, MAXHUB, Newline, BenQ, Harman Professional, JBL Professional, Crestron, AMX, ATEN, Lumens, LG Business Solutions and other project-fit technologies."
+    },
+    {
+      "question": "Can GPSPL help with product selection before purchase?",
+      "answer": "Yes. GPSPL can help evaluate room size, participants, camera coverage, microphone pickup, display size, connectivity, platform requirements, budget and future support needs before preparing a solution."
+    },
+    {
+      "question": "Do you support Pan-India project execution?",
+      "answer": "Yes. GPSPL can help standardize room types, product stacks, deployment methods and support planning for organizations with multiple branches, campuses or offices."
+    },
+    {
+      "question": "Do you provide AMC for meeting-room systems?",
+      "answer": "Yes. GPSPL can provide AMC, preventive maintenance, technical troubleshooting, warranty guidance, support visits and upgrade planning based on project scope."
+    },
+    {
+      "question": "Can existing meeting rooms be upgraded?",
+      "answer": "Yes. GPSPL can assess existing displays, cameras, microphones, cabling, network readiness and room usage to recommend practical upgrades where technically feasible."
+    }
+  ],
+  "relatedServices": [
+    {
+      "title": "Audio Visual Integration",
+      "url": "/audio-visual-integration.html"
+    },
+    {
+      "title": "Conference Room Solutions",
+      "url": "/conference-room-solutions.html"
+    },
+    {
+      "title": "Boardroom Solutions",
+      "url": "/conference-room-solutions.html"
+    },
+    {
+      "title": "Hybrid Workspace Solutions",
+      "url": "/unified-communication-collaboration.html"
+    },
+    {
+      "title": "Smart Classroom Solutions",
+      "url": "/smart-classroom-solutions.html"
+    },
+    {
+      "title": "Professional Audio Solutions",
+      "url": "/professional-audio-solutions.html"
+    },
+    {
+      "title": "Control & Automation",
+      "url": "/control-automation.html"
+    },
+    {
+      "title": "AMC & Service Support",
+      "url": "/amc-maintenance-services.html"
+    }
+  ],
+  "cta": {
+    "headline": "Plan a Better Meeting, Training or Collaboration Room",
+    "subheading": "Share your room size, user count, platform preference, display requirement and support expectations. GPSPL can help you choose the right products, design the solution, deploy it, and support it after handover.",
+    "backgroundImage": "assests/images/vision/gpspl-leadership-quote-bg.webp",
+    "buttons": [
+      {
+        "label": "Request Quote",
+        "url": "/contact.html",
+        "style": "primary"
+      },
+      {
+        "label": "Talk to an Expert",
+        "url": "/contact.html",
+        "style": "secondary"
+      }
+    ]
+  }
+}

@@ -1,0 +1,440 @@
+{
+  "cmsModules": [
+    "Technology Categories",
+    "Audio Technologies",
+    "Applications",
+    "Technology Partners",
+    "Projects",
+    "Case Studies",
+    "Gallery",
+    "Downloads",
+    "FAQs",
+    "Related Services",
+    "SEO Management",
+    "Brochure Management",
+    "Inquiry Forms",
+    "Warranty Extension",
+    "AMC Plans"
+  ],
+  "seo": {
+    "metaTitle": "Audio Technologies, Microphones & Support | GPSPL",
+    "metaDescription": "GPSPL supplies, designs, integrates, commissions, and supports professional audio technologies for boardrooms, conference rooms, classrooms, auditoriums, digital control rooms, and enterprise AV-board solutions.",
+    "keywords": "audio technologies India, professional audio solutions, Sennheiser microphones, wireless microphone systems, meeting room audio, ceiling microphone, Sony MAS-A100, HP Poly audio, boardroom audio, AV board solution, audio installation, warranty extension, GPSPL",
+    "canonicalUrl": "https://gpspl.co.in/audio-technologies.html",
+    "openGraphImage": "https://gpspl.co.in/assests/images/products/professional-audio-solutions.webp",
+    "indexing": "index, follow",
+    "schemaType": "Service",
+    "slug": "audio-technologies",
+    "offerCatalogName": "Audio Technologies & Professional Audio Capabilities",
+    "breadcrumbParentName": "Technology",
+    "breadcrumbParentUrl": "https://gpspl.co.in/#technology"
+  },
+  "hero": {
+    "eyebrow": "Professional Audio Technologies",
+    "title": "Audio Technologies for Clear Communication & Professional Spaces",
+    "subtitle": "Audio systems, microphone technologies, meeting-room sound, AV-board solutions, sales, service, warranty extension, installation, commissioning and post-installation support from GPSPL.",
+    "image": "assests/images/products/professional-audio-solutions.webp",
+    "industryTags": [
+      "Boardrooms",
+      "Conference Rooms",
+      "Classrooms",
+      "Auditoriums",
+      "Digital Control Rooms",
+      "AV-Board Solutions"
+    ],
+    "trustIndicators": [
+      {
+        "value": "28+",
+        "label": "Years of Excellence"
+      },
+      {
+        "value": "600+",
+        "label": "Projects Successfully Delivered"
+      },
+      {
+        "value": "16+",
+        "label": "Global Technology Partners"
+      },
+      {
+        "value": "50+",
+        "label": "Certified AV Professionals"
+      }
+    ],
+    "ctaButtons": [
+      {
+        "label": "Request Audio Consultation",
+        "url": "/contact.html",
+        "style": "primary"
+      },
+      {
+        "label": "Download Company Profile",
+        "url": "/brochure.pdf",
+        "style": "secondary"
+      }
+    ],
+    "partnerLogos": [
+      {
+        "name": "Harman",
+        "logo": "assests/images/patners/Harman.png"
+      },
+      {
+        "name": "Sennheiser",
+        "logo": "assests/images/patners/sennheiser.svg"
+      },
+      {
+        "name": "HP Poly",
+        "logo": "assests/images/patners/hpp.png"
+      },
+      {
+        "name": "Sony",
+        "logo": "assests/images/patners/sony.png"
+      }
+    ]
+  },
+  "introduction": {
+    "heading": "Audio is the foundation of every reliable meeting, classroom and professional AV environment",
+    "description": "GPSPL plans audio around how people actually speak, listen, present and collaborate. From ceiling microphones and meeting-room audio devices to professional AV-board solutions, the focus is clarity, coverage, usability, installation quality, serviceability and long-term support.",
+    "statistics": [
+      {
+        "value": "Why",
+        "label": "Clear voice pickup, speech intelligibility and reliable meetings"
+      },
+      {
+        "value": "How",
+        "label": "Room use, seating, microphone placement, audio coverage and service planning"
+      },
+      {
+        "value": "Support",
+        "label": "Sales, service, warranty extension packs and AMC options"
+      }
+    ],
+    "image": "assests/images/solutions/audio.webp"
+  },
+  "approach": [
+    {
+      "title": "Study",
+      "description": "We begin by understanding room purpose, audience size, seating layout, speaker position, conferencing use, display environment and existing AV infrastructure.",
+      "icon": "fa-search"
+    },
+    {
+      "title": "Select",
+      "description": "We shortlist microphone, wireless audio, speaker, conferencing audio, AV-board and control-room products that match the room requirement, brand portfolio and support expectations.",
+      "icon": "fa-list-check"
+    },
+    {
+      "title": "Integrate",
+      "description": "We install and connect audio devices with displays, cameras, conferencing systems, control interfaces, cable paths and source equipment for a working AV environment.",
+      "icon": "fa-network-wired"
+    },
+    {
+      "title": "Support",
+      "description": "We provide handover, service support, warranty coordination, warranty extension guidance, preventive maintenance and upgrade assistance.",
+      "icon": "fa-headset"
+    }
+  ],
+  "serviceCards": [
+    {
+      "icon": "fa-volume-high",
+      "title": "Professional Audio Systems",
+      "description": "Sennheiser, Harman/JBL and project-fit audio solutions for meeting rooms, classrooms, auditoriums, boardrooms and professional AV environments where speech clarity and reliable sound matter.",
+      "url": "/professional-audio-solutions.html"
+    },
+    {
+      "icon": "fa-microphone-lines",
+      "title": "Ceiling Microphone Solutions",
+      "description": "Sony MAS-A100, Sennheiser and project-fit microphone support for spaces that require clean voice pickup without cluttering the meeting table.",
+      "url": "/professional-audio-solutions.html"
+    },
+    {
+      "icon": "fa-video",
+      "title": "Meeting-Room Audio Devices",
+      "description": "HP Poly meeting-room audio and video collaboration devices, including product families shown in the brochure such as Poly Studio and Poly Sync.",
+      "url": "/unified-communication-collaboration.html"
+    },
+    {
+      "icon": "fa-people-arrows",
+      "title": "Boardroom Audio & AV-Board Solutions",
+      "description": "Audio planning for conference rooms and AV-board solution environments where microphones, speakers, display and control must work together.",
+      "url": "/conference-room-solutions.html"
+    },
+    {
+      "icon": "fa-chalkboard-user",
+      "title": "Classroom & Training Audio",
+      "description": "Teacher microphone, wireless microphone and room audio support for smart classrooms, training rooms and hybrid learning spaces where voice and content need to stay clear.",
+      "url": "/smart-classroom-solutions.html"
+    },
+    {
+      "icon": "fa-building-columns",
+      "title": "Auditorium & Venue Audio",
+      "description": "Professional audio planning for lecture halls, auditoriums and multipurpose venues as part of complete AV system design and integration.",
+      "url": "/professional-audio-solutions.html"
+    },
+    {
+      "icon": "fa-sliders",
+      "title": "Audio Routing & Processing Readiness",
+      "description": "Audio systems prepared for routing, control, signal flow, source management and integration with broader AV and conferencing environments.",
+      "url": "/control-automation.html"
+    },
+    {
+      "icon": "fa-screwdriver-wrench",
+      "title": "Installation, Service & Warranty Extension",
+      "description": "Sales and service support for IT and AV-board solutions with warranty extension pack availability, as highlighted in GPSPL's brochure.",
+      "url": "/amc-maintenance-services.html"
+    }
+  ],
+  "sectionContent": {
+    "capabilities": {
+      "eyebrow": "Audio Portfolio",
+      "title": "Audio Technologies We Supply, Design & Support",
+      "description": "Brochure-backed audio and collaboration technologies for microphone pickup, meeting-room sound, classroom communication, AV-board solutions, service support and warranty extension planning."
+    }
+  },
+  "applications": [
+    "Boardrooms",
+    "Conference Rooms",
+    "Auditoriums",
+    "Universities",
+    "Training Centers",
+    "Government Institutions",
+    "Corporate Campuses",
+    "Command & Control Centers"
+  ],
+  "partners": [
+    {
+      "name": "Harman",
+      "logo": "assests/images/patners/Harman.png",
+      "category": "Professional audio and AV technology portfolio",
+      "description": "Brand portfolio shown in GPSPL brochure for AV and professional technology environments."
+    },
+    {
+      "name": "Sennheiser",
+      "logo": "assests/images/patners/sennheiser.svg",
+      "category": "Professional microphones and conferencing audio",
+      "description": "Microphone, wireless audio and speech capture solutions for boardrooms, classrooms, auditoriums and hybrid collaboration environments."
+    },
+    {
+      "name": "HP Poly",
+      "logo": "assests/images/patners/hpp.png",
+      "category": "Meeting-room audio and collaboration devices",
+      "description": "Brochure-backed video collaboration and audio device portfolio for meeting rooms, including Poly Studio and Poly Sync families."
+    },
+    {
+      "name": "Sony",
+      "logo": "assests/images/patners/sony.png",
+      "category": "Professional camera and microphone technology",
+      "description": "Brochure lists Sony professional camera models and Sony MAS-A100 ceiling microphone for professional communication spaces."
+    }
+  ],
+  "process": [
+    "Requirement Discussion",
+    "Room & Use-Case Study",
+    "Voice Pickup and Coverage Planning",
+    "Product Selection",
+    "BOQ & Procurement Support",
+    "Installation & Cabling",
+    "Configuration & Integration",
+    "Testing & Handover",
+    "Service, Warranty Extension & AMC"
+  ],
+  "features": [
+    "Brochure-backed professional audio portfolio",
+    "Enterprise DSP and audio routing support",
+    "Sennheiser microphone systems support",
+    "Microphone and voice pickup planning",
+    "Meeting-room audio and conferencing readiness",
+    "AV-board solution support",
+    "Sales and service support",
+    "Warranty extension pack availability",
+    "Installation and commissioning",
+    "AMC and service support options"
+  ],
+  "projects": [
+    {
+      "clientName": "Boardroom Audio & Collaboration Setup",
+      "industry": "Corporate",
+      "solution": "Meeting-room audio, microphones, display integration, conferencing readiness and service support.",
+      "technologies": [
+        "HP Poly",
+        "Sony Mic",
+        "Display",
+        "Room Audio"
+      ],
+      "image": "assests/images/products/conference-room-solutions.webp"
+    },
+    {
+      "clientName": "Classroom Audio Support Environment",
+      "industry": "Education",
+      "solution": "Teacher voice support, participant audio, display and hybrid classroom communication planning.",
+      "technologies": [
+        "Microphones",
+        "Speakers",
+        "Interactive Display",
+        "Training Support"
+      ],
+      "image": "assests/images/solutions/smartClassroom.png"
+    },
+    {
+      "clientName": "Professional AV-Board Solution Support",
+      "industry": "Enterprise AV",
+      "solution": "Sales, service, installation and warranty extension support for AV-board and meeting-room technology.",
+      "technologies": [
+        "AV Board",
+        "Audio",
+        "Warranty Extension",
+        "Service"
+      ],
+      "image": "assests/images/solutions/audio.webp"
+    }
+  ],
+  "caseStudies": [
+    {
+      "title": "Meeting-room audio clarity planning",
+      "challenge": "The room required clear participant voice pickup for meetings and hybrid communication without making operation complicated for users.",
+      "solution": "GPSPL planned microphone placement, room audio requirements, conferencing device compatibility and display integration as one room workflow.",
+      "implementation": "The environment was supplied, installed, tested for speech clarity and handed over with support planning.",
+      "results": "Users gained a cleaner meeting experience with easier audio operation and service-ready documentation."
+    },
+    {
+      "title": "AV-board sales and service support",
+      "challenge": "The client needed a professional solution with product supply, installation, service support and warranty extension availability.",
+      "solution": "GPSPL aligned product supply with installation, service and warranty-extension planning as shown in the company brochure's IT and AV-board solution offering.",
+      "implementation": "The solution was coordinated from product selection through deployment and support handover.",
+      "results": "The buyer received a single accountable partner for supply, service and post-installation support."
+    }
+  ],
+  "gallery": {
+    "categories": [
+      "Professional Audio",
+      "Meeting Rooms",
+      "Classrooms",
+      "AV-Board",
+      "Microphones",
+      "Service Support"
+    ],
+    "images": [
+      {
+        "category": "Professional Audio",
+        "src": "assests/images/products/professional-audio-solutions.webp",
+        "caption": "Professional audio products and AV rack environment"
+      },
+      {
+        "category": "Audio Solutions",
+        "src": "assests/images/solutions/audio.webp",
+        "caption": "Audio technology solution environment"
+      },
+      {
+        "category": "Meeting Rooms",
+        "src": "assests/images/products/conference-room-solutions.webp",
+        "caption": "Meeting-room audio, camera and display integration"
+      },
+      {
+        "category": "Classroom Audio",
+        "src": "assests/images/solutions/smartClassroom.png",
+        "caption": "Smart classroom communication and audio support"
+      }
+    ]
+  },
+  "downloads": [
+    {
+      "title": "GPSPL Company Brochure",
+      "type": "Company Profile",
+      "url": "/brochure.pdf"
+    },
+    {
+      "title": "Audio Requirement Consultation",
+      "type": "RFQ Support",
+      "url": "/contact.html"
+    },
+    {
+      "title": "Warranty Extension & Service Support",
+      "type": "Service Guide",
+      "url": "/amc-maintenance-services.html"
+    },
+    {
+      "title": "Professional Audio Product Guidance",
+      "type": "Planning Guide",
+      "url": "/contact.html"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What does GPSPL include under Audio Technologies?",
+      "answer": "GPSPL includes professional audio systems, microphone technologies, meeting-room audio, classroom audio, AV-board solution support, installation, service and warranty extension planning."
+    },
+    {
+      "question": "Why is audio planning important in AV projects?",
+      "answer": "Audio affects speech clarity, meeting reliability, classroom communication, conferencing quality and user confidence. A good display or camera cannot fix poor voice pickup or room sound."
+    },
+    {
+      "question": "How does GPSPL design an audio solution?",
+      "answer": "GPSPL studies the room purpose, audience size, seating layout, voice pickup needs, conferencing use, existing infrastructure, installation constraints and support expectations before selecting products."
+    },
+    {
+      "question": "Which audio brands can GPSPL support?",
+      "answer": "GPSPL can support project-fit professional audio systems including Harman/JBL, Sennheiser, HP Poly and Sony microphone or collaboration audio technologies depending on the room requirement."
+    },
+    {
+      "question": "Does GPSPL provide sales and service support?",
+      "answer": "Yes. The brochure states that sales and service solutions are available for IT and AV-board solutions, with service and warranty extension packs also available."
+    },
+    {
+      "question": "Can GPSPL support audio for classrooms and training rooms?",
+      "answer": "Yes. GPSPL can support audio as part of smart classroom, hybrid learning, meeting-room and training-room technology environments."
+    },
+    {
+      "question": "Does GPSPL provide AMC for audio systems?",
+      "answer": "GPSPL can support AMC and preventive maintenance planning depending on project scope, product category and site requirement."
+    }
+  ],
+  "relatedServices": [
+    {
+      "title": "Professional Audio Solutions",
+      "url": "/professional-audio-solutions.html"
+    },
+    {
+      "title": "Audio Visual Integration",
+      "url": "/audio-visual-integration.html"
+    },
+    {
+      "title": "Unified Communication & Collaboration",
+      "url": "/unified-communication-collaboration.html"
+    },
+    {
+      "title": "Conference Room Solutions",
+      "url": "/conference-room-solutions.html"
+    },
+    {
+      "title": "Smart Classroom Solutions",
+      "url": "/smart-classroom-solutions.html"
+    },
+    {
+      "title": "Auditorium Solutions",
+      "url": "/professional-audio-solutions.html"
+    },
+    {
+      "title": "Control & Automation",
+      "url": "/control-automation.html"
+    },
+    {
+      "title": "AMC & Service Support",
+      "url": "/amc-maintenance-services.html"
+    }
+  ],
+  "cta": {
+    "headline": "Plan the Right Audio System Before You Buy",
+    "subheading": "Share your room type, audience size, microphone needs, conferencing use and support expectations. GPSPL can help you select, supply, install and support the right professional audio technology.",
+    "backgroundImage": "assests/images/vision/gpspl-leadership-quote-bg.webp",
+    "buttons": [
+      {
+        "label": "Request Audio Quote",
+        "url": "/contact.html",
+        "style": "primary"
+      },
+      {
+        "label": "Talk to an Expert",
+        "url": "/contact.html",
+        "style": "secondary"
+      }
+    ]
+  }
+}

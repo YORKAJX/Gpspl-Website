@@ -1,0 +1,477 @@
+{
+  "cmsModules": [
+    "Service Hero",
+    "SEO Management",
+    "Control Technology Scope",
+    "Automation Workflows",
+    "Technology Partners",
+    "Applications",
+    "Projects",
+    "Case Studies",
+    "Gallery",
+    "Downloads",
+    "FAQs",
+    "Related Services",
+    "Inquiry Forms",
+    "RFQ Forms",
+    "Programming Notes",
+    "AMC Plans"
+  ],
+  "seo": {
+    "metaTitle": "Control Automation, KVM & AV Switching | GPSPL",
+    "metaDescription": "GPSPL supplies, designs, integrates, commissions and supports control and automation systems for AV rooms, boardrooms, classrooms, auditoriums, command centers, KVM, AV switching, lighting scenes, source control and enterprise workflows.",
+    "keywords": "control automation technology, AV control system India, room automation, Crestron control, AMX control, ATEN KVM, AV switching, lighting control, boardroom automation, source control, GPSPL",
+    "canonicalUrl": "https://gpspl.co.in/control-automation.html",
+    "openGraphImage": "https://gpspl.co.in/assests/images/hero/av.webp",
+    "indexing": "index, follow",
+    "schemaType": "Service",
+    "slug": "control-automation",
+    "offerCatalogName": "Control, Automation, KVM & AV Switching Capabilities",
+    "breadcrumbParentName": "Technology",
+    "breadcrumbParentUrl": "https://gpspl.co.in/#technology"
+  },
+  "hero": {
+    "eyebrow": "Control & Automation Technology",
+    "title": "Control & Automation Systems",
+    "subtitle": "GPSPL supplies, designs, integrates, commissions and supports room control, AV switching, KVM, source workflows, lighting scenes, touch panels and automation systems for enterprise AV environments.",
+    "image": "assests/images/hero/av.webp",
+    "industryTags": [
+      "Boardrooms",
+      "Conference Rooms",
+      "Classrooms",
+      "Auditoriums",
+      "Command Centers",
+      "Experience Centers"
+    ],
+    "trustIndicators": [
+      {
+        "value": "Control",
+        "label": "Displays, Audio, Sources & Scenes"
+      },
+      {
+        "value": "Switch",
+        "label": "KVM, AV Routing & Connectivity"
+      },
+      {
+        "value": "Support",
+        "label": "Commissioning, Training & AMC"
+      }
+    ],
+    "ctaButtons": [
+      {
+        "label": "Request Automation Consultation",
+        "url": "/contact.html",
+        "style": "primary"
+      },
+      {
+        "label": "Download Company Profile",
+        "url": "/brochure.pdf",
+        "style": "secondary"
+      }
+    ],
+    "partnerLogos": [
+      {
+        "name": "Crestron",
+        "logo": "assests/images/patners/crestron.svg"
+      },
+      {
+        "name": "ATEN",
+        "logo": "assests/images/patners/aten.svg"
+      },
+      {
+        "name": "Harman Professional",
+        "logo": "assests/images/patners/Harman.png"
+      },
+      {
+        "name": "Samsung",
+        "logo": "assests/images/patners/samsung.png"
+      },
+      {
+        "name": "Sony",
+        "logo": "assests/images/patners/sony.png"
+      },
+      {
+        "name": "HP Poly",
+        "logo": "assests/images/patners/hpp.png"
+      }
+    ]
+  },
+  "introduction": {
+    "heading": "Control technology makes complex AV rooms simple, repeatable and supportable",
+    "description": "Modern AV rooms combine displays, microphones, cameras, speakers, DSP, processors, source devices, laptops, lighting, conferencing platforms and network infrastructure. GPSPL designs control and automation workflows so users can start meetings, switch sources, control displays, route audio/video, operate scenes and get support without dealing with disconnected equipment.",
+    "statistics": [
+      {
+        "value": "Operate",
+        "label": "Simple touch-panel, keypad or preset-based user workflows"
+      },
+      {
+        "value": "Route",
+        "label": "AV switching, KVM, USB, HDMI and signal distribution"
+      },
+      {
+        "value": "Maintain",
+        "label": "Commissioning, documentation, training and AMC planning"
+      }
+    ],
+    "image": "assests/images/hero/av.webp"
+  },
+  "approach": [
+    {
+      "title": "Map",
+      "description": "We study room type, user workflow, sources, displays, audio devices, lighting requirement, control points and support expectations.",
+      "icon": "fa-diagram-project"
+    },
+    {
+      "title": "Design",
+      "description": "We define control logic, switching workflow, touch-panel actions, source routing, presets, cable paths, rack coordination and network readiness.",
+      "icon": "fa-drafting-compass"
+    },
+    {
+      "title": "Integrate",
+      "description": "We coordinate processors, panels, KVM, switching, display control, audio routing, video sources, conferencing and room automation into one system.",
+      "icon": "fa-network-wired"
+    },
+    {
+      "title": "Commission",
+      "description": "We test workflows, train users, document operation, hand over support notes and align AMC or post-installation support for long-term reliability.",
+      "icon": "fa-clipboard-check"
+    }
+  ],
+  "sectionContent": {
+    "capabilities": {
+      "eyebrow": "Control Technology Scope",
+      "title": "What GPSPL Can Supply, Integrate & Support",
+      "description": "Control and automation capabilities for enterprise AV, collaboration and command environments."
+    },
+    "caseStudies": {
+      "eyebrow": "Use Cases",
+      "title": "From Complex Equipment to Simple Operation",
+      "description": "Representative examples of how control and automation improve room usability, reliability and support."
+    }
+  },
+  "serviceCards": [
+    {
+      "icon": "fa-tablet-screen-button",
+      "title": "Touch Panel Room Control",
+      "description": "User-friendly control interfaces for displays, projectors, audio, video calls, source selection, lighting scenes and room presets.",
+      "url": "/control-automation.html"
+    },
+    {
+      "icon": "fa-shuffle",
+      "title": "AV Switching & Source Routing",
+      "description": "HDMI, USB, audio/video source selection, matrix switching, extension and signal routing for presentation and collaboration rooms.",
+      "url": "/audio-visual-integration.html"
+    },
+    {
+      "icon": "fa-keyboard",
+      "title": "ATEN KVM & Connectivity",
+      "description": "KVM switching, USB extension, control-room connectivity, operator workflows and source access planning.",
+      "url": "/it-infrastructure-solutions.html"
+    },
+    {
+      "icon": "fa-lightbulb",
+      "title": "Lighting Scenes & Room Modes",
+      "description": "Scene-based operation for presentations, meetings, training, video calls, auditorium sessions and display modes.",
+      "url": "/control-automation.html"
+    },
+    {
+      "icon": "fa-tv",
+      "title": "Display & Projector Control",
+      "description": "Power, input, volume, screen, projector and display control workflows for meeting rooms and learning spaces.",
+      "url": "/projector-accessories.html"
+    },
+    {
+      "icon": "fa-volume-high",
+      "title": "Audio & DSP Control",
+      "description": "Audio routing, level control, mute states, microphone presets, DSP scenes and room audio operation.",
+      "url": "/audio-technologies.html"
+    },
+    {
+      "icon": "fa-video",
+      "title": "Conferencing Workflow Control",
+      "description": "Camera presets, conferencing device control, content sharing, source selection and meeting startup workflows.",
+      "url": "/unified-communication-collaboration.html"
+    },
+    {
+      "icon": "fa-server",
+      "title": "Rack, Cabling & Network Readiness",
+      "description": "Rack planning, cable dressing, device access, power coordination, network readiness and supportable system layout.",
+      "url": "/it-infrastructure-solutions.html"
+    },
+    {
+      "icon": "fa-file-lines",
+      "title": "Documentation & Training",
+      "description": "User operation notes, handover documentation, support guidance and training for facility and IT teams.",
+      "url": "/amc-maintenance-services.html"
+    },
+    {
+      "icon": "fa-headset",
+      "title": "AMC & Lifecycle Support",
+      "description": "Troubleshooting, preventive checks, warranty coordination, workflow updates and long-term support planning.",
+      "url": "/amc-maintenance-services.html"
+    }
+  ],
+  "applications": [
+    "Boardrooms",
+    "Conference Rooms",
+    "Training Rooms",
+    "Smart Classrooms",
+    "Auditoriums",
+    "Command & Control Centers",
+    "Experience Centers",
+    "Healthcare Meeting Rooms",
+    "Government Halls",
+    "Hospitality Banquets",
+    "Retail Experience Spaces",
+    "Multi-purpose AV Rooms"
+  ],
+  "partners": [
+    {
+      "name": "Crestron",
+      "logo": "assests/images/patners/crestron.svg",
+      "category": "Control and automation",
+      "description": "Control and automation systems for professional meeting-room, collaboration and enterprise environments."
+    },
+    {
+      "name": "AMX",
+      "logo": "assests/images/patners/amx.svg",
+      "category": "AV control and automation",
+      "description": "Control, switching and room automation technology for enterprise AV spaces."
+    },
+    {
+      "name": "ATEN",
+      "logo": "assests/images/patners/aten.svg",
+      "category": "KVM and AV switching",
+      "description": "KVM, AV switching, USB extension and connectivity infrastructure for command and meeting environments."
+    },
+    {
+      "name": "Harman Professional",
+      "logo": "assests/images/patners/Harman.png",
+      "category": "Professional AV system",
+      "description": "Professional AV and installed systems used across integrated enterprise environments."
+    },
+    {
+      "name": "Samsung",
+      "logo": "assests/images/patners/samsung.png",
+      "category": "Commercial displays",
+      "description": "Display systems that integrate with room control and source workflows."
+    },
+    {
+      "name": "Sony",
+      "logo": "assests/images/patners/sony.png",
+      "category": "Displays and imaging",
+      "description": "Professional display and imaging technology for controlled presentation and meeting rooms."
+    },
+    {
+      "name": "HP Poly",
+      "logo": "assests/images/patners/hpp.png",
+      "category": "Unified collaboration",
+      "description": "Collaboration devices that connect into controlled room workflows."
+    },
+    {
+      "name": "BenQ",
+      "logo": "assests/images/patners/benq.svg",
+      "category": "Interactive displays",
+      "description": "Interactive display environments for meeting and learning spaces."
+    }
+  ],
+  "process": [
+    "Requirement discussion and room workflow study",
+    "Site survey, device list and infrastructure review",
+    "Control logic, source flow and automation architecture",
+    "Product selection, BOQ and compatibility planning",
+    "Installation, rack work, cabling and device integration",
+    "Programming coordination, configuration and preset setup",
+    "Testing, commissioning and user acceptance",
+    "Training, documentation, AMC and support handover"
+  ],
+  "features": [
+    "Single control interface for complex AV rooms",
+    "AV switching, KVM, extension and source routing",
+    "Display, projector, audio and conferencing control",
+    "Lighting scenes and room mode automation",
+    "Rack, cabling and IT-readiness coordination",
+    "Touch panels, keypads and user workflow planning",
+    "Commissioning, documentation and user training",
+    "AMC, troubleshooting and post-installation support"
+  ],
+  "projects": [
+    {
+      "clientName": "Boardroom Control Upgrade",
+      "industry": "Corporate",
+      "solution": "Room control workflow for display, audio, video conferencing, source switching and lighting scene operation.",
+      "technologies": [
+        "Touch panel",
+        "AV switching",
+        "Display control",
+        "Audio routing"
+      ],
+      "image": "assests/images/products/conference-room-solutions.webp"
+    },
+    {
+      "clientName": "Command Room KVM & Source Workflow",
+      "industry": "Command Center",
+      "solution": "KVM and AV source routing workflow for operators, displays and control-room infrastructure.",
+      "technologies": [
+        "ATEN KVM",
+        "AV switching",
+        "Video wall",
+        "Rack planning"
+      ],
+      "image": "assests/images/hero/video-wall-command-center.webp"
+    },
+    {
+      "clientName": "Auditorium Scene Automation",
+      "industry": "Education / Events",
+      "solution": "Presentation, audio, projection and lighting scene workflow for repeatable event operation.",
+      "technologies": [
+        "Control panel",
+        "Projector",
+        "Audio scenes",
+        "Lighting modes"
+      ],
+      "image": "assests/images/hero/led.jpg"
+    }
+  ],
+  "caseStudies": [
+    {
+      "title": "Boardroom operation simplified",
+      "challenge": "The room had multiple devices and users needed support to start meetings, choose sources and control displays.",
+      "solution": "GPSPL planned a control workflow for display power, source selection, conferencing, audio and room presets.",
+      "implementation": "Touch-panel actions, AV switching, source routing and handover notes were aligned with the user's meeting process.",
+      "results": "The boardroom became easier to operate with fewer user errors and clearer support ownership."
+    },
+    {
+      "title": "Command center source access",
+      "challenge": "Operators needed dependable access to multiple systems and display sources without manual cable changes.",
+      "solution": "GPSPL aligned KVM, AV switching, rack layout and source workflow around operator needs.",
+      "implementation": "Connectivity, switching paths, display routing and access points were documented and commissioned.",
+      "results": "The team received a cleaner source workflow with better supportability and reduced operational friction."
+    },
+    {
+      "title": "Training room repeatable presets",
+      "challenge": "A multipurpose training room needed repeatable modes for presentation, video call and classroom use.",
+      "solution": "GPSPL designed presets for source selection, audio level, display control and lighting scene requirements.",
+      "implementation": "The room workflow was tested, users were trained and support notes were handed over.",
+      "results": "The space became easier to switch between training modes with more consistent operation."
+    }
+  ],
+  "gallery": {
+    "categories": [
+      "Control Rooms",
+      "Boardrooms",
+      "KVM",
+      "AV Switching",
+      "Automation",
+      "Classrooms"
+    ],
+    "images": [
+      {
+        "src": "assests/images/vision/roadmap-av-ecosystem.webp",
+        "caption": "Integrated AV system with control and connectivity planning"
+      },
+      {
+        "src": "assests/images/products/conference-room-solutions.webp",
+        "caption": "Boardroom control workflow for meetings and presentations"
+      },
+      {
+        "src": "assests/images/hero/video-wall-command-center.webp",
+        "caption": "Command room source routing and operator workflow"
+      },
+      {
+        "src": "assests/images/solutions/smartClassroom.png",
+        "caption": "Classroom and learning-space control workflow"
+      }
+    ]
+  },
+  "downloads": [
+    {
+      "title": "GPSPL Company Profile",
+      "type": "Company Profile",
+      "url": "/brochure.pdf"
+    },
+    {
+      "title": "Control Workflow Checklist",
+      "type": "Planning Checklist",
+      "url": "/contact.html"
+    },
+    {
+      "title": "Automation Requirement Form",
+      "type": "RFQ Form",
+      "url": "/contact.html"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is control and automation in an AV room?",
+      "answer": "Control and automation connects different room devices such as displays, projectors, audio systems, microphones, cameras, source devices, lighting and conferencing systems into a simpler user workflow."
+    },
+    {
+      "question": "Can GPSPL integrate control with existing AV equipment?",
+      "answer": "GPSPL can review existing equipment and define what can be integrated depending on device compatibility, control ports, network readiness, documentation and site condition."
+    },
+    {
+      "question": "What brands are used for control and switching?",
+      "answer": "GPSPL works with control, automation, KVM and AV switching systems such as Crestron, AMX, ATEN and project-fit technologies based on requirement and compatibility."
+    },
+    {
+      "question": "Can automation include lighting scenes?",
+      "answer": "Yes. Depending on site infrastructure and scope, automation can include room modes such as presentation, meeting, video call, training, auditorium and display scenes."
+    },
+    {
+      "question": "Does GPSPL provide programming?",
+      "answer": "GPSPL coordinates programming, configuration, workflow setup, testing and commissioning as part of the control and automation delivery scope."
+    },
+    {
+      "question": "Is KVM part of control and automation?",
+      "answer": "KVM is often part of command rooms, control rooms and operator environments. GPSPL can supply and integrate KVM, extension and switching workflows using project-fit technology."
+    },
+    {
+      "question": "Do you provide AMC for control systems?",
+      "answer": "Yes. GPSPL can provide AMC, troubleshooting, preventive checks, warranty coordination and post-installation support for eligible control and automation systems."
+    }
+  ],
+  "relatedServices": [
+    {
+      "title": "Audio Visual Integration",
+      "url": "/audio-visual-integration.html"
+    },
+    {
+      "title": "Unified Communication & Collaboration",
+      "url": "/unified-communication-collaboration.html"
+    },
+    {
+      "title": "Video Wall Solutions",
+      "url": "/video-wall-solutions.html"
+    },
+    {
+      "title": "Video Technologies",
+      "url": "/video-technologies.html"
+    },
+    {
+      "title": "IT Infrastructure Solutions",
+      "url": "/it-infrastructure-solutions.html"
+    },
+    {
+      "title": "AMC & Maintenance Services",
+      "url": "/amc-maintenance-services.html"
+    }
+  ],
+  "cta": {
+    "headline": "Need simpler control for a complex AV room?",
+    "subheading": "Share your room type, devices, sources, display workflow, lighting requirement and support expectations. GPSPL will help plan the control architecture, switching workflow and support scope.",
+    "backgroundImage": "assests/images/hero/av.webp",
+    "buttons": [
+      {
+        "label": "Request Automation Consultation",
+        "url": "/contact.html",
+        "style": "primary"
+      },
+      {
+        "label": "Talk to an Expert",
+        "url": "/contact.html",
+        "style": "secondary"
+      }
+    ]
+  }
+}

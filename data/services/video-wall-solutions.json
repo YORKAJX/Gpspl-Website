@@ -1,0 +1,448 @@
+{
+  "cmsModules": [
+    "Service Hero",
+    "SEO Management",
+    "Video Wall Categories",
+    "Technology Partners",
+    "Applications",
+    "Projects",
+    "Case Studies",
+    "Gallery",
+    "Downloads",
+    "FAQs",
+    "Related Services",
+    "Inquiry Forms",
+    "RFQ Forms",
+    "AMC Plans",
+    "Warranty Extension"
+  ],
+  "seo": {
+    "metaTitle": "Video Wall Solutions, Supply & Support | GPSPL",
+    "metaDescription": "GPSPL supplies, designs, integrates, installs, commissions and supports video wall solutions including LED video walls, LCD video walls, control room displays, signage walls, processors, mounts, cabling, AMC and post-installation support across India.",
+    "keywords": "video wall solutions India, LED video wall installation, LCD video wall system, command center video wall, control room display wall, digital signage video wall, active LED wall, video wall controller, Absen LED wall, Samsung video wall, LG video wall, GPSPL",
+    "canonicalUrl": "https://gpspl.co.in/video-wall-solutions.html",
+    "openGraphImage": "https://gpspl.co.in/assests/images/hero/video-wall-command-center.webp",
+    "indexing": "index, follow",
+    "schemaType": "Service",
+    "slug": "video-wall-solutions",
+    "offerCatalogName": "Video Wall Supply, Integration & Support Capabilities",
+    "breadcrumbParentName": "Services",
+    "breadcrumbParentUrl": "https://gpspl.co.in/#services"
+  },
+  "hero": {
+    "eyebrow": "Enterprise Video Wall Solutions",
+    "title": "Video Wall Solutions for Control Rooms, Boardrooms & Public Display",
+    "subtitle": "GPSPL supplies, designs, integrates and supports LED and LCD video wall systems for command centers, enterprise lobbies, boardrooms, auditoriums, campuses, signage networks and mission-critical monitoring environments.",
+    "image": "assests/images/hero/video-wall-command-center.webp",
+    "industryTags": [
+      "Command Centers",
+      "Boardrooms",
+      "Auditoriums",
+      "Corporate Campuses",
+      "Government Institutions",
+      "Experience Centers"
+    ],
+    "trustIndicators": [
+      {
+        "value": "Supply",
+        "label": "Displays & Controllers"
+      },
+      {
+        "value": "Design",
+        "label": "Pixel Pitch & Layout"
+      },
+      {
+        "value": "Support",
+        "label": "AMC & Calibration"
+      }
+    ],
+    "ctaButtons": [
+      {
+        "label": "Request Video Wall Quote",
+        "url": "/contact.html",
+        "style": "primary"
+      },
+      {
+        "label": "Talk to an Expert",
+        "url": "/contact.html",
+        "style": "secondary"
+      }
+    ],
+    "partnerLogos": [
+      {
+        "name": "Absen",
+        "logo": "assests/images/patners/absen.png"
+      },
+      {
+        "name": "Samsung",
+        "logo": "assests/images/patners/samsung.png"
+      },
+      {
+        "name": "LG Business Solutions",
+        "logo": "assests/images/patners/lgb.png"
+      },
+      {
+        "name": "BenQ",
+        "logo": "assests/images/patners/benq.svg"
+      },
+      {
+        "name": "Sony",
+        "logo": "assests/images/patners/sony.png"
+      },
+      {
+        "name": "ATEN",
+        "logo": "assests/images/patners/aten.svg"
+      }
+    ]
+  },
+  "introduction": {
+    "heading": "Video walls are planned around viewing distance, content type, uptime, brightness and serviceability",
+    "description": "A successful video wall is more than a large display. GPSPL studies the room, viewing distance, ambient light, source devices, signal routing, mounting structure, content workflow, service access and operating hours before recommending LED, LCD, processor, controller and support options. The result is a visual system that looks premium, stays reliable and remains easy to operate.",
+    "statistics": [
+      {
+        "value": "View",
+        "label": "Pixel pitch, resolution, brightness and viewing distance"
+      },
+      {
+        "value": "Route",
+        "label": "Source switching, controllers, processors and signal paths"
+      },
+      {
+        "value": "Maintain",
+        "label": "Calibration, spares, AMC, training and support handover"
+      }
+    ],
+    "image": "assests/images/hero/video-wall-command-center.webp"
+  },
+  "approach": [
+    {
+      "icon": "fa-ruler-combined",
+      "title": "Survey",
+      "description": "Measure wall size, room depth, viewing angles, ambient light, mounting conditions, power, cabling routes and service access."
+    },
+    {
+      "icon": "fa-border-all",
+      "title": "Design",
+      "description": "Select LED or LCD technology, pixel pitch, screen layout, processor capacity, control workflow and mounting architecture."
+    },
+    {
+      "icon": "fa-screwdriver-wrench",
+      "title": "Integrate",
+      "description": "Install display modules or panels, mounts, processors, sources, cabling, control interfaces and signal distribution."
+    },
+    {
+      "icon": "fa-gauge-high",
+      "title": "Support",
+      "description": "Commission, calibrate, train users, document the system, provide AMC, warranty assistance and long-term technical support."
+    }
+  ],
+  "sectionContent": {
+    "capabilities": {
+      "eyebrow": "Service Portfolio",
+      "title": "Complete Video Wall Services",
+      "description": "Supply, engineering, installation and support capabilities for enterprise video wall environments."
+    },
+    "caseStudies": {
+      "eyebrow": "Case Studies",
+      "title": "From Requirement to Reliable Visual Performance",
+      "description": "Representative delivery structures showing how GPSPL plans, installs and supports video wall environments."
+    }
+  },
+  "serviceCards": [
+    {
+      "icon": "fa-border-all",
+      "title": "Active LED Video Walls",
+      "description": "Seamless indoor and outdoor LED walls planned around pixel pitch, cabinet size, brightness, refresh rate, control, viewing distance and maintenance access.",
+      "url": "/active-led-wall-solutions.html"
+    },
+    {
+      "icon": "fa-tv",
+      "title": "LCD Video Wall Systems",
+      "description": "Bezel-managed LCD video walls for control rooms, meeting spaces, receptions and monitoring environments where tiled display architecture is preferred.",
+      "url": "/video-wall-solutions.html"
+    },
+    {
+      "icon": "fa-desktop",
+      "title": "Control Room Display Walls",
+      "description": "Mission-ready visualization systems for NOCs, command centers, surveillance rooms, emergency operations and monitoring environments.",
+      "url": "/video-wall-solutions.html"
+    },
+    {
+      "icon": "fa-signs-post",
+      "title": "Digital Signage Video Walls",
+      "description": "High-impact display walls for corporate lobbies, retail environments, hospitality, experience centers, showrooms and public communication.",
+      "url": "/digital-signage-solutions.html"
+    },
+    {
+      "icon": "fa-sliders",
+      "title": "Processors, Controllers & Switching",
+      "description": "Video wall controllers, matrix switching, signal extension, source routing, multi-window layouts, presets and operator-friendly control workflows.",
+      "url": "/control-automation.html"
+    },
+    {
+      "icon": "fa-tools",
+      "title": "Mounting, Structure & Alignment",
+      "description": "Wall structure planning, brackets, cabinet alignment, front or rear serviceability, ventilation, power planning and cable management.",
+      "url": "/audio-visual-integration.html"
+    },
+    {
+      "icon": "fa-wand-magic-sparkles",
+      "title": "Calibration & Commissioning",
+      "description": "Brightness matching, color calibration, screen mapping, source testing, display presets, user training and final handover documentation.",
+      "url": "/audio-visual-integration.html"
+    },
+    {
+      "icon": "fa-headset",
+      "title": "AMC, Warranty & Support",
+      "description": "Preventive maintenance, troubleshooting, warranty coordination, spare planning, remote support and upgrade guidance.",
+      "url": "/amc-maintenance-services.html"
+    }
+  ],
+  "applications": [
+    "Command & Control Centers",
+    "Corporate Campuses",
+    "Boardrooms",
+    "Auditoriums",
+    "Government Institutions",
+    "Universities",
+    "Healthcare Facilities",
+    "Experience Centers"
+  ],
+  "partners": [
+    {
+      "name": "Absen",
+      "logo": "assests/images/patners/absen.png",
+      "category": "Active LED displays",
+      "description": "LED display technology for large-format indoor and outdoor video wall environments."
+    },
+    {
+      "name": "Samsung",
+      "logo": "assests/images/patners/samsung.png",
+      "category": "Commercial displays and signage",
+      "description": "Professional display and signage systems for enterprise visual communication."
+    },
+    {
+      "name": "LG Business Solutions",
+      "logo": "assests/images/patners/lgb.png",
+      "category": "Commercial display systems",
+      "description": "Large-format displays and professional visual solutions for signage and control environments."
+    },
+    {
+      "name": "BenQ",
+      "logo": "assests/images/patners/benq.svg",
+      "category": "Signage and displays",
+      "description": "Professional display and signage technologies for education, meeting and communication spaces."
+    },
+    {
+      "name": "Sony",
+      "logo": "assests/images/patners/sony.png",
+      "category": "Professional visual systems",
+      "description": "Visual, display and projection technologies for enterprise AV environments."
+    },
+    {
+      "name": "ATEN",
+      "logo": "assests/images/patners/aten.svg",
+      "category": "KVM, switching and connectivity",
+      "description": "Signal routing, KVM, AV switching and connectivity infrastructure for display walls and control rooms."
+    }
+  ],
+  "process": [
+    "Requirement discovery and site survey",
+    "Viewing distance, brightness and pixel-pitch planning",
+    "Display technology selection: LED, LCD or hybrid visual system",
+    "Processor, controller, switching and source workflow design",
+    "Mounting structure, power, cabling and ventilation planning",
+    "Installation, cabinet or panel alignment and cable dressing",
+    "Signal testing, mapping, calibration and commissioning",
+    "User training, documentation, AMC and support handover"
+  ],
+  "features": [
+    "Distribution-first product supply with project-fit technology guidance",
+    "LED, LCD and signage video wall planning",
+    "Pixel-pitch, brightness and viewing-distance consultation",
+    "Video wall controllers, processors and source switching support",
+    "Mounting, alignment, cabling and electrical coordination",
+    "Calibration, commissioning and user training",
+    "AMC, warranty extension and post-installation technical support",
+    "Documentation, handover and upgrade planning for long-term serviceability"
+  ],
+  "projects": [
+    {
+      "clientName": "Command Center Display Wall",
+      "industry": "Government / Operations",
+      "solution": "Multi-source visualization wall for monitoring dashboards, live video feeds, maps and operational data.",
+      "technologies": [
+        "Video wall",
+        "Controller",
+        "Signal routing",
+        "AMC"
+      ],
+      "image": "assests/images/hero/VideoWall_3.webp"
+    },
+    {
+      "clientName": "Corporate Experience Center",
+      "industry": "Enterprise",
+      "solution": "Premium display wall for presentations, brand content, leadership briefings and visitor engagement.",
+      "technologies": [
+        "LED wall",
+        "Content display",
+        "Control",
+        "Commissioning"
+      ],
+      "image": "assests/images/products/active-led-video-wall.webp"
+    },
+    {
+      "clientName": "Campus Auditorium Visual System",
+      "industry": "Education",
+      "solution": "Large-format visual system with clear sightlines, stage integration, source switching and support handover.",
+      "technologies": [
+        "Large display",
+        "AV switching",
+        "Mounting",
+        "Training"
+      ],
+      "image": "assests/images/hero/led.jpg"
+    }
+  ],
+  "caseStudies": [
+    {
+      "title": "Mission-critical monitoring wall",
+      "challenge": "The client needed a large display surface that could show multiple live feeds, maps and dashboards without confusing operators.",
+      "solution": "GPSPL planned the wall layout, display technology, controller workflow and source routing around operator sightlines and content priority.",
+      "implementation": "The system was installed with structured cabling, screen mapping, controller presets, calibration, user training and support documentation.",
+      "results": "Operators received a clearer monitoring environment with simplified source control, service-ready documentation and AMC support planning."
+    },
+    {
+      "title": "Enterprise lobby video wall",
+      "challenge": "The organization needed a premium visual experience for brand communication, visitor engagement and high-impact presentations.",
+      "solution": "GPSPL aligned display size, brightness, content workflow, mounting, power and service access with the architectural space.",
+      "implementation": "The display system was supplied, mounted, calibrated and handed over with operating guidelines and maintenance recommendations.",
+      "results": "The client gained a cleaner, more premium communication surface backed by accountable supply, integration and support."
+    },
+    {
+      "title": "Training and auditorium display upgrade",
+      "challenge": "The room required better viewing for larger audiences and easier switching between presentation, camera and media sources.",
+      "solution": "GPSPL planned a large-format display system with source switching, audio-video integration readiness and serviceable mounting.",
+      "implementation": "The installation included alignment, signal testing, commissioning, user orientation and post-installation support planning.",
+      "results": "Audience visibility improved and the technical team received a simpler workflow for events, lectures and presentations."
+    }
+  ],
+  "gallery": {
+    "categories": [
+      "LED Video Walls",
+      "LCD Video Walls",
+      "Control Rooms",
+      "Corporate Lobbies",
+      "Auditoriums",
+      "Digital Signage"
+    ],
+    "images": [
+      {
+        "src": "assests/images/hero/video-wall-command-center.webp",
+        "caption": "Command center style video wall and control-panel visual environment"
+      },
+      {
+        "src": "assests/images/products/active-led-video-wall.webp",
+        "caption": "Active LED video wall system for enterprise display environments"
+      },
+      {
+        "src": "assests/images/hero/VideoWall_3.webp",
+        "caption": "Video wall environment for monitoring and control-room applications"
+      },
+      {
+        "src": "assests/images/solutions/signange.webp",
+        "caption": "Digital signage display workflow for public communication spaces"
+      }
+    ]
+  },
+  "downloads": [
+    {
+      "title": "GPSPL Company Profile",
+      "type": "Company Profile",
+      "url": "/brochure.pdf"
+    },
+    {
+      "title": "Video Wall Requirement Checklist",
+      "type": "Planning Checklist",
+      "url": "/contact.html"
+    },
+    {
+      "title": "AMC & Warranty Support",
+      "type": "Service Guide",
+      "url": "/amc-maintenance-services.html"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What type of video wall should we choose: LED or LCD?",
+      "answer": "The choice depends on viewing distance, brightness requirement, bezel tolerance, content type, budget, service access and operating hours. GPSPL studies these factors before recommending LED, LCD or a hybrid display approach."
+    },
+    {
+      "question": "Does GPSPL only install video walls or also supply products?",
+      "answer": "GPSPL is distribution-first. We can supply displays, LED cabinets, controllers, mounts, cables and related technology, and also provide design, integration, installation, commissioning and support."
+    },
+    {
+      "question": "Can GPSPL design video walls for control rooms?",
+      "answer": "Yes. GPSPL can plan display walls for command centers, network operations centers, surveillance rooms, emergency operations and other monitoring environments where reliability and multi-source visualization matter."
+    },
+    {
+      "question": "What information is needed for a video wall quote?",
+      "answer": "Useful inputs include wall size, viewing distance, room photos, content type, number of sources, required operating hours, indoor or outdoor use, brightness expectations, mounting surface and support requirements."
+    },
+    {
+      "question": "Does GPSPL provide calibration and commissioning?",
+      "answer": "Yes. GPSPL supports alignment, mapping, signal testing, brightness and color checks, commissioning, user training and handover documentation."
+    },
+    {
+      "question": "Can video walls be connected with AV switching and automation?",
+      "answer": "Yes. Video walls can be integrated with source switching, matrix routing, control panels, presentation systems, video conferencing, signage workflows and control-room operator workflows."
+    },
+    {
+      "question": "Does GPSPL provide AMC for video wall systems?",
+      "answer": "Yes. GPSPL can support preventive maintenance, troubleshooting, warranty coordination, spare planning and post-installation support through AMC and managed service options."
+    }
+  ],
+  "relatedServices": [
+    {
+      "title": "Active LED Display Systems",
+      "url": "/active-led-wall-solutions.html"
+    },
+    {
+      "title": "Video Technologies",
+      "url": "/video-technologies.html"
+    },
+    {
+      "title": "Digital Signage Solutions",
+      "url": "/digital-signage-solutions.html"
+    },
+    {
+      "title": "Command & Control Centers",
+      "url": "/video-wall-solutions.html"
+    },
+    {
+      "title": "Control & Automation",
+      "url": "/control-automation.html"
+    },
+    {
+      "title": "AMC & Maintenance Services",
+      "url": "/amc-maintenance-services.html"
+    }
+  ],
+  "cta": {
+    "headline": "Plan a video wall that fits your space, content and operating needs.",
+    "subheading": "Share your room size, viewing distance, content sources and preferred application. GPSPL will help you shortlist the right display technology, controller workflow and support model.",
+    "backgroundImage": "assests/images/hero/video-wall-command-center.webp",
+    "buttons": [
+      {
+        "label": "Request Video Wall Quote",
+        "url": "/contact.html",
+        "style": "primary"
+      },
+      {
+        "label": "Call GPSPL",
+        "url": "tel:+919310092963",
+        "style": "secondary"
+      }
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "positioning": "AV Solutions Distributor & System Integrator Since 1997",
+  "hero": {
+    "eyebrow": "AV Solutions Distributor & System Integrator Since 1997",
+    "headline": "We supply. We design. We integrate. We support.",
+    "summary": "Global Peripheral Solution Pvt. Ltd. supplies, designs, integrates and supports professional AV solutions, display systems, collaboration spaces, installation, AMC and service support.",
+    "primaryCta": {
+      "label": "Request Quote",
+      "href": "/contact.html"
+    },
+    "secondaryCta": {
+      "label": "Talk to an Expert",
+      "href": "tel:+919310092963"
+    }
+  },
+  "companyProof": [
+    { "label": "Years of Excellence", "value": "28+" },
+    { "label": "Projects Successfully Delivered", "value": "600+" },
+    { "label": "Global Technology Partners", "value": "16+" },
+    { "label": "Certified AV Professionals", "value": "50+" }
+  ],
+  "pillars": [
+    {
+      "title": "Distribution",
+      "summary": "Supply of enterprise technology products from trusted global brands for AV, IT, display, audio, conferencing, projection, active LED, laptops, desktops, printers, RAM, SSD, cartridges, toners and peripheral requirements.",
+      "items": ["Technology sourcing and procurement", "Dealer and institutional supply", "IT peripherals, printers, storage and accessories", "Product selection and pricing support", "Warranty and service coordination"]
+    },
+    {
+      "title": "Integration",
+      "summary": "Design and deployment of complete technology environments, built around the space, user workflow, product stack and long-term serviceability.",
+      "items": ["AV and IT system design", "Boardrooms, classrooms and auditoriums", "Active LED, video walls and control rooms", "Installation, testing and commissioning"]
+    },
+    {
+      "title": "Support",
+      "summary": "Post-delivery technical support, user training, warranty assistance, preventive maintenance and upgrade guidance for supplied and integrated systems.",
+      "items": ["AMC and preventive maintenance", "Warranty extension packs", "User training and handover", "Technical troubleshooting and upgrades"]
+    }
+  ],
+  "whyChoose": [
+    {
+      "title": "Trusted Technology Supply",
+      "summary": "Source genuine AV, IT, display, professional audio, conferencing, active LED, laptops, desktops, printers, RAM, SSD and peripheral products through trusted brand and channel relationships.",
+      "points": ["Brand-backed procurement", "Model selection support", "Dealer and institutional supply"]
+    },
+    {
+      "title": "Warranty & Service Coordination",
+      "summary": "Reduce purchase risk with warranty guidance, eligible OEM support coordination, warranty extension packs and service-ready product planning.",
+      "points": ["OEM warranty guidance", "Extension pack support", "Service documentation"]
+    },
+    {
+      "title": "Experienced Technical Teams",
+      "summary": "Work with teams that understand product compatibility, room conditions, user workflows, cabling, commissioning and long-term maintainability.",
+      "points": ["Design and engineering", "Installation planning", "Testing and handover"]
+    },
+    {
+      "title": "Pan-India Project Execution",
+      "summary": "Coordinate technology supply and deployment requirements for offices, campuses, institutions and enterprise facilities across India.",
+      "points": ["Pan-India execution", "Logistics planning", "Site readiness support"]
+    },
+    {
+      "title": "End-to-End Deployment",
+      "summary": "Move from requirement discussion to BOQ, procurement, installation, commissioning, user training and support through one accountable partner.",
+      "points": ["Requirement mapping", "BOQ and procurement", "Commissioning and training"]
+    },
+    {
+      "title": "Dedicated After-Sales Support",
+      "summary": "Protect system performance after handover with AMC, preventive maintenance, troubleshooting, upgrades and support options.",
+      "points": ["AMC services", "Preventive maintenance", "Upgrade guidance"]
+    }
+  ],
+  "leadGeneration": {
+    "primaryCtas": ["Request Quote", "Schedule Consultation", "Talk to an Expert", "Download Company Profile"],
+    "stickyCta": true,
+    "whatsappCta": true
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "collection": "pages",
+  "purpose": "Admin-editable page content blueprint for newly added GPSPL website pages.",
+  "globalEditableFields": [
+    "seoTitle",
+    "metaDescription",
+    "canonicalUrl",
+    "openGraphTitle",
+    "openGraphDescription",
+    "openGraphImage",
+    "heroEyebrow",
+    "heroHeading",
+    "heroSummary",
+    "primaryCtaLabel",
+    "primaryCtaUrl",
+    "sections",
+    "relatedPages",
+    "faqItems",
+    "schemaType"
+  ],
+  "pages": [
+    {
+      "slug": "industries",
+      "url": "/industries.html",
+      "pageType": "Industry Index",
+      "primaryCollection": "industries",
+      "editableSections": ["hero", "industryCards", "deliveryModel", "relatedServices", "faqs", "rfqCta"],
+      "seoIntent": "Industries served by GPSPL for AV, IT, display, collaboration and support solutions"
+    },
+    {
+      "slug": "case-studies",
+      "url": "/case-studies.html",
+      "pageType": "Case Study Index",
+      "primaryCollection": "case-studies",
+      "editableSections": ["hero", "caseStudyCards", "cmsFields", "relatedProjects", "faqs", "consultationCta"],
+      "seoIntent": "GPSPL project outcomes and case study examples for enterprise technology solutions"
+    },
+    {
+      "slug": "product-catalog",
+      "url": "/product-catalog.html",
+      "pageType": "Product Catalog Index",
+      "primaryCollection": "products",
+      "editableSections": ["hero", "productCategoryCards", "catalogFields", "relatedBrands", "downloads", "rfqCta"],
+      "seoIntent": "GPSPL product catalog for AV, IT, displays, audio, UPS, KVM, signage and peripherals"
+    },
+    {
+      "slug": "team",
+      "url": "/team.html",
+      "pageType": "Team Page",
+      "primaryCollection": "team-members",
+      "editableSections": ["hero", "leadershipProfile", "departmentCards", "cultureCopy", "contactCta"],
+      "seoIntent": "GPSPL leadership, engineering, project and support team"
+    },
+    {
+      "slug": "careers",
+      "url": "/careers.html",
+      "pageType": "Careers Page",
+      "primaryCollection": "career-openings",
+      "editableSections": ["hero", "careerCategories", "openingsList", "applicationInfo", "faqs"],
+      "seoIntent": "Careers and future openings at GPSPL across sales, engineering, projects and support"
+    },
+    {
+      "slug": "brand-detail",
+      "url": "/brand-detail.html?brand={brandSlug}",
+      "pageType": "Brand Detail Template",
+      "primaryCollection": "brands",
+      "editableSections": ["brandHero", "productCategories", "deliveryModel", "downloads", "relatedProducts", "brandFaqs", "rfqCta"],
+      "seoIntent": "Brand-specific GPSPL technology supply, integration and support pages"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "collection": "testimonials",
+  "status": "architecture-only",
+  "types": ["client-review", "client-logo", "video-testimonial"],
+  "fields": [
+    "type",
+    "slug",
+    "clientName",
+    "company",
+    "designation",
+    "industrySlug",
+    "logo",
+    "quote",
+    "rating",
+    "videoUrl",
+    "thumbnail",
+    "transcript",
+    "relatedProjectSlug",
+    "approvalStatus",
+    "displayPriority",
+    "featured"
+  ],
+  "approvalStatuses": ["draft", "pending-client-approval", "approved", "archived"]
+}

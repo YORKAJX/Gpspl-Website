@@ -1,0 +1,473 @@
+{
+  "cmsModules": [
+    "Technology Categories",
+    "Video Technologies",
+    "Applications",
+    "Technology Partners",
+    "Projects",
+    "Case Studies",
+    "Gallery",
+    "Downloads",
+    "FAQs",
+    "Related Services",
+    "SEO Management",
+    "Brochure Management",
+    "Inquiry Forms",
+    "RFQ Forms",
+    "Warranty Extension",
+    "AMC Plans"
+  ],
+  "seo": {
+    "metaTitle": "Video Technologies, Displays & Integration | GPSPL",
+    "metaDescription": "GPSPL supplies, designs, integrates, commissions, and supports enterprise video technologies including PTZ cameras, video conferencing cameras, displays, projectors, digital signage, active LED, video walls and lecture capture.",
+    "keywords": "video technologies India, PTZ camera integration, video conferencing camera, Sony professional camera, Lumens PTZ camera, HP Poly video, Samsung display, BenQ signage, Epson projector, active LED wall, video wall solutions, lecture capture, GPSPL",
+    "canonicalUrl": "https://gpspl.co.in/video-technologies.html",
+    "openGraphImage": "https://gpspl.co.in/assests/images/hero/video-technologies-boardroom.webp",
+    "indexing": "index, follow",
+    "schemaType": "Service",
+    "slug": "video-technologies",
+    "offerCatalogName": "Video Technologies & Enterprise Visual Capabilities",
+    "breadcrumbParentName": "Technology",
+    "breadcrumbParentUrl": "https://gpspl.co.in/#technology"
+  },
+  "hero": {
+    "eyebrow": "Enterprise Video Technologies",
+    "title": "Video Technologies for Meetings, Learning, Signage & Control Rooms",
+    "subtitle": "PTZ cameras, video conferencing cameras, lecture capture, projectors, displays, signage, active LED and video wall systems supplied, designed, integrated and supported by GPSPL.",
+    "image": "assests/images/hero/video-technologies-boardroom.webp",
+    "industryTags": [
+      "Boardrooms",
+      "Conference Rooms",
+      "Classrooms",
+      "Auditoriums",
+      "Command Centers",
+      "Digital Signage"
+    ],
+    "trustIndicators": [
+      {
+        "value": "Supply",
+        "label": "Video Products"
+      },
+      {
+        "value": "Design",
+        "label": "Visual Systems"
+      },
+      {
+        "value": "Support",
+        "label": "AMC & Service"
+      }
+    ],
+    "ctaButtons": [
+      {
+        "label": "Request Video Consultation",
+        "url": "/contact.html",
+        "style": "primary"
+      },
+      {
+        "label": "Download Company Profile",
+        "url": "/brochure.pdf",
+        "style": "secondary"
+      }
+    ],
+    "partnerLogos": [
+      {
+        "name": "Sony",
+        "logo": "assests/images/patners/sony.png"
+      },
+      {
+        "name": "Lumens",
+        "logo": "assests/images/patners/lumens.png"
+      },
+      {
+        "name": "HP Poly",
+        "logo": "assests/images/patners/hpp.png"
+      },
+      {
+        "name": "Samsung",
+        "logo": "assests/images/patners/samsung.png"
+      },
+      {
+        "name": "BenQ",
+        "logo": "assests/images/patners/benq.svg"
+      },
+      {
+        "name": "Epson",
+        "logo": "assests/images/patners/epson.svg"
+      }
+    ]
+  },
+  "introduction": {
+    "heading": "Video technology is planned around visibility, camera coverage, content clarity and long-term reliability",
+    "description": "GPSPL helps clients select and deploy the right visual technology stack for each space. The scope can include PTZ cameras, video bars, lecture capture, displays, projectors, signage, active LED, video walls, source switching, mounting, cabling, commissioning, training and support.",
+    "statistics": [
+      {
+        "value": "See",
+        "label": "Clear display visibility, brightness and viewing angles"
+      },
+      {
+        "value": "Capture",
+        "label": "Camera coverage, framing, presenter and participant visibility"
+      },
+      {
+        "value": "Operate",
+        "label": "Simple switching, presentation workflow, commissioning and support"
+      }
+    ],
+    "image": "assests/images/hero/video-technologies-boardroom.webp"
+  },
+  "approach": [
+    {
+      "title": "Study",
+      "description": "We understand room purpose, viewing distance, lighting, audience size, camera angles, display size, platform requirement and installation constraints.",
+      "icon": "fa-search"
+    },
+    {
+      "title": "Select",
+      "description": "We shortlist cameras, displays, projectors, signage, active LED, video wall, mounts and connectivity products based on requirement and support expectations.",
+      "icon": "fa-list-check"
+    },
+    {
+      "title": "Integrate",
+      "description": "We connect video sources, displays, cameras, control, audio, cabling, switching and network elements into a reliable visual workflow.",
+      "icon": "fa-network-wired"
+    },
+    {
+      "title": "Support",
+      "description": "We commission, test, document and support the system with training, warranty coordination, AMC and upgrade planning.",
+      "icon": "fa-headset"
+    }
+  ],
+  "serviceCards": [
+    {
+      "icon": "fa-camera",
+      "title": "PTZ Cameras & Professional Camera Systems",
+      "description": "Sony, Lumens and project-fit PTZ camera solutions for boardrooms, classrooms, auditoriums, lecture capture and hybrid collaboration spaces.",
+      "url": "/unified-communication-collaboration.html"
+    },
+    {
+      "icon": "fa-video",
+      "title": "Video Conferencing Camera Systems",
+      "description": "HP Poly video bars, cameras and meeting-room video systems planned with display, microphone, speaker and platform readiness.",
+      "url": "/unified-communication-collaboration.html"
+    },
+    {
+      "icon": "fa-tv",
+      "title": "Commercial Displays & Collaboration Screens",
+      "description": "Samsung, Sony, LG, MAXHUB, Newline and BenQ display systems for meeting rooms, classrooms, reception areas and enterprise communication.",
+      "url": "/interactive-display-solutions.html"
+    },
+    {
+      "icon": "fa-desktop",
+      "title": "Projectors & Presentation Visuals",
+      "description": "Epson, BenQ, Sony and project-fit projection systems with screens, mounts, cabling, brightness planning and installation support.",
+      "url": "/projector-accessories.html"
+    },
+    {
+      "icon": "fa-border-all",
+      "title": "Video Walls & Active LED Displays",
+      "description": "Video walls, active LED, controllers, processing, mounts and calibration for command centers, auditoriums, lobbies and public-facing spaces.",
+      "url": "/video-wall-solutions.html"
+    },
+    {
+      "icon": "fa-signs-post",
+      "title": "Digital Signage & Visual Communication",
+      "description": "Samsung, BenQ and project-fit signage workflows for retail, hospitality, corporate communication, menu boards, reception areas and public messaging.",
+      "url": "/digital-signage-solutions.html"
+    },
+    {
+      "icon": "fa-chalkboard-user",
+      "title": "Lecture Capture & Hybrid Learning Video",
+      "description": "Camera, display, projection and recording-ready video workflows for classrooms, training centers, universities and coaching environments.",
+      "url": "/smart-classroom-solutions.html"
+    },
+    {
+      "icon": "fa-sliders",
+      "title": "Video Switching, Extension & Control",
+      "description": "ATEN, Crestron, AMX and project-fit switching, KVM, source control, HDMI/USB extension and room-control integration.",
+      "url": "/control-automation.html"
+    }
+  ],
+  "sectionContent": {
+    "capabilities": {
+      "eyebrow": "Video Portfolio",
+      "title": "Video Technologies We Supply, Design & Support",
+      "description": "Video technology categories for cameras, displays, projection, signage, active LED, video walls, lecture capture, switching, control and post-installation support."
+    },
+    "caseStudies": {
+      "eyebrow": "Case Studies",
+      "title": "From Visual Challenge to Reliable Operation",
+      "description": "Structured examples showing how GPSPL studies visibility, selects the video stack, integrates the system and supports long-term performance."
+    }
+  },
+  "applications": [
+    "Boardrooms",
+    "Conference Rooms",
+    "Universities",
+    "Training Centers",
+    "Government Institutions",
+    "Command & Control Centers",
+    "Corporate Campuses",
+    "Experience Centers"
+  ],
+  "partners": [
+    {
+      "name": "Sony",
+      "logo": "assests/images/patners/sony.png",
+      "category": "Professional cameras, projectors, displays and microphones",
+      "description": "Brochure-backed professional camera, projector, display and microphone systems for AV and collaboration environments."
+    },
+    {
+      "name": "Lumens",
+      "logo": "assests/images/patners/lumens.png",
+      "category": "PTZ cameras and lecture capture",
+      "description": "Professional PTZ camera and lecture capture systems for education, healthcare and enterprise communication spaces."
+    },
+    {
+      "name": "HP Poly",
+      "logo": "assests/images/patners/hpp.png",
+      "category": "Video collaboration and room systems",
+      "description": "Video bars, cameras, audio devices and meeting-room collaboration technologies for hybrid work environments."
+    },
+    {
+      "name": "Samsung",
+      "logo": "assests/images/patners/samsung.png",
+      "category": "Commercial displays and signage",
+      "description": "Commercial displays, LFD, signage and visual communication platforms for enterprise, education and public-facing spaces."
+    },
+    {
+      "name": "BenQ",
+      "logo": "assests/images/patners/benq.svg",
+      "category": "Signage, projectors and interactive displays",
+      "description": "Digital signage, projectors, interactive displays and professional monitors for visual communication and collaboration."
+    },
+    {
+      "name": "Epson",
+      "logo": "assests/images/patners/epson.svg",
+      "category": "Projectors and presentation systems",
+      "description": "Projectors, presentation visual systems, education projection and peripheral technologies for classrooms and meeting spaces."
+    },
+    {
+      "name": "Absen",
+      "logo": "assests/images/patners/absen.png",
+      "category": "Active LED display technology",
+      "description": "Active LED display technology for command centers, auditoriums, lobbies, retail spaces and public environments."
+    },
+    {
+      "name": "ATEN",
+      "logo": "assests/images/patners/aten.svg",
+      "category": "KVM, AV switching and connectivity",
+      "description": "KVM, AV switching, signal extension, HDMI/USB connectivity and control-room infrastructure for IT and AV systems."
+    }
+  ],
+  "process": [
+    "Requirement Consultation",
+    "Room & Viewing Study",
+    "Camera Coverage Planning",
+    "Display / Projection Sizing",
+    "Product Shortlisting",
+    "BOQ & Procurement Support",
+    "Mounting, Cabling & Installation",
+    "Configuration & Source Testing",
+    "Commissioning & User Training",
+    "Warranty, AMC & Lifecycle Support"
+  ],
+  "features": [
+    "Distribution-first product guidance",
+    "Camera, display and projection selection",
+    "PTZ and lecture capture planning",
+    "Commercial display and signage support",
+    "Active LED and video wall capability",
+    "AV switching and control integration",
+    "Installation, testing and commissioning",
+    "Warranty coordination and AMC options"
+  ],
+  "projects": [
+    {
+      "clientName": "Boardroom Video Conferencing Upgrade",
+      "industry": "Corporate",
+      "solution": "Meeting-room camera, display, microphone, room audio and presentation workflow planned for hybrid executive communication.",
+      "technologies": [
+        "HP Poly",
+        "Sony",
+        "Display",
+        "Room Control"
+      ],
+      "image": "assests/images/products/conference-room-solutions.webp"
+    },
+    {
+      "clientName": "Lecture Capture & Smart Classroom Video",
+      "industry": "Education",
+      "solution": "Classroom video environment with display, projection, camera coverage and teaching-friendly content workflows.",
+      "technologies": [
+        "Lumens",
+        "Epson",
+        "Interactive Display",
+        "Training Support"
+      ],
+      "image": "assests/images/solutions/smartClassroom.png"
+    },
+    {
+      "clientName": "Command Center Visual Wall",
+      "industry": "Operations",
+      "solution": "Video wall and visual monitoring environment planned around display layout, sources, control and long-term serviceability.",
+      "technologies": [
+        "Active LED",
+        "Video Wall",
+        "ATEN",
+        "Control"
+      ],
+      "image": "assests/images/hero/VideoWall_3.webp"
+    }
+  ],
+  "caseStudies": [
+    {
+      "title": "Hybrid meeting camera and display planning",
+      "challenge": "The meeting room needed clear participant visibility, content sharing and simple operation for in-room and remote users.",
+      "solution": "GPSPL planned the camera position, display size, audio-video workflow, source switching and conferencing readiness as one visual system.",
+      "implementation": "The video stack was supplied, installed, configured, tested across meeting scenarios and handed over with operating guidance.",
+      "results": "Users gained more reliable hybrid meetings with better visibility, easier presentation workflows and service-ready documentation."
+    },
+    {
+      "title": "Training room visual clarity upgrade",
+      "challenge": "The training space required better presenter capture, clearer content visibility and a more dependable classroom video environment.",
+      "solution": "GPSPL aligned display/projection sizing, camera coverage, connectivity, installation approach and support planning around the room use case.",
+      "implementation": "The system was deployed with cabling, mounting, testing, commissioning and support handover.",
+      "results": "The room became easier to use for teaching, training, hybrid participation and future maintenance."
+    }
+  ],
+  "gallery": {
+    "categories": [
+      "PTZ Cameras",
+      "Video Conferencing",
+      "Displays",
+      "Projectors",
+      "Video Walls",
+      "Digital Signage"
+    ],
+    "images": [
+      {
+        "category": "Video Conferencing",
+        "src": "assests/images/products/conference-room-solutions.webp",
+        "caption": "Boardroom video conferencing camera, display and room AV environment"
+      },
+      {
+        "category": "Hybrid Meetings",
+        "src": "assests/images/hero/Vconf.webp",
+        "caption": "Enterprise video conferencing and hybrid collaboration setup"
+      },
+      {
+        "category": "Video Walls",
+        "src": "assests/images/hero/VideoWall_3.webp",
+        "caption": "Command-center video wall and visual monitoring environment"
+      },
+      {
+        "category": "Smart Classroom",
+        "src": "assests/images/solutions/smartClassroom.png",
+        "caption": "Smart classroom video, display and learning technology"
+      }
+    ]
+  },
+  "downloads": [
+    {
+      "title": "GPSPL Company Brochure",
+      "type": "Company Profile",
+      "url": "/brochure.pdf"
+    },
+    {
+      "title": "Video Room Requirement Consultation",
+      "type": "RFQ Support",
+      "url": "/contact.html"
+    },
+    {
+      "title": "Projector & Display Planning",
+      "type": "Planning Guide",
+      "url": "/projector-accessories.html"
+    },
+    {
+      "title": "Video Wall & LED Consultation",
+      "type": "Solution Guide",
+      "url": "/video-wall-solutions.html"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What does GPSPL include under Video Technologies?",
+      "answer": "GPSPL includes PTZ cameras, video conferencing cameras, lecture capture, projectors, commercial displays, digital signage, active LED, video walls, source switching, mounting, cabling, commissioning and support."
+    },
+    {
+      "question": "Which video brands can GPSPL support?",
+      "answer": "GPSPL can support project-fit video systems including Sony, Lumens, HP Poly, Samsung, BenQ, Epson, Absen, ATEN and other technologies depending on the application."
+    },
+    {
+      "question": "How does GPSPL select a camera or display?",
+      "answer": "GPSPL studies room size, lighting, viewing distance, participant count, camera coverage, presenter position, platform requirement, installation constraints and support expectations before recommending products."
+    },
+    {
+      "question": "Can GPSPL support video walls and active LED?",
+      "answer": "Yes. GPSPL can support video walls, active LED display systems, controllers, mounting, source routing, calibration, commissioning and post-installation support."
+    },
+    {
+      "question": "Can video technologies be integrated with audio and control?",
+      "answer": "Yes. Video is planned with audio, microphones, room control, source switching, connectivity and conferencing platforms so the complete room works as one system."
+    },
+    {
+      "question": "Does GPSPL provide installation and AMC?",
+      "answer": "Yes. GPSPL can provide installation, commissioning, user training, warranty guidance, preventive maintenance, AMC and upgrade support based on project scope."
+    },
+    {
+      "question": "Can GPSPL help before procurement?",
+      "answer": "Yes. GPSPL can support product shortlisting, BOQ preparation, compatibility checks, RFQ support and procurement guidance before deployment."
+    }
+  ],
+  "relatedServices": [
+    {
+      "title": "Unified Communication & Collaboration",
+      "url": "/unified-communication-collaboration.html"
+    },
+    {
+      "title": "Video Conferencing Solutions",
+      "url": "/unified-communication-collaboration.html"
+    },
+    {
+      "title": "Conference Room Solutions",
+      "url": "/conference-room-solutions.html"
+    },
+    {
+      "title": "Interactive Display Solutions",
+      "url": "/interactive-display-solutions.html"
+    },
+    {
+      "title": "Projectors & Accessories",
+      "url": "/projector-accessories.html"
+    },
+    {
+      "title": "Video Wall Solutions",
+      "url": "/video-wall-solutions.html"
+    },
+    {
+      "title": "Active LED Wall Installation",
+      "url": "/active-led-wall-installation.html"
+    },
+    {
+      "title": "Control & Automation",
+      "url": "/control-automation.html"
+    }
+  ],
+  "cta": {
+    "headline": "Plan the Right Video Technology Stack Before You Buy",
+    "subheading": "Share your room type, camera needs, viewing distance, display or projection requirement, content sources and support expectations. GPSPL can help you select, supply, install and support the right video technologies.",
+    "backgroundImage": "assests/images/vision/connected-spaces-closing.webp",
+    "buttons": [
+      {
+        "label": "Request Video Quote",
+        "url": "/contact.html",
+        "style": "primary"
+      },
+      {
+        "label": "Talk to an Expert",
+        "url": "/contact.html",
+        "style": "secondary"
+      }
+    ]
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "collection": "products",
+  "status": "architecture-only",
+  "routing": {
+    "categoryPage": "/products/{categorySlug}.html",
+    "brandPage": "/brands/{brandSlug}.html",
+    "productPage": "/products/{categorySlug}/{productSlug}.html",
+    "rfqPage": "/contact.html?type=rfq&product={productSlug}"
+  },
+  "categoryFields": [
+    "name",
+    "slug",
+    "summary",
+    "heroImage",
+    "parentCategory",
+    "seo"
+  ],
+  "productFields": [
+    "name",
+    "slug",
+    "brandSlug",
+    "categorySlugs",
+    "shortDescription",
+    "images",
+    "datasheets",
+    "brochures",
+    "keySpecifications",
+    "applications",
+    "relatedProductSlugs",
+    "rfqEnabled",
+    "seo"
+  ],
+  "rfqFields": [
+    "name",
+    "company",
+    "email",
+    "phone",
+    "city",
+    "productSlug",
+    "brandSlug",
+    "quantity",
+    "timeline",
+    "message"
+  ],
+  "categorySeed": [
+    {
+      "name": "Conference Room Solutions",
+      "slug": "conference-room-solutions",
+      "summary": "Video conferencing systems, PTZ cameras, microphones, speakers, displays, wireless presentation, switching and room control for boardrooms and meeting rooms.",
+      "relatedBrandSlugs": [
+        "hp-poly",
+        "sony",
+        "sennheiser",
+        "jbl-professional",
+        "samsung",
+        "benq",
+        "maxhub",
+        "aten",
+        "crestron",
+        "amx"
+      ]
+    },
+    {
+      "name": "Interactive Display Solutions",
+      "slug": "interactive-display-solutions",
+      "summary": "Interactive flat panels, collaboration displays, classroom displays, digital writing and meeting-room presentation systems.",
+      "relatedBrandSlugs": [
+        "maxhub",
+        "newline",
+        "benq",
+        "samsung",
+        "sony",
+        "wacom"
+      ]
+    },
+    {
+      "name": "Smart Classroom Solutions",
+      "slug": "smart-classroom-solutions",
+      "summary": "Interactive panels, projectors, audio, cameras, digital learning tools and classroom technology systems for education environments.",
+      "relatedBrandSlugs": [
+        "maxhub",
+        "newline",
+        "benq",
+        "epson",
+        "sony",
+        "sennheiser",
+        "wacom"
+      ]
+    },
+    {
+      "name": "Professional Audio & Microphones",
+      "slug": "professional-audio-microphones",
+      "summary": "Speakers, microphones, wireless audio, conferencing audio, DSP, amplification, and venue audio systems.",
+      "relatedBrandSlugs": [
+        "harman-professional",
+        "jbl-professional",
+        "sennheiser",
+        "sony",
+        "hp-poly"
+      ]
+    },
+    {
+      "name": "Control & Automation Solutions",
+      "slug": "control-automation",
+      "summary": "Room automation, control processors, touch panels, AV switching, lighting scenes, and simplified room operation.",
+      "relatedBrandSlugs": [
+        "crestron",
+        "amx",
+        "aten"
+      ]
+    },
+    {
+      "name": "Projection & Professional Visual",
+      "slug": "projection-professional-visual",
+      "summary": "Laser projectors, presentation displays, professional visual systems, mounts, screens, and accessories.",
+      "relatedBrandSlugs": [
+        "epson",
+        "benq",
+        "sony",
+        "samsung"
+      ]
+    },
+    {
+      "name": "Video Walls & Large Format Displays",
+      "slug": "video-walls-large-format-displays",
+      "summary": "LED video walls, LCD video walls, display controllers, processors, mounts, calibration, command-center display systems, and large-format visual environments.",
+      "relatedBrandSlugs": [
+        "absen",
+        "samsung",
+        "lg-business-solutions",
+        "benq",
+        "sony",
+        "aten"
+      ]
+    },
+    {
+      "name": "Active LED Display Systems",
+      "slug": "active-led-display-systems",
+      "summary": "Indoor active LED walls, outdoor LED displays, fine-pitch LED, COB LED, LED controllers, mounting structures, calibration and AMC support.",
+      "relatedBrandSlugs": [
+        "absen",
+        "samsung",
+        "lg-business-solutions",
+        "benq",
+        "sony",
+        "aten"
+      ]
+    },
+    {
+      "name": "AV Switching, KVM & Connectivity",
+      "slug": "av-switching-kvm-connectivity",
+      "summary": "KVM systems, AV switching, HDMI/USB extension, control-room connectivity, matrix switching, and signal distribution.",
+      "relatedBrandSlugs": [
+        "aten",
+        "crestron",
+        "amx"
+      ]
+    },
+    {
+      "name": "Digital Signage Solutions",
+      "slug": "digital-signage-solutions",
+      "summary": "Commercial displays, media players, signage content workflows, wayfinding, content scheduling and display-network management.",
+      "relatedBrandSlugs": [
+        "benq",
+        "samsung",
+        "lg-business-solutions"
+      ]
+    },
+    {
+      "name": "UPS & Power Backup",
+      "slug": "ups-power-backup",
+      "summary": "Online UPS, offline UPS, inverter backup, batteries, and power protection for AV, IT, control, and classroom rooms.",
+      "relatedBrandSlugs": [
+        "luminous"
+      ]
+    }
+  ]
+}

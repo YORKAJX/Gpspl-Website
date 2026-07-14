@@ -1,0 +1,7 @@
+﻿User-agent: *
+Allow: /
+Disallow: /thank-you.html
+Disallow: /404.html
+Disallow: /tmp/
+
+Sitemap: https://gpspl.co.in/sitemap.xml

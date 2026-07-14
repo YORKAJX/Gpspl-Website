@@ -1,0 +1,446 @@
+{
+  "cmsModules": [
+    "Service Hero",
+    "SEO Management",
+    "Installation Scope",
+    "Applications",
+    "Technology Partners",
+    "Projects",
+    "Case Studies",
+    "Gallery",
+    "Downloads",
+    "FAQs",
+    "Related Services",
+    "Inquiry Forms",
+    "AMC Plans"
+  ],
+  "seo": {
+    "metaTitle": "Active LED Installation, Calibration & AMC | GPSPL",
+    "metaDescription": "GPSPL supplies, designs, integrates, commissions and supports GPSPL provides active LED wall installation services including site survey, structure planning, LED cabinet mounting, power and data cabling, controller setup, screen mapping, calibration, commissioning, AMC and post-installation support across India.",
+    "keywords": "active LED wall installation India, LED wall mounting, LED cabinet installation, LED wall commissioning, LED wall calibration, indoor LED installation, outdoor LED installation, GPSPL",
+    "canonicalUrl": "https://gpspl.co.in/active-led-wall-installation.html",
+    "openGraphImage": "https://gpspl.co.in/assests/images/products/active-led-video-wall.webp",
+    "indexing": "index, follow",
+    "schemaType": "Service",
+    "slug": "active-led-wall-installation",
+    "offerCatalogName": "Active LED Wall Installation, Commissioning & Support Services",
+    "breadcrumbParentName": "Services",
+    "breadcrumbParentUrl": "https://gpspl.co.in/#services"
+  },
+  "hero": {
+    "eyebrow": "Installation & Commissioning Service",
+    "title": "Active LED Wall Installation, Calibration & Support",
+    "subtitle": "GPSPL handles LED wall installation from site readiness and cabinet mounting to controller setup, screen mapping, visual calibration, commissioning, user handover, AMC and technical support.",
+    "image": "assests/images/products/active-led-video-wall.webp",
+    "industryTags": [
+      "Indoor LED",
+      "Outdoor LED",
+      "Fine Pitch LED",
+      "Auditoriums",
+      "Retail",
+      "Command Centers"
+    ],
+    "trustIndicators": [
+      {
+        "value": "Install",
+        "label": "Cabinets & Structure"
+      },
+      {
+        "value": "Test",
+        "label": "Controllers & Sources"
+      },
+      {
+        "value": "Maintain",
+        "label": "AMC & Support"
+      }
+    ],
+    "ctaButtons": [
+      {
+        "label": "Request Installation Support",
+        "url": "/contact.html",
+        "style": "primary"
+      },
+      {
+        "label": "Call GPSPL",
+        "url": "tel:+919310092963",
+        "style": "secondary"
+      }
+    ],
+    "partnerLogos": [
+      {
+        "name": "Absen",
+        "logo": "assests/images/patners/absen.png"
+      },
+      {
+        "name": "Samsung",
+        "logo": "assests/images/patners/samsung.png"
+      },
+      {
+        "name": "LG Business Solutions",
+        "logo": "assests/images/patners/lgb.png"
+      },
+      {
+        "name": "BenQ",
+        "logo": "assests/images/patners/benq.svg"
+      },
+      {
+        "name": "ATEN",
+        "logo": "assests/images/patners/aten.svg"
+      },
+      {
+        "name": "Luminous",
+        "logo": "assests/images/patners/luminous.png"
+      }
+    ]
+  },
+  "introduction": {
+    "heading": "A reliable LED wall depends on installation quality as much as product selection",
+    "description": "LED wall performance depends on structure, alignment, power, signal integrity, controller setup, calibration and future service access. GPSPL plans installation work carefully so the LED wall is stable, visually clean, easy to operate and support-ready after handover.",
+    "statistics": [
+      {
+        "value": "Mount",
+        "label": "Cabinet structure, alignment and safe installation"
+      },
+      {
+        "value": "Map",
+        "label": "Controller setup, screen mapping and source testing"
+      },
+      {
+        "value": "Care",
+        "label": "Calibration, documentation, AMC and support"
+      }
+    ],
+    "image": "assests/images/hero/led.jpg"
+  },
+  "approach": [
+    {
+      "icon": "fa-clipboard-check",
+      "title": "Prepare",
+      "description": "Review site readiness, structure, wall surface, power, cable routes, ventilation, access and safety requirements."
+    },
+    {
+      "icon": "fa-tools",
+      "title": "Mount",
+      "description": "Install brackets, cabinets or modules with alignment, service access, cable dressing and power/data coordination."
+    },
+    {
+      "icon": "fa-desktop",
+      "title": "Configure",
+      "description": "Set up controllers, processors, source inputs, screen mapping, layouts, presets and operating workflow."
+    },
+    {
+      "icon": "fa-gauge-high",
+      "title": "Commission",
+      "description": "Test sources, calibrate visuals, train users, document the system and hand over support and AMC recommendations."
+    }
+  ],
+  "sectionContent": {
+    "capabilities": {
+      "eyebrow": "Installation Scope",
+      "title": "What GPSPL Handles During LED Installation",
+      "description": "A structured installation scope for active LED wall projects."
+    },
+    "caseStudies": {
+      "eyebrow": "Case Studies",
+      "title": "Installation Challenges Solved Systematically",
+      "description": "Representative examples of site-readiness, installation, commissioning and support planning."
+    }
+  },
+  "serviceCards": [
+    {
+      "icon": "fa-ruler-combined",
+      "title": "Site Survey & Readiness",
+      "description": "Wall measurement, viewing distance, mounting surface, power, ventilation, cable paths, access and installation constraints.",
+      "url": "/contact.html"
+    },
+    {
+      "icon": "fa-border-all",
+      "title": "Cabinet & Module Installation",
+      "description": "LED cabinet mounting, module alignment, structure coordination, levelling and service-access planning.",
+      "url": "/active-led-wall-installation.html"
+    },
+    {
+      "icon": "fa-plug",
+      "title": "Power & Data Cabling",
+      "description": "Power distribution coordination, data cabling, receiving-card connectivity, cable dressing and signal stability checks.",
+      "url": "/it-infrastructure-solutions.html"
+    },
+    {
+      "icon": "fa-sliders",
+      "title": "Controller & Processor Setup",
+      "description": "LED controller configuration, screen mapping, source routing, presets and operating workflow setup.",
+      "url": "/control-automation.html"
+    },
+    {
+      "icon": "fa-eye",
+      "title": "Visual Calibration",
+      "description": "Brightness adjustment, color checks, module consistency, content testing and viewing-angle validation.",
+      "url": "/active-led-wall-installation.html"
+    },
+    {
+      "icon": "fa-user-check",
+      "title": "User Training & Handover",
+      "description": "Operator guidance, basic troubleshooting, startup/shutdown process, source selection and support documentation.",
+      "url": "/contact.html"
+    },
+    {
+      "icon": "fa-boxes-stacked",
+      "title": "Spares & Warranty Coordination",
+      "description": "Warranty guidance, spare planning, module replacement workflow and brand/service coordination where applicable.",
+      "url": "/amc-maintenance-services.html"
+    },
+    {
+      "icon": "fa-headset",
+      "title": "AMC & Preventive Maintenance",
+      "description": "Periodic inspection, cleaning guidance, visual checks, fault diagnosis and post-installation support planning.",
+      "url": "/amc-maintenance-services.html"
+    }
+  ],
+  "applications": [
+    "Corporate Campuses",
+    "Auditoriums",
+    "Command & Control Centers",
+    "Experience Centers",
+    "Universities",
+    "Government Institutions",
+    "Boardrooms",
+    "Training Centers"
+  ],
+  "partners": [
+    {
+      "name": "Absen",
+      "logo": "assests/images/patners/absen.png",
+      "category": "Active LED display technology",
+      "description": "LED display technology for indoor, outdoor, enterprise and public display environments."
+    },
+    {
+      "name": "Samsung",
+      "logo": "assests/images/patners/samsung.png",
+      "category": "Commercial display and signage",
+      "description": "Professional display systems for integrated visual communication environments."
+    },
+    {
+      "name": "LG Business Solutions",
+      "logo": "assests/images/patners/lgb.png",
+      "category": "Commercial displays",
+      "description": "Display technologies for signage, enterprise communication and large-format visual environments."
+    },
+    {
+      "name": "ATEN",
+      "logo": "assests/images/patners/aten.svg",
+      "category": "Signal routing and connectivity",
+      "description": "Switching, extension and connectivity infrastructure for source workflows and control spaces."
+    },
+    {
+      "name": "BenQ",
+      "logo": "assests/images/patners/benq.svg",
+      "category": "Display and signage",
+      "description": "Visual display and signage technologies for education, enterprise and public communication."
+    },
+    {
+      "name": "Luminous",
+      "logo": "assests/images/patners/luminous.png",
+      "category": "Power continuity",
+      "description": "UPS and power backup support for AV, display and control-room environments."
+    }
+  ],
+  "process": [
+    "Requirement review and site survey",
+    "Installation drawing, structure and access planning",
+    "Power, data cabling and controller workflow coordination",
+    "Cabinet/module mounting and alignment",
+    "Controller setup, screen mapping and source testing",
+    "Brightness, color and content checks",
+    "User training and handover documentation",
+    "AMC and support plan recommendation"
+  ],
+  "features": [
+    "Separate installation service from product supply",
+    "Site readiness and structure planning",
+    "LED cabinet mounting and alignment",
+    "Power and data cabling coordination",
+    "Controller, processor and source workflow setup",
+    "Calibration, commissioning and user handover",
+    "AMC, warranty coordination and post-installation support",
+    "Documentation, handover and upgrade planning for long-term serviceability"
+  ],
+  "projects": [
+    {
+      "clientName": "Enterprise LED Wall Installation",
+      "industry": "Corporate",
+      "solution": "Installation and commissioning support for a high-impact display wall in a corporate communication area.",
+      "technologies": [
+        "LED cabinets",
+        "Controller",
+        "Calibration",
+        "Handover"
+      ],
+      "image": "assests/images/products/active-led-video-wall.webp"
+    },
+    {
+      "clientName": "Auditorium LED Installation",
+      "industry": "Education / Events",
+      "solution": "Large-format LED installation for event visibility, stage content and presentation support.",
+      "technologies": [
+        "Mounting",
+        "Source testing",
+        "Commissioning",
+        "Training"
+      ],
+      "image": "assests/images/hero/led.jpg"
+    },
+    {
+      "clientName": "Showroom Visual Wall",
+      "industry": "Retail / Automotive",
+      "solution": "LED wall installation for product visuals, brand communication and customer engagement.",
+      "technologies": [
+        "LED wall",
+        "Content display",
+        "Power planning",
+        "AMC"
+      ],
+      "image": "assests/images/solutions/activeled.webp"
+    }
+  ],
+  "caseStudies": [
+    {
+      "title": "Structure and alignment planning",
+      "challenge": "The wall area required a clean LED installation but had limited access for service and cable routing.",
+      "solution": "GPSPL reviewed mounting conditions, cabinet layout, access path, cable dressing and controller location before installation.",
+      "implementation": "The LED cabinets were installed with alignment checks, data/power coordination, screen mapping and handover documentation.",
+      "results": "The client received a clean display surface with serviceable access and a more reliable installation workflow."
+    },
+    {
+      "title": "Controller and source workflow setup",
+      "challenge": "The client needed multiple content sources to run reliably on the LED wall without confusing operators.",
+      "solution": "GPSPL planned source routing, controller setup, presets and basic operator workflow before commissioning.",
+      "implementation": "The system was mapped, tested with sources, calibrated and handed over with user guidance.",
+      "results": "Operation became simpler and the support team had a documented setup for future troubleshooting."
+    },
+    {
+      "title": "Post-installation support readiness",
+      "challenge": "The site needed ongoing assurance for a display used frequently for client-facing communication.",
+      "solution": "GPSPL recommended preventive checks, warranty coordination, spares planning and AMC support.",
+      "implementation": "The installation was documented with visual checks, support process and operating guidelines.",
+      "results": "The client gained a more dependable display environment with clearer maintenance ownership."
+    }
+  ],
+  "gallery": {
+    "categories": [
+      "LED Installation",
+      "Cabinet Mounting",
+      "Controller Setup",
+      "Calibration",
+      "Showrooms",
+      "Auditoriums"
+    ],
+    "images": [
+      {
+        "src": "assests/images/products/active-led-video-wall.webp",
+        "caption": "Active LED wall installation and commissioning environment"
+      },
+      {
+        "src": "assests/images/hero/led.jpg",
+        "caption": "Large-format LED display setup for event and hospitality use"
+      },
+      {
+        "src": "assests/images/solutions/activeled.webp",
+        "caption": "LED display wall for showroom and customer engagement"
+      },
+      {
+        "src": "assests/images/hero/VideoWall_3.webp",
+        "caption": "Display wall environment for operations and monitoring applications"
+      }
+    ]
+  },
+  "downloads": [
+    {
+      "title": "GPSPL Company Profile",
+      "type": "Company Profile",
+      "url": "/brochure.pdf"
+    },
+    {
+      "title": "LED Installation Readiness Checklist",
+      "type": "Planning Checklist",
+      "url": "/contact.html"
+    },
+    {
+      "title": "AMC & Maintenance Services",
+      "type": "Service Guide",
+      "url": "/amc-maintenance-services.html"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Active LED Wall Installation different from Active LED Wall Solutions?",
+      "answer": "Yes. Active LED Wall Solutions covers product and solution planning, while Active LED Wall Installation focuses on site readiness, mounting, cabling, controller setup, calibration, commissioning and handover."
+    },
+    {
+      "question": "Can GPSPL install LED walls supplied by GPSPL?",
+      "answer": "Yes. GPSPL can supply LED display technology and also provide installation, commissioning, AMC and support."
+    },
+    {
+      "question": "What should be ready before LED wall installation?",
+      "answer": "Site measurements, power readiness, wall or structure details, cable routes, access clearance, content sources and controller location should be reviewed before installation."
+    },
+    {
+      "question": "Does GPSPL handle calibration?",
+      "answer": "Yes. GPSPL supports screen mapping, brightness checks, visual consistency checks, source testing and commissioning."
+    },
+    {
+      "question": "Can installation include controller and source switching?",
+      "answer": "Yes. GPSPL can coordinate controller setup, source routing, AV switching and control workflow depending on the project scope."
+    },
+    {
+      "question": "Does GPSPL provide training after installation?",
+      "answer": "Yes. GPSPL can provide operator guidance, handover documentation and basic troubleshooting orientation."
+    },
+    {
+      "question": "Is AMC available for installed LED walls?",
+      "answer": "Yes. GPSPL can provide preventive maintenance, troubleshooting, warranty coordination and post-installation support."
+    }
+  ],
+  "relatedServices": [
+    {
+      "title": "Active LED Display Systems",
+      "url": "/active-led-wall-solutions.html"
+    },
+    {
+      "title": "Video Wall Design & Integration",
+      "url": "/video-wall-solutions.html"
+    },
+    {
+      "title": "Digital Signage Solutions",
+      "url": "/digital-signage-solutions.html"
+    },
+    {
+      "title": "Control & Automation",
+      "url": "/control-automation.html"
+    },
+    {
+      "title": "AMC & Maintenance Services",
+      "url": "/amc-maintenance-services.html"
+    },
+    {
+      "title": "Contact GPSPL",
+      "url": "/contact.html"
+    }
+  ],
+  "cta": {
+    "headline": "Need LED wall installation, commissioning or AMC support?",
+    "subheading": "Share site photos, wall dimensions, display type, controller details and timeline. GPSPL will help plan installation, commissioning and support scope.",
+    "backgroundImage": "assests/images/products/active-led-video-wall.webp",
+    "buttons": [
+      {
+        "label": "Request Installation Support",
+        "url": "/contact.html",
+        "style": "primary"
+      },
+      {
+        "label": "Call GPSPL",
+        "url": "tel:+919310092963",
+        "style": "secondary"
+      }
+    ]
+  }
+}

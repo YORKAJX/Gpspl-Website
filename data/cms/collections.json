@@ -1,0 +1,76 @@
+{
+  "collections": [
+    {
+      "name": "Pages",
+      "slug": "pages",
+      "purpose": "Static-looking website pages that should become admin-editable landing pages.",
+      "fields": ["title", "slug", "pageType", "heroEyebrow", "heroHeading", "heroSummary", "heroImage", "ctaLabel", "ctaUrl", "contentBlocks", "relatedCollections", "seo", "schema"]
+    },
+    {
+      "name": "Services",
+      "slug": "services",
+      "purpose": "Service pages, homepage service cards, navigation, and RFQ routing.",
+      "fields": ["title", "slug", "summary", "icon", "heroImage", "capabilities", "industries", "relatedBrands", "relatedProducts", "seo"]
+    },
+    {
+      "name": "Brands",
+      "slug": "brands",
+      "purpose": "Brand listing cards and future brand detail pages.",
+      "fields": ["name", "slug", "logo", "summary", "categories", "authorizedStatus", "productFamilies", "datasheets", "brochures", "rfqEnabled", "seo"]
+    },
+    {
+      "name": "Products",
+      "slug": "products",
+      "purpose": "Future product catalog, product detail pages, RFQ forms, and related products.",
+      "fields": ["name", "slug", "brand", "categories", "summary", "images", "datasheets", "brochures", "specifications", "relatedProducts", "rfqEnabled", "seo"]
+    },
+    {
+      "name": "Industries",
+      "slug": "industries",
+      "purpose": "Industry pages and homepage industry tabs.",
+      "fields": ["title", "slug", "summary", "heroImage", "useCases", "recommendedServices", "recommendedProducts", "caseStudies", "seo"]
+    },
+    {
+      "name": "Projects",
+      "slug": "projects",
+      "purpose": "Project showcase cards and project detail pages.",
+      "fields": ["title", "slug", "client", "industry", "technologiesUsed", "images", "description", "results", "relatedBrands", "relatedServices", "seo"]
+    },
+    {
+      "name": "Case Studies",
+      "slug": "case-studies",
+      "purpose": "Long-form sales proof and SEO landing pages.",
+      "fields": ["title", "slug", "client", "industry", "challenge", "solution", "technologiesUsed", "results", "downloads", "seo"]
+    },
+    {
+      "name": "Testimonials",
+      "slug": "testimonials",
+      "purpose": "Verified client reviews, client logos, and video testimonials.",
+      "fields": ["type", "clientName", "company", "designation", "logo", "quote", "rating", "videoUrl", "thumbnail", "relatedProject", "approvalStatus", "displayPriority"]
+    },
+    {
+      "name": "FAQs",
+      "slug": "faqs",
+      "purpose": "FAQ preview, FAQ page, service FAQs, and SEO schema.",
+      "fields": ["question", "answer", "category", "relatedService", "relatedBrand", "displayPriority", "seo"]
+    },
+    {
+      "name": "Downloads",
+      "slug": "downloads",
+      "purpose": "Company profile, datasheets, brochures, catalogs, and gated downloads.",
+      "fields": ["title", "slug", "type", "fileUrl", "thumbnail", "relatedBrand", "relatedProduct", "leadCaptureRequired", "seo"]
+    },
+    {
+      "name": "Team Members",
+      "slug": "team-members",
+      "purpose": "Leadership, sales, engineering, support, and future team pages.",
+      "fields": ["name", "slug", "designation", "department", "photo", "bio", "linkedinUrl", "displayPriority"]
+    },
+    {
+      "name": "Career Openings",
+      "slug": "career-openings",
+      "purpose": "Future careers page and hiring workflows.",
+      "fields": ["title", "slug", "department", "location", "employmentType", "experience", "description", "requirements", "applyEmail", "status", "seo"]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "collection": "projects",
+  "status": "architecture-only",
+  "routing": {
+    "listingPage": "/projects.html",
+    "industryListingPage": "/projects/{industrySlug}.html",
+    "detailPage": "/projects/{projectSlug}.html"
+  },
+  "fields": [
+    "title",
+    "slug",
+    "client",
+    "industrySlug",
+    "location",
+    "technologiesUsed",
+    "brandSlugs",
+    "serviceSlugs",
+    "images",
+    "description",
+    "results",
+    "testimonialSlug",
+    "caseStudySlug",
+    "featured",
+    "approvalStatus",
+    "seo"
+  ],
+  "resultsFields": ["metric", "label", "description"],
+  "imageFields": ["src", "alt", "caption", "displayPriority"]
+}

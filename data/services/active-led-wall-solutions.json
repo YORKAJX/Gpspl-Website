@@ -1,0 +1,444 @@
+{
+  "cmsModules": [
+    "Service Hero",
+    "SEO Management",
+    "Active LED Categories",
+    "Technology Partners",
+    "Applications",
+    "Projects",
+    "Case Studies",
+    "Gallery",
+    "Downloads",
+    "FAQs",
+    "Related Services",
+    "Inquiry Forms",
+    "RFQ Forms",
+    "AMC Plans",
+    "Warranty Extension"
+  ],
+  "seo": {
+    "metaTitle": "Active LED Wall Supply, Installation & Support | GPSPL",
+    "metaDescription": "GPSPL supplies, designs, installs, commissions and supports active LED wall solutions including indoor LED walls, outdoor LED displays, COB and fine-pitch LED, controllers, mounts, calibration, AMC and post-installation support across India.",
+    "keywords": "active LED wall solutions India, LED wall installation, indoor LED wall, outdoor LED display, fine pitch LED wall, COB LED display, Absen LED wall, LED video wall, digital signage LED wall, GPSPL",
+    "canonicalUrl": "https://gpspl.co.in/active-led-wall-solutions.html",
+    "openGraphImage": "https://gpspl.co.in/assests/images/products/active-led-video-wall.webp",
+    "indexing": "index, follow",
+    "schemaType": "Service",
+    "slug": "active-led-wall-solutions",
+    "offerCatalogName": "Active LED Wall Supply, Installation & Support Capabilities",
+    "breadcrumbParentName": "Solutions",
+    "breadcrumbParentUrl": "https://gpspl.co.in/#solutions"
+  },
+  "hero": {
+    "eyebrow": "Active LED Display Solutions",
+    "title": "Active LED Wall Solutions",
+    "subtitle": "High-impact indoor and outdoor LED display systems supplied, designed, installed, calibrated and supported by GPSPL for lobbies, auditoriums, boardrooms, command centers, retail environments, campuses, hospitality venues and public display applications.",
+    "image": "assests/images/products/active-led-video-wall.webp",
+    "industryTags": [
+      "Corporate Lobbies",
+      "Auditoriums",
+      "Retail Spaces",
+      "Hospitality Venues",
+      "Command Centers",
+      "Outdoor Displays"
+    ],
+    "trustIndicators": [
+      {
+        "value": "Supply",
+        "label": "LED Cabinets & Controllers"
+      },
+      {
+        "value": "Design",
+        "label": "Pixel Pitch & Structure"
+      },
+      {
+        "value": "Support",
+        "label": "Calibration & AMC"
+      }
+    ],
+    "ctaButtons": [
+      {
+        "label": "Request LED Wall Quote",
+        "url": "/contact.html",
+        "style": "primary"
+      },
+      {
+        "label": "Schedule Consultation",
+        "url": "tel:+919310092963",
+        "style": "secondary"
+      }
+    ],
+    "partnerLogos": [
+      {
+        "name": "Absen",
+        "logo": "assests/images/patners/absen.png"
+      },
+      {
+        "name": "Samsung",
+        "logo": "assests/images/patners/samsung.png"
+      },
+      {
+        "name": "LG Business Solutions",
+        "logo": "assests/images/patners/lgb.png"
+      },
+      {
+        "name": "BenQ",
+        "logo": "assests/images/patners/benq.svg"
+      },
+      {
+        "name": "Sony",
+        "logo": "assests/images/patners/sony.png"
+      },
+      {
+        "name": "ATEN",
+        "logo": "assests/images/patners/aten.svg"
+      }
+    ]
+  },
+  "introduction": {
+    "heading": "Active LED walls are engineered around pixel pitch, brightness, refresh rate, cabinet access and long-term reliability",
+    "description": "GPSPL plans LED wall systems from the application backwards: viewing distance, ambient light, content type, installation surface, cabinet serviceability, operating hours, power, ventilation, controller workflow and AMC expectations. This helps clients select a display system that is visually impressive, serviceable and fit for long-term enterprise use.",
+    "statistics": [
+      {
+        "value": "Pitch",
+        "label": "Pixel pitch and viewing-distance planning for clear visuals"
+      },
+      {
+        "value": "Build",
+        "label": "Cabinet, structure, power and installation coordination"
+      },
+      {
+        "value": "Care",
+        "label": "Calibration, training, AMC and technical support"
+      }
+    ],
+    "image": "assests/images/products/active-led-video-wall.webp"
+  },
+  "approach": [
+    {
+      "icon": "fa-ruler-combined",
+      "title": "Assess",
+      "description": "Study viewing distance, ambient light, wall dimensions, installation surface, power availability, access, content type and user workflow."
+    },
+    {
+      "icon": "fa-border-all",
+      "title": "Specify",
+      "description": "Select pixel pitch, brightness, cabinet type, refresh rate, processor, controller, mounting approach and service access model."
+    },
+    {
+      "icon": "fa-tools",
+      "title": "Install",
+      "description": "Coordinate structure, cabinets, receiving cards, power, data cabling, processor setup, alignment, mapping and cable dressing."
+    },
+    {
+      "icon": "fa-sliders",
+      "title": "Calibrate",
+      "description": "Perform brightness and color checks, content testing, source mapping, user training, handover documentation and support planning."
+    }
+  ],
+  "sectionContent": {
+    "capabilities": {
+      "eyebrow": "Service Portfolio",
+      "title": "Complete Active LED Wall Services",
+      "description": "Distribution, engineering, installation and support for indoor and outdoor active LED display environments."
+    },
+    "caseStudies": {
+      "eyebrow": "Case Studies",
+      "title": "Structured Delivery for LED Wall Projects",
+      "description": "Representative examples of how GPSPL approaches active LED display requirements from survey to support."
+    }
+  },
+  "serviceCards": [
+    {
+      "icon": "fa-border-all",
+      "title": "Indoor Active LED Walls",
+      "description": "Fine-pitch and standard indoor LED walls for lobbies, meeting spaces, auditoriums, retail, education, corporate branding and experience centers.",
+      "url": "/active-led-wall-solutions.html"
+    },
+    {
+      "icon": "fa-sun",
+      "title": "Outdoor LED Displays",
+      "description": "Outdoor-ready LED display systems planned around brightness, weather exposure, visibility, power, structure and service access.",
+      "url": "/active-led-wall-solutions.html"
+    },
+    {
+      "icon": "fa-grip",
+      "title": "COB, Fine Pitch & Seamless Display Options",
+      "description": "Project-fit LED technology selection for premium close-viewing spaces, command environments, auditoriums and high-resolution display needs.",
+      "url": "/active-led-wall-solutions.html"
+    },
+    {
+      "icon": "fa-desktop",
+      "title": "LED Controllers & Processing",
+      "description": "Controller, processor, source routing, screen mapping, input management, scaler and content workflow support for stable display operation.",
+      "url": "/control-automation.html"
+    },
+    {
+      "icon": "fa-screwdriver-wrench",
+      "title": "Structure, Mounting & Installation",
+      "description": "Wall structure, brackets, cabinet installation, alignment, cable routing, power planning, ventilation and safe service access.",
+      "url": "/active-led-wall-installation.html"
+    },
+    {
+      "icon": "fa-wand-magic-sparkles",
+      "title": "Calibration & Commissioning",
+      "description": "Display mapping, brightness matching, color adjustment, content testing, source verification, user training and final handover.",
+      "url": "/audio-visual-integration.html"
+    },
+    {
+      "icon": "fa-signs-post",
+      "title": "LED Signage & Brand Communication",
+      "description": "High-impact LED walls for reception areas, showrooms, retail, hospitality, public messaging, menu boards and brand experiences.",
+      "url": "/digital-signage-solutions.html"
+    },
+    {
+      "icon": "fa-headset",
+      "title": "AMC, Warranty & Support",
+      "description": "Preventive maintenance, troubleshooting, warranty coordination, spare planning, cleaning guidance and post-installation technical support.",
+      "url": "/amc-maintenance-services.html"
+    }
+  ],
+  "applications": [
+    "Corporate Campuses",
+    "Auditoriums",
+    "Command & Control Centers",
+    "Experience Centers",
+    "Universities",
+    "Government Institutions",
+    "Healthcare Facilities",
+    "Boardrooms"
+  ],
+  "partners": [
+    {
+      "name": "Absen",
+      "logo": "assests/images/patners/absen.png",
+      "category": "Active LED display technology",
+      "description": "LED display technology for enterprise, command center, retail, hospitality and public display environments."
+    },
+    {
+      "name": "Samsung",
+      "logo": "assests/images/patners/samsung.png",
+      "category": "Commercial display and signage",
+      "description": "Professional display and signage systems used in professional visual communication projects."
+    },
+    {
+      "name": "LG Business Solutions",
+      "logo": "assests/images/patners/lgb.png",
+      "category": "Commercial display systems",
+      "description": "Commercial displays and large-format visual solutions for signage and enterprise display environments."
+    },
+    {
+      "name": "BenQ",
+      "logo": "assests/images/patners/benq.svg",
+      "category": "Signage and visual display",
+      "description": "Display and signage technologies for education, communication and meeting spaces."
+    },
+    {
+      "name": "Sony",
+      "logo": "assests/images/patners/sony.png",
+      "category": "Professional visual systems",
+      "description": "Professional visual technologies for enterprise AV and display applications."
+    },
+    {
+      "name": "ATEN",
+      "logo": "assests/images/patners/aten.svg",
+      "category": "Switching and connectivity",
+      "description": "Signal routing, KVM, extension and AV switching infrastructure for LED wall source workflows."
+    }
+  ],
+  "process": [
+    "Requirement discovery and site survey",
+    "Viewing distance, brightness and pixel-pitch recommendation",
+    "Cabinet, controller, processor and mounting architecture selection",
+    "Power, data cabling, ventilation and access planning",
+    "LED cabinet installation, alignment and cable dressing",
+    "Screen mapping, source testing and visual calibration",
+    "User training, documentation and operating guidance",
+    "AMC, warranty assistance and post-installation support handover"
+  ],
+  "features": [
+    "Distribution-first LED product supply with project-fit guidance",
+    "Indoor, outdoor, COB and fine-pitch LED wall planning",
+    "Pixel-pitch, brightness, refresh-rate and viewing-distance consultation",
+    "Controller, processor and source switching support",
+    "Structure, mounting, power and cabling coordination",
+    "Calibration, commissioning and user handover",
+    "AMC, warranty extension and preventive maintenance support",
+    "Documentation, handover and upgrade planning for long-term serviceability"
+  ],
+  "projects": [
+    {
+      "clientName": "Corporate Lobby LED Wall",
+      "industry": "Enterprise",
+      "solution": "High-impact LED display for brand communication, visitor engagement and leadership presentations.",
+      "technologies": [
+        "Active LED",
+        "Controller",
+        "Mounting",
+        "Calibration"
+      ],
+      "image": "assests/images/products/active-led-video-wall.webp"
+    },
+    {
+      "clientName": "Auditorium Visual Upgrade",
+      "industry": "Education / Events",
+      "solution": "Large-format LED display for stage visibility, presentations, events and audience engagement.",
+      "technologies": [
+        "LED wall",
+        "AV switching",
+        "Commissioning",
+        "Training"
+      ],
+      "image": "assests/images/hero/led.jpg"
+    },
+    {
+      "clientName": "Command Center Display Environment",
+      "industry": "Operations",
+      "solution": "LED-led visual environment for monitoring dashboards, live sources and operational visibility.",
+      "technologies": [
+        "Display wall",
+        "Signal routing",
+        "Controller",
+        "AMC"
+      ],
+      "image": "assests/images/hero/VideoWall_3.webp"
+    }
+  ],
+  "caseStudies": [
+    {
+      "title": "Premium lobby LED wall",
+      "challenge": "The client needed a clean, premium display surface for branding and visitor communication without visible seams or complicated operation.",
+      "solution": "GPSPL planned the LED wall size, pixel pitch, controller workflow, mounting and content source structure around the lobby environment.",
+      "implementation": "The system was supplied, mounted, aligned, mapped, calibrated and handed over with simple operating guidance.",
+      "results": "The client received a high-impact visual surface with cleaner presentation quality, structured support and AMC readiness."
+    },
+    {
+      "title": "Auditorium display clarity",
+      "challenge": "A large hall required better visibility for presentations, events and stage content across a wider audience area.",
+      "solution": "GPSPL evaluated viewing distance, brightness and screen scale before planning the active LED system and source workflow.",
+      "implementation": "The installation included cabinet alignment, controller setup, source testing, calibration, training and support documentation.",
+      "results": "Audience visibility improved and the technical team gained a more reliable large-format presentation workflow."
+    },
+    {
+      "title": "Operations room visual system",
+      "challenge": "The operations team required a reliable display environment for dashboards and live information feeds.",
+      "solution": "GPSPL aligned LED wall planning with source routing, screen mapping, power, cabling and service access needs.",
+      "implementation": "The solution was installed and commissioned with display presets, visual checks and AMC support planning.",
+      "results": "The room gained a stronger monitoring experience with simpler operation and support-ready documentation."
+    }
+  ],
+  "gallery": {
+    "categories": [
+      "Indoor LED",
+      "Outdoor LED",
+      "Fine Pitch LED",
+      "Auditoriums",
+      "Command Centers",
+      "Digital Signage"
+    ],
+    "images": [
+      {
+        "src": "assests/images/products/active-led-video-wall.webp",
+        "caption": "Active LED wall system for premium enterprise display environments"
+      },
+      {
+        "src": "assests/images/hero/led.jpg",
+        "caption": "Large-format LED display environment for events and hospitality"
+      },
+      {
+        "src": "assests/images/solutions/activeled.webp",
+        "caption": "LED display solution for showroom and public communication"
+      },
+      {
+        "src": "assests/images/hero/VideoWall_3.webp",
+        "caption": "Display wall environment for command and monitoring applications"
+      }
+    ]
+  },
+  "downloads": [
+    {
+      "title": "GPSPL Company Profile",
+      "type": "Company Profile",
+      "url": "/brochure.pdf"
+    },
+    {
+      "title": "Active LED Wall Requirement Checklist",
+      "type": "Planning Checklist",
+      "url": "/contact.html"
+    },
+    {
+      "title": "AMC & Warranty Support",
+      "type": "Service Guide",
+      "url": "/amc-maintenance-services.html"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do we choose the right pixel pitch for an LED wall?",
+      "answer": "Pixel pitch depends mainly on viewing distance, resolution expectation, content type and budget. GPSPL studies these factors before recommending indoor, outdoor, fine-pitch or other LED options."
+    },
+    {
+      "question": "Does GPSPL supply LED products or only install them?",
+      "answer": "GPSPL is distribution-first. We can supply LED cabinets, controllers, processors, mounts and related accessories, and also provide design, installation, commissioning, AMC and support."
+    },
+    {
+      "question": "Can GPSPL support indoor and outdoor LED walls?",
+      "answer": "Yes. GPSPL can support indoor and outdoor LED display requirements, including brightness planning, structure, power, cabling, controller workflow, installation and maintenance."
+    },
+    {
+      "question": "What information is needed for an LED wall quote?",
+      "answer": "Useful details include wall size, viewing distance, indoor or outdoor use, content type, operating hours, site photos, power availability, mounting surface and support expectations."
+    },
+    {
+      "question": "Does GPSPL handle mounting and structure planning?",
+      "answer": "Yes. GPSPL coordinates mounting, cabinet alignment, wall structure planning, cable routing, power, ventilation and safe access for maintenance."
+    },
+    {
+      "question": "Can LED walls connect with AV switching and control systems?",
+      "answer": "Yes. LED walls can be integrated with source switching, processors, matrix routing, presentation systems, control panels and digital signage workflows."
+    },
+    {
+      "question": "Does GPSPL provide AMC for active LED walls?",
+      "answer": "Yes. GPSPL can provide preventive maintenance, troubleshooting, warranty coordination, calibration support, spare planning and post-installation technical support."
+    }
+  ],
+  "relatedServices": [
+    {
+      "title": "Active LED Wall Installation",
+      "url": "/active-led-wall-installation.html"
+    },
+    {
+      "title": "Video Wall Solutions",
+      "url": "/video-wall-solutions.html"
+    },
+    {
+      "title": "Video Technologies",
+      "url": "/video-technologies.html"
+    },
+    {
+      "title": "Digital Signage Solutions",
+      "url": "/digital-signage-solutions.html"
+    },
+    {
+      "title": "AMC & Maintenance Services",
+      "url": "/amc-maintenance-services.html"
+    }
+  ],
+  "cta": {
+    "headline": "Plan an active LED wall with the right pixel pitch, brightness and support model.",
+    "subheading": "Share your wall size, viewing distance, indoor or outdoor use and content requirement. GPSPL will help shortlist the right LED display architecture and integration scope.",
+    "backgroundImage": "assests/images/products/active-led-video-wall.webp",
+    "buttons": [
+      {
+        "label": "Request LED Wall Quote",
+        "url": "/contact.html",
+        "style": "primary"
+      },
+      {
+        "label": "Call GPSPL",
+        "url": "tel:+919310092963",
+        "style": "secondary"
+      }
+    ]
+  }
+}

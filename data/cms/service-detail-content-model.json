@@ -1,0 +1,87 @@
+{
+  "moduleName": "Service Detail Pages",
+  "purpose": "Defines the admin-panel structure required to manage enterprise service pages without code changes.",
+  "adminAccess": {
+    "roles": [
+      { "role": "Super Admin", "permissions": ["create", "read", "update", "delete", "publish", "seo", "media", "roles"] },
+      { "role": "Content Manager", "permissions": ["create", "read", "update", "media", "draft"] },
+      { "role": "SEO Manager", "permissions": ["read", "seo", "schema", "publish"] },
+      { "role": "Sales Admin", "permissions": ["read", "downloads", "inquiryForms", "cta"] }
+    ],
+    "workflow": ["Draft", "Review", "Approved", "Published", "Archived"]
+  },
+  "collections": [
+    {
+      "name": "Service Categories",
+      "fields": ["name", "slug", "description", "icon", "displayOrder", "status", "seoTitle", "seoDescription"]
+    },
+    {
+      "name": "Services",
+      "fields": [
+        "serviceCategory",
+        "serviceName",
+        "slug",
+        "heroTitle",
+        "heroSubtitle",
+        "heroImage",
+        "industryTags",
+        "trustIndicators",
+        "ctaButtons",
+        "brochurePdf",
+        "introduction",
+        "serviceCards",
+        "applications",
+        "technologyPartners",
+        "deliveryTimeline",
+        "featureCards",
+        "projects",
+        "caseStudies",
+        "gallery",
+        "downloads",
+        "faqs",
+        "relatedServices",
+        "inquiryForm",
+        "seo",
+        "schema",
+        "status",
+        "displayOrder"
+      ]
+    },
+    {
+      "name": "Technology Partners",
+      "fields": ["name", "logo", "category", "description", "websiteUrl", "status", "displayOrder"]
+    },
+    {
+      "name": "Projects",
+      "fields": ["projectImage", "clientName", "industry", "solutionProvided", "technologiesUsed", "projectGallery", "status", "displayOrder"]
+    },
+    {
+      "name": "Case Studies",
+      "fields": ["title", "challenge", "solution", "implementation", "results", "featuredImage", "relatedService", "status", "displayOrder"]
+    },
+    {
+      "name": "Downloads",
+      "fields": ["title", "fileType", "pdfFile", "relatedService", "leadCaptureRequired", "status", "displayOrder"]
+    },
+    {
+      "name": "FAQs",
+      "fields": ["question", "answerRichText", "relatedService", "schemaEnabled", "status", "displayOrder"]
+    },
+    {
+      "name": "SEO Management",
+      "fields": ["metaTitle", "metaDescription", "keywords", "canonicalUrl", "openGraphImage", "schemaMarkup", "indexingMode", "slug"]
+    },
+    {
+      "name": "Inquiry Forms",
+      "fields": ["formName", "service", "recipientEmails", "ctaLabel", "thankYouMessage", "crmDestination", "status"]
+    }
+  ],
+  "requirements": {
+    "dragAndDropOrdering": ["Service Categories", "Services", "Service Cards", "Applications", "Technology Partners", "Projects", "Gallery", "Downloads", "FAQs", "Related Services"],
+    "mediaUploads": ["heroImage", "serviceImages", "partnerLogos", "projectImages", "galleryImages", "openGraphImage"],
+    "fileUploads": ["brochurePdf", "datasheets", "productGuides", "solutionCatalogs"],
+    "richTextFields": ["introduction.description", "caseStudies", "faqs.answerRichText"],
+    "statusControls": ["Active", "Inactive", "Draft", "Archived"],
+    "slugGeneration": "Generate from serviceName with manual override and uniqueness validation."
+  }
+}

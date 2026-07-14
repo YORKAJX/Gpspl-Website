@@ -1,0 +1,390 @@
+{
+  "collection": "brands",
+  "items": [
+    {
+      "name": "Harman Professional",
+      "slug": "harman-professional",
+      "logo": "/assests/images/patners/Harman.png",
+      "summary": "Regional authorized distribution and integration support for Harman Professional audio, control and enterprise AV technology portfolio.",
+      "categories": [
+        "Professional Audio",
+        "Control",
+        "Enterprise AV"
+      ],
+      "authorizedStatus": "Regional Authorized Distributor",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "Harman Professional Distributor & Integration Partner in India | GPSPL",
+        "description": "Request Harman Professional products, integration, deployment, and support from GPSPL."
+      }
+    },
+    {
+      "name": "JBL Professional",
+      "slug": "jbl-professional",
+      "logo": "/assests/images/patners/jbl.svg",
+      "summary": "JBL Professional loudspeakers, installed audio and venue-grade sound products supplied with GPSPL design, integration and support.",
+      "categories": [
+        "Professional Audio",
+        "Auditorium",
+        "Meeting Audio"
+      ],
+      "authorizedStatus": "Brand portfolio",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "JBL Professional Products & Support in India | GPSPL",
+        "description": "Source JBL Professional audio products with design, integration, and support from GPSPL."
+      }
+    },
+    {
+      "name": "AMX",
+      "slug": "amx",
+      "logo": "/assests/images/patners/amx.svg",
+      "summary": "AMX room automation, AV control, switching and enterprise control systems for boardrooms, classrooms and professional AV spaces.",
+      "categories": [
+        "Control",
+        "Automation",
+        "AV Switching"
+      ],
+      "authorizedStatus": "Brand portfolio",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "AMX Control & Automation Solutions in India | GPSPL",
+        "description": "Plan AMX control and automation systems with GPSPL distribution and integration support."
+      }
+    },
+    {
+      "name": "Samsung",
+      "slug": "samsung",
+      "logo": "/assests/images/patners/samsung.png",
+      "summary": "Commercial display, signage, and visual technology solutions.",
+      "categories": [
+        "Commercial Displays",
+        "Digital Signage",
+        "LED"
+      ],
+      "authorizedStatus": "Technology partner",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "Samsung Commercial Display Solutions | GPSPL",
+        "description": "Request Samsung commercial displays, signage solutions, installation, and support from GPSPL."
+      }
+    },
+    {
+      "name": "LG Business Solutions",
+      "slug": "lg-business-solutions",
+      "logo": "/assests/images/patners/lgb.png",
+      "summary": "Regional authorized distributor support for LG commercial displays, screen display solutions, digital signage, video walls and active LED display environments.",
+      "categories": [
+        "Commercial Displays",
+        "Screen Displays",
+        "Digital Signage",
+        "Video Wall",
+        "Active LED",
+        "Business Displays"
+      ],
+      "authorizedStatus": "Regional Authorized Distributor",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "LG Commercial Displays, Signage & Active LED Distributor | GPSPL",
+        "description": "Request LG commercial displays, screen displays, digital signage, video wall, active LED, installation and support from GPSPL."
+      }
+    },
+    {
+      "name": "Sony",
+      "slug": "sony",
+      "logo": "/assests/images/patners/sony.png",
+      "summary": "Professional visual, projection, display, and collaboration technologies.",
+      "categories": [
+        "Professional Displays",
+        "Projection",
+        "Visual Systems"
+      ],
+      "authorizedStatus": "Technology partner",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "Sony Professional Visual Systems | GPSPL",
+        "description": "Source Sony professional visual systems with GPSPL design, integration, and support."
+      }
+    },
+    {
+      "name": "HP",
+      "slug": "hp",
+      "logo": "/assests/images/patners/hp.svg",
+      "summary": "HP laptops, desktops, printers, cartridges and business peripherals for office and institutional procurement.",
+      "categories": [
+        "IT Peripherals",
+        "Laptops & Desktops",
+        "Printers",
+        "Cartridges"
+      ],
+      "authorizedStatus": "Distribution portfolio",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "HP Laptops, Printers & IT Peripherals | GPSPL",
+        "description": "Request HP laptops, desktops, printers, cartridges and business peripheral supply support from GPSPL."
+      }
+    },
+    {
+      "name": "HP / HP Poly",
+      "slug": "hp-poly",
+      "logo": "/assests/images/patners/hpp.png",
+      "summary": "HP computing peripherals, laptops, desktops, printers, cartridges and HP Poly video collaboration, cameras, headsets and room systems.",
+      "categories": [
+        "IT Peripherals",
+        "Laptops & Printers",
+        "Video Conferencing",
+        "Unified Communication"
+      ],
+      "authorizedStatus": "Technology partner",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "HP IT Peripherals & HP Poly Collaboration Solutions | GPSPL",
+        "description": "Request HP laptops, desktops, printers, cartridges and HP Poly collaboration products from GPSPL."
+      }
+    },
+    {
+      "name": "Lenovo",
+      "slug": "lenovo",
+      "logo": "/assests/images/patners/lenovo.svg",
+      "summary": "Business laptops, desktops, RAM, SSD, accessories and enterprise computing peripherals for office and institutional procurement.",
+      "categories": [
+        "IT Peripherals",
+        "Laptops & Desktops",
+        "RAM & SSD",
+        "Accessories"
+      ],
+      "authorizedStatus": "Distribution portfolio",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "Lenovo Business Laptops, Desktops & IT Peripherals | GPSPL",
+        "description": "Request Lenovo laptops, desktops, RAM, SSD and IT peripheral supply support from GPSPL."
+      }
+    },
+    {
+      "name": "Dell",
+      "slug": "dell",
+      "logo": "/assests/images/patners/dell.svg",
+      "summary": "Dell business laptops, desktops, RAM, SSD, accessories and enterprise computing peripherals for office and institutional procurement.",
+      "categories": [
+        "IT Peripherals",
+        "Laptops & Desktops",
+        "RAM & SSD",
+        "Accessories"
+      ],
+      "authorizedStatus": "Distribution portfolio",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "Dell Business Laptops, Desktops & IT Peripherals | GPSPL",
+        "description": "Request Dell laptops, desktops, RAM, SSD and IT peripheral supply support from GPSPL."
+      }
+    },
+    {
+      "name": "Acer",
+      "slug": "acer",
+      "logo": "/assests/images/patners/acer.svg",
+      "summary": "Acer business laptops, desktops, RAM, SSD, accessories and computing peripherals for office procurement needs.",
+      "categories": [
+        "IT Peripherals",
+        "Laptops & Desktops",
+        "RAM & SSD",
+        "Accessories"
+      ],
+      "authorizedStatus": "Distribution portfolio",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "Acer Business Laptops, Desktops & IT Peripherals | GPSPL",
+        "description": "Request Acer laptops, desktops, RAM, SSD and IT peripheral supply support from GPSPL."
+      }
+    },
+    {
+      "name": "Wacom",
+      "slug": "wacom",
+      "logo": "/assests/images/patners/wacom.png",
+      "summary": "Creative pen displays and specialist peripherals for education, media, and design teams.",
+      "categories": [
+        "Creative Peripherals",
+        "Pen Displays",
+        "Workstations"
+      ],
+      "authorizedStatus": "Technology partner",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "Wacom Creative Peripheral Solutions | GPSPL",
+        "description": "Source Wacom creative technology with GPSPL product guidance and support."
+      }
+    },
+    {
+      "name": "Lumens",
+      "slug": "lumens",
+      "logo": "/assests/images/patners/lumens.png",
+      "summary": "PTZ cameras, document cameras, lecture capture and AV-over-IP products for classrooms, studios and meeting rooms.",
+      "categories": [
+        "PTZ Cameras",
+        "Lecture Capture",
+        "USB Cameras",
+        "AV over IP"
+      ],
+      "authorizedStatus": "Technology portfolio",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "Lumens PTZ Cameras & Lecture Capture | GPSPL",
+        "description": "Request Lumens PTZ cameras, lecture capture products and AV camera solutions from GPSPL."
+      }
+    },
+    {
+      "name": "Absen",
+      "slug": "absen",
+      "logo": "/assests/images/patners/absen.png",
+      "summary": "Active LED display distribution including LED walls, display modules, controllers and deployment support for enterprise, command center, retail and public environments.",
+      "categories": [
+        "Active LED",
+        "Video Wall",
+        "LED Modules",
+        "Controllers"
+      ],
+      "authorizedStatus": "Technology partner",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "Absen Active LED Display Solutions | GPSPL",
+        "description": "Request Absen active LED walls, LED modules, controllers, supply, installation and support from GPSPL."
+      }
+    },
+    {
+      "name": "Sennheiser",
+      "slug": "sennheiser",
+      "logo": "/assests/images/patners/sennheiser.svg",
+      "summary": "Professional microphones, wireless audio, conferencing audio, and speech capture technologies.",
+      "categories": [
+        "Professional Audio",
+        "Microphones",
+        "Conferencing Audio"
+      ],
+      "authorizedStatus": "Technology portfolio",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "Sennheiser Professional Audio Products | GPSPL",
+        "description": "Request Sennheiser microphones and professional audio solutions with GPSPL supply, design, integration, and support."
+      }
+    },
+    {
+      "name": "Crestron",
+      "slug": "crestron",
+      "logo": "/assests/images/patners/crestron.svg",
+      "summary": "Room control, automation, AV switching, touch panels, and enterprise control systems.",
+      "categories": [
+        "Control",
+        "Automation",
+        "AV Switching"
+      ],
+      "authorizedStatus": "Technology portfolio",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "Crestron Control & Automation Solutions | GPSPL",
+        "description": "Plan Crestron control, automation, switching, and room technology solutions with GPSPL."
+      }
+    },
+    {
+      "name": "Newline",
+      "slug": "newline",
+      "logo": "/assests/images/patners/newline.svg",
+      "summary": "Regional authorized distribution and support for Newline interactive displays, collaboration panels, classroom displays and software tools.",
+      "categories": [
+        "Interactive Displays",
+        "Smart Classroom",
+        "Collaboration"
+      ],
+      "authorizedStatus": "Regional Authorized Distributor",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "Newline Interactive Display Solutions | GPSPL",
+        "description": "Request Newline interactive panels, smart classroom displays, and collaboration solutions from GPSPL."
+      }
+    },
+    {
+      "name": "MAXHUB",
+      "slug": "maxhub",
+      "logo": "/assests/images/patners/maxhub.svg",
+      "summary": "Interactive flat panels, collaboration displays, meeting-room screens, education displays, and UC-ready workspace technologies.",
+      "categories": [
+        "Interactive Displays",
+        "Collaboration",
+        "Smart Classroom"
+      ],
+      "authorizedStatus": "Technology portfolio",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "MAXHUB Interactive Display Solutions | GPSPL",
+        "description": "Request MAXHUB interactive panels, collaboration displays, smart classroom screens, installation and support from GPSPL."
+      }
+    },
+    {
+      "name": "ATEN",
+      "slug": "aten",
+      "logo": "/assests/images/patners/aten.svg",
+      "summary": "KVM, AV switching, signal extension, USB/HDMI connectivity, control-room infrastructure, and IT/AV connectivity products.",
+      "categories": [
+        "AV Switching",
+        "KVM",
+        "Connectivity"
+      ],
+      "authorizedStatus": "Technology portfolio",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "ATEN AV Switching, KVM & Connectivity Solutions | GPSPL",
+        "description": "Source ATEN KVM, AV switching, extenders, connectivity and control-room infrastructure through GPSPL."
+      }
+    },
+    {
+      "name": "Epson",
+      "slug": "epson",
+      "logo": "/assests/images/patners/epson.svg",
+      "summary": "Projection, business projectors, education projectors, large-format visual systems, printers, cartridges and peripheral technologies.",
+      "categories": [
+        "Projection",
+        "Printers",
+        "Cartridges",
+        "Professional Visual"
+      ],
+      "authorizedStatus": "Technology portfolio",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "Epson Projector & Peripheral Solutions | GPSPL",
+        "description": "Request Epson projectors, printers, visual systems, installation and support from GPSPL."
+      }
+    },
+    {
+      "name": "BenQ",
+      "slug": "benq",
+      "logo": "/assests/images/patners/benq.svg",
+      "summary": "Digital signage, interactive displays, projectors, professional monitors and visual collaboration technologies.",
+      "categories": [
+        "Digital Signage",
+        "Projection",
+        "Interactive Displays"
+      ],
+      "authorizedStatus": "Technology portfolio",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "BenQ Signage, Projector & Display Solutions | GPSPL",
+        "description": "Request BenQ signage, projectors, interactive displays and professional visual solutions from GPSPL."
+      }
+    },
+    {
+      "name": "Luminous",
+      "slug": "luminous",
+      "logo": "/assests/images/patners/luminous.png",
+      "summary": "Regional authorized distribution and support for Luminous UPS, online UPS, offline UPS, inverter backup, batteries and power protection for AV and IT rooms.",
+      "categories": [
+        "UPS",
+        "Power Backup",
+        "Power Protection"
+      ],
+      "authorizedStatus": "Regional Authorized Distributor",
+      "rfqEnabled": true,
+      "seo": {
+        "title": "Luminous UPS & Power Backup Solutions | GPSPL",
+        "description": "Request Luminous online UPS, offline UPS, batteries, and power backup support for AV and IT rooms through GPSPL."
+      }
+    }
+  ]
+}
