@@ -235,10 +235,28 @@
       "description": "Commercial displays, LFD, signage and visual communication platforms for enterprise, education and public-facing spaces."
     },
     {
+      "name": "LG Business Solutions",
+      "logo": "assests/images/patners/lgb.png",
+      "category": "Regional authorized distributor for commercial displays, signage and active LED",
+      "description": "LG commercial display, digital signage, video wall and active LED solutions supplied for enterprise, hospitality, education and public-space projects."
+    },
+    {
       "name": "BenQ",
       "logo": "assests/images/patners/benq.svg",
       "category": "Signage, projectors and interactive displays",
       "description": "Digital signage, projectors, interactive displays and professional monitors for visual communication and collaboration."
+    },
+    {
+      "name": "Newline",
+      "logo": "assests/images/patners/newline.svg",
+      "category": "Interactive displays and classroom collaboration",
+      "description": "Interactive flat panels and collaboration displays for classrooms, meeting rooms, training spaces and hybrid learning environments."
+    },
+    {
+      "name": "MAXHUB",
+      "logo": "assests/images/patners/maxhub.svg",
+      "category": "Interactive collaboration displays",
+      "description": "Interactive collaboration displays and meeting-room screens for presentations, wireless sharing and smart workplace use."
     },
     {
       "name": "Epson",
@@ -292,7 +310,7 @@
         "Display",
         "Room Control"
       ],
-      "image": "assests/images/products/conference-room-solutions.webp"
+      "image": "assests/images/projects/gpspl-real/polished/corporate-conference-room.webp"
     },
     {
       "clientName": "Lecture Capture & Smart Classroom Video",
@@ -347,7 +365,7 @@
     "images": [
       {
         "category": "Video Conferencing",
-        "src": "assests/images/products/conference-room-solutions.webp",
+        "src": "assests/images/projects/gpspl-real/polished/corporate-conference-room.webp",
         "caption": "Boardroom video conferencing camera, display and room AV environment"
       },
       {

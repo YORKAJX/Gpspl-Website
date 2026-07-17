@@ -21,7 +21,7 @@
     "metaDescription": "GPSPL supplies, designs, integrates, commissions, and supports unified communication, video conferencing, boardroom, conference room, hybrid classroom, and collaboration solutions across India.",
     "keywords": "unified communication solutions India, video conferencing solutions, conference room setup, boardroom collaboration, hybrid workplace solutions, HP Poly video conferencing, PTZ camera integration, MAXHUB interactive display, Newline interactive display, BenQ signage, ATEN KVM, Crestron room control, Sennheiser microphone, meeting room AV, wireless presentation, GPSPL",
     "canonicalUrl": "https://gpspl.co.in/unified-communication-collaboration.html",
-    "openGraphImage": "https://gpspl.co.in/assests/images/products/conference-room-solutions.webp",
+    "openGraphImage": "https://gpspl.co.in/assests/images/projects/gpspl-real/polished/corporate-conference-room.webp",
     "indexing": "index, follow",
     "schemaType": "Service",
     "slug": "unified-communication-collaboration",
@@ -31,7 +31,7 @@
     "eyebrow": "Enterprise UC & Collaboration",
     "title": "Unified Communication & Collaboration Solutions",
     "subtitle": "Meeting-room, boardroom, video conferencing, hybrid classroom, and enterprise collaboration environments supplied, designed, integrated, commissioned, and supported by GPSPL.",
-    "image": "assests/images/products/conference-room-solutions.webp",
+    "image": "assests/images/projects/gpspl-real/polished/corporate-conference-room.webp",
     "industryTags": [
       "Corporate",
       "Education",
@@ -122,7 +122,7 @@
         "label": "Commissioning, training, AMC and service assistance"
       }
     ],
-    "image": "assests/images/hero/Vconf.webp"
+    "image": "assests/images/projects/gpspl-real/polished/corporate-conference-room.webp"
   },
   "approach": [
     {
@@ -346,7 +346,7 @@
         "AMX",
         "JBL"
       ],
-      "image": "assests/images/products/conference-room-solutions.webp"
+      "image": "assests/images/projects/gpspl-real/polished/corporate-conference-room.webp"
     },
     {
       "clientName": "Hybrid Classroom Communication Setup",
@@ -358,7 +358,7 @@
         "Wireless Audio",
         "Type-C"
       ],
-      "image": "assests/images/solutions/smartClassroom.png"
+      "image": "assests/images/projects/gpspl-real/polished/education-training-room-displays.webp"
     },
     {
       "clientName": "Multi-Room Meeting Standardization",
@@ -370,7 +370,7 @@
         "Commercial Displays",
         "DSP"
       ],
-      "image": "assests/images/hero/Vconf.webp"
+      "image": "assests/images/projects/gpspl-real/polished/corporate-boardroom-display.webp"
     }
   ],
   "caseStudies": [
@@ -401,22 +401,22 @@
     "images": [
       {
         "category": "Conference Rooms",
-        "src": "assests/images/products/conference-room-solutions.webp",
+        "src": "assests/images/projects/gpspl-real/polished/corporate-conference-room.webp",
         "caption": "Boardroom video conferencing and collaboration setup"
       },
       {
         "category": "Hybrid Meetings",
-        "src": "assests/images/hero/Vconf.webp",
+        "src": "assests/images/projects/gpspl-real/polished/corporate-boardroom-display.webp",
         "caption": "Enterprise video conferencing environment"
       },
       {
         "category": "Smart Classroom",
-        "src": "assests/images/solutions/smartClassroom.png",
+        "src": "assests/images/projects/gpspl-real/polished/education-training-room-displays.webp",
         "caption": "Hybrid learning and classroom collaboration"
       },
       {
         "category": "Room Systems",
-        "src": "assests/images/solutions/conf.webp",
+        "src": "assests/images/projects/gpspl-real/polished/training-conference-display.webp",
         "caption": "Meeting-room AV, display and audio integration"
       }
     ]

@@ -2419,3 +2419,5056 @@ body.service-detail-template main.service-page {
         min-width: 0;
     }
 }
+/* Launch alignment lock: audio/video/control technology pages */
+.partner-tech-page .partner-tech-hero {
+    min-height: auto;
+    padding: clamp(112px, 10vw, 138px) 0 clamp(72px, 7vw, 94px);
+}
+
+/* Final service-page stabilization: keeps repeated AV/IT layouts readable and aligned. */
+main .service-section-heading,
+main .service-section-heading *,
+main .service-stat-row,
+main .service-stat-row *,
+main .service-case-flow,
+main .service-case-flow *,
+main .service-planning-grid,
+main .service-planning-grid *,
+main .service-proof-band,
+main .service-proof-band * {
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: manual !important;
+}
+
+.service-stat-row,
+.service-case-flow {
+    width: min(100% - 48px, 1180px) !important;
+    margin: clamp(28px, 4vw, 56px) auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: clamp(18px, 2vw, 28px) !important;
+    align-items: stretch !important;
+}
+
+.service-planning-grid {
+    width: min(100% - 48px, 1180px) !important;
+    margin: clamp(28px, 4vw, 56px) auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)) !important;
+    gap: clamp(18px, 2vw, 28px) !important;
+    align-items: stretch !important;
+}
+
+.service-stat-row > *,
+.service-case-flow > *,
+.service-planning-grid > * {
+    min-width: 0 !important;
+    width: 100% !important;
+    min-height: 190px !important;
+    height: 100% !important;
+    padding: clamp(28px, 3vw, 44px) !important;
+    border-radius: 26px !important;
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%) !important;
+    border: 1px solid rgba(148, 163, 184, 0.32) !important;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08) !important;
+}
+
+.service-stat-row > *:hover,
+.service-case-flow > *:hover,
+.service-planning-grid > *:hover {
+    transform: translateY(-6px);
+    border-color: rgba(220, 38, 38, 0.32) !important;
+    box-shadow: 0 30px 80px rgba(15, 23, 42, 0.13) !important;
+}
+
+.service-stat-row h3,
+.service-case-flow h3,
+.service-planning-grid h3 {
+    max-width: 15ch !important;
+    margin: 0 0 14px !important;
+    font-size: clamp(1.55rem, 2.4vw, 2.35rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.045em !important;
+    color: #0f172a !important;
+}
+
+.service-stat-row p,
+.service-case-flow p,
+.service-planning-grid p,
+.service-stat-row li,
+.service-case-flow li,
+.service-planning-grid li {
+    max-width: 34rem !important;
+    font-size: clamp(0.98rem, 1vw, 1.08rem) !important;
+    line-height: 1.75 !important;
+    color: #475569 !important;
+}
+
+.service-case-flow ul,
+.service-planning-grid ul {
+    display: grid !important;
+    gap: 12px !important;
+    padding: 0 !important;
+    margin: 18px 0 0 !important;
+}
+
+.service-case-flow li,
+.service-planning-grid li {
+    display: grid !important;
+    grid-template-columns: 28px 1fr !important;
+    align-items: start !important;
+    gap: 12px !important;
+}
+
+@media (max-width: 1024px) {
+    .service-stat-row,
+    .service-case-flow {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .service-stat-row,
+    .service-case-flow,
+    .service-planning-grid {
+        width: min(100% - 28px, 1180px) !important;
+    }
+
+    .service-stat-row > *,
+    .service-case-flow > *,
+    .service-planning-grid > * {
+        padding: 24px !important;
+        border-radius: 20px !important;
+    }
+}
+
+.partner-tech-page .partner-tech-hero-grid {
+    width: min(100% - 64px, 1280px);
+    max-width: 1280px;
+    grid-template-columns: minmax(0, 0.98fr) minmax(400px, 500px);
+    gap: clamp(42px, 6vw, 82px);
+}
+
+.partner-tech-page .partner-tech-copy h1 {
+    max-width: 850px;
+    font-size: clamp(2.9rem, 4.25vw, 4.75rem);
+    line-height: 1.04;
+    letter-spacing: -0.055em;
+}
+
+.partner-tech-page .partner-tech-brand-board {
+    width: min(100%, 500px);
+}
+
+.partner-tech-page .partner-tech-logo-grid div {
+    min-height: 150px;
+}
+
+.partner-tech-page .partner-tech-proof .container {
+    width: min(100% - 64px, 1280px);
+}
+
+.partner-tech-page .partner-tech-brand-section .container,
+.partner-tech-page .partner-tech-products .container,
+.partner-tech-page .partner-tech-applications .container,
+.partner-tech-page .partner-tech-procurement .container,
+.partner-tech-page .partner-tech-overview .container {
+    width: min(100% - 64px, 1280px);
+}
+
+.partner-tech-page .partner-tech-split {
+    grid-template-columns: minmax(0, 0.8fr) minmax(480px, 1.2fr);
+    gap: clamp(38px, 5vw, 80px);
+}
+
+.partner-tech-page .partner-tech-heading h2 {
+    max-width: 650px;
+    font-size: clamp(2.55rem, 4vw, 4.45rem);
+    line-height: 1.02;
+}
+
+.partner-tech-page .partner-tech-product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.partner-tech-page .partner-tech-product-card {
+    min-height: 365px;
+    padding: 30px;
+}
+
+.partner-tech-page .partner-tech-application-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.partner-tech-page .partner-tech-procurement-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.partner-tech-page .partner-tech-procurement-grid article {
+    grid-template-columns: 60px minmax(0, 1fr);
+    min-height: 174px;
+    padding: 26px;
+}
+
+.partner-tech-page .partner-tech-procurement-grid p {
+    font-size: 1rem;
+    line-height: 1.68;
+}
+
+@media (max-width: 1180px) {
+    .partner-tech-page .partner-tech-hero-grid,
+    .partner-tech-page .partner-tech-split {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-tech-page .partner-tech-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .partner-tech-page .partner-tech-hero-grid,
+    .partner-tech-page .partner-tech-proof .container,
+    .partner-tech-page .partner-tech-brand-section .container,
+    .partner-tech-page .partner-tech-products .container,
+    .partner-tech-page .partner-tech-applications .container,
+    .partner-tech-page .partner-tech-procurement .container,
+    .partner-tech-page .partner-tech-overview .container {
+        width: min(100% - 30px, 1280px);
+    }
+
+    .partner-tech-page .partner-tech-copy h1 {
+        font-size: clamp(2.35rem, 11vw, 3.45rem);
+    }
+
+    .partner-tech-page .partner-tech-product-grid,
+    .partner-tech-page .partner-tech-application-list,
+    .partner-tech-page .partner-tech-procurement-grid,
+    .partner-tech-page .partner-tech-procurement-grid article {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* QA EOF override: this must remain at the end */
+.service-page .service-planning-checklist li,
+.service-page .service-rfq-card li {
+    padding: 8px 12px 8px 34px !important;
+    min-height: 0 !important;
+    line-height: 1.35 !important;
+}
+
+.service-page .service-planning-grid > article > span {
+    margin-bottom: 8px !important;
+}
+
+.service-page .service-planning-grid > article h3 {
+    margin-bottom: 10px !important;
+    padding-bottom: 0 !important;
+}
+
+.service-page .service-planning-grid > article {
+    padding: 24px !important;
+}
+
+.service-page .service-keyword-strip {
+    display: none !important;
+}
+
+/* Absolute final override: service case-study cards must never collapse into skinny columns */
+.service-page .service-case-studies .service-case-grid {
+    width: min(100% - 56px, 1180px) !important;
+    margin-inline: auto !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+}
+
+.service-page .service-case-studies .service-case-grid > article {
+    display: grid !important;
+    grid-template-columns: minmax(270px, 0.34fr) minmax(0, 1fr) !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    border-radius: 26px !important;
+    border: 1px solid rgba(203, 213, 225, 0.86) !important;
+    background: #ffffff !important;
+    box-shadow: 0 22px 60px rgba(7, 20, 38, 0.08) !important;
+}
+
+.service-page .service-case-studies .service-case-grid > article::before,
+.service-page .service-case-studies .service-case-grid > article::after {
+    display: none !important;
+}
+
+.service-page .service-case-studies .service-case-card-head {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    padding: clamp(26px, 3vw, 38px) !important;
+    border: 0 !important;
+    background:
+        radial-gradient(circle at 100% 0%, rgba(220, 38, 38, 0.22), transparent 36%),
+        linear-gradient(135deg, #071426 0%, #123762 100%) !important;
+}
+
+.service-page .service-case-studies .service-case-card-head h3 {
+    max-width: 24rem !important;
+    margin: 0 !important;
+    color: #ffffff !important;
+    font-size: clamp(1.55rem, 2vw, 2.1rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.service-page .service-case-studies .service-case-flow {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(240px, 1fr)) !important;
+    gap: 14px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: clamp(18px, 2vw, 24px) !important;
+    background: #f4f7fb !important;
+}
+
+.service-page .service-case-studies .service-case-step {
+    display: block !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 18px 20px !important;
+    border: 1px solid rgba(203, 213, 225, 0.86) !important;
+    border-left: 4px solid #d72f2f !important;
+    border-radius: 18px !important;
+    background: #ffffff !important;
+}
+
+.service-page .service-case-studies .service-case-step strong {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin: 0 0 8px !important;
+    color: #d72f2f !important;
+    font-size: 0.78rem !important;
+    font-weight: 900 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    white-space: normal !important;
+}
+
+.service-page .service-case-studies .service-case-step p {
+    max-width: none !important;
+    margin: 0 !important;
+    color: #4d5f76 !important;
+    font-size: 0.98rem !important;
+    line-height: 1.56 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+}
+
+@media (max-width: 980px) {
+    .service-page .service-case-studies .service-case-grid > article {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 680px) {
+    .service-page .service-case-studies .service-case-grid,
+    .service-page .service-case-studies .service-case-flow {
+        width: min(100% - 28px, 1180px) !important;
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Absolute final override: service case-study cards must never collapse into skinny columns */
+.service-page .service-case-studies .service-case-grid {
+    width: min(100% - 56px, 1180px) !important;
+    margin-inline: auto !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+}
+
+.service-page .service-case-studies .service-case-grid > article {
+    display: grid !important;
+    grid-template-columns: minmax(270px, 0.34fr) minmax(0, 1fr) !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    border-radius: 26px !important;
+    border: 1px solid rgba(203, 213, 225, 0.86) !important;
+    background: #ffffff !important;
+    box-shadow: 0 22px 60px rgba(7, 20, 38, 0.08) !important;
+}
+
+.service-page .service-case-studies .service-case-card-head {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    padding: clamp(26px, 3vw, 38px) !important;
+    border: 0 !important;
+    background:
+        radial-gradient(circle at 100% 0%, rgba(220, 38, 38, 0.22), transparent 36%),
+        linear-gradient(135deg, #071426 0%, #123762 100%) !important;
+}
+
+.service-page .service-case-studies .service-case-card-head h3 {
+    max-width: 24rem !important;
+    margin: 0 !important;
+    color: #ffffff !important;
+    font-size: clamp(1.55rem, 2vw, 2.1rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.service-page .service-case-studies .service-case-flow {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(240px, 1fr)) !important;
+    gap: 14px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: clamp(18px, 2vw, 24px) !important;
+    background: #f4f7fb !important;
+}
+
+.service-page .service-case-studies .service-case-step {
+    display: block !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 18px 20px !important;
+    border: 1px solid rgba(203, 213, 225, 0.86) !important;
+    border-left: 4px solid #d72f2f !important;
+    border-radius: 18px !important;
+    background: #ffffff !important;
+}
+
+.service-page .service-case-studies .service-case-step strong {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin: 0 0 8px !important;
+    color: #d72f2f !important;
+    font-size: 0.78rem !important;
+    font-weight: 900 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    white-space: normal !important;
+}
+
+.service-page .service-case-studies .service-case-step p {
+    max-width: none !important;
+    margin: 0 !important;
+    color: #4d5f76 !important;
+    font-size: 0.98rem !important;
+    line-height: 1.56 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+}
+
+@media (max-width: 980px) {
+    .service-page .service-case-studies .service-case-grid > article {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 680px) {
+    .service-page .service-case-studies .service-case-grid,
+    .service-page .service-case-studies .service-case-flow {
+        width: min(100% - 28px, 1180px) !important;
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Final service case-study QA: keep every service subpage readable and aligned */
+.service-page .service-case-studies {
+    padding-block: clamp(58px, 6vw, 88px) !important;
+}
+
+.service-page .service-case-grid {
+    width: min(100% - 56px, 1180px) !important;
+    margin-inline: auto !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+}
+
+.service-page .service-case-grid > article {
+    display: grid !important;
+    grid-template-columns: minmax(260px, 0.32fr) minmax(0, 1fr) !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    border-radius: 26px !important;
+    border: 1px solid rgba(203, 213, 225, 0.82) !important;
+    background: #ffffff !important;
+    box-shadow: 0 22px 60px rgba(7, 20, 38, 0.08) !important;
+}
+
+.service-page .service-case-grid > article::before,
+.service-page .service-case-grid > article::after {
+    display: none !important;
+}
+
+.service-page .service-case-card-head {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    min-height: 100% !important;
+    padding: clamp(26px, 3vw, 38px) !important;
+    border: 0 !important;
+    background:
+        radial-gradient(circle at 100% 0%, rgba(220, 38, 38, 0.22), transparent 36%),
+        linear-gradient(135deg, #071426 0%, #123762 100%) !important;
+}
+
+.service-page .service-case-card-head span {
+    width: 56px !important;
+    height: 56px !important;
+    border-radius: 16px !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+}
+
+.service-page .service-case-card-head h3 {
+    max-width: 24rem !important;
+    margin: 0 !important;
+    color: #ffffff !important;
+    font-size: clamp(1.55rem, 2vw, 2.15rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.service-page .service-case-flow {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(240px, 1fr)) !important;
+    gap: 14px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: clamp(18px, 2vw, 24px) !important;
+    background: #f4f7fb !important;
+}
+
+.service-page .service-case-step {
+    display: block !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 18px 20px !important;
+    border: 1px solid rgba(203, 213, 225, 0.82) !important;
+    border-left: 4px solid #d72f2f !important;
+    border-radius: 18px !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+}
+
+.service-page .service-case-step strong {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin: 0 0 8px !important;
+    color: #d72f2f !important;
+    font-size: 0.78rem !important;
+    font-weight: 900 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+}
+
+.service-page .service-case-step p {
+    max-width: none !important;
+    margin: 0 !important;
+    color: #4d5f76 !important;
+    font-size: 0.98rem !important;
+    line-height: 1.56 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+}
+
+@media (max-width: 980px) {
+    .service-page .service-case-grid > article {
+        grid-template-columns: 1fr !important;
+    }
+
+    .service-page .service-case-card-head {
+        min-height: 0 !important;
+    }
+}
+
+@media (max-width: 680px) {
+    .service-page .service-case-grid,
+    .service-page .service-case-flow {
+        width: min(100% - 28px, 1180px) !important;
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Last-mile spacing trim after QA screenshots */
+.service-page .service-planning-grid li {
+    padding-block: 6px !important;
+}
+
+.service-page .service-planning-checklist li,
+.service-page .service-rfq-card li {
+    padding: 8px 12px 8px 34px !important;
+    min-height: 0 !important;
+    line-height: 1.35 !important;
+}
+
+.service-page .service-planning-grid > article > span {
+    margin-bottom: 8px !important;
+}
+
+.service-page .service-planning-grid > article h3 {
+    margin-bottom: 10px !important;
+    padding-bottom: 0 !important;
+}
+
+.service-page .service-planning-grid > article {
+    max-height: none !important;
+}
+
+.service-page .service-rfq-card .service-btn,
+.service-page .service-rfq-card a {
+    margin-top: 8px !important;
+}
+
+.service-page .service-case-card-head {
+    padding: 22px 24px !important;
+}
+
+.service-page .service-case-flow {
+    padding: 18px !important;
+}
+
+.service-page .service-process .service-timeline article,
+.service-page .service-feature-grid article,
+.service-page .service-application-grid article {
+    min-height: 0 !important;
+    padding: 24px !important;
+}
+
+/* Density polish: remove dead blank space from service subpages */
+.service-page .section-padding,
+.partner-tech-page .section-padding {
+    padding-block: clamp(64px, 6vw, 92px) !important;
+}
+
+.service-page .service-approach,
+.service-page .service-intro,
+.service-page .service-planning,
+.service-page .service-capabilities,
+.service-page .service-applications,
+.partner-tech-page .partner-tech-overview,
+.partner-tech-page .partner-tech-products,
+.partner-tech-page .partner-tech-procurement,
+.partner-tech-page .partner-tech-applications {
+    padding-block: clamp(64px, 6vw, 92px) !important;
+}
+
+.service-page .service-approach-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+    gap: clamp(16px, 1.8vw, 24px) !important;
+}
+
+.service-page .service-approach-grid article {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: clamp(24px, 2.4vw, 32px) !important;
+}
+
+.service-page .service-approach-grid :is(h2, h3) {
+    font-size: clamp(1.65rem, 2vw, 2.15rem) !important;
+}
+
+.service-page .service-approach-grid p {
+    line-height: 1.54 !important;
+}
+
+.service-page .service-planning-grid {
+    align-items: start !important;
+    gap: clamp(18px, 2vw, 28px) !important;
+}
+
+.service-page .service-planning-story {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr) !important;
+    gap: clamp(22px, 3vw, 44px) !important;
+    align-items: center !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: clamp(34px, 3.5vw, 52px) !important;
+}
+
+.service-page .service-planning-story > span {
+    grid-column: 1 / -1 !important;
+}
+
+.service-page .service-planning-story h3 {
+    max-width: 760px !important;
+    font-size: clamp(2.1rem, 3.4vw, 3.75rem) !important;
+    line-height: 1.02 !important;
+}
+
+.service-page .service-planning-story p {
+    max-width: 520px !important;
+    margin: 0 !important;
+    align-self: center !important;
+}
+
+.service-page .service-planning-story .service-keyword-strip {
+    grid-column: 1 / -1 !important;
+    margin-top: 8px !important;
+}
+
+.service-page .service-planning-checklist,
+.service-page .service-rfq-card {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: clamp(26px, 2.6vw, 36px) !important;
+}
+
+.service-page .service-planning-grid ul {
+    gap: 8px !important;
+}
+
+.service-page .service-planning-grid li {
+    padding: 10px 0 !important;
+    line-height: 1.48 !important;
+}
+
+.service-page .service-capability-card,
+.partner-tech-page .partner-tech-product-card,
+.partner-tech-page .partner-tech-brand-row {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: clamp(24px, 2.4vw, 34px) !important;
+}
+
+.partner-tech-page .partner-tech-product-card {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+}
+
+.partner-tech-page .partner-tech-product-card p {
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 900px) {
+    .service-page .service-planning-story {
+        grid-template-columns: 1fr !important;
+    }
+
+    .service-page .service-planning-story p {
+        max-width: 760px !important;
+    }
+}
+
+/* Final QA override: readable partner/service heroes and process cards */
+.service-page .service-hero,
+.partner-tech-page .partner-tech-hero {
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+}
+
+.service-page .service-approach-grid article {
+    min-height: 420px !important;
+    padding: clamp(30px, 3.3vw, 44px) !important;
+}
+
+.service-page .service-approach-grid article::before,
+.service-page .service-approach-grid article::after,
+.service-page .service-planning-grid article::before,
+.service-page .service-planning-grid article::after {
+    display: none !important;
+}
+
+.service-page .service-planning-story,
+.service-page .service-planning-checklist,
+.service-page .service-rfq-card {
+    min-height: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+.partner-tech-page .partner-tech-copy,
+.partner-tech-page .partner-tech-copy h1,
+.partner-tech-page .partner-tech-copy p {
+    max-width: 100% !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: anywhere !important;
+}
+
+@media (max-width: 760px) {
+    .partner-tech-page .partner-tech-copy {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .partner-tech-page .partner-tech-copy h1 {
+        font-size: clamp(2.35rem, 11.4vw, 3.35rem) !important;
+        line-height: 1.03 !important;
+        letter-spacing: -0.025em !important;
+    }
+
+    .service-page .service-approach-grid article {
+        min-height: 0 !important;
+    }
+}
+
+/* Absolute final service QA lock - keep this at the end of service-page.css */
+.service-page,
+.service-page main,
+.service-page section {
+    max-width: 100% !important;
+    overflow-x: clip !important;
+}
+
+.service-page .service-hero,
+.partner-tech-page .partner-tech-hero {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    padding-block: clamp(116px, 9vw, 158px) clamp(66px, 7vw, 106px) !important;
+}
+
+.service-page .service-hero-grid,
+.partner-tech-page .partner-tech-hero-grid {
+    width: min(100% - 64px, 1320px) !important;
+    max-width: 100% !important;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.82fr) !important;
+}
+
+.service-page .service-approach-grid {
+    width: min(100% - 64px, 1320px) !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+}
+
+.service-page .service-approach-grid article,
+.service-page .service-planning-grid article,
+.service-page .service-timeline article,
+.service-page .service-stat-row > * {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+}
+
+.service-page .service-approach-grid article::before,
+.service-page .service-approach-grid article::after,
+.service-page .service-planning-grid article::before,
+.service-page .service-planning-grid article::after,
+.service-page .service-timeline article::before,
+.service-page .service-timeline article::after,
+.service-page .service-stat-row > *::before,
+.service-page .service-stat-row > *::after {
+    display: none !important;
+}
+
+.partner-tech-page .partner-tech-copy,
+.partner-tech-page .partner-tech-copy h1 {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-wrap: anywhere !important;
+}
+
+@media (max-width: 760px) {
+    .service-page .service-hero,
+    .partner-tech-page .partner-tech-hero {
+        padding-block: 96px 58px !important;
+    }
+
+    .service-page .service-hero-grid,
+    .partner-tech-page .partner-tech-hero-grid,
+    .service-page .service-approach-grid {
+        width: min(100% - 28px, 1320px) !important;
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Partner technology final override - keep this block last */
+.partner-tech-page .partner-tech-overview {
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 8% 14%, rgba(220, 38, 38, 0.08), transparent 28%),
+        radial-gradient(circle at 88% 18%, rgba(15, 23, 42, 0.06), transparent 32%),
+        linear-gradient(135deg, #ffffff 0%, #f7f9fc 100%);
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-split,
+.partner-tech-page .partner-tech-applications .partner-tech-split,
+.partner-tech-page .partner-tech-procurement .partner-tech-split {
+    align-items: start;
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-heading,
+.partner-tech-page .partner-tech-applications .partner-tech-heading,
+.partner-tech-page .partner-tech-procurement .partner-tech-heading {
+    position: sticky;
+    top: 130px;
+    align-self: start;
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-heading h2,
+.partner-tech-page .partner-tech-applications .partner-tech-heading h2,
+.partner-tech-page .partner-tech-procurement .partner-tech-heading h2 {
+    max-width: 680px;
+    color: #0f172a;
+    font-size: clamp(2.4rem, 3.6vw, 4.05rem);
+    line-height: 1.04;
+    letter-spacing: -0.055em;
+}
+
+.partner-tech-page .partner-tech-copy-panel {
+    padding: clamp(30px, 4vw, 48px);
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-radius: 30px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.96));
+    box-shadow: 0 30px 90px rgba(15, 23, 42, 0.1);
+}
+
+.partner-tech-page .partner-tech-copy-panel p {
+    color: #334155;
+    font-size: clamp(1.05rem, 1.15vw, 1.18rem);
+    line-height: 1.85;
+}
+
+.partner-tech-page .partner-tech-brand-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.partner-tech-page .partner-tech-brand-row {
+    grid-template-columns: 42px 132px minmax(0, 1fr);
+    gap: 18px;
+    min-height: 238px;
+    padding: 24px;
+    align-items: center;
+}
+
+.partner-tech-page .partner-tech-brand-row a {
+    grid-column: 3;
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: #fff1f2;
+    color: #dc2626;
+}
+
+.partner-tech-page .partner-tech-brand-row a::after {
+    content: "\f061";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    transition: transform 0.22s ease;
+}
+
+.partner-tech-page .partner-tech-brand-row:hover a::after {
+    transform: translateX(4px);
+}
+
+.partner-tech-page .partner-tech-brand-logo {
+    width: 132px;
+    height: 94px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #ffffff, #f8fafc);
+}
+
+.partner-tech-page .partner-tech-brand-logo img {
+    max-width: 102px;
+    max-height: 54px;
+}
+
+.partner-tech-page .partner-tech-product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.partner-tech-page .partner-tech-product-card {
+    min-height: 350px;
+    padding: 28px;
+    border-radius: 28px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.98));
+}
+
+.partner-tech-page .partner-tech-product-card > span {
+    margin-bottom: 18px;
+    color: #dc2626;
+}
+
+.partner-tech-page .partner-tech-product-mark {
+    margin: 0 0 24px;
+}
+
+.partner-tech-page .partner-tech-product-mark.logo-mark {
+    width: 126px;
+    height: 72px;
+}
+
+.partner-tech-page .partner-tech-product-mark.logo-mark img {
+    max-width: 96px;
+    max-height: 46px;
+}
+
+.partner-tech-page .partner-tech-product-card h3 {
+    min-height: 0;
+    margin-bottom: 14px;
+    color: #0f172a;
+    font-size: clamp(1.2rem, 1.28vw, 1.42rem);
+}
+
+.partner-tech-page .partner-tech-product-card p {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.partner-tech-page .partner-tech-tag-row span,
+.partner-tech-page .partner-tech-application-list span {
+    border-color: rgba(15, 23, 42, 0.12);
+    background: #ffffff;
+    color: #10203a;
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+    transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, color 0.22s ease;
+}
+
+.partner-tech-page .partner-tech-tag-row span:hover,
+.partner-tech-page .partner-tech-application-list span:hover {
+    transform: translateY(-3px);
+    border-color: rgba(220, 38, 38, 0.28);
+    color: #dc2626;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.1);
+}
+
+.partner-tech-page .partner-tech-procurement-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.partner-tech-page .partner-tech-procurement-grid article {
+    min-height: 180px;
+    border-radius: 24px;
+}
+
+.partner-tech-page .partner-tech-procurement-grid strong {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    place-items: center;
+    border-radius: 16px;
+    background: #fff1f2;
+    color: #dc2626;
+}
+
+.partner-tech-page .partner-tech-cta .container {
+    min-height: 290px;
+}
+
+.partner-tech-page .partner-tech-cta h2 {
+    max-width: 950px;
+    font-size: clamp(2.55rem, 4.8vw, 5.4rem);
+}
+
+@media (max-width: 1180px) {
+    .partner-tech-page .partner-tech-overview .partner-tech-heading,
+    .partner-tech-page .partner-tech-applications .partner-tech-heading,
+    .partner-tech-page .partner-tech-procurement .partner-tech-heading {
+        position: static;
+    }
+
+    .partner-tech-page .partner-tech-brand-list,
+    .partner-tech-page .partner-tech-product-grid,
+    .partner-tech-page .partner-tech-procurement-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .partner-tech-page .partner-tech-brand-list,
+    .partner-tech-page .partner-tech-brand-row,
+    .partner-tech-page .partner-tech-product-grid,
+    .partner-tech-page .partner-tech-procurement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-tech-page .partner-tech-brand-row a {
+        grid-column: 1;
+    }
+}
+
+/* Partner technology actual final correction - do not place partner-tech rules after this */
+.partner-tech-page .partner-tech-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 520px);
+    align-items: center;
+    gap: clamp(36px, 6vw, 88px);
+}
+
+.partner-tech-page .partner-tech-copy h1 {
+    max-width: 800px;
+    font-size: clamp(3rem, 5.7vw, 6.4rem);
+    line-height: 0.94;
+    letter-spacing: -0.06em;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.partner-tech-page .partner-tech-brand-board {
+    justify-self: end;
+    align-self: center;
+    max-width: 520px;
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-heading,
+.partner-tech-page .partner-tech-applications .partner-tech-heading,
+.partner-tech-page .partner-tech-procurement .partner-tech-heading {
+    position: static;
+    top: auto;
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-split,
+.partner-tech-page .partner-tech-applications .partner-tech-split,
+.partner-tech-page .partner-tech-procurement .partner-tech-split {
+    grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1.18fr);
+    align-items: center;
+    gap: clamp(38px, 6vw, 90px);
+}
+
+.partner-tech-page .partner-tech-applications {
+    background:
+        radial-gradient(circle at 86% 14%, rgba(15, 23, 42, 0.06), transparent 30%),
+        linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+        #f8fafc;
+    background-size: auto, 56px 56px, 56px 56px, auto;
+}
+
+.partner-tech-page .partner-tech-procurement {
+    background:
+        radial-gradient(circle at 12% 10%, rgba(220, 38, 38, 0.06), transparent 30%),
+        #ffffff;
+}
+
+.partner-tech-page .partner-tech-application-list,
+.partner-tech-page .partner-tech-procurement-grid {
+    padding: clamp(22px, 3vw, 34px);
+    border: 1px solid rgba(148, 163, 184, 0.24);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 28px 78px rgba(15, 23, 42, 0.08);
+}
+
+.partner-tech-page .partner-tech-application-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.partner-tech-page .partner-tech-procurement-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.partner-tech-page .partner-tech-procurement-grid article {
+    grid-template-columns: 54px minmax(0, 1fr);
+    min-height: 150px;
+    box-shadow: none;
+}
+
+.partner-tech-page .partner-tech-brand-row {
+    grid-template-columns: 44px 146px minmax(0, 1fr);
+    min-height: 246px;
+}
+
+.partner-tech-page .partner-tech-brand-logo {
+    width: 146px;
+    height: 106px;
+}
+
+.partner-tech-page .partner-tech-brand-logo img {
+    max-width: 112px;
+    max-height: 58px;
+    filter: none;
+}
+
+.partner-tech-page .partner-tech-cta .container {
+    width: min(100% - 64px, 1320px);
+    max-width: none;
+    min-height: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: clamp(24px, 5vw, 74px);
+    padding: clamp(34px, 4vw, 58px);
+}
+
+.partner-tech-page .partner-tech-cta-copy {
+    min-width: 0;
+    max-width: 960px;
+}
+
+.partner-tech-page .partner-tech-cta h2 {
+    max-width: 960px;
+    margin: 12px 0 18px;
+    font-size: clamp(2.5rem, 4.2vw, 4.9rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    text-align: left;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.partner-tech-page .partner-tech-cta p:not(.service-eyebrow) {
+    max-width: 880px;
+    text-align: left;
+}
+
+.partner-tech-page .partner-tech-cta .service-hero-actions {
+    justify-content: flex-end;
+    min-width: 220px;
+    margin: 0;
+}
+
+@media (max-width: 1180px) {
+    .partner-tech-page .partner-tech-hero-grid,
+    .partner-tech-page .partner-tech-overview .partner-tech-split,
+    .partner-tech-page .partner-tech-applications .partner-tech-split,
+    .partner-tech-page .partner-tech-procurement .partner-tech-split,
+    .partner-tech-page .partner-tech-cta .container {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-tech-page .partner-tech-brand-board {
+        justify-self: start;
+        width: 100%;
+    }
+
+    .partner-tech-page .partner-tech-cta .service-hero-actions {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 820px) {
+    .partner-tech-page .container,
+    .partner-tech-page .partner-tech-cta .container {
+        width: min(100% - 30px, 1320px);
+    }
+
+    .partner-tech-page .partner-tech-brand-row,
+    .partner-tech-page .partner-tech-brand-list,
+    .partner-tech-page .partner-tech-product-grid,
+    .partner-tech-page .partner-tech-application-list,
+    .partner-tech-page .partner-tech-procurement-grid,
+    .partner-tech-page .partner-tech-procurement-grid article {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-tech-page .partner-tech-brand-row a {
+        grid-column: 1;
+    }
+
+    .partner-tech-page .partner-tech-copy h1,
+    .partner-tech-page .partner-tech-cta h2 {
+        font-size: clamp(2.25rem, 11vw, 3.3rem);
+        line-height: 1.02;
+    }
+}
+
+/* Partner technology emergency final alignment - keep this as the last service-page override */
+.partner-tech-page {
+    --partner-ink: #0f172a;
+    --partner-muted: #4f6178;
+    --partner-line: #dbe4ef;
+}
+
+.partner-tech-page .container {
+    width: min(100% - 64px, 1280px);
+}
+
+.partner-tech-page .partner-tech-hero {
+    min-height: auto;
+    padding: clamp(110px, 11vw, 150px) 0 clamp(76px, 8vw, 104px);
+}
+
+.partner-tech-page .partner-tech-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 520px);
+    gap: clamp(36px, 6vw, 88px);
+    align-items: center;
+}
+
+.partner-tech-page .partner-tech-copy {
+    min-width: 0;
+}
+
+.partner-tech-page .partner-tech-copy h1 {
+    max-width: 800px;
+    margin: 18px 0 22px;
+    font-size: clamp(3rem, 5.7vw, 6.4rem);
+    line-height: 0.94;
+    letter-spacing: -0.06em;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.partner-tech-page .partner-tech-copy>p:not(.service-eyebrow) {
+    max-width: 720px;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: clamp(1rem, 1.1vw, 1.14rem);
+    line-height: 1.75;
+}
+
+.partner-tech-page .partner-tech-brand-board {
+    align-self: center;
+    justify-self: end;
+    max-width: 520px;
+}
+
+.partner-tech-page .partner-tech-proof .container {
+    max-width: 1280px;
+    margin-top: -38px;
+}
+
+.partner-tech-page .partner-tech-overview {
+    background:
+        radial-gradient(circle at 8% 14%, rgba(220, 38, 38, 0.08), transparent 28%),
+        radial-gradient(circle at 88% 18%, rgba(15, 23, 42, 0.06), transparent 32%),
+        linear-gradient(135deg, #ffffff 0%, #f7f9fc 100%);
+}
+
+.partner-tech-page .partner-tech-brand-section {
+    background:
+        radial-gradient(circle at 14% 4%, rgba(220, 38, 38, 0.06), transparent 28%),
+        linear-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+        #f8fafc;
+    background-size: auto, 56px 56px, 56px 56px, auto;
+}
+
+.partner-tech-page .partner-tech-products {
+    background: #ffffff;
+}
+
+.partner-tech-page .partner-tech-applications {
+    border-top: 1px solid rgba(148, 163, 184, 0.18);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+    background:
+        radial-gradient(circle at 86% 14%, rgba(15, 23, 42, 0.06), transparent 30%),
+        #f8fafc;
+}
+
+.partner-tech-page .partner-tech-procurement {
+    background:
+        radial-gradient(circle at 12% 10%, rgba(220, 38, 38, 0.06), transparent 30%),
+        #ffffff;
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-heading,
+.partner-tech-page .partner-tech-applications .partner-tech-heading,
+.partner-tech-page .partner-tech-procurement .partner-tech-heading {
+    position: static;
+    top: auto;
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-split,
+.partner-tech-page .partner-tech-applications .partner-tech-split,
+.partner-tech-page .partner-tech-procurement .partner-tech-split {
+    grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1.18fr);
+    gap: clamp(38px, 6vw, 90px);
+    align-items: center;
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-heading h2,
+.partner-tech-page .partner-tech-applications .partner-tech-heading h2,
+.partner-tech-page .partner-tech-procurement .partner-tech-heading h2,
+.partner-tech-page .partner-tech-brand-section .service-section-heading h2,
+.partner-tech-page .partner-tech-products .service-section-heading h2 {
+    color: var(--partner-ink);
+    letter-spacing: -0.045em;
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-heading h2,
+.partner-tech-page .partner-tech-applications .partner-tech-heading h2,
+.partner-tech-page .partner-tech-procurement .partner-tech-heading h2 {
+    max-width: 620px;
+    font-size: clamp(2.35rem, 3.6vw, 4.15rem);
+    line-height: 1.02;
+}
+
+.partner-tech-page .partner-tech-copy-panel,
+.partner-tech-page .partner-tech-application-list,
+.partner-tech-page .partner-tech-procurement-grid {
+    border: 1px solid rgba(148, 163, 184, 0.24);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 28px 78px rgba(15, 23, 42, 0.08);
+}
+
+.partner-tech-page .partner-tech-copy-panel {
+    padding: clamp(28px, 4vw, 46px);
+}
+
+.partner-tech-page .partner-tech-copy-panel p {
+    color: #334155;
+    font-size: clamp(1.05rem, 1.15vw, 1.18rem);
+    line-height: 1.85;
+}
+
+.partner-tech-page .partner-tech-brand-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.partner-tech-page .partner-tech-brand-row {
+    position: relative;
+    grid-template-columns: 44px 146px minmax(0, 1fr);
+    gap: 20px;
+    min-height: 246px;
+    padding: 26px;
+    border-color: rgba(148, 163, 184, 0.28);
+    border-radius: 28px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.98));
+}
+
+.partner-tech-page .partner-tech-brand-row::before {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    border-radius: 28px 0 0 28px;
+    background: linear-gradient(180deg, #dc2626, rgba(220, 38, 38, 0.08));
+    opacity: 0;
+    transition: opacity 0.24s ease;
+    content: "";
+}
+
+.partner-tech-page .partner-tech-brand-row:hover::before {
+    opacity: 1;
+}
+
+.partner-tech-page .partner-tech-brand-row>span {
+    align-self: start;
+    margin-top: 8px;
+    color: #dc2626;
+}
+
+.partner-tech-page .partner-tech-brand-logo {
+    width: 146px;
+    height: 106px;
+    border: 1px solid var(--partner-line);
+    border-radius: 22px;
+    background: #ffffff;
+}
+
+.partner-tech-page .partner-tech-brand-logo img {
+    max-width: 112px;
+    max-height: 58px;
+    filter: none;
+}
+
+.partner-tech-page .partner-tech-brand-row h3 {
+    color: var(--partner-ink);
+    font-size: clamp(1.25rem, 1.35vw, 1.45rem);
+}
+
+.partner-tech-page .partner-tech-brand-row p {
+    color: var(--partner-muted);
+    font-size: 1rem;
+}
+
+.partner-tech-page .partner-tech-brand-row a {
+    grid-column: 3;
+    justify-self: start;
+    align-self: end;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 10px 15px;
+    border-radius: 999px;
+    background: #fff1f2;
+    color: #dc2626;
+    font-size: 0.76rem;
+}
+
+.partner-tech-page .partner-tech-product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.partner-tech-page .partner-tech-product-card {
+    min-height: 350px;
+    padding: 28px;
+    border-radius: 28px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.98));
+}
+
+.partner-tech-page .partner-tech-product-card>span {
+    margin-bottom: 18px;
+    color: #dc2626;
+}
+
+.partner-tech-page .partner-tech-product-mark {
+    margin: 0 0 24px;
+}
+
+.partner-tech-page .partner-tech-product-mark.logo-mark {
+    width: 126px;
+    height: 72px;
+}
+
+.partner-tech-page .partner-tech-product-mark.logo-mark img {
+    max-width: 96px;
+    max-height: 46px;
+}
+
+.partner-tech-page .partner-tech-product-card h3 {
+    min-height: 0;
+    margin-bottom: 14px;
+    color: var(--partner-ink);
+    font-size: clamp(1.2rem, 1.28vw, 1.42rem);
+}
+
+.partner-tech-page .partner-tech-product-card p {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.partner-tech-page .partner-tech-application-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: clamp(22px, 3vw, 34px);
+}
+
+.partner-tech-page .partner-tech-application-list span {
+    min-height: 58px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    font-size: 0.94rem;
+}
+
+.partner-tech-page .partner-tech-procurement-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding: clamp(22px, 3vw, 34px);
+}
+
+.partner-tech-page .partner-tech-procurement-grid article {
+    grid-template-columns: 54px minmax(0, 1fr);
+    min-height: 150px;
+    box-shadow: none;
+}
+
+.partner-tech-page .partner-tech-procurement-grid p {
+    color: var(--partner-muted);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.partner-tech-page .partner-tech-cta {
+    padding: clamp(72px, 7vw, 104px) 0;
+    text-align: left;
+}
+
+.partner-tech-page .partner-tech-cta .container {
+    width: min(100% - 64px, 1320px);
+    max-width: none;
+    min-height: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(24px, 5vw, 74px);
+    align-items: center;
+    padding: clamp(34px, 4vw, 58px);
+}
+
+.partner-tech-page .partner-tech-cta-copy {
+    min-width: 0;
+    max-width: 960px;
+}
+
+.partner-tech-page .partner-tech-cta h2 {
+    max-width: 960px;
+    margin: 12px 0 18px;
+    font-size: clamp(2.5rem, 4.2vw, 4.9rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    overflow-wrap: normal;
+    word-break: normal;
+    text-align: left;
+}
+
+.partner-tech-page .partner-tech-cta p:not(.service-eyebrow) {
+    max-width: 880px;
+    color: rgba(255, 255, 255, 0.82);
+    text-align: left;
+}
+
+.partner-tech-page .partner-tech-cta .service-hero-actions {
+    justify-content: flex-end;
+    min-width: 220px;
+    margin: 0;
+}
+
+@media (max-width: 1180px) {
+    .partner-tech-page .partner-tech-hero-grid,
+    .partner-tech-page .partner-tech-overview .partner-tech-split,
+    .partner-tech-page .partner-tech-applications .partner-tech-split,
+    .partner-tech-page .partner-tech-procurement .partner-tech-split,
+    .partner-tech-page .partner-tech-cta .container {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-tech-page .partner-tech-brand-board {
+        justify-self: start;
+        width: 100%;
+    }
+
+    .partner-tech-page .partner-tech-brand-list,
+    .partner-tech-page .partner-tech-product-grid,
+    .partner-tech-page .partner-tech-procurement-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .partner-tech-page .partner-tech-cta .service-hero-actions {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 820px) {
+    .partner-tech-page .container,
+    .partner-tech-page .partner-tech-cta .container {
+        width: min(100% - 30px, 1320px);
+    }
+
+    .partner-tech-page .partner-tech-brand-list,
+    .partner-tech-page .partner-tech-brand-row,
+    .partner-tech-page .partner-tech-product-grid,
+    .partner-tech-page .partner-tech-application-list,
+    .partner-tech-page .partner-tech-procurement-grid,
+    .partner-tech-page .partner-tech-procurement-grid article {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-tech-page .partner-tech-brand-row a {
+        grid-column: 1;
+    }
+
+    .partner-tech-page .partner-tech-copy h1,
+    .partner-tech-page .partner-tech-cta h2 {
+        font-size: clamp(2.25rem, 11vw, 3.3rem);
+        line-height: 1.02;
+    }
+}
+
+/* Partner technology emergency final alignment - must remain last */
+.partner-tech-page {
+    --partner-card: #ffffff;
+    --partner-ink: #0f172a;
+    --partner-muted: #4f6178;
+    --partner-line: #dbe4ef;
+}
+
+.partner-tech-page .container {
+    width: min(100% - 64px, 1280px);
+}
+
+.partner-tech-page .partner-tech-hero {
+    min-height: auto;
+    padding: clamp(110px, 11vw, 150px) 0 clamp(76px, 8vw, 104px);
+}
+
+.partner-tech-page .partner-tech-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 520px);
+    gap: clamp(36px, 6vw, 88px);
+}
+
+.partner-tech-page .partner-tech-copy {
+    min-width: 0;
+}
+
+.partner-tech-page .partner-tech-copy h1 {
+    max-width: 800px;
+    margin: 18px 0 22px;
+    font-size: clamp(3rem, 5.7vw, 6.4rem);
+    line-height: 0.94;
+    letter-spacing: -0.06em;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.partner-tech-page .partner-tech-copy > p:not(.service-eyebrow) {
+    max-width: 720px;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: clamp(1rem, 1.1vw, 1.14rem);
+}
+
+.partner-tech-page .partner-tech-brand-board {
+    align-self: center;
+    max-width: 520px;
+    justify-self: end;
+}
+
+.partner-tech-page .partner-tech-proof .container {
+    max-width: 1280px;
+    margin-top: -38px;
+}
+
+.partner-tech-page .partner-tech-brand-section {
+    background:
+        radial-gradient(circle at 14% 4%, rgba(220, 38, 38, 0.06), transparent 28%),
+        linear-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+        #f8fafc;
+    background-size: auto, 56px 56px, 56px 56px, auto;
+}
+
+.partner-tech-page .partner-tech-brand-section .service-section-heading h2,
+.partner-tech-page .partner-tech-products .service-section-heading h2,
+.partner-tech-page .partner-tech-applications .partner-tech-heading h2,
+.partner-tech-page .partner-tech-procurement .partner-tech-heading h2 {
+    color: var(--partner-ink);
+    letter-spacing: -0.045em;
+}
+
+.partner-tech-page .partner-tech-brand-section .service-section-heading > p:not(.service-eyebrow),
+.partner-tech-page .partner-tech-products .service-section-heading > p:not(.service-eyebrow) {
+    color: var(--partner-muted);
+}
+
+.partner-tech-page .partner-tech-brand-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.partner-tech-page .partner-tech-brand-row {
+    position: relative;
+    grid-template-columns: 44px 146px minmax(0, 1fr);
+    gap: 20px;
+    min-height: 246px;
+    padding: 26px;
+    border-color: rgba(148, 163, 184, 0.28);
+    border-radius: 28px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.98));
+}
+
+.partner-tech-page .partner-tech-brand-row::before {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    border-radius: 28px 0 0 28px;
+    background: linear-gradient(180deg, #dc2626, rgba(220, 38, 38, 0.08));
+    opacity: 0;
+    transition: opacity 0.24s ease;
+    content: "";
+}
+
+.partner-tech-page .partner-tech-brand-row:hover::before {
+    opacity: 1;
+}
+
+.partner-tech-page .partner-tech-brand-row > span {
+    align-self: start;
+    margin-top: 8px;
+    color: #dc2626;
+}
+
+.partner-tech-page .partner-tech-brand-logo {
+    width: 146px;
+    height: 106px;
+    border: 1px solid var(--partner-line);
+    background: #ffffff;
+}
+
+.partner-tech-page .partner-tech-brand-logo img {
+    max-width: 112px;
+    max-height: 58px;
+    filter: none;
+}
+
+.partner-tech-page .partner-tech-brand-row h3 {
+    color: var(--partner-ink);
+    font-size: clamp(1.25rem, 1.35vw, 1.45rem);
+}
+
+.partner-tech-page .partner-tech-brand-row p {
+    color: var(--partner-muted);
+    font-size: 1rem;
+}
+
+.partner-tech-page .partner-tech-products {
+    background: #ffffff;
+}
+
+.partner-tech-page .partner-tech-applications {
+    background:
+        radial-gradient(circle at 86% 14%, rgba(15, 23, 42, 0.06), transparent 30%),
+        #f8fafc;
+    border-top: 1px solid rgba(148, 163, 184, 0.18);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.partner-tech-page .partner-tech-procurement {
+    background:
+        radial-gradient(circle at 12% 10%, rgba(220, 38, 38, 0.06), transparent 30%),
+        #ffffff;
+}
+
+.partner-tech-page .partner-tech-applications .partner-tech-split,
+.partner-tech-page .partner-tech-procurement .partner-tech-split {
+    grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1.18fr);
+    gap: clamp(38px, 6vw, 90px);
+    align-items: center;
+}
+
+.partner-tech-page .partner-tech-applications .partner-tech-heading,
+.partner-tech-page .partner-tech-procurement .partner-tech-heading {
+    position: static;
+}
+
+.partner-tech-page .partner-tech-application-list,
+.partner-tech-page .partner-tech-procurement-grid {
+    border: 1px solid rgba(148, 163, 184, 0.24);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 28px 78px rgba(15, 23, 42, 0.08);
+    padding: clamp(22px, 3vw, 34px);
+}
+
+.partner-tech-page .partner-tech-application-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.partner-tech-page .partner-tech-application-list span {
+    min-height: 58px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    font-size: 0.94rem;
+}
+
+.partner-tech-page .partner-tech-procurement-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.partner-tech-page .partner-tech-procurement-grid article {
+    grid-template-columns: 54px minmax(0, 1fr);
+    min-height: 150px;
+    box-shadow: none;
+}
+
+.partner-tech-page .partner-tech-procurement-grid p {
+    color: var(--partner-muted);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.partner-tech-page .partner-tech-cta {
+    padding: clamp(72px, 7vw, 104px) 0;
+    text-align: left;
+}
+
+.partner-tech-page .partner-tech-cta .container {
+    width: min(100% - 64px, 1320px);
+    max-width: none;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(24px, 5vw, 74px);
+    align-items: center;
+    min-height: auto;
+    padding: clamp(34px, 4vw, 58px);
+}
+
+.partner-tech-page .partner-tech-cta-copy {
+    min-width: 0;
+    max-width: 960px;
+}
+
+.partner-tech-page .partner-tech-cta h2 {
+    max-width: 960px;
+    margin: 12px 0 18px;
+    font-size: clamp(2.5rem, 4.2vw, 4.9rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    overflow-wrap: normal;
+    word-break: normal;
+    text-align: left;
+}
+
+.partner-tech-page .partner-tech-cta p:not(.service-eyebrow) {
+    max-width: 880px;
+    color: rgba(255, 255, 255, 0.82);
+    text-align: left;
+}
+
+.partner-tech-page .partner-tech-cta .service-hero-actions {
+    justify-content: flex-end;
+    margin: 0;
+    min-width: 220px;
+}
+
+@media (max-width: 1180px) {
+    .partner-tech-page .partner-tech-hero-grid,
+    .partner-tech-page .partner-tech-applications .partner-tech-split,
+    .partner-tech-page .partner-tech-procurement .partner-tech-split,
+    .partner-tech-page .partner-tech-cta .container {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-tech-page .partner-tech-brand-board {
+        justify-self: start;
+        width: 100%;
+    }
+
+    .partner-tech-page .partner-tech-brand-list,
+    .partner-tech-page .partner-tech-product-grid,
+    .partner-tech-page .partner-tech-procurement-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .partner-tech-page .partner-tech-cta .service-hero-actions {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 820px) {
+    .partner-tech-page .container,
+    .partner-tech-page .partner-tech-cta .container {
+        width: min(100% - 30px, 1320px);
+    }
+
+    .partner-tech-page .partner-tech-brand-list,
+    .partner-tech-page .partner-tech-brand-row,
+    .partner-tech-page .partner-tech-product-grid,
+    .partner-tech-page .partner-tech-application-list,
+    .partner-tech-page .partner-tech-procurement-grid,
+    .partner-tech-page .partner-tech-procurement-grid article {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-tech-page .partner-tech-brand-row a {
+        grid-column: 1;
+    }
+
+    .partner-tech-page .partner-tech-copy h1,
+    .partner-tech-page .partner-tech-cta h2 {
+        font-size: clamp(2.25rem, 11vw, 3.3rem);
+        line-height: 1.02;
+    }
+}
+
+/* Partner technology launch polish - final authority */
+.partner-tech-page {
+    --partner-surface: #f8fafc;
+    --partner-card: #ffffff;
+    --partner-ink: #0f172a;
+    --partner-muted: #4f6178;
+    --partner-line: #dbe4ef;
+}
+
+.partner-tech-page .container {
+    width: min(100% - 64px, 1280px);
+}
+
+.partner-tech-page .partner-tech-hero {
+    min-height: auto;
+    padding: clamp(110px, 11vw, 150px) 0 clamp(76px, 8vw, 104px);
+}
+
+.partner-tech-page .partner-tech-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 520px);
+    gap: clamp(36px, 6vw, 88px);
+}
+
+.partner-tech-page .partner-tech-copy {
+    min-width: 0;
+}
+
+.partner-tech-page .partner-tech-copy h1 {
+    max-width: 780px;
+    margin: 18px 0 22px;
+    font-size: clamp(3rem, 5.7vw, 6.4rem);
+    line-height: 0.94;
+    letter-spacing: -0.06em;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.partner-tech-page .partner-tech-copy > p:not(.service-eyebrow) {
+    max-width: 720px;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: clamp(1rem, 1.1vw, 1.14rem);
+}
+
+.partner-tech-page .partner-tech-brand-board {
+    align-self: center;
+    max-width: 520px;
+    justify-self: end;
+}
+
+.partner-tech-page .partner-tech-proof .container {
+    max-width: 1280px;
+    margin-top: -38px;
+}
+
+.partner-tech-page .partner-tech-brand-section {
+    background:
+        radial-gradient(circle at 14% 4%, rgba(220, 38, 38, 0.06), transparent 28%),
+        linear-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+        #f8fafc;
+    background-size: auto, 56px 56px, 56px 56px, auto;
+}
+
+.partner-tech-page .partner-tech-brand-section .service-section-heading h2,
+.partner-tech-page .partner-tech-products .service-section-heading h2,
+.partner-tech-page .partner-tech-applications .partner-tech-heading h2,
+.partner-tech-page .partner-tech-procurement .partner-tech-heading h2 {
+    color: var(--partner-ink);
+    letter-spacing: -0.045em;
+}
+
+.partner-tech-page .partner-tech-brand-section .service-section-heading > p:not(.service-eyebrow),
+.partner-tech-page .partner-tech-products .service-section-heading > p:not(.service-eyebrow) {
+    color: var(--partner-muted);
+}
+
+.partner-tech-page .partner-tech-brand-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.partner-tech-page .partner-tech-brand-row {
+    position: relative;
+    grid-template-columns: 44px 146px minmax(0, 1fr);
+    gap: 20px;
+    min-height: 246px;
+    padding: 26px;
+    border-color: rgba(148, 163, 184, 0.28);
+    border-radius: 28px;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.98)),
+        #ffffff;
+}
+
+.partner-tech-page .partner-tech-brand-row::before {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    border-radius: 28px 0 0 28px;
+    background: linear-gradient(180deg, #dc2626, rgba(220, 38, 38, 0.08));
+    opacity: 0;
+    transition: opacity 0.24s ease;
+    content: "";
+}
+
+.partner-tech-page .partner-tech-brand-row:hover::before {
+    opacity: 1;
+}
+
+.partner-tech-page .partner-tech-brand-row > span {
+    align-self: start;
+    margin-top: 8px;
+    color: #dc2626;
+}
+
+.partner-tech-page .partner-tech-brand-logo {
+    width: 146px;
+    height: 106px;
+    border: 1px solid var(--partner-line);
+    background: #ffffff;
+}
+
+.partner-tech-page .partner-tech-brand-logo img {
+    max-width: 112px;
+    max-height: 58px;
+    filter: none;
+}
+
+.partner-tech-page .partner-tech-brand-row h3 {
+    color: var(--partner-ink);
+    font-size: clamp(1.25rem, 1.35vw, 1.45rem);
+}
+
+.partner-tech-page .partner-tech-brand-row small {
+    color: #dc2626;
+}
+
+.partner-tech-page .partner-tech-brand-row p {
+    color: var(--partner-muted);
+    font-size: 1rem;
+}
+
+.partner-tech-page .partner-tech-products {
+    background: #ffffff;
+}
+
+.partner-tech-page .partner-tech-applications {
+    background:
+        radial-gradient(circle at 86% 14%, rgba(15, 23, 42, 0.06), transparent 30%),
+        #f8fafc;
+    border-top: 1px solid rgba(148, 163, 184, 0.18);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.partner-tech-page .partner-tech-procurement {
+    background:
+        radial-gradient(circle at 12% 10%, rgba(220, 38, 38, 0.06), transparent 30%),
+        #ffffff;
+}
+
+.partner-tech-page .partner-tech-applications .partner-tech-split,
+.partner-tech-page .partner-tech-procurement .partner-tech-split {
+    grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1.18fr);
+    gap: clamp(38px, 6vw, 90px);
+    align-items: center;
+}
+
+.partner-tech-page .partner-tech-applications .partner-tech-heading,
+.partner-tech-page .partner-tech-procurement .partner-tech-heading {
+    position: static;
+}
+
+.partner-tech-page .partner-tech-application-list,
+.partner-tech-page .partner-tech-procurement-grid {
+    border: 1px solid rgba(148, 163, 184, 0.24);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 28px 78px rgba(15, 23, 42, 0.08);
+    padding: clamp(22px, 3vw, 34px);
+}
+
+.partner-tech-page .partner-tech-application-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.partner-tech-page .partner-tech-application-list span {
+    min-height: 58px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    font-size: 0.94rem;
+}
+
+.partner-tech-page .partner-tech-procurement-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.partner-tech-page .partner-tech-procurement-grid article {
+    grid-template-columns: 54px minmax(0, 1fr);
+    min-height: 150px;
+    box-shadow: none;
+}
+
+.partner-tech-page .partner-tech-procurement-grid p {
+    color: var(--partner-muted);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.partner-tech-page .partner-tech-cta {
+    padding: clamp(72px, 7vw, 104px) 0;
+    text-align: left;
+}
+
+.partner-tech-page .partner-tech-cta .container {
+    width: min(100% - 64px, 1320px);
+    max-width: none;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(24px, 5vw, 74px);
+    align-items: center;
+    min-height: auto;
+    padding: clamp(34px, 4vw, 58px);
+}
+
+.partner-tech-page .partner-tech-cta-copy {
+    min-width: 0;
+    max-width: 960px;
+}
+
+.partner-tech-page .partner-tech-cta h2 {
+    max-width: 960px;
+    margin: 12px 0 18px;
+    font-size: clamp(2.5rem, 4.2vw, 4.9rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    overflow-wrap: normal;
+    word-break: normal;
+    text-align: left;
+}
+
+.partner-tech-page .partner-tech-cta p:not(.service-eyebrow) {
+    max-width: 880px;
+    color: rgba(255, 255, 255, 0.82);
+    text-align: left;
+}
+
+.partner-tech-page .partner-tech-cta .service-hero-actions {
+    justify-content: flex-end;
+    margin: 0;
+    min-width: 220px;
+}
+
+@media (max-width: 1180px) {
+    .partner-tech-page .partner-tech-hero-grid,
+    .partner-tech-page .partner-tech-applications .partner-tech-split,
+    .partner-tech-page .partner-tech-procurement .partner-tech-split,
+    .partner-tech-page .partner-tech-cta .container {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-tech-page .partner-tech-brand-board {
+        justify-self: start;
+        width: 100%;
+    }
+
+    .partner-tech-page .partner-tech-cta .service-hero-actions {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 820px) {
+    .partner-tech-page .container,
+    .partner-tech-page .partner-tech-cta .container {
+        width: min(100% - 30px, 1320px);
+    }
+
+    .partner-tech-page .partner-tech-brand-list,
+    .partner-tech-page .partner-tech-brand-row,
+    .partner-tech-page .partner-tech-product-grid,
+    .partner-tech-page .partner-tech-application-list,
+    .partner-tech-page .partner-tech-procurement-grid,
+    .partner-tech-page .partner-tech-procurement-grid article {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-tech-page .partner-tech-brand-row a {
+        grid-column: 1;
+    }
+
+    .partner-tech-page .partner-tech-copy h1,
+    .partner-tech-page .partner-tech-cta h2 {
+        font-size: clamp(2.25rem, 11vw, 3.3rem);
+        line-height: 1.02;
+    }
+}
+
+/* Final launch polish: partner technology pages */
+.partner-tech-page .partner-tech-overview {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 8% 14%, rgba(220, 38, 38, 0.08), transparent 28%),
+        radial-gradient(circle at 88% 18%, rgba(15, 23, 42, 0.06), transparent 32%),
+        linear-gradient(135deg, #ffffff 0%, #f7f9fc 100%);
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-split,
+.partner-tech-page .partner-tech-applications .partner-tech-split,
+.partner-tech-page .partner-tech-procurement .partner-tech-split {
+    align-items: center;
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-heading,
+.partner-tech-page .partner-tech-applications .partner-tech-heading,
+.partner-tech-page .partner-tech-procurement .partner-tech-heading {
+    position: sticky;
+    top: 130px;
+    align-self: start;
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-heading h2,
+.partner-tech-page .partner-tech-applications .partner-tech-heading h2,
+.partner-tech-page .partner-tech-procurement .partner-tech-heading h2 {
+    color: #0f172a;
+    font-size: clamp(2.4rem, 3.6vw, 4.05rem);
+    letter-spacing: -0.055em;
+}
+
+.partner-tech-page .partner-tech-copy-panel {
+    padding: clamp(28px, 4vw, 46px);
+    border: 1px solid rgba(148, 163, 184, 0.26);
+    border-radius: 30px;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.96)),
+        #ffffff;
+    box-shadow: 0 30px 90px rgba(15, 23, 42, 0.1);
+}
+
+.partner-tech-page .partner-tech-copy-panel p {
+    color: #334155;
+    font-size: clamp(1.05rem, 1.15vw, 1.18rem);
+    line-height: 1.85;
+}
+
+.partner-tech-page .partner-tech-tag-row span,
+.partner-tech-page .partner-tech-application-list span {
+    border-color: rgba(15, 23, 42, 0.12);
+    background: #ffffff;
+    color: #10203a;
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+    transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, color 0.22s ease;
+}
+
+.partner-tech-page .partner-tech-tag-row span:hover,
+.partner-tech-page .partner-tech-application-list span:hover {
+    transform: translateY(-3px);
+    border-color: rgba(220, 38, 38, 0.28);
+    color: #dc2626;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.1);
+}
+
+.partner-tech-page .partner-tech-brand-section {
+    background:
+        linear-gradient(rgba(15, 23, 42, 0.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.028) 1px, transparent 1px),
+        linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    background-size: 54px 54px;
+}
+
+.partner-tech-page .partner-tech-brand-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.partner-tech-page .partner-tech-brand-row {
+    grid-template-columns: 42px 132px minmax(0, 1fr);
+    gap: 18px;
+    align-items: center;
+    min-height: 238px;
+    padding: 24px;
+}
+
+.partner-tech-page .partner-tech-brand-row a {
+    grid-column: 3;
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: #fff1f2;
+    color: #dc2626;
+}
+
+.partner-tech-page .partner-tech-brand-row a::after {
+    content: "\f061";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    transition: transform 0.22s ease;
+}
+
+.partner-tech-page .partner-tech-brand-row:hover a::after {
+    transform: translateX(4px);
+}
+
+.partner-tech-page .partner-tech-brand-logo {
+    width: 132px;
+    height: 94px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #ffffff, #f8fafc);
+}
+
+.partner-tech-page .partner-tech-brand-logo img {
+    max-width: 102px;
+    max-height: 54px;
+}
+
+.partner-tech-page .partner-tech-products {
+    background:
+        radial-gradient(circle at 88% 8%, rgba(220, 38, 38, 0.08), transparent 28%),
+        linear-gradient(rgba(15, 23, 42, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.025) 1px, transparent 1px),
+        #f8fafc;
+    background-size: auto, 56px 56px, 56px 56px, auto;
+}
+
+.partner-tech-page .partner-tech-product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.partner-tech-page .partner-tech-product-card {
+    min-height: 350px;
+    padding: 28px;
+    border-radius: 28px;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.98)),
+        #ffffff;
+}
+
+.partner-tech-page .partner-tech-product-card > span {
+    margin-bottom: 18px;
+    color: #dc2626;
+}
+
+.partner-tech-page .partner-tech-product-mark {
+    margin: 0 0 24px;
+}
+
+.partner-tech-page .partner-tech-product-mark.logo-mark {
+    width: 126px;
+    height: 72px;
+}
+
+.partner-tech-page .partner-tech-product-mark.logo-mark img {
+    max-width: 96px;
+    max-height: 46px;
+}
+
+.partner-tech-page .partner-tech-product-card h3 {
+    min-height: 0;
+    margin-bottom: 14px;
+    color: #0f172a;
+    font-size: clamp(1.2rem, 1.28vw, 1.42rem);
+}
+
+.partner-tech-page .partner-tech-product-card p {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.partner-tech-page .partner-tech-application-list {
+    padding: clamp(22px, 3vw, 34px);
+    border-radius: 30px;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.96)),
+        #ffffff;
+}
+
+.partner-tech-page .partner-tech-procurement-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.partner-tech-page .partner-tech-procurement-grid article {
+    min-height: 180px;
+    border-radius: 24px;
+}
+
+.partner-tech-page .partner-tech-procurement-grid strong {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    place-items: center;
+    border-radius: 16px;
+    background: #fff1f2;
+    color: #dc2626;
+}
+
+.partner-tech-page .partner-tech-cta .container {
+    min-height: 290px;
+}
+
+.partner-tech-page .partner-tech-cta h2 {
+    max-width: 950px;
+    font-size: clamp(2.55rem, 4.8vw, 5.4rem);
+}
+
+@media (max-width: 1180px) {
+    .partner-tech-page .partner-tech-heading,
+    .partner-tech-page .partner-tech-overview .partner-tech-heading,
+    .partner-tech-page .partner-tech-applications .partner-tech-heading,
+    .partner-tech-page .partner-tech-procurement .partner-tech-heading {
+        position: static;
+    }
+
+    .partner-tech-page .partner-tech-brand-list,
+    .partner-tech-page .partner-tech-product-grid,
+    .partner-tech-page .partner-tech-procurement-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .partner-tech-page .partner-tech-brand-list,
+    .partner-tech-page .partner-tech-brand-row,
+    .partner-tech-page .partner-tech-product-grid,
+    .partner-tech-page .partner-tech-procurement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-tech-page .partner-tech-brand-row a {
+        grid-column: 1;
+    }
+}
+
+/* Final partner technology page layout lock */
+.partner-tech-page .partner-tech-proof {
+    position: relative;
+    z-index: 4;
+}
+
+.partner-tech-page .partner-tech-proof .container {
+    margin-top: -34px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.partner-tech-page .partner-tech-brand-section,
+.partner-tech-page .partner-tech-products,
+.partner-tech-page .partner-tech-applications,
+.partner-tech-page .partner-tech-procurement,
+.partner-tech-page .partner-tech-overview {
+    padding-block: clamp(78px, 7vw, 108px);
+}
+
+.partner-tech-page .partner-tech-brand-row {
+    grid-template-columns: 52px 150px minmax(0, 1fr) auto;
+    align-items: center;
+}
+
+.partner-tech-page .partner-tech-overview {
+    background:
+        radial-gradient(circle at 12% 18%, rgba(220, 38, 38, 0.08), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-heading h2 {
+    color: #10203a;
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-copy-panel {
+    position: relative;
+    overflow: hidden;
+    border-color: rgba(220, 38, 38, 0.18);
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.94)),
+        #ffffff;
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-copy-panel::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, #dc2626, rgba(220, 38, 38, 0.12));
+    content: "";
+}
+
+.partner-tech-page .partner-tech-product-grid {
+    align-items: stretch;
+}
+
+.partner-tech-page .partner-tech-product-card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    min-height: 340px;
+    flex-direction: column;
+    transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.partner-tech-page .partner-tech-product-card::after {
+    position: absolute;
+    inset: auto 24px 0;
+    height: 3px;
+    border-radius: 999px 999px 0 0;
+    background: linear-gradient(90deg, #dc2626, rgba(220, 38, 38, 0));
+    opacity: 0;
+    transform: scaleX(0.45);
+    transform-origin: left;
+    transition: opacity 0.28s ease, transform 0.28s ease;
+    content: "";
+}
+
+.partner-tech-page .partner-tech-product-card:hover {
+    border-color: rgba(220, 38, 38, 0.32);
+    box-shadow: 0 28px 76px rgba(15, 23, 42, 0.13);
+    transform: translateY(-8px);
+}
+
+.partner-tech-page .partner-tech-product-card:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.partner-tech-page .partner-tech-product-mark {
+    display: grid;
+    width: 64px;
+    height: 64px;
+    place-items: center;
+    margin: 18px 0 24px;
+    border: 1px solid rgba(220, 38, 38, 0.18);
+    border-radius: 18px;
+    background: #fff1f2;
+    color: #dc2626;
+    box-shadow: 0 16px 38px rgba(220, 38, 38, 0.12);
+    transition: transform 0.28s ease, background 0.28s ease;
+}
+
+.partner-tech-page .partner-tech-product-mark i {
+    margin: 0;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+    box-shadow: none;
+}
+
+.partner-tech-page .partner-tech-product-mark.logo-mark {
+    width: 108px;
+    height: 66px;
+    border-color: #dbe4ef;
+    background: #ffffff;
+}
+
+.partner-tech-page .partner-tech-product-mark.logo-mark img {
+    max-width: 82px;
+    max-height: 42px;
+    object-fit: contain;
+    filter: none;
+}
+
+.partner-tech-page .partner-tech-product-card:hover .partner-tech-product-mark {
+    transform: translateY(-4px) scale(1.04);
+}
+
+.partner-tech-page .partner-tech-product-card h3 {
+    min-height: 58px;
+}
+
+.partner-tech-page .partner-tech-product-card p {
+    margin-top: 0;
+}
+
+.partner-tech-page .partner-tech-application-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.partner-tech-page .partner-tech-application-list span {
+    justify-content: flex-start;
+    min-height: 52px;
+    border-radius: 16px;
+}
+
+.partner-tech-page .partner-tech-procurement-grid {
+    align-items: stretch;
+}
+
+.partner-tech-page .partner-tech-procurement-grid article {
+    display: grid;
+    grid-template-columns: 62px minmax(0, 1fr);
+    gap: 8px 20px;
+    min-height: 154px;
+    align-items: start;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.98)),
+        #ffffff;
+}
+
+.partner-tech-page .partner-tech-procurement-grid strong {
+    grid-row: 1 / 3;
+    margin: 0;
+}
+
+.partner-tech-page .partner-tech-procurement-grid p {
+    width: 100%;
+    max-width: none;
+}
+
+.partner-tech-page .partner-tech-cta {
+    padding: clamp(72px, 7vw, 104px) 0;
+    background:
+        radial-gradient(circle at 88% 18%, rgba(220, 38, 38, 0.16), transparent 30%),
+        linear-gradient(135deg, #061426 0%, #071527 100%);
+}
+
+.partner-tech-page .partner-tech-cta::before {
+    opacity: 0.18;
+}
+
+.partner-tech-page .partner-tech-cta .container {
+    width: min(100% - 64px, 1280px);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(24px, 4vw, 64px);
+    align-items: center;
+    padding: clamp(30px, 4vw, 52px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.055);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.24);
+}
+
+.partner-tech-page .partner-tech-cta h2 {
+    max-width: 940px;
+    margin: 16px 0 18px;
+    text-align: left;
+    font-size: clamp(2.3rem, 4.2vw, 5rem);
+    line-height: 1.08;
+}
+
+.partner-tech-page .partner-tech-cta p:not(.service-eyebrow) {
+    max-width: 980px;
+    text-align: left;
+}
+
+.partner-tech-page .partner-tech-cta .service-hero-actions {
+    justify-content: flex-end;
+    margin: 0;
+}
+
+@media (max-width: 1180px) {
+    .partner-tech-page .partner-tech-brand-row {
+        grid-template-columns: 52px 140px minmax(0, 1fr);
+    }
+
+    .partner-tech-page .partner-tech-brand-row a {
+        grid-column: 3;
+    }
+
+    .partner-tech-page .partner-tech-procurement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-tech-page .partner-tech-cta .container {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-tech-page .partner-tech-cta .service-hero-actions {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 760px) {
+    .partner-tech-page .partner-tech-proof .container {
+        margin-top: -22px;
+    }
+
+    .partner-tech-page .partner-tech-brand-row,
+    .partner-tech-page .partner-tech-application-list,
+    .partner-tech-page .partner-tech-procurement-grid article {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-tech-page .partner-tech-cta .container {
+        width: min(100% - 30px, 1280px);
+    }
+
+    .partner-tech-page .partner-tech-brand-row a,
+    .partner-tech-page .partner-tech-procurement-grid strong,
+    .partner-tech-page .partner-tech-procurement-grid p {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+/* Partner technology final override - keep this block last */
+.partner-tech-page .partner-tech-overview {
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 8% 14%, rgba(220, 38, 38, 0.08), transparent 28%),
+        radial-gradient(circle at 88% 18%, rgba(15, 23, 42, 0.06), transparent 32%),
+        linear-gradient(135deg, #ffffff 0%, #f7f9fc 100%);
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-split,
+.partner-tech-page .partner-tech-applications .partner-tech-split,
+.partner-tech-page .partner-tech-procurement .partner-tech-split {
+    align-items: start;
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-heading,
+.partner-tech-page .partner-tech-applications .partner-tech-heading,
+.partner-tech-page .partner-tech-procurement .partner-tech-heading {
+    position: sticky;
+    top: 130px;
+    align-self: start;
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-heading h2,
+.partner-tech-page .partner-tech-applications .partner-tech-heading h2,
+.partner-tech-page .partner-tech-procurement .partner-tech-heading h2 {
+    max-width: 680px;
+    color: #0f172a;
+    font-size: clamp(2.4rem, 3.6vw, 4.05rem);
+    line-height: 1.04;
+    letter-spacing: -0.055em;
+}
+
+.partner-tech-page .partner-tech-copy-panel {
+    padding: clamp(30px, 4vw, 48px);
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-radius: 30px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.96));
+    box-shadow: 0 30px 90px rgba(15, 23, 42, 0.1);
+}
+
+.partner-tech-page .partner-tech-copy-panel p {
+    color: #334155;
+    font-size: clamp(1.05rem, 1.15vw, 1.18rem);
+    line-height: 1.85;
+}
+
+.partner-tech-page .partner-tech-brand-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.partner-tech-page .partner-tech-brand-row {
+    grid-template-columns: 42px 132px minmax(0, 1fr);
+    gap: 18px;
+    min-height: 238px;
+    padding: 24px;
+    align-items: center;
+}
+
+.partner-tech-page .partner-tech-brand-row a {
+    grid-column: 3;
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: #fff1f2;
+    color: #dc2626;
+}
+
+.partner-tech-page .partner-tech-brand-row a::after {
+    content: "\f061";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    transition: transform 0.22s ease;
+}
+
+.partner-tech-page .partner-tech-brand-row:hover a::after {
+    transform: translateX(4px);
+}
+
+.partner-tech-page .partner-tech-brand-logo {
+    width: 132px;
+    height: 94px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #ffffff, #f8fafc);
+}
+
+.partner-tech-page .partner-tech-brand-logo img {
+    max-width: 102px;
+    max-height: 54px;
+}
+
+.partner-tech-page .partner-tech-product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.partner-tech-page .partner-tech-product-card {
+    min-height: 350px;
+    padding: 28px;
+    border-radius: 28px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.98));
+}
+
+.partner-tech-page .partner-tech-product-card > span {
+    margin-bottom: 18px;
+    color: #dc2626;
+}
+
+.partner-tech-page .partner-tech-product-mark {
+    margin: 0 0 24px;
+}
+
+.partner-tech-page .partner-tech-product-mark.logo-mark {
+    width: 126px;
+    height: 72px;
+}
+
+.partner-tech-page .partner-tech-product-mark.logo-mark img {
+    max-width: 96px;
+    max-height: 46px;
+}
+
+.partner-tech-page .partner-tech-product-card h3 {
+    min-height: 0;
+    margin-bottom: 14px;
+    color: #0f172a;
+    font-size: clamp(1.2rem, 1.28vw, 1.42rem);
+}
+
+.partner-tech-page .partner-tech-product-card p {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.partner-tech-page .partner-tech-tag-row span,
+.partner-tech-page .partner-tech-application-list span {
+    border-color: rgba(15, 23, 42, 0.12);
+    background: #ffffff;
+    color: #10203a;
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+    transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, color 0.22s ease;
+}
+
+.partner-tech-page .partner-tech-tag-row span:hover,
+.partner-tech-page .partner-tech-application-list span:hover {
+    transform: translateY(-3px);
+    border-color: rgba(220, 38, 38, 0.28);
+    color: #dc2626;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.1);
+}
+
+.partner-tech-page .partner-tech-procurement-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.partner-tech-page .partner-tech-procurement-grid article {
+    min-height: 180px;
+    border-radius: 24px;
+}
+
+.partner-tech-page .partner-tech-procurement-grid strong {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    place-items: center;
+    border-radius: 16px;
+    background: #fff1f2;
+    color: #dc2626;
+}
+
+.partner-tech-page .partner-tech-cta .container {
+    min-height: 290px;
+}
+
+.partner-tech-page .partner-tech-cta h2 {
+    max-width: 950px;
+    font-size: clamp(2.55rem, 4.8vw, 5.4rem);
+}
+
+@media (max-width: 1180px) {
+    .partner-tech-page .partner-tech-overview .partner-tech-heading,
+    .partner-tech-page .partner-tech-applications .partner-tech-heading,
+    .partner-tech-page .partner-tech-procurement .partner-tech-heading {
+        position: static;
+    }
+
+    .partner-tech-page .partner-tech-brand-list,
+    .partner-tech-page .partner-tech-product-grid,
+    .partner-tech-page .partner-tech-procurement-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .partner-tech-page .partner-tech-brand-list,
+    .partner-tech-page .partner-tech-brand-row,
+    .partner-tech-page .partner-tech-product-grid,
+    .partner-tech-page .partner-tech-procurement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-tech-page .partner-tech-brand-row a {
+        grid-column: 1;
+    }
+}
+
+/* Partner technology absolute final correction - EOF authority */
+.partner-tech-page .partner-tech-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 520px);
+    align-items: center;
+    gap: clamp(36px, 6vw, 88px);
+}
+
+.partner-tech-page .partner-tech-copy h1 {
+    max-width: 800px;
+    font-size: clamp(3rem, 5.7vw, 6.4rem);
+    line-height: 0.94;
+    letter-spacing: -0.06em;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.partner-tech-page .partner-tech-brand-board {
+    justify-self: end;
+    align-self: center;
+    max-width: 520px;
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-heading,
+.partner-tech-page .partner-tech-applications .partner-tech-heading,
+.partner-tech-page .partner-tech-procurement .partner-tech-heading {
+    position: static;
+    top: auto;
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-split,
+.partner-tech-page .partner-tech-applications .partner-tech-split,
+.partner-tech-page .partner-tech-procurement .partner-tech-split {
+    grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1.18fr);
+    align-items: center;
+    gap: clamp(38px, 6vw, 90px);
+}
+
+.partner-tech-page .partner-tech-applications {
+    background: radial-gradient(circle at 86% 14%, rgba(15, 23, 42, 0.06), transparent 30%), #f8fafc;
+}
+
+.partner-tech-page .partner-tech-procurement {
+    background: radial-gradient(circle at 12% 10%, rgba(220, 38, 38, 0.06), transparent 30%), #ffffff;
+}
+
+.partner-tech-page .partner-tech-application-list,
+.partner-tech-page .partner-tech-procurement-grid {
+    padding: clamp(22px, 3vw, 34px);
+    border: 1px solid rgba(148, 163, 184, 0.24);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 28px 78px rgba(15, 23, 42, 0.08);
+}
+
+.partner-tech-page .partner-tech-application-list,
+.partner-tech-page .partner-tech-procurement-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.partner-tech-page .partner-tech-procurement-grid article {
+    grid-template-columns: 54px minmax(0, 1fr);
+    min-height: 150px;
+    box-shadow: none;
+}
+
+.partner-tech-page .partner-tech-brand-row {
+    grid-template-columns: 44px 146px minmax(0, 1fr);
+    min-height: 246px;
+}
+
+.partner-tech-page .partner-tech-brand-logo {
+    width: 146px;
+    height: 106px;
+}
+
+.partner-tech-page .partner-tech-brand-logo img {
+    max-width: 112px;
+    max-height: 58px;
+    filter: none;
+}
+
+.partner-tech-page .partner-tech-cta .container {
+    width: min(100% - 64px, 1320px);
+    max-width: none;
+    min-height: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: clamp(24px, 5vw, 74px);
+    padding: clamp(34px, 4vw, 58px);
+}
+
+.partner-tech-page .partner-tech-cta-copy {
+    min-width: 0;
+    max-width: 960px;
+}
+
+.partner-tech-page .partner-tech-cta h2 {
+    max-width: 960px;
+    margin: 12px 0 18px;
+    font-size: clamp(2.5rem, 4.2vw, 4.9rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    text-align: left;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.partner-tech-page .partner-tech-cta p:not(.service-eyebrow) {
+    max-width: 880px;
+    text-align: left;
+}
+
+.partner-tech-page .partner-tech-cta .service-hero-actions {
+    justify-content: flex-end;
+    min-width: 220px;
+    margin: 0;
+}
+
+@media (max-width: 1180px) {
+    .partner-tech-page .partner-tech-hero-grid,
+    .partner-tech-page .partner-tech-overview .partner-tech-split,
+    .partner-tech-page .partner-tech-applications .partner-tech-split,
+    .partner-tech-page .partner-tech-procurement .partner-tech-split,
+    .partner-tech-page .partner-tech-cta .container {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-tech-page .partner-tech-brand-board {
+        justify-self: start;
+        width: 100%;
+    }
+
+    .partner-tech-page .partner-tech-cta .service-hero-actions {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 820px) {
+    .partner-tech-page .container,
+    .partner-tech-page .partner-tech-cta .container {
+        width: min(100% - 30px, 1320px);
+    }
+
+    .partner-tech-page .partner-tech-brand-row,
+    .partner-tech-page .partner-tech-brand-list,
+    .partner-tech-page .partner-tech-product-grid,
+    .partner-tech-page .partner-tech-application-list,
+    .partner-tech-page .partner-tech-procurement-grid,
+    .partner-tech-page .partner-tech-procurement-grid article {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Live polish guardrail: prevents narrow wrapping and cheap-looking strips */
+.service-stat-row {
+    width: min(100% - 48px, 1320px);
+    margin: -44px auto clamp(46px, 6vw, 82px);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.24);
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 96% 12%, rgba(220, 38, 38, 0.06), transparent 28%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.96));
+    box-shadow: 0 28px 76px rgba(15, 23, 42, 0.12);
+}
+
+.service-stat-row > div {
+    position: relative;
+    min-height: 160px;
+    padding: clamp(26px, 3vw, 42px);
+    border-right: 1px solid rgba(148, 163, 184, 0.22);
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.service-stat-row > div:last-child {
+    border-right: 0;
+}
+
+.service-stat-row > div::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 28px;
+    bottom: 28px;
+    width: 3px;
+    border-radius: 999px;
+    background: #dc2626;
+    opacity: 0.85;
+}
+
+.service-stat-row > div:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 241, 242, 0.55);
+}
+
+.service-stat-row strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #0f172a;
+    font-size: clamp(1.7rem, 2.3vw, 2.6rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.service-stat-row span {
+    display: block;
+    max-width: 260px;
+    color: #52627a;
+    font-size: 0.86rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    line-height: 1.45;
+    text-transform: uppercase;
+}
+
+.partner-tech-page .partner-tech-hero-grid {
+    width: min(100% - 64px, 1320px);
+    min-height: auto;
+    padding-top: clamp(88px, 9vw, 128px);
+    padding-bottom: clamp(76px, 8vw, 116px);
+    grid-template-columns: minmax(0, 0.98fr) minmax(380px, 520px);
+    align-items: center;
+}
+
+.partner-tech-page .partner-tech-copy {
+    min-width: 0;
+}
+
+.partner-tech-page .partner-tech-copy h1 {
+    max-width: 820px;
+    font-size: clamp(3rem, 5.15vw, 5.85rem);
+    line-height: 0.99;
+    letter-spacing: -0.058em;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.partner-tech-page .partner-tech-copy p,
+.partner-tech-page .partner-tech-copy-panel p,
+.partner-tech-page .partner-tech-brand-row p,
+.partner-tech-page .partner-tech-product-card p,
+.partner-tech-page .partner-tech-procurement-grid p,
+.partner-tech-page .partner-tech-cta p {
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.partner-tech-page .partner-tech-brand-board {
+    max-width: 520px;
+    border-color: rgba(255, 255, 255, 0.16);
+    background:
+        radial-gradient(circle at 12% 12%, rgba(255, 255, 255, 0.12), transparent 30%),
+        linear-gradient(145deg, rgba(51, 65, 85, 0.92), rgba(31, 41, 55, 0.92));
+    box-shadow: 0 30px 86px rgba(0, 0, 0, 0.28);
+}
+
+.partner-tech-page .partner-tech-brand-board-card,
+.partner-tech-page .partner-tech-brand-board-card p,
+.partner-tech-page .partner-tech-brand-board-card h3 {
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.partner-tech-page .partner-tech-brand-board-card {
+    min-height: 166px;
+}
+
+.partner-tech-page .partner-tech-brand-board-card img {
+    filter: none;
+}
+
+.partner-tech-page .partner-tech-proof .container {
+    width: min(100% - 64px, 1320px);
+    margin-top: -48px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    overflow: hidden;
+    border-radius: 28px;
+}
+
+.partner-tech-page .partner-tech-proof-item {
+    min-height: 150px;
+    padding: clamp(28px, 3vw, 42px);
+    background: linear-gradient(145deg, #ffffff, #f8fafc);
+}
+
+.partner-tech-page .partner-tech-proof-item strong {
+    color: #0f172a;
+}
+
+.partner-tech-page .partner-tech-proof-item span {
+    color: #53627a;
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-split,
+.partner-tech-page .partner-tech-applications .partner-tech-split,
+.partner-tech-page .partner-tech-procurement .partner-tech-split {
+    width: min(100% - 64px, 1320px);
+    grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+    align-items: center;
+    gap: clamp(42px, 6vw, 88px);
+}
+
+.partner-tech-page .partner-tech-overview .partner-tech-heading h2,
+.partner-tech-page .partner-tech-applications .partner-tech-heading h2,
+.partner-tech-page .partner-tech-procurement .partner-tech-heading h2 {
+    max-width: 600px;
+    color: #0f172a;
+    font-size: clamp(2.5rem, 3.7vw, 4.4rem);
+}
+
+.partner-tech-page .partner-tech-application-list {
+    grid-template-columns: repeat(2, minmax(230px, 1fr));
+}
+
+.partner-tech-page .partner-tech-procurement-grid {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    align-items: stretch;
+}
+
+.partner-tech-page .partner-tech-procurement-grid article {
+    grid-template-columns: 58px minmax(0, 1fr);
+    min-height: 150px;
+    align-items: start;
+}
+
+.partner-tech-page .partner-tech-procurement-grid strong {
+    flex: none;
+}
+
+.partner-tech-page .partner-tech-cta .container {
+    width: min(100% - 64px, 1320px);
+    grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.partner-tech-page .partner-tech-cta h2 {
+    max-width: 980px;
+    font-size: clamp(2.45rem, 4.05vw, 4.75rem);
+    line-height: 1.1;
+}
+
+@media (max-width: 1180px) {
+    .service-stat-row,
+    .partner-tech-page .partner-tech-proof .container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-stat-row > div,
+    .partner-tech-page .partner-tech-proof-item {
+        border-right: 0;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+    }
+
+    .service-stat-row > div:last-child,
+    .partner-tech-page .partner-tech-proof-item:last-child {
+        border-bottom: 0;
+    }
+
+    .partner-tech-page .partner-tech-hero-grid,
+    .partner-tech-page .partner-tech-overview .partner-tech-split,
+    .partner-tech-page .partner-tech-applications .partner-tech-split,
+    .partner-tech-page .partner-tech-procurement .partner-tech-split,
+    .partner-tech-page .partner-tech-cta .container {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-tech-page .partner-tech-brand-board,
+    .partner-tech-page .partner-tech-cta .service-hero-actions {
+        justify-self: start;
+    }
+}
+
+@media (max-width: 760px) {
+    .service-stat-row,
+    .partner-tech-page .partner-tech-hero-grid,
+    .partner-tech-page .partner-tech-proof .container,
+    .partner-tech-page .partner-tech-overview .partner-tech-split,
+    .partner-tech-page .partner-tech-applications .partner-tech-split,
+    .partner-tech-page .partner-tech-procurement .partner-tech-split,
+    .partner-tech-page .partner-tech-cta .container {
+        width: min(100% - 30px, 1320px);
+    }
+
+    .partner-tech-page .partner-tech-copy h1 {
+        font-size: clamp(2.55rem, 14vw, 4.2rem);
+        letter-spacing: -0.045em;
+    }
+
+    .partner-tech-page .partner-tech-brand-board,
+    .partner-tech-page .partner-tech-application-list,
+    .partner-tech-page .partner-tech-procurement-grid,
+    .partner-tech-page .partner-tech-procurement-grid article {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Launch alignment repair: shared service-detail pages */
+.service-detail-main,
+.service-content,
+.service-section,
+.service-planning-grid,
+.service-timeline,
+.service-case-grid,
+.service-feature-grid,
+.service-card-grid,
+.service-application-grid,
+.service-partner-grid,
+.service-stat-row {
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.service-planning-grid > *,
+.service-timeline > *,
+.service-case-grid > *,
+.service-feature-grid > *,
+.service-card-grid > *,
+.service-application-grid > *,
+.service-partner-grid > *,
+.service-stat-row > * {
+    min-width: 0;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+.service-planning-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    gap: clamp(18px, 2.2vw, 30px);
+    align-items: stretch;
+}
+
+.service-planning-grid > * {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-timeline,
+.service-stat-row {
+    width: min(100% - 48px, 1280px);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    gap: clamp(18px, 2vw, 28px);
+    align-items: stretch;
+}
+
+.service-timeline > *,
+.service-stat-row > * {
+    min-height: 190px;
+    padding: clamp(24px, 2.4vw, 34px);
+    border-radius: 22px;
+    background: linear-gradient(145deg, #ffffff, #f8fafc);
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-left: 4px solid #dc2626;
+    box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-timeline h3,
+.service-stat-row h3,
+.service-stat-row strong {
+    font-size: clamp(1.55rem, 2vw, 2.25rem);
+    line-height: 1.08;
+    color: #0f172a;
+    margin: 0 0 10px;
+    letter-spacing: 0;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+}
+
+.service-timeline p,
+.service-timeline span,
+.service-stat-row p,
+.service-stat-row span {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: #475569;
+    max-width: none;
+    white-space: normal;
+    word-break: normal;
+}
+
+.service-case-grid {
+    width: min(100% - 48px, 1280px);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: clamp(20px, 2.4vw, 34px);
+    align-items: stretch;
+}
+
+.service-case-grid > * {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-case-flow {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.service-case-step {
+    min-width: 0;
+}
+
+@media (max-width: 1120px) {
+    .service-planning-grid,
+    .service-timeline,
+    .service-stat-row {
+        grid-template-columns: repeat(2, minmax(240px, 1fr));
+    }
+
+    .service-case-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .service-planning-grid,
+    .service-timeline,
+    .service-stat-row,
+    .service-case-grid,
+    .service-case-flow {
+        grid-template-columns: 1fr;
+    }
+
+    .service-timeline,
+    .service-stat-row,
+    .service-case-grid {
+        width: min(100% - 30px, 1280px);
+    }
+
+    .service-timeline > *,
+    .service-stat-row > * {
+        min-height: auto;
+    }
+}
+
+/* Service detail alignment lock: keep shared service subpage cards readable. */
+.service-page .service-approach-grid {
+    width: min(100% - 48px, 1500px) !important;
+    margin-inline: auto;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(280px, 1fr)) !important;
+    gap: 22px !important;
+    align-items: stretch !important;
+}
+
+.service-page .service-approach-grid article {
+    min-height: 230px !important;
+    height: auto !important;
+    padding: 34px !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+.service-page .service-approach-grid i {
+    width: 52px;
+    height: 52px;
+    margin: 0 0 22px;
+}
+
+.service-page .service-approach-grid h2 {
+    max-width: none !important;
+    margin: 0 0 14px !important;
+    font-size: clamp(1.75rem, 2vw, 2.45rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.025em !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+}
+
+.service-page .service-approach-grid p {
+    max-width: 34rem !important;
+    color: #52637a !important;
+    font-size: clamp(0.98rem, 1vw, 1.08rem) !important;
+    font-weight: 500 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.62 !important;
+    text-transform: none !important;
+    white-space: normal !important;
+}
+
+.service-page .service-planning-grid {
+    width: min(100% - 48px, 1500px) !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 22px !important;
+}
+
+.service-page .service-planning-story,
+.service-page .service-planning-checklist,
+.service-page .service-rfq-card {
+    display: flex !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    flex-direction: column !important;
+    padding: clamp(26px, 2.35vw, 34px) !important;
+    overflow: hidden !important;
+}
+
+.service-page .service-planning-grid h3 {
+    max-width: none !important;
+    font-size: clamp(1.45rem, 1.8vw, 2.05rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.025em !important;
+    white-space: normal !important;
+}
+
+.service-page .service-planning-story p {
+    max-width: none !important;
+}
+
+.service-page .service-planning-grid ul {
+    display: grid !important;
+    gap: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.service-page .service-planning-grid li {
+    display: block !important;
+    min-height: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+    padding: 12px 42px 12px 46px !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: anywhere !important;
+}
+
+.service-page .service-rfq-card .service-btn {
+    margin-top: 18px !important;
+}
+
+.service-page .service-case-grid {
+    width: min(100% - 48px, 1500px) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+}
+
+.service-page .service-case-grid > article {
+    min-height: 0 !important;
+    overflow: hidden !important;
+}
+
+.service-page .service-case-flow {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 18px !important;
+    background: #edf2f7 !important;
+}
+
+.service-page .service-case-step {
+    display: grid !important;
+    grid-template-columns: 150px minmax(0, 1fr) !important;
+    align-items: start !important;
+    gap: 14px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 16px !important;
+    border: 1px solid rgba(148, 163, 184, 0.22) !important;
+    border-radius: 16px !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+}
+
+.service-page .service-case-step strong {
+    margin: 0 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+}
+
+.service-page .service-case-step p {
+    max-width: none !important;
+    margin: 0 !important;
+    color: #52637a !important;
+    font-size: 0.98rem !important;
+    line-height: 1.62 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: anywhere !important;
+}
+
+@media (max-width: 1380px) {
+    .service-page .service-approach-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        width: min(100% - 40px, 1120px) !important;
+    }
+
+    .service-page .service-planning-grid,
+    .service-page .service-case-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 680px) {
+    .service-page .service-approach-grid,
+    .service-page .service-planning-grid,
+    .service-page .service-case-grid {
+        width: min(100% - 28px, 1320px) !important;
+    }
+
+    .service-page .service-case-step {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Final QA fix: prevent service method cards from becoming narrow vertical columns */
+.service-page .service-approach-grid {
+    width: min(100% - 56px, 1500px) !important;
+    margin-inline: auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(220px, 1fr)) !important;
+    gap: clamp(18px, 1.8vw, 26px) !important;
+    align-items: stretch !important;
+}
+
+.service-page .service-approach-grid article {
+    min-width: 0 !important;
+    min-height: 300px !important;
+    padding: clamp(26px, 2.4vw, 38px) !important;
+    justify-content: flex-start !important;
+}
+
+.service-page .service-approach-grid h2 {
+    max-width: none !important;
+    font-size: clamp(1.85rem, 2.1vw, 2.55rem) !important;
+    line-height: 1.08 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+}
+
+.service-page .service-approach-grid p {
+    max-width: 31rem !important;
+    font-size: clamp(0.98rem, 1vw, 1.08rem) !important;
+    line-height: 1.62 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+}
+
+.service-page .service-planning-grid {
+    grid-template-columns: repeat(3, minmax(300px, 1fr)) !important;
+}
+
+.service-page .service-planning-grid > *,
+.service-page .service-case-flow > * {
+    min-width: 0 !important;
+    overflow: hidden !important;
+}
+
+.service-page .service-planning-grid :is(h2, h3, p, li),
+.service-page .service-case-flow :is(strong, p) {
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+}
+
+@media (max-width: 1240px) {
+    .service-page .service-approach-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        width: min(100% - 44px, 1120px) !important;
+    }
+
+    .service-page .service-planning-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 680px) {
+    .service-page .service-approach-grid {
+        grid-template-columns: 1fr !important;
+        width: min(100% - 28px, 1120px) !important;
+    }
+
+    .service-page .service-approach-grid article {
+        min-height: auto !important;
+    }
+}
+
+/* Final QA fix: service mini-stat rows must stay wide and readable */
+.service-page .service-stat-row {
+    grid-column: 1 / -1 !important;
+    justify-self: center !important;
+    width: min(100% - 56px, 1120px) !important;
+    max-width: 1120px !important;
+    margin: clamp(28px, 4vw, 56px) auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(260px, 1fr)) !important;
+    gap: clamp(18px, 2vw, 28px) !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+}
+
+.service-page .service-stat-row > *,
+.service-page .service-stat-row > div {
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    min-height: 220px !important;
+    height: auto !important;
+    padding: clamp(28px, 3vw, 42px) !important;
+    border-radius: 26px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    overflow: hidden !important;
+}
+
+.service-page .service-stat-row strong,
+.service-page .service-stat-row h2,
+.service-page .service-stat-row h3 {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 18px !important;
+    color: #071226 !important;
+    font-size: clamp(2rem, 2.35vw, 2.65rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.02em !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    text-transform: none !important;
+}
+
+.service-page .service-stat-row span,
+.service-page .service-stat-row p,
+.service-page .service-stat-row li {
+    width: 100% !important;
+    max-width: 28rem !important;
+    color: #44546a !important;
+    font-size: clamp(1rem, 1vw, 1.08rem) !important;
+    line-height: 1.58 !important;
+    letter-spacing: 0 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    text-transform: none !important;
+}
+
+@media (max-width: 980px) {
+    .service-page .service-stat-row {
+        grid-template-columns: 1fr !important;
+        width: min(100% - 32px, 720px) !important;
+    }
+}
+
+/* Final service-page presentation pass: readable timeline, richer planning cards, wider intro stats */
+.service-page .service-timeline {
+    width: min(100% - 56px, 1320px) !important;
+    margin: clamp(34px, 4vw, 58px) auto 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(230px, 1fr)) !important;
+    gap: clamp(18px, 1.8vw, 26px) !important;
+}
+
+.service-page .service-timeline article {
+    position: relative !important;
+    min-height: 210px !important;
+    padding: 28px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(203, 213, 225, 0.86) !important;
+    border-left: 5px solid #d72f2f !important;
+    border-radius: 24px !important;
+    background:
+        radial-gradient(circle at 92% 14%, rgba(211, 47, 47, 0.14), transparent 32%),
+        linear-gradient(145deg, #ffffff, #f7fbff) !important;
+    box-shadow: 0 22px 62px rgba(15, 23, 42, 0.09) !important;
+}
+
+.service-page .service-timeline article:nth-child(3n + 2) {
+    border-left-color: #173d70 !important;
+    background:
+        radial-gradient(circle at 92% 14%, rgba(23, 61, 112, 0.16), transparent 32%),
+        linear-gradient(145deg, #ffffff, #f4f8ff) !important;
+}
+
+.service-page .service-timeline article:nth-child(3n + 3) {
+    border-left-color: #f97316 !important;
+    background:
+        radial-gradient(circle at 92% 14%, rgba(249, 115, 22, 0.16), transparent 32%),
+        linear-gradient(145deg, #ffffff, #fff8f2) !important;
+}
+
+.service-page .service-timeline article span {
+    display: inline-flex !important;
+    width: 44px !important;
+    height: 44px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 0 22px !important;
+    border-radius: 14px !important;
+    background: #0b2340 !important;
+    color: #ffffff !important;
+    font-size: 0.82rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.08em !important;
+}
+
+.service-page .service-timeline article h3 {
+    max-width: none !important;
+    margin: 0 !important;
+    color: #071226 !important;
+    font-size: clamp(1.28rem, 1.55vw, 1.65rem) !important;
+    font-weight: 900 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.018em !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    text-transform: none !important;
+}
+
+.service-page .service-planning {
+    background:
+        radial-gradient(circle at 8% 12%, rgba(211, 47, 47, 0.1), transparent 28%),
+        radial-gradient(circle at 92% 18%, rgba(23, 61, 112, 0.12), transparent 30%),
+        linear-gradient(rgba(23, 61, 112, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(23, 61, 112, 0.045) 1px, transparent 1px),
+        #f7f9fc !important;
+    background-size: auto, auto, 56px 56px, 56px 56px, auto !important;
+}
+
+.service-page .service-planning-grid {
+    width: min(100% - 56px, 1320px) !important;
+    display: grid !important;
+    grid-template-columns: minmax(320px, 0.95fr) minmax(320px, 1.05fr) minmax(320px, 1fr) !important;
+    gap: clamp(22px, 2.2vw, 34px) !important;
+    align-items: stretch !important;
+}
+
+.service-page .service-planning-story,
+.service-page .service-planning-checklist,
+.service-page .service-rfq-card {
+    position: relative !important;
+    min-height: 500px !important;
+    padding: clamp(34px, 3.2vw, 48px) !important;
+    border-radius: 30px !important;
+    overflow: hidden !important;
+    box-shadow: 0 30px 82px rgba(15, 23, 42, 0.11) !important;
+}
+
+.service-page .service-planning-story {
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    background:
+        linear-gradient(145deg, rgba(8, 25, 45, 0.96), rgba(17, 61, 105, 0.92)),
+        #0b2340 !important;
+    color: #ffffff !important;
+}
+
+.service-page .service-planning-story .service-keyword-strip a {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+}
+
+.service-page .service-planning-checklist {
+    border: 1px solid rgba(23, 61, 112, 0.14) !important;
+    background:
+        radial-gradient(circle at 94% 12%, rgba(23, 61, 112, 0.14), transparent 34%),
+        linear-gradient(145deg, #ffffff, #f3f8ff) !important;
+}
+
+.service-page .service-rfq-card {
+    border: 1px solid rgba(211, 47, 47, 0.18) !important;
+    background:
+        radial-gradient(circle at 94% 12%, rgba(211, 47, 47, 0.16), transparent 34%),
+        linear-gradient(145deg, #ffffff, #fff7f7) !important;
+}
+
+.service-page .service-planning-grid > article > span {
+    display: inline-flex !important;
+    width: 46px !important;
+    height: 46px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 0 28px !important;
+    border-radius: 14px !important;
+    background: #d72f2f !important;
+    color: #ffffff !important;
+    font-size: 0.82rem !important;
+    font-weight: 950 !important;
+    letter-spacing: 0.08em !important;
+}
+
+.service-page .service-planning-story > span {
+    background: rgba(255, 255, 255, 0.14) !important;
+}
+
+.service-page .service-planning-grid h3 {
+    max-width: none !important;
+    margin: 0 0 22px !important;
+    color: #071226 !important;
+    font-size: clamp(1.85rem, 2.35vw, 2.8rem) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.032em !important;
+}
+
+.service-page .service-planning-story h3,
+.service-page .service-planning-story p {
+    color: #ffffff !important;
+}
+
+.service-page .service-planning-story p {
+    opacity: 0.78 !important;
+}
+
+.service-page .service-planning-grid ul {
+    display: grid !important;
+    gap: 14px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.service-page .service-planning-grid li {
+    position: relative !important;
+    display: block !important;
+    min-height: 0 !important;
+    padding: 15px 18px 15px 48px !important;
+    border: 1px solid rgba(203, 213, 225, 0.62) !important;
+    border-radius: 16px !important;
+    background: rgba(255, 255, 255, 0.78) !important;
+    color: #21344f !important;
+    font-size: 1rem !important;
+    line-height: 1.55 !important;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.045) !important;
+}
+
+.service-page .service-planning-grid li::before {
+    position: absolute !important;
+    top: 18px !important;
+    left: 18px !important;
+    color: #d72f2f !important;
+    font-weight: 900 !important;
+}
+
+.service-page .service-rfq-card .service-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    margin-top: auto !important;
+}
+
+.service-page .service-stat-row {
+    width: min(calc(100vw - 112px), 1320px) !important;
+    max-width: 1320px !important;
+    grid-template-columns: repeat(3, minmax(300px, 1fr)) !important;
+    margin-left: calc((100% - min(1320px, calc(100vw - 112px))) / 2) !important;
+    margin-right: 0 !important;
+    transform: none !important;
+}
+
+.service-page .service-stat-row > *,
+.service-page .service-stat-row > div {
+    min-height: 210px !important;
+    justify-content: center !important;
+}
+
+@media (max-width: 1260px) {
+    .service-page .service-timeline {
+        grid-template-columns: repeat(2, minmax(260px, 1fr)) !important;
+    }
+
+    .service-page .service-planning-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .service-page .service-planning-story,
+    .service-page .service-planning-checklist,
+    .service-page .service-rfq-card {
+        min-height: auto !important;
+    }
+}
+
+@media (max-width: 760px) {
+    .service-page .service-timeline,
+    .service-page .service-stat-row {
+        width: min(100% - 30px, 1320px) !important;
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Site-wide service QA lock: readable planning modules and mobile-safe section ribbon */
+.service-page .service-page-index {
+    overflow: hidden !important;
+}
+
+.service-page .service-page-index .container {
+    justify-content: flex-start !important;
+    width: min(100% - 28px, 1320px) !important;
+    padding-inline: 0 !important;
+    gap: 10px !important;
+}
+
+.service-page .service-page-index a {
+    display: inline-flex !important;
+    min-height: 38px !important;
+    align-items: center !important;
+    padding: 0 14px !important;
+    border: 1px solid rgba(203, 213, 225, 0.74) !important;
+    border-radius: 999px !important;
+    background: #ffffff !important;
+    letter-spacing: 0.04em !important;
+}
+
+.service-page .service-page-index a::after {
+    display: none !important;
+}
+
+.service-page .service-planning-grid {
+    width: min(100% - 56px, 1320px) !important;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr) !important;
+    align-items: start !important;
+}
+
+.service-page .service-planning-story {
+    grid-column: 1 / -1 !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.9fr) minmax(260px, 0.55fr) !important;
+    gap: clamp(22px, 3vw, 46px) !important;
+    align-items: end !important;
+    min-height: auto !important;
+}
+
+.service-page .service-planning-story > span {
+    grid-column: 1 / -1 !important;
+}
+
+.service-page .service-planning-story h3 {
+    max-width: 780px !important;
+    font-size: clamp(2.15rem, 3.4vw, 4rem) !important;
+}
+
+.service-page .service-planning-story p {
+    max-width: 760px !important;
+}
+
+.service-page .service-planning-story .service-keyword-strip {
+    align-self: end !important;
+    justify-content: flex-start !important;
+}
+
+.service-page .service-planning-checklist,
+.service-page .service-rfq-card {
+    min-height: auto !important;
+    height: auto !important;
+}
+
+.service-page .service-planning-grid li {
+    padding-block: 13px !important;
+    font-size: 0.98rem !important;
+}
+
+.service-page .service-timeline {
+    width: min(100% - 56px, 1320px) !important;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)) !important;
+}
+
+.service-page .service-timeline article {
+    min-height: 220px !important;
+}
+
+.service-page .service-stat-row {
+    width: min(100% - 56px, 1320px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+@media (max-width: 900px) {
+    .service-page .service-planning-grid,
+    .service-page .service-planning-story {
+        grid-template-columns: 1fr !important;
+    }
+
+    .service-page .service-planning-grid {
+        width: min(100% - 30px, 1320px) !important;
+    }
+}
+
+/* Senior QA polish pass: keep every service detail section readable, balanced and premium */
+.service-page .service-hero h1 {
+    max-width: 920px !important;
+    font-size: clamp(3.25rem, 5.7vw, 6.7rem) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.045em !important;
+}
+
+.service-page .service-hero p,
+.service-page .service-hero-copy > p {
+    max-width: 820px !important;
+}
+
+.service-page .service-page-index {
+    border-block: 1px solid rgba(203, 213, 225, 0.64) !important;
+    background:
+        linear-gradient(90deg, rgba(211, 47, 47, 0.08), rgba(23, 61, 112, 0.06)),
+        rgba(255, 255, 255, 0.96) !important;
+}
+
+.service-page .service-page-index .container {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scrollbar-width: none !important;
+}
+
+.service-page .service-page-index .container::-webkit-scrollbar {
+    display: none !important;
+}
+
+.service-page .service-page-index a {
+    flex: 0 0 auto !important;
+    color: #0b2340 !important;
+    font-size: 0.76rem !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+}
+
+.service-page .service-page-index a:hover,
+.service-page .service-page-index a.is-active {
+    border-color: rgba(211, 47, 47, 0.34) !important;
+    background: #d72f2f !important;
+    color: #ffffff !important;
+}
+
+.service-page .service-approach-grid,
+.service-page .service-stat-row,
+.service-page .service-timeline,
+.service-page .service-planning-grid {
+    width: min(100% - 64px, 1320px) !important;
+    margin-inline: auto !important;
+}
+
+.service-page .service-approach-grid,
+.service-page .service-stat-row {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: clamp(18px, 2vw, 28px) !important;
+    align-items: stretch !important;
+}
+
+.service-page .service-approach-grid article,
+.service-page .service-stat-row > *,
+.service-page .service-stat-row > div {
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: clamp(26px, 3vw, 38px) !important;
+    border: 1px solid rgba(203, 213, 225, 0.82) !important;
+    border-left: 5px solid #d72f2f !important;
+    border-radius: 24px !important;
+    background:
+        radial-gradient(circle at 94% 10%, rgba(211, 47, 47, 0.12), transparent 30%),
+        linear-gradient(145deg, #ffffff, #f8fbff) !important;
+    box-shadow: 0 20px 55px rgba(15, 23, 42, 0.08) !important;
+    overflow: hidden !important;
+}
+
+.service-page .service-approach-grid article:nth-child(2n),
+.service-page .service-stat-row > :nth-child(2n) {
+    border-left-color: #173d70 !important;
+    background:
+        radial-gradient(circle at 94% 10%, rgba(23, 61, 112, 0.13), transparent 30%),
+        linear-gradient(145deg, #ffffff, #f5f9ff) !important;
+}
+
+.service-page .service-approach-grid :is(h2, h3),
+.service-page .service-stat-row :is(strong, h2, h3),
+.service-page .service-planning-grid h3,
+.service-page .service-timeline h3 {
+    color: #071226 !important;
+    font-size: clamp(1.6rem, 2.3vw, 2.35rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.024em !important;
+    text-transform: none !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+}
+
+.service-page .service-approach-grid p,
+.service-page .service-stat-row :is(p, span, li),
+.service-page .service-planning-grid :is(p, li),
+.service-page .service-timeline :is(p, span) {
+    color: #52637a !important;
+    font-size: clamp(0.98rem, 1vw, 1.08rem) !important;
+    line-height: 1.62 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+}
+
+.service-page .service-planning-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr) !important;
+    gap: clamp(22px, 2.4vw, 34px) !important;
+    align-items: stretch !important;
+}
+
+.service-page .service-planning-story {
+    grid-column: 1 / -1 !important;
+    min-height: 0 !important;
+    padding: clamp(34px, 4vw, 58px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-top: 5px solid #d72f2f !important;
+    border-radius: 30px !important;
+    background:
+        radial-gradient(circle at 92% 10%, rgba(211, 47, 47, 0.25), transparent 34%),
+        linear-gradient(135deg, #071327, #173d70) !important;
+    box-shadow: 0 30px 88px rgba(8, 31, 61, 0.19) !important;
+}
+
+.service-page .service-planning-story h3 {
+    max-width: 880px !important;
+    color: #ffffff !important;
+    font-size: clamp(2.25rem, 4.2vw, 4.5rem) !important;
+}
+
+.service-page .service-planning-story p {
+    max-width: 820px !important;
+    color: rgba(235, 242, 255, 0.78) !important;
+}
+
+.service-page .service-planning-checklist,
+.service-page .service-rfq-card {
+    min-height: 0 !important;
+    padding: clamp(30px, 3.4vw, 46px) !important;
+    border-radius: 28px !important;
+}
+
+.service-page .service-planning-grid ul {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 12px !important;
+}
+
+.service-page .service-timeline {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)) !important;
+    gap: clamp(18px, 2vw, 26px) !important;
+}
+
+.service-page .service-timeline article {
+    min-width: 0 !important;
+    min-height: 230px !important;
+    padding: clamp(26px, 3vw, 36px) !important;
+}
+
+@media (max-width: 760px) {
+    .service-page .service-hero h1 {
+        font-size: clamp(2.55rem, 13vw, 4rem) !important;
+        letter-spacing: -0.03em !important;
+    }
+
+    .service-page .service-approach-grid,
+    .service-page .service-stat-row,
+    .service-page .service-timeline,
+    .service-page .service-planning-grid {
+        width: min(100% - 28px, 1320px) !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    .service-page .service-planning-grid ul {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Senior QA hardening: shared service blocks stay readable on every subpage */
+.service-page main,
+.service-page section {
+    max-width: 100vw !important;
+}
+
+.service-page .service-hero {
+    height: auto !important;
+    min-height: clamp(680px, 78vh, 900px) !important;
+    overflow: hidden !important;
+    padding-block: clamp(118px, 9vw, 158px) clamp(62px, 7vw, 102px) !important;
+}
+
+.service-page .service-hero-grid,
+.partner-tech-page .partner-tech-hero-grid {
+    width: min(100% - 64px, 1320px) !important;
+    grid-template-columns: minmax(0, 1.04fr) minmax(340px, 0.78fr) !important;
+    gap: clamp(28px, 4vw, 64px) !important;
+    align-items: center !important;
+}
+
+.partner-tech-page .partner-tech-hero {
+    height: auto !important;
+    min-height: clamp(680px, 78vh, 920px) !important;
+    overflow: hidden !important;
+    padding-block: clamp(118px, 9vw, 158px) clamp(62px, 7vw, 102px) !important;
+}
+
+.service-page .service-intro .reveal,
+.service-page .service-process .reveal,
+.service-page .service-resources .reveal,
+.service-page .service-application-grid article,
+.service-page .service-feature-grid article,
+.service-page .service-case-grid article {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+.service-page .service-intro .reveal::before,
+.service-page .service-intro .reveal::after,
+.service-page .service-process .reveal::before,
+.service-page .service-process .reveal::after,
+.service-page .service-resources .reveal::before,
+.service-page .service-resources .reveal::after,
+.service-page .service-application-grid article::before,
+.service-page .service-application-grid article::after,
+.service-page .service-feature-grid article::before,
+.service-page .service-feature-grid article::after,
+.service-page .service-case-grid article::before,
+.service-page .service-case-grid article::after {
+    max-width: 100% !important;
+    pointer-events: none !important;
+}
+
+.service-page .service-intro .reveal::after,
+.service-page .service-process .reveal::after,
+.service-page .service-resources .reveal::after {
+    right: -10px !important;
+    bottom: -10px !important;
+}
+
+.service-page .service-intro .reveal :is(h2, h3, p, span),
+.service-page .service-process .reveal :is(h2, h3, p, span),
+.service-page .service-resources .reveal :is(h2, h3, p, span),
+.service-page .service-module-grid :is(h2, h3, p, span),
+.service-page .service-method-grid :is(h2, h3, p, span),
+.service-page .service-process-grid :is(h2, h3, p, span) {
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+}
+
+.service-page .service-module-grid,
+.service-page .service-method-grid,
+.service-page .service-process-grid {
+    width: min(100% - 64px, 1320px) !important;
+    margin-inline: auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: clamp(18px, 2vw, 28px) !important;
+    align-items: stretch !important;
+}
+
+.service-page .service-module-grid > *,
+.service-page .service-method-grid > *,
+.service-page .service-process-grid > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: clamp(26px, 3vw, 38px) !important;
+    overflow: hidden !important;
+    border-radius: 24px !important;
+}
+
+@media (max-width: 760px) {
+    .service-page .service-hero,
+    .partner-tech-page .partner-tech-hero {
+        min-height: 0 !important;
+        padding-block: 96px 58px !important;
+    }
+
+    .service-page .service-hero-grid,
+    .partner-tech-page .partner-tech-hero-grid,
+    .service-page .service-module-grid,
+    .service-page .service-method-grid,
+    .service-page .service-process-grid {
+        width: min(100% - 28px, 1320px) !important;
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Absolute final density lock: no large empty service cards or dead vertical gaps */
+.service-page .section-padding,
+.partner-tech-page .section-padding,
+.service-page .service-approach,
+.service-page .service-intro,
+.service-page .service-planning,
+.service-page .service-capabilities,
+.service-page .service-applications,
+.partner-tech-page .partner-tech-overview,
+.partner-tech-page .partner-tech-products,
+.partner-tech-page .partner-tech-procurement,
+.partner-tech-page .partner-tech-applications {
+    padding-block: clamp(64px, 6vw, 92px) !important;
+}
+
+.service-page .service-hero,
+.partner-tech-page .partner-tech-hero {
+    min-height: 0 !important;
+    padding-block: clamp(108px, 8vw, 140px) clamp(58px, 6vw, 88px) !important;
+}
+
+.service-page .service-approach-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+    gap: clamp(16px, 1.8vw, 24px) !important;
+}
+
+.service-page .service-approach-grid article,
+.service-page .service-capability-card,
+.partner-tech-page .partner-tech-product-card,
+.partner-tech-page .partner-tech-brand-row {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: clamp(24px, 2.4vw, 34px) !important;
+    overflow: visible !important;
+}
+
+.service-page .service-approach-grid article::before,
+.service-page .service-approach-grid article::after,
+.service-page .service-capability-card::before,
+.service-page .service-capability-card::after,
+.partner-tech-page .partner-tech-product-card::before,
+.partner-tech-page .partner-tech-product-card::after {
+    display: none !important;
+}
+
+.service-page .service-planning-grid {
+    align-items: start !important;
+    gap: clamp(18px, 2vw, 28px) !important;
+}
+
+.service-page .service-planning-story {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr) !important;
+    gap: clamp(22px, 3vw, 44px) !important;
+    align-items: center !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: clamp(34px, 3.5vw, 52px) !important;
+    overflow: visible !important;
+}
+
+.service-page .service-planning-story > span,
+.service-page .service-planning-story .service-keyword-strip {
+    grid-column: 1 / -1 !important;
+}
+
+.service-page .service-planning-story h3 {
+    max-width: 760px !important;
+    font-size: clamp(2.1rem, 3.4vw, 3.75rem) !important;
+    line-height: 1.02 !important;
+}
+
+.service-page .service-planning-story p {
+    max-width: 540px !important;
+    margin: 0 !important;
+}
+
+.service-page .service-planning-checklist,
+.service-page .service-rfq-card {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: clamp(26px, 2.6vw, 36px) !important;
+    overflow: visible !important;
+}
+
+.service-page .service-planning-grid ul {
+    gap: 8px !important;
+}
+
+.service-page .service-planning-grid li {
+    padding-block: 9px !important;
+    line-height: 1.48 !important;
+}
+
+.partner-tech-page .partner-tech-product-card {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    gap: 14px !important;
+}
+
+@media (max-width: 900px) {
+    .service-page .service-planning-story {
+        grid-template-columns: 1fr !important;
+    }
+
+    .service-page .service-planning-story p {
+        max-width: 760px !important;
+    }
+}
+
+@media (max-width: 760px) {
+    .service-page .service-hero,
+    .partner-tech-page .partner-tech-hero {
+        padding-block: 92px 54px !important;
+    }
+}
+
+/* Senior visual QA lock: compact, readable generated service pages */
+.service-page .section-padding,
+.partner-tech-page .section-padding {
+    padding-block: clamp(48px, 4.8vw, 72px) !important;
+}
+
+.service-page .service-approach,
+.service-page .service-intro,
+.service-page .service-planning,
+.service-page .service-capabilities,
+.service-page .service-applications,
+.service-page .service-partners,
+.service-page .service-process,
+.service-page .service-features,
+.service-page .service-projects,
+.service-page .service-case-studies,
+.service-page .service-gallery,
+.service-page .service-resources,
+.service-page .service-faq,
+.service-page .service-related,
+.partner-tech-page .partner-tech-overview,
+.partner-tech-page .partner-tech-brand-section,
+.partner-tech-page .partner-tech-products,
+.partner-tech-page .partner-tech-applications,
+.partner-tech-page .partner-tech-procurement {
+    padding-block: clamp(50px, 4.8vw, 74px) !important;
+}
+
+.service-page .service-hero,
+.partner-tech-page .partner-tech-hero {
+    min-height: clamp(600px, 70vh, 760px) !important;
+    padding-block: clamp(96px, 7vw, 124px) clamp(46px, 4.8vw, 70px) !important;
+}
+
+.service-page .service-section-heading {
+    max-width: 920px !important;
+    margin-bottom: clamp(24px, 3vw, 40px) !important;
+}
+
+.service-page .service-section-heading h2,
+.partner-tech-page .service-section-heading h2 {
+    font-size: clamp(2.35rem, 4.2vw, 4.25rem) !important;
+    line-height: 1.03 !important;
+}
+
+.service-page .service-approach-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+}
+
+.service-page .service-approach-grid article {
+    padding: 26px !important;
+    min-height: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+}
+
+.service-page .service-approach-grid h2,
+.service-page .service-approach-grid h3 {
+    font-size: clamp(1.65rem, 2vw, 2rem) !important;
+    line-height: 1.08 !important;
+}
+
+.service-page .service-intro-grid {
+    align-items: center !important;
+    gap: clamp(28px, 4vw, 56px) !important;
+}
+
+.service-page .service-intro-media {
+    aspect-ratio: 16 / 10 !important;
+    min-height: 0 !important;
+    max-height: 440px !important;
+    overflow: hidden !important;
+}
+
+.service-page .service-intro-media img,
+.service-page .service-project-card img,
+.service-page .service-gallery-grid img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+.service-page .service-stat-row {
+    margin-top: clamp(18px, 2vw, 28px) !important;
+    gap: 16px !important;
+}
+
+.service-page .service-planning-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: start !important;
+    gap: 18px !important;
+}
+
+.service-page .service-planning-grid > article,
+.service-page .service-planning-story,
+.service-page .service-planning-checklist,
+.service-page .service-rfq-card {
+    grid-column: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: clamp(22px, 2.1vw, 30px) !important;
+    border-radius: 24px !important;
+    gap: 14px !important;
+    overflow: visible !important;
+}
+
+.service-page .service-planning-story > span,
+.service-page .service-planning-story .service-keyword-strip {
+    grid-column: auto !important;
+}
+
+.service-page .service-planning-grid h3,
+.service-page .service-planning-story h3 {
+    font-size: clamp(1.35rem, 1.65vw, 1.8rem) !important;
+    line-height: 1.12 !important;
+    max-width: none !important;
+}
+
+.service-page .service-planning-story p,
+.service-page .service-planning-grid p,
+.service-page .service-planning-grid li {
+    font-size: 0.98rem !important;
+    line-height: 1.48 !important;
+    max-width: none !important;
+}
+
+.service-page .service-planning-checklist li:nth-child(n+5) {
+    display: none !important;
+}
+
+.service-page .service-rfq-card li:nth-child(n+4) {
+    display: none !important;
+}
+
+.service-page .service-planning-grid ul {
+    display: grid !important;
+    gap: 8px !important;
+}
+
+.service-page .service-keyword-strip {
+    display: none !important;
+}
+
+.service-page .service-planning-story .service-keyword-strip {
+    display: none !important;
+}
+
+.service-page .service-keyword-strip a:nth-child(n+6) {
+    display: none !important;
+}
+
+.service-page .service-card-grid,
+.partner-tech-page .partner-tech-product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+}
+
+.service-page .service-capability-card,
+.partner-tech-page .partner-tech-product-card {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 26px !important;
+    border-radius: 24px !important;
+}
+
+.service-page .service-capability-card h3,
+.partner-tech-page .partner-tech-product-card h3 {
+    font-size: clamp(1.35rem, 1.7vw, 1.75rem) !important;
+    line-height: 1.18 !important;
+}
+
+.service-page .service-capability-card p,
+.partner-tech-page .partner-tech-product-card p {
+    font-size: 1rem !important;
+    line-height: 1.55 !important;
+}
+
+.partner-tech-page .partner-tech-product-card {
+    gap: 12px !important;
+}
+
+.partner-tech-page .partner-tech-product-mark {
+    width: 58px !important;
+    height: 58px !important;
+    margin-bottom: 4px !important;
+}
+
+.service-page .service-process .service-timeline,
+.service-page .service-feature-grid,
+.service-page .service-application-grid,
+.service-page .service-partner-grid,
+.service-page .service-related-grid {
+    gap: 18px !important;
+}
+
+.service-page .service-project-card {
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+.service-page .service-project-card img {
+    aspect-ratio: 16 / 10 !important;
+    min-height: 0 !important;
+}
+
+.service-page .service-case-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+}
+
+.service-page .service-case-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+}
+
+.service-page .service-case-step {
+    padding: 18px !important;
+    min-height: 0 !important;
+}
+
+.service-page .service-gallery-grid figure {
+    min-height: 0 !important;
+}
+
+.service-page .service-gallery-grid img {
+    aspect-ratio: 16 / 10 !important;
+}
+
+.partner-tech-page .partner-tech-brand-row {
+    min-height: 0 !important;
+    padding: 22px !important;
+    gap: 18px !important;
+}
+
+@media (max-width: 1180px) {
+    .service-page .service-approach-grid,
+    .service-page .service-card-grid,
+    .partner-tech-page .partner-tech-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .service-page .service-planning-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 760px) {
+    .service-page .section-padding,
+    .partner-tech-page .section-padding,
+    .service-page .service-approach,
+    .service-page .service-intro,
+    .service-page .service-planning,
+    .service-page .service-capabilities,
+    .service-page .service-applications,
+    .service-page .service-partners,
+    .service-page .service-process,
+    .service-page .service-features,
+    .service-page .service-projects,
+    .service-page .service-case-studies,
+    .service-page .service-gallery,
+    .service-page .service-resources,
+    .service-page .service-faq,
+    .service-page .service-related {
+        padding-block: 44px !important;
+    }
+
+    .service-page .service-approach-grid,
+    .service-page .service-card-grid,
+    .partner-tech-page .partner-tech-product-grid,
+    .service-page .service-case-flow {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* QA EOF override: keep this block last */
+.service-page .service-planning-checklist li,
+.service-page .service-rfq-card li {
+    padding: 8px 12px 8px 34px !important;
+    min-height: 0 !important;
+    line-height: 1.35 !important;
+}
+
+.service-page .service-planning-grid > article > span {
+    margin-bottom: 8px !important;
+}
+
+.service-page .service-planning-grid > article h3 {
+    margin-bottom: 10px !important;
+    padding-bottom: 0 !important;
+}
+
+.service-page .service-planning-grid > article {
+    padding: 24px !important;
+}
+
+.service-page .service-keyword-strip {
+    display: none !important;
+}
+
+/* Absolute final override: service case-study cards must never collapse into skinny columns */
+.service-page .service-case-studies .service-case-grid {
+    width: min(100% - 56px, 1180px) !important;
+    margin-inline: auto !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+}
+
+.service-page .service-case-studies .service-case-grid > article {
+    display: grid !important;
+    grid-template-columns: minmax(270px, 0.34fr) minmax(0, 1fr) !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    border-radius: 26px !important;
+    border: 1px solid rgba(203, 213, 225, 0.86) !important;
+    background: #ffffff !important;
+    box-shadow: 0 22px 60px rgba(7, 20, 38, 0.08) !important;
+}
+
+.service-page .service-case-studies .service-case-grid > article::before,
+.service-page .service-case-studies .service-case-grid > article::after {
+    display: none !important;
+}
+
+.service-page .service-case-studies .service-case-card-head {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    padding: clamp(26px, 3vw, 38px) !important;
+    border: 0 !important;
+    background: radial-gradient(circle at 100% 0%, rgba(220, 38, 38, 0.22), transparent 36%), linear-gradient(135deg, #071426 0%, #123762 100%) !important;
+}
+
+.service-page .service-case-studies .service-case-card-head h3 {
+    max-width: 24rem !important;
+    margin: 0 !important;
+    color: #ffffff !important;
+    font-size: clamp(1.55rem, 2vw, 2.1rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.service-page .service-case-studies .service-case-flow {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(240px, 1fr)) !important;
+    gap: 14px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: clamp(18px, 2vw, 24px) !important;
+    background: #f4f7fb !important;
+}
+
+.service-page .service-case-studies .service-case-step {
+    display: block !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 18px 20px !important;
+    border: 1px solid rgba(203, 213, 225, 0.86) !important;
+    border-left: 4px solid #d72f2f !important;
+    border-radius: 18px !important;
+    background: #ffffff !important;
+}
+
+.service-page .service-case-studies .service-case-step strong {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin: 0 0 8px !important;
+    color: #d72f2f !important;
+    font-size: 0.78rem !important;
+    font-weight: 900 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    white-space: normal !important;
+}
+
+.service-page .service-case-studies .service-case-step p {
+    max-width: none !important;
+    margin: 0 !important;
+    color: #4d5f76 !important;
+    font-size: 0.98rem !important;
+    line-height: 1.56 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+}
+
+@media (max-width: 980px) {
+    .service-page .service-case-studies .service-case-grid > article {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 680px) {
+    .service-page .service-case-studies .service-case-grid,
+    .service-page .service-case-studies .service-case-flow {
+        width: min(100% - 28px, 1180px) !important;
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Final spacing guardrail: prevent service intro sections from feeling empty */
+.service-page .service-intro {
+    padding-block: clamp(48px, 5vw, 72px) !important;
+}
+
+.service-page .service-intro-grid {
+    row-gap: clamp(22px, 2.8vw, 38px) !important;
+    align-items: start !important;
+}
+
+.service-page .service-intro-media {
+    max-height: 360px !important;
+}
+
+.service-page .service-stat-row {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    align-self: start !important;
+}
+
+.service-page .service-stat-row > *,
+.service-page .service-stat-row > div {
+    min-height: 150px !important;
+    padding: clamp(22px, 2.2vw, 30px) !important;
+}
+
+.service-page .service-stat-row strong,
+.service-page .service-stat-row h2,
+.service-page .service-stat-row h3 {
+    margin-bottom: 10px !important;
+}

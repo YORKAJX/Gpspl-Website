@@ -1,0 +1,462 @@
+{
+  "collection": "industries",
+  "purpose": "CMS-ready industry solution records for GPSPL industry pages, homepage tabs, RFQ routing and future case studies.",
+  "items": [
+    {
+      "name": "Corporate & Commercial Workspaces",
+      "slug": "corporate",
+      "image": "assests/images/projects/gpspl-real/polished/corporate-conference-room.webp",
+      "summary": "Boardrooms, meeting rooms, collaboration spaces, displays, automation, UPS and AMC support.",
+      "clientExamples": [
+        "McKinsey & Company",
+        "Candor TechSpace",
+        "Emaar MGF",
+        "Elan",
+        "ATS Infrastructure"
+      ],
+      "recommendedProducts": [
+        "Video conferencing systems",
+        "Commercial displays",
+        "PTZ cameras",
+        "Microphones",
+        "Room control",
+        "UPS backup"
+      ],
+      "relatedBrands": [
+        "HP Poly",
+        "Lumens",
+        "Sennheiser",
+        "Samsung",
+        "Sony",
+        "Crestron",
+        "ATEN",
+        "Luminous"
+      ],
+      "relatedServices": [
+        "AV Integration",
+        "Unified Communication",
+        "Control Automation",
+        "AMC"
+      ],
+      "caseStudyTemplate": {
+        "requirement": "Fast, clear and reliable meeting rooms.",
+        "challenge": "Users need simple operation and remote participants need clear audio.",
+        "gpsplApproach": "Plan camera view, microphone pickup, display size, source switching, room control and support documentation.",
+        "expectedOutcome": "Simpler meetings and AMC-ready handover."
+      },
+      "seo": {
+        "title": "Corporate AV & Boardroom Solutions | GPSPL",
+        "description": "Corporate AV, boardroom, meeting room, video conferencing, display, automation and AMC solutions by GPSPL."
+      }
+    },
+    {
+      "name": "Education, Coaching & Training",
+      "slug": "education",
+      "image": "assests/images/projects/gpspl-real/polished/direct-education-classroom-panels.webp",
+      "summary": "Smart classrooms, interactive panels, projectors, classroom audio, cameras and teacher handover.",
+      "clientExamples": [
+        "Galgotias University",
+        "Allen Career Institute",
+        "Aakash",
+        "Great Lakes",
+        "Plutus IAS",
+        "Drishti The Vision"
+      ],
+      "recommendedProducts": [
+        "Interactive panels",
+        "Projectors",
+        "Classroom audio",
+        "Document cameras",
+        "PTZ cameras",
+        "UPS backup"
+      ],
+      "relatedBrands": [
+        "MAXHUB",
+        "Newline",
+        "BenQ",
+        "Epson",
+        "Sennheiser",
+        "Lumens",
+        "Samsung",
+        "Luminous"
+      ],
+      "relatedServices": [
+        "AV Integration",
+        "Smart Classroom Setup",
+        "Professional Audio",
+        "AMC"
+      ],
+      "caseStudyTemplate": {
+        "requirement": "Easy classroom technology for teachers and students.",
+        "challenge": "Display visibility, audio clarity and teacher adoption must be handled together.",
+        "gpsplApproach": "Check room size, glare, audio pickup, cabling, display choice and handover training.",
+        "expectedOutcome": "Better learning experience and simpler daily operation."
+      },
+      "seo": {
+        "title": "Education & Smart Classroom Solutions | GPSPL",
+        "description": "Smart classroom, interactive display, projector, classroom audio and hybrid learning solutions by GPSPL."
+      }
+    },
+    {
+      "name": "Hospitality, Hotels & Venues",
+      "slug": "hospitality",
+      "image": "assests/images/projects/gpspl-real/polished/hospitality-banquet-av.webp",
+      "summary": "Lobby LED, digital signage, banquet audio, event presentation, meeting rooms and support.",
+      "clientExamples": [
+        "Oberoi Hotels",
+        "Taj Hotels",
+        "Novotel",
+        "The Claridges",
+        "Leisure Hotels",
+        "Kanha Hotels"
+      ],
+      "recommendedProducts": [
+        "Active LED walls",
+        "Digital signage",
+        "Professional audio",
+        "Projectors",
+        "Hospitality displays",
+        "Control systems"
+      ],
+      "relatedBrands": [
+        "JBL",
+        "Harman",
+        "Samsung",
+        "LG",
+        "Absen",
+        "BenQ",
+        "Epson",
+        "Sennheiser"
+      ],
+      "relatedServices": [
+        "AV Integration",
+        "Active LED Installation",
+        "Professional Audio",
+        "AMC"
+      ],
+      "caseStudyTemplate": {
+        "requirement": "Guest-facing display and event AV that looks premium and works reliably.",
+        "challenge": "Events need consistent audio, visual impact and quick service support.",
+        "gpsplApproach": "Plan LED size, brightness, audio coverage, source routing and maintenance access.",
+        "expectedOutcome": "Better guest experience and smoother events."
+      },
+      "seo": {
+        "title": "Hospitality AV, LED & Signage Solutions | GPSPL",
+        "description": "Hotel AV, banquet audio, lobby LED, signage, meeting room and hospitality display solutions by GPSPL."
+      }
+    },
+    {
+      "name": "Government, Public Sector & Institutions",
+      "slug": "government",
+      "image": "assests/images/projects/gpspl-real/polished/led-wall-prep-clean.webp",
+      "summary": "Command rooms, video walls, KVM, public displays, auditoriums, control systems and UPS.",
+      "clientExamples": [
+        "Northern Railway",
+        "Public-sector environments",
+        "Institutions"
+      ],
+      "recommendedProducts": [
+        "Video walls",
+        "KVM",
+        "AV switching",
+        "Control systems",
+        "Projectors",
+        "UPS backup"
+      ],
+      "relatedBrands": [
+        "ATEN",
+        "Absen",
+        "Samsung",
+        "Sony",
+        "Crestron",
+        "AMX",
+        "Luminous",
+        "Harman"
+      ],
+      "relatedServices": [
+        "Video Wall Integration",
+        "KVM & AV Switching",
+        "Control Automation",
+        "AMC"
+      ],
+      "caseStudyTemplate": {
+        "requirement": "Reliable monitoring and presentation systems for critical spaces.",
+        "challenge": "Many sources, operators and rooms need controlled signal flow.",
+        "gpsplApproach": "Map source count, display layout, KVM access, rack design, power and support.",
+        "expectedOutcome": "Clearer monitoring and maintainable infrastructure."
+      },
+      "seo": {
+        "title": "Government AV, Command Room & Video Wall Solutions | GPSPL",
+        "description": "Government command room, video wall, KVM, AV switching, auditorium and support solutions by GPSPL."
+      }
+    },
+    {
+      "name": "Healthcare, Clinics & Dentistry",
+      "slug": "healthcare",
+      "image": "assests/images/projects/gpspl-real/polished/clinic-treatment-room-clean.webp",
+      "summary": "Patient communication, display signage, training rooms, conferencing, UPS and support.",
+      "clientExamples": [
+        "Apollo Clinic",
+        "Moolchand",
+        "Clinics",
+        "Healthcare facilities"
+      ],
+      "recommendedProducts": [
+        "Waiting area displays",
+        "Training room AV",
+        "Video conferencing",
+        "Projectors",
+        "Signage",
+        "UPS backup"
+      ],
+      "relatedBrands": [
+        "Samsung",
+        "LG",
+        "BenQ",
+        "Epson",
+        "HP Poly",
+        "Sennheiser",
+        "Luminous"
+      ],
+      "relatedServices": [
+        "AV Integration",
+        "Digital Signage",
+        "Unified Communication",
+        "AMC"
+      ],
+      "caseStudyTemplate": {
+        "requirement": "Clear patient communication and dependable staff training spaces.",
+        "challenge": "Systems must be simple, reliable and easy to support.",
+        "gpsplApproach": "Plan display location, audio, input source, UPS and service access.",
+        "expectedOutcome": "Better information flow and easier maintenance."
+      },
+      "seo": {
+        "title": "Healthcare AV, Display & Clinic Technology Solutions | GPSPL",
+        "description": "Healthcare display, patient communication, clinic AV, training room and support solutions by GPSPL."
+      },
+      "clients": [
+        "Stunning Dentistry"
+      ],
+      "applications": [
+        "Dentistry clinics"
+      ]
+    },
+    {
+      "name": "Retail, Food & Customer Experience",
+      "slug": "retail",
+      "image": "assests/images/projects/gpspl-real/polished/direct-retail-menu-board.webp",
+      "summary": "Digital signage, menu boards, commercial displays, LED, background audio and AMC.",
+      "clientExamples": [
+        "Zomato",
+        "Ferns N Petals",
+        "Bikanervala",
+        "Gola Sizzlers",
+        "Tops"
+      ],
+      "recommendedProducts": [
+        "Menu boards",
+        "Digital signage",
+        "Commercial displays",
+        "Active LED",
+        "Background audio"
+      ],
+      "relatedBrands": [
+        "Samsung",
+        "LG",
+        "BenQ",
+        "Absen",
+        "JBL",
+        "Harman"
+      ],
+      "relatedServices": [
+        "Digital Signage",
+        "Active LED Installation",
+        "Professional Audio",
+        "AMC"
+      ],
+      "caseStudyTemplate": {
+        "requirement": "Clear customer messaging and high-visibility displays.",
+        "challenge": "Screens must be bright, easy to update and serviceable.",
+        "gpsplApproach": "Plan display size, mounting, brightness, media input and support access.",
+        "expectedOutcome": "Sharper customer communication and easier daily updates."
+      },
+      "seo": {
+        "title": "Retail Digital Signage, Menu Board & Display Solutions | GPSPL",
+        "description": "Retail signage, menu board, commercial display, LED and background audio solutions by GPSPL."
+      }
+    },
+    {
+      "name": "Real Estate, Sales Galleries & Smart Properties",
+      "slug": "real-estate",
+      "image": "assests/images/projects/gpspl-real/polished/direct-real-estate-residential-av.webp",
+      "summary": "Sales gallery displays, LED walls, interactive presentations, signage and meeting-room AV.",
+      "clientExamples": [
+        "Emaar MGF",
+        "Elan",
+        "ATS Infrastructure",
+        "Sales galleries"
+      ],
+      "recommendedProducts": [
+        "LED walls",
+        "Interactive displays",
+        "Digital signage",
+        "Projectors",
+        "Meeting room AV"
+      ],
+      "relatedBrands": [
+        "Samsung",
+        "LG",
+        "Absen",
+        "BenQ",
+        "Epson",
+        "MAXHUB",
+        "Crestron"
+      ],
+      "relatedServices": [
+        "AV Integration",
+        "Active LED Installation",
+        "Digital Signage",
+        "Conference Room Setup"
+      ],
+      "caseStudyTemplate": {
+        "requirement": "Better property presentation for buyers and sales teams.",
+        "challenge": "Visuals, room audio and source switching must feel premium.",
+        "gpsplApproach": "Plan display placement, interactivity, source routing and support access.",
+        "expectedOutcome": "More polished buyer presentations."
+      },
+      "seo": {
+        "title": "Real Estate Sales Gallery & Display Solutions | GPSPL",
+        "description": "Real estate sales gallery, LED wall, signage, interactive display and presentation solutions by GPSPL."
+      }
+    },
+    {
+      "name": "BFSI & Secure Workplaces",
+      "slug": "bfsi",
+      "image": "assests/images/projects/gpspl-real/polished/corporate-boardroom-display.webp",
+      "summary": "Executive boardrooms, secure meetings, displays, KVM, UPS, IT infrastructure and AMC.",
+      "clientExamples": [
+        "Scotiabank",
+        "Executive rooms",
+        "Secure workplaces"
+      ],
+      "recommendedProducts": [
+        "Boardroom AV",
+        "Video conferencing",
+        "KVM",
+        "UPS backup",
+        "IT infrastructure"
+      ],
+      "relatedBrands": [
+        "HP Poly",
+        "Samsung",
+        "Sony",
+        "ATEN",
+        "Luminous",
+        "Sennheiser",
+        "Crestron"
+      ],
+      "relatedServices": [
+        "Conference Room Setup",
+        "KVM & AV Switching",
+        "UPS Backup",
+        "AMC"
+      ],
+      "caseStudyTemplate": {
+        "requirement": "Reliable and controlled meeting technology.",
+        "challenge": "Downtime, source control and support documentation matter.",
+        "gpsplApproach": "Plan conferencing, switching, audio, power backup and support process.",
+        "expectedOutcome": "Dependable collaboration with a clear service path."
+      },
+      "seo": {
+        "title": "BFSI Boardroom, AV & IT Infrastructure Solutions | GPSPL",
+        "description": "BFSI boardroom AV, secure meeting rooms, KVM, UPS and IT infrastructure solutions by GPSPL."
+      }
+    },
+    {
+      "name": "Media, Creative & Production",
+      "slug": "media",
+      "image": "assests/images/hero/wacom.webp",
+      "summary": "Wacom displays, review rooms, professional displays, KVM, AV switching and IT support.",
+      "clientExamples": [
+        "Creative teams",
+        "Production rooms",
+        "Training studios"
+      ],
+      "recommendedProducts": [
+        "Wacom displays",
+        "Professional monitors",
+        "Review-room AV",
+        "KVM",
+        "Connectivity"
+      ],
+      "relatedBrands": [
+        "Wacom",
+        "Samsung",
+        "Sony",
+        "BenQ",
+        "ATEN",
+        "HP",
+        "Dell"
+      ],
+      "relatedServices": [
+        "Creative Peripherals",
+        "IT Infrastructure",
+        "KVM & AV Switching",
+        "AV Integration"
+      ],
+      "caseStudyTemplate": {
+        "requirement": "Creative workflows with accurate displays and easy review.",
+        "challenge": "Workstations, displays and switching must stay reliable.",
+        "gpsplApproach": "Map pen-display use, display size, source switching, audio and network readiness.",
+        "expectedOutcome": "Smoother review and production support."
+      },
+      "seo": {
+        "title": "Media, Wacom & Creative Technology Solutions | GPSPL",
+        "description": "Wacom creative displays, professional monitors, review-room AV, KVM and IT support solutions by GPSPL."
+      }
+    },
+    {
+      "name": "Automotive Showrooms & Training",
+      "slug": "automotive",
+      "image": "assests/images/projects/gpspl-real/polished/training-conference-display.webp",
+      "summary": "Showroom LED, signage, interactive displays, training rooms, audio and support.",
+      "clientExamples": [
+        "Honda",
+        "Showrooms",
+        "Training spaces"
+      ],
+      "recommendedProducts": [
+        "Showroom LED",
+        "Digital signage",
+        "Interactive displays",
+        "Audio",
+        "Training room AV"
+      ],
+      "relatedBrands": [
+        "Absen",
+        "Samsung",
+        "LG",
+        "BenQ",
+        "MAXHUB",
+        "JBL",
+        "Harman"
+      ],
+      "relatedServices": [
+        "Active LED Installation",
+        "Digital Signage",
+        "Smart Classroom Setup",
+        "Professional Audio"
+      ],
+      "caseStudyTemplate": {
+        "requirement": "Impactful showroom visuals and easy training rooms.",
+        "challenge": "The customer area must look premium and staff spaces must be easy to run.",
+        "gpsplApproach": "Plan display brightness, content input, audio, power and support.",
+        "expectedOutcome": "Better showroom impact and cleaner training delivery."
+      },
+      "seo": {
+        "title": "Automotive Showroom LED, Signage & Training Room Solutions | GPSPL",
+        "description": "Automotive showroom LED, digital signage, interactive display, audio and training room solutions by GPSPL."
+      }
+    }
+  ]
+}

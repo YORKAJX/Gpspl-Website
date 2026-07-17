@@ -306,7 +306,7 @@
         "Display control",
         "Audio routing"
       ],
-      "image": "assests/images/products/conference-room-solutions.webp"
+      "image": "assests/images/projects/gpspl-real/polished/corporate-conference-room.webp"
     },
     {
       "clientName": "Command Room KVM & Source Workflow",
@@ -318,7 +318,7 @@
         "Video wall",
         "Rack planning"
       ],
-      "image": "assests/images/hero/video-wall-command-center.webp"
+      "image": "assests/images/projects/gpspl-real/polished/av-rack-infrastructure.webp"
     },
     {
       "clientName": "Auditorium Scene Automation",
@@ -371,11 +371,11 @@
         "caption": "Integrated AV system with control and connectivity planning"
       },
       {
-        "src": "assests/images/products/conference-room-solutions.webp",
+        "src": "assests/images/projects/gpspl-real/polished/corporate-conference-room.webp",
         "caption": "Boardroom control workflow for meetings and presentations"
       },
       {
-        "src": "assests/images/hero/video-wall-command-center.webp",
+        "src": "assests/images/projects/gpspl-real/polished/av-rack-infrastructure.webp",
         "caption": "Command room source routing and operator workflow"
       },
       {

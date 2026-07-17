@@ -369,3 +369,41 @@
         animation: none;
     }
 }
+
+/* Final FAQ QA lock */
+.faq-page {
+    max-width: 100% !important;
+    overflow-x: visible !important;
+}
+
+.faq-hero {
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    padding-block: clamp(104px, 8vw, 142px) clamp(62px, 7vw, 96px) !important;
+}
+
+.faq-hero::before,
+.faq-hero::after,
+.faq-hero-media {
+    left: 0 !important;
+    right: 0 !important;
+    width: auto !important;
+    max-width: 100% !important;
+}
+
+.faq-hero-content {
+    width: min(100% - 64px, 980px) !important;
+    max-width: 100% !important;
+}
+
+@media (max-width: 620px) {
+    .faq-hero {
+        padding-block: 88px 54px !important;
+    }
+
+    .faq-hero-content {
+        width: min(100% - 28px, 980px) !important;
+    }
+}

@@ -24,7 +24,7 @@
       "url": "/industries.html",
       "pageType": "Industry Index",
       "primaryCollection": "industries",
-      "editableSections": ["hero", "industryCards", "deliveryModel", "relatedServices", "faqs", "rfqCta"],
+      "editableSections": ["hero", "industryNavigation", "industryDetailBlocks", "recommendedProducts", "relatedBrands", "clientExamples", "caseStudyFramework", "faqs", "rfqCta"],
       "seoIntent": "Industries served by GPSPL for AV, IT, display, collaboration and support solutions"
     },
     {

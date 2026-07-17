@@ -21,7 +21,7 @@
     "metaDescription": "GPSPL supplies, designs, installs, commissions and supports active LED wall solutions including indoor LED walls, outdoor LED displays, COB and fine-pitch LED, controllers, mounts, calibration, AMC and post-installation support across India.",
     "keywords": "active LED wall solutions India, LED wall installation, indoor LED wall, outdoor LED display, fine pitch LED wall, COB LED display, Absen LED wall, LED video wall, digital signage LED wall, GPSPL",
     "canonicalUrl": "https://gpspl.co.in/active-led-wall-solutions.html",
-    "openGraphImage": "https://gpspl.co.in/assests/images/products/active-led-video-wall.webp",
+    "openGraphImage": "https://gpspl.co.in/assests/images/hero/video-wall-command-center.webp",
     "indexing": "index, follow",
     "schemaType": "Service",
     "slug": "active-led-wall-solutions",
@@ -33,7 +33,7 @@
     "eyebrow": "Active LED Display Solutions",
     "title": "Active LED Wall Solutions",
     "subtitle": "High-impact indoor and outdoor LED display systems supplied, designed, installed, calibrated and supported by GPSPL for lobbies, auditoriums, boardrooms, command centers, retail environments, campuses, hospitality venues and public display applications.",
-    "image": "assests/images/products/active-led-video-wall.webp",
+    "image": "assests/images/hero/video-wall-command-center.webp",
     "industryTags": [
       "Corporate Lobbies",
       "Auditoriums",
@@ -112,7 +112,7 @@
         "label": "Calibration, training, AMC and technical support"
       }
     ],
-    "image": "assests/images/products/active-led-video-wall.webp"
+    "image": "assests/images/hero/video-wall-command-center.webp"
   },
   "approach": [
     {
@@ -277,7 +277,7 @@
         "Mounting",
         "Calibration"
       ],
-      "image": "assests/images/products/active-led-video-wall.webp"
+      "image": "assests/images/hero/video-wall-command-center.webp"
     },
     {
       "clientName": "Auditorium Visual Upgrade",
@@ -289,7 +289,7 @@
         "Commissioning",
         "Training"
       ],
-      "image": "assests/images/hero/led.jpg"
+      "image": "assests/images/projects/gpspl-real/polished/hospitality-banquet-av.webp"
     },
     {
       "clientName": "Command Center Display Environment",
@@ -301,7 +301,7 @@
         "Controller",
         "AMC"
       ],
-      "image": "assests/images/hero/VideoWall_3.webp"
+      "image": "assests/images/hero/video-wall-command-center.webp"
     }
   ],
   "caseStudies": [
@@ -338,19 +338,19 @@
     ],
     "images": [
       {
-        "src": "assests/images/products/active-led-video-wall.webp",
+        "src": "assests/images/hero/video-wall-command-center.webp",
         "caption": "Active LED wall system for premium enterprise display environments"
       },
       {
-        "src": "assests/images/hero/led.jpg",
+        "src": "assests/images/projects/gpspl-real/polished/hospitality-banquet-av.webp",
         "caption": "Large-format LED display environment for events and hospitality"
       },
       {
-        "src": "assests/images/solutions/activeled.webp",
+        "src": "assests/images/projects/gpspl-real/polished/retail-mall-wayfinding-signage.webp",
         "caption": "LED display solution for showroom and public communication"
       },
       {
-        "src": "assests/images/hero/VideoWall_3.webp",
+        "src": "assests/images/hero/video-wall-command-center.webp",
         "caption": "Display wall environment for command and monitoring applications"
       }
     ]
@@ -427,7 +427,7 @@
   "cta": {
     "headline": "Plan an active LED wall with the right pixel pitch, brightness and support model.",
     "subheading": "Share your wall size, viewing distance, indoor or outdoor use and content requirement. GPSPL will help shortlist the right LED display architecture and integration scope.",
-    "backgroundImage": "assests/images/products/active-led-video-wall.webp",
+    "backgroundImage": "assests/images/hero/video-wall-command-center.webp",
     "buttons": [
       {
         "label": "Request LED Wall Quote",

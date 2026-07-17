@@ -1008,3 +1008,40 @@
         transition: none;
     }
 }
+
+/* Final contact QA lock */
+.contact-page,
+.contact-hero {
+    max-width: 100% !important;
+    overflow-x: visible !important;
+}
+
+.contact-hero {
+    height: auto !important;
+    min-height: 0 !important;
+    padding-block: clamp(116px, 9vw, 154px) clamp(66px, 7vw, 106px) !important;
+    overflow: visible !important;
+}
+
+.contact-hero::before,
+.contact-hero::after {
+    left: 0 !important;
+    right: 0 !important;
+    width: auto !important;
+    max-width: 100% !important;
+}
+
+.contact-hero-grid {
+    width: min(100% - 64px, 1320px) !important;
+    max-width: 100% !important;
+}
+
+@media (max-width: 760px) {
+    .contact-hero {
+        padding-block: 96px 58px !important;
+    }
+
+    .contact-hero-grid {
+        width: min(100% - 28px, 1320px) !important;
+    }
+}

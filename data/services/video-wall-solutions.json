@@ -277,7 +277,7 @@
         "Signal routing",
         "AMC"
       ],
-      "image": "assests/images/hero/VideoWall_3.webp"
+      "image": "assests/images/hero/video-wall-command-center.webp"
     },
     {
       "clientName": "Corporate Experience Center",
@@ -289,7 +289,7 @@
         "Control",
         "Commissioning"
       ],
-      "image": "assests/images/products/active-led-video-wall.webp"
+      "image": "assests/images/projects/gpspl-real/polished/hospitality-lobby-display.webp"
     },
     {
       "clientName": "Campus Auditorium Visual System",
@@ -301,7 +301,7 @@
         "Mounting",
         "Training"
       ],
-      "image": "assests/images/hero/led.jpg"
+      "image": "assests/images/projects/gpspl-real/polished/training-conference-display.webp"
     }
   ],
   "caseStudies": [
@@ -342,15 +342,15 @@
         "caption": "Command center style video wall and control-panel visual environment"
       },
       {
-        "src": "assests/images/products/active-led-video-wall.webp",
+        "src": "assests/images/projects/gpspl-real/polished/hospitality-lobby-display.webp",
         "caption": "Active LED video wall system for enterprise display environments"
       },
       {
-        "src": "assests/images/hero/VideoWall_3.webp",
+        "src": "assests/images/hero/video-wall-command-center.webp",
         "caption": "Video wall environment for monitoring and control-room applications"
       },
       {
-        "src": "assests/images/solutions/signange.webp",
+        "src": "assests/images/projects/gpspl-real/polished/retail-mall-wayfinding-signage.webp",
         "caption": "Digital signage display workflow for public communication spaces"
       }
     ]

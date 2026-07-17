@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     function loadModule(moduleId, filePath) {
-        fetch(filePath, { cache: "no-store" })
+        fetch(filePath, { cache: "force-cache" })
             .then(response => {
                 if (!response.ok) throw new Error(`Error loading ${filePath}`);
                 return response.text();
@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(error => console.error(error));
     }
 
-    loadModule("header-container", "/modules/header.html?v=20260615");
-    loadModule("footer-container", "/modules/footer.html");
+    loadModule("header-container", "/modules/header.html?v=20260715");
+    loadModule("footer-container", "/modules/footer.html?v=20260715");
 
     function initHeaderState() {
         const currentPath = window.location.pathname === "/" ? "/index.html" : window.location.pathname;

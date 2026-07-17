@@ -37,9 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
             { name: "Learning Space Upgrade", description: "Classroom, training and presentation readiness" }
         ];
         while (list.length < 4) {
-            const app = applicationPool[list.length % applicationPool.length];
+            const appRaw = applicationPool[list.length % applicationPool.length];
+            const app = typeof appRaw === "string" ? { name: appRaw, description: appRaw } : appRaw;
             list.push({
-                title: `${app.name} support plan`,
+                title: `${app.name || "Project"} support plan`,
                 challenge: `The client needed a clear, reliable ${data.hero.title.toLowerCase()} approach for ${String(app.description || app.name).toLowerCase()}.`,
                 solution: "GPSPL reviewed the room use, product fit, cabling, power, installation scope and service expectations before recommending the stack.",
                 implementation: "The solution was planned for supply, installation, configuration, testing, documentation and handover with clear ownership.",
@@ -220,7 +221,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         <p class="service-eyebrow">GPSPL Expertise</p>
                         <h2>${escapeHtml(data.introduction.heading)}</h2>
                         <p>${escapeHtml(data.introduction.description)}</p>
-                        <div class="service-stat-row">${data.introduction.statistics.map(item => `<div><strong>${escapeHtml(item.value)}</strong><span>${escapeHtml(item.label)}</span></div>`).join("")}</div>
                     </div>
                     <figure class="service-intro-media reveal">
                         <img class="service-intro-image" src="${escapeHtml(data.introduction.image)}" alt="${escapeHtml(data.introduction.heading)}" loading="lazy">
@@ -229,6 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <strong>${escapeHtml(data.hero.title)}</strong>
                         </figcaption>
                     </figure>
+                    <div class="service-stat-row reveal">${data.introduction.statistics.map(item => `<div><strong>${escapeHtml(item.value)}</strong><span>${escapeHtml(item.label)}</span></div>`).join("")}</div>
                 </div>
             </section>
 
@@ -407,7 +408,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function renderPartnerTechnologyPage(data, parentName, parentHref) {
-        const brands = (data.partners || []).slice(0, 8);
+        const brands = data.partners || [];
         const productFamilies = (data.serviceCards || []).slice(0, 8);
         const applications = (data.applications || []).slice(0, 8);
         const leadBrands = brands.slice(0, 4);
@@ -480,7 +481,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         ${productFamilies.map((card, index) => `
                             <article class="partner-tech-product-card reveal">
                                 <span>${String(index + 1).padStart(2, "0")}</span>
-                                <i class="fas ${escapeHtml(card.icon)}" aria-hidden="true"></i>
+                                ${productMark(card, brands)}
                                 <h3>${escapeHtml(card.title)}</h3>
                                 <p>${escapeHtml(card.description)}</p>
                             </article>
@@ -515,13 +516,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <section class="service-cta partner-tech-cta" data-admin-section="partner-technology-cta" style="--service-cta-image: url('${escapeHtml(assetUrl(data.cta.backgroundImage || data.hero.image))}')">
                 <div class="container reveal">
-                    <p class="service-eyebrow">Talk to GPSPL</p>
-                    <h2>${escapeHtml(data.cta.headline)}</h2>
-                    <p>${escapeHtml(data.cta.subheading)}</p>
+                    <div class="partner-tech-cta-copy">
+                        <p class="service-eyebrow">Talk to GPSPL</p>
+                        <h2>${escapeHtml(data.cta.headline)}</h2>
+                        <p>${escapeHtml(data.cta.subheading)}</p>
+                    </div>
                     <div class="service-hero-actions">${data.cta.buttons.map(button).join("")}</div>
                 </div>
             </section>
         `;
+    }
+
+    function productMark(card, brands = []) {
+        const title = (card.title || "").toLowerCase();
+        const description = (card.description || "").toLowerCase();
+        const text = `${title} ${description}`;
+        const brandMap = [
+            { keys: ["kvm", "aten", "source routing", "switching", "extension"], brand: "ATEN" },
+            { keys: ["crestron", "touch panel", "room control", "control interface"], brand: "Crestron" },
+            { keys: ["amx", "automation", "lighting", "scene"], brand: "AMX" },
+            { keys: ["active led", "video wall", "led display"], brand: "Absen" },
+            { keys: ["projector", "projection", "presentation visual"], brand: "Epson" },
+            { keys: ["ptz", "lecture capture", "camera"], brand: "Lumens" },
+            { keys: ["video conferencing", "video bar", "meeting-room audio", "poly"], brand: "HP Poly" },
+            { keys: ["sony", "ceiling microphone"], brand: "Sony" },
+            { keys: ["lg", "business display", "commercial tv"], brand: "LG" },
+            { keys: ["maxhub"], brand: "MAXHUB" },
+            { keys: ["newline"], brand: "Newline" },
+            { keys: ["commercial display", "signage", "collaboration screen"], brand: "Samsung" },
+            { keys: ["microphone", "speech capture"], brand: "Sennheiser" },
+            { keys: ["professional audio", "auditorium", "speaker", "dsp"], brand: "Harman" },
+            { keys: ["interactive", "classroom"], brand: "BenQ" }
+        ];
+        const match = brandMap.find(item => item.keys.some(key => text.includes(key)));
+        const partner = match ? brands.find(brand => (brand.name || "").toLowerCase().includes(match.brand.toLowerCase())) : null;
+        if (partner?.logo) {
+            return `<div class="partner-tech-product-mark logo-mark">${logo(partner)}</div>`;
+        }
+        return `<div class="partner-tech-product-mark"><i class="fas ${escapeHtml(card.icon || defaultProductIcon(card.title))}" aria-hidden="true"></i></div>`;
     }
 
     function initServiceReveal() {
@@ -645,22 +677,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function simplePlanningTitle(data) {
-        const service = data.hero?.title || "technology solution";
-        return `How GPSPL plans ${service.toLowerCase()}`;
+        return "Plan the room before the product";
     }
 
     function simplePlanningOverview(data) {
-        const service = data.hero?.title || "technology solution";
-        return `Tell us what you need, where it will be used and how many people will use it. GPSPL then checks the site, suggests the right products, plans installation and supports the system after handover.`;
+        return "GPSPL first understands the room, users, workflow, site condition and support expectation. Then we suggest the product stack, installation plan and handover process.";
     }
 
     function planningConsiderations(data) {
         return [
-            `What the system must do: meeting, teaching, display, audio, video wall, signage or IT support.`,
-            "Room size, user count, daily usage and expected performance.",
-            "Existing products, cabling, power, network and mounting condition.",
-            "Product compatibility across display, audio, camera, control, connectivity and support.",
-            "Warranty, AMC, training, documentation and future upgrade needs."
+            "Room purpose, users, content type and daily usage.",
+            "Display size, viewing distance, audio pickup and lighting.",
+            "Existing cabling, power, network and mounting condition.",
+            "Compatibility, warranty, training, AMC and future support."
         ];
     }
 
@@ -668,9 +697,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return [
             "Room or site photos with city/location",
             "Room size, screen size or user count",
-            "Product category, preferred brand or existing model",
+            "Preferred brand or existing model",
             "Quantity, timeline and delivery location",
-            "Installation, warranty, AMC or support requirement"
+            "Installation, AMC or warranty requirement"
         ];
     }
 

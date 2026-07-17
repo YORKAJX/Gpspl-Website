@@ -19,7 +19,7 @@
     "metaDescription": "GPSPL supplies, designs, integrates, commissions and supports GPSPL provides active LED wall installation services including site survey, structure planning, LED cabinet mounting, power and data cabling, controller setup, screen mapping, calibration, commissioning, AMC and post-installation support across India.",
     "keywords": "active LED wall installation India, LED wall mounting, LED cabinet installation, LED wall commissioning, LED wall calibration, indoor LED installation, outdoor LED installation, GPSPL",
     "canonicalUrl": "https://gpspl.co.in/active-led-wall-installation.html",
-    "openGraphImage": "https://gpspl.co.in/assests/images/products/active-led-video-wall.webp",
+    "openGraphImage": "https://gpspl.co.in/assests/images/hero/video-wall-command-center.webp",
     "indexing": "index, follow",
     "schemaType": "Service",
     "slug": "active-led-wall-installation",
@@ -31,7 +31,7 @@
     "eyebrow": "Installation & Commissioning Service",
     "title": "Active LED Wall Installation, Calibration & Support",
     "subtitle": "GPSPL handles LED wall installation from site readiness and cabinet mounting to controller setup, screen mapping, visual calibration, commissioning, user handover, AMC and technical support.",
-    "image": "assests/images/products/active-led-video-wall.webp",
+    "image": "assests/images/hero/video-wall-command-center.webp",
     "industryTags": [
       "Indoor LED",
       "Outdoor LED",
@@ -275,7 +275,7 @@
         "Calibration",
         "Handover"
       ],
-      "image": "assests/images/products/active-led-video-wall.webp"
+      "image": "assests/images/hero/video-wall-command-center.webp"
     },
     {
       "clientName": "Auditorium LED Installation",
@@ -336,7 +336,7 @@
     ],
     "images": [
       {
-        "src": "assests/images/products/active-led-video-wall.webp",
+        "src": "assests/images/hero/video-wall-command-center.webp",
         "caption": "Active LED wall installation and commissioning environment"
       },
       {
@@ -429,7 +429,7 @@
   "cta": {
     "headline": "Need LED wall installation, commissioning or AMC support?",
     "subheading": "Share site photos, wall dimensions, display type, controller details and timeline. GPSPL will help plan installation, commissioning and support scope.",
-    "backgroundImage": "assests/images/products/active-led-video-wall.webp",
+    "backgroundImage": "assests/images/hero/video-wall-command-center.webp",
     "buttons": [
       {
         "label": "Request Installation Support",

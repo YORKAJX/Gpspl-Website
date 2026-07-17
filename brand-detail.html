@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,8 +12,9 @@
     <meta property="og:url" content="https://gpspl.co.in/brand-detail.html">
     <title>Brand Details | GPSPL Technology Distribution & Integration</title>
     <link rel="canonical" href="https://gpspl.co.in/brand-detail.html">
-    <link rel="stylesheet" href="css/base.css?v=20260714-process-resource-fix">
+    <link rel="stylesheet" href="css/base.css?v=20260714-live-polish">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="JS/seo.js" defer></script>
 </head>
 <body>
     <div id="header-container"></div>
@@ -32,18 +33,20 @@
                         <div id="brandTrustNote" class="brand-trust-note">Distribution, integration and after-sales support by GPSPL.</div>
                         <div class="brand-detail-actions">
                             <a href="/contact.html" class="btn-primary">Request Quote</a>
+                            <a id="brandOfficialWebsite" href="#" class="btn-secondary brand-official-link" target="_blank" rel="noopener noreferrer">Go to Company Website</a>
                             <a href="/technology-partners.html" class="btn-secondary">View All Partners</a>
                         </div>
                     </div>
                     <div class="brand-detail-logo-card">
                         <img id="brandLogo" src="/assests/images/gpspl.png" alt="GPSPL technology partner">
                         <span id="brandStatus">Technology ecosystem</span>
+                        <div id="brandHeroCategories" class="brand-hero-categories"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-padding">
+        <section class="section-padding brand-detail-main-section">
             <div class="container brand-detail-layout">
                 <article class="brand-detail-panel">
                     <p class="section-eyebrow">What GPSPL supports</p>
@@ -53,26 +56,37 @@
                 </article>
 
                 <article class="brand-detail-panel">
-                    <p class="section-eyebrow">Delivery model</p>
-                    <h2>Supply + Design + Integration + Support</h2>
-                    <div class="brand-process-grid">
-                        <div><strong>01</strong><span>Requirement Mapping</span><p>Room, user, performance and compatibility requirements are reviewed before recommendation.</p></div>
-                        <div><strong>02</strong><span>Product Supply</span><p>GPSPL supports guided procurement across product families and brand ecosystems.</p></div>
-                        <div><strong>03</strong><span>Deployment</span><p>Installation, cabling, mounting, configuration, commissioning and user handover are planned as one workflow.</p></div>
-                        <div><strong>04</strong><span>Lifecycle Support</span><p>AMC, technical support, service coordination and warranty extension options are aligned where applicable.</p></div>
-                    </div>
+                    <p class="section-eyebrow">Where this brand fits</p>
+                    <h2 id="brandUseTitle">Use in Real Projects</h2>
+                    <div id="brandUseCases" class="brand-use-grid"></div>
                 </article>
+            </div>
+        </section>
+
+        <section class="section-padding brand-detail-delivery-section">
+            <div class="container">
+                <header class="brand-detail-section-heading">
+                    <p class="section-eyebrow">GPSPL delivery model</p>
+                    <h2>From brand selection to working installation.</h2>
+                    <p id="brandDeliveryIntro">GPSPL helps with product selection, pricing, supply, installation, commissioning, warranty coordination and AMC support.</p>
+                </header>
+                <div id="brandProcessGrid" class="brand-process-grid"></div>
             </div>
         </section>
 
         <section class="section-padding brand-detail-seo-section">
             <div class="container">
-                <header class="section-title">
-                    <p class="section-eyebrow">RFQ ready</p>
-                    <h2 id="brandRfqTitle">Plan your requirement with GPSPL</h2>
-                    <p id="brandRfqCopy">Share your brand, product category, quantity, location and support expectations. GPSPL will help map the right supply and integration approach.</p>
-                    <a href="/contact.html" class="btn-primary">Talk to an Expert</a>
-                </header>
+                <div class="brand-rfq-card">
+                    <div>
+                        <p class="section-eyebrow">RFQ ready</p>
+                        <h2 id="brandRfqTitle">Plan your requirement with GPSPL</h2>
+                        <p id="brandRfqCopy">Share your brand, product category, quantity, location and support expectations. GPSPL will help map the right supply and integration approach.</p>
+                    </div>
+                    <div class="brand-detail-actions">
+                        <a href="/contact.html" class="btn-primary">Talk to an Expert</a>
+                        <a id="brandOfficialWebsiteBottom" href="#" class="btn-secondary brand-official-link" target="_blank" rel="noopener noreferrer">Go to Company Website</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -80,6 +94,6 @@
     <div id="footer-container"></div>
     <script src="JS/main.js?v=20260629-finalprep"></script>
     <script src="JS/cms-seo-schema.js?v=20260629-finalprep"></script>
-    <script src="JS/brand-detail.js?v=20260714-partner-directory-polish"></script>
+    <script src="JS/brand-detail.js?v=20260714-brand-detail-polish"></script>
 </body>
 </html>

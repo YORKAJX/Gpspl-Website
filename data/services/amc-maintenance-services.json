@@ -283,7 +283,7 @@
         "Video conferencing",
         "Control"
       ],
-      "image": "assests/images/products/conference-room-solutions.webp"
+      "image": "assests/images/projects/gpspl-real/polished/corporate-conference-room.webp"
     },
     {
       "clientName": "Campus AV Support Program",
@@ -307,7 +307,7 @@
         "Source testing",
         "AMC"
       ],
-      "image": "assests/images/products/active-led-video-wall.webp"
+      "image": "assests/images/hero/video-wall-command-center.webp"
     }
   ],
   "caseStudies": [
@@ -348,11 +348,11 @@
         "caption": "AMC and maintenance support for enterprise AV and IT systems"
       },
       {
-        "src": "assests/images/products/conference-room-solutions.webp",
+        "src": "assests/images/projects/gpspl-real/polished/corporate-conference-room.webp",
         "caption": "Meeting room technology support and preventive maintenance"
       },
       {
-        "src": "assests/images/products/active-led-video-wall.webp",
+        "src": "assests/images/hero/video-wall-command-center.webp",
         "caption": "LED wall support, calibration and planned maintenance"
       },
       {
