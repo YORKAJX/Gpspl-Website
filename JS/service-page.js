@@ -278,7 +278,12 @@ document.addEventListener("DOMContentLoaded", () => {
                             <i class="fas ${escapeHtml(card.icon)}" aria-hidden="true"></i>
                             <h3>${escapeHtml(card.title)}</h3>
                             <p>${escapeHtml(card.description)}</p>
-                            <span>Supplied, installed and supported</span>
+                            <ul class="service-card-points">
+                                ${serviceCardPoints(card).map(point => `<li>${escapeHtml(point)}</li>`).join("")}
+                            </ul>
+                            <a href="${escapeHtml(card.url || "/contact.html")}" aria-label="View ${escapeHtml(card.title)} details">
+                                View Details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
                         </article>`).join("")}</div>
                 </div>
             </section>
@@ -727,6 +732,45 @@ document.addEventListener("DOMContentLoaded", () => {
             url: "/contact.html"
         }));
         return [...serviceTags, ...heroTags].slice(0, 7);
+    }
+
+    function serviceCardPoints(card = {}) {
+        const title = String(card.title || "").toLowerCase();
+        const fallback = [
+            "Right product selection",
+            "Clean installation planning",
+            "Support-ready handover"
+        ];
+
+        if (title.includes("amc") || title.includes("support") || title.includes("warranty")) {
+            return ["Preventive checks", "Warranty coordination", "Troubleshooting and support"];
+        }
+        if (title.includes("installation") || title.includes("mounting") || title.includes("structure")) {
+            return ["Site readiness", "Mounting and cabling", "Handover documentation"];
+        }
+        if (title.includes("controller") || title.includes("processing") || title.includes("switching")) {
+            return ["Source routing", "Screen mapping", "User workflow setup"];
+        }
+        if (title.includes("calibration") || title.includes("commissioning")) {
+            return ["Display testing", "Signal verification", "User training"];
+        }
+        if (title.includes("led") || title.includes("video wall") || title.includes("display")) {
+            return ["Viewing-distance planning", "Controller and cabling fit", "Service access readiness"];
+        }
+        if (title.includes("audio") || title.includes("microphone") || title.includes("speaker")) {
+            return ["Room pickup planning", "Speaker coverage", "DSP and tuning support"];
+        }
+        if (title.includes("conference") || title.includes("boardroom") || title.includes("collaboration")) {
+            return ["Camera and audio fit", "Wireless sharing", "Simple user controls"];
+        }
+        if (title.includes("projector") || title.includes("projection")) {
+            return ["Brightness and screen size", "Mounting position", "Connectivity planning"];
+        }
+        if (title.includes("ups") || title.includes("power")) {
+            return ["Load calculation", "Backup runtime", "Service and battery planning"];
+        }
+
+        return fallback;
     }
 
     function sectionHeading(eyebrow, title, text, centered = false) {
