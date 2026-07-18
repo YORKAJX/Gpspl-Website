@@ -7783,13 +7783,6 @@ main .service-proof-band * {
     color: currentColor !important;
 }
 
-.service-page .service-capability-card > i:first-child:empty::before,
-.service-page .service-application-grid i:empty::before,
-.service-page .service-feature-grid i:empty::before,
-.service-page .service-download-grid i:empty::before {
-    content: "\25C6" !important;
-}
-
 .service-page .service-capability-card h3 {
     max-width: none !important;
     margin: 14px 0 10px !important;

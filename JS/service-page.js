@@ -275,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     )}
                     <div class="service-card-grid">${data.serviceCards.map(card => `
                         <article class="service-capability-card reveal" data-cms-entity="service">
-                            <i class="fas ${escapeHtml(card.icon)}" aria-hidden="true"></i>
+                            <i class="fas ${escapeHtml(serviceCardIcon(card))}" aria-hidden="true"></i>
                             <h3>${escapeHtml(card.title)}</h3>
                             <p>${escapeHtml(card.description)}</p>
                             <ul class="service-card-points">
@@ -771,6 +771,33 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         return fallback;
+    }
+
+    function serviceCardIcon(card = {}) {
+        const title = String(card.title || "").toLowerCase();
+        const text = `${card.title || ""} ${card.description || ""}`.toLowerCase();
+
+        if (title.includes("digital signage") || title.includes("signage")) return "fa-sign";
+        if (title.includes("processor") || title.includes("controller") || title.includes("switching") || title.includes("matrix")) return "fa-sliders-h";
+        if (title.includes("control room") || title.includes("command") || title.includes("noc") || title.includes("surveillance")) return "fa-chart-line";
+        if (title.includes("active led") || title.includes("led wall")) return "fa-th-large";
+        if (title.includes("lcd video wall") || title.includes("video wall")) return "fa-border-all";
+        if (text.includes("mounting") || text.includes("structure") || text.includes("alignment") || text.includes("installation")) return "fa-tools";
+        if (text.includes("calibration") || text.includes("commissioning") || text.includes("testing")) return "fa-tachometer-alt";
+        if (text.includes("amc") || text.includes("warranty") || text.includes("support") || text.includes("maintenance")) return "fa-headset";
+
+        if (text.includes("conference") || text.includes("boardroom") || text.includes("meeting")) return "fa-video";
+        if (text.includes("camera") || text.includes("ptz")) return "fa-camera";
+        if (text.includes("microphone") || text.includes("mic")) return "fa-microphone";
+        if (text.includes("speaker") || text.includes("audio") || text.includes("dsp") || text.includes("amplifier")) return "fa-volume-up";
+        if (text.includes("projector") || text.includes("projection")) return "fa-video";
+        if (text.includes("interactive") || text.includes("classroom") || text.includes("display panel")) return "fa-chalkboard-teacher";
+        if (text.includes("kvm") || text.includes("av switching")) return "fa-network-wired";
+        if (text.includes("ups") || text.includes("power") || text.includes("backup")) return "fa-battery-full";
+        if (text.includes("server") || text.includes("storage") || text.includes("networking") || text.includes("it infrastructure")) return "fa-server";
+        if (text.includes("wacom") || text.includes("creative") || text.includes("peripheral")) return "fa-pen-nib";
+
+        return card.icon || "fa-layer-group";
     }
 
     function sectionHeading(eyebrow, title, text, centered = false) {
