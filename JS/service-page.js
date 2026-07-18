@@ -777,20 +777,20 @@ document.addEventListener("DOMContentLoaded", () => {
         const title = String(card.title || "").toLowerCase();
         const text = `${card.title || ""} ${card.description || ""}`.toLowerCase();
 
-        if (title.includes("digital signage") || title.includes("signage")) return "fa-sign";
-        if (title.includes("processor") || title.includes("controller") || title.includes("switching") || title.includes("matrix")) return "fa-sliders-h";
+        if (title.includes("digital signage") || title.includes("signage")) return "fa-sign-hanging";
+        if (title.includes("processor") || title.includes("controller") || title.includes("switching") || title.includes("matrix")) return "fa-sliders";
         if (title.includes("control room") || title.includes("command") || title.includes("noc") || title.includes("surveillance")) return "fa-chart-line";
-        if (title.includes("active led") || title.includes("led wall")) return "fa-th-large";
+        if (title.includes("active led") || title.includes("led wall")) return "fa-table-cells-large";
         if (title.includes("lcd video wall") || title.includes("video wall")) return "fa-border-all";
-        if (text.includes("mounting") || text.includes("structure") || text.includes("alignment") || text.includes("installation")) return "fa-tools";
-        if (text.includes("calibration") || text.includes("commissioning") || text.includes("testing")) return "fa-tachometer-alt";
+        if (text.includes("mounting") || text.includes("structure") || text.includes("alignment") || text.includes("installation")) return "fa-screwdriver-wrench";
+        if (text.includes("calibration") || text.includes("commissioning") || text.includes("testing")) return "fa-gauge-high";
         if (text.includes("amc") || text.includes("warranty") || text.includes("support") || text.includes("maintenance")) return "fa-headset";
 
         if (text.includes("conference") || text.includes("boardroom") || text.includes("meeting")) return "fa-video";
         if (text.includes("camera") || text.includes("ptz")) return "fa-camera";
         if (text.includes("microphone") || text.includes("mic")) return "fa-microphone";
         if (text.includes("speaker") || text.includes("audio") || text.includes("dsp") || text.includes("amplifier")) return "fa-volume-up";
-        if (text.includes("projector") || text.includes("projection")) return "fa-video";
+        if (text.includes("projector") || text.includes("projection")) return "fa-display";
         if (text.includes("interactive") || text.includes("classroom") || text.includes("display panel")) return "fa-chalkboard-teacher";
         if (text.includes("kvm") || text.includes("av switching")) return "fa-network-wired";
         if (text.includes("ups") || text.includes("power") || text.includes("backup")) return "fa-battery-full";

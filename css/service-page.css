@@ -7773,7 +7773,11 @@ main .service-proof-band * {
     background: linear-gradient(135deg, #d72f2f 0%, #ef4444 100%) !important;
     color: #ffffff !important;
     box-shadow: 0 14px 28px rgba(211, 47, 47, 0.18) !important;
-    font-size: 1.05rem !important;
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free" !important;
+    font-size: 1.22rem !important;
+    font-style: normal !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
 }
 
 .service-page .service-capability-card > i:first-child::before,
