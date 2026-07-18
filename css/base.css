@@ -16451,3 +16451,88 @@ body:has(#home.hero) .testimonial-dots {
         grid-template-columns: 1fr !important;
     }
 }
+
+/* Homepage hero proof strip final fix.
+   The hero has four proof items, so desktop must not force a three-column wrap. */
+body:has(#home.hero) #home.hero {
+    min-height: max(760px, calc(100vh - 40px)) !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: hidden !important;
+}
+
+body:has(#home.hero) #home .hero-content {
+    position: relative !important;
+    z-index: 3 !important;
+    padding-block: clamp(104px, 9vw, 138px) clamp(92px, 7vw, 124px) !important;
+}
+
+body:has(#home.hero) #home .hero-proof {
+    display: grid !important;
+    width: min(100%, 1040px) !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    margin: 36px 0 0 !important;
+    transform: none !important;
+    overflow: hidden !important;
+    border-radius: 18px !important;
+    z-index: 4 !important;
+}
+
+body:has(#home.hero) #home .hero-proof span {
+    min-width: 0 !important;
+    min-height: 92px !important;
+    padding: 18px 20px !important;
+    overflow: visible !important;
+}
+
+body:has(#home.hero) #home .hero-proof strong {
+    white-space: nowrap !important;
+}
+
+body:has(#home.hero) #home + .premium-about {
+    margin-top: 0 !important;
+    padding-top: clamp(76px, 7vw, 110px) !important;
+}
+
+@media (max-width: 980px) {
+    body:has(#home.hero) #home .hero-proof {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        width: min(100%, 720px) !important;
+    }
+}
+
+@media (max-width: 620px) {
+    body:has(#home.hero) #home.hero {
+        min-height: auto !important;
+    }
+
+    body:has(#home.hero) #home .hero-content {
+        padding-block: 84px 72px !important;
+    }
+
+    body:has(#home.hero) #home .hero-proof {
+        grid-template-columns: 1fr !important;
+    }
+
+    body:has(#home.hero) #home .hero-proof span {
+        min-height: 78px !important;
+    }
+}
+
+/* Homepage hero layout lock: keep proof stats inside the hero flow, never under the next section. */
+body:has(#home.hero) #home.hero {
+    display: block !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding-block: 0 !important;
+    overflow: hidden !important;
+}
+
+body:has(#home.hero) #home.hero .hero-content {
+    box-sizing: border-box !important;
+    min-height: max(760px, calc(100vh - 40px)) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    padding-block: clamp(42px, 5vw, 66px) clamp(50px, 5vw, 78px) !important;
+}
