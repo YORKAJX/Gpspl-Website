@@ -16885,11 +16885,18 @@ body:has(#home.hero) #home .hero-content {
 }
 
 .hero-message-copy .main-headline {
-    max-width: 980px;
+    display: grid;
+    gap: 0.03em;
+    max-width: 940px;
     margin-bottom: 24px;
     color: #ffffff;
-    font-size: clamp(48px, 7vw, 104px);
-    line-height: 0.98;
+    font-size: clamp(54px, 6.3vw, 112px);
+    line-height: 0.9;
+}
+
+.hero-message-copy .main-headline span {
+    display: block;
+    white-space: nowrap;
 }
 
 .hero-message-copy .hero-description {
@@ -16955,6 +16962,11 @@ body:has(#home.hero) #home .hero-content {
     }
 
     .hero-message-copy .main-headline {
-        font-size: clamp(42px, 14vw, 72px);
+        font-size: clamp(42px, 13vw, 72px);
+        line-height: 0.92;
+    }
+
+    .hero-message-copy .main-headline span {
+        white-space: normal;
     }
 }
