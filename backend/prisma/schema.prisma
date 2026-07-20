@@ -1,0 +1,133 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  QUALIFIED
+  PROPOSAL_SENT
+  WON
+  LOST
+  SPAM
+}
+
+enum UploadPurpose {
+  LEAD_ATTACHMENT
+  PRODUCT_DATASHEET
+  BROCHURE
+  ADMIN_ASSET
+}
+
+model User {
+  id           String         @id @default(uuid())
+  name         String
+  email        String         @unique
+  passwordHash String
+  role         Role           @default(USER)
+  isActive     Boolean        @default(true)
+  lastLoginAt  DateTime?
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  tokens       RefreshToken[]
+  uploads      UploadedFile[]
+  auditLogs    AuditLog[]
+
+  @@index([role, isActive])
+  @@index([createdAt])
+}
+
+model RefreshToken {
+  id         String    @id @default(uuid())
+  tokenHash  String    @unique
+  userId     String
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  ipAddress  String?
+  userAgent  String?
+  expiresAt  DateTime
+  revokedAt  DateTime?
+  createdAt  DateTime  @default(now())
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@index([revokedAt])
+}
+
+model Lead {
+  id             String     @id @default(uuid())
+  name           String
+  email          String
+  phone          String
+  company        String?
+  requirement    String
+  location       String?
+  message        String
+  source         String     @default("website")
+  pageUrl        String?
+  status         LeadStatus @default(NEW)
+  ipAddress      String?
+  userAgent      String?
+  referrer       String?
+  utmSource      String?
+  utmMedium      String?
+  utmCampaign    String?
+  utmTerm        String?
+  utmContent     String?
+  consent        Boolean    @default(true)
+  spamScore      Int        @default(0)
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+  attachments    UploadedFile[]
+
+  @@index([status, createdAt])
+  @@index([email])
+  @@index([phone])
+  @@index([requirement])
+  @@index([createdAt])
+}
+
+model UploadedFile {
+  id           String        @id @default(uuid())
+  originalName String
+  storedName   String
+  mimeType     String
+  sizeBytes    Int
+  storagePath  String
+  purpose      UploadPurpose @default(LEAD_ATTACHMENT)
+  uploadedById String?
+  uploadedBy   User?         @relation(fields: [uploadedById], references: [id], onDelete: SetNull)
+  leadId       String?
+  lead         Lead?         @relation(fields: [leadId], references: [id], onDelete: SetNull)
+  createdAt    DateTime      @default(now())
+
+  @@index([purpose])
+  @@index([leadId])
+  @@index([uploadedById])
+}
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  actorId   String?
+  actor     User?    @relation(fields: [actorId], references: [id], onDelete: SetNull)
+  action    String
+  entity    String
+  entityId  String?
+  metadata  Json?
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime @default(now())
+
+  @@index([actorId])
+  @@index([entity, entityId])
+  @@index([createdAt])
+}

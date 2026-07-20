@@ -256,14 +256,70 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function initLeadForms() {
+        function buildLeadPayload(form, formName, source) {
+            const formData = new FormData(form);
+            const payload = {
+                name: formData.get('name') || '',
+                email: formData.get('email') || '',
+                phone: formData.get('phone') || '',
+                company: formData.get('company') || '',
+                requirement: formData.get('requirement') || source || 'Website enquiry',
+                location: formData.get('location') || '',
+                message: formData.get('message') || '',
+                source: source || formName,
+                pageUrl: formData.get('page_url') || window.location.href,
+                botField: formData.get('bot-field') || '',
+                consent: true
+            };
+
+            const params = new URLSearchParams(window.location.search);
+            ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(key => {
+                if (!params.has(key)) return;
+                const camelKey = key.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase());
+                payload[camelKey] = params.get(key);
+            });
+
+            return payload;
+        }
+
+        async function submitToLeadApi(form, formName, source) {
+            const endpoint = window.GPSPL_CONFIG?.leadApiEndpoint;
+            if (!endpoint) return false;
+
+            const response = await fetch(endpoint, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(buildLeadPayload(form, formName, source))
+            });
+
+            if (!response.ok) throw new Error('API form submission failed');
+            return true;
+        }
+
+        async function submitToStaticForm(form) {
+            const formData = new FormData(form);
+            const body = new URLSearchParams(formData).toString();
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body
+            });
+
+            if (!response.ok) throw new Error('Static form submission failed');
+        }
+
         document.querySelectorAll('form[data-lead-form]').forEach(form => {
-            form.addEventListener('submit', () => {
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
                 const source = form.getAttribute('data-lead-form') || 'GPSPL website enquiry';
+                const formName = form.getAttribute('name') || form.id || 'gpspl-lead-form';
                 const sourceInput = form.querySelector('input[name="lead_source"]');
                 const pageInput = form.querySelector('input[name="page_url"]');
                 const submittedInput = form.querySelector('input[name="submitted_at"]');
                 const status = form.querySelector('.form-submit-status');
                 const submitButton = form.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton?.dataset.submitLabel || submitButton?.textContent || 'Send Enquiry';
 
                 if (sourceInput) sourceInput.value = source;
                 if (pageInput) pageInput.value = window.location.href;
@@ -275,6 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (status) {
                     status.textContent = 'Sending your enquiry securely. Please wait...';
+                    status.classList.remove('is-success', 'is-error');
                     status.classList.add('is-active');
                 }
 
@@ -282,6 +339,57 @@ document.addEventListener("DOMContentLoaded", () => {
                     submitButton.disabled = true;
                     submitButton.setAttribute('aria-busy', 'true');
                     submitButton.textContent = submitButton.dataset.loadingLabel || 'Sending...';
+                }
+
+                window.gpsplTrack?.('contact_form_submit', {
+                    form_name: formName,
+                    form_source: source
+                });
+
+                try {
+                    try {
+                        const handledByApi = await submitToLeadApi(form, formName, source);
+                        if (!handledByApi) await submitToStaticForm(form);
+                    } catch (apiError) {
+                        if (window.GPSPL_CONFIG?.leadApiEndpoint) await submitToStaticForm(form);
+                        else throw apiError;
+                    }
+
+                    if (status) {
+                        status.textContent = 'Thank you. Your enquiry has been received. GPSPL will contact you shortly.';
+                        status.classList.add('is-active', 'is-success');
+                    }
+
+                    if (submitButton) {
+                        submitButton.textContent = 'Enquiry Sent';
+                    }
+
+                    form.reset();
+                    document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', {
+                        detail: {
+                            form_name: formName,
+                            form_source: source
+                        }
+                    }));
+                } catch (error) {
+                    if (status) {
+                        status.textContent = 'The form could not be submitted right now. Please call GPSPL or send your requirement on WhatsApp.';
+                        status.classList.add('is-active', 'is-error');
+                    }
+
+                    if (submitButton) {
+                        submitButton.disabled = false;
+                        submitButton.removeAttribute('aria-busy');
+                        submitButton.textContent = originalButtonText;
+                    }
+
+                    document.dispatchEvent(new CustomEvent('gpspl:lead-form-error', {
+                        detail: {
+                            form_name: formName,
+                            form_source: source,
+                            error_message: error.message || 'Form submission failed'
+                        }
+                    }));
                 }
             });
         });
@@ -294,7 +402,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (element.dataset.track) return;
             if (href.startsWith('tel:')) element.dataset.track = 'click_call';
-            else if (href.includes('wa.me')) element.dataset.track = 'click_whatsapp';
+            else if (href.includes('wa.me') || href.includes('whatsapp.com/send') || href.includes('api.whatsapp.com')) element.dataset.track = 'click_whatsapp';
             else if (href.includes('brochure.pdf')) element.dataset.track = 'download_company_profile';
             else if (href.includes('/contact.html') || text.includes('request quote') || text.includes('consultation')) element.dataset.track = 'click_lead_cta';
             else if (href.includes('/downloads.html')) element.dataset.track = 'click_downloads';

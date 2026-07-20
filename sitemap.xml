@@ -1,219 +1,261 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://gpspl.co.in/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://gpspl.co.in/about-gpspl.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.9</priority>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/active-led-video-wall.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/active-led-wall-installation.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/active-led-wall-solutions.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/amc-maintenance-services.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/audio-technologies.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/audio-visual-integration.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/brand-detail.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/careers.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/case-studies.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/conference-room-solutions.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gpspl.co.in/contact.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://gpspl.co.in/contact.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gpspl.co.in/control-automation.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/corporate-projects.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/digital-signage-solutions.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/directors-message.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/downloads.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/education-projects.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/faq.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/featured-projects.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/government-projects.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/healthcare-projects.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gpspl.co.in/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://gpspl.co.in/industries.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/interactive-display-solutions.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gpspl.co.in/it-infrastructure-solutions.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gpspl.co.in/kvm-av-switching-solutions.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gpspl.co.in/milestones.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gpspl.co.in/our-vision.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gpspl.co.in/peripheral-solutions.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gpspl.co.in/privacy-policy.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gpspl.co.in/product-catalog.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://gpspl.co.in/it-infrastructure-solutions.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://gpspl.co.in/kvm-av-switching-solutions.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://gpspl.co.in/milestones.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gpspl.co.in/our-vision.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gpspl.co.in/peripheral-solutions.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://gpspl.co.in/privacy-policy.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gpspl.co.in/product-catalog.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gpspl.co.in/professional-audio-solutions.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/projector-accessories.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/projects.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/smart-classroom-solutions.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gpspl.co.in/team.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gpspl.co.in/technology-partners.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://gpspl.co.in/terms-disclaimer.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gpspl.co.in/unified-communication-collaboration.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gpspl.co.in/ups-power-backup-solutions.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <loc>https://gpspl.co.in/team.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://gpspl.co.in/technology-partners.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gpspl.co.in/terms-disclaimer.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gpspl.co.in/unified-communication-collaboration.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://gpspl.co.in/ups-power-backup-solutions.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://gpspl.co.in/video-technologies.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gpspl.co.in/video-wall-solutions.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
-

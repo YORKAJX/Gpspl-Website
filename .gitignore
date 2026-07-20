@@ -1,2 +1,10 @@
 tmp/
 .vscode/
+.env
+.env.local
+JS/site-config.local.js
+backend/.env
+backend/node_modules/
+backend/logs/*.log
+backend/uploads/*
+!backend/uploads/.gitkeep

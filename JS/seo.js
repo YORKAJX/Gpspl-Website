@@ -7,6 +7,7 @@
     const DEFAULT_IMAGE = `${BASE_URL}/assests/images/hero/Vconf.webp`;
     const PHONE = "+91 93100 92963";
     const EMAIL = "support@gpspl.co.in";
+    const runtimeConfig = window.GPSPL_CONFIG || {};
 
     const sameAs = [
         "https://www.instagram.com/gpspl_official/",
@@ -17,19 +18,19 @@
 
     const pageSeo = {
         "index.html": {
-            title: "GPSPL | AV Solutions Distributor & System Integrator Since 1997",
-            description: "Global Peripheral Solution Pvt. Ltd. (GPSPL), established in 1997, supplies and integrates AV, display, audio, collaboration, IT infrastructure, automation and AMC support solutions across India.",
+            title: "GPSPL | AV Distributor & System Integrator India",
+            description: "GPSPL supplies and integrates AV, display, audio, collaboration, IT infrastructure, automation and AMC support solutions across India.",
             type: "home",
             image: "/assests/images/hero/image.jpg"
         },
         "about-gpspl.html": {
-            title: "About GPSPL | AV Distributor & System Integrator in India",
-            description: "Learn about GPSPL, a Delhi based AV and IT technology distribution and system integration company established in 1997, serving enterprise, education, government, hospitality and healthcare clients.",
+            title: "About GPSPL | AV & IT Distributor in India",
+            description: "Learn about GPSPL, a Delhi based AV and IT distribution and system integration company serving enterprise, education, government and hospitality clients.",
             type: "about"
         },
         "our-vision.html": {
-            title: "Our Vision | Technology Driven AV & IT Solutions | GPSPL",
-            description: "GPSPL's vision focuses on innovation, excellence, customer satisfaction, long-term partnerships, sustainable growth and technology-driven AV and IT solutions.",
+            title: "Our Vision | Technology Driven AV & IT | GPSPL",
+            description: "The GPSPL vision is to deliver dependable AV, IT, display and support solutions through innovation, trusted partnerships and long-term customer focus.",
             type: "about"
         },
         "directors-message.html": {
@@ -46,7 +47,7 @@
         },
         "audio-visual-integration.html": {
             title: "Audio Visual Integration Company in Delhi NCR | GPSPL",
-            description: "GPSPL supplies, designs, integrates, commissions and supports enterprise AV systems, meeting rooms, boardrooms, displays, audio, control systems, AMC and service support across India.",
+            description: "GPSPL supplies, designs, integrates and supports enterprise AV systems, meeting rooms, displays, audio, control systems and AMC across India.",
             type: "service",
             serviceType: "Audio visual integration and enterprise AV system integration",
             image: "/assests/images/vision/conference-room-hero.jpg"
@@ -95,7 +96,7 @@
         },
         "digital-signage-solutions.html": {
             title: "Digital Signage & Commercial Display Solutions | GPSPL",
-            description: "Digital signage, LG commercial display, Samsung professional display, LFD screens, hotel TVs, content display and enterprise signage solutions supplied and supported by GPSPL.",
+            description: "Digital signage, commercial displays, LFD screens, hotel TVs, media players and enterprise signage solutions supplied and supported by GPSPL.",
             type: "service",
             serviceType: "Digital signage and commercial display solutions",
             image: "/assests/images/products/digital-signage-solutions.webp"
@@ -123,7 +124,7 @@
         },
         "audio-technologies.html": {
             title: "Audio Technologies for Meeting Rooms & Auditoriums | GPSPL",
-            description: "Audio technologies including Harman, JBL, Sennheiser, microphones, DSP, speakers, room audio, auditorium audio and AV-board sound systems supplied and integrated by GPSPL.",
+            description: "Audio technologies including Harman, JBL, Sennheiser, microphones, DSP, speakers, room audio and auditorium sound systems by GPSPL.",
             type: "service",
             serviceType: "Audio technologies and professional sound systems",
             image: "/assests/images/products/professional-audio-solutions.webp"
@@ -136,7 +137,7 @@
             image: "/assests/images/hero/video-technologies-boardroom.webp"
         },
         "control-automation.html": {
-            title: "Control Systems, AMX Automation, Crestron & AV Switching | GPSPL",
+            title: "Control Systems, AMX, Crestron & AV Switching | GPSPL",
             description: "Control systems, AMX automation, Crestron, AV switching, KVM, source routing, touch panels and room automation solutions supplied and integrated by GPSPL.",
             type: "service",
             serviceType: "Control systems and AV automation",
@@ -149,13 +150,13 @@
             serviceType: "KVM and AV switching solutions"
         },
         "it-infrastructure-solutions.html": {
-            title: "IT Infrastructure, Networking, Servers & UPS Solutions | GPSPL",
+            title: "IT Infrastructure, Networking & Server Solutions | GPSPL",
             description: "IT infrastructure solutions including servers, storage, networking, rack cabinets, UPS systems, security systems and AV readiness support by GPSPL.",
             type: "service",
             serviceType: "IT infrastructure and networking solutions"
         },
         "ups-power-backup-solutions.html": {
-            title: "UPS & Power Backup Solutions | Luminous Authorized Distributor | GPSPL",
+            title: "UPS & Power Backup Solutions | Luminous | GPSPL",
             description: "UPS, batteries, inverter backup, online UPS, offline UPS and power protection solutions for AV rooms, IT rooms and enterprise spaces by GPSPL.",
             type: "service",
             serviceType: "UPS and power backup solutions"
@@ -184,8 +185,8 @@
             type: "catalog"
         },
         "technology-partners.html": {
-            title: "Technology Partners & Authorized Distributor Ecosystem | GPSPL",
-            description: "GPSPL works with technology brands including LG, Harman, JBL, Samsung, Sony, HP Poly, Wacom, Lumens, Crestron, AMX, ATEN, Epson and Luminous for enterprise projects.",
+            title: "Technology Partners & Distributor Ecosystem | GPSPL",
+            description: "GPSPL works with LG, Harman, JBL, Samsung, Sony, HP Poly, Wacom, Lumens, Crestron, AMX, ATEN, Epson and Luminous for enterprise projects.",
             type: "partners"
         },
         "brand-detail.html": {
@@ -194,13 +195,13 @@
             type: "product"
         },
         "industries.html": {
-            title: "Industries Served | AV, IT & Display Solutions by GPSPL",
-            description: "GPSPL serves corporate, education, hospitality, government, healthcare, retail, real estate, banking, media and automotive environments with AV, IT and display solutions.",
+            title: "Industries Served | AV, IT & Display Solutions | GPSPL",
+            description: "GPSPL serves corporate, education, hospitality, government, healthcare, retail, real estate, banking, media and automotive spaces with AV and IT solutions.",
             type: "webpage"
         },
         "projects.html": {
             title: "Technology Projects | AV, IT, Display & Support | GPSPL",
-            description: "Explore GPSPL project capabilities across collaboration spaces, smart classrooms, displays, control rooms, public-sector environments and enterprise technology deployments.",
+            description: "Explore GPSPL project capabilities across collaboration spaces, smart classrooms, displays, control rooms, public-sector and enterprise deployments.",
             type: "webpage"
         },
         "featured-projects.html": {
@@ -230,7 +231,7 @@
         },
         "case-studies.html": {
             title: "Case Studies | AV & IT Project Outcomes | GPSPL",
-            description: "GPSPL case studies showing requirements, solution planning, technology used and support outcomes for AV, display, IT and automation projects.",
+            description: "GPSPL case studies show requirements, solution planning, technology used and support outcomes for AV, display, IT and automation projects.",
             type: "webpage"
         },
         "downloads.html": {
@@ -244,7 +245,7 @@
             type: "faq"
         },
         "contact.html": {
-            title: "Contact GPSPL | AV, IT, Display & Automation Enquiry",
+            title: "Contact GPSPL | AV, IT & Automation Enquiry",
             description: "Contact GPSPL for AV integration, conference room setup, active LED walls, digital signage, IT infrastructure, professional audio, UPS and AMC support.",
             type: "contact"
         },
@@ -259,14 +260,14 @@
             type: "webpage"
         },
         "privacy-policy.html": {
-            title: "Privacy Policy | GPSPL",
-            description: "Privacy policy for GPSPL website visitors, enquiry forms, business communications and data handling.",
+            title: "Privacy Policy | Visitor Data & Enquiries | GPSPL",
+            description: "Read how GPSPL handles website visitor data, enquiry form details, business communication records and privacy practices for submitted information.",
             type: "webpage",
             noindex: false
         },
         "terms-disclaimer.html": {
             title: "Terms & Disclaimer | GPSPL",
-            description: "Terms, disclaimers and website usage information for Global Peripheral Solution Pvt. Ltd.",
+            description: "Terms, disclaimer and website usage information for visitors using Global Peripheral Solution Pvt. Ltd. pages, downloads and enquiry forms.",
             type: "webpage",
             noindex: false
         },
@@ -277,8 +278,8 @@
             noindex: true
         },
         "thank-you.html": {
-            title: "Thank You | GPSPL",
-            description: "Thank you for contacting GPSPL. Our team will review your enquiry.",
+            title: "Thank You for Contacting GPSPL",
+            description: "Thank you for contacting GPSPL. Our team will review your technology supply, integration, support or AMC enquiry and respond shortly.",
             type: "webpage",
             noindex: true
         }
@@ -332,6 +333,21 @@
             document.head.appendChild(node);
         }
         node.setAttribute("href", href);
+    }
+
+    function ensureIconMeta() {
+        ensureMeta('meta[name="theme-color"]', { name: "theme-color" }, "content", "#D32F2F");
+        ensureLink("icon", "/assests/images/gpspl.png");
+        ensureLink("apple-touch-icon", "/assests/images/gpspl.png");
+        ensureLink("manifest", "/site.webmanifest");
+        if (runtimeConfig.googleSearchConsoleVerification) {
+            ensureMeta(
+                'meta[name="google-site-verification"]',
+                { name: "google-site-verification" },
+                "content",
+                runtimeConfig.googleSearchConsoleVerification
+            );
+        }
     }
 
     function textFromSelector(selector) {
@@ -532,6 +548,7 @@
         ensureMeta('meta[name="description"]', { name: "description" }, "content", description);
         ensureMeta('meta[name="robots"]', { name: "robots" }, "content", cfg.noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large");
         ensureLink("canonical", url);
+        ensureIconMeta();
 
         ensureMeta('meta[property="og:type"]', { property: "og:type" }, "content", cfg.type === "article" ? "article" : "website");
         ensureMeta('meta[property="og:site_name"]', { property: "og:site_name" }, "content", SITE_NAME);

@@ -577,6 +577,18 @@
     background: rgba(37, 211, 102, 0.08);
 }
 
+.form-submit-status.is-success {
+    border-color: rgba(34, 197, 94, 0.28);
+    background: rgba(34, 197, 94, 0.11);
+    color: #166534;
+}
+
+.form-submit-status.is-error {
+    border-color: rgba(220, 38, 38, 0.28);
+    background: rgba(220, 38, 38, 0.1);
+    color: #991b1b;
+}
+
 .contact-form-help {
     margin: 14px 0 0;
     color: #61708a;
