@@ -22,6 +22,11 @@ const authorName = (review) => {
     return author.displayName || author.name || review.author_name || 'Google Reviewer';
 };
 
+const authorPhoto = (review) => {
+    const author = review.authorAttribution || {};
+    return author.photoUri || author.photoUrl || '';
+};
+
 const reviewDate = (review) => {
     if (review.relativePublishTimeDescription) return review.relativePublishTimeDescription;
     if (review.relative_time_description) return review.relative_time_description;
@@ -44,6 +49,7 @@ const reviewDate = (review) => {
 
 const normalizeReview = (review) => ({
     author: authorName(review),
+    photo: authorPhoto(review),
     rating: Number(review.rating || 0),
     text: plainText(review.text || review.originalText),
     date: reviewDate(review)
@@ -72,8 +78,14 @@ exports.handler = async () => {
                     'displayName',
                     'rating',
                     'userRatingCount',
-                    'reviews',
-                    'googleMapsUri'
+                    'googleMapsUri',
+                    'reviews.rating',
+                    'reviews.text',
+                    'reviews.originalText',
+                    'reviews.publishTime',
+                    'reviews.relativePublishTimeDescription',
+                    'reviews.authorAttribution.displayName',
+                    'reviews.authorAttribution.photoUri'
                 ].join(',')
             }
         });

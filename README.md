@@ -58,6 +58,28 @@ The contact page and footer quote form submit through Netlify Forms:
 
 After deploy, configure Netlify Form Notifications so submissions are emailed to the GPSPL team, for example `khurana.s@gpspl.co.in`, `support@gpspl.co.in` and `khanna.g@gpspl.co.in`. Submissions will still be stored in the Netlify dashboard even before email notifications are configured.
 
+## Google Reviews Setup
+
+The homepage testimonials section can show live Google reviews through the Netlify function at `/.netlify/functions/google-reviews`.
+
+To enable live Google reviews:
+
+1. Open Google Cloud Console and enable the Places API.
+2. Create a restricted API key for the Places API.
+3. Find the Google Business Profile Place ID for GPSPL.
+4. In Netlify, open Site settings -> Environment variables and add:
+   - `GOOGLE_PLACES_API_KEY`
+   - `GOOGLE_PLACE_ID`
+   - `GOOGLE_REVIEWS_URL`
+5. Redeploy the site.
+6. Test this URL after deploy:
+
+```text
+https://gpspl.co.in/.netlify/functions/google-reviews
+```
+
+If the API key or Place ID is missing, the site keeps the current testimonial fallback and links visitors to Google reviews instead of breaking the page.
+
 ## Known Confirmed Business Facts
 
 - Company name: Global Peripheral Solution Pvt. Ltd.
