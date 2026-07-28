@@ -268,8 +268,50 @@
     return Math.max(minimum, Math.min(2000, seats || preset.capacity));
   }
 
+  function seatingAreaPerPerson(roomType) {
+    if (roomType === "auditorium") return 13;
+    if (roomType === "training" || roomType === "classroom") return 24;
+    if (roomType === "boardroom") return 42;
+    if (roomType === "huddle") return 28;
+    if (roomType === "reception") return 36;
+    if (roomType === "server") return 120;
+    return 34;
+  }
+
+  function dimensionsForCapacity(room, capacity) {
+    const preset = roomPreset(room.roomType);
+    const seats = int(capacity, preset.capacity, 1, 2000);
+    const targetArea = Math.max(preset.length * preset.width, seats * seatingAreaPerPerson(room.roomType));
+    const ratio = preset.length / Math.max(1, preset.width);
+    const width = clamp(Math.round(Math.sqrt(targetArea / ratio)), 8, 160);
+    const length = clamp(Math.round(targetArea / width), 8, 220);
+    const height = room.roomType === "auditorium" && seats >= 200 ? 18 : seats >= 80 ? Math.max(num(room.height, preset.height), 14) : seats >= 30 ? Math.max(num(room.height, preset.height), 11) : num(room.height, preset.height);
+    return { length, width, height };
+  }
+
   function isMegaVenue(room) {
     return room.capacity > 500 || area(room) > 22000 || num(room.length, 0) > 180 || num(room.width, 0) > 120;
+  }
+
+  function isDisplayOnlyRoom(room) {
+    return room.display !== "none" && room.displayQty > 0 && room.cameraQty === 0 && room.micQty === 0 && room.speakerQty === 0;
+  }
+
+  function isAudioOnlyRoom(room) {
+    return room.displayQty === 0 && room.cameraQty === 0 && (room.micQty > 0 || room.speakerQty > 0 || room.dspQty > 0);
+  }
+
+  function selectedScope(room) {
+    const scope = [];
+    if (room.displayQty > 0) scope.push("display");
+    if (room.cameraQty > 0) scope.push("camera");
+    if (room.micQty > 0) scope.push("microphone");
+    if (room.speakerQty > 0) scope.push("speaker");
+    if (room.dspQty > 0) scope.push("DSP");
+    if (room.controllerQty > 0) scope.push("control");
+    if (room.schedulerQty > 0) scope.push("scheduler");
+    if (room.networkQty > 0 || room.cctvQty > 0) scope.push("network/CCTV");
+    return scope;
   }
 
   function applyPurpose(room, purposeId) {
@@ -358,6 +400,7 @@
   function simpleComponent(item) {
     const map = {
       Display: item.shortLabel || "Display screen",
+      "Video Processing": "LED processor setup",
       Camera: "Video meeting camera",
       Microphone: "Voice pickup",
       Speaker: "Room sound",
@@ -381,6 +424,7 @@
     if (item.serviceScope) return item.serviceScope.summary;
     const map = {
       Display: item.reason || "For clear content visibility.",
+      "Video Processing": "Maps LED/projection inputs, scaling, resolution and content source workflow.",
       Camera: "For remote meeting participants.",
       Microphone: "For clear voice pickup.",
       Speaker: "For clear room audio.",
@@ -403,6 +447,7 @@
   function customerGroup(item) {
     const map = {
       Display: "Visuals",
+      "Video Processing": "Display Setup",
       Camera: "Video Call",
       Microphone: "Voice",
       Speaker: "Sound",
@@ -777,20 +822,23 @@
   }
 
   function programmingEngineering(room, design) {
-    const dspInputs = Math.max(0, room.micQty + room.cameraQty + (room.displayQty > 0 ? 1 : 0));
-    const dspOutputs = Math.max(0, Math.ceil(room.speakerQty / 2) + (room.displayQty > 1 ? 1 : 0));
+    const displayOnly = isDisplayOnlyRoom(room);
+    const ledOrProjection = room.display === "led" || room.display === "projector";
+    const dspInputs = displayOnly ? 0 : Math.max(0, room.micQty + room.cameraQty + (room.displayQty > 0 ? 1 : 0));
+    const dspOutputs = displayOnly ? 0 : Math.max(0, Math.ceil(room.speakerQty / 2) + (room.displayQty > 1 ? 1 : 0));
     const controlledDevices = room.displayQty + room.cameraQty + room.schedulerQty + room.controllerQty + room.dspQty + room.networkQty + room.cctvQty;
     const touchPages = room.controllerQty > 0 ? 1 + (room.displayQty > 0 ? 1 : 0) + (room.cameraQty > 0 ? 1 : 0) + (room.micQty > 0 || room.speakerQty > 0 ? 1 : 0) + (room.schedulerQty > 0 ? 1 : 0) : 0;
-    const automationWorkflows = (room.platform !== "byod" ? 1 : 0) + (design.switchingRequired ? 1 : 0) + (room.controllerQty > 0 ? 1 : 0) + (room.roomType === "auditorium" ? 2 : 0);
-    const integrations = (room.platform !== "byod" ? 1 : 0) + (room.networkQty > 0 ? 1 : 0) + (room.schedulerQty > 0 ? 1 : 0) + (room.cctvQty > 0 ? 1 : 0);
-    const complexityMultiplier = room.roomType === "auditorium" ? 1.45 : room.roomType === "training" || room.roomType === "classroom" ? 1.2 : room.roomType === "server" ? 1.1 : 1;
-    const rawHours =
-      1.5 +
-      controlledDevices * 0.45 +
-      (dspInputs + dspOutputs) * 0.35 +
-      touchPages * 0.8 +
-      automationWorkflows * 1.15 +
-      integrations * 0.75;
+    const automationWorkflows = (displayOnly ? 0 : room.platform !== "byod" ? 1 : 0) + (design.switchingRequired ? 1 : 0) + (room.controllerQty > 0 ? 1 : 0) + (room.roomType === "auditorium" && !displayOnly ? 2 : 0);
+    const integrations = (displayOnly ? 0 : room.platform !== "byod" ? 1 : 0) + (room.networkQty > 0 ? 1 : 0) + (room.schedulerQty > 0 ? 1 : 0) + (room.cctvQty > 0 ? 1 : 0);
+    const complexityMultiplier = displayOnly ? (ledOrProjection ? 1.08 : 0.82) : room.roomType === "auditorium" ? 1.45 : room.roomType === "training" || room.roomType === "classroom" ? 1.2 : room.roomType === "server" ? 1.1 : 1;
+    const rawHours = displayOnly
+      ? 1.25 + controlledDevices * 0.3 + (ledOrProjection ? 2.5 : 0.75) + (room.displaySize >= 180 ? 1 : 0) + (room.controllerQty > 0 ? 1 : 0)
+      : 1.5 +
+        controlledDevices * 0.45 +
+        (dspInputs + dspOutputs) * 0.35 +
+        touchPages * 0.8 +
+        automationWorkflows * 1.15 +
+        integrations * 0.75;
     const engineerHours = ceilTo(rawHours * complexityMultiplier, 1);
     return {
       controlledDevices,
@@ -801,7 +849,9 @@
       integrations,
       engineerHours,
       engineerDays: Math.max(0.5, Math.ceil(engineerHours / 6 * 2) / 2),
-      summary: `${engineerHours} engineer-hour(s) from ${controlledDevices} controlled device(s), ${dspInputs} DSP input(s), ${dspOutputs} DSP output(s), ${touchPages} touch page(s), ${automationWorkflows} workflow(s) and ${integrations} integration(s).`
+      summary: displayOnly
+        ? `${engineerHours} engineer-hour(s) for ${room.display === "led" ? "LED processor mapping, resolution scaling, input testing and content handover" : "display setup, source testing and video calibration"}.`
+        : `${engineerHours} engineer-hour(s) from ${controlledDevices} controlled device(s), ${dspInputs} DSP input(s), ${dspOutputs} DSP output(s), ${touchPages} touch page(s), ${automationWorkflows} workflow(s) and ${integrations} integration(s).`
     };
   }
 
@@ -812,10 +862,13 @@
     const highCeiling = room.height >= 14;
     const largeRoom = area(room) >= 1200 || room.capacity >= 40;
     const ledOrProjection = room.display === "led" || room.display === "projector";
-    const programmingComplex = design.dspRequired || design.switchingRequired || room.controllerQty > 0 || room.networkQty > 0;
+    const displayOnly = isDisplayOnlyRoom(room);
+    const programmingComplex = design.dspRequired || design.switchingRequired || room.controllerQty > 0 || room.networkQty > 0 || ledOrProjection;
     const activities = ["Equipment Installation"];
 
     if (room.displayQty > 0) activities.push(room.display === "led" ? "Display / LED Wall Installation" : "Display Mounting & Alignment");
+    if (room.display === "led" && room.displayQty > 0) activities.push("LED Processor Mapping", "Resolution Scaling & Content Input Configuration");
+    if (room.display === "projector" && room.displayQty > 0) activities.push("Projection Alignment & Source Configuration");
     if (room.cameraQty > 0) activities.push("Camera Installation");
     if (room.micQty > 0) activities.push("Microphone Installation");
     if (room.speakerQty > 0) activities.push("Speaker Installation");
@@ -824,8 +877,8 @@
     if (room.networkQty > 0 || room.cctvQty > 0 || room.schedulerQty > 0 || room.controllerQty > 0) activities.push("Network Configuration");
     if (room.dspQty > 0 && (room.micQty > 0 || room.speakerQty > 0)) activities.push("DSP Programming");
     if (room.controllerQty > 0) activities.push("AMX / Control System Programming");
-    if (programmingComplex) activities.push("Device Configuration");
-    if (infrastructure.endpoints >= 4) activities.push("System Integration");
+    if (programmingComplex) activities.push(displayOnly ? "Video Processor / Display Configuration" : "Device Configuration");
+    if (infrastructure.endpoints >= 4 || ledOrProjection) activities.push("System Integration");
     if (room.speakerQty > 0 || room.micQty > 0) activities.push("Audio Tuning");
     if (room.displayQty > 0 || room.cameraQty > 0) activities.push("Video Calibration");
     if (isMegaVenue(room)) activities.push("Mega Venue Site Survey & Load Validation");
@@ -839,7 +892,7 @@
       (ledOrProjection ? 5 : 0) +
       (room.display === "led" ? 4 : 0) +
       (programmingComplex ? 4 : 0) +
-      (room.roomType === "auditorium" ? 6 : 0) +
+      (room.roomType === "auditorium" && !displayOnly ? 6 : 0) +
       (room.roomType === "server" ? 3 : 0);
 
     const labourLevel = complexityScore >= 36 ? "Enterprise" : complexityScore >= 20 ? "Advanced" : "Standard";
@@ -927,13 +980,15 @@
     room.capacity = int(room.autoCapacity ? recommendedCapacity(room) : room.capacity, recommendedCapacity(room), 1, 2000);
     const design = engineeringDesign(room);
     const manual = manualMap(room);
+    room.display = design.display.display || room.display;
+    room.displaySize = room.display === "none" ? 0 : int(manual.displaySize ? room.displaySize : design.display.size, design.display.size || 75, 43, 330);
     room.displayQty = int(manual.displayQty ? room.displayQty : design.display.qty, design.display.qty, 0, 8);
     room.cameraQty = room.camera === "none" ? 0 : int(manual.cameraQty ? room.cameraQty : design.camera.qty, design.camera.qty, 0, 6);
     room.micQty = room.microphone === "none" ? 0 : int(manual.micQty ? room.micQty : design.microphone.qty, design.microphone.qty, 0, 24);
     room.speakerQty = room.speaker === "none" ? 0 : int(manual.speakerQty ? room.speakerQty : design.speaker.qty, design.speaker.qty, 0, 40);
     room.schedulerQty = int(room.schedulerQty, 0, 0, 4);
     room.controllerQty = int(room.controllerQty, 1, 0, 4);
-    room.dspQty = int(manual.dspQty ? room.dspQty : (room.micQty > 0 || room.speakerQty > 1 || room.cameraQty > 0 ? 1 : 0), room.micQty > 0 || room.speakerQty > 1 || room.cameraQty > 0 ? 1 : 0, 0, 3);
+    room.dspQty = int(manual.dspQty ? room.dspQty : (design.dspRequired ? 1 : 0), design.dspRequired ? 1 : 0, 0, 3);
     room.rackQty = int(manual.rackQty ? room.rackQty : Math.max(1, Math.ceil(design.infrastructure.rackUnits / 12)), 1, 0, 3);
     room.upsQty = int(manual.upsQty ? room.upsQty : Math.max(1, Math.ceil(design.infrastructure.upsVa / 1500)), 1, 0, 3);
     room.laptopQty = int(room.laptopQty, 0, 0, 12);
@@ -960,6 +1015,23 @@
       items.push(markSource(displayItem, room, ["display", "displaySize", "displayQty"]));
     }
 
+    if ((room.display === "led" || room.display === "projector") && room.displayQty > 0) {
+      const videoSetup = line(
+        "Video Processing",
+        room.display === "led" ? "LED Video Processor Mapping & Content Setup" : "Display Source Scaling & Calibration Setup",
+        1,
+        null,
+        room.display === "led"
+          ? `Processor mapping planned for ${room.displaySize || design.display.size} inch LED wall: resolution scaling, input testing, brightness preset and content handover. Cost is included under programming/setup.`
+          : "Source scaling, image alignment and input testing planned for projection/display workflow. Cost is included under programming/setup.",
+        88,
+        [0, 0]
+      );
+      videoSetup.shortLabel = room.display === "led" ? "LED processor setup" : "Video setup";
+      videoSetup.source = "GPSPL recommended";
+      items.push(videoSetup);
+    }
+
     const cKey = cameraKey(room);
     if (cKey && room.cameraQty > 0) items.push(markSource(line("Camera", design.camera.component, room.cameraQty, cKey, design.camera.justification, design.camera.confidence), room, ["camera", "cameraQty"]));
 
@@ -971,7 +1043,7 @@
 
     if (room.dspQty > 0 && (room.micQty > 0 || room.speakerQty > 0 || room.cameraQty > 0)) items.push(markSource(line("Audio Processing", "AEC DSP / Audio Processor", room.dspQty, "dsp", `DSP selected because design has ${room.micQty} mic zone(s), ${room.speakerQty} speaker(s) and VC audio routing.`, design.infrastructure.confidence), room, ["dspQty"]));
     if (sKey && room.speakerQty > 0) items.push(line("Amplification", `${ceilTo(design.amplifierWatts || 120, 50)}W amplifier with headroom`, 1, "amplifier", `Amplifier sized from speaker load with approx. 60% headroom for ${audioPlan(room).targetSpl}.`, design.speaker.confidence));
-    if (design.switchingRequired || room.capacity >= 12 || room.micQty >= 2 || room.speakerQty >= 4) items.push(line("Mixer / Matrix", audioPlan(room).processor, 1, null, `I/O count planned from ${room.micQty} mic, ${room.cameraQty} camera and ${room.displayQty} display endpoint(s) with future expansion allowance. Programming effort is calculated separately from engineer-hours.`, 86, [0, 0]));
+    if (!isDisplayOnlyRoom(room) && (design.switchingRequired || room.capacity >= 12 || room.micQty >= 2 || room.speakerQty >= 4)) items.push(line("Mixer / Matrix", audioPlan(room).processor, 1, null, `I/O count planned from ${room.micQty} mic, ${room.cameraQty} camera and ${room.displayQty} display endpoint(s) with future expansion allowance. Programming effort is calculated separately from engineer-hours.`, 86, [0, 0]));
     if (room.schedulerQty > 0) items.push(markSource(line("Room Booking", "Room Scheduler Panel", room.schedulerQty, "scheduler", "Usually one scheduler per bookable room."), room, ["schedulerQty"]));
     if (room.controllerQty > 0) items.push(markSource(line("Control", "Touch Controller / Control Processor", room.controllerQty, "controller", `Control added for ${design.infrastructure.endpoints} controllable endpoint(s), source selection and user handover.`, 88), room, ["controllerQty"]));
     if (room.rackQty > 0) items.push(markSource(line("Infrastructure", `${design.infrastructure.rackUnits}U AV Rack / Mounting Hardware`, room.rackQty, "rack", `Rack size calculated from ${design.infrastructure.endpoints} endpoints, DSP/control hardware and ventilation allowance.`, design.infrastructure.confidence), room, ["rackQty"]));
@@ -996,7 +1068,7 @@
     if (item.category === "Cabling") return "wiring";
     if (item.category === "Services" && item.component.includes("Programming")) return "programming";
     if (item.category === "Services") return "installation";
-    if (["Audio Processing", "Mixer / Matrix", "Control"].includes(item.category)) return "programming";
+    if (["Audio Processing", "Mixer / Matrix", "Control", "Video Processing"].includes(item.category)) return "programming";
     return "hardware";
   }
 
@@ -1165,7 +1237,7 @@
         <label>Room Designation<input name="designation" value="${escapeHtml(room.designation)}" placeholder="Example: Boardroom, Training Room, MD Cabin"></label>
         <div class="av-builder-form-grid">
           <label>Room Type${select("roomType", room.roomType, CONFIG.rooms)}</label>
-          <label>Seating Capacity<input name="capacity" type="number" min="1" max="2000" value="${escapeHtml(room.capacity)}"><small>${room.autoCapacity ? "Auto-suggested from room size" : isMegaVenue(room) ? "Mega venue: site review required" : "Manual value locked"}</small></label>
+          <label>Seating Capacity<input name="capacity" type="number" min="1" max="2000" value="${escapeHtml(room.capacity)}"><small>${room.autoCapacity ? "Auto-suggested from room size" : isMegaVenue(room) ? "Mega venue: site review required" : "Room size and quantities update from seating"}</small></label>
           <label>Length (ft)<input name="length" type="number" min="1" step="0.5" value="${escapeHtml(room.length)}"></label>
           <label>Width (ft)<input name="width" type="number" min="1" step="0.5" value="${escapeHtml(room.width)}"></label>
           <label>Ceiling Height (ft)<input name="height" type="number" min="1" step="0.5" value="${escapeHtml(room.height)}"></label>
@@ -1195,7 +1267,7 @@
             <label><span>Network Switch</span>${stepper("networkQty", room.networkQty, 0, 8)}</label>
           </div>
         </details>
-        <p class="av-builder-note compact">Length, width and height update suggested seating and quantities. Manual seating stays locked until room type or purpose is changed.</p>
+        <p class="av-builder-note compact">Length, width, height and seating update the BOQ together. If you edit dimensions manually, those dimensions stay locked while quantities continue to recalculate.</p>
       </div>
     `;
   }
@@ -1232,7 +1304,7 @@
   }
 
   function keyPlanItems(entry) {
-    const priority = ["Display", "Camera", "Microphone", "Speaker", "IT Devices", "CCTV", "Network", "Room Booking", "Control", "Infrastructure", "Power", "Services"];
+    const priority = ["Display", "Video Processing", "Camera", "Microphone", "Speaker", "IT Devices", "CCTV", "Network", "Room Booking", "Control", "Infrastructure", "Power", "Cabling", "Services"];
     return priority.map((category) => entry.boq.find((item) => item.category === category)).filter(Boolean);
   }
 
@@ -1240,6 +1312,7 @@
     return `
       <div class="av-plan-list">
         ${project.rooms.map((entry) => {
+          const valueReview = valueEngineeringReview(entry);
           return `
             <article class="av-plan-card">
               <header>
@@ -1250,6 +1323,12 @@
                 <strong>${escapeHtml(bandText([Math.round(entry.subtotal[0] * 1.18), Math.round(entry.subtotal[1] * 1.18)]))}</strong>
               </header>
               <div class="av-validation-pill ${escapeHtml(entry.validation.statusClass)}">${escapeHtml(entry.validation.label)} - ${escapeHtml(entry.validation.score)}%</div>
+              <div class="av-value-review">
+                <span>Value engineering review</span>
+                <b>${escapeHtml(valueReview.status)}</b>
+                <p>${escapeHtml(valueReview.note)}</p>
+                <div>${valueReview.metrics.map((metric) => `<em>${escapeHtml(metric)}</em>`).join("")}</div>
+              </div>
               <div class="av-plan-items">
                 <div class="av-plan-items-head"><span>Product</span><span>Quantity</span></div>
                 ${keyPlanItems(entry).map((item) => `
@@ -1273,14 +1352,100 @@
   function roomInsight(entry) {
     if (entry.room.roomType === "server") return "Rack, control devices, UPS, network switching and CCTV monitoring planned as a controlled equipment room.";
     if (entry.room.roomType === "reception") return "Reception display, front-desk IT device and CCTV coverage planned for visitor-facing use.";
+    if (isDisplayOnlyRoom(entry.room)) {
+      return entry.room.display === "led"
+        ? `${entry.room.displaySize || "Selected"} inch LED-only scope: LED wall, processor mapping, cable termination, brightness/input testing and handover. Audio, camera and DSP are not included because client selected display-only requirement.`
+        : "Display-only scope: screen mounting, source cabling, input testing, calibration and handover. Audio/video conferencing equipment is not included.";
+    }
+    if (isAudioOnlyRoom(entry.room)) {
+      const audio = audioPlan(entry.room);
+      return `Audio-only scope: ${entry.room.speakerQty} speaker(s), ${entry.room.micQty} mic zone(s) and ${entry.room.dspQty} DSP/control processor planned from room size and SPL need. Display and camera are excluded because client selected zero quantity. ${audio.targetSpl}.`;
+    }
     const audio = audioPlan(entry.room);
     return `${audio.targetSpl}. ${audio.acousticRisk}`;
+  }
+
+  function valueEngineeringReview(entry) {
+    const room = entry.room;
+    const boqCategories = new Set(entry.boq.map((item) => item.category));
+    const displayItem = entry.boq.find((item) => item.category === "Display");
+    const design = engineeringDesign(room);
+    const requiredSize = int(design.display.size || room.displaySize || 75, 75, 43, 330);
+    const selectedSize = int(room.displaySize || requiredSize, requiredSize, 43, 330);
+    const displayUtilization = room.display === "none" ? 0 : clamp(Math.round(requiredSize / Math.max(1, selectedSize) * 100), 45, 100);
+    const endpointsUsed = design.infrastructure.endpoints;
+    const scope = selectedScope(room);
+    const oversized = displayUtilization < 55 ? "Display size has extra headroom; validate viewing distance before final model." : "Display size is within practical planning range.";
+    const removed = [];
+    const excluded = [];
+
+    [
+      ["display", "Display"],
+      ["camera", "Camera"],
+      ["microphone", "Microphone"],
+      ["speaker", "Speaker"],
+      ["DSP", "Audio Processing"],
+      ["control", "Control"]
+    ].forEach(([scopeName, category]) => {
+      if (!scope.includes(scopeName) && !boqCategories.has(category)) excluded.push(category);
+    });
+
+    if (isDisplayOnlyRoom(room)) {
+      ["Camera", "Microphone", "Speaker", "Audio Processing", "Amplification", "Mixer / Matrix"].forEach((category) => {
+        if (!boqCategories.has(category)) removed.push(category);
+      });
+      return {
+        status: "Cost optimized for display-only scope",
+        note: `${displayItem ? displayItem.shortLabel || displayItem.component : "Display"} retained. ${removed.join(", ")} removed because client selected only LED/display requirement.`,
+        metrics: [
+          `Display suitability ${displayUtilization}%`,
+          `AV endpoints ${endpointsUsed}`,
+          "Audio/VC scope excluded",
+          "LED/video setup included"
+        ]
+      };
+    }
+
+    if (isAudioOnlyRoom(room)) {
+      const audio = audioPlan(room);
+      return {
+        status: "Cost optimized for audio-only scope",
+        note: `Display and camera hardware removed. BOQ keeps speaker coverage, DSP/audio routing, amplification, cabling, tuning and commissioning only.`,
+        metrics: [
+          `Speaker count ${room.speakerQty}`,
+          `DSP inputs ${room.micQty + room.cameraQty}`,
+          audio.amplifier,
+          `AV endpoints ${endpointsUsed}`
+        ]
+      };
+    }
+
+    return {
+      status: "Optimized to required scope",
+      note: `${oversized} Active scope: ${scope.length ? scope.join(", ") : "site services only"}. ${excluded.length ? `${excluded.slice(0, 3).join(", ")} excluded to avoid over-design.` : "No unnecessary category added."}`,
+      metrics: [
+        room.display !== "none" ? `Display suitability ${displayUtilization}%` : "Display not selected",
+        room.speakerQty > 0 ? `Speaker count ${room.speakerQty}` : "Speakers excluded",
+        room.dspQty > 0 ? `DSP used for ${room.micQty + room.cameraQty} input zone(s)` : "DSP not required",
+        `AV endpoints ${endpointsUsed}`
+      ]
+    };
   }
 
   function costBrief(project) {
     const breakdown = costBreakdown(project);
     const hasProgramming = breakdown.programming[1] > 0;
     const basis = pricingBasis(project);
+    const hasCamera = project.rooms.some((entry) => entry.boq.some((item) => item.category === "Camera"));
+    const hasMic = project.rooms.some((entry) => entry.boq.some((item) => item.category === "Microphone"));
+    const hasSpeaker = project.rooms.some((entry) => entry.boq.some((item) => item.category === "Speaker"));
+    const hasLedOnly = project.rooms.some((entry) => isDisplayOnlyRoom(entry.room));
+    const hasAudioOnly = project.rooms.some((entry) => isAudioOnlyRoom(entry.room));
+    const hardwareText = hasLedOnly && !hasCamera && !hasMic && !hasSpeaker
+      ? "LED/display hardware, processor-ready accessories, mounting support."
+      : hasAudioOnly && !project.rooms.some((entry) => entry.room.displayQty > 0) && !hasCamera
+      ? "Speakers, microphones, DSP/audio routing, amplification and mounting."
+      : "Display, camera, mic, speakers, IT, CCTV, rack, UPS.";
     return `
       <section class="av-cost-brief-wrap" aria-label="Estimate breakup">
         <div class="av-cost-brief-head">
@@ -1288,10 +1453,10 @@
           <span>Hardware, wiring, installation and setup breakup.</span>
         </div>
         <div class="av-cost-brief">
-          <article><span>Hardware</span><b>${escapeHtml(bandText(breakdown.hardware))}</b><p>Display, camera, mic, speakers, IT, CCTV, rack, UPS.</p></article>
+          <article><span>Hardware</span><b>${escapeHtml(bandText(breakdown.hardware))}</b><p>${escapeHtml(hardwareText)}</p></article>
           <article><span>Wiring</span><b>${escapeHtml(bandText(breakdown.wiring))}</b><p>Cables, connectors, routing, labeling.</p></article>
           <article><span>Install</span><b>${escapeHtml(bandText(breakdown.installation))}</b><p>Mounting, testing, commissioning.</p></article>
-          <article><span>${hasProgramming ? "Programming" : "Setup"}</span><b>${escapeHtml(bandText(breakdown.programming))}</b><p>${hasProgramming ? "Engineer-hour based DSP/control setup." : "Basic setup and guidance."}</p></article>
+          <article><span>${hasProgramming ? "Programming" : "Setup"}</span><b>${escapeHtml(bandText(breakdown.programming))}</b><p>${hasProgramming ? "Engineer-hour based LED/video/DSP/control setup." : "Basic setup and guidance."}</p></article>
         </div>
         <div class="av-pricing-basis">
           <div class="av-pricing-basis-top">
@@ -1341,11 +1506,21 @@
           const audio = audioPlan(entry.room);
           const serverPlan = entry.room.roomType === "server";
           const receptionPlan = entry.room.roomType === "reception";
+          const displayOnly = isDisplayOnlyRoom(entry.room);
+          const engineeringLine = displayOnly
+            ? roomInsight(entry)
+            : serverPlan || receptionPlan ? roomInsight(entry) : audio.targetSpl;
+          const capacityLine = displayOnly
+            ? entry.room.display === "led" ? "LED processor mapping, source scaling and brightness preset" : "Display mounting, source testing and image calibration"
+            : serverPlan ? "Rack, UPS, network and CCTV planning" : receptionPlan ? "Display, IT device and CCTV planning" : audio.amplifier;
+          const systemLine = displayOnly
+            ? "Value engineered: audio, camera and DSP excluded from display-only scope"
+            : serverPlan ? "Control devices centralized in server rack" : receptionPlan ? "Visitor-facing reception workflow" : audio.processor;
           return `
             <article>
               <b>${escapeHtml(entry.room.designation)}</b>
               <em class="av-validation-pill ${escapeHtml(entry.validation.statusClass)}">${escapeHtml(entry.validation.label)} - ${escapeHtml(entry.validation.score)}%</em>
-              <span>${escapeHtml(serverPlan || receptionPlan ? roomInsight(entry) : audio.targetSpl)}<br>${escapeHtml(serverPlan ? "Rack, UPS, network and CCTV planning" : receptionPlan ? "Display, IT device and CCTV planning" : audio.amplifier)}<br>${escapeHtml(serverPlan ? "Control devices centralized in server rack" : receptionPlan ? "Visitor-facing reception workflow" : audio.processor)}</span>
+              <span>${escapeHtml(engineeringLine)}<br>${escapeHtml(capacityLine)}<br>${escapeHtml(systemLine)}</span>
               <small>${escapeHtml(entry.validation.summary)}</small>
             </article>
           `;
@@ -1595,7 +1770,13 @@
         const currentManual = manualMap(state.rooms[state.activeRoom]);
         const manualFields = ["display", "displaySize", "camera", "microphone", "speaker", "displayQty", "cameraQty", "micQty", "speakerQty", "schedulerQty", "controllerQty", "dspQty", "rackQty", "upsQty", "laptopQty", "desktopQty", "cctvQty", "networkQty"];
         if (manualFields.includes(input.name)) patch.manualOverrides = Object.assign({}, currentManual, { [input.name]: true });
-        if (input.name === "capacity") patch.autoCapacity = false;
+        if (input.name === "capacity") {
+          patch.autoCapacity = false;
+          const resized = dimensionsForCapacity(state.rooms[state.activeRoom], patch.capacity);
+          if (!currentManual.length) patch.length = resized.length;
+          if (!currentManual.width) patch.width = resized.width;
+          if (!currentManual.height) patch.height = resized.height;
+        }
         if (input.name === "roomType") {
           const preset = roomPreset(input.value);
           const nextPurpose = purposePreset(purposeForRoomType(input.value));
@@ -1648,6 +1829,9 @@
         if (input.name === "speaker") {
           patch.speakerQty = input.value === "none" ? 0 : fieldDesign.speaker.qty;
           patch.manualOverrides = Object.assign({}, patch.manualOverrides || currentManual, { speaker: true, speakerQty: true });
+        }
+        if (["length", "width", "height"].includes(input.name)) {
+          patch.manualOverrides = Object.assign({}, patch.manualOverrides || currentManual, { [input.name]: true });
         }
         if (["length", "width", "height"].includes(input.name) && state.rooms[state.activeRoom].autoCapacity !== false) {
           patch.autoCapacity = true;
@@ -1764,6 +1948,36 @@
     return new URLSearchParams(new FormData(form)).toString();
   }
 
+  function leadEmailPayload(lead) {
+    return {
+      botField: lead["bot-field"] || lead.botField || "",
+      name: lead.name || "",
+      company: lead.company || "",
+      email: lead.email || "",
+      phone: lead.phone || "",
+      city: lead.city || "",
+      projectDescription: lead.project_description || "",
+      roomCount: lead.room_count || "",
+      estimateRange: lead.estimate_range || "",
+      validationStatus: lead.validation_status || "",
+      boqSummary: lead.boq_summary || "",
+      requirementSummary: lead.requirement_summary || "",
+      pageUrl: lead.page_url || window.location.href
+    };
+  }
+
+  async function submitLeadEmail(lead) {
+    try {
+      await fetch("/.netlify/functions/boq-lead-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(leadEmailPayload(lead))
+      });
+    } catch (error) {
+      // Email automation should never block lead capture or PDF generation.
+    }
+  }
+
   function validateLeadForm(form) {
     const email = form.querySelector("input[name='email']");
     if (email) {
@@ -1797,6 +2011,12 @@
       });
     } catch (error) {
       // The browser-generated proposal should still download during local previews.
+    }
+
+    try {
+      await submitLeadEmail(lead);
+    } catch (error) {
+      // Email automation is best-effort.
     } finally {
       await downloadProposalPdf(state, project, lead);
       track("room_configurator_proposal_download", { rooms: state.rooms.length, estimate: bandText(project.total) });
@@ -1938,7 +2158,11 @@
     y += 18;
     project.rooms.forEach((entry) => {
       const audio = audioPlan(entry.room);
-      const summary = `${entry.room.designation} - ${label(CONFIG.rooms, entry.room.roomType)} | ${entry.room.capacity} seats | ${area(entry.room)} sq. ft. | ${bandText([Math.round(entry.subtotal[0] * 1.18), Math.round(entry.subtotal[1] * 1.18)])}\n${entry.validation.label} (${entry.validation.score}%). ${roomInsight(entry)} ${entry.room.roomType === "server" ? "Rack, UPS, network and CCTV planning." : entry.room.roomType === "reception" ? "Display, IT device and CCTV planning." : audio.amplifier}`;
+      const displayOnly = isDisplayOnlyRoom(entry.room);
+      const supportLine = displayOnly
+        ? entry.room.display === "led" ? "LED processor mapping, source scaling and brightness/input testing included." : "Display mounting, source testing and image calibration included."
+        : entry.room.roomType === "server" ? "Rack, UPS, network and CCTV planning." : entry.room.roomType === "reception" ? "Display, IT device and CCTV planning." : audio.amplifier;
+      const summary = `${entry.room.designation} - ${label(CONFIG.rooms, entry.room.roomType)} | ${entry.room.capacity} seats | ${area(entry.room)} sq. ft. | ${bandText([Math.round(entry.subtotal[0] * 1.18), Math.round(entry.subtotal[1] * 1.18)])}\n${entry.validation.label} (${entry.validation.score}%). ${roomInsight(entry)} ${supportLine}`;
       const lines = pdfLines(doc, summary, contentWidth - 24);
       addPageIfNeeded(lines.length * 12 + 28);
       doc.setFillColor("#f8fbff");
@@ -2057,10 +2281,14 @@
       const audio = audioPlan(entry.room);
       const serverPlan = entry.room.roomType === "server";
       const receptionPlan = entry.room.roomType === "reception";
+      const displayOnly = isDisplayOnlyRoom(entry.room);
+      const supportLine = displayOnly
+        ? entry.room.display === "led" ? "LED processor mapping, source scaling and brightness/input testing" : "Display mounting, source testing and image calibration"
+        : serverPlan ? "Rack, UPS, network and CCTV planning" : receptionPlan ? "Display, IT device and CCTV planning" : audio.amplifier;
       return `
         <article class="room-card">
           <div><b>${escapeHtml(entry.room.designation)}</b><span>${escapeHtml(label(CONFIG.rooms, entry.room.roomType))} | ${escapeHtml(entry.room.capacity)} seats | ${escapeHtml(area(entry.room))} sq. ft.</span></div>
-          <p><strong>${escapeHtml(entry.validation.label)} (${escapeHtml(entry.validation.score)}%)</strong><br>${escapeHtml(roomInsight(entry))}<br>${escapeHtml(serverPlan ? "Rack, UPS, network and CCTV planning" : receptionPlan ? "Display, IT device and CCTV planning" : audio.amplifier)}</p>
+          <p><strong>${escapeHtml(entry.validation.label)} (${escapeHtml(entry.validation.score)}%)</strong><br>${escapeHtml(roomInsight(entry))}<br>${escapeHtml(supportLine)}</p>
         </article>
       `;
     }).join("");

@@ -4239,6 +4239,63 @@ main > .section-padding.bg-light:first-child .sub-headline {
     margin: 12px 0 10px;
 }
 
+.av-value-review {
+    margin-top: 10px;
+    padding: 11px 12px;
+    border: 1px solid rgba(13, 38, 68, 0.08);
+    border-radius: 14px;
+    background: linear-gradient(135deg, #f8fbff 0%, #fff 100%);
+}
+
+.av-value-review > span,
+.av-value-review b,
+.av-value-review p {
+    display: block;
+}
+
+.av-value-review > span {
+    color: #d32f2f;
+    font-size: 0.62rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.av-value-review b {
+    margin-top: 4px;
+    color: #071123;
+    font-size: 0.82rem;
+    line-height: 1.25;
+}
+
+.av-value-review p {
+    margin: 5px 0 8px;
+    color: #536780;
+    font-size: 0.74rem;
+    font-weight: 800;
+    line-height: 1.45;
+}
+
+.av-value-review div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.av-value-review em {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+    padding: 5px 8px;
+    border-radius: 999px;
+    background: #edf7f1;
+    color: #0f6b3e;
+    font-size: 0.64rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
 .av-plan-items-head,
 .av-plan-item {
     display: grid;

@@ -61,6 +61,18 @@ The AV BOQ download form captures client name, company, email, phone, project lo
 
 After deploy, configure Netlify Form Notifications so submissions are emailed to the GPSPL team, for example `khurana.s@gpspl.co.in`, `support@gpspl.co.in` and `khanna.g@gpspl.co.in`. Submissions will still be stored in the Netlify dashboard even before email notifications are configured.
 
+Optional AV BOQ auto-email:
+
+- Function: `/.netlify/functions/boq-lead-email`
+- Provider: Resend API
+- Required Netlify environment variables:
+  - `ENABLE_BOQ_AUTO_EMAIL=true`
+  - `RESEND_API_KEY`
+  - `BOQ_MAIL_FROM`, for example `GPSPL <no-reply@gpspl.co.in>`
+  - `BOQ_TEAM_EMAILS`, comma-separated GPSPL notification emails
+
+The auto-email function sends a thank-you email to the downloader and a lead notification to GPSPL. If these variables are not configured, the form capture and PDF download still work.
+
 ## Google Reviews Setup
 
 The homepage testimonials section can show live Google reviews through the Netlify function at `/.netlify/functions/google-reviews`.
