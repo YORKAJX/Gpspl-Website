@@ -3950,16 +3950,45 @@ main > .section-padding.bg-light:first-child .sub-headline {
 }
 
 .av-builder-qty-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.av-qty-table-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 156px;
+    gap: 10px;
+    margin: 0 14px 8px;
+    padding-top: 2px;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 0.66rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.av-builder-qty-grid label {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 156px;
+    gap: 10px;
+    align-items: center;
+    min-height: 58px;
+    padding: 9px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    background: rgba(7, 26, 49, 0.18);
 }
 
 .av-builder-qty-grid label > span {
     display: block;
-    margin-bottom: 7px;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.2;
 }
 
 .av-builder-qty-grid .av-builder-stepper {
     grid-template-columns: 34px minmax(36px, 1fr) 34px;
+    min-width: 0;
 }
 
 .av-builder-note.compact {
@@ -4202,6 +4231,67 @@ main > .section-padding.bg-light:first-child .sub-headline {
 
 .av-plan-chips b {
     color: #071123;
+}
+
+.av-plan-items {
+    display: grid;
+    gap: 6px;
+    margin: 12px 0 10px;
+}
+
+.av-plan-items-head,
+.av-plan-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(112px, 0.48fr);
+    gap: 10px;
+    align-items: center;
+}
+
+.av-plan-items-head {
+    padding: 0 10px;
+    color: #8291a6;
+    font-size: 0.64rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.av-plan-item {
+    min-height: 42px;
+    padding: 9px 10px;
+    border: 1px solid rgba(13, 38, 68, 0.08);
+    border-radius: 12px;
+    background: #f6f8fb;
+}
+
+.av-plan-item b,
+.av-plan-item strong,
+.av-plan-item em {
+    display: block;
+}
+
+.av-plan-item b {
+    min-width: 0;
+    color: #071123;
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+.av-plan-item em {
+    margin-top: 3px;
+    color: #64748b;
+    font-size: 0.64rem;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.av-plan-item strong {
+    color: #334a66;
+    font-size: 0.76rem;
+    line-height: 1.25;
+    text-align: right;
 }
 
 .av-plan-insight {
@@ -5140,6 +5230,7 @@ textarea.has-error {
     .av-builder-budget,
     .av-room-summary-grid,
     .av-plan-list,
+    .av-builder-qty-grid,
     .av-cost-brief,
     .av-room-detail-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -5217,6 +5308,20 @@ textarea.has-error {
     .av-source-guide .av-source-legend em,
     .av-source-guide .av-source-legend em:first-child {
         justify-self: stretch;
+    }
+
+    .av-qty-table-head {
+        display: none;
+    }
+
+    .av-builder-qty-grid label,
+    .av-plan-items-head,
+    .av-plan-item {
+        grid-template-columns: 1fr;
+    }
+
+    .av-plan-item strong {
+        text-align: left;
     }
 
     .av-room-detail-card summary {

@@ -42,6 +42,25 @@
       { id: "led", label: "Active LED Wall" },
       { id: "none", label: "No Display Required" }
     ],
+    displaySizes: [
+      { id: "43", label: "43 inch - Small huddle / signage" },
+      { id: "55", label: "55 inch - Huddle room" },
+      { id: "65", label: "65 inch - Small meeting room" },
+      { id: "75", label: "75 inch - Meeting room" },
+      { id: "86", label: "86 inch - Boardroom / conference" },
+      { id: "98", label: "98 inch - Large boardroom / training" },
+      { id: "110", label: "110 inch - Executive boardroom" },
+      { id: "130", label: "130 inch - Small LED wall" },
+      { id: "136", label: "136 inch - Standard LED wall" },
+      { id: "150", label: "150 inch - Large meeting / training LED" },
+      { id: "165", label: "165 inch - Premium training room" },
+      { id: "180", label: "180 inch - Auditorium / seminar" },
+      { id: "200", label: "200 inch - Medium auditorium" },
+      { id: "220", label: "220 inch - Large auditorium" },
+      { id: "250", label: "250 inch - University hall" },
+      { id: "300", label: "300 inch - Convention / large auditorium" },
+      { id: "330", label: "330 inch - Premium large venue" }
+    ],
     speakers: [
       { id: "soundbar", label: "Soundbar" },
       { id: "ceiling", label: "Ceiling Speakers" },
@@ -109,6 +128,7 @@
     height: 10,
     platform: "teams",
     display: "commercial",
+    displaySize: undefined,
     displayQty: 1,
     camera: "ai",
     cameraQty: 1,
@@ -130,6 +150,7 @@
 
   const defaultState = {
     activeRoom: 0,
+    fineTuneOpen: false,
     rooms: [createRoom(0)]
   };
 
@@ -264,6 +285,7 @@
       width: preset.width,
       height: preset.height,
       display: purpose.display,
+      displaySize: undefined,
       camera: purpose.camera,
       microphone: purpose.microphone,
       speaker: purpose.speaker,
@@ -410,6 +432,11 @@
     return `${escapeHtml(item.serviceScope.labourLevel)} - ${escapeHtml(item.serviceScope.technicianDays)} tech + ${escapeHtml(item.serviceScope.engineerDays)} eng days`;
   }
 
+  function planQuantityValue(item) {
+    if (!item.serviceScope) return `${item.qty} qty`;
+    return `${item.serviceScope.labourLevel}: ${item.serviceScope.technicianDays} tech + ${item.serviceScope.engineerDays} eng days`;
+  }
+
   function serviceScopeHtml(item) {
     if (!item.serviceScope) return "";
     return `
@@ -443,55 +470,78 @@
     return "displayCommercial";
   }
 
+  function displayBand(room, bandKey, qty) {
+    const base = CONFIG.unitBands[bandKey] || [0, 0];
+    const size = int(room.displaySize || 75, 75, 43, 330);
+    const reference = bandKey === "displayLed" ? 136 : bandKey === "displayProjector" ? 120 : bandKey === "displayInteractive" ? 75 : 75;
+    const exponent = bandKey === "displayLed" ? 1.35 : bandKey === "displayProjector" ? 0.85 : 1.15;
+    const multiplier = clamp(Math.pow(size / reference, exponent), 0.55, bandKey === "displayLed" ? 4.2 : 3.6);
+    return [Math.round(base[0] * multiplier * qty), Math.round(base[1] * multiplier * qty)];
+  }
+
+  function displayName(display, size) {
+    if (display === "none") return "No display required";
+    if (display === "led") return `${size} inch Active LED Wall`;
+    if (display === "projector") return `${size} inch Projector + Screen`;
+    if (display === "interactive") return `${size} inch Interactive Display`;
+    if (display === "dual") return `Dual ${size} inch Displays`;
+    return `${size} inch Commercial Display`;
+  }
+
+  function recommendedDisplaySize(room, display, requiredDiag) {
+    if (display === "none") return 0;
+    if (display === "led") return int(ceilTo(Math.max(requiredDiag, 150), 10), 150, 43, 330);
+    if (display === "projector") return int(ceilTo(Math.max(requiredDiag, 120), 10), 120, 43, 330);
+    if (display === "dual") return int(requiredDiag >= 180 ? 98 : room.capacity >= 18 || area(room) >= 650 ? 86 : 75, 75, 43, 330);
+    if (display === "interactive") return int(requiredDiag >= 180 ? 98 : room.capacity >= 18 || area(room) >= 650 ? 86 : 75, 75, 43, 330);
+    if (room.capacity <= 6 && area(room) <= 180) return 65;
+    if (room.capacity <= 14 && area(room) <= 520) return 75;
+    if (room.capacity <= 28 && area(room) <= 950) return 86;
+    return 98;
+  }
+
   function displayRecommendation(room) {
     const sqft = area(room);
     const seats = int(room.capacity, 10, 1, 2000);
     const farthestViewFt = Math.max(num(room.length, 24), num(room.width, 16));
     const requiredDiag = ceilTo(Math.max(12, farthestViewFt * 12 / 6) / 0.49, 10);
     if (room.display === "none") return { component: "No display required", shortLabel: "No display", reason: "Selected because this room does not need visual presentation." };
+    const isManualSize = manualMap(room).displaySize;
+    const size = int(room.displaySize || recommendedDisplaySize(room, room.display, requiredDiag), recommendedDisplaySize(room, room.display, requiredDiag), 43, 330);
+    const sizeReason = isManualSize ? `${size} inch size selected by client; GPSPL will validate viewing distance and wall fit during site survey.` : `Estimated from ${Math.round(farthestViewFt)} ft farthest viewer and room use.`;
     if (room.display === "led") return {
-      component: isMegaVenue(room) ? "Mega Venue LED Wall / Projection System Review" : requiredDiag >= 260 ? "Estimated 300+ inch Active LED Wall" : "Estimated Active LED Wall",
-      shortLabel: isMegaVenue(room) ? "Mega venue LED/projection review" : requiredDiag >= 260 ? "300+ inch LED wall" : "LED wall",
+      component: isMegaVenue(room) ? `Mega Venue ${size} inch LED Wall / Projection System Review` : `Estimated ${displayName("led", size)}`,
+      shortLabel: isMegaVenue(room) ? "Mega venue LED/projection review" : `${size} inch LED wall`,
       reason: isMegaVenue(room)
         ? "Large venue image system requires site drawing, throw distance, brightness, rigging, power and content-size validation before final BOQ."
         : requiredDiag >= 260
-        ? `Large image suggested from ${Math.round(farthestViewFt)} ft farthest viewer; final LED size/pixel pitch depends on wall size and content detail.`
-        : "Best for premium front-facing rooms, larger walls and high-impact viewing."
+        ? `${sizeReason} Final LED size/pixel pitch depends on wall size and content detail.`
+        : `${sizeReason} Best for premium front-facing rooms, larger walls and high-impact viewing.`,
+      size
     };
     if (room.display === "projector") return {
-      component: requiredDiag >= 260 ? "Estimated 300 inch Laser Projection / LED Wall Review" : requiredDiag >= 200 ? "Estimated 240 inch Laser Projection" : seats >= 60 || sqft >= 1400 ? "Estimated 150 inch Projector + Screen" : "Estimated 120 inch Projector + Screen",
-      shortLabel: requiredDiag >= 260 ? "300 inch projection review" : requiredDiag >= 200 ? "240 inch projection" : seats >= 60 || sqft >= 1400 ? "150 inch projection" : "120 inch projection",
-      reason: `Suggested from ${Math.round(farthestViewFt)} ft farthest viewer; final projection/LED choice depends on brightness, wall size and ambient light.`
+      component: requiredDiag >= 260 && !isManualSize ? `Estimated ${size} inch Laser Projection / LED Wall Review` : `Estimated ${displayName("projector", size)}`,
+      shortLabel: `${size} inch projection`,
+      reason: `${sizeReason} Final projection/LED choice depends on brightness, wall size and ambient light.`,
+      size
     };
     if (room.display === "dual") return {
-      component: requiredDiag >= 260 ? "Estimated Dual Displays + LED Wall Review" : requiredDiag >= 180 ? "Estimated Dual 98 inch Displays / Projection Review" : seats >= 18 || sqft >= 650 ? "Estimated Dual 86 inch Commercial Displays" : "Estimated Dual 75 inch Commercial Displays",
-      shortLabel: requiredDiag >= 260 ? "Dual + LED review" : requiredDiag >= 180 ? "Dual 98 inch / projection review" : seats >= 18 || sqft >= 650 ? "Dual 86 inch displays" : "Dual 75 inch displays",
-      reason: requiredDiag >= 180 ? `Dual-display workflow selected, but ${Math.round(farthestViewFt)} ft viewing distance needs larger image review for readable content.` : "Dual displays help show VC participants and content together without switching."
+      component: requiredDiag >= 260 && !isManualSize ? `Estimated Dual ${size} inch Displays + LED Wall Review` : requiredDiag >= 180 && !isManualSize ? `Estimated Dual ${size} inch Displays / Projection Review` : `Estimated ${displayName("dual", size)}`,
+      shortLabel: `Dual ${size} inch displays`,
+      reason: requiredDiag >= 180 ? `Dual-display workflow selected. ${sizeReason}` : `${sizeReason} Dual displays help show VC participants and content together without switching.`,
+      size
     };
     if (room.display === "interactive") return {
-      component: requiredDiag >= 260 ? "Estimated Interactive Display + LED Wall Review" : requiredDiag >= 180 ? "Estimated Interactive Display + Projection Support" : seats >= 18 || sqft >= 650 ? "Estimated 86 inch Interactive Display" : "Estimated 75 inch Interactive Display",
-      shortLabel: requiredDiag >= 260 ? "Interactive + LED review" : requiredDiag >= 180 ? "Interactive + projection support" : seats >= 18 || sqft >= 650 ? "86 inch interactive" : "75 inch interactive",
-      reason: requiredDiag >= 180 ? `Interactive workflow selected; ${Math.round(farthestViewFt)} ft farthest viewer needs supplemental projection/LED support for rear visibility.` : "Interactive display is suggested for training, annotation and classroom-style collaboration."
-    };
-    if (seats <= 6 && sqft <= 180) return {
-      component: "Estimated 65 inch Commercial Display",
-      shortLabel: "65 inch display",
-      reason: "Suitable for compact rooms with shorter viewing distance."
-    };
-    if (seats <= 14 && sqft <= 520) return {
-      component: "Estimated 75 inch Commercial Display",
-      shortLabel: "75 inch display",
-      reason: "Suggested for standard meeting rooms so text remains readable from the rear seats."
-    };
-    if (seats <= 28 && sqft <= 950) return {
-      component: "Estimated 86 inch Commercial Display",
-      shortLabel: "86 inch display",
-      reason: "Suggested for medium rooms where presentations need larger text visibility."
+      component: requiredDiag >= 260 && !isManualSize ? `Estimated ${size} inch Interactive Display + LED Wall Review` : requiredDiag >= 180 && !isManualSize ? `Estimated ${size} inch Interactive Display + Projection Support` : `Estimated ${displayName("interactive", size)}`,
+      shortLabel: `${size} inch interactive`,
+      reason: requiredDiag >= 180 ? `Interactive workflow selected. ${sizeReason}` : `${sizeReason} Interactive display is suggested for training, annotation and classroom-style collaboration.`,
+      size
     };
     return {
-      component: "Estimated 98 inch Commercial Display",
-      shortLabel: "98 inch display",
-      reason: "Suggested for larger rooms; final size depends on wall, viewing distance and budget."
+      component: `Estimated ${displayName("commercial", size)}`,
+      shortLabel: `${size} inch display`,
+      reason: `${sizeReason} Final size depends on wall, viewing distance and budget.`,
+      size
     };
   }
 
@@ -592,13 +642,15 @@
     if (room.roomType === "auditorium" && diagonal >= 260 && display === "projector" && !manualMap(room).display) display = "led";
     const derivedRoom = Object.assign({}, room, { display });
     const plan = displayRecommendation(derivedRoom);
+    const size = int(room.displaySize || plan.size || recommendedDisplaySize(derivedRoom, display, diagonal), plan.size || 75, 43, 330);
     const qty = display === "dual" ? 2 : (room.width > 34 && room.capacity >= 18 && !needsLargeImage ? 2 : 1);
     return {
       qty,
       plan,
       display,
+      size,
       confidence: clamp(Math.round(92 - Math.max(0, diagonal - 98) * 0.12), 78, 96),
-      justification: `${Math.round(longestViewFt)} ft farthest viewer needs approx. ${Math.round(diagonal)} inch diagonal for readable content. ${qty > 1 ? "Dual image positions reduce side-view strain." : "Single primary image position is sufficient."}`
+      justification: `${Math.round(longestViewFt)} ft farthest viewer needs approx. ${Math.round(diagonal)} inch diagonal for readable content; ${size} inch selected for planning. ${qty > 1 ? "Dual image positions reduce side-view strain." : "Single primary image position is sufficient."}`
     };
   }
 
@@ -849,6 +901,7 @@
     const design = engineeringDesign(room);
     const manual = manualMap(room);
     room.display = design.display.display || room.display;
+    room.displaySize = room.display === "none" ? 0 : int(manual.displaySize ? room.displaySize : design.display.size, design.display.size || 75, 43, 330);
     room.displayQty = int(manual.displayQty ? room.displayQty : design.display.qty, design.display.qty, 0, 8);
     room.cameraQty = room.camera === "none" ? 0 : int(manual.cameraQty ? room.cameraQty : design.camera.qty, design.camera.qty, 0, 6);
     room.micQty = room.microphone === "none" ? 0 : int(manual.micQty ? room.micQty : design.microphone.qty, design.microphone.qty, 0, 24);
@@ -901,10 +954,10 @@
     const displayPlan = design.display.plan;
     const dKey = displayKey(Object.assign({}, room, { display: design.display.display || room.display }));
     if (dKey && room.displayQty > 0) {
-      const displayItem = line("Display", displayPlan.component, room.displayQty, dKey, design.display.justification || displayPlan.reason, design.display.confidence);
+      const displayItem = line("Display", displayPlan.component, room.displayQty, dKey, design.display.justification || displayPlan.reason, design.display.confidence, displayBand(room, dKey, room.displayQty));
       displayItem.shortLabel = displayPlan.shortLabel;
       displayItem.reason = displayItem.note;
-      items.push(markSource(displayItem, room, ["display", "displayQty"]));
+      items.push(markSource(displayItem, room, ["display", "displaySize", "displayQty"]));
     }
 
     const cKey = cameraKey(room);
@@ -1044,6 +1097,10 @@
     return item.source === "Client selected" ? "Client" : "GPSPL";
   }
 
+  function sourceStatusLabel(item) {
+    return item.source === "Client selected" ? "Client selected" : "GPSPL recommended";
+  }
+
   function buildProject(state) {
     const rooms = state.rooms.map((room, index) => {
       const boq = buildRoomBoq(room);
@@ -1066,7 +1123,7 @@
   }
 
   function select(name, value, items, attrs) {
-    return `<select name="${escapeHtml(name)}" ${attrs || ""}>${items.map((item) => `<option value="${escapeHtml(item.id)}" ${item.id === value ? "selected" : ""}>${escapeHtml(item.label)}</option>`).join("")}</select>`;
+    return `<select name="${escapeHtml(name)}" ${attrs || ""}>${items.map((item) => `<option value="${escapeHtml(item.id)}" ${String(item.id) === String(value) ? "selected" : ""}>${escapeHtml(item.label)}</option>`).join("")}</select>`;
   }
 
   function stepper(name, value, min, max) {
@@ -1118,9 +1175,11 @@
           <label>Microphone${select("microphone", room.microphone, CONFIG.microphones)}</label>
           <label>Speaker Type${select("speaker", room.speaker, CONFIG.speakers)}</label>
         </div>
-        <details class="av-advanced-controls">
+        <details class="av-advanced-controls" data-fine-tune ${state.fineTuneOpen ? "open" : ""}>
           <summary>Fine tune quantities</summary>
+          <div class="av-qty-table-head"><span>Product</span><span>Quantity</span></div>
           <div class="av-builder-qty-grid">
+            <label><span>Display Size</span>${select("displaySize", room.displaySize || 75, CONFIG.displaySizes)}</label>
             <label><span>TV / Display Qty</span>${stepper("displayQty", room.displayQty, 0, 8)}</label>
             <label><span>Camera Qty</span>${stepper("cameraQty", room.cameraQty, 0, 6)}</label>
             <label><span>Mic Qty</span>${stepper("micQty", room.micQty, 0, 24)}</label>
@@ -1191,8 +1250,14 @@
                 <strong>${escapeHtml(bandText([Math.round(entry.subtotal[0] * 1.18), Math.round(entry.subtotal[1] * 1.18)]))}</strong>
               </header>
               <div class="av-validation-pill ${escapeHtml(entry.validation.statusClass)}">${escapeHtml(entry.validation.label)} - ${escapeHtml(entry.validation.score)}%</div>
-              <div class="av-plan-chips">
-                ${keyPlanItems(entry).map((item) => `<span><b>${escapeHtml(simpleComponent(item))}</b>${planChipLabel(item)}</span>`).join("")}
+              <div class="av-plan-items">
+                <div class="av-plan-items-head"><span>Product</span><span>Quantity</span></div>
+                ${keyPlanItems(entry).map((item) => `
+                  <div class="av-plan-item">
+                    <b>${escapeHtml(simpleComponent(item))}<em>${escapeHtml(sourceStatusLabel(item))}</em></b>
+                    <strong>${escapeHtml(planQuantityValue(item))}</strong>
+                  </div>
+                `).join("")}
               </div>
               <div class="av-plan-insight">
                 <span>Engineering note</span>
@@ -1398,7 +1463,7 @@
             <p class="av-builder-honeypot" aria-hidden="true"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
             <label>Client Name<input name="name" autocomplete="name" required></label>
             <label>Company<input name="company" autocomplete="organization"></label>
-            <label>Email<input type="email" name="email" autocomplete="email" required></label>
+            <label>Email<input type="email" name="email" autocomplete="email" pattern="^(?=.{8,254}$)(?=[^@]*[A-Za-z])[A-Za-z0-9._%+-]{4,}@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$" title="Enter a valid email, for example name@gmail.com or name@company.com" required></label>
             <label>Phone<input name="phone" autocomplete="tel" pattern="^[+0-9][0-9\\s-]{7,18}$" required></label>
             <label>Project Location<input name="city" autocomplete="address-level2" required></label>
             <label>Remarks<textarea name="project_description" rows="4" placeholder="Any preferred brand, site deadline or special requirement"></textarea></label>
@@ -1473,7 +1538,7 @@
     const nextCount = int(count, state.rooms.length, 1, CONFIG.maxRooms);
     const rooms = state.rooms.slice(0, nextCount);
     while (rooms.length < nextCount) rooms.push(createRoom(rooms.length));
-    return { activeRoom: Math.min(state.activeRoom, rooms.length - 1), rooms };
+    return Object.assign({}, state, { activeRoom: Math.min(state.activeRoom, rooms.length - 1), rooms });
   }
 
   function updateActiveRoom(state, patch, tune) {
@@ -1505,7 +1570,12 @@
     const remove = root.querySelector("[data-remove-room]");
     if (remove) remove.addEventListener("click", () => {
       const rooms = state.rooms.filter((_, index) => index !== state.activeRoom);
-      render(root, { rooms, activeRoom: Math.max(0, state.activeRoom - 1) });
+      render(root, Object.assign({}, state, { rooms, activeRoom: Math.max(0, state.activeRoom - 1) }));
+    });
+
+    const fineTune = root.querySelector("[data-fine-tune]");
+    if (fineTune) fineTune.addEventListener("toggle", () => {
+      state.fineTuneOpen = fineTune.open;
     });
 
     root.querySelectorAll("[data-room-editor] input, [data-room-editor] select").forEach((input) => {
@@ -1519,11 +1589,11 @@
           render(root, next);
           return;
         }
-        const tune = ["roomType", "capacity", "length", "width", "height", "display", "camera", "microphone", "speaker"].includes(input.name);
+        const tune = ["roomType", "capacity", "length", "width", "height", "display", "displaySize", "camera", "microphone", "speaker"].includes(input.name);
         const patch = { [input.name]: input.type === "number" ? Number(input.value) : input.value };
         const draftRoom = Object.assign({}, state.rooms[state.activeRoom], patch);
         const currentManual = manualMap(state.rooms[state.activeRoom]);
-        const manualFields = ["display", "camera", "microphone", "speaker", "displayQty", "cameraQty", "micQty", "speakerQty", "schedulerQty", "controllerQty", "dspQty", "rackQty", "upsQty", "laptopQty", "desktopQty", "cctvQty", "networkQty"];
+        const manualFields = ["display", "displaySize", "camera", "microphone", "speaker", "displayQty", "cameraQty", "micQty", "speakerQty", "schedulerQty", "controllerQty", "dspQty", "rackQty", "upsQty", "laptopQty", "desktopQty", "cctvQty", "networkQty"];
         if (manualFields.includes(input.name)) patch.manualOverrides = Object.assign({}, currentManual, { [input.name]: true });
         if (input.name === "capacity") patch.autoCapacity = false;
         if (input.name === "roomType") {
@@ -1537,10 +1607,12 @@
           patch.width = preset.width;
           patch.height = preset.height;
           patch.display = nextPurpose.display;
+          patch.displaySize = undefined;
           patch.camera = nextPurpose.camera;
           patch.microphone = nextPurpose.microphone;
           patch.speaker = nextPurpose.speaker;
           patch.displayQty = undefined;
+          patch.displaySize = undefined;
           patch.cameraQty = undefined;
           patch.micQty = undefined;
           patch.speakerQty = undefined;
@@ -1558,7 +1630,12 @@
         const fieldDesign = engineeringDesign(draftRoom);
         if (input.name === "display") {
           patch.displayQty = fieldDesign.display.qty;
+          patch.displaySize = fieldDesign.display.size;
           patch.manualOverrides = Object.assign({}, patch.manualOverrides || currentManual, { display: true, displayQty: true });
+        }
+        if (input.name === "displaySize") {
+          patch.displaySize = int(input.value, fieldDesign.display.size || 75, 43, 330);
+          patch.manualOverrides = Object.assign({}, patch.manualOverrides || currentManual, { displaySize: true });
         }
         if (input.name === "camera") {
           patch.cameraQty = input.value === "none" ? 0 : fieldDesign.camera.qty;
@@ -1578,6 +1655,7 @@
         }
         if (["capacity", "length", "width", "height"].includes(input.name)) {
           const sizeDesign = engineeringDesign(Object.assign({}, draftRoom, patch));
+          if (!currentManual.displaySize) patch.displaySize = sizeDesign.display.size;
           if (!currentManual.displayQty) patch.displayQty = sizeDesign.display.qty;
           if (!currentManual.cameraQty) patch.cameraQty = sizeDesign.camera.qty;
           if (!currentManual.micQty) patch.micQty = sizeDesign.microphone.qty;
@@ -1655,6 +1733,7 @@
         if (name === "micQty" && nextValue === 0) patch.dspQty = room.speakerQty > 1 || room.cameraQty > 0 ? room.dspQty : 0;
         if (name === "cameraQty" && nextValue === 0) patch.dspQty = room.micQty > 0 || room.speakerQty > 1 ? room.dspQty : 0;
         const next = updateActiveRoom(state, patch, false);
+        next.fineTuneOpen = true;
         track("room_configurator_update", { action: "quantity_stepper", field: name, value: nextValue, rooms: next.rooms.length, estimate: bandText(buildProject(next).total) });
         render(root, next);
       });
@@ -1685,44 +1764,268 @@
     return new URLSearchParams(new FormData(form)).toString();
   }
 
-  function handleLeadSubmit(event, state, project) {
+  function validateLeadForm(form) {
+    const email = form.querySelector("input[name='email']");
+    if (email) {
+      const value = email.value.trim();
+      const [local = "", domain = ""] = value.toLowerCase().split("@");
+      const weakLocalNames = new Set(["test", "demo", "user", "admin", "mail", "email", "abc", "abcd", "qwerty", "asdf"]);
+      const looksValid = /^(?=.{8,254}$)(?=[^@]*[A-Za-z])[A-Za-z0-9._%+-]{4,}@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(value);
+      const hasReadableName = /[A-Za-z]{2,}/.test(local);
+      const hasDomainName = /^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(domain);
+      const repeatedOnly = /^([a-z0-9])\1+$/i.test(local.replace(/[._%+-]/g, ""));
+      const numericHeavy = (local.match(/\d/g) || []).length > Math.max(3, local.length - 2);
+      const weak = weakLocalNames.has(local) || repeatedOnly || numericHeavy;
+      email.setCustomValidity(looksValid && hasReadableName && hasDomainName && !weak ? "" : "Please enter a genuine email, for example name@gmail.com or name@company.com.");
+    }
+    return form.reportValidity();
+  }
+
+  async function handleLeadSubmit(event, state, project) {
     event.preventDefault();
     const form = event.currentTarget;
+    if (!validateLeadForm(form)) return;
     const button = form.querySelector("button[type='submit']");
     if (button) button.disabled = true;
     const lead = Object.fromEntries(new FormData(form));
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encodeForm(form)
-    }).catch(() => {
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodeForm(form)
+      });
+    } catch (error) {
       // The browser-generated proposal should still download during local previews.
-    }).finally(() => {
-      downloadProposalPdf(state, project, lead);
+    } finally {
+      await downloadProposalPdf(state, project, lead);
       track("room_configurator_proposal_download", { rooms: state.rooms.length, estimate: bandText(project.total) });
       const modal = form.closest("[data-builder-modal]");
       if (modal) modal.hidden = true;
       if (button) button.disabled = false;
-    });
+    }
   }
 
   function pdfSafe(value) {
     return String(value == null ? "" : value).replace(/[^\x20-\x7E]/g, " ");
   }
 
-  function downloadProposalPdf(state, project, lead) {
-    const printWindow = window.open("", "_blank", "noopener,noreferrer");
+  function proposalFileName(lead) {
+    const base = pdfSafe(lead.company || lead.name || "client").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "client";
+    return `gpspl-av-boq-proposal-${base}.pdf`;
+  }
+
+  function pdfLines(doc, text, maxWidth) {
+    return doc.splitTextToSize(pdfSafe(text), maxWidth);
+  }
+
+  async function loadImageDataUrl(url) {
+    try {
+      const response = await fetch(url);
+      const blob = await response.blob();
+      return await new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = () => resolve("");
+        reader.readAsDataURL(blob);
+      });
+    } catch (error) {
+      return "";
+    }
+  }
+
+  async function generateProposalPdf(state, project, lead) {
+    const jsPdfCtor = window.jspdf && window.jspdf.jsPDF;
+    if (!jsPdfCtor) return false;
+
+    const doc = new jsPdfCtor({ unit: "pt", format: "a4" });
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const pageHeight = doc.internal.pageSize.getHeight();
+    const margin = 38;
+    const contentWidth = pageWidth - margin * 2;
+    const breakdown = costBreakdown(project);
+    const basis = pricingBasis(project);
+    const logoUrl = `${window.location.origin}/assests/images/gpspl.png`;
+    const logo = await loadImageDataUrl(logoUrl);
+    const preparedFor = lead.company ? `${lead.name || "Client"}, ${lead.company}` : (lead.name || "Client");
+    let y = 0;
+
+    const addPageIfNeeded = (height) => {
+      if (y + height <= pageHeight - 54) return;
+      doc.addPage();
+      y = 48;
+    };
+    const textBlock = (text, x, width, options = {}) => {
+      const size = options.size || 10;
+      const lineHeight = options.lineHeight || size + 4;
+      doc.setFont("helvetica", options.style || "normal");
+      doc.setFontSize(size);
+      doc.setTextColor(options.color || "#172b45");
+      const lines = pdfLines(doc, text, width);
+      addPageIfNeeded(lines.length * lineHeight + 4);
+      doc.text(lines, x, y, { lineHeightFactor: lineHeight / size });
+      y += lines.length * lineHeight;
+    };
+    const card = (x, cardY, width, height, title, value, fill) => {
+      doc.setFillColor(fill || "#f5f8fc");
+      doc.setDrawColor("#dce6f1");
+      doc.roundedRect(x, cardY, width, height, 10, 10, "FD");
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(9);
+      doc.setTextColor("#d52b1e");
+      doc.text(pdfSafe(title).toUpperCase(), x + 12, cardY + 20);
+      doc.setFontSize(12);
+      doc.setTextColor("#071123");
+      doc.text(pdfLines(doc, value, width - 24), x + 12, cardY + 42);
+    };
+
+    doc.setFillColor("#071a31");
+    doc.rect(0, 0, pageWidth, 154, "F");
+    doc.setFillColor("#d52b1e");
+    doc.rect(0, 154, pageWidth, 6, "F");
+    if (logo) doc.addImage(logo, "PNG", margin, 26, 54, 54);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(11);
+    doc.setTextColor("#ffcf33");
+    doc.text("GLOBAL PERIPHERAL SOLUTION PVT. LTD.", margin + 68, 46);
+    doc.setFontSize(9);
+    doc.setTextColor("#ffffff");
+    doc.text("Established 1997 | AV, Display, Collaboration and IT Integration", margin + 68, 66);
+    doc.setFontSize(30);
+    doc.text("Smart AV BOQ Estimate", margin, 112);
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(12);
+    doc.text(`Prepared for ${pdfSafe(preparedFor)} | ${pdfSafe(lead.city || "Project Location")}`, margin, 136);
+    y = 196;
+
+    const metricWidth = (contentWidth - 20) / 3;
+    card(margin, y, metricWidth, 66, "Total rooms", String(state.rooms.length));
+    card(margin + metricWidth + 10, y, metricWidth, 66, "Budget class", project.estimateClass);
+    card(margin + metricWidth * 2 + 20, y, metricWidth, 66, "Timeline", project.timeline);
+    y += 96;
+
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(18);
+    doc.setTextColor("#071123");
+    doc.text("Commercial Estimate", margin, y);
+    y += 18;
+    doc.setFillColor("#071a31");
+    doc.roundedRect(margin, y, contentWidth, 78, 10, 10, "F");
+    doc.setFontSize(10);
+    doc.setTextColor("#ffcf33");
+    doc.text("TOTAL GST-INCLUSIVE ESTIMATE", margin + 16, y + 24);
+    doc.setFontSize(20);
+    doc.setTextColor("#ffffff");
+    doc.text(bandText(project.total), margin + 16, y + 54);
+    y += 102;
+
+    const breakWidth = (contentWidth - 30) / 4;
+    card(margin, y, breakWidth, 64, "Hardware", bandText(breakdown.hardware));
+    card(margin + breakWidth + 10, y, breakWidth, 64, "Wiring", bandText(breakdown.wiring));
+    card(margin + breakWidth * 2 + 20, y, breakWidth, 64, "Install", bandText(breakdown.installation));
+    card(margin + breakWidth * 3 + 30, y, breakWidth, 64, "Programming", bandText(breakdown.programming));
+    y += 92;
+
+    textBlock(`${basis.title}: ${basis.gpspl} ${basis.client} ${basis.note}`, margin, contentWidth, { size: 10, style: "bold" });
+    y += 8;
+    textBlock("Prices may vary. This is a planning estimate only. For real/final pricing, contact GPSPL for site validation, equipment selection and commercial proposal.", margin, contentWidth, { size: 10, color: "#d52b1e", style: "bold" });
+    y += 22;
+
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(16);
+    doc.setTextColor("#071123");
+    doc.text("Room Summary", margin, y);
+    y += 18;
+    project.rooms.forEach((entry) => {
+      const audio = audioPlan(entry.room);
+      const summary = `${entry.room.designation} - ${label(CONFIG.rooms, entry.room.roomType)} | ${entry.room.capacity} seats | ${area(entry.room)} sq. ft. | ${bandText([Math.round(entry.subtotal[0] * 1.18), Math.round(entry.subtotal[1] * 1.18)])}\n${entry.validation.label} (${entry.validation.score}%). ${roomInsight(entry)} ${entry.room.roomType === "server" ? "Rack, UPS, network and CCTV planning." : entry.room.roomType === "reception" ? "Display, IT device and CCTV planning." : audio.amplifier}`;
+      const lines = pdfLines(doc, summary, contentWidth - 24);
+      addPageIfNeeded(lines.length * 12 + 28);
+      doc.setFillColor("#f8fbff");
+      doc.setDrawColor("#dce6f1");
+      doc.roundedRect(margin, y, contentWidth, lines.length * 12 + 22, 8, 8, "FD");
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(9);
+      doc.setTextColor("#172b45");
+      doc.text(lines, margin + 12, y + 17);
+      y += lines.length * 12 + 34;
+    });
+
+    addPageIfNeeded(90);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(16);
+    doc.setTextColor("#071123");
+    doc.text("Preliminary BOQ", margin, y);
+    y += 20;
+    const col = [90, 120, 42, 138, 48, 54];
+    const headers = ["Room", "Component", "Qty", "Reason", "Source", "Fit"];
+    const xPositions = col.reduce((acc, width, index) => {
+      acc.push(index === 0 ? margin : acc[index - 1] + col[index - 1]);
+      return acc;
+    }, []);
+    const drawHeader = () => {
+      doc.setFillColor("#071a31");
+      doc.rect(margin, y, contentWidth, 22, "F");
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(7);
+      doc.setTextColor("#ffffff");
+      headers.forEach((header, index) => doc.text(header.toUpperCase(), xPositions[index] + 4, y + 14));
+      y += 22;
+    };
+    drawHeader();
+    project.rooms.forEach((entry) => {
+      entry.boq.forEach((item) => {
+        const values = [
+          entry.room.designation,
+          item.component,
+          pdfQuantityLabel(item),
+          pdfNote(item),
+          item.source || "GPSPL",
+          `${confidenceLabel(item.confidence)} ${item.confidence}%`
+        ];
+        const wrapped = values.map((value, index) => pdfLines(doc, value, col[index] - 8));
+        const rowHeight = Math.max(28, ...wrapped.map((lines) => lines.length * 9 + 10));
+        if (y + rowHeight > pageHeight - 68) {
+          doc.addPage();
+          y = 48;
+          drawHeader();
+        }
+        doc.setDrawColor("#dce6f1");
+        doc.rect(margin, y, contentWidth, rowHeight);
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(7);
+        doc.setTextColor("#172b45");
+        wrapped.forEach((lines, index) => doc.text(lines, xPositions[index] + 4, y + 12));
+        y += rowHeight;
+      });
+    });
+
+    const pageCount = doc.getNumberOfPages();
+    for (let page = 1; page <= pageCount; page += 1) {
+      doc.setPage(page);
+      doc.setFillColor("#071a31");
+      doc.rect(0, pageHeight - 34, pageWidth, 34, "F");
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(8);
+      doc.setTextColor("#ffcf33");
+      doc.text("GPSPL", margin, pageHeight - 14);
+      doc.setTextColor("#ffffff");
+      doc.text("www.gpspl.co.in | info@gpspl.co.in | khurana.s@gpspl.co.in | +91 93100 92963", margin + 54, pageHeight - 14);
+      doc.text(`Page ${page} of ${pageCount}`, pageWidth - margin - 52, pageHeight - 14);
+    }
+
+    doc.save(proposalFileName(lead));
+    return true;
+  }
+
+  async function downloadProposalPdf(state, project, lead) {
+    const generated = await generateProposalPdf(state, project, lead);
+    if (generated) return;
+
+    const printWindow = window.open("", "_blank");
     const html = proposalHtml(state, project, lead);
     if (!printWindow) {
-      const blob = new Blob([html], { type: "text/html" });
-      const link = document.createElement("a");
-      link.href = URL.createObjectURL(blob);
-      link.download = "gpspl-av-boq-proposal.html";
-      document.body.appendChild(link);
-      link.click();
-      URL.revokeObjectURL(link.href);
-      link.remove();
+      alert("PDF generator could not open. Please allow pop-ups and try again.");
       return;
     }
     printWindow.document.open();

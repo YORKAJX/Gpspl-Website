@@ -27,23 +27,27 @@ export function applySecurity(app) {
           "script-src": [
             "'self'",
             "'unsafe-inline'",
+            "https://cdnjs.cloudflare.com",
             "https://www.googletagmanager.com",
             "https://www.google-analytics.com",
             "https://www.clarity.ms",
+            "https://*.clarity.ms",
             "https://va.vercel-scripts.com"
           ],
-          "script-src-attr": ["'none'"],
-          "style-src": ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+          "script-src-attr": ["'unsafe-inline'"],
+          "style-src": ["'self'", "'unsafe-inline'", "https://cdnjs.cloudflare.com", "https://fonts.googleapis.com"],
           "connect-src": [
             "'self'",
             env.API_BASE_URL,
             env.FRONTEND_URL,
+            ...env.allowedOrigins,
             "https://www.google-analytics.com",
             "https://analytics.google.com",
             "https://region1.google-analytics.com",
             "https://www.googletagmanager.com",
             "https://www.clarity.ms",
             "https://*.clarity.ms",
+            "https://places.googleapis.com",
             "https://vitals.vercel-insights.com"
           ],
           "upgrade-insecure-requests": env.isProduction ? [] : null
@@ -62,6 +66,7 @@ export function applySecurity(app) {
       },
       credentials: true,
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+      maxAge: 86400,
       allowedHeaders: ["Content-Type", "Authorization", "X-CSRF-Token", "X-Request-Id"]
     })
   );

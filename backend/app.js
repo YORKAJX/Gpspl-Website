@@ -17,8 +17,8 @@ export function createApp() {
   applySecurity(app);
   app.use(requestContext);
   app.use(generalLimiter);
-  app.use(express.json({ limit: "1mb" }));
-  app.use(express.urlencoded({ extended: true, limit: "1mb" }));
+  app.use(express.json({ limit: "256kb" }));
+  app.use(express.urlencoded({ extended: true, limit: "256kb", parameterLimit: 80 }));
   app.use(
     morgan("combined", {
       stream: { write: (message) => logger.info(message.trim()) },

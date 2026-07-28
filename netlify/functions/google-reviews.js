@@ -1,8 +1,31 @@
 const DEFAULT_REVIEW_URL = 'https://www.google.com/search?q=Global+Peripheral+Solution+Pvt.+Ltd.+reviews';
+const ALLOWED_ORIGINS = new Set([
+    'https://gpspl.co.in',
+    'https://www.gpspl.co.in'
+]);
+
+const securityHeaders = {
+    'X-Content-Type-Options': 'nosniff',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'X-Frame-Options': 'SAMEORIGIN',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), payment=(), usb=()'
+};
+
+const corsHeaders = (event) => {
+    const origin = event.headers.origin || event.headers.Origin || '';
+    if (ALLOWED_ORIGINS.has(origin)) {
+        return {
+            'Access-Control-Allow-Origin': origin,
+            'Vary': 'Origin'
+        };
+    }
+    return {};
+};
 
 const json = (statusCode, body, extraHeaders = {}) => ({
     statusCode,
     headers: {
+        ...securityHeaders,
         'Content-Type': 'application/json; charset=utf-8',
         'Cache-Control': 'public, max-age=0, s-maxage=43200, stale-while-revalidate=86400',
         ...extraHeaders
@@ -47,15 +70,41 @@ const reviewDate = (review) => {
     return 'Google review';
 };
 
+const safeText = (value, max = 900) => plainText(value).replace(/[<>]/g, '').slice(0, max);
+
 const normalizeReview = (review) => ({
-    author: authorName(review),
+    author: safeText(authorName(review), 120) || 'Google Reviewer',
     photo: authorPhoto(review),
     rating: Number(review.rating || 0),
-    text: plainText(review.text || review.originalText),
+    text: safeText(review.text || review.originalText, 900),
     date: reviewDate(review)
 });
 
-exports.handler = async () => {
+exports.handler = async (event) => {
+    const baseHeaders = corsHeaders(event);
+
+    if (event.httpMethod === 'OPTIONS') {
+        return {
+            statusCode: 204,
+            headers: {
+                ...securityHeaders,
+                ...baseHeaders,
+                'Access-Control-Allow-Methods': 'GET, OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Cache-Control': 'no-store'
+            },
+            body: ''
+        };
+    }
+
+    if (event.httpMethod !== 'GET') {
+        return json(405, { error: 'Method not allowed' }, {
+            ...baseHeaders,
+            'Allow': 'GET, OPTIONS',
+            'Cache-Control': 'no-store'
+        });
+    }
+
     const apiKey = process.env.GOOGLE_PLACES_API_KEY;
     const placeId = process.env.GOOGLE_PLACE_ID;
     const googleMapsUrl = process.env.GOOGLE_REVIEWS_URL || DEFAULT_REVIEW_URL;
@@ -67,7 +116,7 @@ exports.handler = async () => {
             totalReviews: null,
             googleMapsUrl,
             reviews: []
-        });
+        }, baseHeaders);
     }
 
     try {
@@ -91,13 +140,12 @@ exports.handler = async () => {
         });
 
         if (!response.ok) {
-            const message = await response.text();
             return json(response.status, {
                 configured: true,
                 error: 'Google Places request failed',
-                details: message.slice(0, 300),
                 reviews: []
             }, {
+                ...baseHeaders,
                 'Cache-Control': 'no-store'
             });
         }
@@ -112,15 +160,15 @@ exports.handler = async () => {
             totalReviews: place.userRatingCount || null,
             googleMapsUrl: place.googleMapsUri || googleMapsUrl,
             reviews
-        });
+        }, baseHeaders);
     } catch (error) {
         return json(200, {
             configured: true,
             error: 'Google reviews temporarily unavailable',
-            details: error.message,
             googleMapsUrl,
             reviews: []
         }, {
+            ...baseHeaders,
             'Cache-Control': 'no-store'
         });
     }

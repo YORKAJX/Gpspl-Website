@@ -1,5 +1,17 @@
 https://www.gpspl.co.in/* https://gpspl.co.in/:splat 301!
 http://www.gpspl.co.in/* https://gpspl.co.in/:splat 301!
+/backend/* /404.html 404!
+/netlify/* /404.html 404!
+/scripts/* /404.html 404!
+/outputs/* /404.html 404!
+/node_modules/* /404.html 404!
+/package.json /404.html 404!
+/package-lock.json /404.html 404!
+/README.md /404.html 404!
+/netlify.toml /404.html 404!
+/.env /404.html 404!
+/.env.* /404.html 404!
+/.git/* /404.html 404!
 /active-led-video-wall.html /active-led-wall-solutions.html 301
 /active-led-video-wall /active-led-wall-solutions.html 301
 /about-gpspl /about-gpspl.html 200

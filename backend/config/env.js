@@ -18,6 +18,7 @@ const envSchema = z.object({
   PORT: numberFromString.default(4000),
   API_BASE_URL: z.string().url().default("http://localhost:4000"),
   FRONTEND_URL: z.string().url().default("http://localhost:8082"),
+  CORS_ORIGINS: z.string().optional(),
   TRUST_PROXY: numberFromString.default(1),
   DATABASE_URL: z.string().min(1),
   REDIS_URL: z.string().url().optional(),
@@ -46,7 +47,7 @@ const envSchema = z.object({
   UPLOAD_DIR: z.string().default("uploads"),
   MAX_UPLOAD_MB: numberFromString.default(10),
   ALLOWED_UPLOAD_MIME: z.string().default("image/jpeg,image/png,image/webp,application/pdf"),
-  ENABLE_SWAGGER: booleanFromString.default(true)
+  ENABLE_SWAGGER: booleanFromString.default(false)
 });
 
 const parsed = envSchema.safeParse(process.env);
@@ -60,7 +61,11 @@ export const env = Object.freeze({
   ...parsed.data,
   isProduction: parsed.data.NODE_ENV === "production",
   isTest: parsed.data.NODE_ENV === "test",
-  allowedOrigins: [parsed.data.FRONTEND_URL, parsed.data.API_BASE_URL].filter(Boolean),
+  allowedOrigins: [
+    parsed.data.FRONTEND_URL,
+    parsed.data.API_BASE_URL,
+    ...(parsed.data.CORS_ORIGINS ? parsed.data.CORS_ORIGINS.split(",").map((origin) => origin.trim()).filter(Boolean) : [])
+  ].filter(Boolean),
   leadNotificationEmails: parsed.data.LEAD_NOTIFICATION_EMAILS.split(",").map((email) => email.trim()).filter(Boolean),
   allowedUploadMimeTypes: parsed.data.ALLOWED_UPLOAD_MIME.split(",").map((type) => type.trim()).filter(Boolean)
 });
