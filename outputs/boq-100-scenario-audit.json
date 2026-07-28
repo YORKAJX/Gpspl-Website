@@ -1,0 +1,1014 @@
+{
+  "status": "PASS",
+  "scenarios": [
+    {
+      "name": "2-person focus huddle / base",
+      "roomType": "huddle",
+      "capacity": 2,
+      "area": 72,
+      "estimate": "Rs. 4.7 Lakh - Rs. 10.9 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "2-person focus huddle / high-ceiling",
+      "roomType": "huddle",
+      "capacity": 2,
+      "area": 72,
+      "estimate": "Rs. 4.9 Lakh - Rs. 11.5 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "2-person focus huddle / wide",
+      "roomType": "huddle",
+      "capacity": 2,
+      "area": 198,
+      "estimate": "Rs. 4.7 Lakh - Rs. 11.0 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "2-person focus huddle / deep",
+      "roomType": "huddle",
+      "capacity": 2,
+      "area": 248,
+      "estimate": "Rs. 6.0 Lakh - Rs. 14.1 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 88
+    },
+    {
+      "name": "2-person focus huddle / low-budget-none-speaker",
+      "roomType": "huddle",
+      "capacity": 2,
+      "area": 72,
+      "estimate": "Rs. 3.6 Lakh - Rs. 8.0 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "4-person huddle / base",
+      "roomType": "huddle",
+      "capacity": 4,
+      "area": 120,
+      "estimate": "Rs. 4.7 Lakh - Rs. 11.0 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "4-person huddle / high-ceiling",
+      "roomType": "huddle",
+      "capacity": 4,
+      "area": 120,
+      "estimate": "Rs. 4.9 Lakh - Rs. 11.5 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "4-person huddle / wide",
+      "roomType": "huddle",
+      "capacity": 4,
+      "area": 288,
+      "estimate": "Rs. 6.0 Lakh - Rs. 14.1 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "4-person huddle / deep",
+      "roomType": "huddle",
+      "capacity": 4,
+      "area": 340,
+      "estimate": "Rs. 6.0 Lakh - Rs. 14.1 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 88
+    },
+    {
+      "name": "4-person huddle / low-budget-none-speaker",
+      "roomType": "huddle",
+      "capacity": 4,
+      "area": 120,
+      "estimate": "Rs. 3.6 Lakh - Rs. 8.0 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "6-person VC room / base",
+      "roomType": "conference",
+      "capacity": 6,
+      "area": 192,
+      "estimate": "Rs. 6.6 Lakh - Rs. 15.2 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 90
+    },
+    {
+      "name": "6-person VC room / high-ceiling",
+      "roomType": "conference",
+      "capacity": 6,
+      "area": 192,
+      "estimate": "Rs. 6.3 Lakh - Rs. 14.6 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "6-person VC room / wide",
+      "roomType": "conference",
+      "capacity": 6,
+      "area": 416,
+      "estimate": "Rs. 6.9 Lakh - Rs. 15.8 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 90
+    },
+    {
+      "name": "6-person VC room / deep",
+      "roomType": "conference",
+      "capacity": 6,
+      "area": 456,
+      "estimate": "Rs. 7.5 Lakh - Rs. 17.4 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "6-person VC room / low-budget-none-speaker",
+      "roomType": "conference",
+      "capacity": 6,
+      "area": 192,
+      "estimate": "Rs. 5.1 Lakh - Rs. 11.4 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "10-person conference / base",
+      "roomType": "conference",
+      "capacity": 10,
+      "area": 384,
+      "estimate": "Rs. 6.6 Lakh - Rs. 15.2 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 90
+    },
+    {
+      "name": "10-person conference / high-ceiling",
+      "roomType": "conference",
+      "capacity": 10,
+      "area": 384,
+      "estimate": "Rs. 6.5 Lakh - Rs. 15.0 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "10-person conference / wide",
+      "roomType": "conference",
+      "capacity": 10,
+      "area": 720,
+      "estimate": "Rs. 8.0 Lakh - Rs. 18.5 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "10-person conference / deep",
+      "roomType": "conference",
+      "capacity": 10,
+      "area": 736,
+      "estimate": "Rs. 15.7 Lakh - Rs. 38.7 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 88
+    },
+    {
+      "name": "10-person conference / low-budget-none-speaker",
+      "roomType": "conference",
+      "capacity": 10,
+      "area": 384,
+      "estimate": "Rs. 5.1 Lakh - Rs. 11.5 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "14-person conference / base",
+      "roomType": "conference",
+      "capacity": 14,
+      "area": 540,
+      "estimate": "Rs. 6.9 Lakh - Rs. 15.8 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "14-person conference / high-ceiling",
+      "roomType": "conference",
+      "capacity": 14,
+      "area": 540,
+      "estimate": "Rs. 7.4 Lakh - Rs. 17.1 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 88
+    },
+    {
+      "name": "14-person conference / wide",
+      "roomType": "conference",
+      "capacity": 14,
+      "area": 960,
+      "estimate": "Rs. 8.9 Lakh - Rs. 20.5 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "14-person conference / deep",
+      "roomType": "conference",
+      "capacity": 14,
+      "area": 936,
+      "estimate": "Rs. 16.8 Lakh - Rs. 41.1 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 88
+    },
+    {
+      "name": "14-person conference / low-budget-none-speaker",
+      "roomType": "conference",
+      "capacity": 14,
+      "area": 540,
+      "estimate": "Rs. 5.1 Lakh - Rs. 11.5 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "18-person boardroom / base",
+      "roomType": "boardroom",
+      "capacity": 18,
+      "area": 720,
+      "estimate": "Rs. 9.6 Lakh - Rs. 22.0 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "18-person boardroom / high-ceiling",
+      "roomType": "boardroom",
+      "capacity": 18,
+      "area": 720,
+      "estimate": "Rs. 9.0 Lakh - Rs. 20.6 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 88
+    },
+    {
+      "name": "18-person boardroom / wide",
+      "roomType": "boardroom",
+      "capacity": 18,
+      "area": 1224,
+      "estimate": "Rs. 10.7 Lakh - Rs. 24.6 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "18-person boardroom / deep",
+      "roomType": "boardroom",
+      "capacity": 18,
+      "area": 1160,
+      "estimate": "Rs. 12.3 Lakh - Rs. 28.9 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 88
+    },
+    {
+      "name": "18-person boardroom / low-budget-none-speaker",
+      "roomType": "boardroom",
+      "capacity": 18,
+      "area": 720,
+      "estimate": "Rs. 7.7 Lakh - Rs. 17.4 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 90
+    },
+    {
+      "name": "24-person premium boardroom / base",
+      "roomType": "boardroom",
+      "capacity": 24,
+      "area": 968,
+      "estimate": "Rs. 9.5 Lakh - Rs. 22.5 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 88
+    },
+    {
+      "name": "24-person premium boardroom / high-ceiling",
+      "roomType": "boardroom",
+      "capacity": 24,
+      "area": 968,
+      "estimate": "Rs. 9.1 Lakh - Rs. 21.4 Lakh",
+      "validation": "Site review advised",
+      "validationScore": 87
+    },
+    {
+      "name": "24-person premium boardroom / wide",
+      "roomType": "boardroom",
+      "capacity": 24,
+      "area": 1584,
+      "estimate": "Rs. 11.3 Lakh - Rs. 26.5 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 88
+    },
+    {
+      "name": "24-person premium boardroom / deep",
+      "roomType": "boardroom",
+      "capacity": 24,
+      "area": 1452,
+      "estimate": "Rs. 19.0 Lakh - Rs. 46.6 Lakh",
+      "validation": "Site review advised",
+      "validationScore": 87
+    },
+    {
+      "name": "24-person premium boardroom / low-budget-none-speaker",
+      "roomType": "boardroom",
+      "capacity": 24,
+      "area": 968,
+      "estimate": "Rs. 7.7 Lakh - Rs. 18.0 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 90
+    },
+    {
+      "name": "28-seat training / base",
+      "roomType": "training",
+      "capacity": 28,
+      "area": 1092,
+      "estimate": "Rs. 10.0 Lakh - Rs. 22.8 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 88
+    },
+    {
+      "name": "28-seat training / high-ceiling",
+      "roomType": "training",
+      "capacity": 28,
+      "area": 1092,
+      "estimate": "Rs. 9.6 Lakh - Rs. 21.9 Lakh",
+      "validation": "Site review advised",
+      "validationScore": 87
+    },
+    {
+      "name": "28-seat training / wide",
+      "roomType": "training",
+      "capacity": 28,
+      "area": 1680,
+      "estimate": "Rs. 11.7 Lakh - Rs. 26.9 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 88
+    },
+    {
+      "name": "28-seat training / deep",
+      "roomType": "training",
+      "capacity": 28,
+      "area": 1664,
+      "estimate": "Rs. 19.9 Lakh - Rs. 48.7 Lakh",
+      "validation": "Site review advised",
+      "validationScore": 87
+    },
+    {
+      "name": "28-seat training / low-budget-none-speaker",
+      "roomType": "training",
+      "capacity": 28,
+      "area": 1092,
+      "estimate": "Rs. 8.1 Lakh - Rs. 18.3 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 90
+    },
+    {
+      "name": "40-seat classroom / base",
+      "roomType": "classroom",
+      "capacity": 40,
+      "area": 1288,
+      "estimate": "Rs. 10.8 Lakh - Rs. 25.6 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 88
+    },
+    {
+      "name": "40-seat classroom / high-ceiling",
+      "roomType": "classroom",
+      "capacity": 40,
+      "area": 1288,
+      "estimate": "Rs. 10.3 Lakh - Rs. 24.2 Lakh",
+      "validation": "Site review advised",
+      "validationScore": 87
+    },
+    {
+      "name": "40-seat classroom / wide",
+      "roomType": "classroom",
+      "capacity": 40,
+      "area": 1932,
+      "estimate": "Rs. 12.8 Lakh - Rs. 30.0 Lakh",
+      "validation": "Site review advised",
+      "validationScore": 87
+    },
+    {
+      "name": "40-seat classroom / deep",
+      "roomType": "classroom",
+      "capacity": 40,
+      "area": 1904,
+      "estimate": "Rs. 20.7 Lakh - Rs. 50.6 Lakh",
+      "validation": "Site review advised",
+      "validationScore": 87
+    },
+    {
+      "name": "40-seat classroom / low-budget-none-speaker",
+      "roomType": "classroom",
+      "capacity": 40,
+      "area": 1288,
+      "estimate": "Rs. 8.5 Lakh - Rs. 20.0 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 90
+    },
+    {
+      "name": "60-seat training hall / base",
+      "roomType": "training",
+      "capacity": 60,
+      "area": 2160,
+      "estimate": "Rs. 14.5 Lakh - Rs. 34.1 Lakh",
+      "validation": "Site review advised",
+      "validationScore": 87
+    },
+    {
+      "name": "60-seat training hall / high-ceiling",
+      "roomType": "training",
+      "capacity": 60,
+      "area": 2160,
+      "estimate": "Rs. 13.6 Lakh - Rs. 32.1 Lakh",
+      "validation": "Site review advised",
+      "validationScore": 86
+    },
+    {
+      "name": "60-seat training hall / wide",
+      "roomType": "training",
+      "capacity": 60,
+      "area": 3000,
+      "estimate": "Rs. 16.0 Lakh - Rs. 37.5 Lakh",
+      "validation": "Site review advised",
+      "validationScore": 86
+    },
+    {
+      "name": "60-seat training hall / deep",
+      "roomType": "training",
+      "capacity": 60,
+      "area": 2952,
+      "estimate": "Rs. 23.0 Lakh - Rs. 55.9 Lakh",
+      "validation": "Site review advised",
+      "validationScore": 86
+    },
+    {
+      "name": "60-seat training hall / low-budget-none-speaker",
+      "roomType": "training",
+      "capacity": 60,
+      "area": 2160,
+      "estimate": "Rs. 11.4 Lakh - Rs. 26.8 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "80-seat seminar hall / base",
+      "roomType": "auditorium",
+      "capacity": 80,
+      "area": 3150,
+      "estimate": "Rs. 22.7 Lakh - Rs. 57.9 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "80-seat seminar hall / high-ceiling",
+      "roomType": "auditorium",
+      "capacity": 80,
+      "area": 3150,
+      "estimate": "Rs. 22.8 Lakh - Rs. 58.0 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "80-seat seminar hall / wide",
+      "roomType": "auditorium",
+      "capacity": 80,
+      "area": 4130,
+      "estimate": "Rs. 24.5 Lakh - Rs. 62.8 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "80-seat seminar hall / deep",
+      "roomType": "auditorium",
+      "capacity": 80,
+      "area": 4140,
+      "estimate": "Rs. 22.8 Lakh - Rs. 58.0 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "80-seat seminar hall / low-budget-none-speaker",
+      "roomType": "auditorium",
+      "capacity": 80,
+      "area": 3150,
+      "estimate": "Rs. 16.9 Lakh - Rs. 42.1 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "120-seat multipurpose hall / base",
+      "roomType": "auditorium",
+      "capacity": 120,
+      "area": 4420,
+      "estimate": "Rs. 22.8 Lakh - Rs. 58.1 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "120-seat multipurpose hall / high-ceiling",
+      "roomType": "auditorium",
+      "capacity": 120,
+      "area": 4420,
+      "estimate": "Rs. 22.8 Lakh - Rs. 58.1 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "120-seat multipurpose hall / wide",
+      "roomType": "auditorium",
+      "capacity": 120,
+      "area": 5610,
+      "estimate": "Rs. 25.0 Lakh - Rs. 64.0 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "120-seat multipurpose hall / deep",
+      "roomType": "auditorium",
+      "capacity": 120,
+      "area": 5564,
+      "estimate": "Rs. 25.0 Lakh - Rs. 64.1 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "120-seat multipurpose hall / low-budget-none-speaker",
+      "roomType": "auditorium",
+      "capacity": 120,
+      "area": 4420,
+      "estimate": "Rs. 17.0 Lakh - Rs. 42.2 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "180-seat auditorium / base",
+      "roomType": "auditorium",
+      "capacity": 180,
+      "area": 5700,
+      "estimate": "Rs. 25.0 Lakh - Rs. 64.1 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "180-seat auditorium / high-ceiling",
+      "roomType": "auditorium",
+      "capacity": 180,
+      "area": 5700,
+      "estimate": "Rs. 25.1 Lakh - Rs. 64.2 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "180-seat auditorium / wide",
+      "roomType": "auditorium",
+      "capacity": 180,
+      "area": 7030,
+      "estimate": "Rs. 25.1 Lakh - Rs. 64.1 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "180-seat auditorium / deep",
+      "roomType": "auditorium",
+      "capacity": 180,
+      "area": 7020,
+      "estimate": "Rs. 28.2 Lakh - Rs. 72.0 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "180-seat auditorium / low-budget-none-speaker",
+      "roomType": "auditorium",
+      "capacity": 180,
+      "area": 5700,
+      "estimate": "Rs. 17.4 Lakh - Rs. 43.3 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "300-seat auditorium / base",
+      "roomType": "auditorium",
+      "capacity": 300,
+      "area": 7700,
+      "estimate": "Rs. 26.7 Lakh - Rs. 68.6 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "300-seat auditorium / high-ceiling",
+      "roomType": "auditorium",
+      "capacity": 300,
+      "area": 7700,
+      "estimate": "Rs. 26.8 Lakh - Rs. 68.7 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "300-seat auditorium / wide",
+      "roomType": "auditorium",
+      "capacity": 300,
+      "area": 9240,
+      "estimate": "Rs. 26.8 Lakh - Rs. 68.7 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "300-seat auditorium / deep",
+      "roomType": "auditorium",
+      "capacity": 300,
+      "area": 9240,
+      "estimate": "Rs. 28.5 Lakh - Rs. 72.7 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "300-seat auditorium / low-budget-none-speaker",
+      "roomType": "auditorium",
+      "capacity": 300,
+      "area": 7700,
+      "estimate": "Rs. 17.7 Lakh - Rs. 44.0 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "500-seat large auditorium / base",
+      "roomType": "auditorium",
+      "capacity": 500,
+      "area": 16000,
+      "estimate": "Rs. 30.8 Lakh - Rs. 78.8 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "500-seat large auditorium / high-ceiling",
+      "roomType": "auditorium",
+      "capacity": 500,
+      "area": 16000,
+      "estimate": "Rs. 30.9 Lakh - Rs. 78.9 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "500-seat large auditorium / wide",
+      "roomType": "auditorium",
+      "capacity": 500,
+      "area": 18240,
+      "estimate": "Rs. 32.6 Lakh - Rs. 83.7 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "500-seat large auditorium / deep",
+      "roomType": "auditorium",
+      "capacity": 500,
+      "area": 18200,
+      "estimate": "Rs. 32.6 Lakh - Rs. 82.8 Lakh",
+      "validation": "Mega venue site review required",
+      "validationScore": 87
+    },
+    {
+      "name": "500-seat large auditorium / low-budget-none-speaker",
+      "roomType": "auditorium",
+      "capacity": 500,
+      "area": 16000,
+      "estimate": "Rs. 19.4 Lakh - Rs. 47.9 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "1000-seat mega auditorium / base",
+      "roomType": "auditorium",
+      "capacity": 1000,
+      "area": 30800,
+      "estimate": "Rs. 34.4 Lakh - Rs. 87.7 Lakh",
+      "validation": "Mega venue site review required",
+      "validationScore": 87
+    },
+    {
+      "name": "1000-seat mega auditorium / high-ceiling",
+      "roomType": "auditorium",
+      "capacity": 1000,
+      "area": 30800,
+      "estimate": "Rs. 34.4 Lakh - Rs. 87.8 Lakh",
+      "validation": "Mega venue site review required",
+      "validationScore": 87
+    },
+    {
+      "name": "1000-seat mega auditorium / wide",
+      "roomType": "auditorium",
+      "capacity": 1000,
+      "area": 33880,
+      "estimate": "Rs. 36.3 Lakh - Rs. 92.8 Lakh",
+      "validation": "Mega venue site review required",
+      "validationScore": 87
+    },
+    {
+      "name": "1000-seat mega auditorium / deep",
+      "roomType": "auditorium",
+      "capacity": 1000,
+      "area": 30800,
+      "estimate": "Rs. 34.4 Lakh - Rs. 87.7 Lakh",
+      "validation": "Mega venue site review required",
+      "validationScore": 87
+    },
+    {
+      "name": "1000-seat mega auditorium / low-budget-none-speaker",
+      "roomType": "auditorium",
+      "capacity": 1000,
+      "area": 30800,
+      "estimate": "Rs. 21.4 Lakh - Rs. 52.4 Lakh",
+      "validation": "Mega venue site review required",
+      "validationScore": 87
+    },
+    {
+      "name": "reception signage small / base",
+      "roomType": "reception",
+      "capacity": 4,
+      "area": 252,
+      "estimate": "Rs. 6.1 Lakh - Rs. 14.6 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "reception signage small / high-ceiling",
+      "roomType": "reception",
+      "capacity": 4,
+      "area": 252,
+      "estimate": "Rs. 6.2 Lakh - Rs. 14.6 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "reception signage small / wide",
+      "roomType": "reception",
+      "capacity": 4,
+      "area": 504,
+      "estimate": "Rs. 6.2 Lakh - Rs. 14.7 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 88
+    },
+    {
+      "name": "reception signage small / deep",
+      "roomType": "reception",
+      "capacity": 4,
+      "area": 560,
+      "estimate": "Rs. 6.2 Lakh - Rs. 14.7 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 88
+    },
+    {
+      "name": "reception signage small / low-budget-none-speaker",
+      "roomType": "reception",
+      "capacity": 4,
+      "area": 252,
+      "estimate": "Rs. 3.2 Lakh - Rs. 7.3 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "reception CCTV desk / base",
+      "roomType": "reception",
+      "capacity": 8,
+      "area": 504,
+      "estimate": "Rs. 6.7 Lakh - Rs. 16.7 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 88
+    },
+    {
+      "name": "reception CCTV desk / high-ceiling",
+      "roomType": "reception",
+      "capacity": 8,
+      "area": 504,
+      "estimate": "Rs. 7.0 Lakh - Rs. 17.2 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 88
+    },
+    {
+      "name": "reception CCTV desk / wide",
+      "roomType": "reception",
+      "capacity": 8,
+      "area": 896,
+      "estimate": "Rs. 6.8 Lakh - Rs. 16.7 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 88
+    },
+    {
+      "name": "reception CCTV desk / deep",
+      "roomType": "reception",
+      "capacity": 8,
+      "area": 900,
+      "estimate": "Rs. 14.5 Lakh - Rs. 37.1 Lakh",
+      "validation": "Site review advised",
+      "validationScore": 87
+    },
+    {
+      "name": "reception CCTV desk / low-budget-none-speaker",
+      "roomType": "reception",
+      "capacity": 8,
+      "area": 504,
+      "estimate": "Rs. 4.0 Lakh - Rs. 9.8 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "server rack closet / base",
+      "roomType": "server",
+      "capacity": 2,
+      "area": 168,
+      "estimate": "Rs. 2.0 Lakh - Rs. 5.5 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "server rack closet / high-ceiling",
+      "roomType": "server",
+      "capacity": 2,
+      "area": 168,
+      "estimate": "Rs. 2.1 Lakh - Rs. 5.6 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "server rack closet / wide",
+      "roomType": "server",
+      "capacity": 2,
+      "area": 364,
+      "estimate": "Rs. 2.1 Lakh - Rs. 5.6 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "server rack closet / deep",
+      "roomType": "server",
+      "capacity": 2,
+      "area": 432,
+      "estimate": "Rs. 2.1 Lakh - Rs. 5.6 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "server rack closet / low-budget-none-speaker",
+      "roomType": "server",
+      "capacity": 2,
+      "area": 168,
+      "estimate": "Rs. 2.0 Lakh - Rs. 5.5 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "server control room / base",
+      "roomType": "server",
+      "capacity": 4,
+      "area": 504,
+      "estimate": "Rs. 2.5 Lakh - Rs. 7.1 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "server control room / high-ceiling",
+      "roomType": "server",
+      "capacity": 4,
+      "area": 504,
+      "estimate": "Rs. 2.7 Lakh - Rs. 7.6 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "server control room / wide",
+      "roomType": "server",
+      "capacity": 4,
+      "area": 896,
+      "estimate": "Rs. 2.5 Lakh - Rs. 7.2 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "server control room / deep",
+      "roomType": "server",
+      "capacity": 4,
+      "area": 900,
+      "estimate": "Rs. 2.5 Lakh - Rs. 7.2 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "server control room / low-budget-none-speaker",
+      "roomType": "server",
+      "capacity": 4,
+      "area": 504,
+      "estimate": "Rs. 2.5 Lakh - Rs. 7.1 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "BYOD meeting room / base",
+      "roomType": "conference",
+      "capacity": 8,
+      "area": 280,
+      "estimate": "Rs. 5.7 Lakh - Rs. 13.1 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 90
+    },
+    {
+      "name": "BYOD meeting room / high-ceiling",
+      "roomType": "conference",
+      "capacity": 8,
+      "area": 280,
+      "estimate": "Rs. 5.6 Lakh - Rs. 12.8 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "BYOD meeting room / wide",
+      "roomType": "conference",
+      "capacity": 8,
+      "area": 560,
+      "estimate": "Rs. 6.0 Lakh - Rs. 13.8 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 90
+    },
+    {
+      "name": "BYOD meeting room / deep",
+      "roomType": "conference",
+      "capacity": 8,
+      "area": 588,
+      "estimate": "Rs. 14.8 Lakh - Rs. 36.5 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "BYOD meeting room / low-budget-none-speaker",
+      "roomType": "conference",
+      "capacity": 8,
+      "area": 280,
+      "estimate": "Rs. 4.2 Lakh - Rs. 9.4 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    }
+  ],
+  "failures": [],
+  "warnings": [],
+  "summary": {
+    "byRoomType": {
+      "huddle": 10,
+      "conference": 20,
+      "boardroom": 10,
+      "training": 10,
+      "classroom": 5,
+      "auditorium": 30,
+      "reception": 10,
+      "server": 10
+    },
+    "validationAverage": 89,
+    "validationMin": 86,
+    "validationMax": 91
+  },
+  "examples": [
+    {
+      "name": "300-seat auditorium / base",
+      "roomType": "auditorium",
+      "capacity": 300,
+      "area": 7700,
+      "estimate": "Rs. 26.7 Lakh - Rs. 68.6 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "500-seat large auditorium / base",
+      "roomType": "auditorium",
+      "capacity": 500,
+      "area": 16000,
+      "estimate": "Rs. 30.8 Lakh - Rs. 78.8 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 89
+    },
+    {
+      "name": "1000-seat mega auditorium / base",
+      "roomType": "auditorium",
+      "capacity": 1000,
+      "area": 30800,
+      "estimate": "Rs. 34.4 Lakh - Rs. 87.7 Lakh",
+      "validation": "Mega venue site review required",
+      "validationScore": 87
+    },
+    {
+      "name": "server control room / base",
+      "roomType": "server",
+      "capacity": 4,
+      "area": 504,
+      "estimate": "Rs. 2.5 Lakh - Rs. 7.1 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 91
+    },
+    {
+      "name": "BYOD meeting room / base",
+      "roomType": "conference",
+      "capacity": 8,
+      "area": 280,
+      "estimate": "Rs. 5.7 Lakh - Rs. 13.1 Lakh",
+      "validation": "Engineering validated",
+      "validationScore": 90
+    }
+  ]
+}

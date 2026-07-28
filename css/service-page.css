@@ -7861,3 +7861,41 @@ main .service-proof-band * {
         width: 100% !important;
     }
 }
+
+/* Final cross-page logo strip alignment */
+.service-page .service-logo-strip {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-top: 18px !important;
+}
+
+.service-page .service-logo-strip img {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 92px !important;
+    max-width: 154px !important;
+    height: 44px !important;
+    max-height: 44px !important;
+    object-fit: contain !important;
+    padding: 8px 16px !important;
+    border: 1px solid rgba(148, 163, 184, 0.22) !important;
+    border-radius: 999px !important;
+    background: #ffffff !important;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07) !important;
+}
+
+@media (max-width: 760px) {
+    .service-page .service-logo-strip {
+        gap: 8px !important;
+    }
+
+    .service-page .service-logo-strip img {
+        min-width: 78px !important;
+        max-width: 128px !important;
+        height: 38px !important;
+        max-height: 38px !important;
+        padding: 7px 12px !important;
+    }
+}

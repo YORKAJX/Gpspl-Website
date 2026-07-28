@@ -1,0 +1,16 @@
+{
+  "name": "gpspl-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static GPSPL website with SEO, analytics and production asset tooling.",
+  "scripts": {
+    "check:js": "node --check JS/analytics.js && node --check JS/form-validation.js && node --check JS/room-configurator.js && node --check scripts/optimize-images.mjs && node --check scripts/qa-room-configurator.mjs",
+    "qa:boq": "node scripts/qa-room-configurator.mjs",
+    "qa:boq:100": "node scripts/qa-room-configurator-100.mjs",
+    "optimize:images": "node scripts/optimize-images.mjs --source=assests/images --out=assests/images/optimized --quality=78",
+    "optimize:projects": "node scripts/optimize-images.mjs --source=assests/images/projects/gpspl-real --out=assests/images/projects/gpspl-real/optimized --quality=80"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}

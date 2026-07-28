@@ -11,7 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (element) {
                     element.innerHTML = data;
                     if (moduleId === "header-container") initHeaderState();
-                    if (moduleId === "footer-container") initFooterState();
+                    if (moduleId === "footer-container") {
+                        initFooterState();
+                        initLeadForms();
+                        initConversionTrackingHooks();
+                    }
+                    document.dispatchEvent(new CustomEvent('gpspl:module-loaded', {
+                        detail: { moduleId, filePath }
+                    }));
                 }
             })
             .catch(error => console.error(error));
@@ -19,6 +26,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loadModule("header-container", "/modules/header.html?v=20260715");
     loadModule("footer-container", "/modules/footer.html?v=20260715");
+    ensureFormValidation();
+
+    function ensureFormValidation() {
+        if (window.gpsplInitFormValidation || window.gpsplFormValidationLoading) return;
+        window.gpsplFormValidationLoading = true;
+        const existingScript = document.querySelector('script[src*="form-validation.js"]');
+        if (existingScript) {
+            window.gpsplFormValidationLoading = false;
+            if (typeof window.gpsplInitFormValidation === 'function') window.gpsplInitFormValidation();
+            return;
+        }
+
+        const script = document.createElement('script');
+        script.src = "JS/form-validation.js?v=20260727-enterprise-ux";
+        script.defer = true;
+        script.onload = () => {
+            window.gpsplFormValidationLoading = false;
+            if (typeof window.gpsplInitFormValidation === 'function') window.gpsplInitFormValidation();
+        };
+        script.onerror = () => {
+            window.gpsplFormValidationLoading = false;
+        };
+        document.head.appendChild(script);
+    }
 
     function initHeaderState() {
         const currentPath = window.location.pathname === "/" ? "/index.html" : window.location.pathname;
@@ -309,7 +340,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         document.querySelectorAll('form[data-lead-form]').forEach(form => {
+            if (form.dataset.leadSubmitBound === 'true') return;
+            form.dataset.leadSubmitBound = 'true';
+
             form.addEventListener('submit', async (event) => {
+                if (event.defaultPrevented) return;
                 event.preventDefault();
 
                 const source = form.getAttribute('data-lead-form') || 'GPSPL website enquiry';

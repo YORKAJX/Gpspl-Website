@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seminar Hall 30x60 ft AV SLD and Equipment Layout</title>
+  <style>
+    :root {
+      --navy: #071c35;
+      --blue: #123c69;
+      --red: #dc2f2f;
+      --ink: #0c1728;
+      --muted: #5b6e89;
+      --line: #cfd9e6;
+      --soft: #f5f8fc;
+      --panel: #ffffff;
+      --green: #118a5b;
+      --amber: #c87914;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(7, 28, 53, 0.04) 1px, transparent 1px),
+        linear-gradient(rgba(7, 28, 53, 0.04) 1px, transparent 1px),
+        #f7f9fc;
+      background-size: 28px 28px;
+    }
+
+    .page {
+      width: min(1320px, calc(100% - 40px));
+      margin: 28px auto;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 24px;
+      align-items: stretch;
+      padding: 34px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #071c35 0%, #143d67 64%, #dc2f2f 170%);
+      color: #fff;
+      box-shadow: 0 22px 60px rgba(7, 28, 53, 0.18);
+    }
+
+    .eyebrow {
+      color: #ffb9b9;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 13px;
+      margin: 0 0 14px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 0.95;
+      letter-spacing: 0;
+      margin: 0;
+      max-width: 780px;
+    }
+
+    .hero p {
+      margin: 20px 0 0;
+      max-width: 760px;
+      color: rgba(255,255,255,0.84);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .hero-card {
+      align-self: center;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-top: 5px solid var(--red);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-card h2 {
+      margin: 0 0 18px;
+      color: #d8e7ff;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 15px;
+    }
+
+    .assumption {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 12px;
+      padding: 13px 0;
+      border-top: 1px solid rgba(255,255,255,0.16);
+      color: rgba(255,255,255,0.78);
+      line-height: 1.4;
+    }
+
+    .assumption strong { color: #fff; }
+
+    .section {
+      margin-top: 28px;
+      padding: 28px;
+      border: 1px solid #dbe4ef;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.92);
+      box-shadow: 0 18px 55px rgba(7, 28, 53, 0.08);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+
+    .section h2 {
+      margin: 0;
+      font-size: 32px;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      margin: 0;
+      max-width: 620px;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 15px;
+    }
+
+    .drawing-wrap {
+      overflow: auto;
+      border-radius: 18px;
+      border: 1px solid #d9e3ef;
+      background: #fff;
+    }
+
+    svg {
+      display: block;
+      min-width: 1120px;
+      width: 100%;
+      height: auto;
+    }
+
+    .label { font-family: Arial, Helvetica, sans-serif; fill: var(--ink); }
+    .small { font-size: 12px; }
+    .tiny { font-size: 10px; }
+    .medium { font-size: 15px; font-weight: 700; }
+    .big { font-size: 20px; font-weight: 800; }
+    .muted { fill: var(--muted); }
+    .white { fill: #fff; }
+    .red { fill: var(--red); }
+    .green { fill: var(--green); }
+    .amber { fill: var(--amber); }
+    .line { stroke: var(--blue); stroke-width: 3; fill: none; }
+    .dash { stroke-dasharray: 8 8; }
+    .cable-audio { stroke: #c87914; }
+    .cable-hdmi { stroke: #1958a6; }
+    .cable-control { stroke: #118a5b; }
+    .cable-power { stroke: #dc2f2f; }
+
+    .legend {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: var(--soft);
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .legend-line {
+      width: 36px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--blue);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 14px;
+      font-size: 14px;
+    }
+
+    .table th {
+      text-align: left;
+      background: var(--navy);
+      color: #fff;
+      padding: 13px 14px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .table td {
+      padding: 13px 14px;
+      border-bottom: 1px solid #e5edf5;
+      vertical-align: top;
+      line-height: 1.45;
+      color: #354863;
+    }
+
+    .table td strong { color: var(--ink); }
+
+    .note {
+      padding: 18px;
+      border-left: 5px solid var(--red);
+      border-radius: 16px;
+      background: #fff7f7;
+      color: #4e6078;
+      line-height: 1.6;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { width: 100%; margin: 0; }
+      .section, .hero { box-shadow: none; break-inside: avoid; }
+      .drawing-wrap { overflow: visible; }
+      svg { min-width: 0; }
+    }
+
+    @media (max-width: 900px) {
+      .hero, .grid { grid-template-columns: 1fr; }
+      .legend { grid-template-columns: repeat(2, 1fr); }
+      .section-head { align-items: start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Client SLD Draft / Seminar Hall AV</p>
+        <h1>Seminar Hall AV Layout for 30 ft x 60 ft Room</h1>
+        <p>
+          Equipment arrangement, signal flow and cable routing based on the supplied BOQ.
+          The design assumes the main teaching wall / display wall is on the 30 ft front side
+          and seating runs along the 60 ft depth.
+        </p>
+      </div>
+      <aside class="hero-card">
+        <h2>Design Basis</h2>
+        <div class="assumption"><strong>Room</strong><span>30 ft width x 60 ft depth seminar hall</span></div>
+        <div class="assumption"><strong>Front</strong><span>98-inch interactive display with digital podium</span></div>
+        <div class="assumption"><strong>Audio</strong><span>6 wall/ceiling speaker points on 100V line zones</span></div>
+        <div class="assumption"><strong>Control</strong><span>12U rack near front-right / podium side for service access</span></div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Room Orientation Plan</h2>
+        <p>Top-view equipment placement for client discussion. Final mounting height, conduit path and exact speaker distance should be confirmed after site measurement.</p>
+      </div>
+      <div class="drawing-wrap">
+        <svg viewBox="0 0 1200 720" role="img" aria-label="Seminar hall top view equipment layout with wiring routes">
+          <defs>
+            <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+              <path d="M2,2 L10,6 L2,10 z" fill="#1958a6"></path>
+            </marker>
+            <marker id="arrowAmber" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+              <path d="M2,2 L10,6 L2,10 z" fill="#c87914"></path>
+            </marker>
+            <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+              <path d="M2,2 L10,6 L2,10 z" fill="#118a5b"></path>
+            </marker>
+          </defs>
+
+          <rect x="42" y="44" width="1116" height="626" rx="18" fill="#f8fbff" stroke="#cfd9e6" stroke-width="3"/>
+          <rect x="72" y="74" width="1056" height="82" rx="12" fill="#071c35"/>
+          <text x="600" y="112" text-anchor="middle" class="label white big">FRONT / TEACHING WALL - 30 ft SIDE</text>
+          <text x="600" y="136" text-anchor="middle" class="label white small">Display, podium microphones and rack placed for presenter access</text>
+
+          <rect x="430" y="88" width="340" height="48" rx="8" fill="#ffffff" stroke="#dbe4ef"/>
+          <text x="600" y="107" text-anchor="middle" class="label medium">Newline 98-inch Interactive Panel</text>
+          <text x="600" y="127" text-anchor="middle" class="label small muted">Normal 98 inch display STV 98+ / 3840x2160</text>
+
+          <rect x="505" y="176" width="190" height="84" rx="10" fill="#fff7f7" stroke="#dc2f2f" stroke-width="2"/>
+          <text x="600" y="204" text-anchor="middle" class="label medium">Aero Digital Podium</text>
+          <text x="600" y="225" text-anchor="middle" class="label small muted">21-inch touch display + CPU</text>
+          <text x="600" y="244" text-anchor="middle" class="label tiny muted">2x REPEET AS-95 + 1x PRO-68B gooseneck mic</text>
+
+          <rect x="865" y="177" width="170" height="98" rx="10" fill="#eef5ff" stroke="#1958a6" stroke-width="2"/>
+          <text x="950" y="202" text-anchor="middle" class="label medium">MTS 12U AV Rack</text>
+          <text x="950" y="222" text-anchor="middle" class="label small muted">PAD-500 amplifier</text>
+          <text x="950" y="241" text-anchor="middle" class="label small muted">4x4 HDMI matrix</text>
+          <text x="950" y="260" text-anchor="middle" class="label small muted">Wireless mic receiver</text>
+
+          <path d="M695 216 C760 216, 810 216, 865 216" class="line cable-hdmi" marker-end="url(#arrowBlue)"/>
+          <text x="785" y="204" class="label tiny muted">HDMI / USB / control</text>
+
+          <path d="M695 238 C762 265, 810 269, 865 252" class="line cable-audio" marker-end="url(#arrowAmber)"/>
+          <text x="760" y="286" class="label tiny muted">Mic audio to amplifier / mixer</text>
+
+          <g>
+            <circle cx="210" cy="285" r="31" fill="#fff" stroke="#c87914" stroke-width="3"/>
+            <text x="210" y="291" text-anchor="middle" class="label medium">S1</text>
+            <circle cx="600" cy="315" r="31" fill="#fff" stroke="#c87914" stroke-width="3"/>
+            <text x="600" y="321" text-anchor="middle" class="label medium">S2</text>
+            <circle cx="990" cy="285" r="31" fill="#fff" stroke="#c87914" stroke-width="3"/>
+            <text x="990" y="291" text-anchor="middle" class="label medium">S3</text>
+            <circle cx="210" cy="505" r="31" fill="#fff" stroke="#c87914" stroke-width="3"/>
+            <text x="210" y="511" text-anchor="middle" class="label medium">S4</text>
+            <circle cx="600" cy="535" r="31" fill="#fff" stroke="#c87914" stroke-width="3"/>
+            <text x="600" y="541" text-anchor="middle" class="label medium">S5</text>
+            <circle cx="990" cy="505" r="31" fill="#fff" stroke="#c87914" stroke-width="3"/>
+            <text x="990" y="511" text-anchor="middle" class="label medium">S6</text>
+          </g>
+
+          <text x="600" y="384" text-anchor="middle" class="label big">Audience Seating Zone</text>
+          <text x="600" y="410" text-anchor="middle" class="label muted">60 ft room depth, speaker coverage distributed in three columns x two rows</text>
+
+          <path d="M950 275 C905 348, 420 245, 210 285" class="line cable-audio dash" marker-end="url(#arrowAmber)"/>
+          <path d="M950 275 C890 390, 710 302, 600 315" class="line cable-audio dash" marker-end="url(#arrowAmber)"/>
+          <path d="M950 275 C1010 310, 1020 245, 990 285" class="line cable-audio dash" marker-end="url(#arrowAmber)"/>
+          <path d="M950 275 C880 470, 408 466, 210 505" class="line cable-audio dash" marker-end="url(#arrowAmber)"/>
+          <path d="M950 275 C925 470, 715 512, 600 535" class="line cable-audio dash" marker-end="url(#arrowAmber)"/>
+          <path d="M950 275 C1060 394, 1055 480, 990 505" class="line cable-audio dash" marker-end="url(#arrowAmber)"/>
+
+          <rect x="92" y="590" width="225" height="45" rx="8" fill="#fff" stroke="#dbe4ef"/>
+          <text x="205" y="608" text-anchor="middle" class="label small">REPEET WS-640 Speakers</text>
+          <text x="205" y="626" text-anchor="middle" class="label tiny muted">6 nos / 40W @ 100V line / IP65</text>
+
+          <rect x="368" y="590" width="230" height="45" rx="8" fill="#fff" stroke="#dbe4ef"/>
+          <text x="483" y="608" text-anchor="middle" class="label small">Loud 2C 1.5 sq mm Speaker Wire</text>
+          <text x="483" y="626" text-anchor="middle" class="label tiny muted">Approx. 200 mtr as per BOQ</text>
+
+          <rect x="644" y="590" width="228" height="45" rx="8" fill="#fff" stroke="#dbe4ef"/>
+          <text x="758" y="608" text-anchor="middle" class="label small">Loud 2C Shielded Mic Wire</text>
+          <text x="758" y="626" text-anchor="middle" class="label tiny muted">Approx. 100 mtr as per BOQ</text>
+
+          <rect x="915" y="590" width="186" height="45" rx="8" fill="#fff" stroke="#dbe4ef"/>
+          <text x="1008" y="608" text-anchor="middle" class="label small">REPEET Connectors</text>
+          <text x="1008" y="626" text-anchor="middle" class="label tiny muted">HDMI / USB / accessories</text>
+
+          <line x1="72" y1="74" x2="72" y2="670" stroke="#dc2f2f" stroke-width="2"/>
+          <line x1="1128" y1="74" x2="1128" y2="670" stroke="#dc2f2f" stroke-width="2"/>
+          <text x="88" y="362" transform="rotate(-90 88 362)" class="label tiny muted">60 ft DEPTH</text>
+          <text x="1112" y="362" transform="rotate(90 1112 362)" class="label tiny muted">60 ft DEPTH</text>
+        </svg>
+      </div>
+      <div class="legend">
+        <div class="legend-item"><span class="legend-line" style="background:#1958a6"></span>HDMI / display signal</div>
+        <div class="legend-item"><span class="legend-line" style="background:#c87914"></span>Audio / speaker / mic</div>
+        <div class="legend-item"><span class="legend-line" style="background:#118a5b"></span>Control / network</div>
+        <div class="legend-item"><span class="legend-line" style="background:#dc2f2f"></span>Power / UPS readiness</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Single Line Diagram</h2>
+        <p>The SLD shows how source, display, microphone, amplification and speaker systems connect through the AV rack.</p>
+      </div>
+      <div class="drawing-wrap">
+        <svg viewBox="0 0 1200 760" role="img" aria-label="Single line diagram for seminar hall AV system">
+          <defs>
+            <marker id="arrB" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+              <path d="M2,2 L10,6 L2,10 z" fill="#1958a6"></path>
+            </marker>
+            <marker id="arrA" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+              <path d="M2,2 L10,6 L2,10 z" fill="#c87914"></path>
+            </marker>
+            <marker id="arrG" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+              <path d="M2,2 L10,6 L2,10 z" fill="#118a5b"></path>
+            </marker>
+            <marker id="arrR" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+              <path d="M2,2 L10,6 L2,10 z" fill="#dc2f2f"></path>
+            </marker>
+          </defs>
+
+          <rect x="32" y="32" width="1136" height="696" rx="18" fill="#ffffff" stroke="#d9e3ef"/>
+
+          <rect x="470" y="70" width="260" height="600" rx="16" fill="#071c35"/>
+          <text x="600" y="108" text-anchor="middle" class="label white big">MTS 12U AV Rack</text>
+          <text x="600" y="132" text-anchor="middle" class="label white small">Rack fan, PDU, tray and service access</text>
+
+          <rect x="505" y="175" width="190" height="62" rx="10" fill="#eef5ff"/>
+          <text x="600" y="201" text-anchor="middle" class="label medium">Linetek 4x4 Switcher</text>
+          <text x="600" y="220" text-anchor="middle" class="label tiny muted">4 HDMI IN / 4 HDMI OUT + audio de-embedder</text>
+
+          <rect x="505" y="298" width="190" height="62" rx="10" fill="#fff7f7"/>
+          <text x="600" y="324" text-anchor="middle" class="label medium">REPEET PAD-500</text>
+          <text x="600" y="343" text-anchor="middle" class="label tiny muted">500W mixer amplifier / 6 zone output</text>
+
+          <rect x="505" y="420" width="190" height="62" rx="10" fill="#fff7f7"/>
+          <text x="600" y="446" text-anchor="middle" class="label medium">REPEET AS-2300HH</text>
+          <text x="600" y="465" text-anchor="middle" class="label tiny muted">Wireless dual handheld receiver</text>
+
+          <rect x="505" y="545" width="190" height="62" rx="10" fill="#f1fff8"/>
+          <text x="600" y="571" text-anchor="middle" class="label medium">Rack Power / PDU</text>
+          <text x="600" y="590" text-anchor="middle" class="label tiny muted">UPS-ready power distribution by site</text>
+
+          <rect x="86" y="82" width="250" height="84" rx="14" fill="#f8fbff" stroke="#dbe4ef"/>
+          <text x="211" y="112" text-anchor="middle" class="label medium">Aero Digital Podium</text>
+          <text x="211" y="133" text-anchor="middle" class="label small muted">CPU + 21-inch touch display</text>
+          <text x="211" y="151" text-anchor="middle" class="label tiny muted">Presenter laptop / content source</text>
+
+          <rect x="85" y="236" width="252" height="90" rx="14" fill="#f8fbff" stroke="#dbe4ef"/>
+          <text x="211" y="264" text-anchor="middle" class="label medium">Gooseneck Microphones</text>
+          <text x="211" y="286" text-anchor="middle" class="label small muted">2x REPEET AS-95</text>
+          <text x="211" y="305" text-anchor="middle" class="label small muted">1x REPEET PRO-68B</text>
+
+          <rect x="85" y="396" width="252" height="84" rx="14" fill="#f8fbff" stroke="#dbe4ef"/>
+          <text x="211" y="426" text-anchor="middle" class="label medium">Wireless Handheld Mics</text>
+          <text x="211" y="448" text-anchor="middle" class="label small muted">REPEET AS-2300HH</text>
+          <text x="211" y="466" text-anchor="middle" class="label tiny muted">Dual handheld rechargeable set</text>
+
+          <rect x="864" y="88" width="250" height="82" rx="14" fill="#f8fbff" stroke="#dbe4ef"/>
+          <text x="989" y="116" text-anchor="middle" class="label medium">Newline 98-inch Display</text>
+          <text x="989" y="138" text-anchor="middle" class="label small muted">4K interactive panel</text>
+          <text x="989" y="156" text-anchor="middle" class="label tiny muted">HDMI / USB touch connectivity</text>
+
+          <rect x="864" y="275" width="250" height="118" rx="14" fill="#f8fbff" stroke="#dbe4ef"/>
+          <text x="989" y="304" text-anchor="middle" class="label medium">6x REPEET WS-640 Speakers</text>
+          <text x="989" y="327" text-anchor="middle" class="label small muted">40W @ 100V line full-range</text>
+          <text x="989" y="347" text-anchor="middle" class="label tiny muted">Zone speaker output from PAD-500</text>
+          <text x="989" y="366" text-anchor="middle" class="label tiny muted">Loud 2 core 1.5 sq mm speaker cable</text>
+
+          <rect x="864" y="530" width="250" height="82" rx="14" fill="#f8fbff" stroke="#dbe4ef"/>
+          <text x="989" y="558" text-anchor="middle" class="label medium">Site Power</text>
+          <text x="989" y="580" text-anchor="middle" class="label small muted">Dedicated power points</text>
+          <text x="989" y="598" text-anchor="middle" class="label tiny muted">Display, rack and podium power</text>
+
+          <path d="M337 123 L505 205" class="line cable-hdmi" marker-end="url(#arrB)"/>
+          <text x="365" y="149" class="label tiny muted">HDMI source to matrix</text>
+
+          <path d="M695 205 L864 128" class="line cable-hdmi" marker-end="url(#arrB)"/>
+          <text x="742" y="152" class="label tiny muted">HDMI output to display</text>
+
+          <path d="M337 281 L505 329" class="line cable-audio" marker-end="url(#arrA)"/>
+          <text x="354" y="291" class="label tiny muted">2C shielded mic cable</text>
+
+          <path d="M337 437 L505 451" class="line cable-audio" marker-end="url(#arrA)"/>
+          <text x="356" y="426" class="label tiny muted">Wireless receiver audio</text>
+
+          <path d="M695 329 L864 334" class="line cable-audio" marker-end="url(#arrA)"/>
+          <text x="735" y="321" class="label tiny muted">100V speaker line output</text>
+
+          <path d="M600 360 L600 420" class="line cable-audio" marker-end="url(#arrA)"/>
+          <text x="615" y="394" class="label tiny muted">Mic mix / input</text>
+
+          <path d="M695 576 L864 571" class="line cable-power" marker-end="url(#arrR)"/>
+          <path d="M505 576 L337 123" class="line cable-power dash" marker-end="url(#arrR)"/>
+          <path d="M695 576 L864 128" class="line cable-power dash" marker-end="url(#arrR)"/>
+          <text x="742" y="559" class="label tiny muted">Power distribution / UPS readiness</text>
+
+          <path d="M337 145 C405 155, 420 174, 505 180" class="line cable-control dash" marker-end="url(#arrG)"/>
+          <path d="M695 180 C775 178, 800 155, 864 146" class="line cable-control dash" marker-end="url(#arrG)"/>
+          <text x="420" y="172" class="label tiny muted">USB touch / control where required</text>
+
+          <rect x="80" y="610" width="310" height="60" rx="12" fill="#fff7f7" stroke="#ffd2d2"/>
+          <text x="235" y="633" text-anchor="middle" class="label medium">Cable Accessories</text>
+          <text x="235" y="654" text-anchor="middle" class="label small muted">REPEET connectors, HDMI, USB and complete connectivity lot</text>
+
+          <rect x="810" y="650" width="290" height="40" rx="10" fill="#f1fff8" stroke="#cceedd"/>
+          <text x="955" y="675" text-anchor="middle" class="label medium green">Installation, Testing & Commissioning by ITC Job</text>
+        </svg>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Equipment Schedule</h2>
+        <p>BOQ items mapped to their suggested physical location and role in the system.</p>
+      </div>
+      <table class="table">
+        <thead>
+          <tr><th>Make</th><th>Model / Item</th><th>Qty</th><th>Proposed Location</th><th>System Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Newline</strong></td><td>Interactive Panel Display, normal 98 inch display STV 98+</td><td>1 Nos</td><td>Front teaching wall, center aligned</td><td>Main 4K interactive display and teaching surface</td></tr>
+          <tr><td><strong>Aero</strong></td><td>Digital Podium with 21-inch or above touch display and CPU</td><td>1 Nos</td><td>Front center / slightly left of display</td><td>Presenter source, podium control and content operation</td></tr>
+          <tr><td><strong>Linetek</strong></td><td>4x4 HDMI Matrix Switcher</td><td>1 Nos</td><td>Inside 12U AV rack</td><td>Routes HDMI sources to display/output points</td></tr>
+          <tr><td><strong>REPEET</strong></td><td>WS-640 Two-way full range speaker, 40W @ 100V line</td><td>6 Nos</td><td>Distributed in 3 columns x 2 rows across seating area</td><td>Audience sound reinforcement</td></tr>
+          <tr><td><strong>REPEET</strong></td><td>PAD-500 500W mixer amplifier with 6 zone output</td><td>1 Nos</td><td>Inside 12U AV rack</td><td>Speaker amplification and mic/source mixing</td></tr>
+          <tr><td><strong>REPEET</strong></td><td>AS-2300HH Wireless Dual Handheld Microphone</td><td>1 Nos</td><td>Receiver in rack, microphones with presenter/team</td><td>Wireless speech pickup for presenter and Q&A</td></tr>
+          <tr><td><strong>REPEET</strong></td><td>AS-95 Wired Gooseneck Microphone</td><td>2 Nos</td><td>Digital podium / dais table</td><td>Fixed speech pickup for presenters</td></tr>
+          <tr><td><strong>REPEET</strong></td><td>PRO-68B Wired Gooseneck Microphone</td><td>1 Nos</td><td>Digital podium / main speaker position</td><td>Primary gooseneck microphone</td></tr>
+          <tr><td><strong>Loud</strong></td><td>2 core 1.5 sq mm speaker wire</td><td>200 Mtrs</td><td>Rack to speaker points via ceiling/conduit</td><td>100V speaker line cabling</td></tr>
+          <tr><td><strong>Loud</strong></td><td>2 core shielded microphone wire</td><td>100 Mtrs</td><td>Podium/dais mic points to rack</td><td>Balanced mic signal cabling</td></tr>
+          <tr><td><strong>MTS</strong></td><td>12U equipment rack with fan, wheels, PDU and tray</td><td>1 Nos</td><td>Front-right service corner or control side</td><td>Central equipment housing</td></tr>
+          <tr><td><strong>REPEET</strong></td><td>Connectors, HDMI, USB and accessories</td><td>1 Lot</td><td>Rack, podium and display termination points</td><td>Complete connectivity and cable termination</td></tr>
+          <tr><td><strong>ITC</strong></td><td>Installation, testing and commissioning</td><td>1 Job</td><td>Complete room</td><td>System installation, testing, tuning and handover</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section grid">
+      <div>
+        <h2>Cable Schedule</h2>
+        <table class="table">
+          <thead>
+            <tr><th>From</th><th>To</th><th>Cable</th><th>Purpose</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Digital Podium</td><td>Linetek 4x4 Switcher</td><td>HDMI + USB as required</td><td>Presenter content and touch/control path</td></tr>
+            <tr><td>Linetek 4x4 Switcher</td><td>Newline 98-inch Display</td><td>HDMI output + USB touch</td><td>Main display signal and interactive feedback</td></tr>
+            <tr><td>AS-95 / PRO-68B Gooseneck Mics</td><td>REPEET PAD-500</td><td>2 core shielded mic cable</td><td>Speech audio input</td></tr>
+            <tr><td>AS-2300HH Receiver</td><td>REPEET PAD-500</td><td>Audio patch cable</td><td>Wireless mic input</td></tr>
+            <tr><td>REPEET PAD-500</td><td>6x WS-640 Speakers</td><td>2 core 1.5 sq mm speaker wire</td><td>100V line speaker distribution</td></tr>
+            <tr><td>Site Power</td><td>Rack / Display / Podium</td><td>Electrical by site</td><td>Dedicated power and UPS-ready provision</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h2>Installation Notes</h2>
+        <div class="note">
+          <strong>Recommended orientation:</strong> Keep the display and podium on the front 30 ft wall. Place the AV rack close to the podium side but not blocking the audience path. Speaker points should be adjusted after checking ceiling type, false ceiling access, beam positions and final seating layout.
+        </div>
+        <br>
+        <div class="note">
+          <strong>Client approval points:</strong> Final rack location, display mounting height, conduit route, speaker mounting type, power socket location and podium position should be frozen before installation starts.
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

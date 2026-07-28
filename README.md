@@ -54,7 +54,10 @@ The contact page and footer quote form submit through Netlify Forms:
 
 - Contact form name: `gpspl-contact-enquiry`
 - Footer form name: `gpspl-footer-quote`
+- AV BOQ download form name: `gpspl-configurator-lead`
 - Success redirect: `/thank-you.html`
+
+The AV BOQ download form captures client name, company, email, phone, project location, remarks, room count, estimate range, validation status, BOQ summary and the full requirement payload.
 
 After deploy, configure Netlify Form Notifications so submissions are emailed to the GPSPL team, for example `khurana.s@gpspl.co.in`, `support@gpspl.co.in` and `khanna.g@gpspl.co.in`. Submissions will still be stored in the Netlify dashboard even before email notifications are configured.
 
@@ -196,3 +199,78 @@ To receive email alerts, open Netlify project settings and configure Form Notifi
 - Clarity: confirm session recordings.
 - Netlify Forms: submit one test enquiry and confirm it appears in Forms.
 - Google Business Profile: add website URL and keep NAP details consistent.
+
+## Enterprise UX And Lead Generation Additions
+
+### Enterprise AV Requirement Builder
+
+The homepage includes a lightweight client-side requirement builder:
+
+- Markup entry point: `data-room-configurator`
+- Logic: `JS/room-configurator.js`
+- Page: `index.html`
+
+It asks for room type, approximate dimensions, capacity, collaboration workflow, display preference, camera preference, microphone preference and optional room features. The output is an engineering requirement summary with preliminary BOQ categories, quantity guidance, budget range and delivery timeline.
+
+The builder intentionally avoids exact brand/model names and ecommerce-style pricing. GPSPL engineers can confirm exact OEM models after site survey, acoustic review, display sizing and procurement availability.
+
+Lead capture:
+
+- Hidden Netlify form: `gpspl-configurator-lead`
+- Visible modal form is rendered by `JS/room-configurator.js`
+- Captured fields: lead source, page URL, submitted time, room count, estimate range, validation status, BOQ summary, full requirement summary, name, company, email, phone, city and project description
+
+Future CMS/admin panel:
+
+- Replace `CONFIG` arrays in `JS/room-configurator.js` with API/CMS data
+- Keep the same `data-room-configurator` mount point
+- Keep rule-engine outputs generic unless exact model approval is available
+- Map submitted requirement summaries into CRM or admin lead records
+
+Tracked events:
+
+- `room_configurator_view`
+- `room_configurator_update`
+- `room_configurator_quote_click`
+- `room_configurator_whatsapp_click`
+- `room_configurator_proposal_open`
+- `room_configurator_proposal_download`
+
+### Enterprise Case Study Schema
+
+`case-studies.html` includes JSON-LD for the case study hub. The schema connects GPSPL, service capability, location/business context and representative case study entries so Google and AI search systems can understand the page as a service-led project portfolio instead of a basic gallery.
+
+Keep real client names, project outcomes and impact numbers approved before publishing stronger claims.
+
+### Form Validation And Netlify Forms
+
+Frontend validation is handled by `JS/form-validation.js`; Netlify submission handling remains in `JS/main.js`.
+
+The validation layer:
+
+- validates required fields, email format and phone format
+- blocks common disposable email domains and spam phrases
+- populates hidden `page_url` and `submitted_at` fields
+- tracks validation success and validation failure events
+- works with dynamically loaded footer forms through the `gpspl:module-loaded` event
+
+The lead forms still submit to Netlify Forms. Configure email notifications in Netlify so enquiry emails reach the GPSPL team.
+
+### Image Optimization Tooling
+
+Use Sharp to generate compressed WebP variants for heavy installation photos:
+
+```powershell
+npm install
+npm run optimize:images
+npm run optimize:projects
+```
+
+After generating optimized assets, visually inspect key pages before replacing production image paths. The script writes optimized images separately so original project photos are not overwritten.
+
+### Production Safety Checklist
+
+- Run `npm run check:js` before pushing.
+- Submit `https://gpspl.co.in/sitemap.xml` in Google Search Console.
+- Keep `GA4 Measurement ID`, `GTM ID`, `Clarity ID` and Google verification values in configuration, not scattered across page files.
+- Do not expose server-only secrets in browser JavaScript.

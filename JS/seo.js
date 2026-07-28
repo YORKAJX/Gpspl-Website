@@ -16,10 +16,58 @@
         "https://www.youtube.com/@GPSPL1997"
     ];
 
+    const defaultKeywords = [
+        "AV system integrator India",
+        "audio visual integrator Delhi NCR",
+        "technology distributor India",
+        "conference room AV solutions",
+        "video conferencing room setup",
+        "active LED video wall supplier",
+        "digital signage solutions India",
+        "professional audio system integrator",
+        "smart classroom solutions",
+        "AV AMC support India",
+        "enterprise AV solutions Delhi",
+        "AV BOQ calculator India",
+        "conference room BOQ estimate"
+    ];
+
+    const pageKeywordOverrides = {
+        "index.html": [
+            "AV BOQ calculator India",
+            "conference room BOQ estimate",
+            "AV cost calculator India",
+            "boardroom AV estimate",
+            "video conferencing room setup",
+            "auditorium AV BOQ",
+            "smart classroom AV solutions",
+            "AV system integrator India",
+            "audio visual integrator Delhi NCR",
+            "GPSPL"
+        ],
+        "audio-visual-integration.html": ["AV system integrator Delhi NCR", "audio visual integration company India", "enterprise AV installation", "boardroom AV integrator", "AV AMC support"],
+        "conference-room-solutions.html": ["conference room AV integrator", "boardroom AV setup Delhi", "video conferencing room setup", "meeting room audio video", "wireless presentation system"],
+        "unified-communication-collaboration.html": ["video conferencing solutions India", "unified communication integrator", "hybrid meeting room solutions", "PTZ camera meeting room", "collaboration room AV"],
+        "video-wall-solutions.html": ["video wall supplier India", "video wall integrator Delhi", "control room video wall", "LCD video wall systems", "commercial display wall"],
+        "active-led-wall-solutions.html": ["active LED wall supplier India", "LED video wall installation", "indoor LED wall Delhi", "outdoor LED display supplier", "LED wall AMC"],
+        "digital-signage-solutions.html": ["digital signage solutions India", "digital signage display supplier", "menu board display", "commercial signage screen", "retail digital signage"],
+        "interactive-display-solutions.html": ["interactive flat panel supplier", "smart board supplier India", "interactive display for classrooms", "MAXHUB Newline BenQ panels", "IFPD installation"],
+        "smart-classroom-solutions.html": ["smart classroom solutions India", "interactive classroom setup", "classroom projector audio", "digital classroom integrator", "education AV solutions"],
+        "professional-audio-solutions.html": ["professional audio system integrator", "JBL audio supplier India", "Sennheiser microphone supplier", "auditorium sound system", "conference room audio"],
+        "audio-technologies.html": ["meeting room audio technology", "professional microphones speakers DSP", "audio system design India", "auditorium audio integration", "room audio tuning"],
+        "video-technologies.html": ["PTZ camera supplier India", "video technology solutions", "lecture capture cameras", "video conferencing camera", "enterprise display systems"],
+        "control-automation.html": ["AV control automation India", "AMX automation integrator", "Crestron control systems", "meeting room automation", "AV switching control"],
+        "kvm-av-switching-solutions.html": ["ATEN KVM supplier India", "KVM switching solutions", "AV switching matrix", "control room KVM", "enterprise KVM extender"],
+        "it-infrastructure-solutions.html": ["IT infrastructure solutions India", "server storage networking supplier", "enterprise IT hardware", "UPS and networking support", "IT AMC Delhi"],
+        "ups-power-backup-solutions.html": ["UPS supplier India", "Luminous UPS solutions", "online UPS for AV IT", "power backup for conference room", "UPS AMC support"],
+        "amc-maintenance-services.html": ["AV AMC services India", "AV maintenance support", "video wall AMC", "conference room AMC", "technical support 48 to 72 hours"],
+        "contact.html": ["request AV quote", "AV system integrator contact Delhi", "GPSPL enquiry", "technology supply quote India", "conference room quote"]
+    };
+
     const pageSeo = {
         "index.html": {
-            title: "GPSPL | AV Distributor & System Integrator India",
-            description: "GPSPL supplies and integrates AV, display, audio, collaboration, IT infrastructure, automation and AMC support solutions across India.",
+            title: "AV BOQ Calculator & System Integrator India | GPSPL",
+            description: "Use GPSPL's AV BOQ calculator to plan conference rooms, boardrooms, classrooms, auditoriums, displays, audio, video conferencing, installation and AMC across India.",
             type: "home",
             image: "/assests/images/hero/image.jpg"
         },
@@ -46,36 +94,36 @@
             image: "/assests/images/milestones/lg-regional-distributor-2022.jpeg"
         },
         "audio-visual-integration.html": {
-            title: "Audio Visual Integration Company in Delhi NCR | GPSPL",
-            description: "GPSPL supplies, designs, integrates and supports enterprise AV systems, meeting rooms, displays, audio, control systems and AMC across India.",
+            title: "AV System Integrator in Delhi NCR & India | GPSPL",
+            description: "Enterprise AV system integrator for boardrooms, classrooms, auditoriums, control rooms, displays, audio, automation, installation and AMC support.",
             type: "service",
             serviceType: "Audio visual integration and enterprise AV system integration",
             image: "/assests/images/vision/conference-room-hero.jpg"
         },
         "conference-room-solutions.html": {
-            title: "Conference Room & Boardroom AV Solutions | GPSPL",
-            description: "Conference room setup, boardroom AV integration, video conferencing, microphones, PTZ cameras, displays, touch control and collaboration systems by GPSPL.",
+            title: "Conference Room AV Integrator Delhi NCR | GPSPL",
+            description: "Boardroom and conference room AV setup with displays, microphones, PTZ cameras, video conferencing, wireless presentation, touch control and support.",
             type: "service",
             serviceType: "Conference room and boardroom AV solutions",
             image: "/assests/images/products/conference-room-solutions.webp"
         },
         "unified-communication-collaboration.html": {
-            title: "Video Conferencing & Unified Communication Solutions | GPSPL",
-            description: "GPSPL supplies and integrates video conferencing, unified communication, collaboration displays, microphones, cameras and meeting-room systems for hybrid workplaces.",
+            title: "Video Conferencing Solutions Delhi NCR | GPSPL",
+            description: "Video conferencing and unified communication solutions for hybrid meeting rooms, boardrooms, classrooms, cameras, microphones, displays and support.",
             type: "service",
             serviceType: "Unified communication and collaboration systems",
             image: "/assests/images/products/conference-room-solutions.webp"
         },
         "video-wall-solutions.html": {
-            title: "Video Wall Solutions for Control Rooms & Enterprises | GPSPL",
-            description: "GPSPL supplies, installs and supports video wall systems, display controllers, commercial displays, calibration, mounting and control-room visualization solutions.",
+            title: "Video Wall Supplier & Integrator India | GPSPL",
+            description: "LED and LCD video wall supplier and integrator for control rooms, command centers, boardrooms and public display spaces with calibration and AMC.",
             type: "service",
             serviceType: "Video wall solutions and display systems",
             image: "/assests/images/hero/video-wall-command-center.webp"
         },
         "active-led-wall-solutions.html": {
-            title: "Active LED Wall Solutions, Installation & AMC | GPSPL",
-            description: "Active LED wall supply, installation, calibration, mounting, controllers, indoor and outdoor LED display systems and AMC support from GPSPL.",
+            title: "Active LED Wall Supplier & Installer India | GPSPL",
+            description: "Indoor and outdoor active LED wall supply, pixel pitch planning, cabinets, controllers, mounting, calibration, commissioning and AMC support.",
             type: "service",
             serviceType: "Active LED wall solutions and installation",
             image: "/assests/images/products/active-led-video-wall.webp"
@@ -95,29 +143,29 @@
             image: "/assests/images/products/active-led-video-wall.webp"
         },
         "digital-signage-solutions.html": {
-            title: "Digital Signage & Commercial Display Solutions | GPSPL",
-            description: "Digital signage, commercial displays, LFD screens, hotel TVs, media players and enterprise signage solutions supplied and supported by GPSPL.",
+            title: "Digital Signage Display Solutions India | GPSPL",
+            description: "Digital signage display solutions for retail, hospitality, offices and public spaces including commercial screens, media players, menu boards and support.",
             type: "service",
             serviceType: "Digital signage and commercial display solutions",
             image: "/assests/images/products/digital-signage-solutions.webp"
         },
         "interactive-display-solutions.html": {
-            title: "Interactive Flat Panel & Smart Board Solutions | GPSPL",
-            description: "Interactive flat panels, smart boards, classroom displays, touch screens and digital learning solutions for education and enterprise environments.",
+            title: "Interactive Flat Panel Supplier India | GPSPL",
+            description: "Interactive flat panels and smart boards for classrooms, training rooms and meeting spaces with supply, installation, wireless sharing and support.",
             type: "service",
             serviceType: "Interactive display and smart board solutions",
             image: "/assests/images/products/interactive-display-solutions.webp"
         },
         "smart-classroom-solutions.html": {
-            title: "Smart Classroom Solutions & Interactive Learning | GPSPL",
-            description: "Smart classroom solutions with interactive panels, cameras, microphones, lecture capture, display systems and AV integration for education institutions.",
+            title: "Smart Classroom Solutions Supplier India | GPSPL",
+            description: "Smart classroom solutions with interactive displays, projectors, classroom audio, cameras, content sharing, installation, training and AMC support.",
             type: "service",
             serviceType: "Smart classroom and interactive learning solutions",
             image: "/assests/images/hero/smart-classroom-solutions.webp"
         },
         "professional-audio-solutions.html": {
-            title: "Professional Audio Systems, JBL, Harman & Microphones | GPSPL",
-            description: "Professional audio systems, JBL and Harman AV, BSS audio, Crown amplifiers, microphones, DSP, auditorium audio and meeting-room sound solutions by GPSPL.",
+            title: "Professional Audio System Integrator India | GPSPL",
+            description: "Professional audio systems for meeting rooms, auditoriums and venues including microphones, speakers, amplifiers, DSP, JBL, Harman and Sennheiser.",
             type: "service",
             serviceType: "Professional audio systems and AV sound solutions",
             image: "/assests/images/products/professional-audio-solutions.webp"
@@ -137,8 +185,8 @@
             image: "/assests/images/hero/video-technologies-boardroom.webp"
         },
         "control-automation.html": {
-            title: "Control Systems, AMX, Crestron & AV Switching | GPSPL",
-            description: "Control systems, AMX automation, Crestron, AV switching, KVM, source routing, touch panels and room automation solutions supplied and integrated by GPSPL.",
+            title: "AV Control & Automation Systems India | GPSPL",
+            description: "AV control and automation systems for meeting rooms, displays, audio, lighting, touch panels, source switching, AMX and Crestron workflows.",
             type: "service",
             serviceType: "Control systems and AV automation",
             image: "/assests/images/hero/av.webp"
@@ -174,8 +222,8 @@
             serviceType: "Projectors and presentation accessories"
         },
         "amc-maintenance-services.html": {
-            title: "AMC, Maintenance & Warranty Support for AV and IT | GPSPL",
-            description: "Annual maintenance contracts, preventive maintenance, warranty coordination, installation support and after-sales service for AV, IT, display, LED and automation systems.",
+            title: "AV AMC & Maintenance Services India | GPSPL",
+            description: "AV AMC and maintenance support for meeting rooms, displays, LED walls, audio systems, UPS, IT infrastructure, warranty coordination and troubleshooting.",
             type: "service",
             serviceType: "AMC maintenance and lifecycle support"
         },
@@ -205,7 +253,7 @@
             type: "webpage"
         },
         "featured-projects.html": {
-            title: "Featured AV & IT Projects | GPSPL",
+            title: "Featured AV, Display & IT Integration Projects | GPSPL",
             description: "Featured GPSPL projects for AV integration, smart classrooms, active LED walls, video conferencing, commercial displays and enterprise technology environments.",
             type: "webpage"
         },
@@ -266,19 +314,19 @@
             noindex: false
         },
         "terms-disclaimer.html": {
-            title: "Terms & Disclaimer | GPSPL",
+            title: "Website Terms, Disclaimer & Usage Policy | GPSPL",
             description: "Terms, disclaimer and website usage information for visitors using Global Peripheral Solution Pvt. Ltd. pages, downloads and enquiry forms.",
             type: "webpage",
             noindex: false
         },
         "404.html": {
-            title: "Page Not Found | GPSPL",
-            description: "The requested GPSPL website page could not be found.",
+            title: "GPSPL Page Not Found | Technology Solutions India",
+            description: "The requested GPSPL page could not be found. Return to GPSPL technology distribution, AV integration, support and contact pages.",
             type: "webpage",
             noindex: true
         },
         "thank-you.html": {
-            title: "Thank You for Contacting GPSPL",
+            title: "Thank You for Contacting GPSPL | Enquiry Received",
             description: "Thank you for contacting GPSPL. Our team will review your technology supply, integration, support or AMC enquiry and respond shortly.",
             type: "webpage",
             noindex: true
@@ -390,6 +438,7 @@
             "@id": `${BASE_URL}/#organization`,
             "name": SITE_NAME,
             "alternateName": ["GPSPL", "Global Peripheral Solutions", "GPSPL India", "GPSPL Delhi"],
+            "slogan": "We supply. We design. We integrate. We support.",
             "url": `${BASE_URL}/`,
             "logo": {
                 "@type": "ImageObject",
@@ -400,6 +449,16 @@
             "telephone": PHONE,
             "email": EMAIL,
             "priceRange": "$$",
+            "contactPoint": [
+                {
+                    "@type": "ContactPoint",
+                    "telephone": PHONE,
+                    "email": EMAIL,
+                    "contactType": "sales and technical support",
+                    "areaServed": "IN",
+                    "availableLanguage": ["en", "hi"]
+                }
+            ],
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "304, Padma Palace, 86, Nehru Place",
@@ -408,6 +467,20 @@
                 "postalCode": "110019",
                 "addressCountry": "IN"
             },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 28.548581,
+                "longitude": 77.253968
+            },
+            "hasMap": "https://www.google.com/maps/place/Global+Peripheral+Solution+Pvt.+Ltd./@28.548581,77.253968,17z/",
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                    "opens": "10:00",
+                    "closes": "18:30"
+                }
+            ],
             "areaServed": [
                 { "@type": "Country", "name": "India" },
                 { "@type": "AdministrativeArea", "name": "Delhi NCR" }
@@ -415,6 +488,9 @@
             "knowsAbout": [
                 "Audio visual integration",
                 "AV system integration",
+                "AV BOQ calculator",
+                "Conference room BOQ estimates",
+                "Room-wise AV requirement planning",
                 "Conference room automation",
                 "Boardroom solutions",
                 "Digital signage",
@@ -422,11 +498,20 @@
                 "Interactive flat panel",
                 "Video conferencing solutions",
                 "Professional audio systems",
+                "Professional microphone systems",
+                "JBL Professional audio",
+                "Sennheiser microphones",
                 "AMX automation",
+                "Crestron control systems",
+                "ATEN KVM switching",
                 "LG commercial displays",
                 "Samsung professional displays",
+                "BenQ interactive displays",
+                "Epson projectors",
+                "Luminous UPS backup",
                 "IT infrastructure",
-                "AMC support"
+                "AV AMC support",
+                "Technology distribution"
             ],
             "sameAs": sameAs
         };
@@ -444,12 +529,66 @@
         };
     }
 
+    function keywordsForPage(key, cfg) {
+        return cfg.keywords || pageKeywordOverrides[key] || defaultKeywords;
+    }
+
+    function keywordText(key, cfg) {
+        return keywordsForPage(key, cfg).join(", ");
+    }
+
+    function offerCatalogSchema() {
+        return {
+            "@type": "OfferCatalog",
+            "name": "GPSPL technology supply, integration and support portfolio",
+            "itemListElement": [
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Meeting room and collaboration solutions",
+                    "itemListElement": [
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conference room AV setup" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Video conferencing room integration" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Smart classroom and training room systems" } }
+                    ]
+                },
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Display and visual communication systems",
+                    "itemListElement": [
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Active LED video wall supply and installation" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital signage and commercial display systems" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Projectors, screens and presentation accessories" } }
+                    ]
+                },
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Audio, automation and switching systems",
+                    "itemListElement": [
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Professional audio system design and integration" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AV control automation and source switching" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "KVM and AV switching solutions" } }
+                    ]
+                },
+                {
+                    "@type": "OfferCatalog",
+                    "name": "IT, power and lifecycle support",
+                    "itemListElement": [
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "IT infrastructure and peripheral supply" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UPS and power backup solutions" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AMC, warranty coordination and technical support" } }
+                    ]
+                }
+            ]
+        };
+    }
+
     function serviceSchema(key, cfg, url) {
         return {
             "@type": "Service",
             "@id": `${url}#service`,
             "name": cfg.title.replace(/\s*\|\s*GPSPL.*$/i, ""),
             "description": cfg.description,
+            "keywords": keywordText(key, cfg),
             "serviceType": cfg.serviceType || "AV and IT technology solutions",
             "provider": { "@id": `${BASE_URL}/#organization` },
             "areaServed": [
@@ -462,7 +601,8 @@
                 "url": url,
                 "priceCurrency": "INR",
                 "availability": "https://schema.org/InStock"
-            }
+            },
+            "hasOfferCatalog": offerCatalogSchema()
         };
     }
 
@@ -512,6 +652,53 @@
         };
     }
 
+    function boqCalculatorSchema(url) {
+        return {
+            "@type": "WebApplication",
+            "@id": `${url}#av-boq-calculator`,
+            "name": "GPSPL AV BOQ Calculator",
+            "alternateName": [
+                "AV BOQ Designer",
+                "Conference Room BOQ Calculator",
+                "AV Requirement Builder"
+            ],
+            "description": "A room-wise AV requirement builder for planning displays, cameras, microphones, speakers, DSP, control, rack, UPS, cabling, installation, programming and commissioning scope before a site survey.",
+            "url": `${url}#av-boq-calculator`,
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "inLanguage": "en-IN",
+            "isAccessibleForFree": true,
+            "publisher": { "@id": `${BASE_URL}/#organization` },
+            "provider": { "@id": `${BASE_URL}/#organization` },
+            "audience": {
+                "@type": "BusinessAudience",
+                "audienceType": "Corporate, education, hospitality, government, healthcare and enterprise AV buyers"
+            },
+            "featureList": [
+                "Conference room AV BOQ estimate",
+                "Boardroom AV requirement planning",
+                "Smart classroom AV estimate",
+                "Auditorium AV BOQ direction",
+                "Display, audio, video conferencing and control-room scope planning",
+                "GST-inclusive planning estimate and PDF proposal download"
+            ],
+            "keywords": [
+                "AV BOQ calculator India",
+                "conference room BOQ estimate",
+                "AV cost calculator",
+                "boardroom AV estimate",
+                "auditorium AV BOQ",
+                "video conferencing room setup"
+            ].join(", "),
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "INR",
+                "availability": "https://schema.org/InStock"
+            }
+        };
+    }
+
     function itemListSchema(url) {
         const brands = [
             "LG Business Solutions", "Harman Professional", "JBL Professional", "AMX", "Samsung", "Sony", "HP Poly", "Wacom",
@@ -546,6 +733,7 @@
 
         document.title = title;
         ensureMeta('meta[name="description"]', { name: "description" }, "content", description);
+        ensureMeta('meta[name="keywords"]', { name: "keywords" }, "content", keywordText(key, cfg));
         ensureMeta('meta[name="robots"]', { name: "robots" }, "content", cfg.noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large");
         ensureLink("canonical", url);
         ensureIconMeta();
@@ -572,6 +760,7 @@
                 "url": url,
                 "name": title,
                 "description": description,
+                "keywords": keywordText(key, cfg),
                 "isPartOf": { "@id": `${BASE_URL}/#website` },
                 "about": { "@id": `${BASE_URL}/#organization` },
                 "primaryImageOfPage": {
@@ -597,6 +786,10 @@
 
         if (productPages.has(key)) {
             graph.push(productSchema(cfg, url, image));
+        }
+
+        if (key === "index.html") {
+            graph.push(boqCalculatorSchema(url));
         }
 
         let schema = document.getElementById("gpspl-seo-jsonld");
