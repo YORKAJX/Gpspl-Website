@@ -101,7 +101,14 @@
         return true;
     };
 
-    fetch('/.netlify/functions/google-reviews', { headers: { Accept: 'application/json' } })
+    const reviewsEndpoint = window.GPSPL_CONFIG?.googleReviewsEndpoint || '';
+
+    if (!reviewsEndpoint) {
+        showFallback('Open Google to view customer feedback');
+        return;
+    }
+
+    fetch(reviewsEndpoint, { headers: { Accept: 'application/json' } })
         .then((response) => {
             if (!response.ok) throw new Error(`Google reviews unavailable: ${response.status}`);
             return response.json();

@@ -21,7 +21,7 @@
     "metaDescription": "GPSPL supplies, designs, installs, commissions and supports active LED wall solutions including indoor LED walls, outdoor LED displays, COB and fine-pitch LED, controllers, mounts, calibration, AMC and post-installation support across India.",
     "keywords": "active LED wall solutions India, LED wall installation, indoor LED wall, outdoor LED display, fine pitch LED wall, COB LED display, Absen LED wall, LED video wall, digital signage LED wall, GPSPL",
     "canonicalUrl": "https://gpspl.co.in/active-led-wall-solutions.html",
-    "openGraphImage": "https://gpspl.co.in/assests/images/hero/video-wall-command-center.webp",
+    "openGraphImage": "https://gpspl.co.in/assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg",
     "indexing": "index, follow",
     "schemaType": "Service",
     "slug": "active-led-wall-solutions",
@@ -33,7 +33,7 @@
     "eyebrow": "Active LED Display Solutions",
     "title": "Active LED Wall Solutions",
     "subtitle": "High-impact indoor and outdoor LED display systems supplied, designed, installed, calibrated and supported by GPSPL for lobbies, auditoriums, boardrooms, command centers, retail environments, campuses, hospitality venues and public display applications.",
-    "image": "assests/images/hero/video-wall-command-center.webp",
+    "image": "assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg",
     "industryTags": [
       "Corporate Lobbies",
       "Auditoriums",
@@ -71,23 +71,23 @@
     "partnerLogos": [
       {
         "name": "Absen",
-        "logo": "assests/images/patners/absen.png"
+        "logo": "assests/images/patners/absen-wordmark-clean.png"
       },
       {
         "name": "Samsung",
-        "logo": "assests/images/patners/samsung.png"
+        "logo": "assests/images/patners/samsung-wordmark.svg"
       },
       {
         "name": "LG Business Solutions",
-        "logo": "assests/images/patners/lgb.png"
+        "logo": "assests/images/patners/lg-electronics-modern.svg"
       },
       {
         "name": "BenQ",
-        "logo": "assests/images/patners/benq.svg"
+        "logo": "assests/images/patners/benq-logo.svg"
       },
       {
         "name": "Sony",
-        "logo": "assests/images/patners/sony.png"
+        "logo": "assests/images/patners/sony-logo.svg"
       },
       {
         "name": "ATEN",
@@ -112,7 +112,7 @@
         "label": "Calibration, training, AMC and technical support"
       }
     ],
-    "image": "assests/images/hero/video-wall-command-center.webp"
+    "image": "assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg"
   },
   "approach": [
     {
@@ -211,31 +211,31 @@
   "partners": [
     {
       "name": "Absen",
-      "logo": "assests/images/patners/absen.png",
+      "logo": "assests/images/patners/absen-wordmark-clean.png",
       "category": "Active LED display technology",
       "description": "LED display technology for enterprise, command center, retail, hospitality and public display environments."
     },
     {
       "name": "Samsung",
-      "logo": "assests/images/patners/samsung.png",
+      "logo": "assests/images/patners/samsung-wordmark.svg",
       "category": "Commercial display and signage",
       "description": "Professional display and signage systems used in professional visual communication projects."
     },
     {
       "name": "LG Business Solutions",
-      "logo": "assests/images/patners/lgb.png",
+      "logo": "assests/images/patners/lg-electronics-modern.svg",
       "category": "Commercial display systems",
       "description": "Commercial displays and large-format visual solutions for signage and enterprise display environments."
     },
     {
       "name": "BenQ",
-      "logo": "assests/images/patners/benq.svg",
+      "logo": "assests/images/patners/benq-logo.svg",
       "category": "Signage and visual display",
       "description": "Display and signage technologies for education, communication and meeting spaces."
     },
     {
       "name": "Sony",
-      "logo": "assests/images/patners/sony.png",
+      "logo": "assests/images/patners/sony-logo.svg",
       "category": "Professional visual systems",
       "description": "Professional visual technologies for enterprise AV and display applications."
     },
@@ -277,7 +277,7 @@
         "Mounting",
         "Calibration"
       ],
-      "image": "assests/images/hero/video-wall-command-center.webp"
+      "image": "assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg"
     },
     {
       "clientName": "Auditorium Visual Upgrade",
@@ -301,7 +301,7 @@
         "Controller",
         "AMC"
       ],
-      "image": "assests/images/hero/video-wall-command-center.webp"
+      "image": "assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg"
     }
   ],
   "caseStudies": [
@@ -338,7 +338,7 @@
     ],
     "images": [
       {
-        "src": "assests/images/hero/video-wall-command-center.webp",
+        "src": "assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg",
         "caption": "Active LED wall system for premium enterprise display environments"
       },
       {
@@ -350,7 +350,7 @@
         "caption": "LED display solution for showroom and public communication"
       },
       {
-        "src": "assests/images/hero/video-wall-command-center.webp",
+        "src": "assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg",
         "caption": "Display wall environment for command and monitoring applications"
       }
     ]
@@ -427,7 +427,7 @@
   "cta": {
     "headline": "Plan an active LED wall with the right pixel pitch, brightness and support model.",
     "subheading": "Share your wall size, viewing distance, indoor or outdoor use and content requirement. GPSPL will help shortlist the right LED display architecture and integration scope.",
-    "backgroundImage": "assests/images/hero/video-wall-command-center.webp",
+    "backgroundImage": "assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg",
     "buttons": [
       {
         "label": "Request LED Wall Quote",

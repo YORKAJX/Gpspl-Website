@@ -7,7 +7,8 @@
         googleTagManagerId: "",
         googleSearchConsoleVerification: "",
         microsoftClarityProjectId: "",
-        vercelAnalytics: true,
+        vercelAnalytics: false,
+        googleReviewsEndpoint: "",
         leadApiEndpoint: ""
     };
 }());

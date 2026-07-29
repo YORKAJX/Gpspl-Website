@@ -73,7 +73,7 @@
     "partnerLogos": [
       {
         "name": "HP Poly",
-        "logo": "assests/images/patners/hpp.png"
+        "logo": "assests/images/patners/hp-poly-clean.png"
       },
       {
         "name": "MAXHUB",
@@ -93,15 +93,15 @@
       },
       {
         "name": "Samsung",
-        "logo": "assests/images/patners/samsung.png"
+        "logo": "assests/images/patners/samsung-wordmark.svg"
       },
       {
         "name": "Sony",
-        "logo": "assests/images/patners/sony.png"
+        "logo": "assests/images/patners/sony-logo.svg"
       },
       {
         "name": "Harman Professional",
-        "logo": "assests/images/patners/Harman.png"
+        "logo": "assests/images/patners/harman-logo.svg"
       }
     ]
   },
@@ -228,31 +228,31 @@
   "partners": [
     {
       "name": "HP Poly",
-      "logo": "assests/images/patners/hpp.png",
+      "logo": "assests/images/patners/hp-poly-clean.png",
       "category": "Video collaboration and meeting-room systems",
       "description": "Video bars, conferencing cameras, audio devices, headsets, and enterprise meeting-room collaboration technologies."
     },
     {
       "name": "Sony",
-      "logo": "assests/images/patners/sony.png",
+      "logo": "assests/images/patners/sony-logo.svg",
       "category": "Professional displays, projectors, PTZ cameras and microphones",
       "description": "Professional visual and imaging technology for boardrooms, classrooms, auditoriums, and hybrid communication spaces."
     },
     {
       "name": "Samsung",
-      "logo": "assests/images/patners/samsung.png",
+      "logo": "assests/images/patners/samsung-wordmark.svg",
       "category": "Commercial displays and interactive collaboration",
       "description": "Commercial display, LFD, signage, and interactive display platforms for enterprise collaboration environments."
     },
     {
       "name": "Harman Professional",
-      "logo": "assests/images/patners/Harman.png",
+      "logo": "assests/images/patners/harman-logo.svg",
       "category": "Professional audio, control and installed systems",
       "description": "JBL Professional audio, AMX control, DSP, amplification, and installed AV technologies for meeting and learning spaces."
     },
     {
       "name": "JBL Professional",
-      "logo": "assests/images/patners/jbl.svg",
+      "logo": "assests/images/patners/jbl-logo-clean.svg",
       "category": "Meeting-room and venue audio",
       "description": "Speech clarity, speaker systems, amplification, and installed audio solutions for boardrooms, classrooms, and auditoriums."
     },
@@ -288,25 +288,25 @@
     },
     {
       "name": "BenQ",
-      "logo": "assests/images/patners/benq.svg",
+      "logo": "assests/images/patners/benq-logo.svg",
       "category": "Signage, projectors and collaboration displays",
       "description": "Digital signage, interactive displays, projectors and professional monitors for classrooms, meeting spaces and visual communication."
     },
     {
       "name": "Sennheiser",
-      "logo": "assests/images/patners/sennheiser.svg",
+      "logo": "assests/images/patners/sennheiser-wordmark.svg",
       "category": "Microphones and conferencing audio",
       "description": "Professional microphone and speech capture products for meeting rooms, classrooms and hybrid collaboration spaces."
     },
     {
       "name": "Lumens",
-      "logo": "assests/images/patners/lumens.png",
+      "logo": "assests/images/patners/lumens-clean.png",
       "category": "PTZ cameras and lecture capture",
       "description": "Professional cameras and visual communication solutions for education, healthcare, and enterprise collaboration."
     },
     {
       "name": "LG Business Solutions",
-      "logo": "assests/images/patners/lgb.png",
+      "logo": "assests/images/patners/lg-electronics-modern.svg",
       "category": "Displays and collaboration screens",
       "description": "Commercial displays, active LED, hotel TV, signage, and display technologies for professional environments."
     }

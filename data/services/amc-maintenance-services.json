@@ -73,23 +73,23 @@
     "partnerLogos": [
       {
         "name": "Harman Professional",
-        "logo": "assests/images/patners/Harman.png"
+        "logo": "assests/images/patners/harman-logo.svg"
       },
       {
         "name": "Samsung",
-        "logo": "assests/images/patners/samsung.png"
+        "logo": "assests/images/patners/samsung-wordmark.svg"
       },
       {
         "name": "Sony",
-        "logo": "assests/images/patners/sony.png"
+        "logo": "assests/images/patners/sony-logo.svg"
       },
       {
         "name": "HP Poly",
-        "logo": "assests/images/patners/hpp.png"
+        "logo": "assests/images/patners/hp-poly-clean.png"
       },
       {
         "name": "Luminous",
-        "logo": "assests/images/patners/luminous.png"
+        "logo": "assests/images/patners/luminous-clean.png"
       },
       {
         "name": "ATEN",
@@ -217,25 +217,25 @@
   "partners": [
     {
       "name": "Harman Professional",
-      "logo": "assests/images/patners/Harman.png",
+      "logo": "assests/images/patners/harman-logo.svg",
       "category": "Professional AV systems",
       "description": "Audio, installed systems, control and enterprise AV technologies requiring structured support."
     },
     {
       "name": "Samsung",
-      "logo": "assests/images/patners/samsung.png",
+      "logo": "assests/images/patners/samsung-wordmark.svg",
       "category": "Commercial displays",
       "description": "Display and signage systems used in meeting, signage and enterprise communication environments."
     },
     {
       "name": "Sony",
-      "logo": "assests/images/patners/sony.png",
+      "logo": "assests/images/patners/sony-logo.svg",
       "category": "Displays and imaging",
       "description": "Professional display and imaging systems for collaboration and visual communication spaces."
     },
     {
       "name": "HP Poly",
-      "logo": "assests/images/patners/hpp.png",
+      "logo": "assests/images/patners/hp-poly-clean.png",
       "category": "Unified collaboration",
       "description": "Meeting room collaboration devices, conferencing endpoints and hybrid-work technology."
     },
@@ -247,7 +247,7 @@
     },
     {
       "name": "Luminous",
-      "logo": "assests/images/patners/luminous.png",
+      "logo": "assests/images/patners/luminous-clean.png",
       "category": "UPS and power backup",
       "description": "UPS and backup systems that support continuity for AV, IT and display environments."
     }

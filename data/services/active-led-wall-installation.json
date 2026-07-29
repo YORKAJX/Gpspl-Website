@@ -69,19 +69,19 @@
     "partnerLogos": [
       {
         "name": "Absen",
-        "logo": "assests/images/patners/absen.png"
+        "logo": "assests/images/patners/absen-wordmark-clean.png"
       },
       {
         "name": "Samsung",
-        "logo": "assests/images/patners/samsung.png"
+        "logo": "assests/images/patners/samsung-wordmark.svg"
       },
       {
         "name": "LG Business Solutions",
-        "logo": "assests/images/patners/lgb.png"
+        "logo": "assests/images/patners/lg-electronics-modern.svg"
       },
       {
         "name": "BenQ",
-        "logo": "assests/images/patners/benq.svg"
+        "logo": "assests/images/patners/benq-logo.svg"
       },
       {
         "name": "ATEN",
@@ -89,7 +89,7 @@
       },
       {
         "name": "Luminous",
-        "logo": "assests/images/patners/luminous.png"
+        "logo": "assests/images/patners/luminous-clean.png"
       }
     ]
   },
@@ -209,19 +209,19 @@
   "partners": [
     {
       "name": "Absen",
-      "logo": "assests/images/patners/absen.png",
+      "logo": "assests/images/patners/absen-wordmark-clean.png",
       "category": "Active LED display technology",
       "description": "LED display technology for indoor, outdoor, enterprise and public display environments."
     },
     {
       "name": "Samsung",
-      "logo": "assests/images/patners/samsung.png",
+      "logo": "assests/images/patners/samsung-wordmark.svg",
       "category": "Commercial display and signage",
       "description": "Professional display systems for integrated visual communication environments."
     },
     {
       "name": "LG Business Solutions",
-      "logo": "assests/images/patners/lgb.png",
+      "logo": "assests/images/patners/lg-electronics-modern.svg",
       "category": "Commercial displays",
       "description": "Display technologies for signage, enterprise communication and large-format visual environments."
     },
@@ -233,13 +233,13 @@
     },
     {
       "name": "BenQ",
-      "logo": "assests/images/patners/benq.svg",
+      "logo": "assests/images/patners/benq-logo.svg",
       "category": "Display and signage",
       "description": "Visual display and signage technologies for education, enterprise and public communication."
     },
     {
       "name": "Luminous",
-      "logo": "assests/images/patners/luminous.png",
+      "logo": "assests/images/patners/luminous-clean.png",
       "category": "Power continuity",
       "description": "UPS and power backup support for AV, display and control-room environments."
     }

@@ -4,7 +4,7 @@
     {
       "name": "Harman Professional",
       "slug": "harman-professional",
-      "logo": "/assests/images/patners/Harman.png",
+      "logo": "/assests/images/patners/harman-logo.svg",
       "summary": "Regional authorized distribution and integration support for Harman Professional audio, control and enterprise AV technology portfolio.",
       "categories": [
         "Professional Audio",
@@ -21,7 +21,7 @@
     {
       "name": "JBL Professional",
       "slug": "jbl-professional",
-      "logo": "/assests/images/patners/jbl.svg",
+      "logo": "/assests/images/patners/jbl-logo-clean.svg",
       "summary": "JBL Professional loudspeakers, installed audio and venue-grade sound products supplied with GPSPL design, integration and support.",
       "categories": [
         "Professional Audio",
@@ -55,7 +55,7 @@
     {
       "name": "Samsung",
       "slug": "samsung",
-      "logo": "/assests/images/patners/samsung.png",
+      "logo": "/assests/images/patners/samsung-wordmark.svg",
       "summary": "Commercial display, signage, and visual technology solutions.",
       "categories": [
         "Commercial Displays",
@@ -72,7 +72,7 @@
     {
       "name": "LG Business Solutions",
       "slug": "lg-business-solutions",
-      "logo": "/assests/images/patners/lgb.png",
+      "logo": "/assests/images/patners/lg-electronics-modern.svg",
       "summary": "Regional authorized distributor support for LG commercial displays, screen display solutions, digital signage, video walls and active LED display environments.",
       "categories": [
         "Commercial Displays",
@@ -92,7 +92,7 @@
     {
       "name": "Sony",
       "slug": "sony",
-      "logo": "/assests/images/patners/sony.png",
+      "logo": "/assests/images/patners/sony-logo.svg",
       "summary": "Professional visual, projection, display, and collaboration technologies.",
       "categories": [
         "Professional Displays",
@@ -127,7 +127,7 @@
     {
       "name": "HP / HP Poly",
       "slug": "hp-poly",
-      "logo": "/assests/images/patners/hpp.png",
+      "logo": "/assests/images/patners/hp-poly-clean.png",
       "summary": "HP computing peripherals, laptops, desktops, printers, cartridges and HP Poly video collaboration, cameras, headsets and room systems.",
       "categories": [
         "IT Peripherals",
@@ -216,7 +216,7 @@
     {
       "name": "Lumens",
       "slug": "lumens",
-      "logo": "/assests/images/patners/lumens.png",
+      "logo": "/assests/images/patners/lumens-clean.png",
       "summary": "PTZ cameras, document cameras, lecture capture and AV-over-IP products for classrooms, studios and meeting rooms.",
       "categories": [
         "PTZ Cameras",
@@ -234,7 +234,7 @@
     {
       "name": "Absen",
       "slug": "absen",
-      "logo": "/assests/images/patners/absen.png",
+      "logo": "/assests/images/patners/absen-wordmark-clean.png",
       "summary": "Active LED display distribution including LED walls, display modules, controllers and deployment support for enterprise, command center, retail and public environments.",
       "categories": [
         "Active LED",
@@ -252,7 +252,7 @@
     {
       "name": "Sennheiser",
       "slug": "sennheiser",
-      "logo": "/assests/images/patners/sennheiser.svg",
+      "logo": "/assests/images/patners/sennheiser-wordmark.svg",
       "summary": "Professional microphones, wireless audio, conferencing audio, and speech capture technologies.",
       "categories": [
         "Professional Audio",
@@ -355,7 +355,7 @@
     {
       "name": "BenQ",
       "slug": "benq",
-      "logo": "/assests/images/patners/benq.svg",
+      "logo": "/assests/images/patners/benq-logo.svg",
       "summary": "Digital signage, interactive displays, projectors, professional monitors and visual collaboration technologies.",
       "categories": [
         "Digital Signage",
@@ -372,7 +372,7 @@
     {
       "name": "Luminous",
       "slug": "luminous",
-      "logo": "/assests/images/patners/luminous.png",
+      "logo": "/assests/images/patners/luminous-clean.png",
       "summary": "Regional authorized distribution and support for Luminous UPS, online UPS, offline UPS, inverter backup, batteries and power protection for AV and IT rooms.",
       "categories": [
         "UPS",

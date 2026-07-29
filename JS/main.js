@@ -63,6 +63,93 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentPath = window.location.pathname === "/" ? "/index.html" : window.location.pathname;
         document.body.classList.toggle("compact-footer", currentPath !== "/index.html");
     }
+
+    function initProductDetailHeroStack() {
+        const page = document.querySelector('.product-detail-page');
+        const hero = page?.querySelector('.solution-page-hero');
+        const heroContainer = hero?.querySelector(':scope > .container');
+        if (!page || !hero || !heroContainer || hero.dataset.brandStackReady === 'true') return;
+
+        hero.dataset.brandStackReady = 'true';
+        hero.classList.add('solution-page-hero-premium');
+
+        const pageTitle = hero.querySelector('h1')?.textContent?.trim() || document.title.replace(/\s*\|\s*GPSPL.*/i, '').trim();
+        const category = page.dataset.cmsCollection === 'products' ? 'Solutions' : 'Services';
+        const breadcrumb = document.createElement('nav');
+        breadcrumb.className = 'product-hero-breadcrumbs';
+        breadcrumb.setAttribute('aria-label', 'Breadcrumb');
+        breadcrumb.innerHTML = `<a href="/index.html">Home</a><span>/</span><span>${category}</span><span>/</span><span>${pageTitle}</span>`;
+
+        const eyebrow = hero.querySelector('.sub-headline');
+        if (eyebrow && !hero.querySelector('.product-hero-breadcrumbs')) {
+            heroContainer.insertBefore(breadcrumb, eyebrow);
+        }
+
+        const brandCloud = page.querySelector('.product-brand-cloud');
+        const brandItems = [...(brandCloud?.querySelectorAll('span') || [])].slice(0, 4);
+        const panel = document.createElement('aside');
+        panel.className = 'product-hero-brand-panel';
+        panel.setAttribute('aria-label', `${pageTitle} brand stack`);
+
+        const brandCards = brandItems.length ? brandItems.map(item => {
+            const img = item.querySelector('img');
+            const name = item.querySelector('b')?.textContent?.trim() || img?.alt?.replace(/\s+logo$/i, '').trim() || 'Partner';
+            const brandKey = getBrandKey(name);
+            const imageMarkup = img
+                ? `<img src="${img.getAttribute('src')}" alt="${img.getAttribute('alt') || `${name} logo`}" loading="lazy" decoding="async">`
+                : `<strong>${name}</strong>`;
+            return `
+                <article data-brand="${brandKey}">
+                    <div class="product-hero-logo">${imageMarkup}</div>
+                    <h2>${name}</h2>
+                    <p>${getBrandSupportLine(name, pageTitle)}</p>
+                </article>
+            `;
+        }).join('') : getFallbackHeroStack(pageTitle);
+
+        panel.innerHTML = `
+            <p class="product-hero-panel-label">Brand Stack</p>
+            <div class="product-hero-brand-grid">${brandCards}</div>
+        `;
+
+        hero.appendChild(panel);
+    }
+
+    function getBrandSupportLine(name, pageTitle) {
+        const key = name.toLowerCase();
+        const title = (pageTitle || '').toLowerCase();
+        if (key.includes('maxhub')) return title.includes('classroom') ? 'Interactive classroom panels' : 'Collaboration displays';
+        if (key.includes('newline')) return title.includes('classroom') ? 'Teaching displays' : 'Interactive displays';
+        if (key.includes('epson')) return title.includes('classroom') ? 'Classroom projection' : 'Projection systems';
+        if (key.includes('sennheiser')) return 'Speech microphones';
+        if (key.includes('harman') || key.includes('jbl')) return 'Audio systems';
+        if (key.includes('poly') || key.includes('lumens')) return 'Collaboration devices';
+        if (key.includes('absen')) return 'LED wall systems';
+        if (key.includes('sony')) return 'AV imaging';
+        if (key.includes('samsung') || key.includes('lg') || key.includes('benq')) return 'Display systems';
+        if (key.includes('crestron') || key.includes('amx') || key.includes('aten')) return 'Control systems';
+        if (key.includes('luminous')) return 'Power backup';
+        if (key.includes('hp') || key.includes('dell') || key.includes('lenovo') || key.includes('acer')) return 'Enterprise IT';
+        return 'Supply and support';
+    }
+
+    function getFallbackHeroStack(pageTitle) {
+        return ['Consult', 'Supply', 'Integrate', 'Support'].map((title, index) => `
+            <article data-brand="gpspl-step">
+                <div class="product-hero-logo product-hero-step">${String(index + 1).padStart(2, '0')}</div>
+                <h2>${title}</h2>
+                <p>${pageTitle} planning, delivery and lifecycle ownership</p>
+            </article>
+        `).join('');
+    }
+
+    function getBrandKey(name = '') {
+        return String(name)
+            .toLowerCase()
+            .replace(/&/g, 'and')
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '');
+    }
     
     
 
@@ -445,6 +532,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     initHeroSlider();
+    initProductDetailHeroStack();
     initRevealAnimations();
     initTestimonialCarousel();
     initIndustryExperience();

@@ -21,7 +21,7 @@
     "metaDescription": "GPSPL supplies, designs, integrates, installs, commissions and supports video wall solutions including LED video walls, LCD video walls, control room displays, signage walls, processors, mounts, cabling, AMC and post-installation support across India.",
     "keywords": "video wall solutions India, LED video wall installation, LCD video wall system, command center video wall, control room display wall, digital signage video wall, active LED wall, video wall controller, Absen LED wall, Samsung video wall, LG video wall, GPSPL",
     "canonicalUrl": "https://gpspl.co.in/video-wall-solutions.html",
-    "openGraphImage": "https://gpspl.co.in/assests/images/hero/video-wall-command-center.webp",
+    "openGraphImage": "https://gpspl.co.in/assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg",
     "indexing": "index, follow",
     "schemaType": "Service",
     "slug": "video-wall-solutions",
@@ -33,7 +33,7 @@
     "eyebrow": "Enterprise Video Wall Solutions",
     "title": "Video Wall Solutions for Control Rooms, Boardrooms & Public Display",
     "subtitle": "GPSPL supplies, designs, integrates and supports LED and LCD video wall systems for command centers, enterprise lobbies, boardrooms, auditoriums, campuses, signage networks and mission-critical monitoring environments.",
-    "image": "assests/images/hero/video-wall-command-center.webp",
+    "image": "assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg",
     "industryTags": [
       "Command Centers",
       "Boardrooms",
@@ -71,23 +71,23 @@
     "partnerLogos": [
       {
         "name": "Absen",
-        "logo": "assests/images/patners/absen.png"
+        "logo": "assests/images/patners/absen-wordmark-clean.png"
       },
       {
         "name": "Samsung",
-        "logo": "assests/images/patners/samsung.png"
+        "logo": "assests/images/patners/samsung-wordmark.svg"
       },
       {
         "name": "LG Business Solutions",
-        "logo": "assests/images/patners/lgb.png"
+        "logo": "assests/images/patners/lg-electronics-modern.svg"
       },
       {
         "name": "BenQ",
-        "logo": "assests/images/patners/benq.svg"
+        "logo": "assests/images/patners/benq-logo.svg"
       },
       {
         "name": "Sony",
-        "logo": "assests/images/patners/sony.png"
+        "logo": "assests/images/patners/sony-logo.svg"
       },
       {
         "name": "ATEN",
@@ -112,7 +112,7 @@
         "label": "Calibration, spares, AMC, training and support handover"
       }
     ],
-    "image": "assests/images/hero/video-wall-command-center.webp"
+    "image": "assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg"
   },
   "approach": [
     {
@@ -211,31 +211,31 @@
   "partners": [
     {
       "name": "Absen",
-      "logo": "assests/images/patners/absen.png",
+      "logo": "assests/images/patners/absen-wordmark-clean.png",
       "category": "Active LED displays",
       "description": "LED display technology for large-format indoor and outdoor video wall environments."
     },
     {
       "name": "Samsung",
-      "logo": "assests/images/patners/samsung.png",
+      "logo": "assests/images/patners/samsung-wordmark.svg",
       "category": "Commercial displays and signage",
       "description": "Professional display and signage systems for enterprise visual communication."
     },
     {
       "name": "LG Business Solutions",
-      "logo": "assests/images/patners/lgb.png",
+      "logo": "assests/images/patners/lg-electronics-modern.svg",
       "category": "Commercial display systems",
       "description": "Large-format displays and professional visual solutions for signage and control environments."
     },
     {
       "name": "BenQ",
-      "logo": "assests/images/patners/benq.svg",
+      "logo": "assests/images/patners/benq-logo.svg",
       "category": "Signage and displays",
       "description": "Professional display and signage technologies for education, meeting and communication spaces."
     },
     {
       "name": "Sony",
-      "logo": "assests/images/patners/sony.png",
+      "logo": "assests/images/patners/sony-logo.svg",
       "category": "Professional visual systems",
       "description": "Visual, display and projection technologies for enterprise AV environments."
     },
@@ -277,7 +277,7 @@
         "Signal routing",
         "AMC"
       ],
-      "image": "assests/images/hero/video-wall-command-center.webp"
+      "image": "assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg"
     },
     {
       "clientName": "Corporate Experience Center",
@@ -338,7 +338,7 @@
     ],
     "images": [
       {
-        "src": "assests/images/hero/video-wall-command-center.webp",
+        "src": "assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg",
         "caption": "Command center style video wall and control-panel visual environment"
       },
       {
@@ -346,7 +346,7 @@
         "caption": "Active LED video wall system for enterprise display environments"
       },
       {
-        "src": "assests/images/hero/video-wall-command-center.webp",
+        "src": "assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg",
         "caption": "Video wall environment for monitoring and control-room applications"
       },
       {
@@ -431,7 +431,7 @@
   "cta": {
     "headline": "Plan a video wall that fits your space, content and operating needs.",
     "subheading": "Share your room size, viewing distance, content sources and preferred application. GPSPL will help you shortlist the right display technology, controller workflow and support model.",
-    "backgroundImage": "assests/images/hero/video-wall-command-center.webp",
+    "backgroundImage": "assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg",
     "buttons": [
       {
         "label": "Request Video Wall Quote",

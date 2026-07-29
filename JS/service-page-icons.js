@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const slug = root.dataset.serviceSlug;
     root.classList.add(`service-${slug}`);
-    const dataUrl = `/data/services/${slug}.json?v=20260714-process-resource-fix`;
+    const dataUrl = `/data/services/${slug}.json?v=20260729-seo-photo-fix`;
 
     const escapeHtml = (value = "") => String(value)
         .replaceAll("&", "&amp;")
@@ -320,16 +320,16 @@ document.addEventListener("DOMContentLoaded", () => {
             <section class="service-features section-padding" data-admin-section="feature-cards-module">
                 <div class="container">
                     ${sectionHeading("Why GPSPL", "Why Organizations Choose GPSPL", "A system integration partner focused on product fit, installation quality and after-sales support.", true)}
-                    <div class="service-feature-grid">${data.features.map(item => {
+                    <div class="service-feature-grid">${data.features.map((item, index) => {
                         const feature = featureCopy(item);
-                        return `<article class="reveal"><i class="fas fa-check" aria-hidden="true"></i><h3>${escapeHtml(feature.title)}</h3><p>${escapeHtml(feature.text)}</p></article>`;
+                        return `<article class="reveal"><span>${String(index + 1).padStart(2, "0")}</span><i class="fas ${escapeHtml(feature.icon)}" aria-hidden="true"></i><h3>${escapeHtml(feature.title)}</h3><p>${escapeHtml(feature.text)}</p></article>`;
                     }).join("")}</div>
                 </div>
             </section>
 
             <section id="projects" class="service-projects section-padding" data-admin-section="projects-module">
                 <div class="container">
-                    ${sectionHeading("Field Experience", "Project Showcase", "Representative deployments across enterprise, education, and operations environments.", true)}
+                    ${sectionHeading("Field Experience", "Project Showcase", "GPSPL project visuals selected from real rooms, display environments, training spaces and integrated AV deployments.", true)}
                     <div class="service-project-slider">${data.projects.map(project => `
                         <article class="service-project-card reveal">
                             <img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.clientName)}" loading="lazy">
@@ -371,7 +371,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <section class="service-gallery section-padding" data-admin-section="gallery-module">
                 <div class="container">
-                    ${sectionHeading("Deployment Visuals", "Installation Gallery", "Professional AV environments across boardrooms, auditoriums, video walls, control rooms, education, and healthcare.", true)}
+                    ${sectionHeading("Deployment Visuals", "Installation Gallery", "Professional AV environments across boardrooms, meeting rooms, training rooms, installation, display systems and video conferencing.", true)}
                     <div class="service-gallery-tags">${data.gallery.categories.map(item => `<span>${escapeHtml(item)}</span>`).join("")}</div>
                     <div class="service-gallery-grid">${data.gallery.images.map(image => `<figure class="reveal"><img src="${escapeHtml(image.src)}" alt="${escapeHtml(image.caption)}" loading="lazy"><figcaption>${escapeHtml(image.caption)}</figcaption></figure>`).join("")}</div>
                 </div>
@@ -711,15 +711,21 @@ document.addEventListener("DOMContentLoaded", () => {
     function featureCopy(value = "") {
         const text = String(value);
         const lower = text.toLowerCase();
-        if (lower.includes("distribution")) return { title: "Genuine Product Supply", text: "We help source AV, IT, display and peripheral products from trusted brand channels." };
-        if (lower.includes("engineering") || lower.includes("deployment")) return { title: "Experienced Technical Team", text: "Our team plans, installs, tests and hands over systems for daily use." };
-        if (lower.includes("brand") || lower.includes("oem")) return { title: "Brand & Warranty Support", text: "We help with product selection, warranty guidance and service coordination." };
-        if (lower.includes("custom") || lower.includes("workflow")) return { title: "Designed For Your Room", text: "Solutions are planned around the room purpose, users, devices and support needs." };
-        if (lower.includes("pan-india") || lower.includes("project execution")) return { title: "Pan-India Project Support", text: "GPSPL can coordinate supply, installation and support requirements across locations." };
-        if (lower.includes("rack") || lower.includes("cabling") || lower.includes("power")) return { title: "Clean Installation Planning", text: "We plan cabling, racks, power, network readiness and service access before handover." };
-        if (lower.includes("commissioning") || lower.includes("training")) return { title: "Testing & User Training", text: "Systems are checked, commissioned, documented and explained to the user team." };
-        if (lower.includes("amc") || lower.includes("maintenance")) return { title: "AMC & After-Sales Support", text: "We support maintenance, troubleshooting, warranty coordination and upgrade planning." };
-        return { title: text, text: "GPSPL supports this requirement through product supply, installation and after-sales service." };
+        if (lower.includes("over-designed") || lower.includes("cost-efficient")) return { title: "Value Engineering", text: "We avoid unnecessary premium hardware when a cost-efficient product fully meets the technical requirement.", icon: "fa-scale-balanced" };
+        if (lower.includes("display size") || lower.includes("microphone pickup") || lower.includes("speaker coverage")) return { title: "Scope Validation", text: "Display, pickup, coverage, rack, UPS and control requirements are checked before the BOQ is finalized.", icon: "fa-clipboard-check" };
+        if (lower.includes("support readiness") || lower.includes("labels") || lower.includes("handover notes")) return { title: "Support-Ready Handover", text: "Rack dressing, cable labels, user training and handover notes make the system easier to operate and maintain.", icon: "fa-screwdriver-wrench" };
+        if (lower.includes("one accountable") || lower.includes("connected through one")) return { title: "Single Ownership", text: "Product supply, installation, commissioning and AMC stay connected through one accountable GPSPL workflow.", icon: "fa-handshake" };
+        if (lower.includes("room purpose") || lower.includes("future serviceability")) return { title: "Room-Fit Design", text: "Solutions are planned around room purpose, user workflow, product compatibility and future serviceability.", icon: "fa-drafting-compass" };
+        if (lower.includes("coordinates") || lower.includes("commercial av") || lower.includes("power backup")) return { title: "Cross-Domain Coordination", text: "AV, audio, video, control, IT readiness and power backup are coordinated as one working environment.", icon: "fa-diagram-project" };
+        if (lower.includes("distribution")) return { title: "Genuine Product Supply", text: "We help source AV, IT, display and peripheral products from trusted brand channels.", icon: "fa-certificate" };
+        if (lower.includes("engineering") || lower.includes("deployment")) return { title: "Experienced Technical Team", text: "Our team plans, installs, tests and hands over systems for daily use.", icon: "fa-user-gear" };
+        if (lower.includes("brand") || lower.includes("oem")) return { title: "Brand & Warranty Support", text: "We help with product selection, warranty guidance and service coordination.", icon: "fa-shield-halved" };
+        if (lower.includes("custom") || lower.includes("workflow")) return { title: "Designed For Your Room", text: "Solutions are planned around the room purpose, users, devices and support needs.", icon: "fa-drafting-compass" };
+        if (lower.includes("pan-india") || lower.includes("project execution")) return { title: "Pan-India Project Support", text: "GPSPL can coordinate supply, installation and support requirements across locations.", icon: "fa-map-location-dot" };
+        if (lower.includes("rack") || lower.includes("cabling") || lower.includes("power")) return { title: "Clean Installation Planning", text: "We plan cabling, racks, power, network readiness and service access before handover.", icon: "fa-screwdriver-wrench" };
+        if (lower.includes("commissioning") || lower.includes("training")) return { title: "Testing & User Training", text: "Systems are checked, commissioned, documented and explained to the user team.", icon: "fa-clipboard-check" };
+        if (lower.includes("amc") || lower.includes("maintenance")) return { title: "AMC & After-Sales Support", text: "We support maintenance, troubleshooting, warranty coordination and upgrade planning.", icon: "fa-headset" };
+        return { title: text, text: "GPSPL supports this requirement through product supply, installation and after-sales service.", icon: "fa-check" };
     }
 
     function planningTags(data) {

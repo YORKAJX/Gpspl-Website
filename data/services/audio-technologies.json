@@ -75,19 +75,19 @@
     "partnerLogos": [
       {
         "name": "Harman",
-        "logo": "assests/images/patners/Harman.png"
+        "logo": "assests/images/patners/harman-logo.svg"
       },
       {
         "name": "Sennheiser",
-        "logo": "assests/images/patners/sennheiser.svg"
+        "logo": "assests/images/patners/sennheiser-wordmark.svg"
       },
       {
         "name": "HP Poly",
-        "logo": "assests/images/patners/hpp.png"
+        "logo": "assests/images/patners/hp-poly-clean.png"
       },
       {
         "name": "Sony",
-        "logo": "assests/images/patners/sony.png"
+        "logo": "assests/images/patners/sony-logo.svg"
       }
     ]
   },
@@ -202,25 +202,25 @@
   "partners": [
     {
       "name": "Harman",
-      "logo": "assests/images/patners/Harman.png",
+      "logo": "assests/images/patners/harman-logo.svg",
       "category": "Professional audio and AV technology portfolio",
       "description": "Brand portfolio shown in GPSPL brochure for AV and professional technology environments."
     },
     {
       "name": "Sennheiser",
-      "logo": "assests/images/patners/sennheiser.svg",
+      "logo": "assests/images/patners/sennheiser-wordmark.svg",
       "category": "Professional microphones and conferencing audio",
       "description": "Microphone, wireless audio and speech capture solutions for boardrooms, classrooms, auditoriums and hybrid collaboration environments."
     },
     {
       "name": "HP Poly",
-      "logo": "assests/images/patners/hpp.png",
+      "logo": "assests/images/patners/hp-poly-clean.png",
       "category": "Meeting-room audio and collaboration devices",
       "description": "Brochure-backed video collaboration and audio device portfolio for meeting rooms, including Poly Studio and Poly Sync families."
     },
     {
       "name": "Sony",
-      "logo": "assests/images/patners/sony.png",
+      "logo": "assests/images/patners/sony-logo.svg",
       "category": "Professional camera and microphone technology",
       "description": "Brochure lists Sony professional camera models and Sony MAS-A100 ceiling microphone for professional communication spaces."
     }

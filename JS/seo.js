@@ -46,14 +46,14 @@
             "GPSPL"
         ],
         "audio-visual-integration.html": ["AV system integrator Delhi NCR", "audio visual integration company India", "enterprise AV installation", "boardroom AV integrator", "AV AMC support"],
-        "conference-room-solutions.html": ["conference room AV integrator", "boardroom AV setup Delhi", "video conferencing room setup", "meeting room audio video", "wireless presentation system"],
+        "conference-room-solutions.html": ["conference room AV integrator Delhi NCR", "boardroom AV setup", "meeting room AV solutions", "video conferencing room setup", "Teams Zoom room setup", "conference room audio video", "wireless presentation system"],
         "unified-communication-collaboration.html": ["video conferencing solutions India", "unified communication integrator", "hybrid meeting room solutions", "PTZ camera meeting room", "collaboration room AV"],
         "video-wall-solutions.html": ["video wall supplier India", "video wall integrator Delhi", "control room video wall", "LCD video wall systems", "commercial display wall"],
-        "active-led-wall-solutions.html": ["active LED wall supplier India", "LED video wall installation", "indoor LED wall Delhi", "outdoor LED display supplier", "LED wall AMC"],
+        "active-led-wall-solutions.html": ["active LED wall supplier India", "active LED wall installer India", "LED video wall installation", "indoor LED wall Delhi NCR", "outdoor LED display supplier", "fine pitch LED wall", "LED wall AMC"],
         "digital-signage-solutions.html": ["digital signage solutions India", "digital signage display supplier", "menu board display", "commercial signage screen", "retail digital signage"],
         "interactive-display-solutions.html": ["interactive flat panel supplier", "smart board supplier India", "interactive display for classrooms", "MAXHUB Newline BenQ panels", "IFPD installation"],
-        "smart-classroom-solutions.html": ["smart classroom solutions India", "interactive classroom setup", "classroom projector audio", "digital classroom integrator", "education AV solutions"],
-        "professional-audio-solutions.html": ["professional audio system integrator", "JBL audio supplier India", "Sennheiser microphone supplier", "auditorium sound system", "conference room audio"],
+        "smart-classroom-solutions.html": ["smart classroom solutions India", "interactive classroom setup", "interactive flat panel for classroom", "digital classroom AV integrator", "classroom projector audio system", "hybrid learning classroom setup", "lecture capture classroom", "education AV solutions"],
+        "professional-audio-solutions.html": ["professional audio system integrator India", "auditorium sound system", "seminar hall audio system", "conference room audio", "DSP audio system design", "JBL professional audio", "Sennheiser microphones"],
         "audio-technologies.html": ["meeting room audio technology", "professional microphones speakers DSP", "audio system design India", "auditorium audio integration", "room audio tuning"],
         "video-technologies.html": ["PTZ camera supplier India", "video technology solutions", "lecture capture cameras", "video conferencing camera", "enterprise display systems"],
         "control-automation.html": ["AV control automation India", "AMX automation integrator", "Crestron control systems", "meeting room automation", "AV switching control"],
@@ -67,7 +67,7 @@
     const pageSeo = {
         "index.html": {
             title: "AV BOQ Calculator & System Integrator India | GPSPL",
-            description: "Use GPSPL's AV BOQ calculator to plan conference rooms, boardrooms, classrooms, auditoriums, displays, audio, video conferencing, installation and AMC across India.",
+            description: "Use GPSPL's AV BOQ calculator for conference rooms, boardrooms, classrooms, auditoriums, displays, audio, installation and AMC planning.",
             type: "home",
             image: "/assests/images/hero/image.jpg"
         },
@@ -95,14 +95,14 @@
         },
         "audio-visual-integration.html": {
             title: "AV System Integrator in Delhi NCR & India | GPSPL",
-            description: "Enterprise AV system integrator for boardrooms, classrooms, auditoriums, control rooms, displays, audio, automation, installation and AMC support.",
+            description: "GPSPL designs and integrates enterprise AV systems for meeting rooms, classrooms, auditoriums, LED walls, control rooms, installation and AMC.",
             type: "service",
             serviceType: "Audio visual integration and enterprise AV system integration",
             image: "/assests/images/vision/conference-room-hero.jpg"
         },
         "conference-room-solutions.html": {
-            title: "Conference Room AV Integrator Delhi NCR | GPSPL",
-            description: "Boardroom and conference room AV setup with displays, microphones, PTZ cameras, video conferencing, wireless presentation, touch control and support.",
+            title: "Conference Room AV Integrator Delhi NCR | Boardroom Setup | GPSPL",
+            description: "Conference room and boardroom AV setup with displays, cameras, microphones, speakers, DSP, control, cabling, installation, commissioning and AMC support.",
             type: "service",
             serviceType: "Conference room and boardroom AV solutions",
             image: "/assests/images/products/conference-room-solutions.webp"
@@ -122,8 +122,8 @@
             image: "/assests/images/hero/video-wall-command-center.webp"
         },
         "active-led-wall-solutions.html": {
-            title: "Active LED Wall Supplier & Installer India | GPSPL",
-            description: "Indoor and outdoor active LED wall supply, pixel pitch planning, cabinets, controllers, mounting, calibration, commissioning and AMC support.",
+            title: "Active LED Wall Supplier & Installer India | LED Video Wall | GPSPL",
+            description: "GPSPL supplies, designs, installs and supports active LED walls with pixel pitch planning, cabinets, controllers, mounting structure, calibration, commissioning and AMC.",
             type: "service",
             serviceType: "Active LED wall solutions and installation",
             image: "/assests/images/products/active-led-video-wall.webp"
@@ -157,17 +157,17 @@
             image: "/assests/images/products/interactive-display-solutions.webp"
         },
         "smart-classroom-solutions.html": {
-            title: "Smart Classroom Solutions Supplier India | GPSPL",
-            description: "Smart classroom solutions with interactive displays, projectors, classroom audio, cameras, content sharing, installation, training and AMC support.",
+            title: "Smart Classroom Solutions India | Interactive Classroom AV | GPSPL",
+            description: "Smart classroom solutions for schools, colleges, universities and training rooms with interactive displays, projectors, classroom audio, cameras, lecture capture, installation, teacher training and AMC.",
             type: "service",
-            serviceType: "Smart classroom and interactive learning solutions",
-            image: "/assests/images/hero/smart-classroom-solutions.webp"
+            serviceType: "Smart classroom, interactive display and education AV integration",
+            image: "/assests/images/projects/gpspl-real/polished/direct-education-classroom-panels.webp"
         },
         "professional-audio-solutions.html": {
-            title: "Professional Audio System Integrator India | GPSPL",
-            description: "Professional audio systems for meeting rooms, auditoriums and venues including microphones, speakers, amplifiers, DSP, JBL, Harman and Sennheiser.",
+            title: "Professional Audio System Integrator India | Auditorium Sound | GPSPL",
+            description: "Professional audio system integrator for auditoriums, seminar halls, conference rooms and classrooms with microphones, speakers, DSP, amplifiers, tuning and AMC.",
             type: "service",
-            serviceType: "Professional audio systems and AV sound solutions",
+            serviceType: "Professional audio, auditorium sound and DSP system integration",
             image: "/assests/images/products/professional-audio-solutions.webp"
         },
         "audio-technologies.html": {
@@ -248,13 +248,13 @@
             type: "webpage"
         },
         "projects.html": {
-            title: "Technology Projects | AV, IT, Display & Support | GPSPL",
-            description: "Explore GPSPL project capabilities across collaboration spaces, smart classrooms, displays, control rooms, public-sector and enterprise deployments.",
+            title: "Enterprise AV, Display & IT Projects India | GPSPL Portfolio",
+            description: "Explore GPSPL enterprise AV, display, smart classroom, Active LED, video wall, professional audio, IT infrastructure, installation and support projects across India.",
             type: "webpage"
         },
         "featured-projects.html": {
-            title: "Featured AV, Display & IT Integration Projects | GPSPL",
-            description: "Featured GPSPL projects for AV integration, smart classrooms, active LED walls, video conferencing, commercial displays and enterprise technology environments.",
+            title: "Featured AV Integration Projects India | GPSPL Case Proof",
+            description: "Featured GPSPL AV integration projects across boardrooms, smart classrooms, active LED walls, professional audio, digital signage, healthcare displays and enterprise support-ready environments.",
             type: "webpage"
         },
         "corporate-projects.html": {
@@ -278,8 +278,8 @@
             type: "webpage"
         },
         "case-studies.html": {
-            title: "Case Studies | AV & IT Project Outcomes | GPSPL",
-            description: "GPSPL case studies show requirements, solution planning, technology used and support outcomes for AV, display, IT and automation projects.",
+            title: "AV Integration Case Studies India | GPSPL Project Outcomes",
+            description: "GPSPL case studies show AV integration requirements, display planning, smart classroom rollouts, LED wall projects, professional audio, installation, commissioning and support outcomes.",
             type: "webpage"
         },
         "downloads.html": {
@@ -438,7 +438,7 @@
             "@id": `${BASE_URL}/#organization`,
             "name": SITE_NAME,
             "alternateName": ["GPSPL", "Global Peripheral Solutions", "GPSPL India", "GPSPL Delhi"],
-            "slogan": "We supply. We design. We integrate. We support.",
+            "slogan": "AV system integration, distribution and support for enterprise spaces.",
             "url": `${BASE_URL}/`,
             "logo": {
                 "@type": "ImageObject",
@@ -449,6 +449,7 @@
             "telephone": PHONE,
             "email": EMAIL,
             "priceRange": "$$",
+            "description": "GPSPL is a New Delhi based AV system integrator, enterprise technology distributor and project support partner for conference rooms, boardrooms, smart classrooms, Active LED walls, video walls, professional audio, IT infrastructure and AMC across Delhi NCR and India.",
             "contactPoint": [
                 {
                     "@type": "ContactPoint",
@@ -483,7 +484,53 @@
             ],
             "areaServed": [
                 { "@type": "Country", "name": "India" },
-                { "@type": "AdministrativeArea", "name": "Delhi NCR" }
+                { "@type": "AdministrativeArea", "name": "Delhi NCR" },
+                { "@type": "City", "name": "New Delhi" },
+                { "@type": "City", "name": "Delhi" },
+                { "@type": "City", "name": "Gurugram" },
+                { "@type": "City", "name": "Noida" },
+                { "@type": "City", "name": "Greater Noida" },
+                { "@type": "City", "name": "Ghaziabad" },
+                { "@type": "City", "name": "Faridabad" }
+            ],
+            "serviceArea": {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 28.548581,
+                    "longitude": 77.253968
+                },
+                "geoRadius": "250000"
+            },
+            "makesOffer": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Conference room and boardroom AV integration"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Active LED wall and video wall installation"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Smart classroom and professional audio integration"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "AV AMC, warranty coordination and lifecycle support"
+                    }
+                }
             ],
             "knowsAbout": [
                 "Audio visual integration",
@@ -491,6 +538,8 @@
                 "AV BOQ calculator",
                 "Conference room BOQ estimates",
                 "Room-wise AV requirement planning",
+                "Enterprise AV system integration",
+                "Audio visual integration in Delhi NCR",
                 "Conference room automation",
                 "Boardroom solutions",
                 "Digital signage",
@@ -606,7 +655,40 @@
         };
     }
 
-    function faqSchema(url) {
+    function faqSchema(url, key = "") {
+        if (key === "index.html") {
+            return {
+                "@type": "FAQPage",
+                "@id": `${url}#faq`,
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Can GPSPL prepare an AV BOQ before a site survey?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. The GPSPL AV BOQ calculator gives a room-wise planning estimate using room type, size, seating and workflow. Final model, cable route, mounting, exact quantity and commercials are confirmed after site validation."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is included in a conference room AV setup?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "A typical conference room AV setup can include display or LED wall, camera, microphones, speakers, DSP, amplifier, touch control, scheduler, rack, UPS, cabling, installation, programming, testing and user handover."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Does the BOQ calculator show final pricing?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. It shows a GST-inclusive planning range. Final pricing may vary after equipment selection, site survey, cable route, installation complexity, warranty requirement and client approval."
+                        }
+                    }
+                ]
+            };
+        }
+
         return {
             "@type": "FAQPage",
             "@id": `${url}#faq`,
@@ -677,7 +759,9 @@
             "featureList": [
                 "Conference room AV BOQ estimate",
                 "Boardroom AV requirement planning",
+                "Huddle room AV requirement planning",
                 "Smart classroom AV estimate",
+                "Training room AV requirement planning",
                 "Auditorium AV BOQ direction",
                 "Display, audio, video conferencing and control-room scope planning",
                 "GST-inclusive planning estimate and PDF proposal download"
@@ -773,11 +857,11 @@
         ];
 
         if (cfg.type === "service") {
-            graph.push(serviceSchema(key, cfg, url), faqSchema(url));
+            graph.push(serviceSchema(key, cfg, url), faqSchema(url, key));
         }
 
         if (cfg.type === "faq") {
-            graph.push(faqSchema(url));
+            graph.push(faqSchema(url, key));
         }
 
         if (cfg.type === "partners" || cfg.type === "catalog") {
@@ -789,7 +873,7 @@
         }
 
         if (key === "index.html") {
-            graph.push(boqCalculatorSchema(url));
+            graph.push(boqCalculatorSchema(url), faqSchema(url, key));
         }
 
         let schema = document.getElementById("gpspl-seo-jsonld");

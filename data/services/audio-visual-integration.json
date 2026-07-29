@@ -15,9 +15,9 @@
     "Inquiry Forms"
   ],
   "seo": {
-    "metaTitle": "Audio Visual Integration, Supply & Support | GPSPL",
-    "metaDescription": "GPSPL supplies, designs, integrates, commissions and supports enterprise audio visual systems for boardrooms, conference rooms, auditoriums, classrooms, command centers, hospitality, healthcare and government spaces.",
-    "keywords": "audio visual integration, AV integrator India, technology distribution, enterprise AV solutions, boardroom AV, professional audio systems, video conferencing integration, AV commissioning, GPSPL",
+    "metaTitle": "AV System Integrator in Delhi NCR & India | GPSPL",
+    "metaDescription": "GPSPL designs and integrates enterprise AV systems for meeting rooms, classrooms, auditoriums, LED walls, control rooms, installation and AMC.",
+    "keywords": "AV system integrator in Delhi NCR, audio visual integration company India, enterprise AV installation, conference room AV setup, boardroom AV integrator, AV commissioning, AV AMC support, GPSPL",
     "canonicalUrl": "https://gpspl.co.in/audio-visual-integration.html",
     "openGraphImage": "https://gpspl.co.in/assests/images/vision/conference-room-hero.jpg",
     "indexing": "index, follow",
@@ -25,9 +25,9 @@
     "slug": "audio-visual-integration"
   },
   "hero": {
-    "eyebrow": "Trusted Distribution + Enterprise AV Integration",
-    "title": "Audio Visual Integration Solutions",
-    "subtitle": "GPSPL supplies, designs, integrates, commissions and supports complete AV systems across boardrooms, conference rooms, classrooms, auditoriums, command centers, hospitality venues, healthcare facilities and enterprise campuses.",
+    "eyebrow": "AV System Integrator in Delhi NCR & India",
+    "title": "Audio Visual Integration for enterprise rooms and facilities",
+    "subtitle": "GPSPL designs, supplies, integrates, commissions and supports professional AV systems for conference rooms, boardrooms, classrooms, auditoriums, command centers, LED walls, signage zones and enterprise campuses.",
     "image": "assests/images/vision/conference-room-hero.jpg",
     "industryTags": [
       "Technology Supply",
@@ -53,32 +53,32 @@
     ],
     "ctaButtons": [
       {
-        "label": "Request AV Consultation",
-        "url": "/contact.html",
+        "label": "Build AV BOQ",
+        "url": "/index.html#av-boq-calculator",
         "style": "primary"
       },
       {
-        "label": "Download Company Profile",
-        "url": "/brochure.pdf",
+        "label": "Request Site Review",
+        "url": "/contact.html",
         "style": "secondary"
       }
     ],
     "partnerLogos": [
       {
         "name": "Harman",
-        "logo": "assests/images/patners/Harman.png"
+        "logo": "assests/images/patners/harman-logo.svg"
       },
       {
         "name": "Samsung",
-        "logo": "assests/images/patners/samsung.png"
+        "logo": "assests/images/patners/samsung-wordmark.svg"
       },
       {
         "name": "Sony",
-        "logo": "assests/images/patners/sony.png"
+        "logo": "assests/images/patners/sony-logo.svg"
       },
       {
         "name": "HP Poly",
-        "logo": "assests/images/patners/hpp.png"
+        "logo": "assests/images/patners/hp-poly-clean.png"
       },
       {
         "name": "Crestron",
@@ -91,8 +91,8 @@
     ]
   },
   "introduction": {
-    "heading": "GPSPL starts with technology supply, then designs, integrates and supports the complete AV environment",
-    "description": "GPSPL is a technology distribution and enterprise integration partner, not only an AV installer. We help organizations select the right products, study the site, create the AV architecture, integrate audio, video, displays, conferencing, control, automation, cabling, racks and IT readiness, then commission, train and support the system for dependable long-term use.",
+    "heading": "AV integration planned around the room, workflow and long-term support",
+    "description": "Good AV integration is not only buying a display, camera or speaker. A reliable system needs the right product selection, signal flow, microphone pickup, speaker coverage, display visibility, control logic, cabling, rack planning, network readiness, power backup, commissioning and user handover. GPSPL combines technology distribution with system integration so buyers can work with one team from product selection to installation and support.",
     "statistics": [
       {
         "value": "Supply",
@@ -133,64 +133,40 @@
   ],
   "serviceCards": [
     {
-      "icon": "fa-volume-up",
-      "title": "Professional Audio Systems",
-      "description": "Speakers, amplifiers, DSP, microphones, room tuning and speech-clarity planning for meeting rooms, auditoriums and public spaces.",
-      "url": "/professional-audio-solutions.html"
+      "icon": "fa-tv",
+      "title": "Displays, LED Walls & Projection",
+      "description": "Commercial displays, interactive panels, projectors, screens, active LED walls and video walls selected around viewing distance, brightness, content type and mounting condition.",
+      "url": "/active-led-wall-solutions.html"
     },
     {
       "icon": "fa-video",
       "title": "Video Conferencing & Collaboration",
-      "description": "Camera, microphone, speaker, codec, UC platform, wireless sharing and display workflows for hybrid meeting environments.",
-      "url": "/unified-communication-collaboration.html"
+      "description": "PTZ cameras, video bars, room PCs, codecs, BYOD workflows, Teams or Zoom rooms, camera presets and source workflows for hybrid meetings.",
+      "url": "/conference-room-solutions.html"
     },
     {
-      "icon": "fa-tv",
-      "title": "Commercial Displays & Interactive Panels",
-      "description": "Professional displays, interactive panels and presentation screens for boardrooms, classrooms, lobbies and collaboration zones.",
-      "url": "/interactive-display-solutions.html"
+      "icon": "fa-microphone",
+      "title": "Microphones & Voice Pickup",
+      "description": "Ceiling, table, wireless and boundary microphones planned around seating layout, ceiling height, room acoustics, audience participation and DSP channel requirement.",
+      "url": "/professional-audio-solutions.html"
     },
     {
-      "icon": "fa-th-large",
-      "title": "Video Wall & Active LED Integration",
-      "description": "Large-format display systems with source routing, controllers, structure coordination, calibration and operating workflow.",
-      "url": "/video-wall-solutions.html"
-    },
-    {
-      "icon": "fa-desktop",
-      "title": "Projectors & Presentation Systems",
-      "description": "Projectors, screens, switching, connectivity, table boxes and source management for training and presentation environments.",
-      "url": "/projector-accessories.html"
-    },
-    {
-      "icon": "fa-sliders-h",
-      "title": "DSP, Switching & Signal Flow",
-      "description": "Audio routing, AV switching, KVM, extension, source selection, presets and clean signal architecture.",
+      "icon": "fa-volume-high",
+      "title": "Speakers, DSP & Amplification",
+      "description": "Room audio designed for speech clarity, even coverage, clean gain structure, echo control, amplification headroom and commissioning-friendly tuning.",
       "url": "/audio-technologies.html"
     },
     {
       "icon": "fa-cogs",
-      "title": "Control & Automation Integration",
-      "description": "Room control experiences for displays, audio, video, lighting, conferencing, source selection and meeting-room operations.",
+      "title": "Control, Switching & Automation",
+      "description": "Touch panels, controllers, source switching, presets, room scheduler workflows and simple operating logic for meeting start, display source and audio control.",
       "url": "/control-automation.html"
     },
     {
       "icon": "fa-server",
-      "title": "Rack, Cabling & IT Readiness",
-      "description": "Rack planning, cable dressing, network readiness, power coordination, UPS integration and supportable infrastructure.",
+      "title": "Rack, Cabling, UPS & IT Readiness",
+      "description": "Rack layout, cable dressing, signal routing, network coordination, UPS sizing, power conditioning and service documentation for cleaner long-term ownership.",
       "url": "/it-infrastructure-solutions.html"
-    },
-    {
-      "icon": "fa-bullhorn",
-      "title": "Public Address & Paging",
-      "description": "Reliable PA, paging and background audio systems for campuses, institutions, hospitality and public environments.",
-      "url": "/professional-audio-solutions.html"
-    },
-    {
-      "icon": "fa-headset",
-      "title": "Commissioning, Training & AMC",
-      "description": "System testing, user training, documentation, warranty coordination and AMC support after deployment.",
-      "url": "/amc-maintenance-services.html"
     }
   ],
   "applications": [
@@ -208,13 +184,13 @@
   "partners": [
     {
       "name": "Harman Professional",
-      "logo": "assests/images/patners/Harman.png",
+      "logo": "assests/images/patners/harman-logo.svg",
       "category": "Professional AV system",
       "description": "Professional audio, installed systems, control and enterprise AV technologies for integrated environments."
     },
     {
       "name": "JBL Professional",
-      "logo": "assests/images/patners/jbl.svg",
+      "logo": "assests/images/patners/jbl-logo-clean.svg",
       "category": "Professional audio",
       "description": "Installed sound, loudspeaker systems and venue audio solutions for speech and performance clarity."
     },
@@ -226,31 +202,31 @@
     },
     {
       "name": "Samsung",
-      "logo": "assests/images/patners/samsung.png",
+      "logo": "assests/images/patners/samsung-wordmark.svg",
       "category": "Commercial displays",
       "description": "Professional display and visual communication systems for enterprise spaces."
     },
     {
       "name": "Sony",
-      "logo": "assests/images/patners/sony.png",
+      "logo": "assests/images/patners/sony-logo.svg",
       "category": "Displays and imaging",
       "description": "Professional display, imaging and camera technologies for meeting and presentation environments."
     },
     {
       "name": "HP Poly",
-      "logo": "assests/images/patners/hpp.png",
+      "logo": "assests/images/patners/hp-poly-clean.png",
       "category": "Unified collaboration",
       "description": "Meeting-room collaboration endpoints, cameras, audio devices and hybrid-work technology."
     },
     {
       "name": "Lumens",
-      "logo": "assests/images/patners/lumens.png",
+      "logo": "assests/images/patners/lumens-clean.png",
       "category": "Cameras and capture",
       "description": "PTZ cameras, lecture capture and visual communication products for rooms and learning spaces."
     },
     {
       "name": "Sennheiser",
-      "logo": "assests/images/patners/sennheiser.svg",
+      "logo": "assests/images/patners/sennheiser-wordmark.svg",
       "category": "Microphones and audio",
       "description": "Professional microphone and audio technologies for conferencing, education and presentation spaces."
     },
@@ -268,7 +244,7 @@
     },
     {
       "name": "BenQ",
-      "logo": "assests/images/patners/benq.svg",
+      "logo": "assests/images/patners/benq-logo.svg",
       "category": "Interactive displays",
       "description": "Interactive display and presentation technologies for meeting and learning environments."
     },
@@ -282,22 +258,20 @@
   "process": [
     "Requirement consultation and room workflow study",
     "Site survey, infrastructure and existing-system review",
-    "Product selection, procurement and compatibility planning",
-    "AV design, BOQ, signal flow and control architecture",
+    "AV design, BOQ, compatibility and budget direction",
+    "Product procurement and warranty coordination",
     "Installation, rack work, cabling and device integration",
     "Programming, configuration and source workflow setup",
     "Testing, calibration, commissioning and user acceptance",
     "Training, handover documentation and AMC support planning"
   ],
   "features": [
-    "Trusted distribution plus enterprise integration capability",
-    "Experienced engineering and deployment team",
-    "Brand portfolio and OEM warranty coordination",
-    "Custom AV designs for room purpose and user workflow",
-    "Pan-India project execution and support coordination",
-    "Rack, cabling, power and IT-readiness planning",
-    "Commissioning, documentation and user training",
-    "AMC, 48-72 hour support planning and planned maintenance"
+    "Avoids over-designed systems where cost-efficient products meet the technical requirement",
+    "Checks display size, microphone pickup, speaker coverage, rack, UPS and control before scope finalization",
+    "Improves support readiness through rack dressing, labels, cable paths, user training and handover notes",
+    "Keeps product supply, installation, commissioning and AMC connected through one accountable workflow",
+    "Plans AV systems around room purpose, user workflow, product compatibility and future serviceability",
+    "Coordinates commercial AV, audio, video, control, IT readiness and power backup requirements"
   ],
   "projects": [
     {
@@ -310,78 +284,88 @@
         "DSP",
         "Control"
       ],
-      "image": "assests/images/projects/gpspl-real/polished/corporate-conference-room.webp"
+      "image": "assests/images/projects/more-site-gallery/large-boardroom-av.jpeg"
     },
     {
-      "clientName": "Smart Campus AV Deployment",
-      "industry": "Education",
-      "solution": "Classroom and training-room AV with projection, interactive displays, microphones, lecture readiness and support planning.",
+      "clientName": "Training Room Display Deployment",
+      "industry": "Education & Training",
+      "solution": "Training-room AV with display visibility, instructor presentation workflow, room audio readiness and support planning.",
       "technologies": [
-        "Projection",
-        "Interactive panels",
+        "Commercial display",
+        "Presentation input",
         "Audio",
-        "Training"
+        "Training room"
       ],
-      "image": "assests/images/solutions/smartClassroom.png"
+      "image": "assests/images/projects/more-site-gallery/training-room-wide-display.jpeg"
     },
     {
-      "clientName": "Operations Display Environment",
-      "industry": "Command Center",
-      "solution": "Display wall, source management, control-room viewing, signal distribution and support readiness.",
+      "clientName": "Multi-Display AV Environment",
+      "industry": "Display Systems",
+      "solution": "Multi-display wall planning for room visibility, content routing, installation readiness and serviceable AV ownership.",
       "technologies": [
-        "Video wall",
-        "AV switching",
-        "Control",
+        "Displays",
+        "Source routing",
+        "Mounting",
         "Support"
       ],
-      "image": "assests/images/vision/connected-spaces-closing.webp"
+      "image": "assests/images/projects/more-site-gallery/multi-display-wall.jpeg"
     }
   ],
   "caseStudies": [
     {
-      "title": "Boardroom collaboration upgrade",
-      "challenge": "The client needed a simpler and more reliable meeting experience across presentation, audio, video, connectivity and control.",
-      "solution": "GPSPL aligned product supply with a unified AV design covering commercial display, conferencing audio, source switching, room control and user training.",
-      "implementation": "The system was supplied, installed, configured, tested, commissioned and handed over with documentation and support planning.",
-      "results": "Meetings became easier to start, audio clarity improved and the room became ready for hybrid collaboration with clearer service ownership."
+      "title": "Corporate boardroom collaboration upgrade",
+      "challenge": "The client needed easier meeting start, better audio pickup and a supportable hybrid collaboration workflow.",
+      "solution": "GPSPL planned display, camera, microphone, DSP, source selection, control and cabling as one room system.",
+      "implementation": "Products were supplied, installed, configured, tested and handed over with user guidance.",
+      "results": "The room became easier for users and clearer for IT and facility teams to support."
     },
     {
       "title": "Multi-space AV standardization",
-      "challenge": "Different rooms used different products and user flows, creating support complexity across the facility.",
-      "solution": "GPSPL created a standardized AV architecture for repeatable product procurement, installation, commissioning and support.",
-      "implementation": "Room types, devices, cabling, source workflows and support expectations were documented before deployment.",
-      "results": "The organization gained a scalable AV standard with easier maintenance, cleaner procurement and future expansion readiness."
+      "challenge": "Different rooms had inconsistent products, workflows and service expectations.",
+      "solution": "GPSPL mapped room categories and created repeatable AV standards for supply, installation and support.",
+      "implementation": "Room requirements, cable routing, rack needs and handover process were documented before deployment.",
+      "results": "The organization gained easier procurement, predictable user experience and better lifecycle support."
     }
   ],
   "gallery": {
     "categories": [
       "Boardrooms",
-      "Auditoriums",
-      "Video Walls",
-      "Control Rooms",
-      "Education",
-      "Healthcare"
+      "Meeting Rooms",
+      "Training Rooms",
+      "Installation",
+      "Video Conferencing",
+      "Display Systems"
     ],
     "images": [
       {
         "category": "Boardrooms",
-        "src": "assests/images/vision/conference-room-hero.jpg",
-        "caption": "Integrated meeting and collaboration space"
+        "src": "assests/images/projects/more-site-gallery/large-boardroom-av.jpeg",
+        "caption": "Boardroom table AV with display and collaboration workflow"
       },
       {
-        "category": "Video Walls",
-        "src": "assests/images/vision/roadmap-av-ecosystem.webp",
-        "caption": "Enterprise AV integration system"
+        "category": "Conference Rooms",
+        "src": "assests/images/projects/more-site-gallery/executive-meeting-video-call.jpeg",
+        "caption": "Executive video meeting display and conferencing setup"
       },
       {
-        "category": "Control Rooms",
-        "src": "assests/images/vision/connected-spaces-closing.webp",
-        "caption": "Operational technology environment"
+        "category": "Display Systems",
+        "src": "assests/images/projects/more-site-gallery/multi-display-wall.jpeg",
+        "caption": "Multi-display wall for room-wide communication"
       },
       {
         "category": "Education",
-        "src": "assests/images/solutions/smartClassroom.png",
-        "caption": "Smart classroom technology environment"
+        "src": "assests/images/projects/more-site-gallery/training-room-wide-display.jpeg",
+        "caption": "Training room display system with instructor visibility"
+      },
+      {
+        "category": "Installation",
+        "src": "assests/images/projects/more-site-gallery/executive-boardroom-display.jpeg",
+        "caption": "Executive room display placement and installation readiness"
+      },
+      {
+        "category": "Meeting Rooms",
+        "src": "assests/images/projects/more-site-gallery/executive-meeting-room-display.jpeg",
+        "caption": "Small meeting room display and collaboration setup"
       }
     ]
   },
@@ -409,77 +393,77 @@
   ],
   "faqs": [
     {
-      "question": "What is Audio Visual Integration?",
-      "answer": "Audio Visual Integration is the planning, engineering, installation, configuration, and support of audio, video, display, control, collaboration, and networking technologies as one reliable system."
+      "question": "What does an AV system integrator do?",
+      "answer": "An AV system integrator studies the room, user workflow, display requirement, audio requirement, camera framing, cabling, rack, control, network, power and support needs, then supplies, installs, configures, tests and hands over the complete system."
     },
     {
-      "question": "How long does implementation take?",
-      "answer": "Project timelines depend on room type, site readiness, product availability, integration complexity, and commissioning scope. GPSPL defines timelines after consultation and site assessment."
+      "question": "Does GPSPL provide product supply and installation both?",
+      "answer": "Yes. GPSPL supports product procurement, system design, installation, commissioning, user training, warranty coordination, AMC and after-sales support."
     },
     {
-      "question": "Does GPSPL only integrate AV systems?",
-      "answer": "No. GPSPL is a technology distribution and enterprise solutions partner that also provides AV system design, integration, installation, commissioning, training and support."
+      "question": "Can GPSPL design conference rooms and boardrooms?",
+      "answer": "Yes. GPSPL can plan displays, cameras, microphones, speakers, DSP, control processors, room schedulers, cabling, rack, UPS and installation scope for huddle rooms, meeting rooms, conference rooms and boardrooms."
     },
     {
-      "question": "Which brands do you support?",
-      "answer": "GPSPL works with a broad AV and enterprise technology portfolio including Harman Professional, JBL Professional, AMX, Samsung, Sony, HP Poly, Lumens, Sennheiser, Crestron, ATEN, BenQ, Epson and other project-specific technologies."
+      "question": "Can GPSPL prepare a BOQ before a site survey?",
+      "answer": "Yes. GPSPL can prepare a planning BOQ from room size, seating, workflow and selected preferences. The final BOQ and pricing are validated after site survey, equipment selection, mounting condition and cable route review."
     },
     {
-      "question": "Do you provide AMC services?",
-      "answer": "Yes. GPSPL can provide Annual Maintenance Contracts, preventive maintenance, support visits, warranty coordination and long-term service plans based on project requirements."
+      "question": "Does GPSPL provide AMC after installation?",
+      "answer": "Yes. AMC, preventive maintenance, technical support, warranty coordination and service planning can be included depending on project scope and client requirement."
     },
     {
-      "question": "Can GPSPL support Pan-India project execution?",
-      "answer": "Yes. GPSPL can coordinate standardized AV deployments across multiple locations depending on project scope, schedule, and service coverage."
+      "question": "Which areas does GPSPL serve?",
+      "answer": "GPSPL is based in New Delhi and supports AV, display, audio, collaboration, automation, IT infrastructure and AMC requirements across Delhi NCR and India depending on project scope."
     },
     {
-      "question": "How do you design AV solutions?",
-      "answer": "GPSPL starts with requirements, workflows, room conditions, user expectations, budget, product compatibility, future expansion needs and support expectations before engineering the final solution."
+      "question": "How long does AV implementation take?",
+      "answer": "Project timelines depend on room type, site readiness, product availability, installation complexity and commissioning scope. GPSPL defines the timeline after consultation and site assessment."
     },
     {
-      "question": "Can GPSPL supply the products and integrate them too?",
-      "answer": "Yes. GPSPL can support product procurement, solution design, installation, integration, commissioning, user training and AMC under one accountable delivery model."
+      "question": "Can GPSPL work with existing AV or IT infrastructure?",
+      "answer": "Yes. GPSPL can assess existing displays, audio, network, rack, power and cabling, then recommend what can be reused, upgraded or replaced for reliable performance."
     }
   ],
   "relatedServices": [
     {
-      "title": "Unified Communication & Collaboration",
-      "url": "/unified-communication-collaboration.html"
+      "title": "Conference Room Solutions",
+      "url": "/conference-room-solutions.html"
     },
     {
-      "title": "Video Wall Solutions",
-      "url": "/video-wall-solutions.html"
+      "title": "Professional Audio Systems",
+      "url": "/professional-audio-solutions.html"
     },
     {
-      "title": "Active LED Wall Installation",
-      "url": "/active-led-wall-installation.html"
+      "title": "Active LED Wall Solutions",
+      "url": "/active-led-wall-solutions.html"
     },
     {
-      "title": "Digital Signage Solutions",
-      "url": "/digital-signage-solutions.html"
-    },
-    {
-      "title": "Automation & Lighting Systems",
+      "title": "Control & Automation",
       "url": "/control-automation.html"
     },
     {
-      "title": "Smart Building Integration",
-      "url": "/control-automation.html"
+      "title": "AMC & Maintenance",
+      "url": "/amc-maintenance-services.html"
+    },
+    {
+      "title": "AV BOQ Calculator",
+      "url": "/index.html#av-boq-calculator"
     }
   ],
   "cta": {
     "headline": "Need a complete AV solution from supply to support?",
-    "subheading": "Share your room type, site photos, required workflow, preferred brands and support expectations. GPSPL will help plan product supply, AV design, integration, commissioning and AMC.",
+    "subheading": "Share room type, room size, seating, site photos, preferred workflow, preferred brands and support expectations. GPSPL will help prepare the design direction, BOQ, installation scope and formal quotation after validation.",
     "backgroundImage": "assests/images/vision/gpspl-leadership-quote-bg.webp",
     "buttons": [
       {
-        "label": "Request AV Consultation",
-        "url": "/contact.html",
+        "label": "Build AV BOQ",
+        "url": "/index.html#av-boq-calculator",
         "style": "primary"
       },
       {
-        "label": "Download Company Profile",
-        "url": "/brochure.pdf",
+        "label": "Request AV Consultation",
+        "url": "/contact.html",
         "style": "secondary"
       }
     ]

@@ -72,23 +72,23 @@
     "partnerLogos": [
       {
         "name": "Sony",
-        "logo": "assests/images/patners/sony.png"
+        "logo": "assests/images/patners/sony-logo.svg"
       },
       {
         "name": "Lumens",
-        "logo": "assests/images/patners/lumens.png"
+        "logo": "assests/images/patners/lumens-clean.png"
       },
       {
         "name": "HP Poly",
-        "logo": "assests/images/patners/hpp.png"
+        "logo": "assests/images/patners/hp-poly-clean.png"
       },
       {
         "name": "Samsung",
-        "logo": "assests/images/patners/samsung.png"
+        "logo": "assests/images/patners/samsung-wordmark.svg"
       },
       {
         "name": "BenQ",
-        "logo": "assests/images/patners/benq.svg"
+        "logo": "assests/images/patners/benq-logo.svg"
       },
       {
         "name": "Epson",
@@ -212,37 +212,37 @@
   "partners": [
     {
       "name": "Sony",
-      "logo": "assests/images/patners/sony.png",
+      "logo": "assests/images/patners/sony-logo.svg",
       "category": "Professional cameras, projectors, displays and microphones",
       "description": "Brochure-backed professional camera, projector, display and microphone systems for AV and collaboration environments."
     },
     {
       "name": "Lumens",
-      "logo": "assests/images/patners/lumens.png",
+      "logo": "assests/images/patners/lumens-clean.png",
       "category": "PTZ cameras and lecture capture",
       "description": "Professional PTZ camera and lecture capture systems for education, healthcare and enterprise communication spaces."
     },
     {
       "name": "HP Poly",
-      "logo": "assests/images/patners/hpp.png",
+      "logo": "assests/images/patners/hp-poly-clean.png",
       "category": "Video collaboration and room systems",
       "description": "Video bars, cameras, audio devices and meeting-room collaboration technologies for hybrid work environments."
     },
     {
       "name": "Samsung",
-      "logo": "assests/images/patners/samsung.png",
+      "logo": "assests/images/patners/samsung-wordmark.svg",
       "category": "Commercial displays and signage",
       "description": "Commercial displays, LFD, signage and visual communication platforms for enterprise, education and public-facing spaces."
     },
     {
       "name": "LG Business Solutions",
-      "logo": "assests/images/patners/lgb.png",
+      "logo": "assests/images/patners/lg-electronics-modern.svg",
       "category": "Regional authorized distributor for commercial displays, signage and active LED",
       "description": "LG commercial display, digital signage, video wall and active LED solutions supplied for enterprise, hospitality, education and public-space projects."
     },
     {
       "name": "BenQ",
-      "logo": "assests/images/patners/benq.svg",
+      "logo": "assests/images/patners/benq-logo.svg",
       "category": "Signage, projectors and interactive displays",
       "description": "Digital signage, projectors, interactive displays and professional monitors for visual communication and collaboration."
     },
@@ -266,7 +266,7 @@
     },
     {
       "name": "Absen",
-      "logo": "assests/images/patners/absen.png",
+      "logo": "assests/images/patners/absen-wordmark-clean.png",
       "category": "Active LED display technology",
       "description": "Active LED display technology for command centers, auditoriums, lobbies, retail spaces and public environments."
     },

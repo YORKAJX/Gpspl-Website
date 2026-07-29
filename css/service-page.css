@@ -2652,6 +2652,169 @@ main .service-proof-band * {
     }
 }
 
+/* Premium GPSPL trust section */
+.service-page .service-features {
+    position: relative !important;
+    overflow: hidden !important;
+    background:
+        linear-gradient(135deg, rgba(6, 18, 34, 0.96) 0%, rgba(10, 30, 54, 0.94) 54%, rgba(15, 23, 42, 0.98) 100%),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 92px),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 92px) !important;
+    color: #ffffff !important;
+}
+
+.service-page .service-features::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(211, 47, 47, 0.22), transparent 28%),
+        radial-gradient(circle at 88% 22%, rgba(59, 130, 246, 0.18), transparent 30%) !important;
+    pointer-events: none !important;
+}
+
+.service-page .service-features .container {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.service-page .service-features .service-section-heading {
+    max-width: 920px !important;
+    margin-inline: auto !important;
+}
+
+.service-page .service-features .service-section-heading .service-eyebrow {
+    color: #ff5757 !important;
+}
+
+.service-page .service-features .service-section-heading h2 {
+    color: #ffffff !important;
+    font-size: clamp(2.65rem, 5vw, 5.2rem) !important;
+    line-height: 0.98 !important;
+    letter-spacing: 0 !important;
+}
+
+.service-page .service-features .service-section-heading p {
+    max-width: 740px !important;
+    margin-inline: auto !important;
+    color: rgba(236, 244, 255, 0.78) !important;
+    font-size: clamp(1rem, 1.3vw, 1.18rem) !important;
+}
+
+.service-page .service-feature-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    max-width: 1180px !important;
+    margin: 42px auto 0 !important;
+}
+
+.service-page .service-feature-grid article {
+    position: relative !important;
+    min-height: 265px !important;
+    overflow: hidden !important;
+    padding: 28px !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: 18px !important;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.045)),
+        rgba(15, 30, 52, 0.72) !important;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22) !important;
+    color: #ffffff !important;
+    backdrop-filter: blur(14px) !important;
+}
+
+.service-page .service-feature-grid article::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 auto 0 0 !important;
+    width: 4px !important;
+    background: linear-gradient(180deg, #ef3434, rgba(239, 52, 52, 0.12)) !important;
+}
+
+.service-page .service-feature-grid article::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: auto -28px -42px auto !important;
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.service-page .service-feature-grid article > span {
+    display: inline-flex !important;
+    min-height: 30px !important;
+    align-items: center !important;
+    margin-bottom: 18px !important;
+    padding: 0 11px !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    border-radius: 999px !important;
+    color: rgba(255, 255, 255, 0.74) !important;
+    font-size: 0.72rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.08em !important;
+}
+
+.service-page .service-feature-grid i {
+    position: absolute !important;
+    top: 24px !important;
+    right: 24px !important;
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 !important;
+    border-radius: 14px !important;
+    background: #ef3434 !important;
+    color: #ffffff !important;
+    box-shadow: 0 18px 36px rgba(239, 52, 52, 0.28) !important;
+}
+
+.service-page .service-feature-grid h3 {
+    max-width: 78% !important;
+    margin: 0 0 14px !important;
+    color: #ffffff !important;
+    font-size: clamp(1.25rem, 1.55vw, 1.55rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: 0 !important;
+}
+
+.service-page .service-feature-grid p {
+    margin: 0 !important;
+    color: rgba(236, 244, 255, 0.74) !important;
+    font-size: 0.98rem !important;
+    line-height: 1.66 !important;
+}
+
+@media (max-width: 1080px) {
+    .service-page .service-feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 680px) {
+    .service-page .service-features {
+        padding-block: 64px !important;
+    }
+
+    .service-page .service-features .service-section-heading h2 {
+        font-size: clamp(2.25rem, 12vw, 3.35rem) !important;
+    }
+
+    .service-page .service-feature-grid {
+        grid-template-columns: 1fr !important;
+        margin-top: 30px !important;
+    }
+
+    .service-page .service-feature-grid article {
+        min-height: 0 !important;
+        padding: 22px !important;
+    }
+
+    .service-page .service-feature-grid i {
+        width: 44px !important;
+        height: 44px !important;
+    }
+}
+
 /* QA EOF override: this must remain at the end */
 .service-page .service-planning-checklist li,
 .service-page .service-rfq-card li {

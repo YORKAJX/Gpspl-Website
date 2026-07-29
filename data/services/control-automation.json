@@ -80,19 +80,19 @@
       },
       {
         "name": "Harman Professional",
-        "logo": "assests/images/patners/Harman.png"
+        "logo": "assests/images/patners/harman-logo.svg"
       },
       {
         "name": "Samsung",
-        "logo": "assests/images/patners/samsung.png"
+        "logo": "assests/images/patners/samsung-wordmark.svg"
       },
       {
         "name": "Sony",
-        "logo": "assests/images/patners/sony.png"
+        "logo": "assests/images/patners/sony-logo.svg"
       },
       {
         "name": "HP Poly",
-        "logo": "assests/images/patners/hpp.png"
+        "logo": "assests/images/patners/hp-poly-clean.png"
       }
     ]
   },
@@ -246,31 +246,31 @@
     },
     {
       "name": "Harman Professional",
-      "logo": "assests/images/patners/Harman.png",
+      "logo": "assests/images/patners/harman-logo.svg",
       "category": "Professional AV system",
       "description": "Professional AV and installed systems used across integrated enterprise environments."
     },
     {
       "name": "Samsung",
-      "logo": "assests/images/patners/samsung.png",
+      "logo": "assests/images/patners/samsung-wordmark.svg",
       "category": "Commercial displays",
       "description": "Display systems that integrate with room control and source workflows."
     },
     {
       "name": "Sony",
-      "logo": "assests/images/patners/sony.png",
+      "logo": "assests/images/patners/sony-logo.svg",
       "category": "Displays and imaging",
       "description": "Professional display and imaging technology for controlled presentation and meeting rooms."
     },
     {
       "name": "HP Poly",
-      "logo": "assests/images/patners/hpp.png",
+      "logo": "assests/images/patners/hp-poly-clean.png",
       "category": "Unified collaboration",
       "description": "Collaboration devices that connect into controlled room workflows."
     },
     {
       "name": "BenQ",
-      "logo": "assests/images/patners/benq.svg",
+      "logo": "assests/images/patners/benq-logo.svg",
       "category": "Interactive displays",
       "description": "Interactive display environments for meeting and learning spaces."
     }
