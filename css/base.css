@@ -16162,7 +16162,7 @@ body:has(#home.hero) .seo-intent-section .seo-intent-grid a:hover,
 /* HOME VISUAL RHYTHM LOCK 2026-07-30: open, premium headers with usable width and no squeezed copy. */
 body:has(#home.hero) :is(
     .hero-message-section,
-    .operating-model,
+
     .why-gpspl,
     .featured-products,
     .strategic-partners,
@@ -17126,7 +17126,7 @@ body:has(#home.hero) .product-heading-copy .product-capability-strip {
 /* HOME HEADER COMPOSITION RESET 2026-07-30: use open enterprise headers like the trust section, not squeezed cards. */
 body:has(#home.hero) :is(
     .hero-message-section,
-    .operating-model,
+
     .why-gpspl,
     .featured-products,
     .strategic-partners,
@@ -29692,7 +29692,6 @@ html body .product-rfq-grid article::after {
 /* HOME READABILITY + PREMIUM RHYTHM REPAIR 2026-08-03 */
 html body:has(#home.hero) :is(
     .featured-products,
-    .operating-model,
     .strategic-partners,
     .home-case-study-preview
 ) {
@@ -30170,7 +30169,7 @@ html body:has(#home.hero) :is(
 }
 
 html body:has(#home.hero) :is(
-    .operating-model,
+
     .featured-products,
     .strategic-partners,
     .home-case-study-preview
