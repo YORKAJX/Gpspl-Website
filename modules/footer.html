@@ -157,3 +157,58 @@
         <span>WhatsApp</span>
     </a>
 </div>
+
+<!-- ====== COOKIE CONSENT BANNER ====== -->
+<div id="gpspl-cookie-banner" class="gpspl-cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent notice" style="display:none;">
+    <div class="gpspl-cookie-inner">
+        <div class="gpspl-cookie-left">
+            <div class="gpspl-cookie-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="gpspl-cookie-text">
+                <strong>This website uses cookies</strong>
+                <p>We use cookies to analyze traffic and improve your experience on gpspl.co.in. By clicking <em>Allow All Cookies</em>, you consent to our use of cookies. <a href="/privacy-policy.html">Privacy Policy</a></p>
+            </div>
+        </div>
+        <div class="gpspl-cookie-actions">
+            <button id="gpspl-cookie-customize" class="gpspl-cookie-btn gpspl-cookie-btn-outline" aria-label="Customize cookie settings">Customize</button>
+            <button id="gpspl-cookie-accept" class="gpspl-cookie-btn gpspl-cookie-btn-primary" aria-label="Accept all cookies">Allow All Cookies</button>
+        </div>
+    </div>
+</div>
+
+<style>
+.gpspl-cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:99999;background:linear-gradient(135deg,rgba(7,21,38,.98) 0%,rgba(15,40,72,.98) 100%);border-top:1px solid rgba(239,59,63,.35);box-shadow:0 -8px 40px rgba(0,0,0,.55);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:18px 28px;animation:gpspl-slide-up .5s cubic-bezier(.16,1,.3,1) both}
+@keyframes gpspl-slide-up{from{transform:translateY(110%);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes gpspl-slide-down{from{transform:translateY(0);opacity:1}to{transform:translateY(110%);opacity:0}}
+.gpspl-cookie-inner{display:flex;align-items:center;gap:24px;max-width:1320px;margin:0 auto;flex-wrap:wrap}
+.gpspl-cookie-left{display:flex;align-items:flex-start;gap:16px;flex:1;min-width:260px}
+.gpspl-cookie-icon{flex-shrink:0;width:44px;height:44px;border-radius:12px;background:rgba(239,59,63,.14);display:grid;place-items:center;color:#ef3b3f;font-size:1.15rem;border:1px solid rgba(239,59,63,.22)}
+.gpspl-cookie-text strong{display:block;color:#fff;font-size:.97rem;font-weight:700;margin-bottom:4px}
+.gpspl-cookie-text p{color:rgba(220,232,248,.78);font-size:.84rem;line-height:1.55;margin:0}
+.gpspl-cookie-text p a{color:#ef3b3f;text-decoration:underline;text-underline-offset:2px}
+.gpspl-cookie-actions{display:flex;gap:12px;align-items:center;flex-shrink:0;flex-wrap:wrap}
+.gpspl-cookie-btn{padding:10px 22px;border-radius:8px;font-size:.88rem;font-weight:700;cursor:pointer;border:none;transition:all .22s ease;white-space:nowrap;font-family:inherit;letter-spacing:.02em}
+.gpspl-cookie-btn-outline{background:transparent;border:1px solid rgba(255,255,255,.22);color:rgba(220,232,248,.88)}
+.gpspl-cookie-btn-outline:hover{border-color:rgba(255,255,255,.5);color:#fff;background:rgba(255,255,255,.06)}
+.gpspl-cookie-btn-primary{background:linear-gradient(135deg,#ef3b3f 0%,#c62828 100%);color:#fff;box-shadow:0 4px 18px rgba(239,59,63,.35)}
+.gpspl-cookie-btn-primary:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(239,59,63,.5)}
+@media(max-width:640px){.gpspl-cookie-banner{padding:16px 16px 20px}.gpspl-cookie-inner{flex-direction:column;gap:16px}.gpspl-cookie-actions{width:100%}.gpspl-cookie-btn{flex:1;text-align:center;padding:12px 14px}}
+</style>
+
+<script>
+(function(){
+    var KEY='gpspl_cookie_consent';
+    var banner=document.getElementById('gpspl-cookie-banner');
+    var btnAccept=document.getElementById('gpspl-cookie-accept');
+    var btnCustomize=document.getElementById('gpspl-cookie-customize');
+    function setCookie(n,v,d){var e=new Date();e.setTime(e.getTime()+(d*864e5));document.cookie=n+'='+v+';expires='+e.toUTCString()+';path=/;SameSite=Lax'}
+    function getCookie(n){var m=document.cookie.match('(^|;)\\s*'+n+'\\s*=\\s*([^;]+)');return m?m.pop():''}
+    function hideBanner(){if(banner){banner.style.animation='gpspl-slide-down .4s ease forwards';setTimeout(function(){banner.style.display='none'},420)}}
+    function showBanner(){if(banner){banner.style.display='block'}}
+    if(!getCookie(KEY)){
+        if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',showBanner)}
+        else{showBanner()}
+    }
+    if(btnAccept){btnAccept.addEventListener('click',function(){setCookie(KEY,'accepted',365);hideBanner()})}
+    if(btnCustomize){btnCustomize.addEventListener('click',function(){setCookie(KEY,'essential',365);hideBanner()})}
+})();
+</script>
