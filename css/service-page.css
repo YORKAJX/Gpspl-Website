@@ -2425,6 +2425,197 @@ body.service-detail-template main.service-page {
     padding: clamp(112px, 10vw, 138px) 0 clamp(72px, 7vw, 94px);
 }
 
+/* Final service and solution page readability lock - 2026-08-03 */
+html body.service-detail-template .service-page .service-hero,
+html body .solution-page-hero {
+  min-height: auto !important;
+  padding: clamp(120px, 12vw, 180px) 0 clamp(78px, 8vw, 118px) !important;
+  overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page .service-hero-grid,
+html body.service-detail-template .service-page :is(.service-hero .container, .service-detail-hero .container),
+html body .solution-page-hero .container {
+  width: min(1500px, calc(100% - 72px)) !important;
+  max-width: 1500px !important;
+  margin-inline: auto !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 560px) !important;
+  gap: clamp(42px, 6vw, 104px) !important;
+  align-items: center !important;
+}
+
+html body.service-detail-template .service-page .service-hero h1,
+html body .solution-page-hero h1 {
+  max-width: 920px !important;
+  color: #ffffff !important;
+  font-size: clamp(3.7rem, 6.1vw, 7.1rem) !important;
+  line-height: .96 !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  hyphens: none !important;
+  text-wrap: balance;
+}
+
+html body.service-detail-template .service-page .service-hero p,
+html body .solution-page-hero p {
+  max-width: 780px !important;
+  color: #e5edf7 !important;
+  line-height: 1.72 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel),
+html body .solution-page-hero :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel, .solution-hero-panel, .hero-card) {
+  max-width: 560px !important;
+  max-height: none !important;
+  overflow: visible !important;
+  background: linear-gradient(145deg, rgba(8, 22, 40, .96), rgba(31, 47, 70, .92)) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, .20) !important;
+  border-left: 5px solid #e1272d !important;
+  border-radius: 26px !important;
+  box-shadow: 0 32px 90px rgba(0, 0, 0, .32) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) :is(h2, h3, h4, p, li, span, strong, small),
+html body .solution-page-hero :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel, .solution-hero-panel, .hero-card) :is(h2, h3, h4, p, li, span, strong, small) {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) :is(.service-trust-grid, .hero-proof-list, .proof-list),
+html body .solution-page-hero :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel, .solution-hero-panel, .hero-card) :is(.service-trust-grid, .hero-proof-list, .proof-list) {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) :is(.service-trust-grid, .hero-proof-list, .proof-list) > :is(div, article, li),
+html body .solution-page-hero :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel, .solution-hero-panel, .hero-card) :is(.service-trust-grid, .hero-proof-list, .proof-list) > :is(div, article, li) {
+  padding: 16px 18px !important;
+  background: rgba(255, 255, 255, .08) !important;
+  border: 1px solid rgba(255, 255, 255, .16) !important;
+  border-radius: 16px !important;
+  color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) :is(.brand-pill, .logo-pill, .partner-logo, .brand-logo, .service-logo-strip span),
+html body .solution-page-hero :is(.brand-pill, .logo-pill, .partner-logo, .brand-logo, .service-logo-strip span) {
+  background: #ffffff !important;
+  color: #071426 !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) img,
+html body .solution-page-hero :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel, .solution-hero-panel, .hero-card) img {
+  max-height: 54px !important;
+  object-fit: contain !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card, .service-check-card, .service-capability-card, .service-proof-card, .service-planning-card, .product-rfq-grid article, .planning-guide-card, .quality-card, .timeline-card),
+html body :is(.solution-card, .solution-feature-card, .solution-proof-card, .solution-step-card) {
+  background: linear-gradient(145deg, #ffffff, #f7fafd) !important;
+  border: 1px solid rgba(10, 35, 62, .12) !important;
+  border-top: 4px solid #e1272d !important;
+  border-radius: 20px !important;
+  color: #071426 !important;
+  box-shadow: 0 20px 54px rgba(8, 24, 44, .09) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card, .service-check-card, .service-capability-card, .service-proof-card, .service-planning-card, .product-rfq-grid article, .planning-guide-card, .quality-card, .timeline-card) :is(h2, h3, h4, strong),
+html body :is(.solution-card, .solution-feature-card, .solution-proof-card, .solution-step-card) :is(h2, h3, h4, strong) {
+  color: #071426 !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card, .service-check-card, .service-capability-card, .service-proof-card, .service-planning-card, .product-rfq-grid article, .planning-guide-card, .quality-card, .timeline-card) :is(p, li, span),
+html body :is(.solution-card, .solution-feature-card, .solution-proof-card, .solution-step-card) :is(p, li, span) {
+  color: #506782 !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.icon-wrap, .card-icon, .service-icon, .feature-icon),
+html body :is(.solution-card, .solution-feature-card, .solution-proof-card, .solution-step-card) :is(.icon-wrap, .card-icon, .service-icon, .feature-icon) {
+  background: linear-gradient(135deg, #e1272d, #ff5b45) !important;
+  color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card, .service-check-card, .service-capability-card, .service-proof-card, .service-planning-card, .product-rfq-grid article, .planning-guide-card, .quality-card, .timeline-card) :is(i, svg, .icon, .card-icon, .service-icon, .feature-icon),
+html body :is(.solution-card, .solution-feature-card, .solution-proof-card, .solution-step-card) :is(i, svg, .icon, .card-icon, .service-icon, .feature-icon) {
+  color: #ffffff !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section, .service-cta) {
+  background:
+    radial-gradient(circle at 100% 0, rgba(225, 39, 45, .17), transparent 33%),
+    linear-gradient(135deg, #071426, #12375e 58%, #271d3b) !important;
+  color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section, .service-cta) :is(h1, h2, h3, h4, p, li, span, strong, a) {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-panel {
+  padding: clamp(38px, 5vw, 72px) !important;
+  background: rgba(255, 255, 255, .07) !important;
+  border: 1px solid rgba(255, 255, 255, .16) !important;
+  border-radius: 28px !important;
+}
+
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-grid a {
+  background: rgba(255, 255, 255, .09) !important;
+  border: 1px solid rgba(255, 255, 255, .17) !important;
+  color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page .service-cta .container {
+  padding: clamp(36px, 5vw, 70px) !important;
+  background: rgba(7, 20, 38, .84) !important;
+  border: 1px solid rgba(255, 255, 255, .18) !important;
+  border-radius: 28px !important;
+}
+
+html body.service-detail-template .service-page :is(.service-btn, .btn-primary) {
+  background: #e1272d !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.btn-secondary, .btn-outline, .service-hero-actions a:not(.service-btn)) {
+  background: #ffffff !important;
+  color: #071426 !important;
+  border-color: rgba(255, 255, 255, .65) !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 980px) {
+  html body.service-detail-template .service-page .service-hero-grid,
+  html body.service-detail-template .service-page :is(.service-hero .container, .service-detail-hero .container),
+  html body .solution-page-hero .container {
+    width: calc(100% - 32px) !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  html body.service-detail-template .service-page .service-hero h1,
+  html body .solution-page-hero h1 {
+    max-width: 100% !important;
+    font-size: clamp(2.7rem, 11vw, 4.6rem) !important;
+  }
+
+  html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel),
+  html body .solution-page-hero :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel, .solution-hero-panel, .hero-card) {
+    max-width: none !important;
+  }
+}
+
 /* Final service-page stabilization: keeps repeated AV/IT layouts readable and aligned. */
 main .service-section-heading,
 main .service-section-heading *,
@@ -2649,6 +2840,113 @@ main .service-proof-band * {
     .partner-tech-page .partner-tech-procurement-grid,
     .partner-tech-page .partner-tech-procurement-grid article {
         grid-template-columns: 1fr;
+    }
+}
+
+/* URGENT SERVICE READABILITY LOCK 2026-08-03
+   Direct children in CTA/hero/planning sections must never become skinny text
+   columns. This keeps service pages premium without changing page content. */
+html body.service-detail-template .service-page .service-hero {
+    min-height: auto !important;
+    padding-block: clamp(92px, 9vw, 142px) !important;
+}
+
+html body.service-detail-template .service-page .service-hero-grid {
+    width: min(calc(100% - 64px), 1500px) !important;
+    max-width: 1500px !important;
+    grid-template-columns: minmax(0, 0.98fr) minmax(380px, 520px) !important;
+    gap: clamp(40px, 5vw, 86px) !important;
+    align-items: center !important;
+}
+
+html body.service-detail-template .service-page .service-hero h1 {
+    max-width: 900px !important;
+    font-size: clamp(3.25rem, 5.4vw, 6.25rem) !important;
+    line-height: 1.02 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel {
+    width: min(100%, 520px) !important;
+    max-width: 520px !important;
+    justify-self: end !important;
+    overflow: visible !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel article {
+    grid-template-columns: minmax(86px, 110px) minmax(0, 1fr) !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel img {
+    max-width: 100% !important;
+    height: 48px !important;
+    object-fit: contain !important;
+}
+
+html body.service-detail-template .service-page .service-cta .container {
+    display: block !important;
+    width: min(calc(100% - 64px), 1180px) !important;
+    max-width: 1180px !important;
+}
+
+html body.service-detail-template .service-page .service-cta .service-eyebrow,
+html body.service-detail-template .service-page .service-cta h2,
+html body.service-detail-template .service-page .service-cta p,
+html body.service-detail-template .service-page .service-cta .service-hero-actions {
+    width: 100% !important;
+    max-width: 900px !important;
+}
+
+html body.service-detail-template .service-page .service-cta h2 {
+    font-size: clamp(2.85rem, 4.7vw, 5.5rem) !important;
+}
+
+html body.service-detail-template .service-page .service-planning-grid {
+    align-items: stretch !important;
+}
+
+html body.service-detail-template .service-page .service-planning-story,
+html body.service-detail-template .service-page .service-planning-checklist,
+html body.service-detail-template .service-page .service-rfq-card {
+    min-height: 0 !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+}
+
+html body.service-detail-template .service-page .service-rfq-card .service-btn {
+    margin-top: auto !important;
+}
+
+html body.service-detail-template .service-page .service-timeline article {
+    min-height: 190px !important;
+}
+
+@media (max-width: 1180px) {
+    html body.service-detail-template .service-page .service-hero-grid {
+        width: min(calc(100% - 44px), 980px) !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    html body.service-detail-template .service-page .service-hero-panel {
+        justify-self: stretch !important;
+        max-width: none !important;
+    }
+}
+
+@media (max-width: 760px) {
+    html body.service-detail-template .service-page .service-hero-grid,
+    html body.service-detail-template .service-page .service-cta .container {
+        width: min(calc(100% - 28px), 560px) !important;
+    }
+
+    html body.service-detail-template .service-page .service-hero h1,
+    html body.service-detail-template .service-page .service-cta h2 {
+        font-size: clamp(2.45rem, 12vw, 3.65rem) !important;
+        line-height: 1.06 !important;
     }
 }
 
@@ -2936,6 +3234,270 @@ main .service-proof-band * {
     .service-page .service-card-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     }
+}
+
+/* Visual integrity lock: shared solution page sections must retain usable contrast. */
+html body.service-detail-template .service-page :is(
+  .service-role-section,
+  .service-rfq-section,
+  .service-planning-section,
+  .service-capabilities-section,
+  .service-light-section
+) {
+  background: #f5f8fc !important;
+  color: #0b1d35 !important;
+}
+
+html body.service-detail-template .service-page :is(
+  .service-search-intent,
+  .service-seo-intent,
+  .seo-intent-section,
+  .service-dark-band,
+  .service-proof-dark,
+  .service-final-dark,
+  .service-procurement,
+  .service-decision-section,
+  .solution-paths-dark,
+  .dark-feature-section
+) {
+  background: linear-gradient(118deg, #071b33 0%, #123b67 58%, #342a42 100%) !important;
+  color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(
+  .service-role-card,
+  .service-role-panel,
+  .service-rfq-card,
+  .service-planning-card,
+  .service-capability-card,
+  .seo-intent-grid a,
+  .service-intent-grid a
+) {
+  background: #ffffff !important;
+  color: #0b1d35 !important;
+  border-color: #d8e1ec !important;
+}
+
+html body.service-detail-template .service-page :is(
+  .service-role-section,
+  .service-rfq-section,
+  .service-planning-section,
+  .service-capabilities-section,
+  .service-light-section,
+  .service-role-card,
+  .service-role-panel,
+  .service-rfq-card,
+  .service-planning-card,
+  .service-capability-card,
+  .seo-intent-grid a,
+  .service-intent-grid a
+) :is(h1, h2, h3, h4, p, li, span, strong) {
+  color: inherit !important;
+}
+
+html body.service-detail-template .service-page :is(
+  .icon-wrap, .card-icon, .service-icon, .feature-icon, .solution-icon, .metric-icon
+) {
+  display: inline-grid !important;
+  place-items: center !important;
+  color: #ffffff !important;
+  background: #e3292f !important;
+}
+
+html body.service-detail-template .service-page :is(
+  .icon-wrap, .card-icon, .service-icon, .feature-icon, .solution-icon, .metric-icon
+) :is(i, svg) {
+  color: #ffffff !important;
+  stroke: currentColor !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+html body.service-detail-template .service-page :is(
+  .service-hero h1, .service-detail-hero h1, .solution-page-hero h1,
+  .service-search-intent h2, .service-seo-intent h2, .seo-intent-section h2
+) {
+  max-width: 14ch !important;
+  font-size: clamp(2.6rem, 4.55vw, 5rem) !important;
+  line-height: 1.02 !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+@media (min-width: 1101px) {
+  html body.service-detail-template .service-page :is(
+    .service-hero-grid, .service-hero-inner, .service-split, .service-intro-grid, .service-cta-grid
+  ) {
+    grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr) !important;
+    gap: clamp(2rem, 5vw, 5.5rem) !important;
+    align-items: center !important;
+  }
+}
+
+/* Visual integrity lock: keep shared solution-page modules readable and proportionate. */
+html body.service-detail-template .service-page :is(
+  .service-role-section,
+  .service-rfq-section,
+  .service-planning-section,
+  .service-capabilities-section,
+  .service-light-section
+) {
+  background: #f5f8fc !important;
+  color: #0b1d35 !important;
+}
+
+html body.service-detail-template .service-page :is(
+  .service-role-section,
+  .service-rfq-section,
+  .service-planning-section,
+  .service-capabilities-section,
+  .service-light-section
+) :is(h1, h2, h3, h4, p, li, a, span, strong) {
+  color: inherit !important;
+}
+
+html body.service-detail-template .service-page :is(
+  .service-search-intent,
+  .service-seo-intent,
+  .seo-intent-section,
+  .service-dark-band,
+  .service-proof-dark,
+  .service-final-dark,
+  .service-procurement,
+  .service-decision-section,
+  .solution-paths-dark,
+  .dark-feature-section
+) {
+  background: linear-gradient(118deg, #071b33 0%, #123b67 58%, #342a42 100%) !important;
+  color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(
+  .service-search-intent,
+  .service-seo-intent,
+  .seo-intent-section,
+  .service-dark-band,
+  .service-proof-dark,
+  .service-final-dark,
+  .service-procurement,
+  .service-decision-section,
+  .solution-paths-dark,
+  .dark-feature-section
+) > .container :is(h1, h2, h3, h4, p, li, a, span, strong) {
+  color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(
+  .service-role-card,
+  .service-role-panel,
+  .service-rfq-card,
+  .service-planning-card,
+  .service-capability-card,
+  .seo-intent-grid a,
+  .service-intent-grid a
+) {
+  background: #ffffff !important;
+  color: #0b1d35 !important;
+  border-color: #d8e1ec !important;
+}
+
+html body.service-detail-template .service-page :is(
+  .service-role-card,
+  .service-role-panel,
+  .service-rfq-card,
+  .service-planning-card,
+  .service-capability-card,
+  .seo-intent-grid a,
+  .service-intent-grid a
+) :is(h1, h2, h3, h4, p, li, span, strong) {
+  color: #0b1d35 !important;
+}
+
+html body.service-detail-template .service-page :is(.icon-wrap, .card-icon, .service-icon, .feature-icon, .solution-icon, .metric-icon) {
+  color: #ffffff !important;
+  background: #e3292f !important;
+}
+
+html body.service-detail-template .service-page :is(.icon-wrap, .card-icon, .service-icon, .feature-icon, .solution-icon, .metric-icon) :is(i, svg, svg *) {
+  color: #ffffff !important;
+  stroke: currentColor !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero h1, .service-detail-hero h1, .solution-page-hero h1) {
+  max-width: 14ch !important;
+  font-size: clamp(2.6rem, 4.55vw, 5rem) !important;
+  line-height: 1.02 !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+@media (min-width: 1101px) {
+  html body.service-detail-template .service-page :is(.service-hero-grid, .service-hero-inner, .service-split, .service-intro-grid, .service-cta-grid) {
+    grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr) !important;
+    gap: clamp(2rem, 5vw, 5rem) !important;
+    align-items: center !important;
+  }
+}
+
+/* Final visual guardrails: keep shared solution templates readable after legacy overrides. */
+html body.service-detail-template .service-page :is(.service-role-section, .service-light-section, .service-rfq-section, .service-planning-section) {
+  background: #f5f8fc !important;
+  color: #0a1b32 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-role-section, .service-light-section, .service-rfq-section, .service-planning-section) :is(h1, h2, h3, h4, strong, a) {
+  color: #0a1b32 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+html body.service-detail-template .service-page :is(.service-role-section, .service-light-section, .service-rfq-section, .service-planning-section) :is(p, li, span) {
+  color: #516784 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section, .service-procurement, .service-decision-section, .solution-paths-dark, .dark-feature-section) {
+  padding: clamp(3.5rem, 6vw, 6rem) clamp(1.25rem, 5vw, 5rem) !important;
+  overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section, .service-procurement, .service-decision-section, .solution-paths-dark, .dark-feature-section) :is(h1, h2, h3, h4, p, li, span, strong, a) {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section, .service-procurement, .service-decision-section, .solution-paths-dark, .dark-feature-section) :is(.seo-intent-panel, .intent-card, .search-card, .service-intent-card, .seo-intent-card, .service-seo-card, .keyword-chip, .service-chip, .tag-chip, .intent-chip, .solution-chip) {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero h1, .service-detail-hero h1, .solution-page-hero h1, .service-search-intent h1, .service-seo-intent h1, .seo-intent-section h1, .service-procurement h1, .service-decision-section h1) {
+  max-width: min(100%, 13ch) !important;
+  font-size: clamp(2.6rem, 5.4vw, 5.6rem) !important;
+  line-height: 0.98 !important;
+  overflow-wrap: anywhere !important;
+}
+
+html body.service-detail-template .service-page :is(.icon-wrap, .card-icon, .service-icon, .feature-icon, .solution-icon, .metric-icon) :is(svg, i, svg *) {
+  color: #ffffff !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-grid, .service-hero-inner, .service-split, .service-intro-grid, .service-cta-grid, .service-role-grid, .service-rfq-grid) > * {
+  min-width: 0 !important;
+}
+
+@media (max-width: 760px) {
+  html body.service-detail-template .service-page :is(.service-hero h1, .service-detail-hero h1, .solution-page-hero h1, .service-search-intent h1, .service-seo-intent h1, .seo-intent-section h1, .service-procurement h1, .service-decision-section h1) {
+    max-width: 100% !important;
+    font-size: clamp(2.35rem, 12vw, 3.8rem) !important;
+  }
 }
 
 @media (max-width: 700px) {
@@ -6218,6 +6780,156 @@ main .service-proof-band * {
     }
 }
 
+/* ENTERPRISE SERVICE PAGE GUARD - keeps service pages readable, wide and premium */
+html body.service-detail-template .service-page {
+    overflow-x: hidden !important;
+}
+
+html body.service-detail-template .service-page .service-hero {
+    min-height: auto !important;
+    padding: clamp(88px, 8vw, 124px) 0 !important;
+    overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page .service-hero-grid {
+    width: min(calc(100% - 72px), 1500px) !important;
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 0.55fr) !important;
+    gap: clamp(38px, 6vw, 88px) !important;
+    align-items: center !important;
+}
+
+html body.service-detail-template .service-page .service-hero-copy {
+    min-width: 0 !important;
+    max-width: 900px !important;
+}
+
+html body.service-detail-template .service-page .service-hero h1 {
+    max-width: 900px !important;
+    font-size: clamp(3.2rem, 5.2vw, 6.2rem) !important;
+    line-height: 0.99 !important;
+    letter-spacing: 0 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+    text-wrap: balance;
+}
+
+html body.service-detail-template .service-page .service-hero-copy > p:not(.service-eyebrow):not(.sub-headline):not(.breadcrumbs) {
+    max-width: 840px !important;
+    font-size: clamp(1.06rem, 1.25vw, 1.22rem) !important;
+    line-height: 1.72 !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel {
+    width: 100% !important;
+    max-width: 520px !important;
+    justify-self: end !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: clamp(24px, 2.6vw, 36px) !important;
+    border-radius: 22px !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel :is(p, span, strong, li, div) {
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel :is(strong, p) {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page .service-planning {
+    overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page .service-planning-grid {
+    grid-template-columns: repeat(3, minmax(260px, 1fr)) !important;
+    align-items: stretch !important;
+    gap: clamp(18px, 2vw, 28px) !important;
+}
+
+html body.service-detail-template .service-page .service-planning-grid > article,
+html body.service-detail-template .service-page .service-planning-story,
+html body.service-detail-template .service-page .service-planning-checklist,
+html body.service-detail-template .service-page .service-rfq-card {
+    min-height: auto !important;
+    height: auto !important;
+    padding: clamp(26px, 2.5vw, 36px) !important;
+    overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page .service-planning-grid h3 {
+    max-width: 100% !important;
+    font-size: clamp(1.65rem, 2vw, 2.25rem) !important;
+    line-height: 1.14 !important;
+}
+
+html body.service-detail-template .service-page .service-planning-grid :is(p, li) {
+    max-width: 100% !important;
+    font-size: clamp(0.98rem, 1.04vw, 1.08rem) !important;
+    line-height: 1.58 !important;
+}
+
+html body.service-detail-template .service-page .service-planning-grid ul {
+    display: grid !important;
+    gap: 12px !important;
+    margin: 0 !important;
+}
+
+html body.service-detail-template .service-page .service-planning-grid li {
+    grid-template-columns: 28px minmax(0, 1fr) !important;
+    padding: 14px 16px !important;
+}
+
+html body.service-detail-template .service-page .service-timeline article {
+    min-height: 230px !important;
+}
+
+html body.service-detail-template .service-page .service-cta h2,
+html body.service-detail-template .service-page .service-cta p,
+html body.service-detail-template .service-page .service-cta .service-eyebrow {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page .service-project-card {
+    min-height: auto !important;
+    overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page .service-project-card :is(h3, p, span) {
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+}
+
+@media (max-width: 1180px) {
+    html body.service-detail-template .service-page .service-hero-grid,
+    html body.service-detail-template .service-page .service-planning-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    html body.service-detail-template .service-page .service-hero-panel {
+        max-width: none !important;
+        justify-self: stretch !important;
+    }
+}
+
+@media (max-width: 760px) {
+    html body.service-detail-template .service-page .service-hero-grid {
+        width: min(calc(100% - 28px), 560px) !important;
+    }
+
+    html body.service-detail-template .service-page .service-hero h1 {
+        font-size: clamp(2.55rem, 12vw, 3.7rem) !important;
+        line-height: 1.05 !important;
+    }
+}
+
 /* Service detail alignment lock: keep shared service subpage cards readable. */
 .service-page .service-approach-grid {
     width: min(100% - 48px, 1500px) !important;
@@ -6763,6 +7475,305 @@ main .service-proof-band * {
     .service-page .service-planning-checklist,
     .service-page .service-rfq-card {
         min-height: auto !important;
+    }
+}
+
+/* FINAL SERVICE DETAIL READABILITY GUARD - 2026-08-03 */
+html body.service-detail-template .service-page {
+    overflow-x: hidden !important;
+}
+
+html body.service-detail-template .service-page .service-hero {
+    min-height: auto !important;
+    padding: clamp(96px, 8vw, 140px) 0 clamp(70px, 7vw, 112px) !important;
+    overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page .service-hero-grid {
+    width: min(calc(100% - 52px), 1500px) !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.98fr) minmax(380px, 0.62fr) !important;
+    gap: clamp(38px, 5.5vw, 90px) !important;
+    align-items: center !important;
+}
+
+html body.service-detail-template .service-page .service-hero-copy {
+    min-width: 0 !important;
+    max-width: 920px !important;
+}
+
+html body.service-detail-template .service-page .service-hero h1 {
+    max-width: 900px !important;
+    font-size: clamp(3.25rem, 6.15vw, 7rem) !important;
+    line-height: 0.97 !important;
+    letter-spacing: 0 !important;
+    text-wrap: balance;
+}
+
+html body.service-detail-template .service-page .service-hero-copy > p:not(.service-eyebrow) {
+    max-width: 860px !important;
+    font-size: clamp(1.08rem, 1.3vw, 1.35rem) !important;
+    line-height: 1.7 !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel {
+    width: 100% !important;
+    max-width: 520px !important;
+    max-height: none !important;
+    justify-self: end !important;
+    overflow: visible !important;
+    padding: clamp(24px, 2.4vw, 36px) !important;
+    border-radius: 24px !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel :is(p, span, strong, li, div) {
+    max-width: 100% !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+}
+
+html body.service-detail-template .service-page .service-trust-grid,
+html body.service-detail-template .service-page .service-logo-strip {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+}
+
+html body.service-detail-template .service-page .service-logo-strip img {
+    width: 100% !important;
+    height: 56px !important;
+    object-fit: contain !important;
+    padding: 12px 18px !important;
+    border-radius: 999px !important;
+    background: #ffffff !important;
+}
+
+html body.service-detail-template .service-page .service-cta {
+    min-height: auto !important;
+    padding: clamp(80px, 7vw, 120px) 0 !important;
+}
+
+html body.service-detail-template .service-page .service-cta .container {
+    width: min(calc(100% - 52px), 1180px) !important;
+    display: block !important;
+    padding: clamp(34px, 4vw, 58px) !important;
+    border-radius: 24px !important;
+    background: rgba(7, 20, 38, 0.72) !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    backdrop-filter: blur(10px);
+}
+
+html body.service-detail-template .service-page .service-cta :is(.service-eyebrow, h2, p, a) {
+    max-width: 920px !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: currentColor !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+}
+
+html body.service-detail-template .service-page .service-cta h2 {
+    font-size: clamp(2.5rem, 4.4vw, 5.4rem) !important;
+    line-height: 1.04 !important;
+    text-wrap: balance;
+}
+
+html body.service-detail-template .service-page .service-cta p:not(.service-eyebrow) {
+    color: rgba(238, 245, 255, 0.88) !important;
+    font-size: clamp(1.05rem, 1.2vw, 1.25rem) !important;
+    line-height: 1.7 !important;
+}
+
+html body.service-detail-template .service-page .service-planning-grid {
+    grid-template-columns: repeat(3, minmax(280px, 1fr)) !important;
+    gap: clamp(22px, 2.2vw, 32px) !important;
+}
+
+html body.service-detail-template .service-page .service-planning :is(.service-planning-story, .service-planning-checklist, .service-rfq-card) {
+    min-height: auto !important;
+    height: auto !important;
+    padding: clamp(28px, 2.6vw, 38px) !important;
+}
+
+html body.service-detail-template .service-page .service-planning-grid :is(h3, p, li, span) {
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+}
+
+html body.service-detail-template .service-page .service-planning-grid h3 {
+    font-size: clamp(1.65rem, 2vw, 2.25rem) !important;
+    line-height: 1.15 !important;
+    text-wrap: balance;
+}
+
+html body.service-detail-template .service-page .service-planning-grid li {
+    grid-template-columns: 26px minmax(0, 1fr) !important;
+    align-items: start !important;
+}
+
+@media (max-width: 1180px) {
+    html body.service-detail-template .service-page .service-hero-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    html body.service-detail-template .service-page .service-hero-panel {
+        justify-self: start !important;
+        max-width: 720px !important;
+    }
+
+    html body.service-detail-template .service-page .service-planning-grid {
+        grid-template-columns: repeat(2, minmax(280px, 1fr)) !important;
+    }
+}
+
+@media (max-width: 760px) {
+    html body.service-detail-template .service-page .service-hero-grid,
+    html body.service-detail-template .service-page .service-cta .container {
+        width: min(calc(100% - 30px), 620px) !important;
+    }
+
+    html body.service-detail-template .service-page .service-hero h1,
+    html body.service-detail-template .service-page .service-cta h2 {
+        font-size: clamp(2.45rem, 12vw, 4rem) !important;
+        line-height: 1.03 !important;
+    }
+
+    html body.service-detail-template .service-page .service-trust-grid,
+    html body.service-detail-template .service-page .service-logo-strip,
+    html body.service-detail-template .service-page .service-planning-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* FINAL SERVICE PAGE OVERFLOW REPAIR - keeps generated heroes premium and readable */
+.service-page .service-hero {
+    min-height: clamp(620px, 86vh, 920px) !important;
+    overflow: hidden !important;
+}
+
+.service-page .service-hero-grid {
+    width: min(calc(100% - 72px), 1500px) !important;
+    max-width: 1500px !important;
+    grid-template-columns: minmax(0, 0.98fr) minmax(380px, 520px) !important;
+    gap: clamp(42px, 6vw, 92px) !important;
+    align-items: center !important;
+}
+
+.service-page .service-hero-copy {
+    min-width: 0 !important;
+    max-width: 900px !important;
+}
+
+.service-page .service-hero h1 {
+    max-width: 900px !important;
+    font-size: clamp(3.2rem, 5.25vw, 5.95rem) !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: manual !important;
+    text-wrap: balance !important;
+}
+
+.service-page .service-hero-copy > p:not(.breadcrumbs):not(.service-eyebrow) {
+    max-width: 860px !important;
+    font-size: clamp(1.08rem, 1.22vw, 1.26rem) !important;
+    line-height: 1.72 !important;
+}
+
+.service-page .service-hero-panel {
+    width: min(100%, 520px) !important;
+    max-height: calc(100vh - 150px) !important;
+    justify-self: end !important;
+    align-self: center !important;
+    padding: clamp(28px, 3vw, 42px) !important;
+    border-radius: 18px !important;
+    overflow: auto !important;
+    scrollbar-width: thin !important;
+}
+
+.service-page .service-hero-panel::-webkit-scrollbar {
+    width: 6px !important;
+}
+
+.service-page .service-hero-panel::-webkit-scrollbar-thumb {
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, 0.28) !important;
+}
+
+.service-page .service-trust-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+}
+
+.service-page .service-hero-panel article,
+.service-page .service-trust-grid div {
+    min-height: 0 !important;
+    padding: 14px 16px !important;
+    border-radius: 14px !important;
+}
+
+.service-page .service-trust-grid strong {
+    width: 96px !important;
+    min-width: 96px !important;
+    height: 54px !important;
+    border-radius: 14px !important;
+}
+
+.service-page .service-trust-grid span {
+    line-height: 1.35 !important;
+}
+
+.service-page .service-logo-strip {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    margin-top: 18px !important;
+}
+
+.service-page .service-logo-strip img {
+    width: 100% !important;
+    max-width: none !important;
+    height: 54px !important;
+    max-height: 54px !important;
+    object-fit: contain !important;
+    padding: 10px 16px !important;
+    border-radius: 999px !important;
+    background: #ffffff !important;
+}
+
+.service-page .service-cta .container {
+    overflow: visible !important;
+}
+
+@media (max-width: 1180px) {
+    .service-page .service-hero-grid {
+        width: min(calc(100% - 44px), 980px) !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    .service-page .service-hero-panel {
+        width: 100% !important;
+        max-height: none !important;
+        justify-self: stretch !important;
+    }
+}
+
+@media (max-width: 720px) {
+    .service-page .service-hero-grid {
+        width: min(calc(100% - 28px), 560px) !important;
+    }
+
+    .service-page .service-hero h1 {
+        font-size: clamp(2.65rem, 13vw, 4rem) !important;
+        line-height: 1.04 !important;
+    }
+
+    .service-page .service-logo-strip {
+        grid-template-columns: 1fr !important;
     }
 }
 
@@ -8061,4 +9072,2903 @@ main .service-proof-band * {
         max-height: 38px !important;
         padding: 7px 12px !important;
     }
+}
+
+/* Enterprise UI audit pass 2026-07-30: premium, consistent service and solution pages. */
+:root {
+    --gpspl-navy: #071426;
+    --gpspl-blue: #173d70;
+    --gpspl-red: #d72f2f;
+    --gpspl-text: #071123;
+    --gpspl-muted: #52637a;
+    --gpspl-border: rgba(13, 38, 68, 0.12);
+    --gpspl-card-shadow: 0 22px 70px rgba(13, 38, 68, 0.10);
+}
+
+.service-page {
+    color: var(--gpspl-text) !important;
+    background:
+        linear-gradient(rgba(15, 35, 65, 0.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 35, 65, 0.028) 1px, transparent 1px),
+        #f8fbff !important;
+    background-size: 54px 54px, 54px 54px, auto !important;
+    overflow-x: clip !important;
+}
+
+html,
+body {
+    overflow-x: clip;
+}
+
+.service-page .container {
+    width: min(100% - 48px, 1280px) !important;
+}
+
+.service-page .service-hero,
+.partner-tech-page .partner-tech-hero {
+    min-height: clamp(620px, 78vh, 820px) !important;
+    display: grid !important;
+    align-items: center !important;
+    padding-block: clamp(92px, 10vw, 142px) !important;
+    overflow: hidden !important;
+    background-color: var(--gpspl-navy) !important;
+}
+
+.service-page main,
+.service-page section,
+.partner-tech-page main,
+.partner-tech-page section {
+    overflow-x: clip;
+}
+
+.service-page .service-hero::before,
+.partner-tech-page .partner-tech-hero::before {
+    opacity: 1 !important;
+    background:
+        linear-gradient(90deg, rgba(3, 10, 22, 0.94) 0%, rgba(7, 20, 38, 0.80) 47%, rgba(7, 20, 38, 0.28) 100%),
+        radial-gradient(circle at 78% 22%, rgba(215, 47, 47, 0.20), transparent 32%) !important;
+}
+
+.service-page .service-hero-grid,
+.partner-tech-page .partner-tech-hero-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.72fr) !important;
+    gap: clamp(40px, 6vw, 88px) !important;
+    align-items: center !important;
+}
+
+.service-page .service-hero-copy {
+    max-width: 800px !important;
+}
+
+.service-page .service-hero h1 {
+    max-width: 780px !important;
+    margin-bottom: 24px !important;
+    color: #ffffff !important;
+    font-size: clamp(3.3rem, 6.2vw, 6.6rem) !important;
+    line-height: 0.94 !important;
+    letter-spacing: 0 !important;
+}
+
+.service-page .service-hero-copy > p:not(.section-eyebrow):not(.sub-headline),
+.service-page .service-hero-copy .service-hero-description {
+    max-width: 720px !important;
+    color: rgba(255, 255, 255, 0.86) !important;
+    font-size: clamp(1.04rem, 1.35vw, 1.22rem) !important;
+    line-height: 1.76 !important;
+}
+
+.service-page .service-hero .section-eyebrow,
+.service-page .service-hero .sub-headline,
+.service-page .service-section-heading .section-eyebrow,
+.service-page .service-section-heading .sub-headline {
+    color: var(--gpspl-red) !important;
+    font-weight: 950 !important;
+    letter-spacing: 0.16em !important;
+}
+
+.service-page .service-hero-panel,
+.partner-tech-page .partner-tech-hero-panel {
+    display: grid !important;
+    gap: 14px !important;
+    padding: clamp(26px, 3vw, 38px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    border-radius: 24px !important;
+    background: rgba(31, 48, 70, 0.78) !important;
+    box-shadow: 0 28px 84px rgba(0, 0, 0, 0.26) !important;
+    backdrop-filter: blur(18px) !important;
+}
+
+.service-page .service-hero-panel article,
+.partner-tech-page .partner-tech-hero-panel article {
+    display: grid !important;
+    grid-template-columns: 54px minmax(0, 1fr) !important;
+    gap: 14px !important;
+    align-items: start !important;
+    padding: 16px !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: 16px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.service-page .service-hero-panel strong,
+.partner-tech-page .partner-tech-hero-panel strong {
+    display: inline-grid !important;
+    width: auto !important;
+    min-width: 46px !important;
+    height: 42px !important;
+    padding: 0 12px !important;
+    place-items: center !important;
+    border-radius: 14px !important;
+    background: var(--gpspl-red) !important;
+    color: #ffffff !important;
+    font-size: 0.82rem !important;
+    font-weight: 950 !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+}
+
+.service-page .service-hero-panel p,
+.partner-tech-page .partner-tech-hero-panel p {
+    margin: 0 !important;
+    color: rgba(255, 255, 255, 0.82) !important;
+    font-size: 0.95rem !important;
+    line-height: 1.54 !important;
+}
+
+.service-page .service-page-index {
+    border-block: 1px solid rgba(13, 38, 68, 0.10) !important;
+    background: rgba(255, 255, 255, 0.88) !important;
+    box-shadow: 0 16px 42px rgba(13, 38, 68, 0.08) !important;
+    backdrop-filter: blur(16px) !important;
+}
+
+.service-page .service-page-index .container {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scrollbar-width: thin !important;
+}
+
+.service-page .service-page-index a {
+    border-radius: 999px !important;
+    color: var(--gpspl-blue) !important;
+    font-weight: 900 !important;
+}
+
+.service-page .service-page-index a:hover,
+.service-page .service-page-index a.is-active {
+    background: rgba(215, 47, 47, 0.10) !important;
+    color: var(--gpspl-red) !important;
+}
+
+.service-page .section-padding,
+.service-page .service-approach,
+.service-page .service-intro,
+.service-page .service-planning,
+.service-page .service-capabilities,
+.service-page .service-applications,
+.service-page .service-partners,
+.service-page .service-process,
+.service-page .service-features,
+.service-page .service-projects,
+.service-page .service-case-studies,
+.service-page .service-gallery,
+.service-page .service-resources,
+.service-page .service-faq,
+.service-page .service-related {
+    padding-block: clamp(72px, 8vw, 118px) !important;
+}
+
+.service-page .service-section-heading {
+    max-width: 920px !important;
+    margin-inline: auto !important;
+    margin-bottom: clamp(32px, 4vw, 54px) !important;
+    text-align: center !important;
+}
+
+.service-page .service-section-heading h2 {
+    max-width: 900px !important;
+    margin-inline: auto !important;
+    color: var(--gpspl-text) !important;
+    font-size: clamp(2.35rem, 4.4vw, 4.65rem) !important;
+    line-height: 0.98 !important;
+    letter-spacing: 0 !important;
+}
+
+.service-page .service-section-heading p:not(.section-eyebrow):not(.sub-headline) {
+    max-width: 820px !important;
+    margin-inline: auto !important;
+    color: var(--gpspl-muted) !important;
+    font-size: clamp(1rem, 1.25vw, 1.15rem) !important;
+    line-height: 1.72 !important;
+}
+
+.service-page .service-intro .reveal,
+.service-page .service-process .reveal,
+.service-page .service-resources .reveal,
+.service-page .service-planning-story,
+.service-page .service-planning-checklist,
+.service-page .service-rfq-card {
+    border: 1px solid var(--gpspl-border) !important;
+    border-radius: 26px !important;
+    box-shadow: var(--gpspl-card-shadow) !important;
+}
+
+.service-page .service-intro-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 0.72fr) !important;
+    gap: clamp(30px, 4vw, 58px) !important;
+    align-items: center !important;
+}
+
+.service-page .service-intro-media {
+    overflow: hidden !important;
+    border: 1px solid var(--gpspl-border) !important;
+    border-radius: 26px !important;
+    box-shadow: var(--gpspl-card-shadow) !important;
+}
+
+.service-page .service-intro-media img,
+.service-page .service-project-card img,
+.service-page .service-gallery-grid img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+.service-page .service-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+.service-page .service-capability-card,
+.service-page .service-application-grid article,
+.service-page .service-feature-grid article,
+.service-page .service-project-card,
+.service-page .service-gallery-grid figure,
+.service-page .service-related-grid a,
+.service-page .service-download-grid a {
+    border: 1px solid var(--gpspl-border) !important;
+    border-radius: 22px !important;
+    background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%) !important;
+    box-shadow: 0 16px 48px rgba(13, 38, 68, 0.08) !important;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease !important;
+}
+
+.service-page .service-capability-card:hover,
+.service-page .service-application-grid article:hover,
+.service-page .service-feature-grid article:hover,
+.service-page .service-project-card:hover,
+.service-page .service-related-grid a:hover {
+    transform: translateY(-5px) !important;
+    border-color: rgba(215, 47, 47, 0.28) !important;
+    box-shadow: 0 26px 70px rgba(13, 38, 68, 0.14) !important;
+}
+
+.service-page .service-capability-card h3,
+.service-page .service-application-grid h3,
+.service-page .service-feature-grid h3,
+.service-page .service-project-card h3 {
+    color: var(--gpspl-text) !important;
+    font-size: clamp(1.35rem, 1.6vw, 1.8rem) !important;
+    line-height: 1.12 !important;
+}
+
+.service-page .service-capability-card p,
+.service-page .service-application-grid p,
+.service-page .service-feature-grid p,
+.service-page .service-project-card p {
+    color: var(--gpspl-muted) !important;
+    font-size: 0.98rem !important;
+    line-height: 1.62 !important;
+}
+
+.service-page .service-cta {
+    background:
+        radial-gradient(circle at 88% 12%, rgba(215, 47, 47, 0.18), transparent 28%),
+        linear-gradient(135deg, #071426 0%, #173d70 100%) !important;
+}
+
+.service-page .service-cta .container {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    gap: 28px !important;
+    align-items: center !important;
+}
+
+.service-page :is(.service-btn, .service-btn-primary, .service-btn-secondary) {
+    min-height: 48px !important;
+    border-radius: 8px !important;
+    font-weight: 900 !important;
+    letter-spacing: 0 !important;
+}
+
+@media (max-width: 1120px) {
+    .service-page .service-hero-grid,
+    .partner-tech-page .partner-tech-hero-grid,
+    .service-page .service-intro-grid,
+    .service-page .service-cta .container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .service-page .service-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 720px) {
+    .service-page .container {
+        width: min(100% - 30px, 1280px) !important;
+    }
+
+    .service-page .service-hero,
+    .partner-tech-page .partner-tech-hero {
+        min-height: auto !important;
+        padding-block: 82px 58px !important;
+    }
+
+    .service-page .service-hero h1 {
+        font-size: clamp(2.35rem, 12vw, 3.45rem) !important;
+        line-height: 0.98 !important;
+    }
+
+    .service-page .service-hero-panel,
+    .partner-tech-page .partner-tech-hero-panel {
+        padding: 22px !important;
+        border-radius: 20px !important;
+    }
+
+    .service-page .section-padding,
+    .service-page .service-approach,
+    .service-page .service-intro,
+    .service-page .service-planning,
+    .service-page .service-capabilities,
+    .service-page .service-applications,
+    .service-page .service-partners,
+    .service-page .service-process,
+    .service-page .service-features,
+    .service-page .service-projects,
+    .service-page .service-case-studies,
+    .service-page .service-gallery,
+    .service-page .service-resources,
+    .service-page .service-faq,
+    .service-page .service-related {
+        padding-block: 58px !important;
+    }
+
+    .service-page .service-section-heading h2 {
+        font-size: clamp(2rem, 10vw, 3.1rem) !important;
+        line-height: 1.02 !important;
+    }
+
+    .service-page .service-card-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Enterprise service-page UI pass: sharper AV-consulting presentation, less template-like spacing. */
+.service-page,
+.partner-tech-page {
+    --svc-ink: #071426;
+    --svc-navy: #0b2340;
+    --svc-blue: #123f73;
+    --svc-red: #df2b2f;
+    --svc-muted: #53677f;
+    --svc-line: rgba(7, 20, 38, 0.12);
+    --svc-shadow: 0 18px 48px rgba(7, 20, 38, 0.10);
+    --svc-shadow-strong: 0 30px 86px rgba(7, 20, 38, 0.18);
+    background:
+        linear-gradient(rgba(11, 35, 64, 0.026) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(11, 35, 64, 0.026) 1px, transparent 1px),
+        #ffffff !important;
+    background-size: 56px 56px !important;
+}
+
+.service-page .service-hero,
+.partner-tech-page .partner-tech-hero {
+    min-height: clamp(680px, 82vh, 900px) !important;
+    background-color: var(--svc-ink) !important;
+}
+
+.service-page .service-hero::before,
+.partner-tech-page .partner-tech-hero::before {
+    background:
+        linear-gradient(90deg, rgba(7, 20, 38, 0.94) 0%, rgba(7, 20, 38, 0.76) 48%, rgba(7, 20, 38, 0.36) 100%),
+        linear-gradient(rgba(255, 255, 255, 0.044) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px) !important;
+    background-size: auto, 54px 54px, 54px 54px !important;
+}
+
+.service-page .service-hero-grid,
+.partner-tech-page .partner-tech-hero-grid {
+    gap: clamp(36px, 5vw, 86px) !important;
+}
+
+.service-page .service-hero h1,
+.partner-tech-page .partner-tech-copy h1 {
+    max-width: 980px !important;
+    color: #ffffff !important;
+    font-size: clamp(3.2rem, 6.8vw, 7.2rem) !important;
+    line-height: 0.94 !important;
+    letter-spacing: 0 !important;
+    text-wrap: balance;
+}
+
+.service-page .service-hero-copy > p:not(.service-eyebrow),
+.partner-tech-page .partner-tech-copy > p:not(.service-eyebrow) {
+    max-width: 760px !important;
+    color: rgba(255, 255, 255, 0.84) !important;
+    font-size: clamp(1.05rem, 1.35vw, 1.28rem) !important;
+    line-height: 1.72 !important;
+}
+
+.service-page .service-hero-panel,
+.partner-tech-page .partner-tech-brand-board {
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    border-radius: 14px !important;
+    background: rgba(255, 255, 255, 0.10) !important;
+    box-shadow: var(--svc-shadow-strong) !important;
+    backdrop-filter: blur(18px) !important;
+}
+
+.service-page .service-page-index {
+    border-block: 1px solid rgba(7, 20, 38, 0.08) !important;
+    background: rgba(255, 255, 255, 0.92) !important;
+    backdrop-filter: blur(14px) !important;
+}
+
+.service-page .service-page-index a {
+    border-radius: 8px !important;
+    color: var(--svc-ink) !important;
+    font-weight: 850 !important;
+}
+
+.service-page .service-page-index a:hover,
+.service-page .service-page-index a.is-active {
+    background: var(--svc-ink) !important;
+    color: #ffffff !important;
+}
+
+.service-page .service-section-heading h2,
+.partner-tech-page .service-section-heading h2 {
+    color: var(--svc-ink) !important;
+    font-size: clamp(2.35rem, 4.5vw, 5rem) !important;
+    line-height: 0.98 !important;
+    letter-spacing: 0 !important;
+    text-wrap: balance;
+}
+
+.service-page .service-section-heading p,
+.partner-tech-page .service-section-heading p {
+    color: var(--svc-muted) !important;
+    line-height: 1.72 !important;
+}
+
+.service-page .service-approach-grid article,
+.service-page .service-planning-grid > article,
+.service-page .service-capability-card,
+.service-page .service-application-grid article,
+.service-page .service-feature-grid article,
+.service-page .service-project-card,
+.service-page .service-gallery-grid figure,
+.service-page .service-faq-list details,
+.service-page .service-download-grid a,
+.service-page .service-related-grid a,
+.partner-tech-page .partner-tech-brand-row,
+.partner-tech-page .partner-tech-product-grid article,
+.partner-tech-page .partner-tech-application-grid article,
+.partner-tech-page .partner-tech-proof div {
+    border: 1px solid var(--svc-line) !important;
+    border-radius: 8px !important;
+    background: linear-gradient(145deg, #ffffff 0%, #f7faff 100%) !important;
+    box-shadow: var(--svc-shadow) !important;
+}
+
+.service-page .service-approach-grid article:hover,
+.service-page .service-planning-grid > article:hover,
+.service-page .service-capability-card:hover,
+.service-page .service-application-grid article:hover,
+.service-page .service-feature-grid article:hover,
+.service-page .service-project-card:hover,
+.partner-tech-page .partner-tech-brand-row:hover,
+.partner-tech-page .partner-tech-product-grid article:hover,
+.partner-tech-page .partner-tech-application-grid article:hover {
+    transform: translateY(-4px) !important;
+    border-color: rgba(223, 43, 47, 0.32) !important;
+    box-shadow: var(--svc-shadow-strong) !important;
+}
+
+.service-page .service-card-grid,
+.service-page .service-feature-grid,
+.service-page .service-application-grid,
+.partner-tech-page .partner-tech-product-grid,
+.partner-tech-page .partner-tech-application-grid {
+    gap: clamp(18px, 2vw, 28px) !important;
+}
+
+.service-page .service-capability-card h3,
+.service-page .service-application-grid h3,
+.service-page .service-feature-grid h3,
+.service-page .service-project-card h3,
+.partner-tech-page .partner-tech-brand-row h3,
+.partner-tech-page .partner-tech-product-grid h3 {
+    color: var(--svc-ink) !important;
+    font-size: clamp(1.35rem, 1.6vw, 1.86rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: 0 !important;
+}
+
+.service-page .service-capability-card p,
+.service-page .service-application-grid p,
+.service-page .service-feature-grid p,
+.service-page .service-project-card p,
+.partner-tech-page .partner-tech-brand-row p,
+.partner-tech-page .partner-tech-product-grid p {
+    color: var(--svc-muted) !important;
+    line-height: 1.64 !important;
+}
+
+.service-page .service-planning-story,
+.service-page .service-planning-checklist,
+.service-page .service-rfq-card {
+    padding: clamp(24px, 3vw, 38px) !important;
+}
+
+.service-page .service-planning-story .service-keyword-strip a,
+.service-page .service-keyword-strip a,
+.service-page .service-tags span,
+.service-page .service-gallery-tags span {
+    border-radius: 999px !important;
+    border: 1px solid rgba(7, 20, 38, 0.12) !important;
+    background: #ffffff !important;
+    color: var(--svc-navy) !important;
+    font-weight: 850 !important;
+}
+
+.service-page .service-cta {
+    background:
+        linear-gradient(90deg, rgba(7, 20, 38, 0.96), rgba(18, 63, 115, 0.88)),
+        var(--service-cta-image) center / cover !important;
+}
+
+@media (max-width: 900px) {
+    .service-page .service-hero,
+    .partner-tech-page .partner-tech-hero {
+        min-height: auto !important;
+        padding-block: 92px 64px !important;
+    }
+
+    .service-page .service-hero h1,
+    .partner-tech-page .partner-tech-copy h1 {
+        font-size: clamp(2.65rem, 12vw, 4.1rem) !important;
+        line-height: 0.98 !important;
+    }
+}
+
+/* FINAL SERVICE PAGE READABILITY LOCK 2026-07-30: no white text on white planning cards. */
+.service-page .service-planning .service-planning-grid {
+    align-items: stretch !important;
+}
+
+.service-page .service-planning .service-planning-story,
+.service-page .service-planning .service-planning-checklist,
+.service-page .service-planning .service-rfq-card {
+    min-height: 100% !important;
+    padding: clamp(28px, 3vw, 42px) !important;
+    border: 1px solid rgba(7, 20, 38, 0.12) !important;
+    border-radius: 8px !important;
+    background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%) !important;
+    color: #071426 !important;
+    box-shadow: 0 20px 60px rgba(7, 20, 38, 0.10) !important;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+.service-page .service-planning .service-planning-story::before,
+.service-page .service-planning .service-planning-story::after,
+.service-page .service-planning .service-planning-checklist::before,
+.service-page .service-planning .service-planning-checklist::after,
+.service-page .service-planning .service-rfq-card::before,
+.service-page .service-planning .service-rfq-card::after {
+    display: none !important;
+    content: none !important;
+}
+
+.service-page .service-planning .service-planning-story h3,
+.service-page .service-planning .service-planning-checklist h3,
+.service-page .service-planning .service-rfq-card h3 {
+    color: #071426 !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+}
+
+.service-page .service-planning .service-planning-story p,
+.service-page .service-planning .service-planning-checklist li,
+.service-page .service-planning .service-rfq-card li {
+    color: #53677f !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+}
+
+.service-page .service-planning .service-planning-story > span,
+.service-page .service-planning .service-planning-checklist > span,
+.service-page .service-planning .service-rfq-card > span {
+    display: inline-grid !important;
+    width: 54px !important;
+    height: 54px !important;
+    place-items: center !important;
+    border-radius: 14px !important;
+    background: linear-gradient(135deg, #df2b2f, #ef4444) !important;
+    color: #ffffff !important;
+    font-weight: 950 !important;
+}
+
+.service-page .service-planning .service-planning-story .service-keyword-strip a {
+    border: 1px solid rgba(7, 20, 38, 0.12) !important;
+    background: #ffffff !important;
+    color: #123f73 !important;
+}
+
+/* FINAL ENTERPRISE SERVICE POLISH 2026-08-03
+   Locks repeated service-page modules against narrow text columns, boxed headings,
+   washed-out cards and clipped CTA copy. */
+.service-page {
+    --svc-final-ink: #071426;
+    --svc-final-muted: #53677f;
+    --svc-final-navy: #0a2340;
+    --svc-final-red: #df2b2f;
+    --svc-final-line: rgba(7, 20, 38, 0.12);
+    --svc-final-card: rgba(255, 255, 255, 0.92);
+    --svc-final-shadow: 0 24px 70px rgba(7, 20, 38, 0.11);
+}
+
+.service-page :is(.service-section-heading, .service-section-copy) {
+    width: 100% !important;
+    max-width: 980px !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+}
+
+.service-page .service-section-heading.centered {
+    max-width: 1040px !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+}
+
+.service-page :is(.service-section-heading h2, .service-section-copy h2) {
+    max-width: 980px !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+    color: var(--svc-final-ink) !important;
+    font-size: clamp(2.35rem, 4.2vw, 4.85rem) !important;
+    line-height: 1.02 !important;
+    letter-spacing: 0 !important;
+    text-wrap: balance;
+}
+
+.service-page .service-section-heading > p:not(.service-eyebrow),
+.service-page .service-section-copy > p {
+    width: 100% !important;
+    max-width: 860px !important;
+    color: var(--svc-final-muted) !important;
+    font-size: clamp(1.04rem, 1.2vw, 1.2rem) !important;
+    line-height: 1.76 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+}
+
+.service-page .service-section-heading.centered > p:not(.service-eyebrow) {
+    margin-inline: auto !important;
+}
+
+.service-page :is(.service-intro, .service-planning, .service-process, .service-features) {
+    position: relative !important;
+    overflow: hidden !important;
+    background:
+        radial-gradient(circle at 88% 10%, rgba(223, 43, 47, 0.08), transparent 30%),
+        radial-gradient(circle at 8% 20%, rgba(18, 63, 115, 0.08), transparent 32%),
+        linear-gradient(rgba(7, 20, 38, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(7, 20, 38, 0.045) 1px, transparent 1px),
+        linear-gradient(180deg, #f8fbff 0%, #ffffff 48%, #f6f9fd 100%) !important;
+    background-size: auto, auto, 58px 58px, 58px 58px, auto !important;
+}
+
+.service-page .service-intro-grid {
+    grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.82fr) !important;
+    align-items: center !important;
+    gap: clamp(34px, 5vw, 72px) !important;
+}
+
+.service-page .service-intro .reveal,
+.service-page .service-section-copy.reveal {
+    min-height: auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+}
+
+.service-page .service-intro-media {
+    border-radius: 18px !important;
+    padding: 14px !important;
+    border: 1px solid rgba(7, 20, 38, 0.12) !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: var(--svc-final-shadow) !important;
+}
+
+.service-page .service-intro-image {
+    width: 100% !important;
+    aspect-ratio: 16 / 10 !important;
+    object-fit: cover !important;
+    border-radius: 14px !important;
+    box-shadow: none !important;
+}
+
+.service-page .service-cta {
+    padding: clamp(78px, 8vw, 120px) 0 !important;
+    text-align: left !important;
+    background:
+        linear-gradient(110deg, rgba(4, 15, 30, 0.94), rgba(16, 54, 96, 0.9) 54%, rgba(37, 28, 57, 0.86)),
+        var(--service-cta-image) center / cover no-repeat !important;
+}
+
+.service-page .service-cta::before {
+    content: "";
+    position: absolute;
+    inset: 10% auto auto 7%;
+    width: 34%;
+    height: 48%;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(223, 43, 47, 0.18), transparent 68%);
+    filter: blur(18px);
+    z-index: -1;
+}
+
+.service-page .service-cta .container {
+    width: min(100% - 48px, 1120px) !important;
+    max-width: 1120px !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.52fr) !important;
+    gap: clamp(30px, 5vw, 70px) !important;
+    align-items: center !important;
+}
+
+.service-page .service-cta .service-eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-bottom: 18px !important;
+    color: #ff6568 !important;
+    white-space: normal !important;
+}
+
+.service-page .service-cta .service-eyebrow::before {
+    content: "";
+    width: 52px;
+    height: 3px;
+    background: currentColor;
+}
+
+.service-page .service-cta h2 {
+    max-width: 900px !important;
+    color: #ffffff !important;
+    font-size: clamp(2.4rem, 4.3vw, 5.1rem) !important;
+    line-height: 1.02 !important;
+    text-align: left !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+}
+
+.service-page .service-cta p:not(.service-eyebrow) {
+    max-width: 720px !important;
+    margin-top: 22px !important;
+    color: rgba(240, 246, 255, 0.9) !important;
+    font-size: clamp(1.05rem, 1.24vw, 1.22rem) !important;
+    line-height: 1.76 !important;
+    text-align: left !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+}
+
+.service-page .service-cta .service-hero-actions {
+    justify-content: flex-start !important;
+    margin-top: 28px !important;
+}
+
+.service-page .service-timeline {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(280px, 1fr)) !important;
+    gap: clamp(18px, 2vw, 28px) !important;
+}
+
+.service-page .service-timeline article {
+    min-height: 210px !important;
+    padding: clamp(26px, 2.4vw, 34px) !important;
+    border: 1px solid rgba(7, 20, 38, 0.12) !important;
+    border-left: 4px solid var(--svc-final-red) !important;
+    border-radius: 18px !important;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(246, 250, 255, 0.94)) !important;
+    box-shadow: var(--svc-final-shadow) !important;
+    overflow: hidden !important;
+}
+
+.service-page .service-timeline article:nth-child(3n + 2) {
+    border-left-color: #123f73 !important;
+    background: linear-gradient(135deg, #ffffff, #f1f6fd) !important;
+}
+
+.service-page .service-timeline article:nth-child(3n + 3) {
+    border-left-color: #ff7a3d !important;
+    background: linear-gradient(135deg, #ffffff, #fff7ef) !important;
+}
+
+.service-page .service-timeline span,
+.service-page .service-planning-grid > article > span {
+    flex: 0 0 auto !important;
+    display: inline-grid !important;
+    place-items: center !important;
+    width: 48px !important;
+    height: 48px !important;
+    margin: 0 0 24px !important;
+    border-radius: 14px !important;
+    background: var(--svc-final-navy) !important;
+    color: #ffffff !important;
+    font-size: 0.88rem !important;
+    font-weight: 950 !important;
+    letter-spacing: 0.04em !important;
+}
+
+.service-page .service-timeline h3 {
+    max-width: 100% !important;
+    margin: 0 !important;
+    color: var(--svc-final-ink) !important;
+    font-size: clamp(1.38rem, 1.65vw, 1.95rem) !important;
+    line-height: 1.14 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+    text-wrap: balance;
+}
+
+.service-page .service-planning-grid {
+    grid-template-columns: minmax(320px, 1.05fr) minmax(320px, 1fr) minmax(320px, 1fr) !important;
+    gap: clamp(20px, 2.2vw, 32px) !important;
+}
+
+.service-page .service-planning-story,
+.service-page .service-planning-checklist,
+.service-page .service-rfq-card {
+    min-height: 480px !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+}
+
+.service-page .service-planning-grid h3,
+.service-page .service-planning-grid p,
+.service-page .service-planning-grid li {
+    max-width: 100% !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+}
+
+.service-page .service-planning-grid h3 {
+    font-size: clamp(1.72rem, 2.1vw, 2.35rem) !important;
+    line-height: 1.14 !important;
+}
+
+.service-page .service-planning-grid ul {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.service-page .service-planning-grid li {
+    display: grid !important;
+    grid-template-columns: 28px minmax(0, 1fr) !important;
+    gap: 12px !important;
+    align-items: start !important;
+    padding: 16px 18px !important;
+    border-radius: 14px !important;
+    background: rgba(255, 255, 255, 0.84) !important;
+}
+
+.service-page .service-planning-grid li::before {
+    position: static !important;
+    transform: none !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin-top: 2px !important;
+}
+
+.service-page .service-feature-grid article {
+    min-width: 0 !important;
+    min-height: 260px !important;
+    overflow: hidden !important;
+}
+
+@media (max-width: 1180px) {
+    .service-page .service-timeline,
+    .service-page .service-planning-grid {
+        grid-template-columns: repeat(2, minmax(280px, 1fr)) !important;
+    }
+
+    .service-page .service-cta .container {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 760px) {
+    .service-page .container,
+    .service-page .service-cta .container {
+        width: min(100% - 32px, 1120px) !important;
+    }
+
+    .service-page :is(.service-section-heading h2, .service-section-copy h2),
+    .service-page .service-cta h2 {
+        font-size: clamp(2.05rem, 10vw, 3rem) !important;
+        line-height: 1.06 !important;
+    }
+
+    .service-page .service-intro-grid,
+    .service-page .service-timeline,
+    .service-page .service-planning-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .service-page .service-planning-story,
+    .service-page .service-planning-checklist,
+    .service-page .service-rfq-card {
+        min-height: auto !important;
+    }
+}
+/* FINAL SERVICE PAGE QA LOCK - 2026-08-03 */
+html body.service-detail-template .service-page :is(.service-hero, .service-cta, .service-planning, .service-seo-intent)
+    :is(h1, h2, h3, h4, p, li, span, strong, a) {
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+}
+
+html body.service-detail-template .service-page .service-hero {
+    min-height: auto !important;
+    padding: clamp(108px, 8vw, 152px) 0 !important;
+    overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page .service-hero-grid {
+    width: min(100% - 56px, 1500px) !important;
+    margin-inline: auto !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.5fr) !important;
+    gap: clamp(42px, 5vw, 90px) !important;
+    align-items: center !important;
+}
+
+html body.service-detail-template .service-page .service-hero-copy {
+    min-width: 0 !important;
+    max-width: 920px !important;
+}
+
+html body.service-detail-template .service-page .service-hero h1 {
+    max-width: 12ch !important;
+    font-size: clamp(3rem, 6vw, 6.35rem) !important;
+    line-height: 0.98 !important;
+    letter-spacing: 0 !important;
+}
+
+html body.service-detail-template .service-page .service-hero-copy > p:not(.breadcrumbs):not(.service-eyebrow):not(.sub-headline) {
+    max-width: 800px !important;
+    font-size: clamp(1.05rem, 1.3vw, 1.32rem) !important;
+    line-height: 1.65 !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel {
+    justify-self: end !important;
+    width: min(100%, 500px) !important;
+    max-width: 500px !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: clamp(24px, 2.4vw, 34px) !important;
+    border-radius: 22px !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel :is(article, li, div) {
+    min-width: 0 !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel :is(p, span, strong, li) {
+    white-space: normal !important;
+    line-height: 1.45 !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel .service-logo-strip {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel img {
+    display: block !important;
+    max-width: 100% !important;
+    max-height: 48px !important;
+    object-fit: contain !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel .service-trust-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel .service-trust-grid div,
+html body.service-detail-template .service-page .service-hero-panel article {
+    display: grid !important;
+    grid-template-columns: minmax(96px, 118px) minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 16px !important;
+    min-height: 64px !important;
+    padding: 12px 14px !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel .service-trust-grid strong,
+html body.service-detail-template .service-page .service-hero-panel article strong {
+    width: 100% !important;
+    min-width: 96px !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel .service-trust-grid p,
+html body.service-detail-template .service-page .service-hero-panel article p {
+    margin: 0 !important;
+    max-width: 100% !important;
+    font-size: 0.92rem !important;
+    line-height: 1.35 !important;
+}
+
+html body.service-detail-template .service-page .service-cta {
+    overflow: hidden !important;
+    padding: clamp(76px, 8vw, 130px) 0 !important;
+}
+
+html body.service-detail-template .service-page .service-cta .container {
+    width: min(100% - 56px, 1380px) !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.5fr) !important;
+    gap: clamp(34px, 5vw, 74px) !important;
+    align-items: center !important;
+}
+
+html body.service-detail-template .service-page .service-cta h2 {
+    max-width: 12ch !important;
+    font-size: clamp(2.6rem, 5vw, 5.4rem) !important;
+    line-height: 1 !important;
+}
+
+html body.service-detail-template .service-page .service-cta p {
+    max-width: 760px !important;
+    line-height: 1.65 !important;
+}
+
+html body.service-detail-template .service-page .service-planning {
+    overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page .service-planning-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(280px, 1fr)) !important;
+    gap: clamp(22px, 2.4vw, 34px) !important;
+    align-items: stretch !important;
+}
+
+html body.service-detail-template .service-page .service-planning-grid > article,
+html body.service-detail-template .service-page .service-planning-story,
+html body.service-detail-template .service-page .service-planning-checklist {
+    min-height: auto !important;
+    overflow: visible !important;
+    padding: clamp(28px, 2.5vw, 38px) !important;
+    border-radius: 22px !important;
+    background: linear-gradient(135deg, #ffffff 0%, #f7fbff 100%) !important;
+}
+
+html body.service-detail-template .service-page .service-planning-grid li {
+    display: grid !important;
+    grid-template-columns: 32px minmax(0, 1fr) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    line-height: 1.45 !important;
+}
+
+@media (max-width: 1180px) {
+    html body.service-detail-template .service-page .service-hero-grid,
+    html body.service-detail-template .service-page .service-cta .container,
+    html body.service-detail-template .service-page .service-planning-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    html body.service-detail-template .service-page .service-hero-panel {
+        justify-self: start !important;
+        width: min(100%, 620px) !important;
+        max-width: 620px !important;
+    }
+}
+
+@media (max-width: 720px) {
+    html body.service-detail-template .service-page .service-hero-grid,
+    html body.service-detail-template .service-page .service-cta .container {
+        width: min(100% - 28px, 100%) !important;
+    }
+
+    html body.service-detail-template .service-page .service-hero h1,
+    html body.service-detail-template .service-page .service-cta h2 {
+        max-width: 100% !important;
+        font-size: clamp(2.35rem, 12vw, 3.75rem) !important;
+    }
+
+    html body.service-detail-template .service-page .service-hero-panel .service-logo-strip {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* FINAL SERVICE PAGE READABILITY LOCK - 2026-08-03 */
+html body.service-detail-template .service-page :is(.service-capability-card, .service-rfq-card, .service-planning-story, .service-planning-checklist) {
+    min-width: 0 !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(9, 24, 44, 0.12) !important;
+    border-top: 3px solid rgba(226, 38, 45, 0.9) !important;
+    border-radius: 18px !important;
+    background:
+        radial-gradient(circle at 100% 0%, rgba(226, 38, 45, 0.08), transparent 34%),
+        linear-gradient(145deg, #ffffff 0%, #f6f9fd 100%) !important;
+    color: #071426 !important;
+    box-shadow: 0 20px 54px rgba(9, 24, 44, 0.08) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-capability-card, .service-rfq-card, .service-planning-story, .service-planning-checklist) :is(h1, h2, h3, h4, strong) {
+    color: #071426 !important;
+    -webkit-text-fill-color: #071426 !important;
+    opacity: 1 !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+}
+
+html body.service-detail-template .service-page :is(.service-capability-card, .service-rfq-card, .service-planning-story, .service-planning-checklist) :is(p, li, small) {
+    color: #50657e !important;
+    -webkit-text-fill-color: #50657e !important;
+    opacity: 1 !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+}
+
+html body.service-detail-template .service-page .service-capability-card > i:first-child {
+    display: inline-grid !important;
+    place-items: center !important;
+    width: 68px !important;
+    height: 68px !important;
+    min-width: 68px !important;
+    min-height: 68px !important;
+    margin: 0 0 24px !important;
+    border-radius: 18px !important;
+    background: linear-gradient(135deg, #ef3438 0%, #d91f2a 100%) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    opacity: 1 !important;
+    box-shadow: 0 18px 36px rgba(224, 36, 45, 0.24) !important;
+}
+
+html body.service-detail-template .service-page .service-capability-card > i:first-child::before {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page .service-keyword-strip {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    align-items: center !important;
+}
+
+html body.service-detail-template .service-page .service-keyword-strip a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 44px !important;
+    padding: 10px 18px !important;
+    border-radius: 999px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    white-space: normal !important;
+    text-align: center !important;
+}
+
+html body.service-detail-template .service-page .service-planning-story .service-keyword-strip a {
+    border-color: rgba(9, 24, 44, 0.12) !important;
+    background: #f2f6fb !important;
+    color: #16375f !important;
+    -webkit-text-fill-color: #16375f !important;
+}
+
+html body.service-detail-template .service-page :is(.service-btn, .btn-primary, button[type="submit"]) {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* SERVICE TEMPLATE FINAL QA LOCK - 2026-08-03
+   Prevents squeezed hero/panel text, invisible icons and white-on-white cards. */
+html body.service-detail-template .service-page .service-hero {
+    overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page .service-hero-grid {
+    width: min(100% - 64px, 1500px) !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 0.56fr) !important;
+    gap: clamp(46px, 5vw, 92px) !important;
+    align-items: center !important;
+}
+
+html body.service-detail-template .service-page .service-hero-copy {
+    min-width: 0 !important;
+    max-width: 980px !important;
+}
+
+html body.service-detail-template .service-page .service-hero h1 {
+    max-width: 11.5ch !important;
+    font-size: clamp(3.2rem, 6vw, 6.7rem) !important;
+    line-height: 0.98 !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+}
+
+html body.service-detail-template .service-page .service-hero-copy > p:not(.breadcrumbs):not(.service-eyebrow):not(.sub-headline) {
+    max-width: 820px !important;
+    font-size: clamp(1.05rem, 1.2vw, 1.24rem) !important;
+    line-height: 1.65 !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel {
+    justify-self: end !important;
+    width: min(100%, 620px) !important;
+    max-width: 620px !important;
+    padding: clamp(28px, 3vw, 42px) !important;
+    overflow: visible !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel :is(article, div, li, p, span, strong) {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel .service-trust-grid div,
+html body.service-detail-template .service-page .service-hero-panel article {
+    display: grid !important;
+    grid-template-columns: minmax(92px, 116px) minmax(0, 1fr) !important;
+    gap: 16px !important;
+    align-items: center !important;
+}
+
+html body.service-detail-template .service-page .service-card-grid,
+html body.service-detail-template .service-page .service-feature-grid,
+html body.service-detail-template .service-page .service-application-grid,
+html body.service-detail-template .service-page .service-planning-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)) !important;
+    gap: clamp(22px, 2.4vw, 34px) !important;
+    align-items: stretch !important;
+}
+
+html body.service-detail-template .service-page :is(.service-capability-card, .service-card-grid article, .service-feature-grid article, .service-application-grid article, .service-rfq-card, .service-planning-story, .service-planning-checklist) {
+    min-width: 0 !important;
+    min-height: auto !important;
+    width: 100% !important;
+    overflow: visible !important;
+    padding: clamp(28px, 2.7vw, 42px) !important;
+    color: #071426 !important;
+    -webkit-text-fill-color: currentColor !important;
+    background:
+        radial-gradient(circle at 100% 0%, rgba(226, 38, 43, 0.07), transparent 34%),
+        linear-gradient(145deg, #ffffff 0%, #f7fbff 100%) !important;
+    border: 1px solid rgba(8, 31, 61, 0.12) !important;
+    border-top: 3px solid rgba(226, 38, 43, 0.88) !important;
+    border-radius: 22px !important;
+    box-shadow: 0 22px 60px rgba(8, 26, 46, 0.09) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-capability-card, .service-card-grid article, .service-feature-grid article, .service-application-grid article, .service-rfq-card, .service-planning-story, .service-planning-checklist) :is(h2, h3, h4, strong) {
+    color: #071426 !important;
+    -webkit-text-fill-color: #071426 !important;
+    opacity: 1 !important;
+    line-height: 1.14 !important;
+    max-width: 100% !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+}
+
+html body.service-detail-template .service-page :is(.service-capability-card, .service-card-grid article, .service-feature-grid article, .service-application-grid article, .service-rfq-card, .service-planning-story, .service-planning-checklist) :is(p, li, span, small) {
+    color: #526982 !important;
+    -webkit-text-fill-color: #526982 !important;
+    opacity: 1 !important;
+    line-height: 1.62 !important;
+    max-width: 100% !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+}
+
+html body.service-detail-template .service-page :is(.service-capability-card, .service-card-grid article, .service-feature-grid article, .service-application-grid article) > i:first-child {
+    display: grid !important;
+    place-items: center !important;
+    width: 68px !important;
+    height: 68px !important;
+    min-width: 68px !important;
+    min-height: 68px !important;
+    margin: 0 0 24px !important;
+    border-radius: 18px !important;
+    background: linear-gradient(135deg, #ef3438 0%, #d91f2a 100%) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    opacity: 1 !important;
+    box-shadow: 0 18px 36px rgba(224, 36, 45, 0.24) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-capability-card, .service-card-grid article, .service-feature-grid article, .service-application-grid article) > i:first-child::before {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent) {
+    color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent) :is(h2, p, strong, a, span) {
+    color: #ffffff !important;
+    -webkit-text-fill-color: currentColor !important;
+    opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent) .seo-intent-panel {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 0.72fr) !important;
+    gap: clamp(34px, 4vw, 72px) !important;
+    align-items: start !important;
+}
+
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent) .seo-intent-copy h2 {
+    max-width: 13ch !important;
+    margin-bottom: 28px !important;
+    font-size: clamp(3rem, 5.3vw, 5.8rem) !important;
+    line-height: 0.98 !important;
+}
+
+@media (max-width: 1180px) {
+    html body.service-detail-template .service-page .service-hero-grid,
+    html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent) .seo-intent-panel {
+        grid-template-columns: 1fr !important;
+    }
+
+    html body.service-detail-template .service-page .service-hero-panel {
+        justify-self: start !important;
+        width: min(100%, 680px) !important;
+        max-width: 680px !important;
+    }
+}
+
+@media (max-width: 720px) {
+    html body.service-detail-template .service-page .service-hero-grid {
+        width: min(100% - 28px, 100%) !important;
+    }
+
+    html body.service-detail-template .service-page .service-hero h1,
+    html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent) .seo-intent-copy h2 {
+        max-width: 100% !important;
+        font-size: clamp(2.35rem, 11vw, 3.8rem) !important;
+        line-height: 1.06 !important;
+    }
+}
+/* SERVICE/SOLUTION READABILITY OVERRIDE LOCK - 2026-08-03
+   Final layer for solution/service pages where template rules were creating
+   invisible labels, pale cards and narrow/off-screen typography. */
+html body.service-detail-template .service-page {
+  --gpspl-ink: #071426;
+  --gpspl-muted: #4f6480;
+  --gpspl-line: #dbe4ee;
+  --gpspl-red: #e1272d;
+  --gpspl-blue: #0b2340;
+  --gpspl-panel: #ffffff;
+}
+
+html body.service-detail-template .service-page :is(.service-hero, .service-detail-hero) {
+  min-height: min(760px, 86vh) !important;
+  overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero .container, .service-detail-hero .container) {
+  width: min(92vw, 1540px) !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(380px, .62fr) !important;
+  align-items: center !important;
+  gap: clamp(36px, 6vw, 92px) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero h1, .service-detail-hero h1) {
+  max-width: 12ch !important;
+  font-size: clamp(3.6rem, 6vw, 7rem) !important;
+  line-height: 1.02 !important;
+  letter-spacing: 0 !important;
+  color: #ffffff !important;
+  text-wrap: balance !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero p, .service-detail-hero p) {
+  max-width: 68ch !important;
+  color: #dbe7f5 !important;
+  line-height: 1.72 !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) {
+  background:
+    linear-gradient(145deg, rgba(7,20,38,.92), rgba(14,47,82,.88)) !important;
+  border: 1px solid rgba(255,255,255,.22) !important;
+  border-left: 5px solid var(--gpspl-red) !important;
+  border-radius: 18px !important;
+  color: #ffffff !important;
+  box-shadow: 0 34px 95px rgba(0,0,0,.28) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) :is(h2, h3, h4, p, li, span, strong, small) {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) :is(.service-trust-grid, .hero-proof-list, .proof-list) > :is(div, article, li) {
+  background: rgba(255,255,255,.10) !important;
+  border: 1px solid rgba(255,255,255,.18) !important;
+  color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) :is(.service-trust-grid, .hero-proof-list, .proof-list) strong {
+  background: var(--gpspl-red) !important;
+  color: #ffffff !important;
+  border-radius: 999px !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) :is(.brand-pill, .logo-pill, .partner-logo, .brand-logo) {
+  background: #ffffff !important;
+  color: var(--gpspl-ink) !important;
+  border-color: rgba(255,255,255,.8) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) :is(.brand-pill *, .logo-pill *, .partner-logo *, .brand-logo *) {
+  color: var(--gpspl-ink) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-capability-grid, .service-rfq-grid, .product-rfq-grid, .planning-guide-grid, .quality-grid, .timeline-grid) {
+  align-items: stretch !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-capability-grid, .service-rfq-grid, .product-rfq-grid, .planning-guide-grid, .quality-grid, .timeline-grid) > :is(article, div) {
+  background:
+    linear-gradient(145deg, #ffffff, #f7faff) !important;
+  border: 1px solid var(--gpspl-line) !important;
+  border-top: 3px solid var(--gpspl-red) !important;
+  border-radius: 14px !important;
+  color: var(--gpspl-ink) !important;
+  box-shadow: 0 22px 58px rgba(7,20,38,.08) !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-capability-grid, .service-rfq-grid, .product-rfq-grid, .planning-guide-grid, .quality-grid, .timeline-grid) > :is(article, div) :is(h3, h4, strong) {
+  color: var(--gpspl-ink) !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-capability-grid, .service-rfq-grid, .product-rfq-grid, .planning-guide-grid, .quality-grid, .timeline-grid) > :is(article, div) :is(p, li, span) {
+  color: var(--gpspl-muted) !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-capability-grid, .service-rfq-grid, .product-rfq-grid, .planning-guide-grid, .quality-grid, .timeline-grid) :is(i, .icon, .card-icon, .service-icon, .feature-icon) {
+  background: var(--gpspl-red) !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  box-shadow: 0 16px 36px rgba(225,39,45,.20) !important;
+}
+
+html body.service-detail-template .service-page :is(.seo-intent-section, .service-seo-intent, .service-search-intent, .service-dark-band, .service-cta) {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(225,39,45,.18), transparent 22rem),
+    radial-gradient(circle at 86% 12%, rgba(69,132,201,.18), transparent 26rem),
+    linear-gradient(135deg, #071426 0%, #0b2746 58%, #1b2540 100%) !important;
+  color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(.seo-intent-section, .service-seo-intent, .service-search-intent, .service-dark-band, .service-cta) :is(h1, h2, h3, h4, p, li, span, strong, a) {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.seo-intent-section, .service-seo-intent, .service-search-intent) :is(.intent-card, .search-card, .service-intent-card, .seo-intent-card, .service-seo-card) {
+  background: rgba(255,255,255,.10) !important;
+  border: 1px solid rgba(255,255,255,.22) !important;
+  border-left: 4px solid var(--gpspl-red) !important;
+  color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(.service-bottom-cta, .service-contact-strip, .service-final-cta, .partner-tech-cta) :is(.container, .inner, .cta-inner) {
+  background: linear-gradient(135deg, #071426, #0d3158) !important;
+  border: 1px solid rgba(255,255,255,.18) !important;
+  border-radius: 18px !important;
+  color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(.service-bottom-cta, .service-contact-strip, .service-final-cta, .partner-tech-cta) :is(h2, h3, p, span, strong) {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-bottom-cta, .service-contact-strip, .service-final-cta, .partner-tech-cta) :is(a:not(.service-btn):not(.btn-primary), button:not(.service-btn):not(.btn-primary)) {
+  background: #ffffff !important;
+  color: var(--gpspl-ink) !important;
+  border-color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(.service-bottom-cta, .service-contact-strip, .service-final-cta, .partner-tech-cta) :is(.service-btn, .btn-primary, button[type="submit"]) {
+  background: var(--gpspl-red) !important;
+  color: #ffffff !important;
+  border-color: var(--gpspl-red) !important;
+}
+
+@media (max-width: 980px) {
+  html body.service-detail-template .service-page :is(.service-hero .container, .service-detail-hero .container) {
+    grid-template-columns: 1fr !important;
+  }
+
+  html body.service-detail-template .service-page :is(.service-hero h1, .service-detail-hero h1) {
+    max-width: 100% !important;
+    font-size: clamp(2.6rem, 11vw, 4.8rem) !important;
+  }
+}
+
+/* Visual reliability pass: preserve readable contrast across shared service pages. */
+html body.service-detail-template .service-page {
+  overflow-x: hidden;
+}
+
+html body.service-detail-template .service-page :is(
+  .service-hero-grid,
+  .service-hero-inner,
+  .service-split,
+  .service-intro-grid,
+  .service-cta-grid,
+  .service-search-intent,
+  .service-seo-intent,
+  .seo-intent-section
+) > * {
+  min-width: 0;
+}
+
+html body.service-detail-template .service-page :is(
+  .service-card,
+  .solution-card,
+  .solution-feature-card,
+  .solution-proof-card,
+  .solution-step-card,
+  .service-feature-card,
+  .service-info-card,
+  .service-role-card,
+  .intent-card,
+  .search-card,
+  .service-intent-card,
+  .seo-intent-card,
+  .service-seo-card
+) {
+  min-width: 0;
+  overflow: hidden;
+}
+
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section, .service-dark-band, .service-proof-dark, .service-final-dark, .service-procurement, .service-decision-section, .dark-feature-section) {
+  background: linear-gradient(118deg, #07182b 0%, #132f53 56%, #31263d 100%) !important;
+  color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section, .service-dark-band, .service-proof-dark, .service-final-dark, .service-procurement, .service-decision-section, .dark-feature-section) :is(h1, h2, h3, h4, p, li, span, strong, a) {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section, .service-dark-band, .service-proof-dark, .service-final-dark, .service-procurement, .service-decision-section, .dark-feature-section) :is(.service-card, .solution-card, .solution-feature-card, .solution-proof-card, .solution-step-card, .service-feature-card, .service-info-card, .intent-card, .search-card, .service-intent-card, .seo-intent-card, .service-seo-card) {
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background: rgba(29, 52, 82, 0.88) !important;
+  box-shadow: 0 18px 42px rgba(2, 13, 29, 0.2) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-role-section, .service-light-section) :is(h1, h2, h3, h4, strong) {
+  color: #071426 !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-role-section, .service-light-section) :is(p, li, span) {
+  color: #4d6380 !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.icon-wrap, .card-icon, .service-icon, .feature-icon, .solution-icon) {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.icon-wrap, .card-icon, .service-icon, .feature-icon, .solution-icon) :is(i, svg, svg *) {
+  color: #ffffff !important;
+  stroke: currentColor !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero h1, .service-detail-hero h1, .solution-page-hero h1, .service-search-intent h1, .service-seo-intent h1, .seo-intent-section h1) {
+  max-width: none;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+@media (max-width: 1100px) {
+  html body.service-detail-template .service-page :is(.service-hero h1, .service-detail-hero h1, .solution-page-hero h1, .service-search-intent h1, .service-seo-intent h1, .seo-intent-section h1) {
+    max-width: none;
+  }
+}
+
+@media (max-width: 760px) {
+  html body.service-detail-template .service-page :is(.service-hero h1, .service-detail-hero h1, .solution-page-hero h1, .service-search-intent h1, .service-seo-intent h1, .seo-intent-section h1) {
+    max-width: none;
+    font-size: clamp(2.35rem, 12vw, 3.5rem) !important;
+  }
+}
+
+/* FINAL SERVICE/SOLUTION VISIBILITY GUARD - 2026-08-03
+   Fixes unreadable panels, invisible icons, narrow hero text and pale CTA strips across all service pages. */
+html body.service-detail-template .service-page {
+  --svc-ink: #071426;
+  --svc-muted: #52657f;
+  --svc-red: #e1272d;
+  --svc-blue: #0c3158;
+  --svc-line: rgba(7, 20, 38, .12);
+}
+
+html body.service-detail-template .service-page :is(.service-hero, .service-detail-hero) {
+  min-height: auto !important;
+  padding: clamp(86px, 8vw, 150px) 0 !important;
+  background:
+    linear-gradient(90deg, rgba(7,20,38,.94), rgba(10,35,62,.88) 48%, rgba(7,20,38,.72)),
+    var(--service-hero-image, var(--service-hero-bg, none)) center/cover no-repeat !important;
+  color: #ffffff !important;
+  overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero .container, .service-detail-hero .container, .service-hero-grid) {
+  width: min(92vw, 1480px) !important;
+  margin-inline: auto !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.08fr) minmax(380px, .72fr) !important;
+  gap: clamp(44px, 6vw, 100px) !important;
+  align-items: center !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-copy, .service-detail-hero-copy) {
+  min-width: 0 !important;
+  max-width: 980px !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero h1, .service-detail-hero h1) {
+  color: #ffffff !important;
+  font-size: clamp(4.6rem, 7.2vw, 8rem) !important;
+  line-height: .95 !important;
+  max-width: 980px !important;
+  letter-spacing: 0 !important;
+  text-wrap: balance !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero p, .service-detail-hero p, .breadcrumbs, .service-eyebrow) {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-copy > p:not(.breadcrumbs):not(.service-eyebrow), .service-detail-hero-copy > p:not(.breadcrumbs):not(.service-eyebrow)) {
+  max-width: 780px !important;
+  color: rgba(255,255,255,.92) !important;
+  font-size: clamp(1.08rem, 1.35vw, 1.35rem) !important;
+  line-height: 1.72 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) {
+  width: 100% !important;
+  max-width: 560px !important;
+  justify-self: end !important;
+  background: linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.07)) !important;
+  border: 1px solid rgba(255,255,255,.24) !important;
+  border-left: 5px solid var(--svc-red) !important;
+  border-radius: 22px !important;
+  box-shadow: 0 32px 85px rgba(0,0,0,.28) !important;
+  color: #ffffff !important;
+  padding: clamp(28px, 3.8vw, 54px) !important;
+  overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) :is(h2, h3, h4, p, li, span, strong, small) {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel :is(.service-trust-grid, .hero-proof-list, .proof-list) {
+  display: grid !important;
+  gap: 14px !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel :is(.service-trust-grid div, article, li) {
+  background: rgba(255,255,255,.10) !important;
+  border: 1px solid rgba(255,255,255,.18) !important;
+  border-radius: 14px !important;
+  color: #ffffff !important;
+  padding: 16px 18px !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel :is(.service-trust-grid strong, article strong) {
+  display: inline-flex !important;
+  width: auto !important;
+  min-width: 96px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background: var(--svc-red) !important;
+  color: #ffffff !important;
+  border-radius: 999px !important;
+  padding: 10px 16px !important;
+  margin-right: 12px !important;
+  white-space: nowrap !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel :is(.service-logo-strip, .brand-stack-grid) {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel img {
+  max-width: 100% !important;
+  height: 52px !important;
+  object-fit: contain !important;
+  background: #ffffff !important;
+  border-radius: 999px !important;
+  padding: 10px 18px !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-capability-grid, .service-rfq-grid, .product-rfq-grid, .planning-guide-grid, .quality-grid, .timeline-grid) {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)) !important;
+  gap: clamp(22px, 2.5vw, 34px) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-capability-grid, .service-rfq-grid, .product-rfq-grid, .planning-guide-grid, .quality-grid, .timeline-grid) > :is(article, div) {
+  min-width: 0 !important;
+  background: linear-gradient(145deg, #ffffff, #f6f9fd) !important;
+  border: 1px solid var(--svc-line) !important;
+  border-top: 3px solid var(--svc-red) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 24px 62px rgba(7, 20, 38, .08) !important;
+  color: var(--svc-ink) !important;
+  padding: clamp(28px, 3vw, 44px) !important;
+  overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-capability-grid, .service-rfq-grid, .product-rfq-grid, .planning-guide-grid, .quality-grid, .timeline-grid) > :is(article, div) :is(h2, h3, h4, strong, b) {
+  color: var(--svc-ink) !important;
+  opacity: 1 !important;
+  line-height: 1.12 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-capability-grid, .service-rfq-grid, .product-rfq-grid, .planning-guide-grid, .quality-grid, .timeline-grid) > :is(article, div) :is(p, li, span, small) {
+  color: var(--svc-muted) !important;
+  opacity: 1 !important;
+  line-height: 1.65 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-capability-grid, .service-rfq-grid, .product-rfq-grid, .planning-guide-grid, .quality-grid, .timeline-grid) :is(i, .icon, .card-icon, .service-icon, .feature-icon) {
+  width: 62px !important;
+  height: 62px !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  background: var(--svc-red) !important;
+  color: #ffffff !important;
+  border-radius: 16px !important;
+  opacity: 1 !important;
+  box-shadow: 0 16px 34px rgba(225, 39, 45, .22) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-capability-grid, .service-rfq-grid, .product-rfq-grid, .planning-guide-grid, .quality-grid, .timeline-grid) :is(i, .icon, .card-icon, .service-icon, .feature-icon)::before,
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-capability-grid, .service-rfq-grid, .product-rfq-grid, .planning-guide-grid, .quality-grid, .timeline-grid) svg {
+  color: #ffffff !important;
+  fill: currentColor !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.seo-intent-section, .service-seo-intent, .service-search-intent, .service-dark-band, .service-cta) {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(225,39,45,.18), transparent 23rem),
+    radial-gradient(circle at 88% 14%, rgba(69,132,201,.20), transparent 26rem),
+    linear-gradient(135deg, #071426 0%, #0c3158 58%, #22223c 100%) !important;
+  color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(.seo-intent-section, .service-seo-intent, .service-search-intent, .service-dark-band, .service-cta) :is(h1, h2, h3, h4, p, li, span, strong, a) {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.seo-intent-section, .service-seo-intent, .service-search-intent) :is(.seo-intent-panel, .intent-card, .search-card, .service-intent-card, .seo-intent-card, .service-seo-card, a) {
+  background: rgba(255,255,255,.10) !important;
+  border: 1px solid rgba(255,255,255,.22) !important;
+  border-left: 4px solid var(--svc-red) !important;
+  color: #ffffff !important;
+  box-shadow: 0 18px 42px rgba(0,0,0,.16) !important;
+}
+
+html body.service-detail-template .service-page .service-cta .container,
+html body.service-detail-template .service-page :is(.service-bottom-cta, .service-contact-strip, .service-final-cta, .partner-tech-cta) :is(.container, .inner, .cta-inner) {
+  width: min(92vw, 1420px) !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: clamp(26px, 4vw, 70px) !important;
+  align-items: center !important;
+  background: rgba(255,255,255,.10) !important;
+  border: 1px solid rgba(255,255,255,.20) !important;
+  border-radius: 22px !important;
+  color: #ffffff !important;
+  padding: clamp(34px, 4.5vw, 68px) !important;
+}
+
+html body.service-detail-template .service-page .service-cta h2 {
+  max-width: 880px !important;
+  font-size: clamp(3.2rem, 5.6vw, 6rem) !important;
+  line-height: 1.02 !important;
+  text-wrap: balance !important;
+  word-break: normal !important;
+}
+
+html body.service-detail-template .service-page .service-cta p:not(.service-eyebrow) {
+  max-width: 780px !important;
+  color: rgba(255,255,255,.90) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-tags, .service-keywords, .tag-cloud) a,
+html body.service-detail-template .service-page :is(.service-tags, .service-keywords, .tag-cloud) span {
+  background: rgba(255,255,255,.12) !important;
+  border: 1px solid rgba(255,255,255,.26) !important;
+  color: #ffffff !important;
+  border-radius: 999px !important;
+  padding: 12px 18px !important;
+  line-height: 1.2 !important;
+}
+
+@media (max-width: 1100px) {
+  html body.service-detail-template .service-page :is(.service-hero .container, .service-detail-hero .container, .service-hero-grid),
+  html body.service-detail-template .service-page .service-cta .container {
+    grid-template-columns: 1fr !important;
+  }
+
+  html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) {
+    justify-self: start !important;
+    max-width: 100% !important;
+  }
+
+  html body.service-detail-template .service-page :is(.service-hero h1, .service-detail-hero h1, .service-cta h2) {
+    font-size: clamp(3rem, 11vw, 5rem) !important;
+    max-width: 100% !important;
+  }
+}
+
+/* FINAL SERVICE PAGE READABILITY LOCK - 2026-08-03 evening pass */
+:root {
+  --service-ink: #071426;
+  --service-muted: #526981;
+  --service-red: #df252b;
+  --service-deep: #071426;
+  --service-blue: #123c66;
+}
+
+html body.service-detail-template .service-page {
+  color: var(--service-ink) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero, .service-detail-hero) {
+  min-height: min(820px, 92vh) !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(90deg, rgba(7, 20, 38, .96) 0%, rgba(7, 20, 38, .88) 46%, rgba(18, 60, 102, .58) 100%),
+    var(--service-hero-image, none) center/cover no-repeat !important;
+  color: #fff !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero .container, .service-detail-hero .container, .service-hero-grid) {
+  display: grid !important;
+  grid-template-columns: minmax(0, .95fr) minmax(390px, .58fr) !important;
+  gap: clamp(44px, 6vw, 104px) !important;
+  align-items: center !important;
+  max-width: 1540px !important;
+  margin-inline: auto !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-copy, .service-detail-hero-copy) {
+  min-width: 0 !important;
+  max-width: 980px !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero h1, .service-detail-hero h1) {
+  max-width: 980px !important;
+  color: #fff !important;
+  font-size: clamp(4.2rem, 6.2vw, 7rem) !important;
+  line-height: .98 !important;
+  letter-spacing: 0 !important;
+  text-wrap: balance !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero p, .service-detail-hero p) {
+  max-width: 780px !important;
+  color: rgba(255,255,255,.88) !important;
+  opacity: 1 !important;
+  font-size: clamp(1.05rem, 1.25vw, 1.35rem) !important;
+  line-height: 1.65 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel, .service-proof-panel) {
+  justify-self: end !important;
+  max-width: 560px !important;
+  width: 100% !important;
+  max-height: none !important;
+  overflow: visible !important;
+  background: linear-gradient(145deg, rgba(255,255,255,.14), rgba(255,255,255,.08)) !important;
+  border: 1px solid rgba(255,255,255,.22) !important;
+  border-left: 5px solid var(--service-red) !important;
+  color: #fff !important;
+  box-shadow: 0 28px 90px rgba(0,0,0,.28) !important;
+  backdrop-filter: blur(16px) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel, .service-proof-panel) :is(h2, h3, h4, p, li, span, strong, small) {
+  color: #fff !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) :is(.stat-row, .metric-row, .proof-row, li) {
+  background: rgba(255,255,255,.10) !important;
+  border: 1px solid rgba(255,255,255,.18) !important;
+  color: #fff !important;
+}
+
+html body.service-detail-template .service-page :is(.service-logo-strip, .brand-logo-grid, .hero-brand-grid) img {
+  background: #fff !important;
+  border-radius: 999px !important;
+  padding: 10px 18px !important;
+  object-fit: contain !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-proof-grid, .service-detail-grid, .planning-guide-grid, .service-validation-grid, .seo-card-grid) > :is(article, div),
+html body.service-detail-template .service-page :is(.service-card, .service-feature-card, .planning-card, .validation-card, .seo-card) {
+  background: linear-gradient(180deg, #ffffff, #f7fafc) !important;
+  border: 1px solid rgba(7,20,38,.12) !important;
+  border-top: 3px solid rgba(223,37,43,.76) !important;
+  color: var(--service-ink) !important;
+  box-shadow: 0 22px 60px rgba(7,20,38,.08) !important;
+  min-height: auto !important;
+  overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-proof-grid, .service-detail-grid, .planning-guide-grid, .service-validation-grid, .seo-card-grid) :is(h2, h3, h4),
+html body.service-detail-template .service-page :is(.service-card, .service-feature-card, .planning-card, .validation-card, .seo-card) :is(h2, h3, h4) {
+  color: var(--service-ink) !important;
+  opacity: 1 !important;
+  font-size: clamp(1.45rem, 1.8vw, 2rem) !important;
+  line-height: 1.15 !important;
+  text-wrap: balance !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-proof-grid, .service-detail-grid, .planning-guide-grid, .service-validation-grid, .seo-card-grid) p,
+html body.service-detail-template .service-page :is(.service-card, .service-feature-card, .planning-card, .validation-card, .seo-card) p {
+  color: var(--service-muted) !important;
+  opacity: 1 !important;
+  line-height: 1.62 !important;
+  word-break: normal !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-proof-grid, .service-detail-grid, .planning-guide-grid, .service-validation-grid, .seo-card-grid) :is(i, .icon, .card-icon, .feature-icon, .service-icon),
+html body.service-detail-template .service-page :is(.service-card, .service-feature-card, .planning-card, .validation-card, .seo-card) :is(i, .icon, .card-icon, .feature-icon, .service-icon) {
+  display: inline-grid !important;
+  place-items: center !important;
+  width: 58px !important;
+  height: 58px !important;
+  border-radius: 16px !important;
+  background: linear-gradient(135deg, #ef3d43, #d61f26) !important;
+  color: #fff !important;
+  opacity: 1 !important;
+  box-shadow: 0 16px 34px rgba(223,37,43,.22) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-proof-grid, .service-detail-grid, .planning-guide-grid, .service-validation-grid, .seo-card-grid) svg {
+  color: #fff !important;
+  stroke: #fff !important;
+  fill: none !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-seo-intent, .service-search-intent, .seo-intent-section, .service-dark-band, .service-procurement, .service-decision-section) {
+  background:
+    radial-gradient(circle at 12% 6%, rgba(223,37,43,.16), transparent 30%),
+    linear-gradient(135deg, #071426 0%, #12375d 58%, #201d3b 100%) !important;
+  color: #fff !important;
+  overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page :is(.service-seo-intent, .service-search-intent, .seo-intent-section, .service-dark-band, .service-procurement, .service-decision-section) :is(h1, h2, h3, h4, p, li, span, strong, a) {
+  color: #fff !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+html body.service-detail-template .service-page :is(.service-seo-intent, .service-search-intent, .seo-intent-section) :is(.intent-card, .seo-link-card, .search-path-card, article, a) {
+  background: rgba(255,255,255,.10) !important;
+  border: 1px solid rgba(255,255,255,.20) !important;
+  border-left: 4px solid var(--service-red) !important;
+  color: #fff !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,.20) !important;
+}
+
+html body.service-detail-template .service-page .service-cta {
+  padding: clamp(76px, 8vw, 130px) 0 !important;
+  background:
+    linear-gradient(120deg, rgba(7,20,38,.97), rgba(15,47,82,.95)),
+    var(--service-cta-image, none) center/cover no-repeat !important;
+  color: #fff !important;
+  overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page .service-cta .container {
+  display: grid !important;
+  grid-template-columns: minmax(0, .9fr) minmax(320px, .42fr) !important;
+  gap: clamp(32px, 5vw, 86px) !important;
+  align-items: center !important;
+  max-width: 1500px !important;
+  margin-inline: auto !important;
+}
+
+html body.service-detail-template .service-page .service-cta .service-eyebrow {
+  writing-mode: horizontal-tb !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  color: #fff !important;
+  letter-spacing: .14em !important;
+}
+
+html body.service-detail-template .service-page .service-cta h2 {
+  max-width: 820px !important;
+  color: #fff !important;
+  font-size: clamp(3.2rem, 5.2vw, 5.8rem) !important;
+  line-height: 1.02 !important;
+  text-wrap: balance !important;
+  word-break: normal !important;
+}
+
+html body.service-detail-template .service-page .service-cta p:not(.service-eyebrow) {
+  max-width: 800px !important;
+  color: rgba(255,255,255,.88) !important;
+}
+
+html body.service-detail-template .service-page .service-hero-actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 16px !important;
+  align-items: center !important;
+}
+
+html body.service-detail-template .service-page :is(.service-btn, .service-btn-primary, .service-btn-secondary) {
+  min-width: 190px !important;
+  min-height: 56px !important;
+  border-radius: 10px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 900 !important;
+}
+
+html body.service-detail-template .service-page .service-btn-primary {
+  background: var(--service-red) !important;
+  border-color: var(--service-red) !important;
+  color: #fff !important;
+}
+
+html body.service-detail-template .service-page .service-btn-secondary {
+  background: #fff !important;
+  color: var(--service-ink) !important;
+  border-color: rgba(255,255,255,.55) !important;
+}
+
+@media (max-width: 1100px) {
+  html body.service-detail-template .service-page :is(.service-hero .container, .service-detail-hero .container, .service-hero-grid),
+  html body.service-detail-template .service-page .service-cta .container {
+    grid-template-columns: 1fr !important;
+  }
+
+  html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel, .service-proof-panel) {
+    justify-self: start !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 760px) {
+  html body.service-detail-template .service-page :is(.service-hero h1, .service-detail-hero h1, .service-cta h2) {
+    font-size: clamp(3rem, 13vw, 4.7rem) !important;
+  }
+
+  html body.service-detail-template .service-page .service-cta .container {
+    gap: 26px !important;
+  }
+}
+
+/* Direct-child service CTAs should read like a premium closing section, not a squeezed grid. */
+html body.service-detail-template .service-page .service-cta .container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 24px !important;
+  max-width: 1280px !important;
+}
+
+html body.service-detail-template .service-page .service-cta h2 {
+  max-width: 980px !important;
+}
+
+html body.service-detail-template .service-page .service-cta p:not(.service-eyebrow) {
+  max-width: 850px !important;
+}
+
+/* FINAL SERVICE/PARTNER READABILITY REPAIR - shared solution-page stability. */
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-capability-grid, .service-proof-grid, .service-detail-grid, .planning-guide-grid, .service-validation-grid, .seo-card-grid, .quality-grid, .timeline-grid) :is(.icon-wrap, .card-icon, .service-icon, .feature-icon, i, svg),
+html body :is(.solution-card, .solution-feature-card, .solution-proof-card, .solution-step-card) :is(.icon-wrap, .card-icon, .service-icon, .feature-icon, i, svg) {
+  color: #fff !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card-grid, .service-feature-grid, .service-capability-grid, .service-proof-grid, .service-detail-grid, .planning-guide-grid, .service-validation-grid, .seo-card-grid, .quality-grid, .timeline-grid) :is(.icon-wrap, .card-icon, .service-icon, .feature-icon),
+html body :is(.solution-card, .solution-feature-card, .solution-proof-card, .solution-step-card) :is(.icon-wrap, .card-icon, .service-icon, .feature-icon) {
+  background: linear-gradient(135deg, #df252b, #ff524a) !important;
+  color: #fff !important;
+  box-shadow: 0 18px 38px rgba(223,37,43,.26) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card, .service-feature-card, .service-capability-card, .service-proof-card, .service-planning-card, .planning-guide-card, .quality-card, .timeline-card, .seo-card) {
+  overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card, .service-feature-card, .service-capability-card, .service-proof-card, .service-planning-card, .planning-guide-card, .quality-card, .timeline-card, .seo-card) :is(h3,h4,strong) {
+  color: #071426 !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card, .service-feature-card, .service-capability-card, .service-proof-card, .service-planning-card, .planning-guide-card, .quality-card, .timeline-card, .seo-card) :is(p,li,span) {
+  color: #536981 !important;
+  opacity: 1 !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
+
+html body.service-detail-template .service-page :is(.service-dark-section, .service-proof-dark, .dark-proof-section, .service-final-dark, .service-cta-dark) :is(.service-card, .service-feature-card, .service-capability-card, .service-proof-card, .service-planning-card, .planning-guide-card, .quality-card, .timeline-card, .seo-card, .value-card, .support-card) {
+  background: linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.07)) !important;
+  border-color: rgba(255,255,255,.22) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-dark-section, .service-proof-dark, .dark-proof-section, .service-final-dark, .service-cta-dark) :is(h1,h2,h3,h4,strong,a) {
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-dark-section, .service-proof-dark, .dark-proof-section, .service-final-dark, .service-cta-dark) :is(p,li,span) {
+  color: rgba(255,255,255,.84) !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) {
+  overflow: hidden !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) :is(h2,h3,h4,strong,p,span,li) {
+  color: #071426 !important;
+  opacity: 1 !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) :is(.brand-pill, .logo-pill, .partner-logo, .brand-logo, .service-logo-strip span) {
+  min-width: 120px !important;
+  min-height: 58px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #fff !important;
+  border: 1px solid rgba(7,20,38,.10) !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
+  padding: 10px 16px !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel) :is(.brand-pill, .logo-pill, .partner-logo, .brand-logo, .service-logo-strip span) img {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 104px !important;
+  max-height: 34px !important;
+  object-fit: contain !important;
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+@media (max-width: 900px) {
+  html body.service-detail-template .service-page :is(.service-hero-grid, .service-split, .service-intro-grid, .service-cta-grid) {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Enterprise solution/service readability repair - Aug 2026 */
+html body.service-detail-template .service-page,
+html body.service-detail-template .service-page * {
+  box-sizing: border-box;
+}
+
+html body.service-detail-template .service-page :is(h1, h2, h3, h4, p, li, span, a) {
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+}
+
+html body.service-detail-template .service-page p,
+html body.service-detail-template .service-page li {
+  overflow-wrap: break-word !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-grid, .service-hero-inner, .service-split, .service-intro-grid, .service-cta-grid) {
+  min-width: 0 !important;
+  align-items: center !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero h1, .service-detail-hero h1, .solution-page-hero h1) {
+  max-width: 980px !important;
+  color: #ffffff !important;
+  font-size: clamp(3.1rem, 6.2vw, 6.5rem) !important;
+  line-height: 0.98 !important;
+  letter-spacing: 0 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero p, .service-detail-hero p, .solution-page-hero p) {
+  max-width: 850px !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  line-height: 1.65 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel, .solution-hero-panel, .hero-card, .service-role-card, .service-proof-panel) {
+  min-width: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid #dbe4ef !important;
+  border-left: 5px solid #e3292f !important;
+  border-radius: 24px !important;
+  background: rgba(255, 255, 255, 0.96) !important;
+  color: #071426 !important;
+  box-shadow: 0 30px 80px rgba(8, 25, 45, 0.18) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel, .solution-hero-panel, .hero-card, .service-role-card, .service-proof-panel) :is(h2, h3, h4, p, li, span, strong, small) {
+  color: #071426 !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel, .hero-side-panel, .hero-proof-panel, .solution-hero-panel, .hero-card, .service-role-card, .service-proof-panel) :is(.service-eyebrow, .eyebrow, .kicker, .label) {
+  color: #e3292f !important;
+}
+
+html body.service-detail-template .service-page :is(.icon-wrap, .card-icon, .service-icon, .feature-icon, .solution-icon, .metric-icon) {
+  display: inline-flex !important;
+  width: 64px !important;
+  height: 64px !important;
+  flex: 0 0 64px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 18px !important;
+  background: linear-gradient(135deg, #e3292f, #ff5b4f) !important;
+  color: #ffffff !important;
+  box-shadow: 0 16px 34px rgba(227, 41, 47, 0.28) !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.icon-wrap, .card-icon, .service-icon, .feature-icon, .solution-icon, .metric-icon) :is(svg, i),
+html body.service-detail-template .service-page :is(.icon-wrap, .card-icon, .service-icon, .feature-icon, .solution-icon, .metric-icon) svg * {
+  width: 26px !important;
+  height: 26px !important;
+  color: #ffffff !important;
+  stroke: currentColor !important;
+  fill: none !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card, .service-check-card, .service-capability-card, .service-proof-card, .service-planning-card, .product-rfq-grid article, .planning-guide-card, .quality-card, .timeline-card, .solution-card, .solution-feature-card, .solution-proof-card, .solution-step-card, .service-feature-card, .service-benefit-card, .service-detail-card, .validation-card, .requirement-card) {
+  min-width: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid #dbe4ef !important;
+  border-top: 4px solid #e3292f !important;
+  border-radius: 22px !important;
+  background: linear-gradient(180deg, #ffffff, #f8fbff) !important;
+  color: #071426 !important;
+  box-shadow: 0 22px 65px rgba(8, 25, 45, 0.09) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card, .service-check-card, .service-capability-card, .service-proof-card, .service-planning-card, .product-rfq-grid article, .planning-guide-card, .quality-card, .timeline-card, .solution-card, .solution-feature-card, .solution-proof-card, .solution-step-card, .service-feature-card, .service-benefit-card, .service-detail-card, .validation-card, .requirement-card) :is(h3, h4) {
+  color: #071426 !important;
+  line-height: 1.14 !important;
+  letter-spacing: 0 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-card, .service-check-card, .service-capability-card, .service-proof-card, .service-planning-card, .product-rfq-grid article, .planning-guide-card, .quality-card, .timeline-card, .solution-card, .solution-feature-card, .solution-proof-card, .solution-step-card, .service-feature-card, .service-benefit-card, .service-detail-card, .validation-card, .requirement-card) :is(p, li, span) {
+  color: #526784 !important;
+  line-height: 1.65 !important;
+  opacity: 1 !important;
+}
+
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section, .service-dark-band, .service-cta, .service-proof-dark, .service-final-dark, .service-procurement, .service-decision-section, .service-role-section, .solution-paths-dark, .dark-feature-section) {
+  background:
+    radial-gradient(circle at 16% 10%, rgba(227, 41, 47, 0.18), transparent 30%),
+    radial-gradient(circle at 84% 12%, rgba(57, 125, 190, 0.24), transparent 36%),
+    linear-gradient(135deg, #061425 0%, #12375a 58%, #3b2035 100%) !important;
+  color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section, .service-dark-band, .service-cta, .service-proof-dark, .service-final-dark, .service-procurement, .service-decision-section, .service-role-section, .solution-paths-dark, .dark-feature-section) :is(h1, h2, h3, h4, p, li, span, strong, a) {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) :is(.seo-intent-panel, .intent-card, .search-card, .service-intent-card, .seo-intent-card, .service-seo-card, a) {
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-left: 4px solid #ff454a !important;
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.16) !important;
+}
+
+html body.service-detail-template .service-page :is(.keyword-chip, .service-chip, .tag-chip, .intent-chip, .solution-chip) {
+  display: inline-flex !important;
+  min-height: 42px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 1rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.24) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.14) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  text-decoration: none !important;
+}
+
+html body.service-detail-template .service-page :is(.brand-stack, .partner-stack, .brand-grid, .hero-logo-grid, .service-logo-strip, .brand-stack-grid) {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr)) !important;
+  gap: 0.85rem !important;
+}
+
+html body.service-detail-template .service-page :is(.brand-logo, .logo-pill, .partner-logo, .hero-logo, .brand-stack figure, .partner-stack figure) {
+  display: flex !important;
+  min-height: 66px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 0.75rem 1rem !important;
+  border: 1px solid #e2e8f2 !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(.brand-stack, .partner-stack, .brand-grid, .hero-logo-grid, .service-logo-strip, .brand-stack-grid) :is(img, svg) {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 84% !important;
+  max-height: 46px !important;
+  object-fit: contain !important;
+  margin: auto !important;
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+html body.service-detail-template .service-page :is(.btn, .btn-primary, .button, .button-primary, .cta-primary) {
+  color: #ffffff !important;
+}
+
+html body.service-detail-template .service-page :is(.btn-secondary, .button-secondary, .cta-secondary) {
+  color: #071426 !important;
+  background: #ffffff !important;
+}
+
+@media (max-width: 1100px) {
+  html body.service-detail-template .service-page :is(.service-hero-grid, .service-hero-inner, .service-split, .service-intro-grid, .service-cta-grid) {
+    grid-template-columns: 1fr !important;
+  }
+
+  html body.service-detail-template .service-page :is(.service-hero h1, .service-detail-hero h1, .solution-page-hero h1) {
+    font-size: clamp(2.55rem, 10vw, 4.2rem) !important;
+  }
+}
+
+/* --- Premium UI Redesign Override Lock --- */
+
+/* 1. Room Configurator: Spacious single-column layout for room cards */
+.av-plan-list {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+}
+
+.av-plan-card header {
+    align-items: center !important;
+}
+
+/* 2. Homepage Operating Model CTA: High-contrast premium dark slate container */
+.model-bottom-cta {
+    background: linear-gradient(135deg, #071426 0%, #122b49 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 20px 48px rgba(7, 20, 38, 0.18) !important;
+}
+
+.model-bottom-cta p {
+    color: rgba(255, 255, 255, 0.88) !important;
+}
+
+/* 3. Global CTA Secondary Buttons: Explicit contrast fix for white-on-white anchors (high specificity) */
+html body.service-detail-template .service-page :is(.service-hero, .service-detail-hero, .service-cta, .hero-message-section, .about-modern-cta, .seo-intent-section, .model-bottom-cta) :is(.btn-secondary, .service-btn-secondary, .hero-btn-secondary, .button-secondary, .btn-outline) {
+    background: #ffffff !important;
+    color: #081a31 !important;
+    border: 1px solid rgba(8, 26, 46, 0.16) !important;
+}
+
+html body.service-detail-template .service-page :is(.service-hero, .service-detail-hero, .service-cta, .hero-message-section, .about-modern-cta, .seo-intent-section, .model-bottom-cta) :is(.btn-secondary, .service-btn-secondary, .hero-btn-secondary, .button-secondary, .btn-outline):hover {
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: #df2b2f !important;
+    border-color: #df2b2f !important;
+    transform: translateY(-2px) !important;
+}
+
+/* 4. Service Page Hero Panel: Premium interactive dark-glassmorphism sidebar */
+html body.service-detail-template .service-page .service-hero-panel {
+    background: rgba(8, 20, 36, 0.76) !important;
+    backdrop-filter: blur(20px) saturate(160%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-left: 5px solid #ef3438 !important;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35) !important;
+    color: #ffffff !important;
+    border-radius: 24px !important;
+    padding: clamp(24px, 2.5vw, 38px) !important;
+}
+
+/* Style parent panel titles */
+html body.service-detail-template .service-page .service-hero-panel > p {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.11em !important;
+    color: #ffffff !important;
+    margin: 0 0 20px !important;
+    padding-bottom: 12px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ensure inner texts of the panel remain white and highly readable */
+html body.service-detail-template .service-page :is(.service-hero-panel, .service-trust-panel) :is(h2, h3, h4, p, li, span, strong, small) {
+    color: #ffffff !important;
+}
+
+/* Ensure list items/trust divisions are translucent modern tiles */
+html body.service-detail-template .service-page .service-hero-panel :is(.service-trust-grid div, article, li) {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 14px !important;
+    padding: 14px 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+    min-height: auto !important;
+}
+
+/* Redesign trust pill badges dynamically */
+html body.service-detail-template .service-page .service-hero-panel :is(.service-trust-grid strong, article strong) {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: linear-gradient(135deg, #ef3438 0%, #c91f28 100%) !important;
+    color: #ffffff !important;
+    border-radius: 999px !important;
+    padding: 6px 12px !important;
+    width: auto !important;
+    min-width: 88px !important;
+    height: auto !important;
+    font-size: 0.78rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.06em !important;
+    margin-right: 0 !important;
+    box-shadow: 0 4px 12px rgba(239, 52, 56, 0.2) !important;
+}
+
+/* Description spans next to pill badges */
+html body.service-detail-template .service-page .service-hero-panel .service-trust-grid span {
+    color: rgba(255, 255, 255, 0.82) !important;
+    font-size: 0.92rem !important;
+    line-height: 1.35 !important;
+    font-weight: 500 !important;
+}
+
+/* Partner Brand Logos: Sleek elevated white chips */
+html body.service-detail-template .service-page .service-hero-panel .service-logo-strip img {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    padding: 8px 12px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12) !important;
+    transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1), filter 0.22s ease !important;
+    height: 48px !important;
+    object-fit: contain !important;
+}
+
+html body.service-detail-template .service-page .service-hero-panel .service-logo-strip img:hover {
+    transform: translateY(-2px) !important;
+    filter: brightness(1.04) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18) !important;
+}
+
+/* 5. Global Button Centering: Keep text vertically and horizontally in the absolute middle */
+html body :is(.btn, .btn-primary, .btn-secondary, .btn-outline, .hero-btn, .service-btn, .service-btn-primary, .service-btn-secondary, .product-action-btn, .download-btn, .button, .button-primary, .button-secondary, .cta-primary, .cta-secondary, .av-builder-btn) {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+/* 6. Service Applications: Center last row items of the flex wrap grid for symmetry */
+html body.service-detail-template .service-page .service-application-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: clamp(22px, 2.4vw, 34px) !important;
+}
+
+html body.service-detail-template .service-page .service-application-grid article {
+    flex: 1 1 320px !important;
+    max-width: calc(33.333% - 24px) !important;
+}
+
+@media (max-width: 1024px) {
+    html body.service-detail-template .service-page .service-application-grid article {
+        max-width: calc(50% - 24px) !important;
+    }
+}
+
+@media (max-width: 640px) {
+    html body.service-detail-template .service-page .service-application-grid article {
+        max-width: 100% !important;
+    }
+}
+
+/* 7. Sub-Navigation Ribbon: Center items on desktop while keeping scrollability on mobile */
+@media (min-width: 980px) {
+    .service-page-index .container {
+        justify-content: center !important;
+    }
+}
+
+.service-page .service-page-index a {
+    transition: all 0.22s ease !important;
+}
+
+.service-page .service-page-index a.is-active {
+    background: #d72f2f !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(215, 47, 47, 0.24) !important;
+    border-color: #d72f2f !important;
+}
+
+/* 8. RFQ Checklist Cards: Premium high-end interactive cards */
+html body .product-rfq-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 28px !important;
+    margin-block: 32px !important;
+}
+
+@media (max-width: 1024px) {
+    html body .product-rfq-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 640px) {
+    html body .product-rfq-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+html body .product-rfq-grid article {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%) !important;
+    border: 1px solid rgba(8, 26, 46, 0.08) !important;
+    border-top: 4px solid #df2b2f !important;
+    border-radius: 20px !important;
+    padding: 32px 28px !important;
+    box-shadow: 0 10px 30px rgba(8, 26, 46, 0.03) !important;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    overflow: visible !important;
+    min-height: auto !important;
+    height: 100% !important;
+}
+
+html body .product-rfq-grid article:hover {
+    transform: translateY(-8px) scale(1.01) !important;
+    border-color: rgba(223, 43, 47, 0.3) !important;
+    border-top-color: #df2b2f !important;
+    box-shadow: 0 24px 54px rgba(223, 43, 47, 0.12) !important;
+}
+
+/* Number badges */
+html body .product-rfq-grid article span {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 38px !important;
+    height: 38px !important;
+    background: linear-gradient(135deg, #ef3438 0%, #c91f28 100%) !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    font-size: 0.9rem !important;
+    border-radius: 12px !important;
+    margin-bottom: 20px !important;
+    box-shadow: 0 4px 10px rgba(239, 52, 56, 0.24) !important;
+    opacity: 1 !important;
+}
+
+/* Titles */
+html body .product-rfq-grid article p {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    margin: 0 0 12px 0 !important;
+    line-height: 1.3 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+}
+
+/* Subtext (data-detail) rendered via ::after */
+html body .product-rfq-grid article::after {
+    content: attr(data-detail) !important;
+    display: block !important;
+    position: static !important;
+    margin-top: auto !important;
+    background: rgba(15, 23, 42, 0.03) !important;
+    border: 1px solid rgba(15, 23, 42, 0.05) !important;
+    color: #475569 !important;
+    font-size: 0.84rem !important;
+    line-height: 1.45 !important;
+    font-weight: 500 !important;
+    padding: 12px 14px !important;
+    border-radius: 10px !important;
+    text-align: left !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* 9. Search Intent Section: Remove character limit constraints on main heading text */
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-copy h2 {
+    max-width: none !important;
+}
+
+/* 10. Symmetric Grid Balancing: Ensure grids with 4, 5, 7, or 8 items look balanced and complete on desktop */
+@media (min-width: 1025px) {
+    html body.service-detail-template .service-page :is(.service-timeline, .service-planning-grid, .service-card-grid, .service-feature-grid) {
+        display: grid !important;
+        grid-template-columns: repeat(6, 1fr) !important;
+        gap: clamp(18px, 2vw, 28px) !important;
+    }
+
+    html body.service-detail-template .service-page :is(.service-timeline, .service-planning-grid, .service-card-grid, .service-feature-grid) > article {
+        grid-column: span 2 !important;
+    }
+
+    /* Exactly 8 items: last 2 items span 3 columns each to fill the row */
+    html body.service-detail-template .service-page :is(.service-timeline, .service-planning-grid, .service-card-grid, .service-feature-grid) > article:nth-child(8):last-child,
+    html body.service-detail-template .service-page :is(.service-timeline, .service-planning-grid, .service-card-grid, .service-feature-grid) > article:nth-child(7):nth-last-child(2) {
+        grid-column: span 3 !important;
+    }
+
+    /* Exactly 7 items: last item spans all 6 columns */
+    html body.service-detail-template .service-page :is(.service-timeline, .service-planning-grid, .service-card-grid, .service-feature-grid) > article:nth-child(7):last-child {
+        grid-column: span 6 !important;
+    }
+
+    /* Exactly 5 items: last 2 items span 3 columns each */
+    html body.service-detail-template .service-page :is(.service-timeline, .service-planning-grid, .service-card-grid, .service-feature-grid) > article:nth-child(5):last-child,
+    html body.service-detail-template .service-page :is(.service-timeline, .service-planning-grid, .service-card-grid, .service-feature-grid) > article:nth-child(4):nth-last-child(2) {
+        grid-column: span 3 !important;
+    }
+
+    /* Exactly 4 items: last item spans all 6 columns */
+    html body.service-detail-template .service-page :is(.service-timeline, .service-planning-grid, .service-card-grid, .service-feature-grid) > article:nth-child(4):last-child {
+        grid-column: span 6 !important;
+    }
+}
+
+/* 11. FAQ Accordion: Perfect vertical and horizontal alignment for plus/minus icon inside pink circle */
+html body .service-faq-list summary::after {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    font-size: 1.3rem !important;
+    padding-bottom: 2px !important;
+    font-weight: 700 !important;
+}
+
+html body .service-faq-list details[open] summary::after {
+    padding-bottom: 3px !important;
+}
+
+/* 12. Secondary & Outline Buttons on Dark Backgrounds: Force clean translucent styling (no white-on-white) globally */
+html body :is(.service-cta, .model-bottom-cta, .operating-model, #operating-model, .hero, #home, .hero-message-copy, .solution-page-hero, .about-vision-dark, .about-modern-cta) :is(.btn-secondary, .service-btn-secondary, .hero-btn-secondary, .button-secondary, .btn-outline) {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    backdrop-filter: blur(8px) !important;
+    transition: all 0.25s ease !important;
+}
+
+html body :is(.service-cta, .model-bottom-cta, .operating-model, #operating-model, .hero, #home, .hero-message-copy, .solution-page-hero, .about-vision-dark, .about-modern-cta) :is(.btn-secondary, .service-btn-secondary, .hero-btn-secondary, .button-secondary, .btn-outline):hover {
+    background: #ffffff !important;
+    color: #df2b2f !important;
+    -webkit-text-fill-color: #df2b2f !important;
+    border-color: #ffffff !important;
+    transform: translateY(-2px) !important;
+}
+
+/* 13. Brand Logo Capsules: Hide redundant text to prevent overflow and center the clean logo */
+html body :is(.product-brand-cloud, .industry-brand-row) span b {
+    display: none !important;
+}
+
+html body :is(.product-brand-cloud, .industry-brand-row) span {
+    justify-content: center !important;
+    padding: 10px 24px !important;
+    min-width: 140px !important;
+}
+
+html body :is(.product-brand-cloud, .industry-brand-row) img {
+    margin: 0 !important;
+    display: block !important;
+}
+
+/* 14. Search Intent Heading Size Adjustments: Make title fit perfectly without vertical overflow */
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-copy h2 {
+    max-width: none !important;
+    font-size: clamp(2.15rem, 3.8vw, 3.4rem) !important;
+    line-height: 1.12 !important;
+}
+
+/* 15. Redesign Buying Guidance Checklist (.partner-tech-procurement-grid) to be Modern, Glassmorphic, and Aesthetic */
+html body.service-detail-template .service-page .partner-tech-procurement-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+@media (max-width: 820px) {
+    html body.service-detail-template .service-page .partner-tech-procurement-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+html body.service-detail-template .service-page .partner-tech-procurement-grid article {
+    display: flex !important;
+    align-items: center !important;
+    min-height: auto !important;
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%) !important;
+    border: 1px solid rgba(8, 26, 46, 0.08) !important;
+    border-left: 4px solid #df2b2f !important;
+    border-radius: 20px !important;
+    padding: 24px 28px !important;
+    box-shadow: 0 8px 24px rgba(8, 26, 46, 0.03) !important;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    grid-column: span 1 !important;
+}
+
+html body.service-detail-template .service-page .partner-tech-procurement-grid article:hover {
+    transform: translateY(-6px) !important;
+    border-color: rgba(223, 43, 47, 0.2) !important;
+    border-left-color: #df2b2f !important;
+    box-shadow: 0 20px 44px rgba(223, 43, 47, 0.1) !important;
+}
+
+/* Redesigned step numbers */
+html body.service-detail-template .service-page .partner-tech-procurement-grid article strong {
+    flex: 0 0 auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    background: linear-gradient(135deg, #071426 0%, #173d70 100%) !important;
+    color: #ffffff !important;
+    font-size: 0.95rem !important;
+    font-weight: 900 !important;
+    border-radius: 12px !important;
+    margin: 0 !important;
+    box-shadow: 0 4px 12px rgba(7, 20, 38, 0.18) !important;
+}
+
+/* Redesigned content paragraph */
+html body.service-detail-template .service-page .partner-tech-procurement-grid article p {
+    margin: 0 0 0 20px !important;
+    color: #334155 !important;
+    font-size: 0.98rem !important;
+    font-weight: 600 !important;
+    line-height: 1.55 !important;
 }
