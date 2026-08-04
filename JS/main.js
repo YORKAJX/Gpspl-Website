@@ -107,8 +107,9 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         }).join('') : getFallbackHeroStack(pageTitle);
 
+        const panelLabel = /amc|maintenance|service support|installation/i.test(pageTitle) ? 'Support Scope' : 'Brand Stack';
         panel.innerHTML = `
-            <p class="product-hero-panel-label">Brand Stack</p>
+            <p class="product-hero-panel-label">${panelLabel}</p>
             <div class="product-hero-brand-grid">${brandCards}</div>
         `;
 
@@ -130,6 +131,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (key.includes('crestron') || key.includes('amx') || key.includes('aten')) return 'Control systems';
         if (key.includes('luminous')) return 'Power backup';
         if (key.includes('hp') || key.includes('dell') || key.includes('lenovo') || key.includes('acer')) return 'Enterprise IT';
+        if (key.includes('multi-brand')) return 'Eligible multi-OEM support';
+        if (key.includes('oem')) return 'Warranty coordination';
+        if (key.includes('existing')) return 'Installed-base assessment';
         return 'Supply and support';
     }
 
@@ -540,3 +544,25 @@ document.addEventListener("DOMContentLoaded", () => {
     initConversionTrackingHooks();
     setTimeout(initStatsAnimation, 500); 
 });
+
+
+/* ===== Industry Solutions Tab Switcher ===== */
+(function() {
+    var tabs = document.querySelectorAll('.industry-tab');
+    var panels = document.querySelectorAll('.industry-panel');
+    if (!tabs.length) return;
+    tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            var target = tab.getAttribute('data-tab');
+            tabs.forEach(function(t) {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
+            });
+            panels.forEach(function(p) { p.classList.remove('active'); });
+            tab.classList.add('active');
+            tab.setAttribute('aria-selected', 'true');
+            var panel = document.getElementById('tab-' + target);
+            if (panel) { panel.classList.add('active'); }
+        });
+    });
+})();
