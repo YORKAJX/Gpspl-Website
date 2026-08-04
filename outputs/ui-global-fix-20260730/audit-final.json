@@ -1,0 +1,441 @@
+{
+  "errors": [],
+  "audit": [
+    {
+      "page": "index.html",
+      "overflow": [
+        {
+          "tag": "DIV",
+          "cls": "service-orbit service-orbit-one",
+          "text": ""
+        },
+        {
+          "tag": "DIV",
+          "cls": "product-glow product-glow-one",
+          "text": ""
+        },
+        {
+          "tag": "DIV",
+          "cls": "product-glow product-glow-two",
+          "text": ""
+        },
+        {
+          "tag": "DIV",
+          "cls": "testimonial-glow testimonial-glow-one",
+          "text": ""
+        },
+        {
+          "tag": "DIV",
+          "cls": "testimonial-glow testimonial-glow-two",
+          "text": ""
+        },
+        {
+          "tag": "DIV",
+          "cls": "partner-orbit partner-orbit-one",
+          "text": ""
+        },
+        {
+          "tag": "DIV",
+          "cls": "partner-orbit partner-orbit-two",
+          "text": ""
+        },
+        {
+          "tag": "DIV",
+          "cls": "client-name-track",
+          "text": "Candor TechSpace\nCORPORATE REAL ESTATE\nLeisure Hotels\nHOSPITALITY\nElan"
+        }
+      ],
+      "badText": [
+        {
+          "tag": "MAIN",
+          "text": "AV SYSTEM INTEGRATOR & TECHNOLOGY DISTRIBUTOR SINCE 1997\n\nAV system integration\nfor enterp"
+        },
+        {
+          "tag": "SECTION",
+          "text": "AV BOQ CALCULATOR\n\nBuild a room-wise AV BOQ estimate before the site survey.\n\nUse GPSPL's "
+        },
+        {
+          "tag": "DIV",
+          "text": "AV BOQ CALCULATOR\n\nBuild a room-wise AV BOQ estimate before the site survey.\n\nUse GPSPL's "
+        },
+        {
+          "tag": "DIV",
+          "text": "ENGINEERING AV BOQ DESIGNER\nUP TO 12 ROOMS\nBuild a client-ready AV estimate\nROOMS IN PROJE"
+        },
+        {
+          "tag": "DIV",
+          "text": "ENGINEERING AV BOQ DESIGNER\nUP TO 12 ROOMS\nBuild a client-ready AV estimate\nROOMS IN PROJE"
+        },
+        {
+          "tag": "DIV",
+          "text": "ENGINEERING AV BOQ DESIGNER\nUP TO 12 ROOMS\nBuild a client-ready AV estimate\nROOMS IN PROJE"
+        },
+        {
+          "tag": "DIV",
+          "text": "ENGINEERING AV BOQ DESIGNER\nUP TO 12 ROOMS\nBuild a client-ready AV estimate\nROOMS IN PROJE"
+        },
+        {
+          "tag": "DIV",
+          "text": "ROOM 1 DETAILS\n\nWhat is this room for?\nMeetings / Video Calls\nBoardroom / Leadership\nTrain"
+        }
+      ],
+      "skinny": [
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "text": "ACTIVE ROOM\nConference Room",
+          "w": 142,
+          "h": 144
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "text": "ROOM AREA\n384 sq. ft.",
+          "w": 142,
+          "h": 144
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "text": "TIMELINE\n7-9 working days after final PO/site readiness",
+          "w": 142,
+          "h": 144
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "text": "BUDGET CLASS\nBusiness",
+          "w": 142,
+          "h": 144
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "text": "Conference Room | 10 seats | 384 sq. ft.",
+          "w": 85,
+          "h": 87
+        },
+        {
+          "tag": "P",
+          "cls": "",
+          "text": "Engineer-hour based LED/video/DSP/control setup.",
+          "w": 106,
+          "h": 64
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "text": "TOTAL ESTIMATED RANGE",
+          "w": 106,
+          "h": 59
+        }
+      ]
+    },
+    {
+      "page": "projects.html",
+      "overflow": [],
+      "badText": [],
+      "skinny": []
+    },
+    {
+      "page": "case-studies.html",
+      "overflow": [],
+      "badText": [],
+      "skinny": []
+    },
+    {
+      "page": "about-gpspl.html",
+      "overflow": [],
+      "badText": [],
+      "skinny": [
+        {
+          "tag": "P",
+          "cls": "",
+          "text": "Started as a peripheral solutions provider focusing on HP and Epson pr",
+          "w": 109,
+          "h": 376
+        },
+        {
+          "tag": "P",
+          "cls": "",
+          "text": "Expanded into server infrastructure, storage solutions, networking, an",
+          "w": 109,
+          "h": 323
+        },
+        {
+          "tag": "P",
+          "cls": "",
+          "text": "Entered the display solutions market with Samsung LFD (Large Format Di",
+          "w": 109,
+          "h": 215
+        },
+        {
+          "tag": "P",
+          "cls": "",
+          "text": "Diversified into video solutions, IT infrastructure, and networking te",
+          "w": 109,
+          "h": 188
+        },
+        {
+          "tag": "P",
+          "cls": "",
+          "text": "Expanded into professional audio visual solutions, JBL systems, and la",
+          "w": 109,
+          "h": 215
+        },
+        {
+          "tag": "P",
+          "cls": "",
+          "text": "Successfully introduced smart classroom solutions for educational inst",
+          "w": 109,
+          "h": 188
+        },
+        {
+          "tag": "P",
+          "cls": "",
+          "text": "Focused on hybrid classroom technologies that enable modern and flexib",
+          "w": 109,
+          "h": 242
+        },
+        {
+          "tag": "P",
+          "cls": "",
+          "text": "Delivering professional audio visual solutions for lecture halls, audi",
+          "w": 109,
+          "h": 376
+        }
+      ]
+    },
+    {
+      "page": "audio-visual-integration.html",
+      "overflow": [],
+      "badText": [
+        {
+          "tag": "MAIN",
+          "text": "Home\n/\nServices\n/\nAudio Visual Integration for enterprise rooms and facilities\n\nAV SYSTEM "
+        },
+        {
+          "tag": "SECTION",
+          "text": "FAQ\n\nFrequently Asked Questions\n\nAnswers to common questions about design, implementation,"
+        },
+        {
+          "tag": "DIV",
+          "text": "FAQ\n\nFrequently Asked Questions\n\nAnswers to common questions about design, implementation,"
+        },
+        {
+          "tag": "DIV",
+          "text": "What does an AV system integrator do?\nDoes GPSPL provide product supply and installation b"
+        },
+        {
+          "tag": "DETAILS",
+          "text": "What does an AV system integrator do?"
+        },
+        {
+          "tag": "SUMMARY",
+          "text": "What does an AV system integrator do?"
+        },
+        {
+          "tag": "DETAILS",
+          "text": "Does GPSPL provide product supply and installation both?"
+        },
+        {
+          "tag": "SUMMARY",
+          "text": "Does GPSPL provide product supply and installation both?"
+        }
+      ],
+      "skinny": []
+    },
+    {
+      "page": "conference-room-solutions.html",
+      "overflow": [
+        {
+          "tag": "IMG",
+          "cls": "",
+          "text": ""
+        }
+      ],
+      "badText": [
+        {
+          "tag": "MAIN",
+          "text": "Home\n/\nSolutions\n/\nConference rooms that start fast, sound clear and look professional.\n\nC"
+        },
+        {
+          "tag": "SECTION",
+          "text": "BUYER QUESTIONS\n\nQuestions clients usually ask before finalizing a meeting room.\nHow do yo"
+        },
+        {
+          "tag": "DIV",
+          "text": "BUYER QUESTIONS\n\nQuestions clients usually ask before finalizing a meeting room.\nHow do yo"
+        },
+        {
+          "tag": "DIV",
+          "text": "How do you decide display size?\n\nDisplay size depends on viewing distance, seating depth, "
+        },
+        {
+          "tag": "DETAILS",
+          "text": "How do you decide display size?\n\nDisplay size depends on viewing distance, seating depth, "
+        },
+        {
+          "tag": "SUMMARY",
+          "text": "How do you decide display size?"
+        },
+        {
+          "tag": "DETAILS",
+          "text": "Do all rooms need DSP and ceiling microphones?"
+        },
+        {
+          "tag": "SUMMARY",
+          "text": "Do all rooms need DSP and ceiling microphones?"
+        }
+      ],
+      "skinny": []
+    },
+    {
+      "page": "professional-audio-solutions.html",
+      "overflow": [
+        {
+          "tag": "IMG",
+          "cls": "",
+          "text": ""
+        }
+      ],
+      "badText": [
+        {
+          "tag": "MAIN",
+          "text": "Home\n/\nSolutions\n/\nClear speech, controlled coverage and reliable sound for every room.\n\nP"
+        },
+        {
+          "tag": "SECTION",
+          "text": "AUDIO FAQ\n\nQuestions clients ask before finalizing an audio system.\nHow does GPSPL decide "
+        },
+        {
+          "tag": "DIV",
+          "text": "AUDIO FAQ\n\nQuestions clients ask before finalizing an audio system.\nHow does GPSPL decide "
+        },
+        {
+          "tag": "DIV",
+          "text": "How does GPSPL decide speaker quantity?\n\nSpeaker quantity is calculated from audience area"
+        },
+        {
+          "tag": "DETAILS",
+          "text": "How does GPSPL decide speaker quantity?\n\nSpeaker quantity is calculated from audience area"
+        },
+        {
+          "tag": "SUMMARY",
+          "text": "How does GPSPL decide speaker quantity?"
+        },
+        {
+          "tag": "DETAILS",
+          "text": "Do I need ceiling microphones or table microphones?"
+        },
+        {
+          "tag": "SUMMARY",
+          "text": "Do I need ceiling microphones or table microphones?"
+        }
+      ],
+      "skinny": []
+    },
+    {
+      "page": "smart-classroom-solutions.html",
+      "overflow": [
+        {
+          "tag": "IMG",
+          "cls": "",
+          "text": ""
+        }
+      ],
+      "badText": [
+        {
+          "tag": "MAIN",
+          "text": "Home\n/\nSolutions\n/\nClassrooms that are easier to teach in, easier to support and ready for"
+        },
+        {
+          "tag": "SECTION",
+          "text": "SMART CLASSROOM FAQ\n\nQuestions education teams ask before finalizing classroom AV.\nInterac"
+        },
+        {
+          "tag": "DIV",
+          "text": "SMART CLASSROOM FAQ\n\nQuestions education teams ask before finalizing classroom AV.\nInterac"
+        },
+        {
+          "tag": "DIV",
+          "text": "Interactive display or projector, which is better?\n\nInteractive displays are strong for di"
+        },
+        {
+          "tag": "DETAILS",
+          "text": "Interactive display or projector, which is better?\n\nInteractive displays are strong for di"
+        },
+        {
+          "tag": "SUMMARY",
+          "text": "Interactive display or projector, which is better?"
+        },
+        {
+          "tag": "DETAILS",
+          "text": "Does every classroom need a microphone and speakers?"
+        },
+        {
+          "tag": "SUMMARY",
+          "text": "Does every classroom need a microphone and speakers?"
+        }
+      ],
+      "skinny": []
+    },
+    {
+      "page": "active-led-video-wall.html",
+      "overflow": [
+        {
+          "tag": "IMG",
+          "cls": "",
+          "text": ""
+        }
+      ],
+      "badText": [
+        {
+          "tag": "MAIN",
+          "text": "Home\n/\nSolutions\n/\nLED walls engineered for impact, uptime and serviceability.\n\nACTIVE LED"
+        },
+        {
+          "tag": "SECTION",
+          "text": "BUYER QUESTIONS\n\nQuestions clients ask before finalizing an LED wall.\nHow is LED wall pixe"
+        },
+        {
+          "tag": "DIV",
+          "text": "BUYER QUESTIONS\n\nQuestions clients ask before finalizing an LED wall.\nHow is LED wall pixe"
+        },
+        {
+          "tag": "DIV",
+          "text": "How is LED wall pixel pitch selected?\n\nPixel pitch depends on viewing distance, wall size,"
+        },
+        {
+          "tag": "DETAILS",
+          "text": "How is LED wall pixel pitch selected?\n\nPixel pitch depends on viewing distance, wall size,"
+        },
+        {
+          "tag": "SUMMARY",
+          "text": "How is LED wall pixel pitch selected?"
+        },
+        {
+          "tag": "DETAILS",
+          "text": "What affects active LED wall pricing?"
+        },
+        {
+          "tag": "SUMMARY",
+          "text": "What affects active LED wall pricing?"
+        }
+      ],
+      "skinny": []
+    },
+    {
+      "page": "amc-maintenance-services.html",
+      "overflow": [
+        {
+          "tag": "IMG",
+          "cls": "",
+          "text": ""
+        }
+      ],
+      "badText": [],
+      "skinny": []
+    }
+  ]
+}

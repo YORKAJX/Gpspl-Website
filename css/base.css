@@ -35870,3 +35870,166 @@ html body .product-value-grid h2 {
     .why-premium-grid { grid-template-columns: 1fr; }
     .why-premium-card { border-radius: 16px; }
 }
+
+
+/* ============================================================
+   BUG FIXES 2026-08-04 — Industry Tabs & Why GPSPL Heading
+   ============================================================ */
+
+/* FIX 1: Industry tabs — force horizontal row layout */
+.industry-tabs {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: auto !important;
+    margin-bottom: clamp(24px, 3.5vw, 44px) !important;
+}
+.industry-tab {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    padding: 11px 22px !important;
+    border-radius: 8px !important;
+    background: rgba(255,255,255,0.05) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    color: rgba(200,220,248,0.68) !important;
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    transition: all 0.25s ease !important;
+    font-family: inherit !important;
+    letter-spacing: 0.01em !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+    flex-shrink: 0 !important;
+}
+.industry-tab:hover {
+    border-color: rgba(239,59,63,0.4) !important;
+    color: #fff !important;
+    background: rgba(239,59,63,0.09) !important;
+}
+.industry-tab.active {
+    background: linear-gradient(135deg, rgba(239,59,63,0.2) 0%, rgba(192,30,30,0.12) 100%) !important;
+    border-color: rgba(239,59,63,0.55) !important;
+    color: #fff !important;
+    box-shadow: 0 0 0 1px rgba(239,59,63,0.12), 0 4px 18px rgba(239,59,63,0.18) !important;
+}
+/* FIX 2: Industry panel — ensure it shows block content */
+.industry-panels {
+    position: relative !important;
+    min-height: 200px !important;
+}
+.industry-panel {
+    display: none !important;
+}
+.industry-panel.active {
+    display: block !important;
+}
+.industry-panel-content {
+    display: grid !important;
+    grid-template-columns: 1fr 340px !important;
+    gap: clamp(28px, 4vw, 60px) !important;
+    align-items: start !important;
+    background: rgba(255,255,255,0.04) !important;
+    border: 1px solid rgba(255,255,255,0.09) !important;
+    border-radius: 20px !important;
+    padding: clamp(24px, 3.5vw, 44px) !important;
+    animation: industry-fade 0.35s ease both !important;
+}
+@media (max-width: 900px) {
+    .industry-panel-content {
+        grid-template-columns: 1fr !important;
+    }
+}
+@media (max-width: 640px) {
+    .industry-tab {
+        padding: 9px 14px !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+/* FIX 3: Why GPSPL heading — solid readable dark text (not invisible gradient on white) */
+.gpspl-why-section .gpspl-section-header h2 {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
+    background-clip: unset !important;
+    color: #071526 !important;
+    font-size: clamp(2rem, 3.5vw, 3rem) !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1.12 !important;
+}
+/* FIX 4: Ensure gpspl-section-header h2 gradient only applies inside dark sections */
+.gpspl-industry-section .gpspl-section-header h2 {
+    color: transparent !important;
+    background: linear-gradient(135deg, #ffffff 0%, #dce8f7 50%, #ffc0c0 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+
+/* ============================================================
+   ADDITIONAL FIX 2026-08-04 — Prevent any ancestor from
+   stretching .industry-tab buttons to full width
+   ============================================================ */
+
+/* Override: flexbox align-stretch from any parent grid/flex context */
+.industry-tabs > .industry-tab {
+    align-self: center !important;
+    justify-self: auto !important;
+    flex: 0 0 auto !important;
+    box-sizing: border-box !important;
+}
+
+/* Override: in case main > section inherits any column grid */
+.gpspl-industry-section .industry-tabs {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Fix: section-header h2 text must be visible on dark vs light bg */
+/* On dark sections: white gradient text */
+.gpspl-industry-section .gpspl-section-header h2,
+.gpspl-trust-strip ~ .gpspl-industry-section .gpspl-section-header h2 {
+    background: linear-gradient(135deg, #ffffff 0%, #dce8f7 50%, #ffc0c0 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+}
+
+/* On light sections (Why GPSPL): solid dark text - NO gradient clip */
+.gpspl-why-section .gpspl-section-header h2 {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: #071526 !important;
+    color: #071526 !important;
+    font-size: clamp(2rem, 3.5vw, 3rem) !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1.12 !important;
+}
+
+/* Why GPSPL section — ensure white background is explicit */
+.gpspl-why-section {
+    background: #ffffff !important;
+}
+
+/* Why GPSPL cards — match light theme */
+.why-premium-card h3 { color: #071526 !important; }
+.why-premium-card > p { color: #5a708a !important; }
+.why-card-number { color: #ef3b3f !important; }
+.why-premium-card ul li { color: #334155 !important; }

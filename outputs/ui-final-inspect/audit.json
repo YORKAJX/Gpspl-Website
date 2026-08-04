@@ -1,0 +1,679 @@
+[
+  {
+    "page": "index.html",
+    "bad": [
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "For daily calls, presentations and hybrid meetings. Changing this updates displa",
+        "color": "rgba(255, 255, 255, 0.76)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": "conference-room-configurator"
+      },
+      {
+        "type": "narrow",
+        "tag": "SPAN",
+        "txt": "Conference Room | 10 seats | 384 sq. ft.",
+        "w": 85,
+        "cls": "",
+        "section": "conference-room-configurator"
+      },
+      {
+        "type": "narrow",
+        "tag": "LI",
+        "txt": "Equipment Installation",
+        "w": 73,
+        "cls": "",
+        "section": "conference-room-configurator"
+      },
+      {
+        "type": "narrow",
+        "tag": "LI",
+        "txt": "Display Mounting & Alignment",
+        "w": 73,
+        "cls": "",
+        "section": "conference-room-configurator"
+      },
+      {
+        "type": "narrow",
+        "tag": "LI",
+        "txt": "Camera Installation",
+        "w": 73,
+        "cls": "",
+        "section": "conference-room-configurator"
+      },
+      {
+        "type": "narrow",
+        "tag": "LI",
+        "txt": "Microphone Installation",
+        "w": 73,
+        "cls": "",
+        "section": "conference-room-configurator"
+      },
+      {
+        "type": "narrow",
+        "tag": "LI",
+        "txt": "Speaker Installation",
+        "w": 73,
+        "cls": "",
+        "section": "conference-room-configurator"
+      },
+      {
+        "type": "narrow",
+        "tag": "LI",
+        "txt": "Cable Laying & Termination",
+        "w": 73,
+        "cls": "",
+        "section": "conference-room-configurator"
+      },
+      {
+        "type": "narrow",
+        "tag": "LI",
+        "txt": "Network Configuration",
+        "w": 73,
+        "cls": "",
+        "section": "conference-room-configurator"
+      },
+      {
+        "type": "narrow",
+        "tag": "LI",
+        "txt": "AMX / Control System Programming",
+        "w": 73,
+        "cls": "",
+        "section": "conference-room-configurator"
+      },
+      {
+        "type": "narrow",
+        "tag": "LI",
+        "txt": "Device Configuration",
+        "w": 73,
+        "cls": "",
+        "section": "conference-room-configurator"
+      },
+      {
+        "type": "narrow",
+        "tag": "LI",
+        "txt": "Testing & Commissioning",
+        "w": 73,
+        "cls": "",
+        "section": "conference-room-configurator"
+      },
+      {
+        "type": "narrow",
+        "tag": "SPAN",
+        "txt": "Integrate\nRooms and sites",
+        "w": 86,
+        "cls": "",
+        "section": "about"
+      },
+      {
+        "type": "narrow",
+        "tag": "SPAN",
+        "txt": "Support\nAMC and service",
+        "w": 89,
+        "cls": "",
+        "section": "about"
+      },
+      {
+        "type": "low-contrast",
+        "tag": "A",
+        "txt": "Schedule Consultation",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(255, 255, 255)",
+        "cls": "btn-primary",
+        "section": "why-gpspl"
+      },
+      {
+        "type": "low-contrast",
+        "tag": "A",
+        "txt": "Talk to an Expert",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(255, 255, 255)",
+        "cls": "btn-primary",
+        "section": "testimonials"
+      }
+    ],
+    "overflow": [
+      {
+        "tag": "DIV",
+        "cls": "service-orbit service-orbit-one",
+        "id": "",
+        "left": -82,
+        "right": 142,
+        "w": 224
+      },
+      {
+        "tag": "DIV",
+        "cls": "product-glow product-glow-one",
+        "id": "",
+        "left": 1296,
+        "right": 1656,
+        "w": 360
+      },
+      {
+        "tag": "DIV",
+        "cls": "product-glow product-glow-two",
+        "id": "",
+        "left": -160,
+        "right": 200,
+        "w": 360
+      },
+      {
+        "tag": "DIV",
+        "cls": "testimonial-glow testimonial-glow-one",
+        "id": "",
+        "left": 1316,
+        "right": 1656,
+        "w": 340
+      },
+      {
+        "tag": "DIV",
+        "cls": "testimonial-glow testimonial-glow-two",
+        "id": "",
+        "left": -140,
+        "right": 220,
+        "w": 360
+      },
+      {
+        "tag": "DIV",
+        "cls": "partner-orbit partner-orbit-one",
+        "id": "",
+        "left": -120,
+        "right": 240,
+        "w": 360
+      },
+      {
+        "tag": "DIV",
+        "cls": "partner-orbit partner-orbit-two",
+        "id": "",
+        "left": 1316,
+        "right": 1676,
+        "w": 360
+      },
+      {
+        "tag": "DIV",
+        "cls": "client-name-track",
+        "id": "",
+        "left": 109,
+        "right": 8683,
+        "w": 8574
+      },
+      {
+        "tag": "ARTICLE",
+        "cls": "client-marquee-card",
+        "id": "",
+        "left": 1457,
+        "right": 1709,
+        "w": 252
+      },
+      {
+        "tag": "DIV",
+        "cls": "",
+        "id": "",
+        "left": 1538,
+        "right": 1690,
+        "w": 152
+      },
+      {
+        "tag": "STRONG",
+        "cls": "",
+        "id": "",
+        "left": 1538,
+        "right": 1690,
+        "w": 152
+      },
+      {
+        "tag": "SMALL",
+        "cls": "",
+        "id": "",
+        "left": 1538,
+        "right": 1690,
+        "w": 152
+      },
+      {
+        "tag": "ARTICLE",
+        "cls": "client-marquee-card",
+        "id": "",
+        "left": 1723,
+        "right": 1975,
+        "w": 252
+      },
+      {
+        "tag": "IMG",
+        "cls": "",
+        "id": "",
+        "left": 1738,
+        "right": 1792,
+        "w": 54
+      },
+      {
+        "tag": "DIV",
+        "cls": "",
+        "id": "",
+        "left": 1804,
+        "right": 1956,
+        "w": 152
+      },
+      {
+        "tag": "STRONG",
+        "cls": "",
+        "id": "",
+        "left": 1804,
+        "right": 1956,
+        "w": 152
+      },
+      {
+        "tag": "SMALL",
+        "cls": "",
+        "id": "",
+        "left": 1804,
+        "right": 1956,
+        "w": 152
+      },
+      {
+        "tag": "ARTICLE",
+        "cls": "client-marquee-card",
+        "id": "",
+        "left": 1989,
+        "right": 2281,
+        "w": 292
+      },
+      {
+        "tag": "SPAN",
+        "cls": "client-marquee-mark",
+        "id": "",
+        "left": 2004,
+        "right": 2058,
+        "w": 54
+      },
+      {
+        "tag": "DIV",
+        "cls": "",
+        "id": "",
+        "left": 2070,
+        "right": 2262,
+        "w": 192
+      }
+    ],
+    "scrollW": 1536,
+    "vw": 1536
+  },
+  {
+    "page": "projects.html",
+    "bad": [
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Map room purpose, users, site constraints, uptime needs and budget direction.",
+        "color": "rgba(255, 255, 255, 0.82)",
+        "bg": "rgba(255, 255, 255, 0.08)",
+        "cls": "",
+        "section": "projects-hero"
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Build the BOQ around display, audio, video, control, infrastructure and support.",
+        "color": "rgba(255, 255, 255, 0.82)",
+        "bg": "rgba(255, 255, 255, 0.08)",
+        "cls": "",
+        "section": "projects-hero"
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Install, commission, document, train users and support the system after go-live.",
+        "color": "rgba(255, 255, 255, 0.82)",
+        "bg": "rgba(255, 255, 255, 0.08)",
+        "cls": "",
+        "section": "projects-hero"
+      },
+      {
+        "type": "narrow",
+        "tag": "A",
+        "txt": "Interactive Displays",
+        "w": 28,
+        "cls": "",
+        "section": "project-capability-cases"
+      },
+      {
+        "type": "narrow",
+        "tag": "A",
+        "txt": "Government Projects",
+        "w": 28,
+        "cls": "",
+        "section": "project-capability-cases"
+      },
+      {
+        "type": "narrow",
+        "tag": "A",
+        "txt": "Healthcare Projects",
+        "w": 28,
+        "cls": "",
+        "section": "project-capability-cases"
+      }
+    ],
+    "overflow": [],
+    "scrollW": 1536,
+    "vw": 1536
+  },
+  {
+    "page": "conference-room-solutions.html",
+    "bad": [
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Collaboration devices",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Collaboration devices",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "H2",
+        "txt": "Sennheiser",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Speech microphones",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "AV imaging",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      }
+    ],
+    "overflow": [
+      {
+        "tag": "IMG",
+        "cls": "",
+        "id": "",
+        "left": -15,
+        "right": 1551,
+        "w": 1567
+      }
+    ],
+    "scrollW": 1536,
+    "vw": 1536
+  },
+  {
+    "page": "professional-audio-solutions.html",
+    "bad": [
+      {
+        "type": "low-contrast",
+        "tag": "H2",
+        "txt": "Sennheiser",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Speech microphones",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Audio systems",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Audio systems",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Power backup",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      }
+    ],
+    "overflow": [
+      {
+        "tag": "IMG",
+        "cls": "",
+        "id": "",
+        "left": -15,
+        "right": 1551,
+        "w": 1567
+      }
+    ],
+    "scrollW": 1536,
+    "vw": 1536
+  },
+  {
+    "page": "smart-classroom-solutions.html",
+    "bad": [
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Interactive classroom panels",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Teaching displays",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Display systems",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Classroom projection",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      }
+    ],
+    "overflow": [
+      {
+        "tag": "IMG",
+        "cls": "",
+        "id": "",
+        "left": -15,
+        "right": 1551,
+        "w": 1567
+      }
+    ],
+    "scrollW": 1536,
+    "vw": 1536
+  },
+  {
+    "page": "active-led-video-wall.html",
+    "bad": [
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "LED wall systems",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Display systems",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Display systems",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Display systems",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      }
+    ],
+    "overflow": [
+      {
+        "tag": "IMG",
+        "cls": "",
+        "id": "",
+        "left": -15,
+        "right": 1551,
+        "w": 1567
+      }
+    ],
+    "scrollW": 1536,
+    "vw": 1536
+  },
+  {
+    "page": "amc-maintenance-services.html",
+    "bad": [
+      {
+        "type": "low-contrast",
+        "tag": "H2",
+        "txt": "Multi-brand AMC",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Eligible multi-OEM support",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "H2",
+        "txt": "OEM coordination",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Warranty coordination",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "H2",
+        "txt": "Existing systems",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      },
+      {
+        "type": "low-contrast",
+        "tag": "P",
+        "txt": "Installed-base assessment",
+        "color": "rgba(255, 255, 255, 0.84)",
+        "bg": "rgba(255, 255, 255, 0.07)",
+        "cls": "",
+        "section": ""
+      }
+    ],
+    "overflow": [
+      {
+        "tag": "IMG",
+        "cls": "",
+        "id": "",
+        "left": -15,
+        "right": 1551,
+        "w": 1567
+      }
+    ],
+    "scrollW": 1536,
+    "vw": 1536
+  },
+  {
+    "page": "control-automation.html",
+    "bad": [
+      {
+        "type": "low-contrast",
+        "tag": "STRONG",
+        "txt": "Harman Professional",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(255, 255, 255, 0.08)",
+        "cls": "",
+        "section": "partner-technology-hero"
+      }
+    ],
+    "overflow": [],
+    "scrollW": 1536,
+    "vw": 1536
+  }
+]

@@ -589,19 +589,34 @@ document.addEventListener("DOMContentLoaded", () => {
             .map(link => document.querySelector(link.getAttribute("href")))
             .filter(Boolean);
 
+        let isScrollingClick = false;
+        let scrollTimeout;
+
         links.forEach(link => {
             link.addEventListener("click", (event) => {
                 const target = document.querySelector(link.getAttribute("href"));
                 if (!target) return;
                 event.preventDefault();
+
+                isScrollingClick = true;
+                clearTimeout(scrollTimeout);
+
+                links.forEach(l => l.classList.remove("is-active"));
+                link.classList.add("is-active");
+
                 const offset = (index?.offsetHeight || 0) + 18;
                 const top = target.getBoundingClientRect().top + window.scrollY - offset;
                 window.scrollTo({ top, behavior: "smooth" });
+
+                scrollTimeout = setTimeout(() => {
+                    isScrollingClick = false;
+                }, 800);
             });
         });
 
         if (links.length && sections.length && "IntersectionObserver" in window) {
             const activeObserver = new IntersectionObserver((entries) => {
+                if (isScrollingClick) return;
                 entries.forEach(entry => {
                     if (!entry.isIntersecting) return;
                     links.forEach(link => {
@@ -810,14 +825,25 @@ document.addEventListener("DOMContentLoaded", () => {
         return `<div class="service-section-heading${centered ? " centered" : ""} reveal"><p class="service-eyebrow">${escapeHtml(eyebrow)}</p><h2>${escapeHtml(title)}</h2><p>${escapeHtml(text)}</p></div>`;
     }
 
-    fetch(dataUrl, { cache: "no-store" })
-        .then(response => {
-            if (!response.ok) throw new Error("Service CMS data could not be loaded.");
-            return response.json();
-        })
-        .then(render)
-        .catch(error => {
-            console.error(error);
-            root.innerHTML = `<section class="service-loading"><div class="container"><h1>Service information unavailable</h1><p>Please try again shortly or contact GPSPL for assistance.</p><a class="service-btn service-btn-primary" href="/contact.html">Contact Us</a></div></section>`;
-        });
+    const hasPreRenderedContent = root.querySelector('.service-hero') || root.querySelector('.partner-tech-hero');
+    const isCmsPreview = window.location.search.includes("preview=true") || window.location.search.includes("cms-edit=true");
+
+    if (hasPreRenderedContent && !isCmsPreview) {
+        initServiceReveal();
+        initServiceInteractions();
+        document.dispatchEvent(new Event("service-page-rendered"));
+    } else {
+        fetch(dataUrl, { cache: "no-store" })
+            .then(response => {
+                if (!response.ok) throw new Error("Service CMS data could not be loaded.");
+                return response.json();
+            })
+            .then(render)
+            .catch(error => {
+                console.error(error);
+                if (!hasPreRenderedContent) {
+                    root.innerHTML = `<section class="service-loading"><div class="container"><h1>Service information unavailable</h1><p>Please try again shortly or contact GPSPL for assistance.</p><a class="service-btn service-btn-primary" href="/contact.html">Contact Us</a></div></section>`;
+                }
+            });
+    }
 });

@@ -94,99 +94,99 @@
             image: "/assests/images/milestones/lg-regional-distributor-2022.jpeg"
         },
         "audio-visual-integration.html": {
-            title: "AV System Integrator in Delhi NCR & India | GPSPL",
-            description: "GPSPL designs and integrates enterprise AV systems for meeting rooms, classrooms, auditoriums, LED walls, control rooms, installation and AMC.",
+            title: "Audio Visual Solution Company & Corporate AV Integrator India | GPSPL",
+            description: "GPSPL is a professional audio visual solution company and corporate AV integrator in India for boardrooms, command centers, LED walls, and auditoriums.",
             type: "service",
             serviceType: "Audio visual integration and enterprise AV system integration",
             image: "/assests/images/vision/conference-room-hero.jpg"
         },
         "conference-room-solutions.html": {
-            title: "Conference Room AV Integrator Delhi NCR | Boardroom Setup | GPSPL",
-            description: "Conference room and boardroom AV setup with displays, cameras, microphones, speakers, DSP, control, cabling, installation, commissioning and AMC support.",
+            title: "Video Conferencing Solution Provider & Meeting Room Automation | GPSPL",
+            description: "GPSPL is a professional video conferencing solution provider and meeting room automation integrator for boardrooms, huddle rooms, and Teams/Zoom setup.",
             type: "service",
             serviceType: "Conference room and boardroom AV solutions",
             image: "/assests/images/products/conference-room-solutions.webp"
         },
         "unified-communication-collaboration.html": {
-            title: "Video Conferencing Solutions Delhi NCR | GPSPL",
-            description: "Video conferencing and unified communication solutions for hybrid meeting rooms, boardrooms, classrooms, cameras, microphones, displays and support.",
+            title: "Video Conferencing Solution Provider & UC Collaboration | GPSPL",
+            description: "GPSPL is a leading video conferencing solution provider and unified communication collaboration integrator for enterprise hybrid workspaces.",
             type: "service",
             serviceType: "Unified communication and collaboration systems",
             image: "/assests/images/products/conference-room-solutions.webp"
         },
         "video-wall-solutions.html": {
-            title: "Video Wall Supplier & Integrator India | GPSPL",
-            description: "LED and LCD video wall supplier and integrator for control rooms, command centers, boardrooms and public display spaces with calibration and AMC.",
+            title: "Control Room Solutions & Video Wall Supplier India | GPSPL",
+            description: "GPSPL designs and supplies control room solutions and multi-display LCD/LED video walls for command centers, lobbies, and mission-critical monitoring.",
             type: "service",
             serviceType: "Video wall solutions and display systems",
             image: "/assests/images/hero/video-wall-command-center.webp"
         },
         "active-led-wall-solutions.html": {
-            title: "Active LED Wall Supplier & Installer India | LED Video Wall | GPSPL",
-            description: "GPSPL supplies, designs, installs and supports active LED walls with pixel pitch planning, cabinets, controllers, mounting structure, calibration, commissioning and AMC.",
+            title: "Active LED Wall Supplier & LED Video Wall Installation | GPSPL",
+            description: "GPSPL is a leading active LED wall supplier and installer in India with pixel pitch planning, structure coordination, display calibration, and AMC support.",
             type: "service",
             serviceType: "Active LED wall solutions and installation",
             image: "/assests/images/products/active-led-video-wall.webp"
         },
         "active-led-wall-installation.html": {
-            title: "Active LED Installation, Calibration & AMC | GPSPL",
-            description: "GPSPL provides active LED wall installation, structure coordination, pixel pitch planning, calibration, commissioning, AMC and after-sales support.",
+            title: "LED Video Wall Installer India | Calibration & AMC | GPSPL",
+            description: "GPSPL is a leading LED video wall installer in India, offering structure coordination, pixel pitch planning, display calibration, and long-term AMC support.",
             type: "service",
             serviceType: "Active LED wall installation and commissioning",
             image: "/assests/images/products/active-led-video-wall.webp"
         },
         "active-led-video-wall.html": {
-            title: "Active LED Video Wall Systems | GPSPL",
+            title: "Active LED Video Wall Systems Supplier | GPSPL",
             description: "Active LED video wall systems for corporate spaces, command centers, auditoriums, retail, education and public display environments.",
             type: "service",
             serviceType: "Active LED video wall systems",
             image: "/assests/images/products/active-led-video-wall.webp"
         },
         "digital-signage-solutions.html": {
-            title: "Digital Signage Display Solutions India | GPSPL",
-            description: "Digital signage display solutions for retail, hospitality, offices and public spaces including commercial screens, media players, menu boards and support.",
+            title: "Digital Signage Solutions & Commercial Display Systems | GPSPL",
+            description: "GPSPL supplies, installs, and supports digital signage solutions including menu boards, hotel TVs, lobby screens, and media player scheduling systems.",
             type: "service",
             serviceType: "Digital signage and commercial display solutions",
             image: "/assests/images/products/digital-signage-solutions.webp"
         },
         "interactive-display-solutions.html": {
-            title: "Interactive Flat Panel Supplier India | GPSPL",
-            description: "Interactive flat panels and smart boards for classrooms, training rooms and meeting spaces with supply, installation, wireless sharing and support.",
+            title: "Interactive Flat Panel Supplier & Smart Board Solutions | GPSPL",
+            description: "GPSPL is an interactive flat panel supplier and smart board distributor in India for school classrooms, college training labs, and corporate huddle rooms.",
             type: "service",
             serviceType: "Interactive display and smart board solutions",
             image: "/assests/images/products/interactive-display-solutions.webp"
         },
         "smart-classroom-solutions.html": {
-            title: "Smart Classroom Solutions India | Interactive Classroom AV | GPSPL",
-            description: "Smart classroom solutions for schools, colleges, universities and training rooms with interactive displays, projectors, classroom audio, cameras, lecture capture, installation, teacher training and AMC.",
+            title: "Smart Classroom Solution & Educational AV Integration | GPSPL",
+            description: "GPSPL delivers smart classroom solutions and interactive flat panel displays for schools, colleges, coaching campuses, and university auditoriums.",
             type: "service",
             serviceType: "Smart classroom, interactive display and education AV integration",
             image: "/assests/images/projects/gpspl-real/polished/direct-education-classroom-panels.webp"
         },
         "professional-audio-solutions.html": {
-            title: "Professional Audio System Integrator India | Auditorium Sound | GPSPL",
-            description: "Professional audio system integrator for auditoriums, seminar halls, conference rooms and classrooms with microphones, speakers, DSP, amplifiers, tuning and AMC.",
+            title: "Professional Audio Solution & Auditorium Sound Integrator | GPSPL",
+            description: "GPSPL is a professional audio solution provider and auditorium sound system integrator in India for clear voice pickup, DSP tuning, and speaker coverage.",
             type: "service",
             serviceType: "Professional audio, auditorium sound and DSP system integration",
             image: "/assests/images/products/professional-audio-solutions.webp"
         },
         "audio-technologies.html": {
-            title: "Audio Technologies for Meeting Rooms & Auditoriums | GPSPL",
-            description: "Audio technologies including Harman, JBL, Sennheiser, microphones, DSP, speakers, room audio and auditorium sound systems by GPSPL.",
+            title: "Professional Audio Solution Technologies & Sound Systems | GPSPL",
+            description: "Professional audio solution technologies including Harman, JBL, Sennheiser, microphones, DSP, speakers, room audio, and auditorium sound by GPSPL.",
             type: "service",
             serviceType: "Audio technologies and professional sound systems",
             image: "/assests/images/products/professional-audio-solutions.webp"
         },
         "video-technologies.html": {
-            title: "Video Technologies, PTZ Cameras & Display Systems | GPSPL",
-            description: "PTZ cameras, video conferencing cameras, lecture capture, projectors, signage, displays, active LED and video wall systems supplied, integrated and supported by GPSPL.",
+            title: "Video Conferencing Solution Provider Technologies & PTZ Cameras | GPSPL",
+            description: "PTZ cameras, video conferencing cameras, display systems, active LED, and video technologies supplied and supported by GPSPL.",
             type: "service",
             serviceType: "Video technologies and visual communication systems",
             image: "/assests/images/hero/video-technologies-boardroom.webp"
         },
         "control-automation.html": {
-            title: "AV Control & Automation Systems India | GPSPL",
-            description: "AV control and automation systems for meeting rooms, displays, audio, lighting, touch panels, source switching, AMX and Crestron workflows.",
+            title: "Meeting Room Automation & AV Control Systems India | GPSPL",
+            description: "Meeting room automation and AV control systems for touch panels, Crestron, AMX, lighting, and source switching integrations by GPSPL.",
             type: "service",
             serviceType: "Control systems and AV automation",
             image: "/assests/images/hero/av.webp"
@@ -198,8 +198,8 @@
             serviceType: "KVM and AV switching solutions"
         },
         "it-infrastructure-solutions.html": {
-            title: "IT Infrastructure, Networking & Server Solutions | GPSPL",
-            description: "IT infrastructure solutions including servers, storage, networking, rack cabinets, UPS systems, security systems and AV readiness support by GPSPL.",
+            title: "IT Infrastructure Solutions & System Integrator Delhi NCR | GPSPL",
+            description: "GPSPL is an enterprise IT infrastructure solutions provider and system integrator in Delhi NCR for servers, storage, networking, rack cabinets, online UPS, and IT AMC support.",
             type: "service",
             serviceType: "IT infrastructure and networking solutions"
         },

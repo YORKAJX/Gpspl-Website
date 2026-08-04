@@ -1,0 +1,9 @@
+{
+  "errors": [],
+  "audit": {
+    "overflowCount": 0,
+    "overflow": [],
+    "badTextCount": 0,
+    "badText": []
+  }
+}
