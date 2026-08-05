@@ -8,7 +8,7 @@
         googleSearchConsoleVerification: "",
         microsoftClarityProjectId: "",
         vercelAnalytics: false,
-        googleReviewsEndpoint: "",
+        googleReviewsEndpoint: "/.netlify/functions/google-reviews",
         leadApiEndpoint: ""
     };
 }());
