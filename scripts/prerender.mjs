@@ -772,7 +772,10 @@ const otherPages = [
     'conference-room-solutions.html',
     'smart-classroom-solutions.html',
     'professional-audio-solutions.html',
-    'it-infrastructure-solutions.html'
+    'it-infrastructure-solutions.html',
+    'lg-createboard-tr3er.html',
+    'lg-commercial-tv-nu88c.html',
+    'lg-commercial-tv-ua831c.html'
 ];
 
 console.log("Inlining header/footer on remaining core indexable pages...");
