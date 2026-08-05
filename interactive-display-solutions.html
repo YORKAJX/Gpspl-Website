@@ -23,11 +23,35 @@
     <meta name="twitter:image" content="https://gpspl.co.in/assests/images/products/interactive-display-solutions.webp">
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/base.css?v=20260729-brand-logo-polish">
+<link rel="stylesheet" href="css/base.css?v=20260805-layout-fix">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="JS/site-config.js" defer></script>
     <script src="JS/seo.js" defer></script>
     <script src="JS/analytics.js" defer></script>
+    <style>
+        .product-range-panel {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: stretch !important;
+            gap: 30px !important;
+        }
+        .product-range-panel > div:first-child {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+        .product-range-panel .featured-product-card {
+            min-height: auto !important;
+            height: auto !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+        }
+        .product-range-panel .product-chip-row {
+            width: 100% !important;
+            justify-content: center !important;
+            margin-top: 10px !important;
+        }
+    </style>
 </head>
 <body>
     <div id="header-container"></div>
