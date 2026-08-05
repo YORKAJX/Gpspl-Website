@@ -545,24 +545,33 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(initStatsAnimation, 500); 
 });
 
-
 /* ===== Industry Solutions Tab Switcher ===== */
 (function() {
-    var tabs = document.querySelectorAll('.industry-tab');
-    var panels = document.querySelectorAll('.industry-panel');
-    if (!tabs.length) return;
-    tabs.forEach(function(tab) {
-        tab.addEventListener('click', function() {
-            var target = tab.getAttribute('data-tab');
-            tabs.forEach(function(t) {
-                t.classList.remove('active');
-                t.setAttribute('aria-selected', 'false');
+    function initIndustryTabs() {
+        var section = document.getElementById('industry-solutions');
+        if (!section) return;
+        var tabs = section.querySelectorAll('.industry-tab');
+        var panels = section.querySelectorAll('.industry-panel');
+        if (!tabs.length) return;
+        tabs.forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                var target = tab.getAttribute('data-tab');
+                if (!target) return;
+                tabs.forEach(function(t) {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                panels.forEach(function(p) { p.classList.remove('active'); });
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+                var panel = section.querySelector('#tab-' + target);
+                if (panel) { panel.classList.add('active'); }
             });
-            panels.forEach(function(p) { p.classList.remove('active'); });
-            tab.classList.add('active');
-            tab.setAttribute('aria-selected', 'true');
-            var panel = document.getElementById('tab-' + target);
-            if (panel) { panel.classList.add('active'); }
         });
-    });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initIndustryTabs);
+    } else {
+        initIndustryTabs();
+    }
 })();

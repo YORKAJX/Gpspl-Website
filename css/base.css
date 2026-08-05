@@ -4978,7 +4978,7 @@ body:has(#home.hero) .featured-products .product-heading-actions {
     font-weight: 900;
 }
 
-.av-room-editor input,
+.av-room-editor input:not([type="checkbox"]),
 .av-room-editor select {
     width: 100%;
     height: 44px;
@@ -35583,14 +35583,14 @@ html body .product-value-grid h2 {
     line-height: 1.72;
     margin: 0;
 }
-.industry-tabs {
+.gpspl-industry-section .industry-tabs {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     justify-content: center;
     margin-bottom: clamp(24px, 3.5vw, 44px);
 }
-.industry-tab {
+.gpspl-industry-section .industry-tab {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -35606,22 +35606,22 @@ html body .product-value-grid h2 {
     font-family: inherit;
     letter-spacing: 0.01em;
 }
-.industry-tab:hover {
+.gpspl-industry-section .industry-tab:hover {
     border-color: rgba(239,59,63,0.4);
     color: #fff;
     background: rgba(239,59,63,0.08);
 }
-.industry-tab.active {
+.gpspl-industry-section .industry-tab.active {
     background: linear-gradient(135deg, rgba(239,59,63,0.18) 0%, rgba(192,30,30,0.1) 100%);
     border-color: rgba(239,59,63,0.5);
     color: #fff;
     box-shadow: 0 0 0 1px rgba(239,59,63,0.12), 0 4px 16px rgba(239,59,63,0.16);
 }
-.industry-tab i { font-size: 0.82rem; }
-.industry-panels { position: relative; min-height: 320px; }
-.industry-panel { display: none; }
-.industry-panel.active { display: block; }
-.industry-panel-content {
+.gpspl-industry-section .industry-tab i { font-size: 0.82rem; }
+.gpspl-industry-section .industry-panels { position: relative; min-height: 320px; }
+.gpspl-industry-section .industry-panel { display: none; }
+.gpspl-industry-section .industry-panel.active { display: block; }
+.gpspl-industry-section .industry-panel-content {
     display: grid;
     grid-template-columns: 1fr 360px;
     gap: clamp(28px, 5vw, 68px);
@@ -35636,27 +35636,27 @@ html body .product-value-grid h2 {
     from { opacity: 0; transform: translateY(14px); }
     to   { opacity: 1; transform: translateY(0); }
 }
-.industry-info h3 {
+.gpspl-industry-section .industry-info h3 {
     font-size: clamp(1.45rem, 2.2vw, 1.95rem);
     font-weight: 900;
     color: #fff;
     letter-spacing: -0.025em;
     margin: 0 0 5px;
 }
-.industry-tagline {
+.gpspl-industry-section .industry-tagline {
     color: #ef3b3f;
     font-size: 0.93rem;
     font-weight: 700;
     margin: 0 0 16px;
     letter-spacing: 0.01em;
 }
-.industry-info > p {
+.gpspl-industry-section .industry-info > p {
     color: rgba(200,220,248,0.76);
     font-size: 0.95rem;
     line-height: 1.72;
     margin-bottom: 20px;
 }
-.industry-points {
+.gpspl-industry-section .industry-points {
     list-style: none;
     padding: 0;
     margin: 0 0 26px;
@@ -35664,7 +35664,7 @@ html body .product-value-grid h2 {
     flex-direction: column;
     gap: 10px;
 }
-.industry-points li {
+.gpspl-industry-section .industry-points li {
     display: flex;
     align-items: flex-start;
     gap: 10px;
@@ -35672,8 +35672,8 @@ html body .product-value-grid h2 {
     font-size: 0.9rem;
     line-height: 1.5;
 }
-.industry-points li i { color: #ef3b3f; margin-top: 3px; flex-shrink: 0; }
-.industry-cta {
+.gpspl-industry-section .industry-points li i { color: #ef3b3f; margin-top: 3px; flex-shrink: 0; }
+.gpspl-industry-section .industry-cta {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -35686,14 +35686,14 @@ html body .product-value-grid h2 {
     transition: gap 0.22s ease, border-color 0.22s ease;
     letter-spacing: 0.02em;
 }
-.industry-cta:hover { gap: 14px; border-color: #ef3b3f; }
-.industry-stat-grid {
+.gpspl-industry-section .industry-cta:hover { gap: 14px; border-color: #ef3b3f; }
+.gpspl-industry-section .industry-stat-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin-bottom: 22px;
 }
-.industry-stat {
+.gpspl-industry-section .industry-stat {
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 14px;
@@ -35701,8 +35701,8 @@ html body .product-value-grid h2 {
     text-align: center;
     transition: border-color 0.2s ease;
 }
-.industry-stat:hover { border-color: rgba(239,59,63,0.38); }
-.industry-stat span {
+.gpspl-industry-section .industry-stat:hover { border-color: rgba(239,59,63,0.38); }
+.gpspl-industry-section .industry-stat span {
     display: block;
     font-size: clamp(1.45rem, 2.5vw, 1.8rem);
     font-weight: 900;
@@ -35711,7 +35711,7 @@ html body .product-value-grid h2 {
     line-height: 1;
     margin-bottom: 4px;
 }
-.industry-stat p {
+.gpspl-industry-section .industry-stat p {
     font-size: 0.7rem;
     color: rgba(200,220,248,0.58);
     margin: 0;
@@ -35719,7 +35719,7 @@ html body .product-value-grid h2 {
     letter-spacing: 0.07em;
     font-weight: 700;
 }
-.industry-brands-label {
+.gpspl-industry-section .industry-brands-label {
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -35727,12 +35727,12 @@ html body .product-value-grid h2 {
     font-weight: 700;
     margin: 0 0 9px;
 }
-.industry-brand-chips {
+.gpspl-industry-section .industry-brand-chips {
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
 }
-.industry-brand-chips span {
+.gpspl-industry-section .industry-brand-chips span {
     background: rgba(255,255,255,0.07);
     border: 1px solid rgba(255,255,255,0.11);
     color: rgba(220,235,255,0.78);
@@ -35743,11 +35743,11 @@ html body .product-value-grid h2 {
     letter-spacing: 0.01em;
 }
 @media (max-width: 900px) {
-    .industry-panel-content { grid-template-columns: 1fr; gap: 28px; }
+    .gpspl-industry-section .industry-panel-content { grid-template-columns: 1fr; gap: 28px; }
 }
 @media (max-width: 620px) {
-    .industry-tab { padding: 9px 14px; font-size: 0.81rem; }
-    .industry-tabs { gap: 6px; }
+    .gpspl-industry-section .industry-tab { padding: 9px 14px; font-size: 0.81rem; }
+    .gpspl-industry-section .industry-tabs { gap: 6px; }
 }
 
 /* ============================================================
@@ -35809,16 +35809,23 @@ html body .product-value-grid h2 {
     text-transform: uppercase;
 }
 .why-card-icon {
-    display: inline-grid;
-    place-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 14px;
-    background: rgba(239,59,63,0.08);
-    color: #ef3b3f;
-    font-size: 1.25rem;
-    margin-bottom: 16px;
-    transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 14px !important;
+    background: rgba(239,59,63,0.08) !important;
+    color: #ef3b3f !important;
+    font-size: 1.25rem !important;
+    margin-bottom: 16px !important;
+    transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease !important;
+    line-height: 1 !important;
+}
+.why-card-icon::before {
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 .why-premium-card:hover .why-card-icon {
     background: #ef3b3f;
@@ -36033,3 +36040,1847 @@ html body .product-value-grid h2 {
 .why-premium-card > p { color: #5a708a !important; }
 .why-card-number { color: #ef3b3f !important; }
 .why-premium-card ul li { color: #334155 !important; }
+
+
+/* ============================================================
+   COMPREHENSIVE FIX PACK 2026-08-05
+   Fixes: white box on industry header, gradient text, panel layout
+   ============================================================ */
+
+/* Fix: <header> semantic element used inside dark sections must be transparent */
+.gpspl-industry-section header,
+.gpspl-arch-section header,
+.gpspl-partners-section header,
+.gpspl-trust-strip header,
+section.gpspl-industry-section .gpspl-section-header,
+section.gpspl-arch-section .gpspl-section-header {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
+/* Fix: industry section header text — clean white gradient on dark bg */
+.gpspl-industry-section .gpspl-section-header {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+.gpspl-industry-section .gpspl-section-header h2 {
+    font-size: clamp(2rem, 3.5vw, 3rem) !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1.12 !important;
+    margin: 8px 0 14px !important;
+    background: linear-gradient(135deg, #ffffff 30%, #e8d5ff 70%, #ffbaba 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+.gpspl-industry-section .gpspl-section-header .section-intro {
+    color: rgba(200, 220, 248, 0.72) !important;
+}
+.gpspl-industry-section .section-eyebrow {
+    color: #ef3b3f !important;
+    background: none !important;
+    -webkit-text-fill-color: #ef3b3f !important;
+}
+
+/* Fix: Why GPSPL section header — solid dark text on white bg */
+.gpspl-why-section .gpspl-section-header {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+.gpspl-why-section .gpspl-section-header h2 {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: #071526 !important;
+    color: #071526 !important;
+    font-size: clamp(2rem, 3.5vw, 3rem) !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1.12 !important;
+    margin: 8px 0 14px !important;
+}
+.gpspl-why-section .gpspl-section-header .section-intro {
+    color: #5a708a !important;
+}
+
+/* Fix: industry panel content — robust grid that doesn't collapse */
+.industry-panel.active {
+    display: block !important;
+    animation: industry-fade 0.35s ease both !important;
+}
+.industry-panel-content {
+    display: grid !important;
+    grid-template-columns: 1fr 320px !important;
+    gap: 44px !important;
+    align-items: start !important;
+    background: rgba(255,255,255,0.04) !important;
+    border: 1px solid rgba(255,255,255,0.09) !important;
+    border-radius: 20px !important;
+    padding: clamp(24px, 3.5vw, 44px) !important;
+    animation: industry-fade 0.35s ease both !important;
+    overflow: visible !important;
+}
+/* Fix: all text inside panel info must NOT overflow */
+.industry-info h3 {
+    font-size: clamp(1.3rem, 2vw, 1.8rem) !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+}
+.industry-info,
+.industry-visual {
+    min-width: 0 !important;
+    overflow: visible !important;
+}
+
+/* Responsive: on tablet, stack panels vertically */
+@media (max-width: 900px) {
+    .industry-panel-content {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+    }
+}
+
+/* Fix: arch section header transparent */
+.gpspl-arch-section .gpspl-section-header {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+.gpspl-arch-section .gpspl-section-header h2 {
+    background: linear-gradient(135deg, #ffffff 30%, #dce8f7 70%, #ffc0c0 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+    font-size: clamp(2rem, 3.5vw, 3rem) !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1.12 !important;
+    margin: 8px 0 14px !important;
+}
+.gpspl-arch-section .gpspl-section-header .section-intro {
+    color: rgba(200, 220, 248, 0.72) !important;
+}
+.gpspl-arch-section .section-eyebrow {
+    color: #ef3b3f !important;
+    background: none !important;
+    -webkit-text-fill-color: #ef3b3f !important;
+}
+
+/* Fix: partners section header transparent */
+.gpspl-partners-section .gpspl-section-header {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+.gpspl-partners-section .gpspl-section-header h2 {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: #071526 !important;
+    color: #071526 !important;
+    font-size: clamp(2rem, 3.5vw, 3rem) !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1.12 !important;
+    margin: 8px 0 14px !important;
+}
+.gpspl-partners-section .gpspl-section-header .section-intro,
+.gpspl-partners-section .gpspl-section-header p:not(.section-eyebrow) {
+    color: #5a708a !important;
+}
+
+/* Fix: partner card hover details — visible above fold */
+.partner-card-premium {
+    min-height: 90px !important;
+    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.partner-details {
+    display: block !important;
+    margin-top: 10px !important;
+}
+.partner-category {
+    font-size: 0.7rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    color: #ef3b3f !important;
+    margin: 0 0 5px !important;
+}
+.partner-details > p {
+    font-size: 0.82rem !important;
+    color: #5a708a !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
+/* Fix: trust strip pill inner span structure */
+.trust-pill > span {
+    display: flex !important;
+    flex-direction: column !important;
+    line-height: 1.22 !important;
+}
+.trust-pill strong {
+    color: #ffffff !important;
+    font-size: 0.88rem !important;
+    font-weight: 800 !important;
+    display: block !important;
+}
+.trust-pill > span > span {
+    color: rgba(200, 220, 245, 0.6) !important;
+    font-size: 0.73rem !important;
+    font-weight: 400 !important;
+    display: block !important;
+}
+
+/* Fix: arch pipeline step text overflow */
+.arch-step-body h3 {
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+}
+.arch-step-body p {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+}
+
+/* Fix: no text anywhere should overflow its container */
+.gpspl-industry-section *,
+.gpspl-arch-section *,
+.gpspl-partners-section *,
+.gpspl-why-section *,
+.gpspl-trust-strip * {
+    box-sizing: border-box !important;
+}
+
+
+/* ============================================================
+   SOLUTION ARCHITECTURE SECTION  (gpspl-arch-section)
+   ============================================================ */
+.gpspl-arch-section {
+    background: linear-gradient(160deg, #071526 0%, #0c1e38 50%, #0e1525 100%);
+    position: relative;
+    overflow: hidden;
+}
+.gpspl-arch-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%; transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(239,59,63,.18) 20%, rgba(239,59,63,.18) 80%, transparent 100%);
+    pointer-events: none;
+}
+.arch-pipeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    max-width: 860px;
+    margin: 0 auto;
+}
+.arch-step {
+    display: grid;
+    grid-template-columns: 64px 32px 1fr;
+    gap: 0 24px;
+    align-items: start;
+    padding: 0 0 clamp(28px, 3.5vw, 44px);
+    position: relative;
+}
+.arch-step:last-child { padding-bottom: 0; }
+.arch-step-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: rgba(239,59,63,.12);
+    border: 1px solid rgba(239,59,63,.28);
+    display: grid;
+    place-items: center;
+    color: #ef3b3f;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    transition: background .3s ease, box-shadow .3s ease;
+    position: relative;
+    z-index: 1;
+}
+.arch-step:hover .arch-step-icon {
+    background: rgba(239,59,63,.22);
+    box-shadow: 0 0 0 6px rgba(239,59,63,.08), 0 8px 28px rgba(239,59,63,.22);
+}
+.arch-step-icon--final {
+    background: linear-gradient(135deg, rgba(239,59,63,.22) 0%, rgba(192,30,30,.15) 100%) !important;
+    border-color: rgba(239,59,63,.5) !important;
+}
+.arch-step-connector {
+    display: flex;
+    justify-content: center;
+    padding-top: 56px;
+    height: 100%;
+}
+.arch-step-connector span {
+    display: block;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(239,59,63,.35) 0%, rgba(239,59,63,.08) 100%);
+    border-radius: 1px;
+}
+.arch-step-body {
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+.arch-step-num {
+    font-size: .7rem;
+    font-weight: 900;
+    letter-spacing: .13em;
+    color: #ef3b3f;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+}
+.arch-step-body h3 {
+    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -.02em;
+    margin: 0 0 8px;
+    line-height: 1.3;
+}
+.arch-step-body p {
+    color: rgba(200,220,248,.72);
+    font-size: .9rem;
+    line-height: 1.68;
+    margin: 0;
+}
+.arch-cta-row {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    margin-top: clamp(36px, 5vw, 56px);
+    flex-wrap: wrap;
+}
+@media (max-width: 640px) {
+    .arch-step { grid-template-columns: 48px 24px 1fr; gap: 0 16px; }
+    .arch-step-icon { width: 46px; height: 46px; font-size: 1rem; border-radius: 12px; }
+    .arch-step-connector { padding-top: 46px; }
+    .arch-cta-row { flex-direction: column; align-items: center; }
+    .arch-cta-row a { width: 100%; max-width: 340px; justify-content: center; text-align: center; }
+}
+
+/* ============================================================
+   TECHNOLOGY PARTNERS WALL  (gpspl-partners-section)
+   ============================================================ */
+.gpspl-partners-section {
+    background: #f6faff;
+}
+.gpspl-partners-section .gpspl-section-header h2 {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: #071526 !important;
+    color: #071526 !important;
+}
+.gpspl-partners-section .section-eyebrow { color: #ef3b3f !important; }
+.partners-grid-premium {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: clamp(36px, 5vw, 56px);
+}
+.partner-card-premium {
+    background: #ffffff;
+    border: 1px solid rgba(13,38,68,.09);
+    border-radius: 18px;
+    padding: 24px 22px 20px;
+    cursor: default;
+    transition: transform .3s cubic-bezier(.4,0,.2,1), border-color .3s ease, box-shadow .3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.partner-card-premium::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(239,59,63,.04) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.partner-card-premium:hover::after { opacity: 1; }
+.partner-card-premium:hover {
+    transform: translateY(-6px);
+    border-color: rgba(239,59,63,.22);
+    box-shadow: 0 24px 60px rgba(15,35,60,.1);
+}
+.partner-logo-zone {
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.partner-brand-name {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #071526;
+    letter-spacing: -.02em;
+    line-height: 1.2;
+}
+.partner-details { display: none; }
+.partner-card-premium:hover .partner-details { display: block; }
+.partner-category {
+    font-size: .7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #ef3b3f;
+    margin: 0 0 6px;
+}
+.partner-details > p {
+    font-size: .82rem;
+    color: #5a708a;
+    line-height: 1.6;
+    margin: 0;
+}
+@media (max-width: 1100px) {
+    .partners-grid-premium { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 760px) {
+    .partners-grid-premium { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+    .partners-grid-premium { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .partner-card-premium { padding: 18px 14px; }
+}
+
+
+/* ============================================================
+   MOBILE RESPONSIVE COMPLETE FIX 2026-08-05
+   ============================================================ */
+
+/* Trust strip: on small screens, show 2 per row */
+@media (max-width: 520px) {
+    .gpspl-trust-inner {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+    }
+    .trust-pill {
+        border-radius: 12px !important;
+        padding: 10px 12px !important;
+        gap: 8px !important;
+    }
+}
+
+/* Industry section: tabs on mobile wrap cleanly */
+@media (max-width: 520px) {
+    .gpspl-industry-section .industry-tab {
+        font-size: 0.78rem !important;
+        padding: 8px 12px !important;
+        gap: 6px !important;
+    }
+    .gpspl-industry-section .industry-tab i { display: none !important; }
+}
+
+/* Industry panel: text never clips */
+.industry-info h3,
+.industry-info p,
+.industry-info .industry-tagline,
+.industry-info .industry-cta,
+.industry-points li {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    max-width: 100% !important;
+}
+
+/* Why GPSPL: card text never clips */
+.why-premium-card h3,
+.why-premium-card p,
+.why-premium-card ul li {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    max-width: 100% !important;
+}
+
+/* Architecture pipeline: step on small screens */
+@media (max-width: 520px) {
+    .arch-step {
+        grid-template-columns: 44px 18px 1fr !important;
+        gap: 0 12px !important;
+        padding-bottom: 24px !important;
+    }
+    .arch-step-icon {
+        width: 42px !important;
+        height: 42px !important;
+        font-size: 0.9rem !important;
+        border-radius: 11px !important;
+    }
+    .arch-step-connector { padding-top: 42px !important; }
+    .arch-step-body h3 { font-size: 1rem !important; }
+    .arch-step-body p { font-size: 0.84rem !important; }
+}
+
+/* Partners grid: on mobile show 2 columns with always-visible details */
+@media (max-width: 480px) {
+    .partners-grid-premium {
+        grid-template-columns: 1fr !important;
+    }
+    .partner-card-premium { padding: 18px 16px !important; }
+}
+
+/* Arch and Partners CTAs: properly centered on all screens */
+.arch-cta-row {
+    display: flex !important;
+    gap: 14px !important;
+    justify-content: center !important;
+    margin-top: clamp(36px, 5vw, 56px) !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+}
+@media (max-width: 520px) {
+    .arch-cta-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    .arch-cta-row a {
+        text-align: center !important;
+        justify-content: center !important;
+    }
+}
+
+
+/* ============================================================
+   ARCH STEP + PANEL CONTENT FINAL FIXES 2026-08-05
+   ============================================================ */
+
+/* Fix: arch step last child - body must span cols 2 AND 3 */
+.arch-step--last {
+    grid-template-columns: 64px 32px 1fr !important;
+}
+.arch-step--last .arch-step-connector {
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+.arch-step--last .arch-step-body {
+    grid-column: 3 / 4 !important;
+}
+
+/* All arch steps: body always in col 3 */
+.arch-step .arch-step-body {
+    grid-column: 3 / 4 !important;
+    min-width: 0 !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+}
+
+/* industry panel: panel info column must not collapse */
+.industry-panel-content {
+    grid-template-columns: 1fr 300px !important;
+    gap: 36px !important;
+    overflow: visible !important;
+}
+.industry-info {
+    min-width: 0 !important;
+    flex: 1 !important;
+}
+.industry-visual {
+    min-width: 0 !important;
+    width: 300px !important;
+    flex-shrink: 0 !important;
+}
+
+/* industry brand chips: wrap cleanly */
+.industry-brand-chips {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+}
+.industry-brand-chips span {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+}
+
+/* Tab update: 7 tabs need smaller padding on medium screens */
+@media (max-width: 1000px) {
+    .gpspl-industry-section .industry-tab {
+        padding: 9px 16px !important;
+        font-size: 0.82rem !important;
+    }
+}
+@media (max-width: 760px) {
+    .industry-panel-content {
+        grid-template-columns: 1fr !important;
+    }
+    .industry-visual {
+        width: 100% !important;
+    }
+}
+@media (max-width: 520px) {
+    .gpspl-industry-section .industry-tab {
+        padding: 7px 10px !important;
+        font-size: 0.76rem !important;
+        gap: 5px !important;
+    }
+    .gpspl-industry-section .industry-tab i { font-size: 0.72rem !important; }
+}
+
+/* arch step mobile */
+@media (max-width: 640px) {
+    .arch-step {
+        grid-template-columns: 46px 20px 1fr !important;
+        gap: 0 14px !important;
+    }
+    .arch-step--last {
+        grid-template-columns: 46px 20px 1fr !important;
+    }
+    .arch-step-icon { width: 44px !important; height: 44px !important; border-radius: 12px !important; font-size: 1rem !important; }
+    .arch-step-connector { padding-top: 44px !important; }
+    .arch-step-body h3 { font-size: 1rem !important; }
+}
+
+
+/* ============================================================
+   TRUE PREMIUM READABILITY & ORIENTATION FIXES 2026-08-05
+   ============================================================ */
+
+/* 1. Ensure all white copy panels have highly readable dark slate text */
+html body .model-copy-panel,
+html body .product-heading-copy,
+html body .why-copy-panel,
+html body .operating-model .model-copy-panel,
+html body .featured-products .product-heading-copy {
+    background: rgba(255, 255, 255, 0.96) !important; /* solid clean white panel */
+    border: 1px solid rgba(9, 30, 56, 0.12) !important;
+    border-left: 4px solid #ef3b3f !important;
+    box-shadow: 0 24px 64px rgba(7, 20, 38, 0.08) !important;
+    backdrop-filter: blur(8px) !important;
+}
+
+html body .model-copy-panel p,
+html body .product-heading-copy p,
+html body .why-copy-panel p,
+html body .operating-model .model-copy-panel p,
+html body .featured-products .product-heading-copy p {
+    color: #1e293b !important; /* dark slate readable text */
+    -webkit-text-fill-color: #1e293b !important;
+    font-size: clamp(0.96rem, 1.15vw, 1.1rem) !important;
+    line-height: 1.72 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+
+/* 2. Re-orient & polish the 8+ Product Families capability strip */
+html body .product-capability-strip {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+    margin: 24px 0 !important;
+    width: 100% !important;
+}
+
+html body .product-capability-strip span {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-height: 92px !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    padding: 14px 10px !important;
+    background: rgba(18, 60, 102, 0.05) !important; /* light brand blue tint */
+    border: 1px solid rgba(18, 60, 102, 0.12) !important;
+    border-radius: 14px !important; /* clean rounded card, no squished ovals */
+    color: #475569 !important; /* readable label color */
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+    line-height: 1.3 !important;
+    transition: all 0.25s ease !important;
+}
+
+html body .product-capability-strip span:hover {
+    background: rgba(239, 59, 63, 0.06) !important;
+    border-color: rgba(239, 59, 63, 0.22) !important;
+    transform: translateY(-2px) !important;
+}
+
+html body .product-capability-strip span strong {
+    color: #ef3b3f !important; /* Prominent red stat number */
+    font-size: 1.35rem !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
+    margin-bottom: 6px !important;
+    display: block !important;
+}
+
+/* Actions buttons alignment */
+html body .product-heading-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    margin-top: 18px !important;
+}
+
+@media (max-width: 580px) {
+    html body .product-capability-strip {
+        grid-template-columns: 1fr !important; /* stack on small mobile */
+        gap: 8px !important;
+    }
+    html body .product-capability-strip span {
+        min-height: 76px !important;
+    }
+}
+
+
+/* ============================================================
+   GLOBAL SECTION HEADER SAFETY RESET 2026-08-05
+   ============================================================ */
+section header,
+.operating-model header,
+.featured-products header,
+.strategic-partners header,
+.premium-testimonials header,
+.industries-served header,
+.home-case-study-preview header,
+.home-faq-preview header {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    position: relative !important;
+    top: auto !important;
+    z-index: 1 !important;
+}
+
+
+/* ============================================================
+   VISUAL & RESPONSIVE FIXES BLOCK 2026-08-05
+   ============================================================ */
+
+/* 1. Brand Logos colorizing & smooth scale hover transition (Image 2) */
+html body .industries-served .client-logo-grid img {
+    filter: none !important;
+    opacity: 1 !important;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+html body .industries-served .client-logo-grid article {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.14) !important;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+html body .industries-served .client-logo-grid article:hover {
+    transform: translateY(-5px) scale(1.03) !important;
+    background: rgba(255, 255, 255, 0.16) !important;
+    border-color: rgba(239, 59, 63, 0.5) !important;
+    box-shadow: 0 20px 42px rgba(0, 0, 0, 0.25) !important;
+}
+
+html body .industries-served .client-logo-grid article:hover img {
+    transform: scale(1.06) !important;
+}
+
+/* 2. Bottom industries served panel layout & overflow fix (Image 1) */
+html body .industries-served .industry-panel-content {
+    display: block !important;
+    max-width: 580px !important;
+    position: absolute !important;
+    z-index: 2 !important;
+    top: 50% !important;
+    left: clamp(28px, 6vw, 80px) !important;
+    transform: translateY(-50%) !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+html body .industries-served .industry-panel-content > span {
+    display: inline-block !important;
+    font-size: 0.8rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    color: #ef3b3f !important;
+    margin-bottom: 8px !important;
+}
+html body .industries-served .industry-panel-content h3 {
+    font-size: clamp(1.4rem, 2.5vw, 2.2rem) !important;
+    font-weight: 900 !important;
+    color: #ffffff !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.02em !important;
+    margin: 0 0 16px 0 !important;
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+}
+html body .industries-served .industry-panel-content p {
+    font-size: 0.96rem !important;
+    color: rgba(255, 255, 255, 0.84) !important;
+    line-height: 1.65 !important;
+    margin: 0 0 20px 0 !important;
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+}
+html body .industries-served .industry-panel-content ul {
+    display: block !important;
+    margin: 0 0 24px 0 !important;
+    padding-left: 20px !important;
+    list-style: disc !important;
+}
+html body .industries-served .industry-panel-content ul li {
+    display: list-item !important;
+    margin-bottom: 8px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 0.9rem !important;
+}
+html body .industries-served .industry-panel-content a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    color: #ffaaa7 !important;
+    font-weight: 800 !important;
+    font-size: 0.92rem !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(255, 170, 167, 0.3) !important;
+    padding-bottom: 2px !important;
+    transition: all 0.2s ease !important;
+}
+html body .industries-served .industry-panel-content a:hover {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+    gap: 12px !important;
+}
+@media (max-width: 760px) {
+    html body .industries-served .industry-panel-content {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        padding: 24px !important;
+        margin: 0 !important;
+        background: rgba(7, 17, 31, 0.85) !important;
+        border-radius: 16px !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+}
+
+/* 3. Hero H1 font size limit on desktop to prevent long words overlapping card (Image 3) */
+html body .product-detail-page .solution-page-hero h1 {
+    font-size: clamp(2.2rem, 3.8vw, 3.8rem) !important;
+    line-height: 1.05 !important;
+    max-width: 620px !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+}
+
+/* 4. Product Support Card offset reset when relative (Image 4) */
+html body .product-support-card {
+    position: relative !important;
+    top: 0 !important;
+}
+
+
+/* ============================================================
+   TIMELINE ALIGNMENT & TALL SWITCHER OVERFLOW FIXES 2026-08-05
+   ============================================================ */
+
+/* 1. Center the step icon and connector vertically and horizontally */
+.arch-step-icon {
+    justify-self: center !important;
+}
+.arch-step-connector {
+    justify-self: center !important;
+}
+
+/* 2. Increase height of industry panels on desktop to prevent downwards text clipping (Image 3) */
+@media (min-width: 901px) {
+    html body .gpspl-industry-section .industry-panels,
+    html body .gpspl-industry-section .industry-panel,
+    html body .gpspl-industry-section .industry-stage {
+        min-height: 640px !important;
+    }
+
+    html body .industries-served .industry-stage,
+    html body .industries-served .industry-panel {
+        min-height: 580px !important;
+    }
+}
+
+
+/* ============================================================
+   WHY GPSPL TEXT CONTRAST & ICON CENTERING OVERRIDES 2026-08-05
+   ============================================================ */
+
+/* 1. Center why-gpspl card icons perfectly inside their red squares (Image 1) */
+html body:has(#home.hero) #why-gpspl .why-grid i {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+}
+html body:has(#home.hero) #why-gpspl .why-grid i::before {
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 2. Fix text contrast - eliminate webkit-text-fill overrides (Image 1) */
+html body:has(#home.hero) #why-gpspl.why-gpspl .why-heading h2 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+html body:has(#home.hero) #why-gpspl.why-gpspl .why-copy-panel p {
+    color: rgba(255, 255, 255, 0.84) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.84) !important;
+}
+html body:has(#home.hero) #why-gpspl.why-gpspl .why-grid h3 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+html body:has(#home.hero) #why-gpspl.why-gpspl .why-grid p {
+    color: rgba(255, 255, 255, 0.78) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.78) !important;
+}
+html body:has(#home.hero) #why-gpspl.why-gpspl .why-card-number {
+    color: rgba(255, 255, 255, 0.85) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+
+
+/* ========================================================
+   ENTERPRISE AV ENGINEERING PLATFORM DASHBOARD STYLES
+   ======================================================== */
+
+.av-engineering-dashboard {
+  margin: 22px 0;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  font-family: inherit;
+}
+
+/* Failure Simulation */
+.av-failure-sim-panel {
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border-left: 5px solid #ef4444;
+}
+
+.sim-title {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #ef4444;
+  margin-bottom: 10px;
+}
+
+.sim-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sim-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+
+.sim-toggle-btn input[type="checkbox"] {
+  display: none;
+}
+
+.sim-toggle-btn.is-active {
+  background: #7f1d1d;
+  border-color: #ef4444;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(239, 59, 63, 0.25);
+}
+
+.sim-toggle-btn:hover {
+  border-color: #ef4444;
+  background: #1e293b;
+}
+
+.sim-toggle-btn.is-active:hover {
+  background: #991b1b;
+}
+
+/* Live Design Scores Grid */
+.panel-subtitle {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #64748b;
+  margin: 18px 0 10px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 6px;
+}
+
+.av-scores-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.av-scores-grid .is-overall {
+  grid-column: span 2;
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border-color: #1e293b !important;
+}
+
+.score-card {
+  text-align: center;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-card b {
+  display: block;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.score-card span {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.score-card.is-pass b {
+  color: #16a34a;
+}
+.score-card.is-review b {
+  color: #d97706;
+}
+.score-card.is-risk b {
+  color: #dc2626;
+}
+
+.score-card.is-overall.is-pass b {
+  color: #4ade80 !important;
+}
+.score-card.is-overall.is-review b {
+  color: #fbbf24 !important;
+}
+.score-card.is-overall.is-risk b {
+  color: #f87171 !important;
+}
+.score-card.is-overall span {
+  color: #94a3b8;
+}
+
+/* Warnings and Recommendations */
+.av-warnings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.warning-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px;
+  border-left: 5px solid #64748b;
+}
+
+.warning-item.is-critical {
+  border-left-color: #ef4444;
+  background: #fef2f2;
+}
+
+.warning-item.is-warning {
+  border-left-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.warning-item.is-info {
+  border-left-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.warning-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.warning-item.is-critical .warning-header { color: #dc2626; }
+.warning-item.is-warning .warning-header { color: #d97706; }
+.warning-item.is-info .warning-header { color: #2563eb; }
+
+.warning-item p {
+  margin: 0;
+  font-size: 13px;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.warning-fix {
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+}
+
+.warning-fix span {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 2px;
+}
+
+.warning-fix p {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Calculated Engineering Parameters */
+.av-checklist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.checklist-item span {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.checklist-item b {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+/* Live Compatibility Matrix */
+.av-matrix-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 8px;
+}
+
+.matrix-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.matrix-item i {
+  font-size: 16px;
+}
+
+.matrix-item span {
+  font-weight: 700;
+  color: #334155;
+  flex-grow: 1;
+}
+
+.matrix-item small {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.matrix-item.is-pass i { color: #16a34a; }
+.matrix-item.is-fail i { color: #dc2626; }
+.matrix-item.is-fail {
+  border-color: #fecaca;
+  background: #fff5f5;
+}
+
+@media (min-width: 480px) {
+  .av-scores-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .av-scores-grid .is-overall {
+    grid-column: span 4;
+  }
+  .av-matrix-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+/* ========================================================
+   COMPACT HEIGHT & SCROLL OVERRIDES FOR MULTI-ROOM PROJECTS
+   ======================================================== */
+
+.av-plan-list {
+  max-height: 290px !important;
+  overflow-y: auto !important;
+  padding-right: 8px !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(7, 26, 49, 0.25) transparent !important;
+}
+
+.av-plan-list::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.av-plan-list::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.av-plan-list::-webkit-scrollbar-thumb {
+  background: rgba(7, 26, 49, 0.25) !important;
+  border-radius: 99px !important;
+}
+
+/* Ensure detail lists do not stretch too long on screens */
+.av-room-detail-list {
+  gap: 12px !important;
+  margin-top: 10px !important;
+}
+
+.av-room-detail-card summary {
+  background: #f1f5f9 !important;
+  border-radius: 10px !important;
+  transition: background 0.2s ease !important;
+}
+
+.av-room-detail-card summary:hover {
+  background: #e2e8f0 !important;
+}
+
+
+
+/* ========================================================
+   SLEEK INTERACTIVE SIMULATION PANEL & DETAIL CARD STYLES
+   ======================================================== */
+
+.av-failure-sim-panel {
+  background: #0f172a !important;
+  border-left: 5px solid #38bdf8 !important; /* Premium sky blue accent */
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15) !important;
+  padding: 20px !important;
+}
+
+.sim-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.sim-icon {
+  font-size: 20px;
+  color: #38bdf8;
+  margin-top: 3px;
+}
+
+.sim-title {
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.08em !important;
+  color: #38bdf8 !important;
+  text-transform: uppercase !important;
+}
+
+.sim-description {
+  margin: 6px 0 0 0 !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  color: #94a3b8 !important;
+  font-weight: 600 !important;
+}
+
+.sim-toggles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.sim-toggle-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background: #1e293b !important;
+  border: 1px solid #334155 !important;
+  padding: 10px 12px !important;
+  border-radius: 10px !important;
+  color: #cbd5e1 !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+}
+
+/* Touch friendly indicator dot */
+.sim-toggle-btn .indicator-dot {
+  width: 7px;
+  height: 7px;
+  background: #475569;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.25s ease;
+}
+
+.sim-toggle-btn.is-active {
+  background: #7f1d1d !important;
+  border-color: #ef4444 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.3) !important;
+}
+
+.sim-toggle-btn.is-active .indicator-dot {
+  background: #f87171;
+  box-shadow: 0 0 8px #ef4444;
+  animation: pulse-red-dot 1.8s infinite ease-in-out;
+}
+
+@keyframes pulse-red-dot {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.6; }
+}
+
+.sim-toggle-btn:hover {
+  background: #334155 !important;
+  border-color: #475569 !important;
+  color: #ffffff !important;
+}
+
+.sim-toggle-btn.is-active:hover {
+  background: #991b1b !important;
+  border-color: #f87171 !important;
+}
+
+/* Standalone Room Details Card Layout */
+.av-room-detail-card-standalone {
+  border: 1px solid rgba(13, 38, 68, 0.12);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 12px 36px rgba(13, 38, 68, 0.04);
+  overflow: hidden;
+  margin-top: 14px;
+}
+
+.av-room-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8fafc;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(13, 38, 68, 0.08);
+}
+
+.av-room-detail-header h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 900;
+  color: #0f172a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.av-room-detail-header b {
+  font-size: 14px;
+  color: #d32f2f;
+  font-weight: 900;
+}
+
+/* Responsive fixes for simulation buttons grid */
+@media (max-width: 640px) {
+  .sim-toggles {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* Checkbox Layout & Accent Alignment Fix */
+.av-editor-checkbox {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 12px;
+}
+
+.av-editor-checkbox input[type="checkbox"] {
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 !important;
+    cursor: pointer;
+    accent-color: #38bdf8 !important; /* Premium sky-blue checkbox accent */
+    border-radius: 6px !important;
+}
+
+.av-editor-checkbox span {
+    font-size: 0.82rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+}
+
+
+
+/* ==========================================
+   SLEEK INTERACTIVE GUIDE PANEL GLOSSARY STYLES
+   ========================================== */
+
+.av-help-guide-panel {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 16px !important;
+  padding: 0 !important;
+  margin-top: 20px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03) !important;
+  width: 100% !important;
+}
+
+.av-help-guide-panel summary {
+  padding: 14px 18px !important;
+  background: #f1f5f9 !important;
+  font-weight: 800 !important;
+  font-size: 13px !important;
+  color: #0f172a !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  list-style: none !important;
+  border-bottom: 0 !important;
+  transition: background 0.2s ease !important;
+}
+
+/* Hide standard HTML bullet */
+.av-help-guide-panel summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.av-help-guide-panel summary i {
+  color: #eab308 !important; /* Yellow lightbulb */
+  font-size: 14px !important;
+}
+
+.av-help-guide-panel[open] summary {
+  border-bottom: 1px solid #e2e8f0 !important;
+  background: #e2e8f0 !important;
+}
+
+.help-guide-content {
+  padding: 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+  background: #ffffff !important;
+}
+
+.help-guide-content article {
+  border-bottom: 1px solid #f1f5f9 !important;
+  padding-bottom: 10px !important;
+}
+
+.help-guide-content article:last-child {
+  border-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.help-guide-content article b {
+  font-size: 12px !important;
+  color: #0f172a !important;
+  font-weight: 800 !important;
+  display: block !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.03em !important;
+}
+
+.help-guide-content article p {
+  font-size: 12px !important;
+  color: #475569 !important;
+  margin: 4px 0 0 0 !important;
+  line-height: 1.5 !important;
+  font-weight: 600 !important;
+}
+
+
+
+/* ========================================================
+   STUNNING ACTIVE ROOM ENGINEERING CHECKLIST STYLES
+   ======================================================== */
+
+.av-engineering-cards {
+  margin-top: 14px !important;
+  margin-bottom: 14px !important;
+}
+
+.av-eng-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(13, 38, 68, 0.12) !important;
+  border-radius: 18px !important;
+  padding: 20px !important;
+  box-shadow: 0 10px 30px rgba(13, 38, 68, 0.03) !important;
+}
+
+.av-eng-card h4 {
+  margin: 0 0 16px 0 !important;
+  font-size: 13px !important;
+  font-weight: 900 !important;
+  color: #0f172a !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  border-bottom: 1px solid #edf2f7 !important;
+  padding-bottom: 10px !important;
+}
+
+.av-eng-card-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+}
+
+.av-check-row {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  padding: 12px 14px !important;
+  background: #f8fafc !important;
+  border: 1px solid #f1f5f9 !important;
+  border-radius: 12px !important;
+  transition: all 0.2s ease !important;
+}
+
+.av-check-row:hover {
+  background: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.av-check-status {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 4px 10px !important;
+  font-size: 10px !important;
+  font-weight: 900 !important;
+  border-radius: 999px !important;
+  text-transform: uppercase !important;
+  min-width: 64px !important;
+  text-align: center !important;
+  flex-shrink: 0 !important;
+  margin-top: 2px !important;
+}
+
+.av-check-status.is-pass {
+  background: #edf7f1 !important;
+  color: #0f6b3e !important;
+}
+
+.av-check-status.is-fail {
+  background: #fff0f0 !important;
+  color: #b42318 !important;
+}
+
+.av-check-body {
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+.av-check-body b {
+  color: #0f172a !important;
+  font-weight: 800 !important;
+  font-size: 12px !important;
+  display: block !important;
+}
+
+.av-check-body p {
+  color: #475569 !important;
+  margin: 3px 0 0 0 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+}
+
+/* Responsive adjustment for checks list */
+@media (max-width: 1024px) {
+  .av-eng-card-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+
+/* ========================================================
+   ENTERPRISE SAAS PROPOSAL FORM & LOCKED BOQ CARD STYLES
+   ======================================================== */
+
+.av-builder-modal-card form {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+}
+
+.form-field {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.form-field.full-width {
+  grid-column: 1 / -1 !important;
+}
+
+.form-field label {
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  color: #475569 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 6px !important;
+}
+
+.form-field input, 
+.form-field textarea {
+  width: 100% !important;
+  border: 2px solid #cbd5e1 !important;
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #0f172a !important;
+  background: #ffffff !important;
+  transition: all 0.2s ease !important;
+  margin-top: 0 !important;
+}
+
+/* Focus states */
+.form-field input:focus, 
+.form-field textarea:focus {
+  border-color: #38bdf8 !important; /* Sky blue focus */
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15) !important;
+  outline: none !important;
+}
+
+/* Valid states */
+.form-field.is-valid input {
+  border-color: #10b981 !important; /* Emerald green */
+  background-color: #f0fdf4 !important;
+}
+
+/* Invalid states */
+.form-field.is-invalid input {
+  border-color: #ef4444 !important; /* Rose red */
+  background-color: #fef2f2 !important;
+}
+
+/* Validation Message */
+.validation-message {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  margin-top: 5px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+.validation-message.is-valid {
+  color: #10b981 !important;
+}
+
+.validation-message.is-invalid {
+  color: #ef4444 !important;
+}
+
+/* Submit Button styling */
+.av-builder-modal-card form button[type="submit"] {
+  grid-column: 1 / -1 !important;
+  height: 48px !important;
+  border-radius: 12px !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.02em !important;
+  transition: all 0.2s ease !important;
+}
+
+.av-builder-modal-card form button[type="submit"]:disabled {
+  background: #cbd5e1 !important;
+  color: #94a3b8 !important;
+  border-color: #cbd5e1 !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+}
+
+/* Progress loader screen styling */
+.av-loading-screen {
+  padding: 30px 10px !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.loader-spinner {
+  width: 48px !important;
+  height: 48px !important;
+  border: 4px solid #f1f5f9 !important;
+  border-top: 4px solid #38bdf8 !important; /* sky blue spinner */
+  border-radius: 50% !important;
+  animation: spin 1s linear infinite !important;
+  margin-bottom: 20px !important;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader-status {
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  color: #0f172a !important;
+  margin: 0 0 16px 0 !important;
+}
+
+.progress-bar-wrap {
+  width: 280px !important;
+  height: 6px !important;
+  background: #e2e8f0 !important;
+  border-radius: 99px !important;
+  overflow: hidden !important;
+  margin-bottom: 8px !important;
+}
+
+.progress-bar-fill {
+  width: 0% !important;
+  height: 100% !important;
+  background: #38bdf8 !important;
+  border-radius: 99px !important;
+  transition: width 0.5s ease !important;
+}
+
+/* Locked BOQ Call to Action Card */
+.av-details-locked-card {
+  background: #f8fafc !important;
+  border: 1px solid rgba(13, 38, 68, 0.12) !important;
+  border-radius: 20px !important;
+  padding: 28px !important;
+  text-align: center !important;
+  box-shadow: 0 10px 30px rgba(13, 38, 68, 0.02) !important;
+  margin: 20px 0 !important;
+}
+
+.av-details-locked-card .locked-icon-box {
+  width: 56px !important;
+  height: 56px !important;
+  background: #fee2e2 !important;
+  color: #ef4444 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  font-size: 24px !important;
+  margin-bottom: 16px !important;
+}
+
+.av-details-locked-card h4 {
+  margin: 0 0 8px 0 !important;
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  color: #0f172a !important;
+}
+
+.av-details-locked-card p {
+  margin: 0 0 20px 0 !important;
+  font-size: 13px !important;
+  color: #475569 !important;
+  line-height: 1.5 !important;
+  font-weight: 600 !important;
+}
+
+.av-details-locked-card button.btn-primary-large {
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  padding: 14px 28px !important;
+  font-size: 13px !important;
+  font-weight: 900 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.av-details-locked-card button.btn-primary-large:hover {
+  background: #1e293b !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.15) !important;
+}
