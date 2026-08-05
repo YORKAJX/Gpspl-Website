@@ -15599,6 +15599,17 @@ body:has(#home.hero) .clients-scroller {
     color: rgba(255, 255, 255, 0.84) !important;
 }
 
+/* Featured Card Text Overrides to prevent white-on-white text contrast bugs */
+.product-detail-page .product-range-panel .featured-product-card {
+    background: #ffffff !important;
+}
+.product-detail-page .product-range-panel .featured-product-card h3 {
+    color: #0f172a !important;
+}
+.product-detail-page .product-range-panel .featured-product-card p {
+    color: #475569 !important;
+}
+
 .product-detail-page .product-range-panel .product-chip-row span {
     border: 1px solid rgba(255, 255, 255, 0.26) !important;
     background: rgba(255, 255, 255, 0.11) !important;
@@ -37884,3 +37895,23 @@ html body:has(#home.hero) #why-gpspl.why-gpspl .why-card-number {
   transform: translateY(-1px) !important;
   box-shadow: 0 6px 20px rgba(15, 23, 42, 0.15) !important;
 }
+
+/* Product Range Panel layout overrides for solutions hub pages */
+.product-detail-page .product-range-panel {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 30px !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+.product-detail-page .product-range-panel > div:first-child {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+.product-detail-page .product-range-panel .product-chip-row {
+    width: 100% !important;
+    justify-content: center !important;
+    margin-top: 10px !important;
+}
+

@@ -29,543 +29,8 @@
     <script src="JS/site-config.js" defer></script>
     <script src="JS/seo.js" defer></script>
     <script src="JS/analytics.js" defer></script>
-    <style>
-        :root {
-            --lg-red: #a50034;
-            --dark-blue: #071526;
-            --light-bg: #f8fafc;
-            --border-color: #e2e8f0;
-            --text-main: #334155;
-            --text-dark: #0f172a;
-        }
+    <link rel="stylesheet" href="css/product-detail.css?v=20260805-visual-redesign">
 
-        /* Sticky Sub-nav */
-        .product-subnav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
-            padding: 12px 0;
-        }
-        .subnav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .subnav-title {
-            font-size: 16px;
-            font-weight: 800;
-            color: var(--text-dark);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .subnav-title span {
-            color: var(--lg-red);
-            font-size: 11px;
-            font-weight: 900;
-            text-transform: uppercase;
-            border: 1px solid var(--lg-red);
-            padding: 2px 6px;
-            border-radius: 4px;
-        }
-        .subnav-links {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-        .subnav-links a {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-main);
-            transition: color 0.2s ease;
-        }
-        .subnav-links a:hover {
-            color: var(--lg-red);
-        }
-        .subnav-links .btn-quote {
-            background: var(--lg-red);
-            color: #fff;
-            padding: 6px 16px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 700;
-        }
-        .subnav-links .btn-quote:hover {
-            background: #800028;
-            color: #fff;
-        }
-
-        /* Hero Section */
-        .lg-hero {
-            background: radial-gradient(circle at 80% 20%, #1e293b 0%, #0f172a 100%);
-            color: #fff;
-            padding: 80px 0 100px 0;
-            overflow: hidden;
-        }
-        .lg-hero-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        .lg-hero-content p.eyebrow {
-            color: #38bdf8;
-            font-size: 13px;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            margin-bottom: 12px;
-        }
-        .lg-hero-content h1 {
-            font-size: 46px;
-            line-height: 1.15;
-            font-weight: 900;
-            margin: 0 0 20px 0;
-            letter-spacing: -0.02em;
-        }
-        .lg-hero-content p.desc {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #94a3b8;
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
-        .lg-hero-sizes {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 35px;
-        }
-        .size-chip {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 8px 18px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 800;
-        }
-        .lg-hero-ctas {
-            display: flex;
-            gap: 16px;
-            align-items: center;
-        }
-        .lg-hero-ctas .btn-primary {
-            background: var(--lg-red);
-            border-color: var(--lg-red);
-        }
-        .lg-hero-ctas .btn-primary:hover {
-            background: #800028;
-            border-color: #800028;
-        }
-        .lg-hero-ctas .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fff;
-        }
-        .lg-hero-ctas .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-        .lg-hero-img {
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }
-        .lg-hero-img img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Highlight Ribbon */
-        .lg-highlights {
-            background: #0f172a;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 30px 0;
-            color: #fff;
-        }
-        .lg-highlights-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-        .highlight-item {
-            text-align: center;
-            border-right: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 10px;
-        }
-        .highlight-item:last-child {
-            border-right: none;
-        }
-        .highlight-item strong {
-            display: block;
-            font-size: 26px;
-            font-weight: 800;
-            color: #38bdf8;
-            margin-bottom: 4px;
-        }
-        .highlight-item span {
-            font-size: 12px;
-            color: #94a3b8;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* Features Section */
-        .features-grid-custom {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 50px;
-        }
-        .feature-card-custom {
-            background: #fff;
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 35px 30px;
-            transition: all 0.3s ease;
-        }
-        .feature-card-custom:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05);
-            border-color: #cbd5e1;
-        }
-        .feature-icon-box {
-            width: 50px;
-            height: 50px;
-            background: #f1f5f9;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            color: var(--lg-red);
-            font-size: 20px;
-        }
-        .feature-card-custom h3 {
-            font-size: 18px;
-            font-weight: 800;
-            margin: 0 0 12px 0;
-            color: var(--text-dark);
-        }
-        .feature-card-custom p {
-            font-size: 14px;
-            line-height: 1.6;
-            color: var(--text-main);
-            margin: 0;
-            font-weight: 500;
-        }
-
-        /* Content block */
-        .content-block-custom {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-            margin-bottom: 100px;
-        }
-        .content-block-custom:last-child {
-            margin-bottom: 0;
-        }
-        .content-block-custom.reverse {
-            direction: rtl;
-        }
-        .content-block-custom.reverse .block-text {
-            direction: ltr;
-        }
-        .block-text p.block-eyebrow {
-            color: var(--lg-red);
-            font-size: 12px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 10px;
-        }
-        .block-text h3 {
-            font-size: 32px;
-            font-weight: 900;
-            margin: 0 0 20px 0;
-            color: var(--text-dark);
-            letter-spacing: -0.01em;
-        }
-        .block-text p.desc {
-            font-size: 15px;
-            line-height: 1.65;
-            color: var(--text-main);
-            margin-bottom: 25px;
-            font-weight: 500;
-        }
-        .block-bullets {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 14px;
-        }
-        .bullet-item {
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-        }
-        .bullet-item i {
-            color: #10b981;
-            margin-top: 4px;
-        }
-        .bullet-item div strong {
-            display: block;
-            font-size: 14px;
-            color: var(--text-dark);
-            font-weight: 700;
-        }
-        .bullet-item div span {
-            display: block;
-            font-size: 13px;
-            color: var(--text-main);
-            font-weight: 500;
-        }
-        .block-visual {
-            background: #f1f5f9;
-            border-radius: 20px;
-            padding: 30px;
-            border: 1px solid var(--border-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Interactive Board Connection Hub */
-        .conn-hub {
-            background: #0f172a;
-            color: #fff;
-            border-radius: 20px;
-            padding: 50px 40px;
-            margin-top: 40px;
-            border: 1px solid rgba(255,255,255,0.08);
-        }
-        .conn-hub-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-        .ports-map {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-        }
-        .port-tag {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 10px;
-            padding: 14px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .port-tag-num {
-            width: 24px;
-            height: 24px;
-            background: #38bdf8;
-            color: #0f172a;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            font-weight: 800;
-        }
-        .port-tag-num.output {
-            background: #fb7185;
-        }
-        .port-tag-text strong {
-            display: block;
-            font-size: 13px;
-            color: #fff;
-            font-weight: 700;
-        }
-        .port-tag-text span {
-            display: block;
-            font-size: 11px;
-            color: #94a3b8;
-            font-weight: 600;
-        }
-
-        /* Technical Specification Layout */
-        .specs-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 30px;
-        }
-        .specs-table tr {
-            border-bottom: 1px solid var(--border-color);
-        }
-        .specs-table td {
-            padding: 16px 20px;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--text-main);
-            vertical-align: top;
-        }
-        .specs-table td.label {
-            width: 25%;
-            font-weight: 800;
-            color: var(--text-dark);
-            background: #f8fafc;
-        }
-        .specs-table td ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-
-        /* Dimension Layout */
-        .dim-card-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 30px;
-        }
-        .dim-card {
-            background: #fff;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 24px;
-        }
-        .dim-card h4 {
-            font-size: 16px;
-            font-weight: 800;
-            margin: 0 0 16px 0;
-            color: var(--text-dark);
-            border-bottom: 2px solid var(--lg-red);
-            padding-bottom: 8px;
-            display: inline-block;
-        }
-        .dim-item {
-            display: flex;
-            justify-content: space-between;
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-main);
-            margin-bottom: 10px;
-            border-bottom: 1px dashed var(--border-color);
-            padding-bottom: 6px;
-        }
-        .dim-item:last-child {
-            margin-bottom: 0;
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        .dim-item strong {
-            color: var(--text-dark);
-        }
-
-        /* Sticky CTA Bar */
-        .sticky-cta-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: #0f172a;
-            color: #fff;
-            padding: 14px 0;
-            box-shadow: 0 -10px 25px -5px rgba(0,0,0,0.15);
-            z-index: 1000;
-            display: none;
-        }
-        .sticky-cta-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .sticky-cta-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .sticky-cta-info strong {
-            font-size: 15px;
-            font-weight: 800;
-        }
-        .sticky-cta-info span {
-            font-size: 12px;
-            color: #94a3b8;
-            font-weight: 600;
-        }
-        .sticky-cta-actions {
-            display: flex;
-            gap: 12px;
-        }
-        .sticky-cta-actions .btn-primary {
-            background: var(--lg-red);
-            border-color: var(--lg-red);
-            font-size: 13px;
-            padding: 8px 18px;
-            border-radius: 6px;
-            font-weight: 700;
-            color: #fff;
-        }
-        .sticky-cta-actions .btn-primary:hover {
-            background: #800028;
-        }
-        .sticky-cta-actions .btn-secondary {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.15);
-            color: #fff;
-            font-size: 13px;
-            padding: 8px 18px;
-            border-radius: 6px;
-            font-weight: 700;
-        }
-        .sticky-cta-actions .btn-secondary:hover {
-            background: rgba(255,255,255,0.15);
-        }
-
-        @media (max-width: 768px) {
-            .lg-hero-grid, .content-block-custom, .conn-hub-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .lg-hero {
-                padding: 40px 0 60px 0;
-            }
-            .lg-highlights-container, .features-grid-custom, .dim-card-grid {
-                grid-template-columns: 1fr;
-            }
-            .highlight-item {
-                border-right: none;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                padding-bottom: 15px;
-            }
-            .highlight-item:last-child {
-                border-bottom: none;
-            }
-            .subnav-links {
-                display: none;
-            }
-            .sticky-cta-info {
-                display: none;
-            }
-            .sticky-cta-container {
-                justify-content: center;
-            }
-            .specs-table td.label {
-                width: 35%;
-            }
-        }
-    </style>
 </head>
 <body>
     <div id="header-container"><div class="top-bar">
@@ -726,34 +191,7 @@
                         <a href="/lg-createboard-tr3er-datasheet.pdf" class="btn-secondary" download><i class="fas fa-file-pdf"></i> Datasheet</a>
                     </div>
                 </div>
-                <div class="lg-hero-img">
-                    <!-- Clean Vector Mockup of Interactive Board -->
-                    <svg width="480" height="300" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 25px 30px rgba(0,0,0,0.5)); max-width: 100%;">
-                        <rect x="10" y="10" width="780" height="450" rx="14" fill="#0f172a" stroke="#475569" stroke-width="8"/>
-                        <rect x="22" y="22" width="756" height="426" rx="4" fill="#1e293b"/>
-                        <rect x="22" y="22" width="756" height="426" rx="4" fill="url(#screenGrad)"/>
-                        <!-- Speaker Grill / Bezel Details -->
-                        <line x1="100" y1="465" x2="700" y2="465" stroke="#334155" stroke-width="4" stroke-dasharray="2 4"/>
-                        <circle cx="50" cy="465" r="4" fill="#ef4444"/>
-                        <rect x="740" y="462" width="20" height="6" rx="3" fill="#10b981"/>
-                        <defs>
-                            <linearGradient id="screenGrad" x1="22" y1="22" x2="778" y2="448" gradientUnits="userSpaceOnUse">
-                                <stop offset="0" stop-color="#0f172a"/>
-                                <stop offset="0.5" stop-color="#1e1b4b"/>
-                                <stop offset="1" stop-color="#311042"/>
-                            </linearGradient>
-                        </defs>
-                        <!-- Stylized UI Mockup Elements -->
-                        <rect x="60" y="80" width="180" height="120" rx="12" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)"/>
-                        <circle cx="150" cy="140" r="30" fill="rgba(255,255,255,0.1)"/>
-                        <rect x="90" y="240" width="120" height="16" rx="4" fill="rgba(255,255,255,0.2)"/>
-                        <rect x="90" y="265" width="80" height="12" rx="4" fill="rgba(255,255,255,0.1)"/>
-                        <!-- Main Logo -->
-                        <circle cx="400" cy="220" r="45" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
-                        <path d="M380 220 C380 190, 420 190, 420 220" stroke="#fb7185" stroke-width="4" stroke-linecap="round"/>
-                        <circle cx="395" cy="210" r="3" fill="#fb7185"/>
-                    </svg>
-                </div>
+                    <img src="assests/images/products/lg-createboard-tr3er.jpg" alt="LG CreateBoard TR3ER interactive digital board supply and integration by GPSPL" width="580" height="362" loading="eager" decoding="async">
             </div>
         </section>
 
@@ -761,18 +199,22 @@
         <section class="lg-highlights">
             <div class="lg-highlights-container">
                 <div class="highlight-item">
+                    <div class="highlight-icon"><i class="fab fa-android"></i></div>
                     <strong>Android 16</strong>
                     <span>Google EDLA Certified</span>
                 </div>
                 <div class="highlight-item">
+                    <div class="highlight-icon"><i class="fas fa-fingerprint"></i></div>
                     <strong>Max 50 Points</strong>
                     <span>Multi-Touch Precision</span>
                 </div>
                 <div class="highlight-item">
+                    <div class="highlight-icon"><i class="fas fa-tv"></i></div>
                     <strong>4K UHD</strong>
                     <span>IPS 350 Nits Panel</span>
                 </div>
                 <div class="highlight-item">
+                    <div class="highlight-icon"><i class="fas fa-bolt"></i></div>
                     <strong>65W Type-C</strong>
                     <span>Power & Data Loop</span>
                 </div>
@@ -1151,6 +593,41 @@
             </div>
         </section>
 
+        <!-- Related Products Section -->
+        <section class="section-padding related-products-section" id="related">
+            <div class="container">
+                <div class="section-title">
+                    <p class="section-eyebrow">Product Options</p>
+                    <h2>Other LG commercial display models.</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="related-grid">
+                    <a href="/lg-commercial-tv-nu88c.html" class="related-card">
+                        <div class="related-img">
+                            <img src="assests/images/products/lg-commercial-tv-nu88c.jpg" alt="LG NanoCell NU88C commercial TV" loading="lazy">
+                        </div>
+                        <div class="related-info">
+                            <span>Featured Model</span>
+                            <h4>LG NanoCell NU88C Series</h4>
+                            <p>alpha 7 AI Gen9 processor, HDR10 Pro, webOS 26. Premium 4K Commercial TV (43" to 85").</p>
+                            <span class="btn-link">View Details <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                    <a href="/lg-commercial-tv-ua831c.html" class="related-card">
+                        <div class="related-img">
+                            <img src="assests/images/products/lg-commercial-tv-ua831c.jpg" alt="LG Commercial UA831C series TV" loading="lazy">
+                        </div>
+                        <div class="related-info">
+                            <span>Featured Model</span>
+                            <h4>LG Commercial UA831C Series</h4>
+                            <p>Sleek 67.9mm depth, alpha 7 Gen8 processor, 4K Super Upscaling. Available in 43" to 65".</p>
+                            <span class="btn-link">View Details <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- Downloads Section -->
         <section class="section-padding" id="downloads">
             <div class="container">
@@ -1161,16 +638,35 @@
                 </div>
 
                 <div class="service-download-grid">
-                    <a class="reveal" href="/lg-createboard-tr3er-datasheet.pdf" download>
-                        <i class="fas fa-file-pdf" aria-hidden="true"></i>
-                        <span>Product Datasheet</span>
-                        <strong>LG CreateBoard TR3ER PDF</strong>
-                    </a>
-                    <a class="reveal" href="/brochure.pdf" download>
-                        <i class="fas fa-file-pdf" aria-hidden="true"></i>
-                        <span>Corporate Profile</span>
-                        <strong>GPSPL AV Integration Brochure</strong>
-                    </a>
+                    <div class="download-group">
+                        <h4>Interactive Panels</h4>
+                        <a class="reveal" href="/lg-createboard-tr3er-datasheet.pdf" download>
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                            <span>Product Datasheet</span>
+                            <strong>LG CreateBoard TR3ER PDF</strong>
+                        </a>
+                    </div>
+                    <div class="download-group">
+                        <h4>Commercial TVs</h4>
+                        <a class="reveal" href="/lg-commercial-tv-nu88c-datasheet.pdf" download>
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                            <span>Product Datasheet</span>
+                            <strong>LG NanoCell NU88C TV PDF</strong>
+                        </a>
+                        <a class="reveal" href="/lg-commercial-tv-ua831c-datasheet.pdf" download>
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                            <span>Product Datasheet</span>
+                            <strong>LG Commercial UA831C TV PDF</strong>
+                        </a>
+                    </div>
+                    <div class="download-group">
+                        <h4>Corporate Profiles</h4>
+                        <a class="reveal" href="/brochure.pdf" download>
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                            <span>Corporate Profile</span>
+                            <strong>GPSPL AV Integration Brochure</strong>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

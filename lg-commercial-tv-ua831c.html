@@ -29,481 +29,7 @@
     <script src="JS/site-config.js" defer></script>
     <script src="JS/seo.js" defer></script>
     <script src="JS/analytics.js" defer></script>
-    <style>
-        :root {
-            --lg-red: #a50034;
-            --dark-blue: #071526;
-            --light-bg: #f8fafc;
-            --border-color: #e2e8f0;
-            --text-main: #334155;
-            --text-dark: #0f172a;
-        }
-
-        /* Sticky Sub-nav */
-        .product-subnav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
-            padding: 12px 0;
-        }
-        .subnav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .subnav-title {
-            font-size: 16px;
-            font-weight: 800;
-            color: var(--text-dark);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .subnav-title span {
-            color: var(--lg-red);
-            font-size: 11px;
-            font-weight: 900;
-            text-transform: uppercase;
-            border: 1px solid var(--lg-red);
-            padding: 2px 6px;
-            border-radius: 4px;
-        }
-        .subnav-links {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-        .subnav-links a {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-main);
-            transition: color 0.2s ease;
-        }
-        .subnav-links a:hover {
-            color: var(--lg-red);
-        }
-        .subnav-links .btn-quote {
-            background: var(--lg-red);
-            color: #fff;
-            padding: 6px 16px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 700;
-        }
-        .subnav-links .btn-quote:hover {
-            background: #800028;
-            color: #fff;
-        }
-
-        /* Hero Section */
-        .lg-hero {
-            background: radial-gradient(circle at 80% 20%, #1e293b 0%, #0f172a 100%);
-            color: #fff;
-            padding: 80px 0 100px 0;
-            overflow: hidden;
-        }
-        .lg-hero-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1.12fr 0.88fr;
-            gap: 60px;
-            align-items: center;
-        }
-        .lg-hero-content p.eyebrow {
-            color: #38bdf8;
-            font-size: 13px;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            margin-bottom: 12px;
-        }
-        .lg-hero-content h1 {
-            font-size: 44px;
-            line-height: 1.15;
-            font-weight: 900;
-            margin: 0 0 20px 0;
-            letter-spacing: -0.02em;
-        }
-        .lg-hero-content p.desc {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #94a3b8;
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
-        .lg-hero-sizes {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 35px;
-        }
-        .size-chip {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 8px 18px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 800;
-        }
-        .lg-hero-ctas {
-            display: flex;
-            gap: 16px;
-            align-items: center;
-        }
-        .lg-hero-ctas .btn-primary {
-            background: var(--lg-red);
-            border-color: var(--lg-red);
-        }
-        .lg-hero-ctas .btn-primary:hover {
-            background: #800028;
-            border-color: #800028;
-        }
-        .lg-hero-ctas .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fff;
-        }
-        .lg-hero-ctas .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-        .lg-hero-img {
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }
-
-        /* Highlights Ribbon */
-        .lg-highlights {
-            background: #0f172a;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 30px 0;
-            color: #fff;
-        }
-        .lg-highlights-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-        .highlight-item {
-            text-align: center;
-            border-right: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 10px;
-        }
-        .highlight-item:last-child {
-            border-right: none;
-        }
-        .highlight-item strong {
-            display: block;
-            font-size: 26px;
-            font-weight: 800;
-            color: #38bdf8;
-            margin-bottom: 4px;
-        }
-        .highlight-item span {
-            font-size: 12px;
-            color: #94a3b8;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* Features Section */
-        .features-grid-custom {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 50px;
-        }
-        .feature-card-custom {
-            background: #fff;
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 35px 30px;
-            transition: all 0.3s ease;
-        }
-        .feature-card-custom:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05);
-            border-color: #cbd5e1;
-        }
-        .feature-icon-box {
-            width: 50px;
-            height: 50px;
-            background: #f1f5f9;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            color: var(--lg-red);
-            font-size: 20px;
-        }
-        .feature-card-custom h3 {
-            font-size: 18px;
-            font-weight: 800;
-            margin: 0 0 12px 0;
-            color: var(--text-dark);
-        }
-        .feature-card-custom p {
-            font-size: 14px;
-            line-height: 1.6;
-            color: var(--text-main);
-            margin: 0;
-            font-weight: 500;
-        }
-
-        /* Content block */
-        .content-block-custom {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-            margin-bottom: 100px;
-        }
-        .content-block-custom:last-child {
-            margin-bottom: 0;
-        }
-        .content-block-custom.reverse {
-            direction: rtl;
-        }
-        .content-block-custom.reverse .block-text {
-            direction: ltr;
-        }
-        .block-text p.block-eyebrow {
-            color: var(--lg-red);
-            font-size: 12px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 10px;
-        }
-        .block-text h3 {
-            font-size: 32px;
-            font-weight: 900;
-            margin: 0 0 20px 0;
-            color: var(--text-dark);
-            letter-spacing: -0.01em;
-        }
-        .block-text p.desc {
-            font-size: 15px;
-            line-height: 1.65;
-            color: var(--text-main);
-            margin-bottom: 25px;
-            font-weight: 500;
-        }
-        .block-bullets {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 14px;
-        }
-        .bullet-item {
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-        }
-        .bullet-item i {
-            color: #10b981;
-            margin-top: 4px;
-        }
-        .bullet-item div strong {
-            display: block;
-            font-size: 14px;
-            color: var(--text-dark);
-            font-weight: 700;
-        }
-        .bullet-item div span {
-            display: block;
-            font-size: 13px;
-            color: var(--text-main);
-            font-weight: 500;
-        }
-        .block-visual {
-            background: #f1f5f9;
-            border-radius: 20px;
-            padding: 30px;
-            border: 1px solid var(--border-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Technical Specification Layout */
-        .specs-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 30px;
-        }
-        .specs-table tr {
-            border-bottom: 1px solid var(--border-color);
-        }
-        .specs-table td {
-            padding: 16px 20px;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--text-main);
-            vertical-align: top;
-        }
-        .specs-table td.label {
-            width: 25%;
-            font-weight: 800;
-            color: var(--text-dark);
-            background: #f8fafc;
-        }
-        .specs-table td ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-
-        /* Dimension Layout */
-        .dim-card-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-            margin-top: 30px;
-        }
-        .dim-card {
-            background: #fff;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 24px;
-        }
-        .dim-card h4 {
-            font-size: 16px;
-            font-weight: 800;
-            margin: 0 0 16px 0;
-            color: var(--text-dark);
-            border-bottom: 2px solid var(--lg-red);
-            padding-bottom: 8px;
-            display: inline-block;
-        }
-        .dim-item {
-            display: flex;
-            justify-content: space-between;
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-main);
-            margin-bottom: 10px;
-            border-bottom: 1px dashed var(--border-color);
-            padding-bottom: 6px;
-        }
-        .dim-item:last-child {
-            margin-bottom: 0;
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        .dim-item strong {
-            color: var(--text-dark);
-        }
-
-        /* Sticky CTA Bar */
-        .sticky-cta-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: #0f172a;
-            color: #fff;
-            padding: 14px 0;
-            box-shadow: 0 -10px 25px -5px rgba(0,0,0,0.15);
-            z-index: 1000;
-            display: none;
-        }
-        .sticky-cta-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .sticky-cta-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .sticky-cta-info strong {
-            font-size: 15px;
-            font-weight: 800;
-        }
-        .sticky-cta-info span {
-            font-size: 12px;
-            color: #94a3b8;
-            font-weight: 600;
-        }
-        .sticky-cta-actions {
-            display: flex;
-            gap: 12px;
-        }
-        .sticky-cta-actions .btn-primary {
-            background: var(--lg-red);
-            border-color: var(--lg-red);
-            font-size: 13px;
-            padding: 8px 18px;
-            border-radius: 6px;
-            font-weight: 700;
-            color: #fff;
-        }
-        .sticky-cta-actions .btn-primary:hover {
-            background: #800028;
-        }
-        .sticky-cta-actions .btn-secondary {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.15);
-            color: #fff;
-            font-size: 13px;
-            padding: 8px 18px;
-            border-radius: 6px;
-            font-weight: 700;
-        }
-        .sticky-cta-actions .btn-secondary:hover {
-            background: rgba(255,255,255,0.15);
-        }
-
-        @media (max-width: 768px) {
-            .lg-hero-grid, .content-block-custom {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .lg-hero {
-                padding: 40px 0 60px 0;
-            }
-            .lg-highlights-container, .features-grid-custom, .dim-card-grid {
-                grid-template-columns: 1fr;
-            }
-            .highlight-item {
-                border-right: none;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                padding-bottom: 15px;
-            }
-            .highlight-item:last-child {
-                border-bottom: none;
-            }
-            .subnav-links {
-                display: none;
-            }
-            .sticky-cta-info {
-                display: none;
-            }
-            .sticky-cta-container {
-                justify-content: center;
-            }
-            .specs-table td.label {
-                width: 35%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/product-detail.css?v=20260805-visual-redesign">
 </head>
 <body>
     <div id="header-container"><div class="top-bar">
@@ -664,30 +190,7 @@
                         <a href="/lg-commercial-tv-ua831c-datasheet.pdf" class="btn-secondary" download><i class="fas fa-file-pdf"></i> Datasheet</a>
                     </div>
                 </div>
-                <div class="lg-hero-img">
-                    <!-- Clean Vector Mockup of Ultra-Slim TV -->
-                    <svg width="420" height="280" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 20px 40px rgba(0,0,0,0.45)); max-width: 100%;">
-                        <!-- TV Frame -->
-                        <rect x="30" y="30" width="740" height="410" rx="4" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
-                        <rect x="33" y="33" width="734" height="404" fill="#020617"/>
-                        <!-- Screen Gradient -->
-                        <rect x="33" y="33" width="734" height="404" fill="url(#tvGrad)"/>
-                        <!-- Stand feet -->
-                        <path d="M120 440 L 100 470 L 140 470 Z" fill="#475569"/>
-                        <path d="M680 440 L 660 470 L 700 470 Z" fill="#475569"/>
-                        <defs>
-                            <linearGradient id="tvGrad" x1="33" y1="33" x2="767" y2="437" gradientUnits="userSpaceOnUse">
-                                <stop offset="0" stop-color="#0f172a"/>
-                                <stop offset="0.5" stop-color="#0d1b2a"/>
-                                <stop offset="1" stop-color="#1b263b"/>
-                            </linearGradient>
-                        </defs>
-                        <!-- Depth Line Callout -->
-                        <line x1="770" y1="200" x2="810" y2="200" stroke="#ef4444" stroke-dasharray="2 2" stroke-width="2"/>
-                        <rect x="810" y="185" width="60" height="30" rx="4" fill="#ef4444"/>
-                        <text x="840" y="204" fill="#fff" font-size="12" font-weight="900" text-anchor="middle">67.9mm</text>
-                    </svg>
-                </div>
+                    <img src="assests/images/products/lg-commercial-tv-ua831c.jpg" alt="LG Commercial TV UA831C supply and integration by GPSPL" width="580" height="362" loading="eager" decoding="async">
             </div>
         </section>
 
@@ -695,18 +198,22 @@
         <section class="lg-highlights">
             <div class="lg-highlights-container">
                 <div class="highlight-item">
+                    <div class="highlight-icon"><i class="fas fa-microchip"></i></div>
                     <strong>alpha 7 Gen8</strong>
                     <span>AI Processor 4K</span>
                 </div>
                 <div class="highlight-item">
+                    <div class="highlight-icon"><i class="fas fa-ruler-horizontal"></i></div>
                     <strong>67.9 mm</strong>
                     <span>Ultra-Slim Depth</span>
                 </div>
                 <div class="highlight-item">
+                    <div class="highlight-icon"><i class="fas fa-expand-arrows-alt"></i></div>
                     <strong>4K Upscaling</strong>
                     <span>Super Resolution</span>
                 </div>
                 <div class="highlight-item">
+                    <div class="highlight-icon"><i class="fas fa-globe"></i></div>
                     <strong>webOS 25</strong>
                     <span>Integrated OS Hub</span>
                 </div>
@@ -939,6 +446,41 @@
             </div>
         </section>
 
+        <!-- Related Products Section -->
+        <section class="section-padding related-products-section" id="related">
+            <div class="container">
+                <div class="section-title">
+                    <p class="section-eyebrow">Product Options</p>
+                    <h2>Other LG commercial display models.</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="related-grid">
+                    <a href="/lg-createboard-tr3er.html" class="related-card">
+                        <div class="related-img">
+                            <img src="assests/images/products/lg-createboard-tr3er.jpg" alt="LG CreateBoard TR3ER interactive board" loading="lazy">
+                        </div>
+                        <div class="related-info">
+                            <span>Featured Model</span>
+                            <h4>LG CreateBoard™ TR3ER Series</h4>
+                            <p>Android 16 EDLA certified, 50-point multi-touch, 4K UHD smart display available in 65", 75", and 86".</p>
+                            <span class="btn-link">View Details <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                    <a href="/lg-commercial-tv-nu88c.html" class="related-card">
+                        <div class="related-img">
+                            <img src="assests/images/products/lg-commercial-tv-nu88c.jpg" alt="LG NanoCell NU88C commercial TV" loading="lazy">
+                        </div>
+                        <div class="related-info">
+                            <span>Featured Model</span>
+                            <h4>LG NanoCell NU88C Series</h4>
+                            <p>alpha 7 AI Gen9 processor, HDR10 Pro, webOS 26. Premium 4K Commercial TV (43" to 85").</p>
+                            <span class="btn-link">View Details <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- Downloads Section -->
         <section class="section-padding" id="downloads">
             <div class="container">
@@ -946,19 +488,37 @@
                     <p class="section-eyebrow">Downloads</p>
                     <h2>Official documentation and engineering resources.</h2>
                     <div class="line"></div>
-                </div>
-
-                <div class="service-download-grid">
-                    <a class="reveal" href="/lg-commercial-tv-ua831c-datasheet.pdf" download>
-                        <i class="fas fa-file-pdf" aria-hidden="true"></i>
-                        <span>Product Datasheet</span>
-                        <strong>LG Commercial TV UA831C PDF</strong>
-                    </a>
-                    <a class="reveal" href="/brochure.pdf" download>
-                        <i class="fas fa-file-pdf" aria-hidden="true"></i>
-                        <span>Corporate Profile</span>
-                        <strong>GPSPL AV Integration Brochure</strong>
-                    </a>
+                    <div class="service-download-grid">
+                        <div class="download-group">
+                            <h4>Interactive Panels</h4>
+                            <a class="reveal" href="/lg-createboard-tr3er-datasheet.pdf" download>
+                                <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                                <span>Product Datasheet</span>
+                                <strong>LG CreateBoard TR3ER PDF</strong>
+                            </a>
+                        </div>
+                        <div class="download-group">
+                            <h4>Commercial TVs</h4>
+                            <a class="reveal" href="/lg-commercial-tv-nu88c-datasheet.pdf" download>
+                                <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                                <span>Product Datasheet</span>
+                                <strong>LG NanoCell NU88C TV PDF</strong>
+                            </a>
+                            <a class="reveal" href="/lg-commercial-tv-ua831c-datasheet.pdf" download>
+                                <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                                <span>Product Datasheet</span>
+                                <strong>LG Commercial UA831C TV PDF</strong>
+                            </a>
+                        </div>
+                        <div class="download-group">
+                            <h4>Corporate Profiles</h4>
+                            <a class="reveal" href="/brochure.pdf" download>
+                                <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                                <span>Corporate Profile</span>
+                                <strong>GPSPL AV Integration Brochure</strong>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
