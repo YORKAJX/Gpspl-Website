@@ -37897,7 +37897,7 @@ html body:has(#home.hero) #why-gpspl.why-gpspl .why-card-number {
 }
 
 /* Product Range Panel layout overrides for solutions hub pages */
-.product-detail-page .product-range-panel {
+.solutions-detail-page .product-range-panel {
     display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
@@ -37905,11 +37905,18 @@ html body:has(#home.hero) #why-gpspl.why-gpspl .why-card-number {
     max-width: 1200px !important;
     margin: 0 auto !important;
 }
-.product-detail-page .product-range-panel > div:first-child {
+.solutions-detail-page .product-range-panel > div:first-child {
     width: 100% !important;
     max-width: 100% !important;
 }
-.product-detail-page .product-range-panel .product-chip-row {
+.solutions-detail-page .product-range-panel .featured-product-card {
+    min-height: auto !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+.solutions-detail-page .product-range-panel .product-chip-row {
     width: 100% !important;
     justify-content: center !important;
     margin-top: 10px !important;
