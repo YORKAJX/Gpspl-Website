@@ -487,5 +487,55 @@
         "style": "secondary"
       }
     ]
+  },
+  "mistakes": [
+    {
+      "title": "Weak Screen Brightness",
+      "description": "Buying low-nit commercial displays for sun-lit glass lobbies, causing washout visual output."
+    },
+    {
+      "title": "No Latency Validation",
+      "description": "Routing AV-over-IP systems over non-managed switches, leading to voice-video synchronization lags."
+    },
+    {
+      "title": "Failing Projector Throw",
+      "description": "Buying standard throw projectors for short classrooms, casting presenter shadows across the screen."
+    },
+    {
+      "title": "Skipping Active Extenders",
+      "description": "Routing 4K signal sources without active fiber extenders, resulting in handshake drops."
+    }
+  ],
+  "comparison": {
+    "eyebrow": "Comparison Guide",
+    "title": "Laser Projector Setup vs. Active LED Display Wall",
+    "description": "Key differences for large-venue displays and lecture hall environments.",
+    "headers": [
+      "Parameter",
+      "Laser Projector & Screen",
+      "Active LED Display Wall"
+    ],
+    "rows": [
+      {
+        "label": "Ambient Light Handling",
+        "col1": "Prone to washout in brightly lit rooms; requires dimming lights.",
+        "col2": "Vibrant display in direct sunlight/ambient light (600-1000+ nits brightness)."
+      },
+      {
+        "label": "Installation Space",
+        "col1": "Requires throw distance from ceiling mount to wall screen.",
+        "col2": "Flat mount directly onto the wall structure, saving ceiling/floor space."
+      },
+      {
+        "label": "Shadow Obstruction",
+        "col1": "Presenters can block the projection beam, casting shadows.",
+        "col2": "Direct emission display, zero presenter shadow or glare issues."
+      },
+      {
+        "label": "Total Cost of Ownership",
+        "col1": "Lower initial cost; periodic filter cleaning and alignment checks.",
+        "col2": "Higher initial cost; extremely low maintenance and 100,000h module life."
+      }
+    ]
   }
 }

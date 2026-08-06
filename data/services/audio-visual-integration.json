@@ -467,5 +467,59 @@
         "style": "secondary"
       }
     ]
+  },
+  "mistakes": [
+    {
+      "title": "Hardware Only Sourcing",
+      "description": "Buying display screens, mics, or speakers without verifying visual signaling, under-floor cabling paths, or rack layout requirements."
+    },
+    {
+      "title": "Choosing Undersized Screens",
+      "description": "Sourcing standard-sized monitors that cause readability issues for users sitting beyond 12-15 feet from the wall."
+    },
+    {
+      "title": "Ignoring Acoustic Eco",
+      "description": "Installing high-end microphone arrays without room acoustic assessment or DSP echo cancellation tuning."
+    },
+    {
+      "title": "Skipping UPS Power Backup",
+      "description": "Failing to budget for clean power double-conversion online UPS units, leaving sensitive DSPs vulnerable to surge failures."
+    },
+    {
+      "title": "Missing Handover Manuals",
+      "description": "Not requesting customized cable layouts, signal flows, or IT room training, making after-sales troubleshooting difficult."
+    }
+  ],
+  "comparison": {
+    "eyebrow": "Comparison Guide",
+    "title": "Product Supply vs. Turnkey AV Integration",
+    "description": "Understand the difference between simple product sourcing and hiring an integrated, accountable AV partner.",
+    "headers": [
+      "Parameter",
+      "Product Supply Only",
+      "Turnkey AV Integration (GPSPL)"
+    ],
+    "rows": [
+      {
+        "label": "Scope of Work",
+        "col1": "Box delivery of displays, speakers or extenders without cabling, programming or mounting.",
+        "col2": "Complete planning, site survey, rack dressing, DSP audio tuning, control programming, and user training."
+      },
+      {
+        "label": "Accountability",
+        "col1": "Client's IT/facility team coordinates multiple vendor trades, mounts, and wiring.",
+        "col2": "Single point of contact handles entire design, sourcing, physical mounting, and calibration."
+      },
+      {
+        "label": "Warranty Coordination",
+        "col1": "Client must unmount faulty hardware, ship to OEM service center, and track repair status.",
+        "col2": "GPSPL handles diagnostics, unmounting, OEM coordination, logistics, repair tracking, and remounting."
+      },
+      {
+        "label": "System Tuning & QA",
+        "col1": "No system calibration. Audio echo, signal latency, and controller matching are client's risk.",
+        "col2": "Professional acoustic calibration, microphone voice tracking setup, and video matrix switching verification."
+      }
+    ]
   }
 }

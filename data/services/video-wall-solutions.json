@@ -444,5 +444,55 @@
         "style": "secondary"
       }
     ]
+  },
+  "mistakes": [
+    {
+      "title": "Large Bezel Seams",
+      "description": "Choosing LCD walls with thick bezels for data-heavy monitoring rooms, splitting numbers and critical maps."
+    },
+    {
+      "title": "Failing Heat Load Assessment",
+      "description": "Failing to calculate thermal emissions from multi-screen matrices, leading to screen color degradation under weak AC."
+    },
+    {
+      "title": "Long HDMI Distance Sourcing",
+      "description": "Using standard copper cables for signal routes over 30ft, causing screen flickering and resolution drops."
+    },
+    {
+      "title": "No Controller Backup",
+      "description": "Running video walls off a single video matrix switcher without a fail-safe secondary bypass switcher."
+    }
+  ],
+  "comparison": {
+    "eyebrow": "Comparison Guide",
+    "title": "LCD Video Wall vs. Active LED Video Wall",
+    "description": "Choose the right multi-display technology for your command center or experience lobby.",
+    "headers": [
+      "Parameter",
+      "LCD Video Wall Matrix",
+      "Active LED Video Wall"
+    ],
+    "rows": [
+      {
+        "label": "Display Seams",
+        "col1": "Visible bezels (0.88mm to 3.5mm grid lines across the image).",
+        "col2": "100% seamless display surface, zero grid lines or visual interruption."
+      },
+      {
+        "label": "Brightness & Color",
+        "col1": "Fixed backlight (typically 500-700 nits), ideal for low-light text.",
+        "col2": "Self-emissive LEDs, high brightness (600 to 1000+ nits), vibrant HDR colors."
+      },
+      {
+        "label": "Maintenance Mode",
+        "col1": "Panel replacement is required for failures, causing matching batch issues.",
+        "col2": "Front-serviceable module-level repair (swap individual magnetic modules in minutes)."
+      },
+      {
+        "label": "Typical Application",
+        "col1": "Control rooms, surveillance monitoring rooms, data analytics displays.",
+        "col2": "Corporate lobbies, auditoriums, large conference rooms, high-impact signage."
+      }
+    ]
   }
 }

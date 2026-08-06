@@ -327,6 +327,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             </section>
 
+            <section class="service-mistakes section-padding bg-light" data-admin-section="buyer-mistakes-module">
+                <div class="container">
+                    ${sectionHeading("Buyer Guidance", "Common Mistakes to Avoid", "Avoid these common pitfalls when planning and sourcing professional visual, audio and collaboration systems.", true)}
+                    <div class="service-mistakes-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 30px;">
+                        ${(data.mistakes || []).map((mistake, index) => `
+                            <article class="reveal" style="background: #fff; padding: 24px; border-radius: 12px; border: 1px solid rgba(7,21,38,0.06); box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
+                                <span style="font-size: 1.5rem; font-weight: 800; color: #ef3b3f; display: block; margin-bottom: 12px;">0${index + 1}</span>
+                                <h3 style="font-size: 1.15rem; color: #071526; margin-bottom: 8px;">${escapeHtml(mistake.title)}</h3>
+                                <p style="color: #4b5563; font-size: 0.92rem; line-height: 1.6; margin: 0;">${escapeHtml(mistake.description)}</p>
+                            </article>
+                        `).join("")}
+                    </div>
+                </div>
+            </section>
+
             <section id="projects" class="service-projects section-padding" data-admin-section="projects-module">
                 <div class="container">
                     ${sectionHeading("Field Experience", "Project Showcase", "GPSPL project visuals selected from real rooms, display environments, training spaces and integrated AV deployments.", true)}
@@ -383,6 +398,38 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="service-download-grid">${downloadItems(data.downloads).map(item => `<a class="reveal" href="${escapeHtml(item.url)}"><i class="fas ${item.url.endsWith('.pdf') ? 'fa-file-pdf' : 'fa-clipboard-list'}" aria-hidden="true"></i><span>${escapeHtml(item.type)}</span><strong>${escapeHtml(item.title)}</strong></a>`).join("")}</div>
                 </div>
             </section>
+
+            ${data.comparison ? `
+            <section class="service-comparison">
+                <div class="comparison-container">
+                    <div class="service-section-heading centered">
+                        <p class="service-eyebrow">${escapeHtml(data.comparison.eyebrow || "Comparison Guide")}</p>
+                        <h2>${escapeHtml(data.comparison.title)}</h2>
+                        <p>${escapeHtml(data.comparison.description)}</p>
+                    </div>
+                    <div class="comparison-table-wrapper">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>${escapeHtml(data.comparison.headers[0])}</th>
+                                    <th>${escapeHtml(data.comparison.headers[1])}</th>
+                                    <th>${escapeHtml(data.comparison.headers[2])}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${data.comparison.rows.map(row => `
+                                    <tr>
+                                        <td><strong>${escapeHtml(row.label)}</strong></td>
+                                        <td>${escapeHtml(row.col1)}</td>
+                                        <td class="comparison-highlight">${escapeHtml(row.col2)}</td>
+                                    </tr>
+                                `).join("")}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            ` : ""}
 
             <section id="faq" class="service-faq section-padding" data-admin-section="faqs-module">
                 <div class="container">

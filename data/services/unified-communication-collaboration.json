@@ -527,5 +527,55 @@
         "style": "secondary"
       }
     ]
+  },
+  "mistakes": [
+    {
+      "title": "Wrong Camera Field of View",
+      "description": "Choosing narrow angle PTZ cameras for short huddle rooms, cutting off participants sitting on the table sides."
+    },
+    {
+      "title": "Table Microphone Clutter",
+      "description": "Daisy-chaining standard tabletop mics across large boards, creating cable clutter and capturing paper rustling noise."
+    },
+    {
+      "title": "Skipping Network Segments",
+      "description": "Failing to segregate videoconferencing multicast traffic, causing voice dropouts during office peak hours."
+    },
+    {
+      "title": "Consumer Display Controls",
+      "description": "Installing consumer TVs that lack LAN control, preventing auto-wake or sleep sequences when the VC meeting starts."
+    }
+  ],
+  "comparison": {
+    "eyebrow": "Comparison Guide",
+    "title": "Integrated Video Bar vs. Modular PTZ Camera System",
+    "description": "Select the optimal video collaboration design for your meeting room size.",
+    "headers": [
+      "Parameter",
+      "Integrated Video Bar",
+      "Modular PTZ Camera System"
+    ],
+    "rows": [
+      {
+        "label": "Room Suitability",
+        "col1": "Small to medium rooms (up to 8-10 participants, 15ft length).",
+        "col2": "Large boardrooms, training classrooms, auditoriums, and flexible halls."
+      },
+      {
+        "label": "Component Density",
+        "col1": "All-in-one chassis (camera, mic array, and speaker integrated).",
+        "col2": "Separate PTZ cameras, ceiling mic arrays, standalone DSP, and speakers."
+      },
+      {
+        "label": "Installation Effort",
+        "col1": "Simple mounting above/below screen; single USB connection.",
+        "col2": "Structured under-table/ceiling cabling, AV rack, and DSP calibration."
+      },
+      {
+        "label": "Expandability",
+        "col1": "Typically limited to daisy-chaining one external table mic.",
+        "col2": "Supports multi-camera switching, ceiling mic networks, and high-power audio."
+      }
+    ]
   }
 }

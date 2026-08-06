@@ -473,5 +473,55 @@
         "style": "secondary"
       }
     ]
+  },
+  "mistakes": [
+    {
+      "title": "Over-Complicated Tablet UI",
+      "description": "Designing complex menus for basic meetings, requiring user manual checks for simple startup."
+    },
+    {
+      "title": "Un-isolated Control Networks",
+      "description": "Running control processors on the general corporate Wi-Fi, leaving room systems vulnerable to network drops."
+    },
+    {
+      "title": "Failing Wake-Up Presets",
+      "description": "Not configuring wake-up profiles, requiring users to manually trigger lights, matrix, and display startup."
+    },
+    {
+      "title": "No Driver Checks",
+      "description": "Buying random display or projector models before confirming driver library compatibility with AMX/Crestron."
+    }
+  ],
+  "comparison": {
+    "eyebrow": "Comparison Guide",
+    "title": "Basic Meeting Room vs. Integrated Boardroom",
+    "description": "Compare standard huddle setups with premium room automation.",
+    "headers": [
+      "Feature",
+      "Basic Meeting Room",
+      "Integrated Boardroom (GPSPL)"
+    ],
+    "rows": [
+      {
+        "label": "Display System",
+        "col1": "Single consumer-grade TV (limited brightness, 16/7 rating).",
+        "col2": "Dual commercial displays or active LED video walls (24/7 rating, anti-glare)."
+      },
+      {
+        "label": "Audio Capture",
+        "col1": "Standard USB tabletop speakerphone (prone to clutter and echo).",
+        "col2": "Ceiling microphone arrays with DSP voice tracking and discrete ceiling speakers."
+      },
+      {
+        "label": "Control & Routing",
+        "col1": "Manual source switching via loose table HDMI cables and multiple remotes.",
+        "col2": "Crestron/AMX touch screen automation for one-tap meeting startup, lighting, and volume."
+      },
+      {
+        "label": "Support Level",
+        "col1": "Ad-hoc troubleshooting with typical response delays.",
+        "col2": "Managed AV AMC contract with scheduled checks and local standby spares."
+      }
+    ]
   }
 }

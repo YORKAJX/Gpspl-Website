@@ -442,5 +442,55 @@
         "style": "secondary"
       }
     ]
+  },
+  "mistakes": [
+    {
+      "title": "Ignoring Wall Load Bearing",
+      "description": "Mounting heavy active LED steel frames onto standard gypsum walls without structural support checks."
+    },
+    {
+      "title": "Poor Pixel Pitch Planning",
+      "description": "Choosing narrow pitch displays for small rooms, causing severe visual fatigue for close-up users."
+    },
+    {
+      "title": "No Front-Service Access",
+      "description": "Installing LED video walls flush to walls without front-magnetic service access, requiring disassembly for repairs."
+    },
+    {
+      "title": "Skipping Double-Conversion UPS",
+      "description": "Powering high-capacity LED walls without double-conversion online UPS, resulting in blown diodes during spikes."
+    }
+  ],
+  "comparison": {
+    "eyebrow": "Comparison Guide",
+    "title": "LCD Video Wall vs. Active LED Video Wall",
+    "description": "Choose the right multi-display technology for your command center or lobby.",
+    "headers": [
+      "Parameter",
+      "LCD Video Wall Matrix",
+      "Active LED Video Wall"
+    ],
+    "rows": [
+      {
+        "label": "Display Seams",
+        "col1": "Visible bezels (0.88mm to 3.5mm grid lines across the image).",
+        "col2": "100% seamless display surface, zero grid lines or visual interruption."
+      },
+      {
+        "label": "Brightness & Color",
+        "col1": "Fixed backlight (typically 500-700 nits), ideal for low-light text.",
+        "col2": "Self-emissive LEDs, high brightness (600 to 1000+ nits), vibrant HDR colors."
+      },
+      {
+        "label": "Maintenance Mode",
+        "col1": "Panel replacement is required for failures, causing matching batch issues.",
+        "col2": "Front-serviceable module-level repair (swap individual magnetic modules in minutes)."
+      },
+      {
+        "label": "Typical Application",
+        "col1": "Control rooms, surveillance monitoring rooms, data analytics displays.",
+        "col2": "Corporate lobbies, auditoriums, large conference rooms, high-impact signage."
+      }
+    ]
   }
 }

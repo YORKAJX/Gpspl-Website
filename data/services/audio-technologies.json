@@ -436,5 +436,55 @@
         "style": "secondary"
       }
     ]
+  },
+  "mistakes": [
+    {
+      "title": "Weak Amplifier Headroom",
+      "description": "Sourcing low-wattage amplifiers that clip under peak volume, ruining speaker voice coils."
+    },
+    {
+      "title": "Skipping AEC Loop Tuning",
+      "description": "Not tuning the Acoustic Echo Cancellation (AEC) reference loop in DSP, leading to participant audio return hums."
+    },
+    {
+      "title": "Wrong Microphone Selections",
+      "description": "Using omnidirectional boundary microphones in highly reflective, echoing glass rooms."
+    },
+    {
+      "title": "No Ground Loop Isolation",
+      "description": "Running audio cables next to high-voltage power lines, introducing permanent low-frequency hums."
+    }
+  ],
+  "comparison": {
+    "eyebrow": "Comparison Guide",
+    "title": "Ceiling Mic Array vs. Tabletop Microphones",
+    "description": "Choose the optimal audio capture strategy for voice clarity and meeting-room aesthetics.",
+    "headers": [
+      "Parameter",
+      "Ceiling Microphone Array",
+      "Tabletop Microphones"
+    ],
+    "rows": [
+      {
+        "label": "Table Aesthetics",
+        "col1": "100% clean, cable-free tabletop layouts. No clutter.",
+        "col2": "Requires surface cables, wire conduits, and visible units on tables."
+      },
+      {
+        "label": "Coverage & Tracking",
+        "col1": "Auto voice-tracking beamforming. Captures speaker anywhere in room.",
+        "col2": "Fixed pickup radius. Speaker must remain close to the microphone."
+      },
+      {
+        "label": "Background Noise",
+        "col1": "Advanced DSP filters room reflection, AC rumble, and table taps.",
+        "col2": "Prone to picking up paper rustling, laptop typing, and table tapping."
+      },
+      {
+        "label": "Ideal Environment",
+        "col1": "Executive boardrooms, flexible multi-purpose rooms, large training spaces.",
+        "col2": "Huddle rooms, small meeting spaces with static, defined seating."
+      }
+    ]
   }
 }
