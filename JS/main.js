@@ -530,8 +530,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (href.startsWith('tel:')) element.dataset.track = 'click_call';
             else if (href.includes('wa.me') || href.includes('whatsapp.com/send') || href.includes('api.whatsapp.com')) element.dataset.track = 'click_whatsapp';
             else if (href.includes('brochure.pdf')) element.dataset.track = 'download_company_profile';
-            else if (href.includes('/contact.html') || text.includes('request quote') || text.includes('consultation')) element.dataset.track = 'click_lead_cta';
-            else if (href.includes('/downloads.html')) element.dataset.track = 'click_downloads';
+            else if (href.includes('/contact') || text.includes('request quote') || text.includes('consultation')) element.dataset.track = 'click_lead_cta';
+            else if (href.includes('/downloads')) element.dataset.track = 'click_downloads';
         });
     }
 

@@ -66,8 +66,8 @@
 
     const pageSeo = {
         "index.html": {
-            title: "AV BOQ Calculator & System Integrator India | GPSPL",
-            description: "Use GPSPL's AV BOQ calculator for conference rooms, boardrooms, classrooms, auditoriums, displays, audio, installation and AMC planning.",
+            title: "AV System Integrator & BOQ Planner India | GPSPL",
+            description: "GPSPL is a Delhi NCR based AV, IT and display system integration partner. Plan conference, LED, audio and AMC setups with our AV BOQ calculator.",
             type: "home",
             image: "/assests/images/hero/image.jpg"
         },
@@ -94,21 +94,21 @@
             image: "/assests/images/milestones/lg-regional-distributor-2022.jpeg"
         },
         "audio-visual-integration.html": {
-            title: "Audio Visual Solution Company & Corporate AV Integrator India | GPSPL",
+            title: "AV System Integrator in Delhi NCR & India | GPSPL",
             description: "GPSPL is a professional audio visual solution company and corporate AV integrator in India for boardrooms, command centers, LED walls, and auditoriums.",
             type: "service",
             serviceType: "Audio visual integration and enterprise AV system integration",
             image: "/assests/images/vision/conference-room-hero.jpg"
         },
         "conference-room-solutions.html": {
-            title: "Video Conferencing Solution Provider & Meeting Room Automation | GPSPL",
+            title: "Conference Room AV Setup & Boardroom Solutions | GPSPL",
             description: "GPSPL is a professional video conferencing solution provider and meeting room automation integrator for boardrooms, huddle rooms, and Teams/Zoom setup.",
             type: "service",
             serviceType: "Conference room and boardroom AV solutions",
             image: "/assests/images/products/conference-room-solutions.webp"
         },
         "unified-communication-collaboration.html": {
-            title: "Video Conferencing Solution Provider & UC Collaboration | GPSPL",
+            title: "Video Conferencing & UC Collaboration Systems | GPSPL",
             description: "GPSPL is a leading video conferencing solution provider and unified communication collaboration integrator for enterprise hybrid workspaces.",
             type: "service",
             serviceType: "Unified communication and collaboration systems",
@@ -164,21 +164,21 @@
             image: "/assests/images/projects/gpspl-real/polished/direct-education-classroom-panels.webp"
         },
         "professional-audio-solutions.html": {
-            title: "Professional Audio Solution & Auditorium Sound Integrator | GPSPL",
+            title: "Professional Audio System Integrator India | GPSPL",
             description: "GPSPL is a professional audio solution provider and auditorium sound system integrator in India for clear voice pickup, DSP tuning, and speaker coverage.",
             type: "service",
             serviceType: "Professional audio, auditorium sound and DSP system integration",
             image: "/assests/images/products/professional-audio-solutions.webp"
         },
         "audio-technologies.html": {
-            title: "Professional Audio Solution Technologies & Sound Systems | GPSPL",
+            title: "Pro Audio & Sound System Technologies | GPSPL",
             description: "Professional audio solution technologies including Harman, JBL, Sennheiser, microphones, DSP, speakers, room audio, and auditorium sound by GPSPL.",
             type: "service",
             serviceType: "Audio technologies and professional sound systems",
             image: "/assests/images/products/professional-audio-solutions.webp"
         },
         "video-technologies.html": {
-            title: "Video Conferencing Solution Provider Technologies & PTZ Cameras | GPSPL",
+            title: "PTZ Cameras & Video Conferencing Technologies | GPSPL",
             description: "PTZ cameras, video conferencing cameras, display systems, active LED, and video technologies supplied and supported by GPSPL.",
             type: "service",
             serviceType: "Video technologies and visual communication systems",
@@ -198,8 +198,8 @@
             serviceType: "KVM and AV switching solutions"
         },
         "it-infrastructure-solutions.html": {
-            title: "IT Infrastructure Solutions & System Integrator Delhi NCR | GPSPL",
-            description: "GPSPL is an enterprise IT infrastructure solutions provider and system integrator in Delhi NCR for servers, storage, networking, rack cabinets, online UPS, and IT AMC support.",
+            title: "IT Infrastructure Solutions & Integrator Delhi | GPSPL",
+            description: "GPSPL is an enterprise IT infrastructure system integrator in Delhi NCR for servers, storage, networking, racks, online UPS, and lifecycle IT support.",
             type: "service",
             serviceType: "IT infrastructure and networking solutions"
         },
@@ -325,6 +325,12 @@
             type: "webpage",
             noindex: true
         },
+        "av-system-integrator-delhi-ncr.html": {
+            title: "AV System Integrator in Delhi NCR & India | GPSPL",
+            description: "GPSPL is a leading AV system integrator in Delhi NCR and India. We design and install conference room AV, active LED walls, smart classrooms and pro audio.",
+            type: "service",
+            serviceType: "Audio visual system integration services in Delhi NCR"
+        },
         "thank-you.html": {
             title: "Thank You for Contacting GPSPL | Enquiry Received",
             description: "Thank you for contacting GPSPL. Our team will review your technology supply, integration, support or AMC enquiry and respond shortly.",
@@ -349,8 +355,12 @@
     ]);
 
     function currentPageKey() {
-        const page = window.location.pathname.split("/").pop();
-        return page || "index.html";
+        let page = window.location.pathname.split("/").pop();
+        if (!page) return "index.html";
+        if (!page.includes(".")) {
+            page = page + ".html";
+        }
+        return page;
     }
 
     function absoluteUrl(path) {
@@ -360,7 +370,7 @@
     }
 
     function pageUrl(key) {
-        return key === "index.html" ? `${BASE_URL}/` : `${BASE_URL}/${key}`;
+        return key === "index.html" ? `${BASE_URL}/` : `${BASE_URL}/${key.replace(/\.html$/, "")}`;
     }
 
     function ensureMeta(selector, createAttrs, valueAttr, value) {

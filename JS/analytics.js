@@ -123,7 +123,7 @@
         if (lowerText.includes("request quote") || lowerText.includes("get quote")) return ["get_quote_click", { cta_text: text, cta_url: href }];
         if (lowerText.includes("consultation") || lowerText.includes("talk to") || lowerText.includes("expert")) return ["navigation_cta_click", { cta_text: text, cta_url: href }];
         if (lowerText.includes("enquiry") || lowerText.includes("inquiry")) return ["product_enquiry_click", { cta_text: text, cta_url: href }];
-        if (lowerHref.includes("/contact.html")) return ["navigation_cta_click", { cta_text: text || "Contact", cta_url: href }];
+        if (lowerHref.includes("/contact") || lowerHref.includes("/contact.html")) return ["navigation_cta_click", { cta_text: text || "Contact", cta_url: href }];
         try {
             const url = new URL(href, window.location.href);
             if (url.origin !== window.location.origin && !lowerHref.startsWith("#")) {

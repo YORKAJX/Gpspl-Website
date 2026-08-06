@@ -1,57 +1,162 @@
 https://www.gpspl.co.in/* https://gpspl.co.in/:splat 301!
 http://www.gpspl.co.in/* https://gpspl.co.in/:splat 301!
-/backend/* /404.html 404!
-/netlify/* /404.html 404!
-/scripts/* /404.html 404!
-/outputs/* /404.html 404!
-/node_modules/* /404.html 404!
-/package.json /404.html 404!
-/package-lock.json /404.html 404!
-/README.md /404.html 404!
-/netlify.toml /404.html 404!
-/.env /404.html 404!
-/.env.* /404.html 404!
-/.git/* /404.html 404!
-/active-led-video-wall.html /active-led-wall-solutions.html 301
-/active-led-video-wall /active-led-wall-solutions.html 301
+/backend/* /404 404!
+/netlify/* /404 404!
+/scripts/* /404 404!
+/outputs/* /404 404!
+/node_modules/* /404 404!
+/package.json /404 404!
+/package-lock.json /404 404!
+/README.md /404 404!
+/netlify.toml /404 404!
+/.env /404 404!
+/.env.* /404 404!
+/.git/* /404 404!
+/index.html / 301
+
+# Deprecated redirects
+/active-led-video-wall.html /active-led-wall-solutions 301
+/active-led-video-wall /active-led-wall-solutions 301
+
+# Clean URLs 301 Redirects & 200 Rewrites
+/about-gpspl.html /about-gpspl 301
 /about-gpspl /about-gpspl.html 200
+
+/active-led-wall-installation.html /active-led-wall-installation 301
 /active-led-wall-installation /active-led-wall-installation.html 200
+
+/active-led-wall-solutions.html /active-led-wall-solutions 301
 /active-led-wall-solutions /active-led-wall-solutions.html 200
+
+/amc-maintenance-services.html /amc-maintenance-services 301
 /amc-maintenance-services /amc-maintenance-services.html 200
+
+/audio-technologies.html /audio-technologies 301
 /audio-technologies /audio-technologies.html 200
+
+/audio-visual-integration.html /audio-visual-integration 301
 /audio-visual-integration /audio-visual-integration.html 200
+
+/brand-detail.html /brand-detail 301
 /brand-detail /brand-detail.html 200
+
+/careers.html /careers 301
 /careers /careers.html 200
+
+/case-studies.html /case-studies 301
 /case-studies /case-studies.html 200
+
+/conference-room-solutions.html /conference-room-solutions 301
 /conference-room-solutions /conference-room-solutions.html 200
+
+/contact.html /contact 301
 /contact /contact.html 200
+
+/control-automation.html /control-automation 301
 /control-automation /control-automation.html 200
+
+/corporate-projects.html /corporate-projects 301
 /corporate-projects /corporate-projects.html 200
+
+/digital-signage-solutions.html /digital-signage-solutions 301
 /digital-signage-solutions /digital-signage-solutions.html 200
+
+/directors-message.html /directors-message 301
 /directors-message /directors-message.html 200
+
+/downloads.html /downloads 301
 /downloads /downloads.html 200
+
+/education-projects.html /education-projects 301
 /education-projects /education-projects.html 200
+
+/faq.html /faq 301
 /faq /faq.html 200
+
+/featured-projects.html /featured-projects 301
 /featured-projects /featured-projects.html 200
+
+/government-projects.html /government-projects 301
 /government-projects /government-projects.html 200
+
+/healthcare-projects.html /healthcare-projects 301
 /healthcare-projects /healthcare-projects.html 200
+
+/industries.html /industries 301
 /industries /industries.html 200
+
+/interactive-display-solutions.html /interactive-display-solutions 301
 /interactive-display-solutions /interactive-display-solutions.html 200
+
+/it-infrastructure-solutions.html /it-infrastructure-solutions 301
 /it-infrastructure-solutions /it-infrastructure-solutions.html 200
+
+/kvm-av-switching-solutions.html /kvm-av-switching-solutions 301
 /kvm-av-switching-solutions /kvm-av-switching-solutions.html 200
+
+/lg-commercial-tv-nu88c.html /lg-commercial-tv-nu88c 301
+/lg-commercial-tv-nu88c /lg-commercial-tv-nu88c.html 200
+
+/lg-commercial-tv-ua831c.html /lg-commercial-tv-ua831c 301
+/lg-commercial-tv-ua831c /lg-commercial-tv-ua831c.html 200
+
+/lg-createboard-tr3er.html /lg-createboard-tr3er 301
+/lg-createboard-tr3er /lg-createboard-tr3er.html 200
+
+/milestones.html /milestones 301
 /milestones /milestones.html 200
+
+/our-vision.html /our-vision 301
 /our-vision /our-vision.html 200
+
+/peripheral-solutions.html /peripheral-solutions 301
 /peripheral-solutions /peripheral-solutions.html 200
+
+/privacy-policy.html /privacy-policy 301
 /privacy-policy /privacy-policy.html 200
+
+/product-catalog.html /product-catalog 301
 /product-catalog /product-catalog.html 200
+
+/professional-audio-solutions.html /professional-audio-solutions 301
 /professional-audio-solutions /professional-audio-solutions.html 200
+
+/projector-accessories.html /projector-accessories 301
 /projector-accessories /projector-accessories.html 200
+
+/projects.html /projects 301
 /projects /projects.html 200
+
+/smart-classroom-solutions.html /smart-classroom-solutions 301
 /smart-classroom-solutions /smart-classroom-solutions.html 200
+
+/team.html /team 301
 /team /team.html 200
+
+/technology-partners.html /technology-partners 301
 /technology-partners /technology-partners.html 200
+
+/terms-disclaimer.html /terms-disclaimer 301
 /terms-disclaimer /terms-disclaimer.html 200
+
+/thank-you.html /thank-you 301
+/thank-you /thank-you.html 200
+
+/unified-communication-collaboration.html /unified-communication-collaboration 301
 /unified-communication-collaboration /unified-communication-collaboration.html 200
+
+/ups-power-backup-solutions.html /ups-power-backup-solutions 301
 /ups-power-backup-solutions /ups-power-backup-solutions.html 200
+
+/video-technologies.html /video-technologies 301
 /video-technologies /video-technologies.html 200
+
+/video-wall-solutions.html /video-wall-solutions 301
 /video-wall-solutions /video-wall-solutions.html 200
+
+/av-system-integrator-delhi-ncr.html /av-system-integrator-delhi-ncr 301
+/av-system-integrator-delhi-ncr /av-system-integrator-delhi-ncr.html 200
+
+/404.html /404 301
+/404 /404.html 200
+
