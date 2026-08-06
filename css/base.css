@@ -37923,3 +37923,75 @@ html body:has(#home.hero) #why-gpspl.why-gpspl .why-card-number {
     margin-top: 10px !important;
 }
 
+/* ==========================================================================
+   AV COMPARISON BLOCKS & TABLES (Vallect-Quality Upgrade)
+   ========================================================================== */
+.service-comparison {
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 60px 0;
+}
+.service-comparison .comparison-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.service-comparison .comparison-table-wrapper {
+    overflow-x: auto;
+    margin-top: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    border: 1px solid #e2e8f0;
+}
+.service-comparison .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+.service-comparison .comparison-table th, 
+.service-comparison .comparison-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+.service-comparison .comparison-table th {
+    background: #071526;
+    color: #fff;
+    font-weight: 700;
+}
+.service-comparison .comparison-table th:first-child {
+    border-top-left-radius: 12px;
+}
+.service-comparison .comparison-table th:last-child {
+    border-top-right-radius: 12px;
+}
+.service-comparison .comparison-table tr:last-child td {
+    border-bottom: none;
+}
+.service-comparison .comparison-table td:first-child {
+    font-weight: 700;
+    color: #071526;
+    background: #f8fafc;
+    width: 25%;
+}
+.service-comparison .comparison-table td {
+    color: #4b5563;
+    line-height: 1.6;
+}
+.service-comparison .comparison-table tr:hover td {
+    background: rgba(239, 59, 63, 0.02);
+}
+.service-comparison .comparison-highlight {
+    font-weight: 600;
+    color: #ef3b3f;
+}
+
+@media (max-width: 768px) {
+    .service-comparison .comparison-table td:first-child {
+        width: auto;
+    }
+}
+
+
