@@ -28,7 +28,7 @@ html body #home.hero {
     background: #06111f !important;
 }
 
-html body #home #home .hero-video {
+html body #home .hero-video {
     position: absolute !important;
     inset: 0 !important;
     width: 100% !important;
@@ -167,7 +167,7 @@ html body #home .hero-message-copy .hero-actions .btn-secondary:hover {
 }
 
 /* Glassmorphism badged note in hero */
-html body #home main .hero-message-section .hero-message-grid .hero-message-note.hero-message-note {
+html body main #home .hero-message-note, html body .hero-message-note {
     width: min(100%, 540px) !important;
     max-width: 540px !important;
     justify-self: end !important;
@@ -182,7 +182,7 @@ html body #home main .hero-message-section .hero-message-grid .hero-message-note
     backdrop-filter: blur(16px) !important;
 }
 
-html body #home main .hero-message-section .hero-message-grid .hero-message-note.hero-message-note::before {
+html body main #home .hero-message-note::before, html body .hero-message-note::before {
     display: block !important;
     width: 60px !important;
     height: 4px !important;
@@ -192,7 +192,7 @@ html body #home main .hero-message-section .hero-message-grid .hero-message-note
     content: "" !important;
 }
 
-html body #home main .hero-message-section .hero-message-grid .hero-message-note.hero-message-note span {
+html body main #home .hero-message-note span, html body .hero-message-note span {
     color: #ff6b70 !important;
     font-size: clamp(0.82rem, 0.92vw, 0.96rem) !important;
     font-weight: 900 !important;
@@ -201,7 +201,7 @@ html body #home main .hero-message-section .hero-message-grid .hero-message-note
     margin-bottom: 20px !important;
 }
 
-html body #home main .hero-message-section .hero-message-grid .hero-message-note.hero-message-note strong {
+html body main #home .hero-message-note strong, html body .hero-message-note strong {
     color: #fff !important;
     font-size: clamp(1.6rem, 2.2vw, 2.65rem) !important;
     line-height: 1.18 !important;
