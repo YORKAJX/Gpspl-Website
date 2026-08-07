@@ -5,17 +5,17 @@
 ===================================================================== */
 
 /* Override display lock in base.css so copy shows over video */
-body:has(#home.hero) #home.hero > :not(.hero-video) {
+html body #home.hero > :not(.hero-video) {
     display: revert !important;
 }
-body:has(#home.hero) #home.hero > .hero-message-grid {
+html body #home.hero > .hero-message-grid {
     display: grid !important;
 }
-body:has(#home.hero) #home.hero > .hero-video-overlay {
+html body #home.hero > .hero-video-overlay {
     display: block !important;
 }
 
-body:has(#home.hero) #home.hero {
+html body #home.hero {
     position: relative !important;
     isolation: isolate !important;
     min-height: min(780px, calc(100vh - 92px)) !important;
@@ -28,7 +28,7 @@ body:has(#home.hero) #home.hero {
     background: #06111f !important;
 }
 
-body:has(#home.hero) #home .hero-video {
+html body #home #home .hero-video {
     position: absolute !important;
     inset: 0 !important;
     width: 100% !important;
@@ -55,7 +55,7 @@ body:has(#home.hero) #home .hero-video {
     background-size: 74px 74px, 74px 74px, auto, auto, auto !important;
 }
 
-body:has(#home.hero) .hero-message-grid {
+html body #home .hero-message-grid {
     position: relative !important;
     z-index: 2 !important;
     width: min(calc(100% - 80px), 1440px) !important;
@@ -67,11 +67,11 @@ body:has(#home.hero) .hero-message-grid {
     margin: 0 auto !important;
 }
 
-body:has(#home.hero) .hero-message-copy {
+html body #home .hero-message-copy {
     max-width: 860px !important;
 }
 
-body:has(#home.hero) .hero-message-copy .hero-eyebrow {
+html body #home .hero-message-copy .hero-eyebrow {
     display: inline-flex !important;
     align-items: center !important;
     gap: 14px !important;
@@ -84,7 +84,7 @@ body:has(#home.hero) .hero-message-copy .hero-eyebrow {
     text-transform: uppercase !important;
 }
 
-body:has(#home.hero) .hero-message-copy .hero-eyebrow::before {
+html body #home .hero-message-copy .hero-eyebrow::before {
     flex: 0 0 auto !important;
     width: 46px !important;
     height: 3px !important;
@@ -93,7 +93,7 @@ body:has(#home.hero) .hero-message-copy .hero-eyebrow::before {
     content: "" !important;
 }
 
-body:has(#home.hero) .hero-message-copy .main-headline {
+html body #home .hero-message-copy .main-headline {
     font-family: 'Plus Jakarta Sans', sans-serif !important;
     max-width: 850px !important;
     margin: 0 !important;
@@ -107,7 +107,7 @@ body:has(#home.hero) .hero-message-copy .main-headline {
     text-shadow: 0 15px 48px rgba(0, 0, 0, 0.16) !important;
 }
 
-body:has(#home.hero) .hero-message-copy .main-headline span {
+html body #home .hero-message-copy .main-headline span {
     display: block !important;
     font-size: inherit !important;
     line-height: inherit !important;
@@ -116,7 +116,7 @@ body:has(#home.hero) .hero-message-copy .main-headline span {
     text-shadow: none !important;
 }
 
-body:has(#home.hero) .hero-message-copy .hero-description {
+html body #home .hero-message-copy .hero-description {
     width: min(100%, 820px) !important;
     max-width: 820px !important;
     margin: clamp(24px, 2vw, 32px) 0 0 !important;
@@ -125,14 +125,14 @@ body:has(#home.hero) .hero-message-copy .hero-description {
     line-height: 1.76 !important;
 }
 
-body:has(#home.hero) .hero-message-copy .hero-actions {
+html body #home .hero-message-copy .hero-actions {
     display: flex !important;
     flex-wrap: wrap !important;
     gap: 14px !important;
     margin-top: clamp(28px, 3vw, 44px) !important;
 }
 
-body:has(#home.hero) .hero-message-copy .hero-actions .hero-btn {
+html body #home .hero-message-copy .hero-actions .hero-btn {
     min-width: 168px !important;
     min-height: 56px !important;
     justify-content: center !important;
@@ -141,33 +141,33 @@ body:has(#home.hero) .hero-message-copy .hero-actions .hero-btn {
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
 }
 
-body:has(#home.hero) .hero-message-copy .hero-actions .btn-primary {
+html body #home .hero-message-copy .hero-actions .btn-primary {
     background: linear-gradient(135deg, #ef3438, #c91f28) !important;
     color: #fff !important;
     border: none !important;
     box-shadow: 0 16px 36px rgba(239, 52, 56, 0.24) !important;
 }
 
-body:has(#home.hero) .hero-message-copy .hero-actions .btn-primary:hover {
+html body #home .hero-message-copy .hero-actions .btn-primary:hover {
     transform: translateY(-3px) !important;
     box-shadow: 0 20px 48px rgba(239, 52, 56, 0.36) !important;
 }
 
-body:has(#home.hero) .hero-message-copy .hero-actions .btn-secondary {
+html body #home .hero-message-copy .hero-actions .btn-secondary {
     border: 1px solid rgba(255, 255, 255, 0.22) !important;
     background: rgba(255, 255, 255, 0.08) !important;
     color: #fff !important;
     backdrop-filter: blur(14px) !important;
 }
 
-body:has(#home.hero) .hero-message-copy .hero-actions .btn-secondary:hover {
+html body #home .hero-message-copy .hero-actions .btn-secondary:hover {
     transform: translateY(-3px) !important;
     background: rgba(255, 255, 255, 0.16) !important;
     border-color: rgba(255, 255, 255, 0.4) !important;
 }
 
 /* Glassmorphism badged note in hero */
-body:has(#home.hero) main .hero-message-section .hero-message-grid .hero-message-note.hero-message-note {
+html body #home main .hero-message-section .hero-message-grid .hero-message-note.hero-message-note {
     width: min(100%, 540px) !important;
     max-width: 540px !important;
     justify-self: end !important;
@@ -182,7 +182,7 @@ body:has(#home.hero) main .hero-message-section .hero-message-grid .hero-message
     backdrop-filter: blur(16px) !important;
 }
 
-body:has(#home.hero) main .hero-message-section .hero-message-grid .hero-message-note.hero-message-note::before {
+html body #home main .hero-message-section .hero-message-grid .hero-message-note.hero-message-note::before {
     display: block !important;
     width: 60px !important;
     height: 4px !important;
@@ -192,7 +192,7 @@ body:has(#home.hero) main .hero-message-section .hero-message-grid .hero-message
     content: "" !important;
 }
 
-body:has(#home.hero) main .hero-message-section .hero-message-grid .hero-message-note.hero-message-note span {
+html body #home main .hero-message-section .hero-message-grid .hero-message-note.hero-message-note span {
     color: #ff6b70 !important;
     font-size: clamp(0.82rem, 0.92vw, 0.96rem) !important;
     font-weight: 900 !important;
@@ -201,7 +201,7 @@ body:has(#home.hero) main .hero-message-section .hero-message-grid .hero-message
     margin-bottom: 20px !important;
 }
 
-body:has(#home.hero) main .hero-message-section .hero-message-grid .hero-message-note.hero-message-note strong {
+html body #home main .hero-message-section .hero-message-grid .hero-message-note.hero-message-note strong {
     color: #fff !important;
     font-size: clamp(1.6rem, 2.2vw, 2.65rem) !important;
     line-height: 1.18 !important;
@@ -553,13 +553,13 @@ html body .featured-products .product-heading-copy {
    8. Responsive Grid Queries (No layout overflows)
 ===================================================================== */
 @media (max-width: 1200px) {
-    body:has(#home.hero) .hero-message-grid {
+    html body #home .hero-message-grid {
         width: min(calc(100% - 44px), 940px) !important;
         grid-template-columns: 1fr !important;
         gap: 42px !important;
     }
 
-    body:has(#home.hero) .hero-message-note {
+    html body #home .hero-message-note {
         width: 100% !important;
         max-width: none !important;
         justify-self: stretch !important;
@@ -578,44 +578,44 @@ html body .featured-products .product-heading-copy {
 }
 
 @media (max-width: 720px) {
-    body:has(#home.hero) #home.hero {
+    html body #home.hero {
         padding: clamp(64px, 7vw, 98px) 0 !important;
     }
 
-    body:has(#home.hero) .hero-message-grid {
+    html body #home .hero-message-grid {
         width: min(calc(100% - 28px), 520px) !important;
     }
 
-    body:has(#home.hero) .hero-message-copy .hero-eyebrow {
+    html body #home .hero-message-copy .hero-eyebrow {
         align-items: flex-start !important;
         font-size: 0.78rem !important;
         letter-spacing: 0.16em !important;
     }
 
-    body:has(#home.hero) .hero-message-copy .hero-eyebrow::before {
+    html body #home .hero-message-copy .hero-eyebrow::before {
         width: 30px !important;
         margin-top: 9px !important;
     }
 
-    body:has(#home.hero) .hero-message-copy .main-headline {
+    html body #home .hero-message-copy .main-headline {
         font-size: clamp(2.8rem, 12vw, 4rem) !important;
         line-height: 1.02 !important;
     }
 
-    body:has(#home.hero) .hero-message-copy .hero-actions,
-    body:has(#home.hero) .hero-message-copy .hero-actions .hero-btn {
+    html body #home .hero-message-copy .hero-actions,
+    html body #home .hero-message-copy .hero-actions .hero-btn {
         width: 100% !important;
     }
 
-    body:has(#home.hero) .hero-message-note {
+    html body #home .hero-message-note {
         padding: 28px 22px !important;
     }
 
-    body:has(#home.hero) .hero-message-note span {
+    html body #home .hero-message-note span {
         letter-spacing: 0.11em !important;
     }
 
-    body:has(#home.hero) .hero-message-note strong {
+    html body #home .hero-message-note strong {
         font-size: clamp(1.65rem, 8.5vw, 2.35rem) !important;
     }
 
