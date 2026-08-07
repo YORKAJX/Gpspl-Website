@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Boardroom Acoustic Planning | RT60 &amp; Mic Arrays | GPSPL India</title>
+    <meta name="description" content="Technical guide to boardroom acoustic design. Learn how to calculate RT60 reverberation times, NC noise ratings, and integrate beamforming microphone arrays.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://gpspl.co.in/resources/boardroom-acoustic-planning">
+    <link rel="icon" href="/assests/images/gpspl.png">
+    <link rel="apple-touch-icon" href="/assests/images/gpspl.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Global Peripheral Solution Pvt. Ltd.">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Boardroom Acoustic Planning | RT60 &amp; Mic Arrays | GPSPL India">
+    <meta property="og:description" content="Technical guide to boardroom acoustic design. Learn how to calculate RT60 reverberation times, NC noise ratings, and integrate beamforming microphone arrays.">
+    <meta property="og:url" content="https://gpspl.co.in/resources/boardroom-acoustic-planning">
+    <meta property="og:image" content="https://gpspl.co.in/assests/images/projects/gpspl-real/polished/boardroom-display-cover.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Boardroom Acoustic Planning | RT60 &amp; Mic Arrays | GPSPL India">
+    <meta name="twitter:description" content="Technical guide to boardroom acoustic design. Learn how to calculate RT60 reverberation times, NC noise ratings, and integrate beamforming microphone arrays.">
+    <meta name="twitter:image" content="https://gpspl.co.in/assests/images/projects/gpspl-real/polished/boardroom-display-cover.jpeg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#D32F2F">
+    <link rel="stylesheet" href="../css/base.css?v=20260729-brand-logo-polish">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../JS/site-config.js" defer></script>
+    <script src="../JS/seo.js" defer></script>
+    <script src="../JS/analytics.js" defer></script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                "@id": "https://gpspl.co.in/resources/boardroom-acoustic-planning#post",
+                "url": "https://gpspl.co.in/resources/boardroom-acoustic-planning",
+                "headline": "Corporate Boardroom Acoustic Planning: Sound Absorption, DSP, and Mic Arrays",
+                "description": "A guide to calculations for RT60 reverberation times, noise isolation criteria (NC), acoustic panel layouts, and beamforming microphone integrations.",
+                "datePublished": "2026-08-07T12:00:00+05:30",
+                "dateModified": "2026-08-07T12:00:00+05:30",
+                "author": {
+                    "@type": "Organization",
+                    "name": "GPSPL India"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Global Peripheral Solution Pvt. Ltd.",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://gpspl.co.in/assests/images/gpspl.png"
+                    }
+                },
+                "mainEntityOfPage": "https://gpspl.co.in/resources/boardroom-acoustic-planning"
+            }
+        ]
+    }
+    </script>
+    
+    <style>
+        .article-hero {
+            padding: clamp(60px, 7vw, 100px) 0;
+            background: linear-gradient(135deg, rgba(7, 21, 38, 0.97), rgba(23, 61, 112, 0.94)), url("/assests/images/projects/gpspl-real/polished/boardroom-display-cover.jpeg") center/cover no-repeat;
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .article-breadcrumb {
+            margin-bottom: 16px;
+            font-size: 0.86rem;
+            color: rgba(255, 255, 255, 0.72);
+        }
+        .article-breadcrumb a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .article-breadcrumb a:hover {
+            color: #ff6b70;
+        }
+        .article-breadcrumb span {
+            margin: 0 8px;
+            color: rgba(255, 255, 255, 0.35);
+        }
+        .article-hero h1 {
+            font-size: clamp(2rem, 3.8vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 18px;
+            max-width: 960px;
+        }
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.76);
+            align-items: center;
+        }
+        .article-meta span i {
+            margin-right: 6px;
+            color: #ff6b70;
+        }
+        
+        .article-body-container {
+            padding: 80px 0;
+            background: #fff;
+        }
+        .article-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 48px;
+            align-items: start;
+        }
+        @media (max-width: 1024px) {
+            .article-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+        
+        .article-main-content {
+            font-size: 1.06rem;
+            line-height: 1.8;
+            color: #334155;
+        }
+        .article-main-content h2 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 38px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f1f5f9;
+        }
+        .article-main-content p {
+            margin-bottom: 24px;
+        }
+        .article-main-content ul, .article-main-content ol {
+            margin-bottom: 24px;
+            padding-left: 24px;
+        }
+        .article-main-content li {
+            margin-bottom: 10px;
+        }
+        
+        /* Math formulas / code Callouts */
+        .formula-callout {
+            padding: 24px;
+            border-radius: 12px;
+            background: #f8fafc;
+            border-left: 4px solid #d82d2d;
+            margin: 28px 0;
+        }
+        .formula-callout strong {
+            display: block;
+            font-size: 1.15rem;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+        .formula-callout code {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 6px;
+            background: #e2e8f0;
+            color: #0f172a;
+            font-family: Consolas, monospace;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .formula-callout p {
+            margin: 0;
+            font-size: 0.94rem;
+            color: #475569;
+        }
+        
+        /* Technical Spec Tables */
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+            font-size: 0.94rem;
+        }
+        .spec-table th, .spec-table td {
+            padding: 12px 16px;
+            border: 1px solid #e2e8f0;
+            text-align: left;
+        }
+        .spec-table th {
+            background: #0f172a;
+            color: #fff;
+            font-weight: 700;
+        }
+        .spec-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        
+        /* Sidebar layout */
+        .article-sidebar {
+            display: grid;
+            gap: 28px;
+            position: sticky;
+            top: 100px;
+        }
+        .sidebar-card {
+            padding: 24px;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
+        }
+        .sidebar-card-cta {
+            border: none;
+            background: linear-gradient(135deg, #071526 0%, #152b48 100%);
+            color: #fff;
+            border-left: 4px solid #d82d2d;
+        }
+        .sidebar-card-cta h4 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            margin: 0 0 10px;
+            color: #fff;
+        }
+        .sidebar-card-cta p {
+            font-size: 0.88rem;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.82);
+            margin: 0 0 16px;
+        }
+        .sidebar-card-cta .btn-primary {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="resources-page-template">
+    <div id="header-container">
+        <!-- Modular Header loaded dynamically fallback code inside main.js -->
+    </div>
+    
+    <main>
+        <section class="article-hero">
+            <div class="container">
+                <nav class="article-breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">Home</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="/resources">Resources</a>
+                    <span aria-hidden="true">/</span>
+                    <span>Boardroom Acoustic Planning</span>
+                </nav>
+                <h1>Corporate Boardroom Acoustic Planning: Sound Absorption, DSP, and Mic Arrays</h1>
+                <div class="article-meta">
+                    <span><i class="fas fa-user" aria-hidden="true"></i> Senior Acoustic &amp; Audio Engineer</span>
+                    <span><i class="fas fa-calendar" aria-hidden="true"></i> August 7, 2026</span>
+                    <span><i class="fas fa-tag" aria-hidden="true"></i> Professional Audio &amp; Acoustics</span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="article-body-container">
+            <div class="container">
+                <div class="article-grid">
+                    
+                    <article class="article-main-content">
+                        <p>With the rise of video conferencing systems like Zoom Rooms and Microsoft Teams Rooms, voice intelligibility has become the primary operational metric for corporate workspaces. Yet, many organizations spend heavily on expensive microphone arrays and DSPs, only to experience hollow, echo-filled audio because the physical room's <strong>acoustics</strong> were ignored.</p>
+                        
+                        <p>This technical guide details the calculations and acoustic design guidelines needed to plan a professional corporate boardroom space.</p>
+                        
+                        <h2>1. Reverberation Time: The RT60 Metric</h2>
+                        <p>The most important mathematical measure of a room's acoustics is its <strong>Reverberation Time (RT60)</strong>—the time it takes for sound energy to drop by 60 decibels after the sound source has stopped.</p>
+                        
+                        <p>For executive boardrooms and video conferencing environments, the targeted RT60 should sit strictly between **0.4 and 0.6 seconds**. Anything higher than 0.7 seconds will trigger echo and reduce voice clarity, forcing remote participants to struggle to understand speakers.</p>
+                        
+                        <div class="formula-callout">
+                            <strong>Sabine Formula for RT60 Calculation</strong>
+                            <code>RT60 = 0.161 × V / A</code>
+                            <p>Where <code>V</code> is the room volume in cubic meters, and <code>A</code> is the total absorption of the room in Sabins (calculated by multiplying the surface area of each material by its Noise Reduction Coefficient, or NRC).</p>
+                        </div>
+                        
+                        <p>For instance, concrete, glass, and drywall have very low absorption coefficients (NRC 0.05 to 0.1), while carpet, acoustic fabric panels, and acoustical mineral fiber ceilings have high coefficients (NRC 0.7 to 0.95).</p>
+                        
+                        <h2>2. Controlling Noise Criteria (NC)</h2>
+                        <p>Before designing audio systems, we must isolate external noise (HVAC, traffic, hallway chatter). The standard metric for background noise is the <strong>Noise Criteria (NC)</strong> rating.</p>
+                        <p>For high-quality boardroom video conferencing, the background noise floor must not exceed **NC-30** (ideally NC-25). Ensure the HVAC ducts contain acoustical lining and air velocity is kept below 1.5 meters per second to meet this standard.</p>
+                        
+                        <h2>3. Beamforming Microphone Array Integration</h2>
+                        <p>Modern boardrooms utilize ceiling-mounted beamforming microphone arrays (e.g., Sennheiser TCC2, Shure MXA920). These microphones track the physical location of speakers dynamically and steer audio coverage beams directly to them.</p>
+                        
+                        <table class="spec-table">
+                            <thead>
+                                <tr>
+                                    <th>Mic Technology</th>
+                                    <th>Ideal Ceiling Height</th>
+                                    <th>Coverage Diameter</th>
+                                    <th>Best Suited For</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Ceiling Beamforming</strong></td>
+                                    <td>2.7m to 3.6m</td>
+                                    <td>Up to 9m (30ft) radius</td>
+                                    <td>Medium-to-Large Boardrooms, Flexible Rooms</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Tabletop Mic Arrays</strong></td>
+                                    <td>Surface mount</td>
+                                    <td>1.5m to 2.5m per pod</td>
+                                    <td>Small huddle spaces, U-shaped seating</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Pendant Microphones</strong></td>
+                                    <td>Suspended (adjust height)</td>
+                                    <td>3m to 4m radius</td>
+                                    <td>High-ceiling townhalls, creative workspaces</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h2>4. DSP Echo Cancellation &amp; Sound Reinforcement</h2>
+                        <p>The **Acoustic Echo Canceller (AEC)** inside the digital signal processor (DSP) is the brain of the boardroom audio system. The AEC references the incoming far-end audio channel and removes that signal from the boardroom microphones before sending the feed back to the remote participants. This prevents the remote callers from hearing their own voice echo.</p>
+                        <p>Ensure that speaker zones are configured with a slight delay if the room exceeds 12 meters in length to maintain sound localization matching the front-of-room displays.</p>
+                        
+                        <h2>Conclusion &amp; Acoustic Layout Recommendations</h2>
+                        <p>To design a successful boardroom audio system:</p>
+                        <ol>
+                            <li>Avoid parallel glass walls. Angle glass partitions slightly or apply micro-perforated acoustic foils.</li>
+                            <li>Cover at least 30% of the room's total wall and ceiling surface area with high-efficiency sound-absorbing materials (NRC > 0.75).</li>
+                            <li>Place acoustic panels on opposing walls to eliminate "flutter echo" reflections.</li>
+                        </ol>
+                        
+                        <p>Review our professional sound products on our <a href="/professional-audio-solutions" style="color:#d82d2d; font-weight:700;">Professional Audio solutions page</a>, or schedule an acoustic analysis of your space with our integration team.</p>
+                    </article>
+                    
+                    <aside class="article-sidebar">
+                        <div class="sidebar-card sidebar-card-cta">
+                            <h4>Plan Boardroom Acoustics</h4>
+                            <p>Our acoustic engineers calculate Sabine RT60 values and design mic coverage heatmaps for your space.</p>
+                            <a href="/contact" class="btn-primary">Request Acoustic Survey</a>
+                        </div>
+                        
+                        <div class="sidebar-card">
+                            <h4 style="font-size:1rem; font-weight:800; color:#0f172a; margin-top:0; margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid #f1f5f9;">Related Services</h4>
+                            <ul style="list-style:none; padding:0; margin:0; font-size:0.9rem; line-height:1.8;">
+                                <li style="margin-bottom:8px;"><a href="/professional-audio-solutions" style="color:#475569; text-decoration:none; font-weight:700;"><i class="fas fa-angle-right" aria-hidden="true" style="color:#d82d2d; margin-right:6px;"></i> Professional Audio</a></li>
+                                <li style="margin-bottom:8px;"><a href="/conference-room-solutions" style="color:#475569; text-decoration:none; font-weight:700;"><i class="fas fa-angle-right" aria-hidden="true" style="color:#d82d2d; margin-right:6px;"></i> Boardroom Systems</a></li>
+                                <li style="margin-bottom:8px;"><a href="/smart-classroom-solutions" style="color:#475569; text-decoration:none; font-weight:700;"><i class="fas fa-angle-right" aria-hidden="true" style="color:#d82d2d; margin-right:6px;"></i> Smart Classrooms</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div id="footer-container">
+        <!-- Modular Footer loaded dynamically fallback code inside main.js -->
+    </div>
+    
+    <script src="../JS/main.js?v=20260729-style-polish" defer></script>
+</body>
+</html>
