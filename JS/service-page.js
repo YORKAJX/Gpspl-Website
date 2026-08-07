@@ -158,6 +158,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function render(data) {
         setSeo(data);
+        if (root.querySelector('.service-hero') || root.querySelector('.partner-tech-hero') || root.querySelector('.partner-board-hero') || root.querySelector('.partner-hero') || root.children.length > 2) {
+            console.log("Page is pre-rendered statically. Skipping client-side render override to optimize LCP/CLS.");
+            document.dispatchEvent(new Event("service-page-rendered"));
+            return;
+        }
         const parentName = data.seo.breadcrumbParentName || "Services";
         const parentUrl = data.seo.breadcrumbParentUrl || "https://gpspl.co.in/#services";
         const parentHref = new URL(parentUrl).pathname === "/" ? "/index.html" : new URL(parentUrl).pathname + (new URL(parentUrl).hash || "");
