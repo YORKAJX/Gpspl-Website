@@ -73,3 +73,10 @@
         color: rgba(255, 255, 255, 0.5) !important;
     }
 }
+
+
+/* Enforce About Us and other main nav links in header to stay in a single line */
+.site-header .nav-dropdown summary,
+.site-header .nav-links > a {
+    white-space: nowrap !important;
+}
