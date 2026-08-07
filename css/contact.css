@@ -1057,3 +1057,200 @@
         width: min(100% - 28px, 1320px) !important;
     }
 }
+
+
+/* ==========================================================================
+   24. Premium Contact UI/UX Interactive Enhancements
+   ========================================================================== */
+@keyframes formGlow {
+    0% { box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); }
+    50% { box-shadow: 0 0 30px rgba(216, 45, 45, 0.45); border-color: #d82d2d; }
+    100% { box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); }
+}
+.contact-form-panel.glow-active {
+    animation: formGlow 1.6s ease-in-out;
+}
+
+/* Live SLA Status Bar */
+.live-status-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    color: #475569;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+.pulse-dot {
+    width: 9px;
+    height: 9px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    animation: pulseGreen 1.6s infinite;
+}
+@keyframes pulseGreen {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+/* Sidebar BOQ Card */
+.sidebar-boq-cta {
+    position: relative;
+    background: linear-gradient(135deg, #071526 0%, #152b48 100%);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 14px 34px rgba(7, 21, 38, 0.16);
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+.sidebar-boq-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: linear-gradient(135deg, #d82d2d, #1e3a8a, #d82d2d);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0.8;
+}
+.sidebar-boq-cta .boq-cta-icon {
+    font-size: 1.8rem;
+    color: #ff6b70;
+    margin-bottom: 12px;
+}
+.sidebar-boq-cta h4 {
+    color: #fff !important;
+    font-size: 1.15rem;
+    margin: 8px 0;
+    font-weight: 800;
+}
+.sidebar-boq-cta p {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 0.86rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 18px !important;
+}
+.sidebar-boq-cta .btn-primary {
+    display: inline-flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ef3438, #c91f28) !important;
+    border: none !important;
+    border-radius: 8px;
+    font-weight: 700;
+    padding: 12px 20px;
+    color: #fff !important;
+    transition: transform 0.2s ease;
+}
+.sidebar-boq-cta .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(239, 52, 56, 0.3);
+}
+
+/* Office Switcher Card */
+.office-switcher-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    background: #fff;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
+    margin-bottom: 24px;
+}
+.office-switcher-title {
+    display: block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: #d82d2d;
+    margin-bottom: 12px;
+}
+.office-switcher-title i {
+    margin-right: 4px;
+}
+.office-switcher-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 18px;
+    background: #f1f5f9;
+    padding: 4px;
+    border-radius: 10px;
+}
+.switcher-tab {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 8px 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #64748b;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+.switcher-tab:hover {
+    color: #0f172a;
+}
+.switcher-tab.active {
+    background: #fff;
+    color: #0f172a;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+}
+.office-pane {
+    display: none;
+}
+.office-pane.active {
+    display: block;
+    animation: fadeInPane 0.3s ease;
+}
+@keyframes fadeInPane {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.office-pane p {
+    margin: 0 0 12px;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #475569;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.office-pane i {
+    color: #d82d2d;
+    font-size: 0.95rem;
+    margin-top: 3px;
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0;
+}
+.office-pane a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 700;
+}
+.office-pane a:hover {
+    color: #d82d2d;
+}

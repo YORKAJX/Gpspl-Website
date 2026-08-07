@@ -233,19 +233,19 @@
                     <span>From new technology projects to long-term support, route your enquiry to the right conversation.</span>
                 </div>
                 <div class="contact-routing-grid">
-                    <a class="contact-routing-card" href="#contact-enquiry-form">
+                    <a class="contact-routing-card" href="#contact-enquiry-form" data-route-type="projects">
                         <i class="fas fa-layer-group" aria-hidden="true"></i>
                         <h3>Product Supply & New Projects</h3>
                         <p>Technology procurement, AV integration, boardrooms, LED walls, smart classrooms, digital signage, UPS and command centers.</p>
                         <span>Start enquiry <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                     </a>
-                    <a class="contact-routing-card" href="#contact-enquiry-form">
+                    <a class="contact-routing-card" href="#contact-enquiry-form" data-route-type="support">
                         <i class="fas fa-screwdriver-wrench" aria-hidden="true"></i>
                         <h3>Support & AMC</h3>
                         <p>Service, upgrades, maintenance contracts, system checks, and after-sales support.</p>
                         <span>Request support <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                     </a>
-                    <a class="contact-routing-card" href="#contact-enquiry-form">
+                    <a class="contact-routing-card" href="#contact-enquiry-form" data-route-type="consult">
                         <i class="fas fa-handshake-angle" aria-hidden="true"></i>
                         <h3>Consultation</h3>
                         <p>Requirement discovery, product guidance, solution planning, and technology roadmaps.</p>
@@ -333,6 +333,50 @@
                 </div>
 
                 <aside class="contact-details-panel" aria-label="GPSPL contact details">
+                    <!-- Live SLA Status Bar -->
+                    <div class="live-status-bar">
+                        <span class="pulse-dot"></span>
+                        <span>Project Desk: <strong>Active Online</strong> (SLA: &lt; 2 Hours)</span>
+                    </div>
+
+                    <!-- Interactive BOQ Planner Callout Card -->
+                    <div class="sidebar-boq-cta">
+                        <div class="boq-cta-icon"><i class="fas fa-calculator" aria-hidden="true"></i></div>
+                        <div class="boq-cta-content">
+                            <span>💡 Not sure about your specs?</span>
+                            <h4>Interactive AV BOQ Planner</h4>
+                            <p>Estimate hardware quantities, screen sizes, and budget metrics for your project in under 3 minutes.</p>
+                            <a href="/#av-boq-calculator" class="btn-primary">Launch BOQ Calculator <i class="fas fa-arrow-right" aria-hidden="true" style="margin-left: 6px;"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Delhi NCR Office Hubs Switcher -->
+                    <div class="office-switcher-card">
+                        <span class="office-switcher-title"><i class="fas fa-building" aria-hidden="true"></i> Office Contact Hub</span>
+                        <div class="office-switcher-tabs">
+                            <button type="button" class="switcher-tab active" data-office="delhi">Delhi HQ</button>
+                            <button type="button" class="switcher-tab" data-office="noida">Noida Desk</button>
+                            <button type="button" class="switcher-tab" data-office="gurugram">Gurugram Desk</button>
+                        </div>
+                        <div class="office-details-content">
+                            <div class="office-pane active" id="pane-delhi">
+                                <p class="office-address"><i class="fas fa-location-dot" aria-hidden="true"></i> 304, Padma Palace, 86, Nehru Place, New Delhi - 110019</p>
+                                <p class="office-contact"><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+919310092963">+91 93100 92963</a></p>
+                                <p class="office-manager"><i class="fas fa-user-tie" aria-hidden="true"></i> Head Office (Delhi NCR)</p>
+                            </div>
+                            <div class="office-pane" id="pane-noida">
+                                <p class="office-address"><i class="fas fa-location-dot" aria-hidden="true"></i> IT Park Sector 62, Noida, Uttar Pradesh - 201301</p>
+                                <p class="office-contact"><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+919310092963">+91 93100 92963</a></p>
+                                <p class="office-manager"><i class="fas fa-user-tie" aria-hidden="true"></i> Noida Project Desk</p>
+                            </div>
+                            <div class="office-pane" id="pane-gurugram">
+                                <p class="office-address"><i class="fas fa-location-dot" aria-hidden="true"></i> Cyber City, Phase III, Gurugram, Haryana - 122002</p>
+                                <p class="office-contact"><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+919310092963">+91 93100 92963</a></p>
+                                <p class="office-manager"><i class="fas fa-user-tie" aria-hidden="true"></i> Gurugram Support Hub</p>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="contact-detail-card primary">
                         <i class="fas fa-phone-volume" aria-hidden="true"></i>
                         <div>
@@ -350,13 +394,6 @@
                         </div>
                     </div>
                     <div class="contact-detail-card">
-                        <i class="fas fa-location-dot" aria-hidden="true"></i>
-                        <div>
-                            <span>Office</span>
-                            <p>304, Padma Palace, 86, Nehru Place, New Delhi - 110019</p>
-                        </div>
-                    </div>
-                    <div class="contact-detail-card">
                         <i class="fas fa-clock" aria-hidden="true"></i>
                         <div>
                             <span>Business Hours</span>
@@ -371,15 +408,15 @@
                             <a href="https://wa.me/919310092963?text=Hello%20GPSPL%2C%20I%20would%20like%20to%20discuss%20a%20technology%20requirement." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
                         </div>
                     </div>
-                    <div class="contact-capability-card">
-                        <span>Popular Enquiries</span>
-                        <div class="contact-capability-tags" aria-label="Popular GPSPL enquiry categories">
-                            <a href="/conference-room-solutions">Conference rooms</a>
-                            <a href="/active-led-video-wall">Active LED walls</a>
-                            <a href="/interactive-display-solutions">Smart boards</a>
-                            <a href="/professional-audio-solutions">Professional audio</a>
-                            <a href="/it-infrastructure-solutions">IT infrastructure</a>
-                            <a href="/amc-maintenance-services">AMC support</a>
+                    <div class="contact-detail-card">
+                        <span style="font-size: 0.72rem; text-transform: uppercase; font-weight: 800; letter-spacing: 0.1em; color: var(--primary-color);">Popular Enquiries</span>
+                        <div class="contact-capability-tags" aria-label="Popular GPSPL enquiry categories" style="margin-top: 10px;">
+                            <a href="/conference-room-solutions" style="color: #475569; text-decoration: none; font-weight: 700; margin-right: 8px;">Conference rooms</a>
+                            <a href="/active-led-video-wall" style="color: #475569; text-decoration: none; font-weight: 700; margin-right: 8px;">Active LED walls</a>
+                            <a href="/interactive-display-solutions" style="color: #475569; text-decoration: none; font-weight: 700; margin-right: 8px;">Smart boards</a>
+                            <a href="/professional-audio-solutions" style="color: #475569; text-decoration: none; font-weight: 700; margin-right: 8px;">Professional audio</a>
+                            <a href="/it-infrastructure-solutions" style="color: #475569; text-decoration: none; font-weight: 700; margin-right: 8px;">IT infrastructure</a>
+                            <a href="/amc-maintenance-services" style="color: #475569; text-decoration: none; font-weight: 700; margin-right: 8px;">AMC support</a>
                         </div>
                     </div>
                 </aside>
@@ -621,5 +658,65 @@
 </div>
 </div>
     <script src="JS/main.js?v=20260729-style-polish" defer></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Dynamic Contact Form Selection Routing
+            const routingCards = document.querySelectorAll('.contact-routing-card');
+            const selectEl = document.getElementById('contact-service');
+            const nameEl = document.getElementById('contact-name');
+            const formPanel = document.querySelector('.contact-form-panel');
+
+            routingCards.forEach(card => {
+                card.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const routeType = card.getAttribute('data-route-type');
+                    
+                    if (routeType === 'projects') {
+                        selectEl.value = 'Audio Visual Integration';
+                    } else if (routeType === 'support') {
+                        selectEl.value = 'AMC & Maintenance';
+                    } else if (routeType === 'consult') {
+                        selectEl.value = 'Other Requirement';
+                    }
+
+                    // Smooth scroll
+                    document.getElementById('contact-enquiry-form').scrollIntoView({ behavior: 'smooth' });
+
+                    // Brief glow animation
+                    formPanel.classList.remove('glow-active');
+                    void formPanel.offsetWidth; // trigger reflow
+                    formPanel.classList.add('glow-active');
+
+                    // Focus input
+                    setTimeout(() => {
+                        nameEl.focus();
+                    }, 800);
+                });
+            });
+
+            // 2. Interactive Delhi NCR "Office Hubs" Address Switcher
+            const tabs = document.querySelectorAll('.switcher-tab');
+            const panes = document.querySelectorAll('.office-pane');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const targetOffice = tab.getAttribute('data-office');
+                    
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    panes.forEach(pane => {
+                        const paneId = pane.getAttribute('id');
+                        if (paneId === 'pane-' + targetOffice) {
+                            pane.classList.add('active');
+                        } else {
+                            pane.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
