@@ -125,7 +125,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     "@type": "Offer",
                     "itemOffered": { "@type": "Service", "name": card.title, "description": card.description }
                 }))
-            },
+            }
+        };
+
+        const faqSchema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
             "mainEntity": data.faqs.map(item => ({
                 "@type": "Question",
                 "name": item.question,
@@ -147,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const script = document.createElement("script");
         script.type = "application/ld+json";
-        script.textContent = JSON.stringify([serviceSchema, breadcrumbSchema]);
+        script.textContent = JSON.stringify([serviceSchema, breadcrumbSchema, faqSchema]);
         document.head.appendChild(script);
     }
 
