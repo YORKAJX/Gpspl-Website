@@ -623,3 +623,147 @@ html body .featured-products .product-heading-copy {
         grid-template-columns: 1fr !important;
     }
 }
+
+
+/* =====================================================================
+   GLOBAL READABILITY FIX - All dark sections, all pages
+   Inserted at end for maximum cascade priority.
+===================================================================== */
+
+/* === 1. Service page / solution page hero h1 and p === */
+html body .service-page .service-hero h1,
+html body .service-page .service-hero-copy h1,
+html body .solution-page-hero h1,
+html body .page-hero h1,
+html body .service-detail-hero h1,
+html body .service-page-hero h1 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.38) !important;
+}
+
+html body .service-page .service-hero p,
+html body .service-page .service-hero-copy p,
+html body .solution-page-hero p,
+html body .page-hero p {
+    color: rgba(220, 235, 252, 0.9) !important;
+    -webkit-text-fill-color: rgba(220, 235, 252, 0.9) !important;
+}
+
+/* === 2. SEO Intent grid cards - dark glass on all selector variants === */
+html body :is(.service-seo-intent, .seo-intent-section, .service-search-intent) .seo-intent-grid a,
+html body :is(.service-seo-intent, .seo-intent-section, .service-search-intent) .seo-intent-grid > li {
+    display: block !important;
+    padding: 18px 22px 18px 26px !important;
+    border-radius: 14px !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    border-left: 4px solid #ff4b50 !important;
+    background: rgba(255, 255, 255, 0.09) !important;
+    text-decoration: none !important;
+    overflow: visible !important;
+    color: #ffffff !important;
+    transition: background 0.22s ease, transform 0.22s ease !important;
+}
+
+html body :is(.service-seo-intent, .seo-intent-section, .service-search-intent) .seo-intent-grid a:hover {
+    background: rgba(255, 255, 255, 0.16) !important;
+    border-left-color: #ef3b3f !important;
+    transform: translateX(6px) !important;
+}
+
+html body :is(.service-seo-intent, .seo-intent-section) .seo-intent-grid span {
+    display: block !important;
+    color: #ff7b80 !important;
+    font-size: 0.76rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 5px !important;
+}
+
+html body :is(.service-seo-intent, .seo-intent-section) .seo-intent-grid strong {
+    display: block !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    font-size: clamp(0.9rem, 1.08vw, 1.05rem) !important;
+    line-height: 1.42 !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+}
+
+/* === 3. Operating Model copy panel - dark glassmorphic === */
+html body #distribution-integration-support .model-copy-panel,
+html body .operating-model .model-copy-panel {
+    background:
+        radial-gradient(circle at 90% 10%, rgba(239, 52, 56, 0.12), transparent 40%),
+        linear-gradient(145deg, rgba(8, 24, 46, 0.88), rgba(18, 40, 68, 0.82)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-left: 4px solid #ef3438 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    color: #ffffff !important;
+}
+
+html body #distribution-integration-support .model-copy-panel p,
+html body .operating-model .model-copy-panel p {
+    color: rgba(215, 232, 252, 0.9) !important;
+    -webkit-text-fill-color: rgba(215, 232, 252, 0.9) !important;
+    text-shadow: none !important;
+}
+
+/* === 4. Why GPSPL copy panel - dark glassmorphic === */
+html body #why-gpspl .why-copy-panel,
+html body .why-section .why-copy-panel,
+html body .operating-model .why-copy-panel {
+    background:
+        radial-gradient(circle at 90% 10%, rgba(239, 52, 56, 0.12), transparent 40%),
+        linear-gradient(145deg, rgba(8, 24, 46, 0.88), rgba(18, 40, 68, 0.82)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-left: 4px solid #ef3438 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+}
+
+html body #why-gpspl .why-copy-panel p,
+html body .why-section .why-copy-panel p {
+    color: rgba(215, 232, 252, 0.9) !important;
+    -webkit-text-fill-color: rgba(215, 232, 252, 0.9) !important;
+}
+
+/* === 5. Featured products heading copy panel - dark glass === */
+html body #featured-products .product-heading-copy,
+html body .featured-products .product-heading-copy {
+    background:
+        radial-gradient(circle at 90% 10%, rgba(239, 52, 56, 0.12), transparent 40%),
+        linear-gradient(145deg, rgba(8, 24, 46, 0.88), rgba(18, 40, 68, 0.82)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-left: 4px solid #ef3438 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    color: #ffffff !important;
+}
+
+html body #featured-products .product-heading-copy p,
+html body .featured-products .product-heading-copy p {
+    color: rgba(215, 232, 252, 0.9) !important;
+    -webkit-text-fill-color: rgba(215, 232, 252, 0.9) !important;
+    text-shadow: none !important;
+}
+
+/* === 6. Generic dark section text contrast fallback === */
+html body :is(.operating-model, #why-gpspl, .testimonials-section, .industries-served, .home-dark-section) h2,
+html body :is(.operating-model, #why-gpspl, .testimonials-section, .industries-served, .home-dark-section) h3 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: revert !important;
+}
+
+html body :is(.operating-model, #why-gpspl, .testimonials-section, .industries-served, .home-dark-section) p {
+    color: rgba(210, 228, 250, 0.88) !important;
+    -webkit-text-fill-color: rgba(210, 228, 250, 0.88) !important;
+}
