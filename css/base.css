@@ -963,3 +963,500 @@ html body .product-chip-row span {
         padding: 20px 16px;
     }
 }
+
+
+/* ==========================================================
+   GPSPL CRITICAL UI CONTRAST & GRID MASTER FIX (PACK #5)
+   Resolves:
+   1. Search Intent Solution Paths Grid & Dark Glass Cards (Screenshot 1)
+   2. Home Page Distribution/Integration/Support Contrast & Readable Copy (Screenshot 2)
+   3. Industry Verticals Tabs Layout Containment (Screenshot 3)
+   4. Story Cards High-Contrast Dark Text on White Cards (Screenshot 4)
+   Aug 2026
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   ISSUE 1: SEARCH INTENT GUIDANCE & 2-COLUMN SOLUTION GRID (Screenshot 1)
+   ---------------------------------------------------------- */
+.service-seo-intent,
+.seo-intent-section,
+[data-admin-section="seo-intent-section"] {
+    background:
+        radial-gradient(circle at 10% 20%, rgba(239, 52, 56, 0.14), transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(13, 39, 74, 0.35), transparent 35%),
+        linear-gradient(135deg, #071526 0%, #0d274a 60%, #111e36 100%) !important;
+    padding: clamp(60px, 8vw, 96px) 0 !important;
+    color: #ffffff !important;
+}
+
+.service-seo-intent .seo-intent-panel,
+.seo-intent-section .seo-intent-panel,
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-panel {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr) !important;
+    gap: clamp(32px, 4vw, 60px) !important;
+    align-items: start !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.seo-intent-copy {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+}
+
+.seo-intent-copy h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(1.8rem, 2.8vw, 2.5rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.025em !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    margin: 0 !important;
+}
+
+.seo-intent-copy p {
+    font-size: 0.95rem !important;
+    line-height: 1.72 !important;
+    color: rgba(210, 228, 252, 0.9) !important;
+    -webkit-text-fill-color: rgba(210, 228, 252, 0.9) !important;
+    margin: 0 !important;
+}
+
+.seo-intent-copy p strong {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Transform the right-side list into a stylish 2-column Grid of dark glass cards */
+.seo-intent-list,
+ul.seo-intent-list,
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-list {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    background: none !important;
+}
+
+.seo-intent-list li {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.seo-intent-list li a,
+.seo-intent-list > li,
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-list li a {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    min-height: 64px !important;
+    box-sizing: border-box !important;
+    padding: 14px 16px !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    border-left: 4px solid #ef3438 !important;
+    background: rgba(255, 255, 255, 0.07) !important;
+    backdrop-filter: blur(10px) !important;
+    text-decoration: none !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    font-size: 0.82rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    line-height: 1.35 !important;
+    transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease !important;
+}
+
+.seo-intent-list li a::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    background: #ef3438 !important;
+    flex-shrink: 0 !important;
+}
+
+.seo-intent-list li a:hover {
+    background: rgba(239, 52, 56, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    border-left-color: #ff7b80 !important;
+    transform: translateY(-2px) !important;
+}
+
+
+/* ----------------------------------------------------------
+   ISSUE 2: DISTRIBUTION + INTEGRATION + SUPPORT CONTRAST (Screenshot 2)
+   ---------------------------------------------------------- */
+#distribution-integration-support,
+.operating-model {
+    background:
+        radial-gradient(circle at 10% 15%, rgba(239, 52, 56, 0.13), transparent 28%),
+        linear-gradient(135deg, #071526 0%, #0c2342 55%, #13213a 100%) !important;
+    color: #ffffff !important;
+    padding: clamp(64px, 8vw, 100px) 0 !important;
+    position: relative !important;
+}
+
+#distribution-integration-support .model-heading {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.52fr) minmax(0, 0.48fr) !important;
+    gap: clamp(28px, 4vw, 56px) !important;
+    align-items: center !important;
+    margin-bottom: 48px !important;
+}
+
+#distribution-integration-support .model-heading h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(2rem, 3.4vw, 3.2rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.025em !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background: none !important;
+    margin: 0 !important;
+}
+
+#distribution-integration-support .section-eyebrow {
+    color: #ff9ea1 !important;
+    -webkit-text-fill-color: #ff9ea1 !important;
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 8px !important;
+}
+
+#distribution-integration-support .model-copy-panel {
+    background: rgba(255, 255, 255, 0.06) !important;
+    backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-left: 4px solid #ef3438 !important;
+    border-radius: 18px !important;
+    padding: 24px 28px !important;
+    box-sizing: border-box !important;
+}
+
+#distribution-integration-support .model-copy-panel p {
+    font-size: 0.94rem !important;
+    line-height: 1.72 !important;
+    color: rgba(215, 230, 252, 0.9) !important;
+    -webkit-text-fill-color: rgba(215, 230, 252, 0.9) !important;
+    margin: 0 0 12px !important;
+}
+
+#distribution-integration-support .model-copy-panel p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* 3 Bottom Pillar Cards */
+#distribution-integration-support .model-pillar-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: clamp(20px, 3vw, 32px) !important;
+    margin-bottom: 40px !important;
+}
+
+#distribution-integration-support .model-pillar {
+    background: #ffffff !important;
+    border: 1px solid rgba(13, 31, 56, 0.1) !important;
+    border-radius: 20px !important;
+    padding: 32px 26px !important;
+    box-shadow: 0 10px 30px rgba(7, 21, 38, 0.08) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+}
+
+#distribution-integration-support .model-pillar .pillar-index {
+    font-size: 0.75rem !important;
+    font-weight: 800 !important;
+    color: #ef3438 !important;
+    -webkit-text-fill-color: #ef3438 !important;
+    background: rgba(239, 52, 56, 0.08) !important;
+    padding: 4px 10px !important;
+    border-radius: 6px !important;
+    display: inline-block !important;
+    width: fit-content !important;
+    margin-bottom: 14px !important;
+}
+
+#distribution-integration-support .model-pillar i {
+    font-size: 1.8rem !important;
+    color: #0056b3 !important;
+    margin-bottom: 14px !important;
+}
+
+#distribution-integration-support .model-pillar h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 1.35rem !important;
+    font-weight: 800 !important;
+    color: #071526 !important;
+    -webkit-text-fill-color: #071526 !important;
+    margin: 0 0 10px !important;
+}
+
+#distribution-integration-support .model-pillar p {
+    font-size: 0.9rem !important;
+    line-height: 1.65 !important;
+    color: #4b6080 !important;
+    -webkit-text-fill-color: #4b6080 !important;
+    margin: 0 0 16px !important;
+}
+
+#distribution-integration-support .model-pillar ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 0 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    flex-grow: 1 !important;
+}
+
+#distribution-integration-support .model-pillar ul li {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+    color: #334155 !important;
+    -webkit-text-fill-color: #334155 !important;
+    position: relative !important;
+    padding-left: 16px !important;
+}
+
+#distribution-integration-support .model-pillar ul li::before {
+    content: "•" !important;
+    position: absolute !important;
+    left: 0 !important;
+    color: #ef3438 !important;
+    font-size: 1.2rem !important;
+    line-height: 1 !important;
+}
+
+#distribution-integration-support .model-pillar a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-size: 0.88rem !important;
+    font-weight: 800 !important;
+    color: #0056b3 !important;
+    -webkit-text-fill-color: #0056b3 !important;
+    text-decoration: none !important;
+    transition: gap 0.2s ease !important;
+}
+
+#distribution-integration-support .model-pillar a:hover {
+    gap: 10px !important;
+    color: #ef3438 !important;
+    -webkit-text-fill-color: #ef3438 !important;
+}
+
+
+/* ----------------------------------------------------------
+   ISSUE 3: INDUSTRY VERTICALS TABS CONTAINER CONTAINMENT (Screenshot 3)
+   ---------------------------------------------------------- */
+#industries .industry-experience,
+.industries-served .industry-experience {
+    display: grid !important;
+    grid-template-columns: minmax(0, 360px) minmax(0, 1fr) !important;
+    gap: clamp(24px, 3.5vw, 48px) !important;
+    align-items: start !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+}
+
+#industries .industry-tabs,
+.industries-served .industry-tabs {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+#industries .industry-tab,
+.industries-served .industry-tab {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px 16px !important;
+    border-radius: 12px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-align: left !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+#industries .industry-tab span,
+.industries-served .industry-tab span {
+    font-size: 0.75rem !important;
+    font-weight: 800 !important;
+    color: #ff9ea1 !important;
+    background: rgba(239, 52, 56, 0.12) !important;
+    padding: 4px 8px !important;
+    border-radius: 6px !important;
+    flex-shrink: 0 !important;
+}
+
+#industries .industry-tab strong,
+.industries-served .industry-tab strong {
+    font-size: 0.9rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    display: block !important;
+    line-height: 1.25 !important;
+}
+
+#industries .industry-tab small,
+.industries-served .industry-tab small {
+    font-size: 0.78rem !important;
+    color: rgba(210, 228, 252, 0.75) !important;
+    -webkit-text-fill-color: rgba(210, 228, 252, 0.75) !important;
+    display: block !important;
+    margin-top: 2px !important;
+}
+
+#industries .industry-tab.active,
+.industries-served .industry-tab.active {
+    background: rgba(239, 52, 56, 0.15) !important;
+    border-color: #ef3438 !important;
+    border-left: 4px solid #ef3438 !important;
+}
+
+#industries .industry-stage,
+.industries-served .industry-stage {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+/* ----------------------------------------------------------
+   ISSUE 4: PRODUCT STORY CARDS READABILITY ON WHITE CARDS (Screenshot 4)
+   ---------------------------------------------------------- */
+.product-story-grid,
+html body .product-story-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+    margin-top: 32px !important;
+}
+
+.product-story-grid article,
+html body .product-story-grid article,
+html body :is(.product-depth-section, .service-page, .product-detail-page) .product-story-grid article {
+    background: #ffffff !important;
+    border: 1px solid rgba(13, 31, 56, 0.12) !important;
+    border-radius: 16px !important;
+    padding: 24px 20px !important;
+    box-shadow: 0 8px 24px rgba(13, 31, 56, 0.05) !important;
+    border-bottom: 3px solid #ef3438 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+}
+
+.product-story-grid article span,
+html body .product-story-grid article span {
+    font-size: 0.75rem !important;
+    font-weight: 800 !important;
+    color: #ef3438 !important;
+    -webkit-text-fill-color: #ef3438 !important;
+    background: rgba(239, 52, 56, 0.08) !important;
+    padding: 4px 10px !important;
+    border-radius: 6px !important;
+    display: inline-block !important;
+    width: fit-content !important;
+    margin-bottom: 4px !important;
+}
+
+.product-story-grid article h3,
+html body .product-story-grid article h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    color: #071526 !important;
+    -webkit-text-fill-color: #071526 !important;
+    margin: 0 !important;
+    background: none !important;
+}
+
+.product-story-grid article p,
+html body .product-story-grid article p {
+    font-size: 0.88rem !important;
+    line-height: 1.62 !important;
+    color: #4b6080 !important;
+    -webkit-text-fill-color: #4b6080 !important;
+    margin: 0 !important;
+}
+
+
+/* ----------------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+   ---------------------------------------------------------- */
+@media (max-width: 1024px) {
+    #industries .industry-experience,
+    .industries-served .industry-experience {
+        grid-template-columns: 1fr !important;
+    }
+
+    .product-story-grid,
+    html body .product-story-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    #distribution-integration-support .model-heading {
+        grid-template-columns: 1fr !important;
+    }
+
+    #distribution-integration-support .model-pillar-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .seo-intent-list,
+    ul.seo-intent-list {
+        grid-template-columns: 1fr !important;
+    }
+
+    .product-story-grid,
+    html body .product-story-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
