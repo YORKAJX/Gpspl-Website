@@ -1,5 +1,90 @@
 [
   {
+    "slug": "smart-classroom-solutions-interactive-displays-hybrid",
+    "title": "Smart Classroom Solutions 2026: Interactive Displays, Audio & Hybrid Teaching Setup",
+    "excerpt": "A complete blueprint for modernizing educational classrooms: interactive flat panels (65\"–86\"), OPS modules, teacher wireless microphones, acoustics, and lecture capture readiness with budget BOQ guidelines for Indian institutions.",
+    "category": "Education AV",
+    "categoryColor": "#8b5cf6",
+    "date": "2026-08-04",
+    "readTime": "8 min read",
+    "author": "GPSPL Education Technology Team",
+    "tags": [
+      "Smart Classroom",
+      "Interactive Flat Panel",
+      "Hybrid Learning",
+      "Education AV",
+      "Delhi NCR"
+    ]
+  },
+  {
+    "slug": "active-led-wall-pixel-pitch-sizing-cost-guide",
+    "title": "Active LED Video Wall Guide: Pixel Pitch (P1.2 to P2.5), Sizing, Cost & Maintenance",
+    "excerpt": "How to calculate the right pixel pitch based on viewing distance, compare SMD vs COB LED technology, plan power & structural mounting, and evaluate real cost-per-sqft benchmarks in India.",
+    "category": "Display Systems",
+    "categoryColor": "#d32f2f",
+    "date": "2026-08-02",
+    "readTime": "11 min read",
+    "author": "GPSPL Display Engineering Team",
+    "tags": [
+      "Active LED Wall",
+      "Pixel Pitch",
+      "COB LED",
+      "Video Wall",
+      "BOQ Planning"
+    ]
+  },
+  {
+    "slug": "boardroom-automation-amx-crestron-touch-panel-guide",
+    "title": "Boardroom Automation & Control: AMX, Crestron & Touch Panel Integration Guide",
+    "excerpt": "Simplify complex meeting room technology into single-touch meeting start presets. Learn how touch panels coordinate displays, audio DSP, video switchers, lighting, and HVAC.",
+    "category": "Control & Automation",
+    "categoryColor": "#e1272d",
+    "date": "2026-07-29",
+    "readTime": "7 min read",
+    "author": "GPSPL Control & Integration Team",
+    "tags": [
+      "Boardroom Automation",
+      "Crestron",
+      "AMX",
+      "Touch Panel",
+      "Room Control"
+    ]
+  },
+  {
+    "slug": "video-conferencing-teams-rooms-vs-zoom-rooms-byod-guide",
+    "title": "Video Conferencing Architecture: Microsoft Teams Rooms vs Zoom Rooms vs BYOD",
+    "excerpt": "Should you deploy native Microsoft Teams Rooms, Zoom Rooms appliances, or universal USB-C BYOD setups? A technical comparison of hardware codecs, AI PTZ cameras, ceiling beamforming mics, and network QoS.",
+    "category": "Collaboration",
+    "categoryColor": "#0d6efd",
+    "date": "2026-07-22",
+    "readTime": "9 min read",
+    "author": "GPSPL Unified Communications Team",
+    "tags": [
+      "Video Conferencing",
+      "Microsoft Teams Rooms",
+      "Zoom Rooms",
+      "BYOD",
+      "Beamforming Mic"
+    ]
+  },
+  {
+    "slug": "enterprise-digital-signage-network-cms-guide",
+    "title": "Enterprise Digital Signage Network: Commercial Displays, Media Players & CMS Scheduling",
+    "excerpt": "How to design, deploy, and manage centralized digital signage across corporate lobbies, cafeteria menu boards, retail chains, and campus wayfinding with real-time CMS scheduling.",
+    "category": "Signage & Display",
+    "categoryColor": "#10b981",
+    "date": "2026-07-10",
+    "readTime": "8 min read",
+    "author": "GPSPL Digital Media Team",
+    "tags": [
+      "Digital Signage",
+      "CMS Scheduling",
+      "Commercial Displays",
+      "Retail AV",
+      "Media Players"
+    ]
+  },
+  {
     "slug": "conference-room-av-setup-guide",
     "title": "Conference Room AV Setup Guide 2026 — Equipment, Cost and BOQ",
     "excerpt": "A complete buyer guide for setting up a professional AV system in conference rooms — from display selection and audio to control systems and cabling. Includes real BOQ estimates for Delhi NCR.",
