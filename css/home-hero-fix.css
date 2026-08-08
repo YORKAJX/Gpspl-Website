@@ -6083,3 +6083,70 @@ html body [data-admin-section="product-overview"] .product-story-grid article p 
         grid-template-columns: 1fr !important;
     }
 }
+
+
+/* ==========================================================
+   FIX LEADERSHIP / DIRECTOR SECTION TITLE CENTERING & LAYOUT
+   ========================================================== */
+.director-section {
+    padding: clamp(64px, 8vw, 100px) 0 !important;
+    background: #f8fafc !important;
+}
+
+.director-section .director-section-title,
+.about-gpspl-page .director-section .director-section-title,
+.about-modern-section.director-section .director-section-title {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    max-width: 860px !important;
+    margin: 0 auto clamp(36px, 5vw, 56px) !important;
+    width: 100% !important;
+    grid-template-columns: none !important;
+}
+
+.director-section .director-section-title .section-eyebrow,
+.about-gpspl-page .director-section .director-section-title .section-eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    font-size: 0.75rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.22em !important;
+    text-transform: uppercase !important;
+    color: #c1334a !important;
+    -webkit-text-fill-color: #c1334a !important;
+    margin-bottom: 12px !important;
+}
+
+.director-section .director-section-title h2,
+.about-gpspl-page .director-section .director-section-title h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(1.85rem, 3.2vw, 2.8rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.02em !important;
+    color: #071526 !important;
+    -webkit-text-fill-color: #071526 !important;
+    background: none !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    text-align: center !important;
+}
+
+.director-section .director-grid {
+    display: grid !important;
+    grid-template-columns: 340px 1fr !important;
+    gap: clamp(32px, 4vw, 56px) !important;
+    align-items: start !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+}
+
+@media (max-width: 980px) {
+    .director-section .director-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
