@@ -1,20 +1,40 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Instant fallback to show all reveal elements in VS Code embedded browsers
-    setTimeout(() => {
+    // Instant fallback: show all reveal elements immediately
+    // This fixes VS Code Simple Browser / file:// protocol viewing
+    const revealAll = () => {
         document.querySelectorAll('.reveal:not(.is-visible)').forEach(el => {
             el.classList.add('is-visible');
         });
-    }, 120);
+    };
+    revealAll();
+    setTimeout(revealAll, 80);
+    setTimeout(revealAll, 300);
 
 
     function loadModule(moduleId, filePath) {
+        const element = document.getElementById(moduleId);
+        // If content is already inline (like on index.html), skip fetch
+        // to work without a server (file:// protocol / VS Code Simple Browser)
+        if (element && element.children.length > 0) {
+            // Content already present - just init state
+            if (moduleId === "header-container") initHeaderState();
+            if (moduleId === "footer-container") {
+                initFooterState();
+                initLeadForms();
+                initConversionTrackingHooks();
+            }
+            document.dispatchEvent(new CustomEvent('gpspl:module-loaded', {
+                detail: { moduleId, filePath }
+            }));
+            return;
+        }
+        // Otherwise fetch from server
         fetch(filePath, { cache: "force-cache" })
             .then(response => {
                 if (!response.ok) throw new Error(`Error loading ${filePath}`);
                 return response.text();
             })
             .then(data => {
-                const element = document.getElementById(moduleId);
                 if (element) {
                     element.innerHTML = data;
                     if (moduleId === "header-container") initHeaderState();
@@ -28,11 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     }));
                 }
             })
-            .catch(error => console.error(error));
+            .catch(error => console.warn('Module load skipped (file:// mode):', moduleId));
     }
 
-    loadModule("header-container", "/modules/header.html?v=20260715");
-    loadModule("footer-container", "/modules/footer.html?v=20260715");
+    loadModule("header-container", "/modules/header.html?v=20260808");
+    loadModule("footer-container", "/modules/footer.html?v=20260808");
     ensureFormValidation();
 
     function ensureFormValidation() {

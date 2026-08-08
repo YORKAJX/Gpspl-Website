@@ -1,6 +1,18 @@
 /* Premium UI/UX Polish: Homepage specific overrides loaded after the large base stylesheet. */
 
 /* =====================================================================
+   0. CRITICAL: Ensure .reveal elements are always visible on home page
+   Prevents blank page when JS is slow or file:// protocol is used
+===================================================================== */
+.reveal,
+.hero-message-copy.reveal,
+.hero-message-note.reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+/* =====================================================================
    1. Cinematic Combined Hero Section (Video Background + Overlay + Grid Copy)
 ===================================================================== */
 
