@@ -878,3 +878,174 @@
         height: 140px;
     }
 }
+
+
+/* =====================================================================
+   UNIVERSAL HIGH-CONTRAST TEXT FIX FOR ALL WHITE & LIGHT BOXES / CARDS
+   Solves baby-blue / invisible text on white cards across all pages
+===================================================================== */
+/* 1. All Featured Product Cards & Range Cards */
+.featured-product-card,
+html body .featured-product-card,
+html body :is(.product-range-section, .product-depth-section, .service-page, .product-detail-page, [data-admin-section="product-range"]) .featured-product-card,
+html body :is(.product-range-section, .product-depth-section, .service-page, .product-detail-page, [data-admin-section="product-range"]) [style*="background: #fff"],
+html body :is(.product-range-section, .product-depth-section, .service-page, .product-detail-page, [data-admin-section="product-range"]) [style*="background:#fff"],
+html body :is(.product-range-section, .product-depth-section, .service-page, .product-detail-page, [data-admin-section="product-range"]) [style*="background: white"],
+html body :is(.product-range-section, .product-depth-section, .service-page, .product-detail-page, [data-admin-section="product-range"]) [style*="background-color: #fff"],
+html body :is(.product-range-section, .product-depth-section, .service-page, .product-detail-page, [data-admin-section="product-range"]) [style*="background-color: white"] {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+}
+
+.featured-product-card p,
+html body .featured-product-card p,
+html body :is(.product-range-section, .product-depth-section, .service-page, .product-detail-page, [data-admin-section="product-range"]) .featured-product-card p,
+html body :is(.product-range-section, .product-depth-section, .service-page, .product-detail-page, [data-admin-section="product-range"]) [style*="background: #fff"] p,
+html body :is(.product-range-section, .product-depth-section, .service-page, .product-detail-page, [data-admin-section="product-range"]) [style*="background:#fff"] p,
+html body :is(.product-range-section, .product-depth-section, .service-page, .product-detail-page, [data-admin-section="product-range"]) [style*="background: white"] p {
+    color: #334155 !important;
+    -webkit-text-fill-color: #334155 !important;
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+    margin-bottom: 16px !important;
+}
+
+.featured-product-card :is(h2, h3, h4),
+html body .featured-product-card :is(h2, h3, h4),
+html body :is(.product-range-section, .product-depth-section, .service-page, .product-detail-page, [data-admin-section="product-range"]) .featured-product-card :is(h2, h3, h4),
+html body :is(.product-range-section, .product-depth-section, .service-page, .product-detail-page, [data-admin-section="product-range"]) [style*="background: #fff"] :is(h2, h3, h4),
+html body :is(.product-range-section, .product-depth-section, .service-page, .product-detail-page, [data-admin-section="product-range"]) [style*="background:#fff"] :is(h2, h3, h4) {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    font-weight: 800 !important;
+    opacity: 1 !important;
+}
+
+/* 2. Product Story Grid Articles */
+.product-story-grid article,
+html body .product-story-grid article,
+html body :is(.product-depth-section, .service-page, .product-detail-page, [data-admin-section="product-overview"]) .product-story-grid article {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 16px !important;
+    padding: 24px 20px !important;
+}
+
+.product-story-grid article p,
+html body .product-story-grid article p,
+html body :is(.product-depth-section, .service-page, .product-detail-page, [data-admin-section="product-overview"]) .product-story-grid article p {
+    color: #334155 !important;
+    -webkit-text-fill-color: #334155 !important;
+    font-size: 0.9rem !important;
+    line-height: 1.65 !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+}
+
+.product-story-grid article h3,
+html body .product-story-grid article h3,
+html body :is(.product-depth-section, .service-page, .product-detail-page, [data-admin-section="product-overview"]) .product-story-grid article h3 {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    font-weight: 800 !important;
+    opacity: 1 !important;
+}
+
+/* 3. Related Product Cards */
+.related-card,
+html body .related-card,
+html body .related-grid .related-card {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+.related-card p,
+html body .related-card p,
+.related-info p,
+html body .related-info p {
+    color: #334155 !important;
+    -webkit-text-fill-color: #334155 !important;
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+}
+
+.related-card :is(h3, h4),
+html body .related-card :is(h3, h4),
+.related-info :is(h3, h4),
+html body .related-info :is(h3, h4) {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    font-weight: 800 !important;
+    opacity: 1 !important;
+}
+
+/* 4. RFQ Checklist Cards */
+.product-rfq-grid article,
+html body .product-rfq-grid article,
+html body [data-admin-section="product-rfq-checklist"] .product-rfq-grid article {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+.product-rfq-grid article p,
+html body .product-rfq-grid article p {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+}
+
+/* 5. Support Scope & AMC Cards */
+.product-support-scope article,
+html body .product-support-scope article {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+.product-support-scope article p,
+html body .product-support-scope article p {
+    color: #334155 !important;
+    -webkit-text-fill-color: #334155 !important;
+    font-size: 0.88rem !important;
+    line-height: 1.58 !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+}
+
+.product-support-scope article strong,
+html body .product-support-scope article strong {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    font-weight: 800 !important;
+}
+
+/* 6. General White Box Class / Attribute Overrides */
+[class*="card"][style*="background: #fff"],
+[class*="card"][style*="background:#fff"],
+[class*="card"][style*="background: white"],
+[class*="panel"][style*="background: #fff"],
+[class*="panel"][style*="background:#fff"],
+[class*="box"][style*="background: #fff"],
+[class*="box"][style*="background:#fff"] {
+    color: #0f172a !important;
+}
+
+[class*="card"][style*="background: #fff"] p,
+[class*="card"][style*="background:#fff"] p,
+[class*="card"][style*="background: white"] p,
+[class*="panel"][style*="background: #fff"] p,
+[class*="panel"][style*="background:#fff"] p,
+[class*="box"][style*="background: #fff"] p,
+[class*="box"][style*="background:#fff"] p {
+    color: #334155 !important;
+    -webkit-text-fill-color: #334155 !important;
+}
