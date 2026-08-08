@@ -7500,3 +7500,56 @@ html, body {
         font-size: 0.74rem !important;
     }
 }
+
+
+/* =====================================================================
+   DESKTOP & LAPTOP BALANCED HERO GRID (No Collision, No Overflow)
+===================================================================== */
+@media (min-width: 981px) {
+    html body #home.hero > .hero-message-grid,
+    html body #home .hero-message-grid {
+        grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr) !important;
+        gap: clamp(32px, 4vw, 64px) !important;
+        width: min(calc(100% - 48px), 1280px) !important;
+        max-width: 1280px !important;
+    }
+
+    html body #home .hero-message-copy {
+        max-width: 720px !important;
+        width: 100% !important;
+    }
+
+    html body #home .hero-message-copy .main-headline {
+        font-size: clamp(2rem, 3.2vw, 3.2rem) !important;
+        line-height: 1.15 !important;
+        letter-spacing: -0.025em !important;
+        max-width: 100% !important;
+    }
+
+    html body #home .hero-message-copy .hero-actions {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        width: auto !important;
+    }
+
+    html body #home .hero-message-copy .hero-actions .hero-btn,
+    html body #home .hero-message-copy .hero-actions a {
+        width: auto !important;
+        min-width: auto !important;
+        padding: 13px 24px !important;
+    }
+
+    html body main #home .hero-message-note,
+    html body .hero-message-note {
+        width: 100% !important;
+        max-width: 440px !important;
+        justify-self: end !important;
+        padding: 26px 28px !important;
+    }
+
+    html body main #home .hero-message-note strong,
+    html body .hero-message-note strong {
+        font-size: clamp(1rem, 1.2vw, 1.15rem) !important;
+        line-height: 1.55 !important;
+    }
+}
