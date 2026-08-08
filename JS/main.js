@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Instant fallback to show all reveal elements in VS Code embedded browsers
+    setTimeout(() => {
+        document.querySelectorAll('.reveal:not(.is-visible)').forEach(el => {
+            el.classList.add('is-visible');
+        });
+    }, 120);
+
 
     function loadModule(moduleId, filePath) {
         fetch(filePath, { cache: "force-cache" })

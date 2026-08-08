@@ -36,19 +36,16 @@ function getFilePath(requestUrl) {
         return path.join(ROOT_DIR, 'index.html');
     }
 
-    // Direct file check
     let fullPath = path.join(ROOT_DIR, pathname);
     if (fs.existsSync(fullPath) && fs.statSync(fullPath).isFile()) {
         return fullPath;
     }
 
-    // Clean URL check (e.g. /about-gpspl -> /about-gpspl.html)
     let htmlPath = path.join(ROOT_DIR, `${pathname}.html`);
     if (fs.existsSync(htmlPath) && fs.statSync(htmlPath).isFile()) {
         return htmlPath;
     }
 
-    // Directory index check (e.g. /blog/ -> /blog/index.html)
     let dirIndexPath = path.join(ROOT_DIR, pathname, 'index.html');
     if (fs.existsSync(dirIndexPath) && fs.statSync(dirIndexPath).isFile()) {
         return dirIndexPath;
@@ -72,12 +69,12 @@ const server = http.createServer((req, res) => {
             }
             res.writeHead(200, {
                 'Content-Type': contentType,
-                'Cache-Control': 'no-cache, no-store, must-revalidate' // Prevents local caching during dev
+                'Access-Control-Allow-Origin': '*',
+                'Cache-Control': 'no-cache, no-store, must-revalidate'
             });
             res.end(content);
         });
     } else {
-        // 404 Fallback
         const notFoundPath = path.join(ROOT_DIR, '404.html');
         if (fs.existsSync(notFoundPath)) {
             fs.readFile(notFoundPath, (err, content) => {
@@ -95,11 +92,9 @@ server.listen(PORT, () => {
     const url = `http://localhost:${PORT}`;
     console.log(`\n==================================================`);
     console.log(`🚀 GPSPL Local Preview Server Running!`);
-    console.log(`👉 Open in browser: ${url}`);
-    console.log(`👉 Clean URLs supported (/about-gpspl, /resources, /blog/...)`);
+    console.log(`👉 URL: ${url}`);
+    console.log(`👉 Clean URLs: /about-gpspl, /case-studies, /privacy-policy, /blog/...`);
+    console.log(`👉 Fully compatible with VS Code Simple Browser & External Browsers`);
     console.log(`👉 Press Ctrl + C to stop`);
     console.log(`==================================================\n`);
-
-    // Auto open in default browser on Windows
-    exec(`start ${url}`);
 });
