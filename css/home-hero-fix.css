@@ -1982,3 +1982,866 @@ html body :is(
         padding: 14px 16px !important;
     }
 }
+
+
+/* ======================================================
+   PROJECT PORTFOLIO — COMPLETE DESIGN SYSTEM
+   Applies to: /projects, /featured-projects, and all
+   sub-portfolio pages that share these components.
+   Aug 2026
+   ====================================================== */
+
+/* -------------------------------------------------------
+   DESIGN TOKENS (Portfolio-specific)
+------------------------------------------------------- */
+:root {
+    --pp-navy:     #071526;
+    --pp-navy-mid: #0d274a;
+    --pp-red:      #ef3438;
+    --pp-red-soft: #c1334a;
+    --pp-white:    #ffffff;
+    --pp-off:      rgba(210,228,252,0.86);
+    --pp-light-bg: #f4f7fb;
+    --pp-card-bg:  #ffffff;
+    --pp-border:   rgba(13,31,56,0.1);
+    --pp-shadow:   0 6px 28px rgba(13,31,56,0.08);
+    --pp-gap:      clamp(20px, 3vw, 36px);
+    --pp-section:  clamp(60px, 8vw, 96px);
+    --pp-radius:   18px;
+}
+
+/* -------------------------------------------------------
+   SECTION BASE — consistent vertical rhythm
+------------------------------------------------------- */
+[data-admin-section] {
+    padding: var(--pp-section) 0;
+}
+
+/* -------------------------------------------------------
+   SECTION HEADINGS — constrained, readable hierarchy
+------------------------------------------------------- */
+.section-heading,
+.section-heading-row {
+    max-width: 720px;
+    margin-bottom: clamp(36px, 5vw, 56px);
+}
+
+.section-heading h2,
+.section-heading-row h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.7rem, 2.8vw, 2.6rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.02em;
+    color: #0d1f38 !important;
+    -webkit-text-fill-color: #0d1f38 !important;
+    background: none !important;
+    margin: 0 0 16px !important;
+}
+
+.section-heading p,
+.section-heading-row p {
+    font-size: clamp(0.92rem, 1.1vw, 1.04rem);
+    color: #4b6080;
+    line-height: 1.74;
+    margin: 0;
+}
+
+/* Centered heading variant */
+.section-heading.centered,
+.section-heading-row.centered {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* -------------------------------------------------------
+   HERO SECTION — case-study-hero / projects hero
+   Fix: h1 oversized, right panel clipped
+------------------------------------------------------- */
+.case-study-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: min(90vh, 680px);
+    display: flex;
+    align-items: stretch;
+}
+
+.case-study-hero > img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    z-index: 0 !important;
+}
+
+.case-study-hero::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(105deg, rgba(7,21,38,0.92) 0%, rgba(7,21,38,0.72) 48%, rgba(7,21,38,0.52) 100%) !important;
+    z-index: 1 !important;
+}
+
+.case-study-hero .container,
+.case-study-hero-grid {
+    position: relative !important;
+    z-index: 2 !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr) !important;
+    gap: clamp(36px, 5vw, 60px) !important;
+    align-items: center !important;
+    padding-top: clamp(60px, 8vw, 100px) !important;
+    padding-bottom: clamp(60px, 8vw, 100px) !important;
+}
+
+/* Left: copy */
+.case-study-hero-copy {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    min-width: 0 !important;
+}
+
+.case-study-hero-copy h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(1.9rem, 3.2vw, 3.2rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.14 !important;
+    letter-spacing: -0.025em !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    margin: 0 !important;
+    word-break: break-word !important;
+}
+
+.case-study-hero-copy p {
+    font-size: clamp(0.9rem, 1.1vw, 1.04rem) !important;
+    color: rgba(210,228,252,0.88) !important;
+    -webkit-text-fill-color: rgba(210,228,252,0.88) !important;
+    line-height: 1.72 !important;
+    margin: 0 !important;
+}
+
+.case-study-hero-copy .section-eyebrow {
+    font-size: 0.72rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.24em !important;
+    text-transform: uppercase !important;
+    color: #ff9ea1 !important;
+    -webkit-text-fill-color: #ff9ea1 !important;
+}
+
+.case-study-hero-copy .hero-actions,
+.case-study-hero-copy .service-hero-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    margin-top: 4px !important;
+}
+
+/* Right: delivery model panel */
+.case-study-hero-panel {
+    background: rgba(255,255,255,0.09) !important;
+    backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255,255,255,0.18) !important;
+    border-radius: 20px !important;
+    padding: 28px 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.case-study-hero-panel > span {
+    font-size: 0.67rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.22em !important;
+    text-transform: uppercase !important;
+    color: #ff9ea1 !important;
+    -webkit-text-fill-color: #ff9ea1 !important;
+    display: block !important;
+    border-bottom: 1px solid rgba(255,255,255,0.12) !important;
+    padding-bottom: 12px !important;
+}
+
+.case-study-hero-panel article {
+    display: flex !important;
+    gap: 14px !important;
+    align-items: flex-start !important;
+}
+
+.case-study-hero-panel article strong {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 36px !important;
+    height: 36px !important;
+    border-radius: 10px !important;
+    background: #ef3438 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    font-size: 0.78rem !important;
+    font-weight: 900 !important;
+    flex-shrink: 0 !important;
+}
+
+.case-study-hero-panel article p {
+    font-size: 0.88rem !important;
+    color: rgba(210,228,252,0.9) !important;
+    -webkit-text-fill-color: rgba(210,228,252,0.9) !important;
+    line-height: 1.56 !important;
+    margin: 4px 0 0 !important;
+}
+
+/* -------------------------------------------------------
+   EXECUTIVE SUMMARY / PROOF BAND (2-col)
+   project-proof-band: left=copy, right=checklist
+------------------------------------------------------- */
+.project-proof-band {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr) !important;
+    gap: clamp(40px, 5vw, 64px) !important;
+    align-items: start !important;
+}
+
+.project-proof-band > div {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    min-width: 0 !important;
+}
+
+.project-proof-band > div h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(1.65rem, 2.6vw, 2.4rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+    color: #0d1f38 !important;
+    -webkit-text-fill-color: #0d1f38 !important;
+    background: none !important;
+    margin: 0 !important;
+}
+
+.project-proof-band > div p {
+    font-size: clamp(0.88rem, 1vw, 0.98rem) !important;
+    color: #4b6080 !important;
+    -webkit-text-fill-color: #4b6080 !important;
+    line-height: 1.76 !important;
+    margin: 0 !important;
+}
+
+/* Checklist */
+.project-proof-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-width: 0 !important;
+}
+
+.project-proof-list li {
+    display: flex !important;
+    gap: 14px !important;
+    align-items: flex-start !important;
+    padding: 16px 18px !important;
+    border-radius: 14px !important;
+    background: var(--pp-card-bg) !important;
+    border: 1px solid var(--pp-border) !important;
+    border-left: 4px solid #ef3438 !important;
+    box-shadow: var(--pp-shadow) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.project-proof-list li:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 36px rgba(13,31,56,0.12) !important;
+}
+
+.project-proof-list li i {
+    color: #ef3438 !important;
+    font-size: 1.1rem !important;
+    flex-shrink: 0 !important;
+    margin-top: 2px !important;
+}
+
+.project-proof-list li span {
+    font-size: 0.9rem !important;
+    color: #3d4f65 !important;
+    line-height: 1.64 !important;
+}
+
+.project-proof-list li span strong {
+    color: #0d1f38 !important;
+    font-weight: 800 !important;
+    display: block !important;
+    margin-bottom: 3px !important;
+}
+
+/* Proof links variant */
+.project-proof-link {
+    display: flex !important;
+    gap: 14px !important;
+    align-items: flex-start !important;
+    text-decoration: none !important;
+}
+
+.project-proof-link i {
+    color: #ef3438 !important;
+    font-size: 1rem !important;
+    flex-shrink: 0 !important;
+    margin-top: 3px !important;
+}
+
+/* -------------------------------------------------------
+   CASE STUDY CARDS GRID
+------------------------------------------------------- */
+.case-study-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)) !important;
+    gap: clamp(20px, 3vw, 28px) !important;
+}
+
+.case-study-card {
+    background: var(--pp-card-bg) !important;
+    border-radius: var(--pp-radius) !important;
+    border: 1px solid var(--pp-border) !important;
+    overflow: hidden !important;
+    box-shadow: var(--pp-shadow) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.case-study-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 18px 48px rgba(13,31,56,0.13) !important;
+}
+
+.case-study-card figure {
+    overflow: hidden !important;
+    aspect-ratio: 16/9 !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+}
+
+.case-study-card figure img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    transition: transform 0.35s ease !important;
+}
+
+.case-study-card:hover figure img {
+    transform: scale(1.04) !important;
+}
+
+.case-study-card figure figcaption {
+    display: none !important;
+}
+
+.case-study-content {
+    padding: 22px 20px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    flex: 1 !important;
+}
+
+.case-study-content .section-eyebrow {
+    font-size: 0.68rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    color: #ef3438 !important;
+    -webkit-text-fill-color: #ef3438 !important;
+    margin: 0 !important;
+}
+
+.case-study-content h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(1rem, 1.3vw, 1.18rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    color: #0d1f38 !important;
+    -webkit-text-fill-color: #0d1f38 !important;
+    margin: 0 !important;
+}
+
+.case-study-flow {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+
+.case-study-flow article {
+    padding: 10px 12px !important;
+    border-radius: 10px !important;
+    background: #f4f7fb !important;
+    border-left: 3px solid #ef3438 !important;
+}
+
+.case-study-flow article span {
+    display: block !important;
+    font-size: 0.66rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    color: #7a3040 !important;
+    margin-bottom: 3px !important;
+}
+
+.case-study-flow article p {
+    font-size: 0.84rem !important;
+    color: #3d4f65 !important;
+    line-height: 1.58 !important;
+    margin: 0 !important;
+}
+
+.case-study-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 7px !important;
+    margin-top: auto !important;
+    padding-top: 4px !important;
+}
+
+.case-study-tags a {
+    display: inline-flex !important;
+    padding: 5px 12px !important;
+    border-radius: 999px !important;
+    background: rgba(239,52,56,0.08) !important;
+    border: 1px solid rgba(239,52,56,0.2) !important;
+    color: #c1334a !important;
+    -webkit-text-fill-color: #c1334a !important;
+    font-size: 0.74rem !important;
+    font-weight: 800 !important;
+    text-decoration: none !important;
+    transition: background 0.2s ease !important;
+}
+
+.case-study-tags a:hover {
+    background: rgba(239,52,56,0.16) !important;
+}
+
+/* -------------------------------------------------------
+   MEETING-ROOM-BLUEPRINT-GRID (6-col icon cards)
+   Used for: Project Governance, QA Review, Where Portfolio Applies
+------------------------------------------------------- */
+.meeting-room-blueprint-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: clamp(16px, 2.5vw, 24px) !important;
+}
+
+.meeting-room-blueprint-grid article {
+    background: var(--pp-card-bg) !important;
+    border-radius: 16px !important;
+    border: 1px solid var(--pp-border) !important;
+    padding: 24px 20px 22px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    box-shadow: 0 4px 20px rgba(13,31,56,0.06) !important;
+    transition: transform 0.22s ease, box-shadow 0.22s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.meeting-room-blueprint-grid article::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, #ef3438, #c1334a) !important;
+    transform: scaleX(0) !important;
+    transform-origin: left !important;
+    transition: transform 0.28s ease !important;
+}
+
+.meeting-room-blueprint-grid article:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 36px rgba(13,31,56,0.1) !important;
+}
+
+.meeting-room-blueprint-grid article:hover::before {
+    transform: scaleX(1) !important;
+}
+
+.meeting-room-blueprint-grid article i {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 13px !important;
+    background: linear-gradient(135deg, #ef3438 0%, #c1334a 100%) !important;
+    color: #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.15rem !important;
+    flex-shrink: 0 !important;
+    box-shadow: 0 6px 16px rgba(239,52,56,0.28) !important;
+}
+
+.meeting-room-blueprint-grid article h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    color: #0d1f38 !important;
+    -webkit-text-fill-color: #0d1f38 !important;
+    margin: 0 !important;
+}
+
+.meeting-room-blueprint-grid article p {
+    font-size: 0.86rem !important;
+    color: #4b6080 !important;
+    -webkit-text-fill-color: #4b6080 !important;
+    line-height: 1.66 !important;
+    margin: 0 !important;
+}
+
+/* -------------------------------------------------------
+   RFQ READINESS PANEL (2-col: copy + numbered steps)
+   project-portfolio-rfq-panel
+------------------------------------------------------- */
+.project-portfolio-rfq-panel {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr) !important;
+    gap: clamp(40px, 5vw, 60px) !important;
+    align-items: start !important;
+}
+
+.project-portfolio-rfq-copy {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+    min-width: 0 !important;
+}
+
+.project-portfolio-rfq-copy h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(1.65rem, 2.5vw, 2.3rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+    color: #0d1f38 !important;
+    -webkit-text-fill-color: #0d1f38 !important;
+    background: none !important;
+    margin: 0 !important;
+}
+
+.project-portfolio-rfq-copy p {
+    font-size: clamp(0.87rem, 1vw, 0.97rem) !important;
+    color: #4b6080 !important;
+    line-height: 1.76 !important;
+    margin: 0 !important;
+}
+
+/* RFQ step cards */
+.project-portfolio-rfq-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    min-width: 0 !important;
+}
+
+.project-portfolio-rfq-grid article {
+    display: flex !important;
+    gap: 16px !important;
+    align-items: flex-start !important;
+    padding: 18px 18px 18px 16px !important;
+    border-radius: 14px !important;
+    background: var(--pp-card-bg) !important;
+    border: 1px solid var(--pp-border) !important;
+    border-left: 4px solid #ef3438 !important;
+    box-shadow: var(--pp-shadow) !important;
+    box-sizing: border-box !important;
+    transition: transform 0.2s ease !important;
+}
+
+.project-portfolio-rfq-grid article:hover {
+    transform: translateX(4px) !important;
+}
+
+.project-portfolio-rfq-grid article strong {
+    display: block !important;
+    font-size: 0.86rem !important;
+    font-weight: 800 !important;
+    color: #0d1f38 !important;
+    -webkit-text-fill-color: #0d1f38 !important;
+    margin-bottom: 4px !important;
+}
+
+.project-portfolio-rfq-grid article span {
+    display: block !important;
+    font-size: 0.82rem !important;
+    color: #4b6080 !important;
+    -webkit-text-fill-color: #4b6080 !important;
+    line-height: 1.6 !important;
+}
+
+/* -------------------------------------------------------
+   PROCUREMENT PANEL (2-col: copy + numbered proof cards)
+   project-portfolio-decision-panel
+------------------------------------------------------- */
+.project-portfolio-decision-panel {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr) !important;
+    gap: clamp(40px, 5vw, 60px) !important;
+    align-items: start !important;
+}
+
+.project-portfolio-decision-copy {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+    min-width: 0 !important;
+}
+
+.project-portfolio-decision-copy h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(1.65rem, 2.5vw, 2.3rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+    color: #0d1f38 !important;
+    -webkit-text-fill-color: #0d1f38 !important;
+    background: none !important;
+    margin: 0 !important;
+}
+
+.project-portfolio-decision-copy p {
+    font-size: clamp(0.87rem, 1vw, 0.97rem) !important;
+    color: #4b6080 !important;
+    line-height: 1.76 !important;
+    margin: 0 !important;
+}
+
+.project-portfolio-proof-board {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    min-width: 0 !important;
+}
+
+.project-portfolio-proof-board article {
+    display: flex !important;
+    gap: 16px !important;
+    align-items: flex-start !important;
+    padding: 18px !important;
+    border-radius: 14px !important;
+    background: var(--pp-card-bg) !important;
+    border: 1px solid var(--pp-border) !important;
+    box-shadow: var(--pp-shadow) !important;
+    transition: transform 0.2s ease !important;
+    box-sizing: border-box !important;
+}
+
+.project-portfolio-proof-board article:hover {
+    transform: translateX(4px) !important;
+}
+
+.project-portfolio-proof-board article > span {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 38px !important;
+    height: 38px !important;
+    border-radius: 11px !important;
+    background: linear-gradient(135deg, #ef3438, #c1334a) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    font-size: 0.82rem !important;
+    font-weight: 900 !important;
+    flex-shrink: 0 !important;
+    box-shadow: 0 4px 12px rgba(239,52,56,0.3) !important;
+}
+
+.project-portfolio-proof-board article strong {
+    display: block !important;
+    font-size: 0.9rem !important;
+    font-weight: 800 !important;
+    color: #0d1f38 !important;
+    -webkit-text-fill-color: #0d1f38 !important;
+    margin-bottom: 4px !important;
+}
+
+.project-portfolio-proof-board article p {
+    font-size: 0.82rem !important;
+    color: #4b6080 !important;
+    -webkit-text-fill-color: #4b6080 !important;
+    line-height: 1.62 !important;
+    margin: 0 !important;
+}
+
+/* -------------------------------------------------------
+   RISK PANEL (2-col: copy + risk check cards)
+   project-portfolio-risk-panel
+------------------------------------------------------- */
+.project-portfolio-risk-panel {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr) !important;
+    gap: clamp(40px, 5vw, 60px) !important;
+    align-items: start !important;
+}
+
+.project-portfolio-risk-copy {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+    min-width: 0 !important;
+}
+
+.project-portfolio-risk-copy h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(1.65rem, 2.5vw, 2.3rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+    color: #0d1f38 !important;
+    -webkit-text-fill-color: #0d1f38 !important;
+    background: none !important;
+    margin: 0 !important;
+}
+
+.project-portfolio-risk-copy p {
+    font-size: clamp(0.87rem, 1vw, 0.97rem) !important;
+    color: #4b6080 !important;
+    line-height: 1.76 !important;
+    margin: 0 !important;
+}
+
+.project-portfolio-risk-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    min-width: 0 !important;
+}
+
+.project-portfolio-risk-grid article {
+    display: flex !important;
+    gap: 14px !important;
+    align-items: flex-start !important;
+    padding: 14px 16px !important;
+    border-radius: 12px !important;
+    background: var(--pp-card-bg) !important;
+    border: 1px solid var(--pp-border) !important;
+    border-left: 3px solid #ef3438 !important;
+    box-shadow: 0 3px 14px rgba(13,31,56,0.06) !important;
+    box-sizing: border-box !important;
+}
+
+.project-portfolio-risk-grid article i {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 9px !important;
+    background: rgba(239,52,56,0.1) !important;
+    color: #ef3438 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.88rem !important;
+    flex-shrink: 0 !important;
+}
+
+.project-portfolio-risk-grid article strong {
+    display: block !important;
+    font-size: 0.87rem !important;
+    font-weight: 800 !important;
+    color: #0d1f38 !important;
+    -webkit-text-fill-color: #0d1f38 !important;
+    margin-bottom: 3px !important;
+}
+
+.project-portfolio-risk-grid article span {
+    font-size: 0.81rem !important;
+    color: #4b6080 !important;
+    -webkit-text-fill-color: #4b6080 !important;
+    line-height: 1.58 !important;
+}
+
+/* -------------------------------------------------------
+   ALTERNATING BG SECTIONS: white / light
+------------------------------------------------------- */
+[data-admin-section="project-executive-summary"],
+[data-admin-section="project-governance-model"],
+[data-admin-section="project-delivery-sectors"],
+[data-admin-section="project-quality-assurance"],
+[data-admin-section="project-proof-navigation"] {
+    background: #ffffff !important;
+}
+
+[data-admin-section="project-rfq-readiness"],
+[data-admin-section="project-procurement-confidence"],
+[data-admin-section="project-red-flags"],
+[data-admin-section="project-capability-cases"] {
+    background: var(--pp-light-bg) !important;
+}
+
+/* -------------------------------------------------------
+   SECTION HEADING ROWS — horizontal split for intro sections
+------------------------------------------------------- */
+.section-heading-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: clamp(28px, 4vw, 48px) !important;
+    align-items: start !important;
+    max-width: 100% !important;
+    margin-bottom: clamp(36px, 5vw, 56px) !important;
+}
+
+.section-heading-row > div {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+}
+
+/* -------------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+    .meeting-room-blueprint-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .case-study-hero-grid,
+    .case-study-hero .container {
+        grid-template-columns: 1fr !important;
+    }
+    .case-study-hero-panel {
+        display: none !important; /* hide on mobile to avoid cramping */
+    }
+    .project-proof-band,
+    .project-portfolio-rfq-panel,
+    .project-portfolio-decision-panel,
+    .project-portfolio-risk-panel {
+        grid-template-columns: 1fr !important;
+    }
+    .section-heading-row {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 720px) {
+    .case-study-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .meeting-room-blueprint-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .case-study-hero-copy h1 {
+        font-size: clamp(1.6rem, 8vw, 2.2rem) !important;
+    }
+}
