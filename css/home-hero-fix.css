@@ -4008,3 +4008,469 @@ html body :is(
         justify-content: center !important;
     }
 }
+
+
+/* ==========================================================
+   CRITICAL GLOBAL FIX — SERVICES & SOLUTIONS TWO-COLUMN LAYOUT
+   Applies to ALL pages under /services and /solutions
+   Resolves overlapping panels, text clipping, viewport overflow,
+   and dark heading contrast issues globally.
+   Aug 2026
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   1. SEO INTENT / SEARCH INTENT SECTION WRAPPER
+   ---------------------------------------------------------- */
+.seo-intent-section,
+.service-seo-intent,
+.service-search-intent,
+[data-admin-section="seo-intent-section"],
+[data-admin-section="conference-search-intent"] {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(239, 52, 56, 0.14), transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(13, 39, 74, 0.35), transparent 35%),
+        linear-gradient(135deg, #071526 0%, #0d274a 60%, #111e36 100%) !important;
+    color: #ffffff !important;
+    padding: clamp(56px, 7vw, 92px) 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* ----------------------------------------------------------
+   2. STRICT 2-COLUMN GRID (45% Left / 55% Right on Desktop)
+   ---------------------------------------------------------- */
+.seo-intent-panel,
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-panel {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr) !important;
+    gap: clamp(28px, 4vw, 56px) !important;
+    align-items: start !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+/* ----------------------------------------------------------
+   3. LEFT COLUMN: Heading + Description (Never Overlapped)
+   ---------------------------------------------------------- */
+.seo-intent-copy,
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-copy {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.seo-intent-copy .service-eyebrow,
+.seo-intent-copy .section-eyebrow {
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.2em !important;
+    text-transform: uppercase !important;
+    color: #ff9ea1 !important;
+    -webkit-text-fill-color: #ff9ea1 !important;
+    margin: 0 !important;
+    display: inline-block !important;
+}
+
+.seo-intent-copy h2,
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-copy h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(1.65rem, 2.5vw, 2.35rem) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.025em !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background: none !important;
+    margin: 0 !important;
+    word-break: break-word !important;
+    max-width: 100% !important;
+}
+
+.seo-intent-copy p,
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-copy p {
+    font-size: clamp(0.9rem, 1.05vw, 0.98rem) !important;
+    line-height: 1.72 !important;
+    color: rgba(210, 228, 252, 0.88) !important;
+    -webkit-text-fill-color: rgba(210, 228, 252, 0.88) !important;
+    margin: 0 !important;
+}
+
+.seo-intent-copy p strong {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* ----------------------------------------------------------
+   4. RIGHT COLUMN: Solution Cards / Search Intent Grid
+   ---------------------------------------------------------- */
+.seo-intent-grid,
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    position: relative !important;
+    z-index: 2 !important;
+    box-sizing: border-box !important;
+}
+
+.seo-intent-grid a,
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-grid a {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 15px 18px !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-left: 4px solid #ef3438 !important;
+    border-radius: 14px !important;
+    text-decoration: none !important;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease !important;
+}
+
+.seo-intent-grid a:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(255, 255, 255, 0.28) !important;
+    border-left-color: #ff7b80 !important;
+    transform: translateX(4px) !important;
+}
+
+.seo-intent-grid a span {
+    font-size: 0.68rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    color: #ff9ea1 !important;
+    -webkit-text-fill-color: #ff9ea1 !important;
+    margin: 0 !important;
+    display: block !important;
+}
+
+.seo-intent-grid a strong {
+    font-size: 0.95rem !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    margin: 0 !important;
+    display: block !important;
+}
+
+.seo-intent-grid a p {
+    font-size: 0.83rem !important;
+    line-height: 1.55 !important;
+    color: rgba(210, 228, 252, 0.8) !important;
+    -webkit-text-fill-color: rgba(210, 228, 252, 0.8) !important;
+    margin: 0 !important;
+}
+
+/* ----------------------------------------------------------
+   5. RIGHT COLUMN: Search Intent List (Pill Buttons)
+   ---------------------------------------------------------- */
+.seo-intent-list,
+ul.seo-intent-list,
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.seo-intent-list li {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.seo-intent-list li a,
+.seo-intent-list > li {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 13px 18px !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-left: 4px solid #ef3438 !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    backdrop-filter: blur(10px) !important;
+    text-decoration: none !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    font-size: 0.84rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease !important;
+}
+
+.seo-intent-list li a::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 7px !important;
+    height: 7px !important;
+    border-radius: 50% !important;
+    background: #ef3438 !important;
+    flex-shrink: 0 !important;
+}
+
+.seo-intent-list li a:hover {
+    background: rgba(239, 52, 56, 0.18) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    border-left-color: #ff7b80 !important;
+    transform: translateX(5px) !important;
+}
+
+/* ----------------------------------------------------------
+   6. PRODUCT RANGE PANEL (Education AV Scope / Room Scope)
+      Fixes dark text on dark bg + strict 2-col alignment
+   ---------------------------------------------------------- */
+.product-range-section {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    background:
+        radial-gradient(circle at 8% 18%, rgba(239, 52, 56, 0.13), transparent 28%),
+        linear-gradient(135deg, #071526 0%, #0d274a 55%, #14203a 100%) !important;
+    color: #ffffff !important;
+    padding: clamp(56px, 7vw, 88px) 0 !important;
+    box-sizing: border-box !important;
+}
+
+.product-range-panel {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.48fr) minmax(0, 0.52fr) !important;
+    gap: clamp(28px, 4vw, 56px) !important;
+    align-items: start !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+    background: none !important;
+    border: none !important;
+}
+
+.product-range-panel > div:first-child {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.product-range-panel .section-eyebrow,
+.product-range-panel .service-eyebrow {
+    color: #ff9ea1 !important;
+    -webkit-text-fill-color: #ff9ea1 !important;
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    margin: 0 !important;
+}
+
+.product-range-panel h2,
+.product-range-panel h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background: none !important;
+    font-size: clamp(1.65rem, 2.5vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.022em !important;
+    margin: 0 !important;
+    word-break: break-word !important;
+}
+
+.product-range-panel p {
+    font-size: clamp(0.9rem, 1.05vw, 0.98rem) !important;
+    line-height: 1.72 !important;
+    color: rgba(210, 228, 252, 0.88) !important;
+    -webkit-text-fill-color: rgba(210, 228, 252, 0.88) !important;
+    margin: 0 !important;
+}
+
+.product-chip-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 9px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    align-content: flex-start !important;
+    box-sizing: border-box !important;
+    padding-top: 4px !important;
+}
+
+.product-chip-row span {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 8px 14px !important;
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.01em !important;
+    white-space: normal !important;
+    text-align: center !important;
+    transition: background 0.2s ease, border-color 0.2s ease !important;
+}
+
+.product-chip-row span:hover {
+    background: rgba(239, 52, 56, 0.2) !important;
+    border-color: rgba(239, 52, 56, 0.5) !important;
+}
+
+/* ----------------------------------------------------------
+   7. PRODUCT VALUE GRID (Site Survey / Final Validation)
+   ---------------------------------------------------------- */
+.product-value-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.58fr) minmax(0, 0.42fr) !important;
+    gap: clamp(28px, 4vw, 48px) !important;
+    align-items: start !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+}
+
+.product-value-grid > div:first-child {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+}
+
+.product-value-grid h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(1.65rem, 2.5vw, 2.35rem) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+    font-weight: 800 !important;
+    color: #071526 !important;
+    -webkit-text-fill-color: #071526 !important;
+    margin: 0 !important;
+}
+
+.product-value-grid p {
+    font-size: 0.94rem !important;
+    line-height: 1.72 !important;
+    color: #4b6080 !important;
+    -webkit-text-fill-color: #4b6080 !important;
+    margin: 0 !important;
+}
+
+.product-support-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(13, 31, 56, 0.1) !important;
+    border-radius: 18px !important;
+    padding: 24px !important;
+    box-shadow: 0 8px 30px rgba(13, 31, 56, 0.08) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.product-support-card span {
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    color: #ef3438 !important;
+    -webkit-text-fill-color: #ef3438 !important;
+}
+
+.product-support-card h3 {
+    font-size: 1.12rem !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    color: #071526 !important;
+    -webkit-text-fill-color: #071526 !important;
+    margin: 0 !important;
+}
+
+.product-support-card p {
+    font-size: 0.88rem !important;
+    line-height: 1.62 !important;
+    color: #4b6080 !important;
+    -webkit-text-fill-color: #4b6080 !important;
+    margin: 0 !important;
+}
+
+/* ----------------------------------------------------------
+   8. RESPONSIVE BREAKPOINTS (Tablet & Mobile Stacking)
+   ---------------------------------------------------------- */
+@media (max-width: 980px) {
+    .seo-intent-panel,
+    html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-panel,
+    .product-range-panel,
+    .product-value-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+
+    .seo-intent-copy h2,
+    .product-range-panel h2 {
+        font-size: clamp(1.6rem, 5vw, 2.1rem) !important;
+    }
+}
+
+@media (max-width: 720px) {
+    .seo-intent-panel,
+    .product-range-panel,
+    .product-value-grid {
+        padding: 0 16px !important;
+        gap: 24px !important;
+    }
+
+    .seo-intent-grid a {
+        padding: 14px 16px !important;
+    }
+
+    .seo-intent-list li a {
+        padding: 12px 14px !important;
+        font-size: 0.78rem !important;
+    }
+}
