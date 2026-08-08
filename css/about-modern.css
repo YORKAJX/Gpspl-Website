@@ -1520,3 +1520,194 @@ html body.about-gpspl-page .about-why-section .section-title-left .line {
         grid-template-columns: 1fr !important;
     }
 }
+
+
+/* ==========================================================
+   PERFECT LEADERSHIP MESSAGE & DIRECTOR SECTION REDESIGN
+   ========================================================== */
+.director-section,
+#directors-message {
+    background: #f8fafc !important;
+    padding: clamp(64px, 8vw, 100px) 0 !important;
+    position: relative !important;
+}
+
+.director-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    max-width: 840px !important;
+    margin: 0 auto clamp(36px, 5vw, 54px) !important;
+    width: 100% !important;
+}
+
+.director-eyebrow {
+    font-size: 0.76rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.22em !important;
+    text-transform: uppercase !important;
+    color: #ef3438 !important;
+    -webkit-text-fill-color: #ef3438 !important;
+    margin: 0 0 12px !important;
+    display: inline-block !important;
+}
+
+.director-header h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(1.9rem, 3.2vw, 2.8rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.025em !important;
+    color: #071526 !important;
+    -webkit-text-fill-color: #071526 !important;
+    text-align: center !important;
+    margin: 0 0 16px !important;
+    max-width: 100% !important;
+    background: none !important;
+    text-shadow: none !important;
+}
+
+.director-divider {
+    width: 54px !important;
+    height: 3px !important;
+    background: #ef3438 !important;
+    border-radius: 99px !important;
+    margin: 0 auto !important;
+    border: none !important;
+}
+
+.director-grid {
+    display: grid !important;
+    grid-template-columns: 340px minmax(0, 1fr) !important;
+    gap: clamp(32px, 4vw, 54px) !important;
+    align-items: start !important;
+    max-width: 1120px !important;
+    margin: 0 auto !important;
+}
+
+.director-photo-card {
+    display: flex !important;
+    flex-direction: column !important;
+    background: #ffffff !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 14px 40px rgba(7, 21, 38, 0.08) !important;
+    margin: 0 !important;
+}
+
+.director-photo-card img {
+    width: 100% !important;
+    height: 380px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    display: block !important;
+}
+
+.director-photo-card figcaption {
+    padding: 20px 24px !important;
+    background: linear-gradient(135deg, #071526 0%, #0d274a 100%) !important;
+    color: #ffffff !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    text-align: left !important;
+}
+
+.director-photo-card figcaption strong {
+    font-size: 1.15rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    display: block !important;
+}
+
+.director-photo-card figcaption span {
+    font-size: 0.82rem !important;
+    color: #ff8b8f !important;
+    -webkit-text-fill-color: #ff8b8f !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+    display: block !important;
+}
+
+.director-message {
+    background: #ffffff !important;
+    border-radius: 20px !important;
+    padding: clamp(28px, 4vw, 40px) !important;
+    border: 1px solid #e2e8f0 !important;
+    border-left: 5px solid #ef3438 !important;
+    box-shadow: 0 14px 40px rgba(7, 21, 38, 0.08) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+}
+
+.director-message blockquote {
+    margin: 0 !important;
+    padding: 18px 22px !important;
+    background: #f8fafc !important;
+    border-radius: 12px !important;
+    border-left: 4px solid #0056b3 !important;
+    font-size: 1.08rem !important;
+    font-weight: 700 !important;
+    color: #071526 !important;
+    line-height: 1.55 !important;
+    font-style: italic !important;
+}
+
+.director-copy {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+}
+
+.director-copy p {
+    margin: 0 !important;
+    font-size: 0.94rem !important;
+    line-height: 1.72 !important;
+    color: #475569 !important;
+    -webkit-text-fill-color: #475569 !important;
+}
+
+.director-signature {
+    margin: 6px 0 0 !important;
+    border-top: 1px solid #e2e8f0 !important;
+    padding-top: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+}
+
+.director-signature strong {
+    font-size: 1.05rem !important;
+    font-weight: 800 !important;
+    color: #071526 !important;
+    -webkit-text-fill-color: #071526 !important;
+    display: block !important;
+}
+
+.director-signature span {
+    font-size: 0.82rem !important;
+    color: #ef3438 !important;
+    -webkit-text-fill-color: #ef3438 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    display: block !important;
+}
+
+@media (max-width: 980px) {
+    .director-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .director-photo-card img {
+        height: 320px !important;
+    }
+}
