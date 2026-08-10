@@ -395,14 +395,15 @@
         display: flex !important;
         position: relative !important;
         isolation: isolate !important;
-        min-height: clamp(560px, 75vh, 720px) !important;
+        min-height: min(720px, calc(100vh - 82px)) !important;
         height: auto !important;
         align-items: center !important;
-        justify-content: flex-start !important;
-        padding: clamp(50px, 7vw, 100px) 0 !important;
-        overflow: hidden !important;
+        justify-content: center !important;
+        padding: clamp(36px, 4.5vh, 60px) 0 !important;
+        overflow: visible !important;
         background: linear-gradient(135deg, #071526 0%, #0d274a 55%, #111e36 100%) !important;
         color: #ffffff !important;
+        box-sizing: border-box !important;
     }
 
     #home.hero > * {
@@ -438,8 +439,8 @@
         position: relative !important;
         z-index: 2 !important;
         display: grid !important;
-        grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr) !important;
-        gap: clamp(28px, 3.5vw, 52px) !important;
+        grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr) !important;
+        gap: clamp(24px, 3vw, 48px) !important;
         align-items: center !important;
         width: min(calc(100% - 48px), 1280px) !important;
         max-width: 1280px !important;
@@ -454,14 +455,14 @@
     html body #home .hero-message-copy {
         display: flex !important;
         flex-direction: column !important;
-        gap: 14px !important;
+        gap: 12px !important;
         opacity: 1 !important;
         transform: none !important;
         visibility: visible !important;
         z-index: 3 !important;
         text-align: left !important;
         width: 100% !important;
-        max-width: 760px !important;
+        max-width: 780px !important;
         min-width: 0 !important;
     }
 
@@ -484,9 +485,9 @@
     html body #home .hero-message-copy .main-headline,
     html body:has(#home.hero) .hero-message-copy .main-headline {
         font-family: 'Plus Jakarta Sans', sans-serif !important;
-        font-size: clamp(1.75rem, 2.2vw, 2.35rem) !important;
+        font-size: clamp(1.85rem, 2.5vw, 2.75rem) !important;
         font-weight: 800 !important;
-        line-height: 1.2 !important;
+        line-height: 1.18 !important;
         letter-spacing: -0.02em !important;
         color: #ffffff !important;
         -webkit-text-fill-color: #ffffff !important;
@@ -516,11 +517,11 @@
     html body #home .hero-description,
     html body #home .hero-message-copy .hero-description {
         font-size: clamp(0.92rem, 1vw, 1.02rem) !important;
-        line-height: 1.68 !important;
+        line-height: 1.65 !important;
         color: #e2e8f0 !important;
         -webkit-text-fill-color: #e2e8f0 !important;
         margin: 0 !important;
-        max-width: 660px !important;
+        max-width: 680px !important;
         opacity: 1 !important;
         visibility: visible !important;
     }
@@ -533,7 +534,7 @@
         flex-wrap: wrap !important;
         align-items: center !important;
         gap: 12px !important;
-        margin-top: 6px !important;
+        margin-top: 4px !important;
         opacity: 1 !important;
         visibility: visible !important;
         width: auto !important;
@@ -545,8 +546,8 @@
     html body #home .hero-actions .hero-btn {
         width: auto !important;
         min-width: auto !important;
-        padding: 12px 22px !important;
-        font-size: 0.9rem !important;
+        padding: 11px 22px !important;
+        font-size: 0.88rem !important;
         border-radius: 10px !important;
         display: inline-flex !important;
         align-items: center !important;
@@ -580,7 +581,7 @@
         border: 1px solid rgba(255, 255, 255, 0.18) !important;
         border-left: 4px solid #ef3438 !important;
         border-radius: 18px !important;
-        padding: 24px 26px !important;
+        padding: 22px 24px !important;
         display: flex !important;
         flex-direction: column !important;
         gap: 8px !important;
@@ -590,7 +591,7 @@
         z-index: 3 !important;
         text-align: left !important;
         width: 100% !important;
-        max-width: 400px !important;
+        max-width: 380px !important;
         justify-self: end !important;
         box-sizing: border-box !important;
     }
@@ -606,7 +607,7 @@
 
     #home.hero .hero-message-note strong,
     html body #home .hero-message-note strong {
-        font-size: clamp(0.95rem, 1.1vw, 1.05rem) !important;
+        font-size: clamp(0.92rem, 1.05vw, 1.02rem) !important;
         font-weight: 700 !important;
         line-height: 1.5 !important;
         color: #ffffff !important;
@@ -984,22 +985,22 @@
         margin: 0 !important;
     }
     #distribution-integration-support .model-copy-panel {
-        background: rgba(255, 255, 255, 0.08) !important;
-        backdrop-filter: blur(14px) !important;
-        -webkit-backdrop-filter: blur(14px) !important;
-        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        background: #ffffff !important;
+        border: 1px solid rgba(13, 31, 56, 0.12) !important;
         border-left: 4px solid #ef3438 !important;
         border-radius: 18px !important;
         padding: 26px 30px !important;
         box-sizing: border-box !important;
+        box-shadow: 0 12px 32px rgba(7, 21, 38, 0.12) !important;
     }
     #distribution-integration-support .model-copy-panel p {
         font-size: 0.96rem !important;
         line-height: 1.74 !important;
-        color: #f1f5f9 !important;
-        -webkit-text-fill-color: #f1f5f9 !important;
+        color: #0f172a !important;
+        -webkit-text-fill-color: #0f172a !important;
         margin: 0 0 14px !important;
         text-shadow: none !important;
+        font-weight: 500 !important;
     }
     #distribution-integration-support .model-copy-panel p:last-child {
         margin-bottom: 0 !important;

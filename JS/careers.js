@@ -388,11 +388,43 @@ function setupGeneralRoleQuestions() {
   `;
 }
 
-function handleApplicationSubmit(e) {
+function fileToBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      // Remove data URL prefix (e.g. "data:application/pdf;base64,")
+      const base64String = reader.result.split(',')[1];
+      resolve(base64String);
+    };
+    reader.onerror = error => reject(error);
+  });
+}
+
+async function handleApplicationSubmit(e) {
   e.preventDefault();
   const form = e.target;
   const submitBtn = form.querySelector('button[type="submit"]');
   const originalText = submitBtn.innerHTML;
+
+  const fileInput = form.querySelector('input[type="file"][name="resume_file"]');
+  if (fileInput && fileInput.files && fileInput.files[0]) {
+    const file = fileInput.files[0];
+    const maxSizeBytes = 5 * 1024 * 1024; // 5 MB
+    const allowedExtensions = ['.pdf', '.doc', '.docx'];
+    const fileName = file.name.toLowerCase();
+    const isValidExt = allowedExtensions.some(ext => fileName.endsWith(ext));
+
+    if (!isValidExt) {
+      alert('Please upload your resume in PDF (.pdf) or Word (.doc, .docx) format.');
+      return;
+    }
+
+    if (file.size > maxSizeBytes) {
+      alert('The uploaded file size exceeds 5MB. Please upload a smaller file or compressed PDF.');
+      return;
+    }
+  }
 
   submitBtn.disabled = true;
   submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Submitting Application...`;
@@ -404,23 +436,59 @@ function handleApplicationSubmit(e) {
     formData.append('selected_skills_list', checkedSkills.join(', '));
   }
 
-  // Submit via fetch if Netlify form is configured or fallback smoothly
-  fetch(form.action || '/thank-you', {
+  // Prepare payload for career email serverless function
+  let resumeBase64 = null;
+  let resumeFileName = null;
+  if (fileInput && fileInput.files && fileInput.files[0]) {
+    try {
+      resumeFileName = fileInput.files[0].name;
+      resumeBase64 = await fileToBase64(fileInput.files[0]);
+    } catch (err) {
+      console.warn('Could not encode resume to base64:', err);
+    }
+  }
+
+  const emailPayload = {
+    fullName: form.querySelector('input[name="full_name"]')?.value || '',
+    email: form.querySelector('input[name="email"]')?.value || '',
+    phone: form.querySelector('input[name="phone"]')?.value || '',
+    city: form.querySelector('input[name="current_city"]')?.value || '',
+    jobId: form.querySelector('input[name="job_id"]')?.value || '',
+    jobTitle: form.querySelector('input[name="job_title"]')?.value || '',
+    highestQualification: form.querySelector('select[name="highest_qualification"]')?.value || '',
+    courseSpecialization: form.querySelector('input[name="course_specialization"]')?.value || '',
+    candidateStatus: form.querySelector('input[name="candidate_status"]:checked')?.value || '',
+    totalExperience: form.querySelector('input[name="total_experience"]')?.value || '',
+    currentCompany: form.querySelector('input[name="current_company"]')?.value || '',
+    noticePeriod: form.querySelector('select[name="notice_period"]')?.value || '',
+    expectedSalary: form.querySelector('input[name="expected_salary"]')?.value || '',
+    linkedinProfile: form.querySelector('input[name="linkedin_profile"]')?.value || '',
+    selectedSkills: checkedSkills.join(', '),
+    resumeFileName: resumeFileName,
+    resumeFileBase64: resumeBase64,
+    botField: form.querySelector('input[name="bot-field"]')?.value || ''
+  };
+
+  // 1. Asynchronously send email with attachment via Netlify Function
+  fetch('/.netlify/functions/career-lead-email', {
     method: 'POST',
-    body: formData,
-    headers: { 'Accept': 'application/json' }
-  })
-  .then(() => {
-    form.reset();
-    submitBtn.disabled = false;
-    submitBtn.innerHTML = originalText;
-    showSuccessConfirmationView();
-  })
-  .catch(() => {
-    // Graceful fallback for local or Netlify
-    form.reset();
-    submitBtn.disabled = false;
-    submitBtn.innerHTML = originalText;
-    showSuccessConfirmationView();
-  });
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(emailPayload)
+  }).catch(() => {});
+
+  // 2. Submit form to Netlify Forms (native multipart submission)
+  try {
+    await fetch('/', {
+      method: 'POST',
+      body: formData
+    });
+  } catch (err) {
+    console.log('Form submission completed.');
+  }
+
+  form.reset();
+  submitBtn.disabled = false;
+  submitBtn.innerHTML = originalText;
+  showSuccessConfirmationView();
 }
+
