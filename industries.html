@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <title>Industries Served | Enterprise AV, Display &amp; IT Solutions | GPSPL</title>
-    <meta name="description" content="Explore GPSPL AV, display, and automation solutions engineered by industry: Corporate Boardrooms, Higher Education, Luxury Hospitality, Government Command Centers, Clinical Healthcare, and Retail Signage across India.">
-    <meta name="keywords" content="GPSPL industries, AV solutions by industry India, corporate AV solutions, education smart classroom solutions, hospitality AV systems, government command room solutions, healthcare clinic display solutions, retail signage solutions">
+    <meta name="description" content="Explore GPSPL AV, display, and automation solutions engineered across 10 industry verticals: Corporate, Education, Hospitality, Government, Healthcare, Retail, Real Estate, BFSI, Media, and Automotive.">
+    <meta name="keywords" content="GPSPL industries, AV solutions by industry India, corporate AV solutions, education smart classroom solutions, hospitality AV systems, government command room solutions, healthcare clinic display solutions, retail signage solutions, banking trading room AV, broadcast studio AV, automotive showroom LED wall">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://gpspl.co.in/industries">
     <link rel="icon" href="/assests/images/gpspl.png">
@@ -13,7 +13,7 @@
     <meta property="og:site_name" content="Global Peripheral Solution Pvt. Ltd.">
     <meta property="og:locale" content="en_IN">
     <meta property="og:title" content="Industries Served | Enterprise AV &amp; Display Solutions | GPSPL">
-    <meta property="og:description" content="Explore GPSPL AV, display, and automation solutions engineered by industry across Delhi NCR and India.">
+    <meta property="og:description" content="Explore GPSPL AV, display, and automation solutions engineered across 10 industry verticals in India.">
     <meta property="og:url" content="https://gpspl.co.in/industries">
     <meta property="og:image" content="https://gpspl.co.in/assests/images/projects/gpspl-real/polished/corporate-conference-room.webp">
     <meta name="twitter:card" content="summary_large_image">
@@ -42,7 +42,7 @@
           "@id": "https://gpspl.co.in/industries#webpage",
           "url": "https://gpspl.co.in/industries",
           "name": "Industries Served | AV & IT Solutions | GPSPL",
-          "description": "AV and IT integration solutions categorized by industry: Corporate, Education, Hospitality, Government, Healthcare, Retail and Real Estate.",
+          "description": "AV and IT integration solutions categorized across 10 key industry verticals: Corporate, Education, Hospitality, Government, Healthcare, Retail, Real Estate, Banking, Media, and Automotive.",
           "publisher": {
             "@type": "Organization",
             "name": "Global Peripheral Solution Pvt. Ltd.",
@@ -55,7 +55,7 @@
 
 <style id="industries-premium-redesign">
 /* ======================================================
-   GPSPL Industries Page - Ultra-Modern Enterprise Redesign
+   GPSPL Industries Page - Ultra-Modern Enterprise Redesign (10 Verticals)
    ====================================================== */
 
 /* Hero Section */
@@ -252,15 +252,15 @@
     color: #ffffff;
 }
 
-/* Sticky Navigation Pill Bar */
+/* Sticky Navigation Pill Bar (10 Verticals) */
 .ind-nav-bar {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(7, 21, 38, 0.95);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(7, 21, 38, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     padding: 12px 0;
 }
 
@@ -278,16 +278,25 @@
 }
 
 .ind-nav-pill {
-    padding: 8px 18px;
+    padding: 8px 16px;
     border-radius: 999px;
-    font-size: 0.84rem;
+    font-size: 0.82rem;
     font-weight: 700;
     color: #94a3b8;
     text-decoration: none;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     white-space: nowrap;
     transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ind-nav-pill span.pill-num {
+    color: #ff8b8f;
+    font-size: 0.72rem;
+    font-weight: 800;
 }
 
 .ind-nav-pill:hover,
@@ -295,6 +304,11 @@
     background: #ef3438;
     color: #ffffff;
     border-color: #ef3438;
+}
+
+.ind-nav-pill:hover span.pill-num,
+.ind-nav-pill.active span.pill-num {
+    color: #ffffff;
 }
 
 /* Main Cards Section */
@@ -340,7 +354,7 @@
 /* Visual Column */
 .ind-card-visual {
     position: relative;
-    min-height: 380px;
+    min-height: 390px;
     background: #0f172a;
     overflow: hidden;
 }
@@ -360,7 +374,7 @@
 .ind-card-visual-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(7, 21, 38, 0.15) 0%, rgba(7, 21, 38, 0.75) 100%);
+    background: linear-gradient(180deg, rgba(7, 21, 38, 0.2) 0%, rgba(7, 21, 38, 0.8) 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -389,6 +403,8 @@
 .badge-retail { background: #ef3438; }
 .badge-estate { background: #0d9488; }
 .badge-bfsi { background: #1e293b; }
+.badge-media { background: #c026d3; }
+.badge-auto { background: #dc2626; }
 
 .ind-card-clients {
     display: flex;
@@ -426,7 +442,7 @@
     padding: clamp(28px, 4vw, 40px);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
     justify-content: space-between;
 }
 
@@ -438,7 +454,7 @@
 
 .ind-card-header h2 {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(1.4rem, 2vw, 1.75rem);
+    font-size: clamp(1.35rem, 1.9vw, 1.7rem);
     font-weight: 800;
     line-height: 1.25;
     color: #0f172a;
@@ -446,7 +462,7 @@
 }
 
 .ind-card-header p {
-    font-size: 0.94rem;
+    font-size: 0.92rem;
     line-height: 1.6;
     color: #475569;
     margin: 0;
@@ -458,17 +474,17 @@
     grid-template-columns: 1fr 1fr;
     gap: 16px;
     background: #f1f5f9;
-    padding: 18px 20px;
+    padding: 16px 18px;
     border-radius: 16px;
 }
 
 .ind-scope-col h3 {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: #0f172a;
-    margin: 0 0 10px;
+    margin: 0 0 8px;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -484,11 +500,11 @@
 }
 
 .ind-scope-col li {
-    font-size: 0.84rem;
+    font-size: 0.82rem;
     line-height: 1.45;
     color: #334155;
     position: relative;
-    padding-left: 16px;
+    padding-left: 14px;
 }
 
 .ind-scope-col li::before {
@@ -505,10 +521,10 @@
 .ind-brands-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
     align-items: center;
     border-top: 1px solid #e2e8f0;
-    padding-top: 16px;
+    padding-top: 14px;
 }
 
 .ind-brands-label {
@@ -522,15 +538,15 @@
 .ind-brand-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
 }
 
 .ind-brand-tag {
     background: #f8fafc;
     border: 1px solid #cbd5e1;
-    padding: 3px 10px;
+    padding: 3px 8px;
     border-radius: 6px;
-    font-size: 0.76rem;
+    font-size: 0.74rem;
     font-weight: 700;
     color: #1e293b;
 }
@@ -566,14 +582,14 @@
 .ind-cta-btn {
     background: #ef3438;
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 10px 18px;
     border-radius: 8px;
-    font-size: 0.86rem;
+    font-size: 0.84rem;
     font-weight: 700;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     box-shadow: 0 4px 14px rgba(239, 52, 56, 0.25);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -641,10 +657,10 @@
                     </nav>
                     <p class="ind-eyebrow">Solutions by Industry</p>
                     <h1>Enterprise AV, Display &amp; Automation Engineered by Industry</h1>
-                    <p class="ind-hero-lead">Every environment is unique. A boardroom needs zero-latency audio and 1-touch meeting start. A university needs hybrid lecture capture. A hospital needs sterile DICOM displays. GPSPL maps certified OEM technology, precision BOQ, and lifecycle AMC for your sector.</p>
+                    <p class="ind-hero-lead">Every environment is unique. A boardroom needs zero-latency audio and 1-touch meeting start. A university needs hybrid lecture capture. A hospital needs sterile DICOM displays. A trading floor needs high-density data walls. GPSPL maps certified OEM technology, precision BOQ, and lifecycle AMC across 10 industry verticals.</p>
                     <div class="ind-hero-actions">
                         <a href="/contact" class="ind-btn-primary">Plan My Requirement</a>
-                        <a href="#industry-corporate" class="ind-btn-secondary">Explore Industries</a>
+                        <a href="#industry-corporate" class="ind-btn-secondary">Explore 10 Industries</a>
                     </div>
                 </div>
 
@@ -661,29 +677,32 @@
             </div>
         </section>
 
-        <!-- Sticky Quick Navigation Bar -->
+        <!-- Sticky Quick Navigation Bar (All 10 Verticals) -->
         <nav class="ind-nav-bar" aria-label="Industry quick navigation">
             <div class="container ind-nav-inner">
-                <a href="#industry-corporate" class="ind-nav-pill active">Corporate &amp; Boardrooms</a>
-                <a href="#industry-education" class="ind-nav-pill">Education &amp; Smart Classrooms</a>
-                <a href="#industry-hospitality" class="ind-nav-pill">Hospitality &amp; Luxury Venues</a>
-                <a href="#industry-government" class="ind-nav-pill">Government &amp; Command</a>
-                <a href="#industry-healthcare" class="ind-nav-pill">Healthcare &amp; Clinics</a>
-                <a href="#industry-retail" class="ind-nav-pill">Retail &amp; Experience Malls</a>
-                <a href="#industry-real-estate" class="ind-nav-pill">Real Estate &amp; Sales Galleries</a>
+                <a href="#industry-corporate" class="ind-nav-pill active"><span class="pill-num">01</span> Corporate</a>
+                <a href="#industry-education" class="ind-nav-pill"><span class="pill-num">02</span> Education</a>
+                <a href="#industry-hospitality" class="ind-nav-pill"><span class="pill-num">03</span> Hospitality</a>
+                <a href="#industry-government" class="ind-nav-pill"><span class="pill-num">04</span> Government</a>
+                <a href="#industry-healthcare" class="ind-nav-pill"><span class="pill-num">05</span> Healthcare</a>
+                <a href="#industry-retail" class="ind-nav-pill"><span class="pill-num">06</span> Retail &amp; Food</a>
+                <a href="#industry-real-estate" class="ind-nav-pill"><span class="pill-num">07</span> Real Estate</a>
+                <a href="#industry-bfsi" class="ind-nav-pill"><span class="pill-num">08</span> Banking &amp; BFSI</a>
+                <a href="#industry-media" class="ind-nav-pill"><span class="pill-num">09</span> Media &amp; Broadcast</a>
+                <a href="#industry-automotive" class="ind-nav-pill"><span class="pill-num">10</span> Automotive</a>
             </div>
         </nav>
 
-        <!-- Industry Cards Stack -->
+        <!-- Industry Cards Stack (Complete 10 Verticals) -->
         <section class="ind-cards-section">
             <div class="container ind-cards-stack">
 
-                <!-- 1. Corporate & Boardrooms -->
+                <!-- 01. Corporate & Boardrooms -->
                 <section id="industry-corporate" class="ind-card">
                     <div class="ind-card-visual">
                         <img src="assests/images/projects/gpspl-real/polished/corporate-conference-room.webp" alt="Corporate executive boardroom AV integration and Microsoft Teams Room deployment" loading="lazy" decoding="async">
                         <div class="ind-card-visual-overlay">
-                            <span class="ind-card-badge badge-corp">Corporate &amp; Enterprise</span>
+                            <span class="ind-card-badge badge-corp">01 • Corporate &amp; Enterprise</span>
                             <div class="ind-card-clients">
                                 <span class="ind-card-clients-label">Deployed For Top Brands</span>
                                 <div class="ind-client-pills">
@@ -743,12 +762,12 @@
                     </div>
                 </section>
 
-                <!-- 2. Education & Smart Classrooms -->
+                <!-- 02. Education & Smart Classrooms -->
                 <section id="industry-education" class="ind-card reverse">
                     <div class="ind-card-visual">
                         <img src="assests/images/projects/gpspl-real/polished/direct-education-classroom-panels.webp" alt="Smart classroom interactive display and lecture capture installation" loading="lazy" decoding="async">
                         <div class="ind-card-visual-overlay">
-                            <span class="ind-card-badge badge-edu">Education &amp; Universities</span>
+                            <span class="ind-card-badge badge-edu">02 • Education &amp; Universities</span>
                             <div class="ind-card-clients">
                                 <span class="ind-card-clients-label">Premier Institutions</span>
                                 <div class="ind-client-pills">
@@ -808,12 +827,12 @@
                     </div>
                 </section>
 
-                <!-- 3. Hospitality & Banquets -->
+                <!-- 03. Hospitality & Banquets -->
                 <section id="industry-hospitality" class="ind-card">
                     <div class="ind-card-visual">
                         <img src="assests/images/projects/gpspl-real/polished/hospitality-banquet-av.webp" alt="Hospitality grand ballroom active LED wall and pro audio integration" loading="lazy" decoding="async">
                         <div class="ind-card-visual-overlay">
-                            <span class="ind-card-badge badge-hosp">Hospitality &amp; Luxury Venues</span>
+                            <span class="ind-card-badge badge-hosp">03 • Hospitality &amp; Luxury Venues</span>
                             <div class="ind-card-clients">
                                 <span class="ind-card-clients-label">Luxury Hotel Chains</span>
                                 <div class="ind-client-pills">
@@ -873,12 +892,12 @@
                     </div>
                 </section>
 
-                <!-- 4. Government & Command Centers -->
+                <!-- 04. Government & Command Centers -->
                 <section id="industry-government" class="ind-card reverse">
                     <div class="ind-card-visual">
                         <img src="assests/images/hero/video-wall-command-center.webp" alt="Mission-critical 24/7 command center video wall and KVM switching" loading="lazy" decoding="async">
                         <div class="ind-card-visual-overlay">
-                            <span class="ind-card-badge badge-govt">Government &amp; Command</span>
+                            <span class="ind-card-badge badge-govt">04 • Government &amp; Command</span>
                             <div class="ind-card-clients">
                                 <span class="ind-card-clients-label">Mission-Critical Deployments</span>
                                 <div class="ind-client-pills">
@@ -937,12 +956,12 @@
                     </div>
                 </section>
 
-                <!-- 5. Healthcare & Clinical Dentistry -->
+                <!-- 05. Healthcare & Clinical Dentistry -->
                 <section id="industry-healthcare" class="ind-card">
                     <div class="ind-card-visual">
-                        <img src="assests/images/projects/gpspl-real/polished/clinic-consultation-display-clean.webp" alt="Healthcare clinic medical consultation display and telemedicine AV integration" loading="lazy" decoding="async">
+                        <img src="assests/images/projects/gpspl-real/polished/healthcare-consultation-suite.jpg" alt="Modern healthcare clinical consultation display and telemedicine suite" loading="lazy" decoding="async">
                         <div class="ind-card-visual-overlay">
-                            <span class="ind-card-badge badge-health">Healthcare &amp; Clinical</span>
+                            <span class="ind-card-badge badge-health">05 • Healthcare &amp; Clinical</span>
                             <div class="ind-card-clients">
                                 <span class="ind-card-clients-label">Healthcare &amp; Diagnostics</span>
                                 <div class="ind-client-pills">
@@ -1002,12 +1021,12 @@
                     </div>
                 </section>
 
-                <!-- 6. Retail, Food & Experience Centers -->
+                <!-- 06. Retail, Food & Experience Centers -->
                 <section id="industry-retail" class="ind-card reverse">
                     <div class="ind-card-visual">
                         <img src="assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg" alt="Retail mall atrium active LED video wall and digital menu board signage network" loading="lazy" decoding="async">
                         <div class="ind-card-visual-overlay">
-                            <span class="ind-card-badge badge-retail">Retail &amp; Experience Centers</span>
+                            <span class="ind-card-badge badge-retail">06 • Retail &amp; Experience Centers</span>
                             <div class="ind-card-clients">
                                 <span class="ind-card-clients-label">Flagship Retail &amp; Malls</span>
                                 <div class="ind-client-pills">
@@ -1066,12 +1085,12 @@
                     </div>
                 </section>
 
-                <!-- 7. Real Estate & Sales Experience Centers -->
+                <!-- 07. Real Estate & Sales Experience Centers -->
                 <section id="industry-real-estate" class="ind-card">
                     <div class="ind-card-visual">
                         <img src="assests/images/projects/gpspl-real/polished/real-estate-residential-av.webp" alt="Real estate sales gallery curved LED presentation wall and smart property AV" loading="lazy" decoding="async">
                         <div class="ind-card-visual-overlay">
-                            <span class="ind-card-badge badge-estate">Real Estate &amp; Sales Centers</span>
+                            <span class="ind-card-badge badge-estate">07 • Real Estate &amp; Sales Centers</span>
                             <div class="ind-card-clients">
                                 <span class="ind-card-clients-label">Top Developers</span>
                                 <div class="ind-client-pills">
@@ -1126,6 +1145,199 @@
                                 <a href="/control-automation" class="ind-sol-link">Lighting &amp; Control →</a>
                             </div>
                             <a href="/contact" class="ind-cta-btn">Design Sales Center <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 08. Banking & Financial Services (BFSI) -->
+                <section id="industry-bfsi" class="ind-card reverse">
+                    <div class="ind-card-visual">
+                        <img src="assests/images/projects/gpspl-real/polished/banking-finance-trading-av.jpg" alt="Banking executive boardroom and secure trading floor financial video wall" loading="lazy" decoding="async">
+                        <div class="ind-card-visual-overlay">
+                            <span class="ind-card-badge badge-bfsi">08 • Banking &amp; Finance (BFSI)</span>
+                            <div class="ind-card-clients">
+                                <span class="ind-card-clients-label">Financial Institutions</span>
+                                <div class="ind-client-pills">
+                                    <span class="ind-client-pill">Scotiabank</span>
+                                    <span class="ind-client-pill">HDFC Bank Facilities</span>
+                                    <span class="ind-client-pill">Asset Management Hubs</span>
+                                    <span class="ind-client-pill">FinTech Campuses</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ind-card-body">
+                        <div class="ind-card-header">
+                            <p class="ind-eyebrow">Secure Financial Workspaces</p>
+                            <h2>High-Density Trading Floor Data Walls &amp; Secure Executive VC Rooms</h2>
+                            <p>Investment banks and trading desks require multi-screen market data monitoring, encrypted video conferencing, and zero-downtime KVM matrix switching with bank-grade security protocols.</p>
+                        </div>
+                        <div class="ind-scope-grid">
+                            <div class="ind-scope-col">
+                                <h3><i class="fas fa-clipboard-list" style="color:#ef3438;"></i> What You Require</h3>
+                                <ul>
+                                    <li>High-density trading floor data video walls</li>
+                                    <li>Encrypted video conferencing &amp; boardroom audio</li>
+                                    <li>Instant source switching across live feeds</li>
+                                    <li>N+1 power redundancy &amp; dedicated AMC SLA</li>
+                                </ul>
+                            </div>
+                            <div class="ind-scope-col">
+                                <h3><i class="fas fa-layer-group" style="color:#0284c7;"></i> GPSPL Engineered Scope</h3>
+                                <ul>
+                                    <li>0.88mm ultra-narrow bezel trading floor displays</li>
+                                    <li>ATEN Over-IP Secure Matrix KVM systems</li>
+                                    <li>Shure Microflex Advance encrypted ceiling mics</li>
+                                    <li>Luminous 15kVA Online UPS dual-circuit backup</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ind-brands-row">
+                            <span class="ind-brands-label">Technology Partners:</span>
+                            <div class="ind-brand-tags">
+                                <span class="ind-brand-tag">ATEN KVM</span>
+                                <span class="ind-brand-tag">Shure</span>
+                                <span class="ind-brand-tag">Samsung</span>
+                                <span class="ind-brand-tag">Sony</span>
+                                <span class="ind-brand-tag">Crestron</span>
+                                <span class="ind-brand-tag">Luminous</span>
+                            </div>
+                        </div>
+                        <div class="ind-card-footer">
+                            <div class="ind-sol-links">
+                                <a href="/video-wall-solutions" class="ind-sol-link">Trading Video Walls →</a>
+                                <a href="/kvm-av-switching-solutions" class="ind-sol-link">Secure KVM →</a>
+                                <a href="/unified-communication-collaboration" class="ind-sol-link">Encrypted VC →</a>
+                            </div>
+                            <a href="/contact" class="ind-cta-btn">Request BFSI BOQ <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 09. Media, Production & Broadcast Studios -->
+                <section id="industry-media" class="ind-card">
+                    <div class="ind-card-visual">
+                        <img src="assests/images/projects/gpspl-real/polished/media-broadcast-production-av.jpg" alt="Television broadcast studio production control room and color-calibrated preview displays" loading="lazy" decoding="async">
+                        <div class="ind-card-visual-overlay">
+                            <span class="ind-card-badge badge-media">09 • Media &amp; Broadcast</span>
+                            <div class="ind-card-clients">
+                                <span class="ind-card-clients-label">Broadcast &amp; Production</span>
+                                <div class="ind-client-pills">
+                                    <span class="ind-client-pill">News Studios</span>
+                                    <span class="ind-client-pill">OTT Production Hubs</span>
+                                    <span class="ind-client-pill">Audio Recording Labs</span>
+                                    <span class="ind-client-pill">Post-Production Suites</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ind-card-body">
+                        <div class="ind-card-header">
+                            <p class="ind-eyebrow">Broadcasting &amp; Studios</p>
+                            <h2>Color-Calibrated Production Control Rooms &amp; Studio Audio Infrastructure</h2>
+                            <p>Television studios, news agencies, and video production houses need reference color displays, studio-grade Dante audio routing, soundproofing, and multi-camera live switching arrays.</p>
+                        </div>
+                        <div class="ind-scope-grid">
+                            <div class="ind-scope-col">
+                                <h3><i class="fas fa-clipboard-list" style="color:#ef3438;"></i> What You Require</h3>
+                                <ul>
+                                    <li>Reference 4K/HDR color-accurate production monitors</li>
+                                    <li>Dante IP-networked multi-channel audio routing</li>
+                                    <li>Studio acoustic treatment &amp; noise isolation</li>
+                                    <li>Multi-camera live preview switching matrices</li>
+                                </ul>
+                            </div>
+                            <div class="ind-scope-col">
+                                <h3><i class="fas fa-layer-group" style="color:#0284c7;"></i> GPSPL Engineered Scope</h3>
+                                <ul>
+                                    <li>Sony Professional Broadcast Master Displays</li>
+                                    <li>Sennheiser &amp; Shure wireless studio microphones</li>
+                                    <li>Harman BSS &amp; Soundcraft digital mixing consoles</li>
+                                    <li>AV-over-IP matrix switching &amp; rack cabling</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ind-brands-row">
+                            <span class="ind-brands-label">Technology Partners:</span>
+                            <div class="ind-brand-tags">
+                                <span class="ind-brand-tag">Sony Broadcast</span>
+                                <span class="ind-brand-tag">Sennheiser</span>
+                                <span class="ind-brand-tag">Soundcraft</span>
+                                <span class="ind-brand-tag">Shure</span>
+                                <span class="ind-brand-tag">ATEN</span>
+                            </div>
+                        </div>
+                        <div class="ind-card-footer">
+                            <div class="ind-sol-links">
+                                <a href="/professional-audio-solutions" class="ind-sol-link">Studio Audio →</a>
+                                <a href="/kvm-av-switching-solutions" class="ind-sol-link">Broadcast Switching →</a>
+                                <a href="/video-technologies" class="ind-sol-link">Color Displays →</a>
+                            </div>
+                            <a href="/contact" class="ind-cta-btn">Design Studio Setup <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 10. Automotive, Showrooms & Dealerships -->
+                <section id="industry-automotive" class="ind-card reverse">
+                    <div class="ind-card-visual">
+                        <img src="assests/images/projects/gpspl-real/polished/automotive-showroom-led-wall.jpg" alt="Luxury automotive dealership showroom with curved active LED video wall and digital car configurator" loading="lazy" decoding="async">
+                        <div class="ind-card-visual-overlay">
+                            <span class="ind-card-badge badge-auto">10 • Automotive &amp; Dealerships</span>
+                            <div class="ind-card-clients">
+                                <span class="ind-card-clients-label">Automotive Brands</span>
+                                <div class="ind-client-pills">
+                                    <span class="ind-client-pill">BMW Showrooms</span>
+                                    <span class="ind-client-pill">Luxury EV Galleries</span>
+                                    <span class="ind-client-pill">Service Center Hubs</span>
+                                    <span class="ind-client-pill">Dealer Training Labs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ind-card-body">
+                        <div class="ind-card-header">
+                            <p class="ind-eyebrow">Automotive Experience</p>
+                            <h2>Curved Fine-Pitch LED Backdrops &amp; Interactive Digital Car Configurators</h2>
+                            <p>Automobile experience centers and premium dealerships require giant cinematic LED walls behind hero cars, touch configurators for model customization, and dealer technical training rooms.</p>
+                        </div>
+                        <div class="ind-scope-grid">
+                            <div class="ind-scope-col">
+                                <h3><i class="fas fa-clipboard-list" style="color:#ef3438;"></i> What You Require</h3>
+                                <ul>
+                                    <li>Curved &amp; seamless Active LED showroom walls</li>
+                                    <li>4K interactive touch totems for car configuration</li>
+                                    <li>High-fidelity showroom ambient background audio</li>
+                                    <li>Dealer technician training classroom display systems</li>
+                                </ul>
+                            </div>
+                            <div class="ind-scope-col">
+                                <h3><i class="fas fa-layer-group" style="color:#0284c7;"></i> GPSPL Engineered Scope</h3>
+                                <ul>
+                                    <li>P1.8mm Fine-Pitch high-contrast curved LED walls</li>
+                                    <li>Samsung &amp; LG 65" 4K interactive touch totems</li>
+                                    <li>JBL commercial ceiling and surface pendant speakers</li>
+                                    <li>Cloud-managed CMS for seasonal campaign rollouts</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ind-brands-row">
+                            <span class="ind-brands-label">Technology Partners:</span>
+                            <div class="ind-brand-tags">
+                                <span class="ind-brand-tag">NovaStar</span>
+                                <span class="ind-brand-tag">Samsung</span>
+                                <span class="ind-brand-tag">LG</span>
+                                <span class="ind-brand-tag">JBL</span>
+                                <span class="ind-brand-tag">BrightSign</span>
+                            </div>
+                        </div>
+                        <div class="ind-card-footer">
+                            <div class="ind-sol-links">
+                                <a href="/active-led-wall-solutions" class="ind-sol-link">Showroom LED Walls →</a>
+                                <a href="/digital-signage-solutions" class="ind-sol-link">Car Configurators →</a>
+                                <a href="/professional-audio-solutions" class="ind-sol-link">Showroom Audio →</a>
+                            </div>
+                            <a href="/contact" class="ind-cta-btn">Request Dealership BOQ <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </section>
