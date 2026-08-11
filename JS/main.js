@@ -562,6 +562,33 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    function initContextualWhatsApp() {
+        const pageTitle = (document.querySelector('h1')?.textContent || document.title).replace(/\s*\|\s*GPSPL.*/i, '').trim();
+        const currentPath = window.location.pathname.toLowerCase();
+        
+        let customMessage = 'Hello GPSPL, I would like to request an AV / IT consultation & quote.';
+        if (currentPath.includes('active-led')) {
+            customMessage = 'Hello GPSPL, I am looking for Active LED Display Wall pricing, sizing & site survey for our facility.';
+        } else if (currentPath.includes('smart-classroom') || currentPath.includes('interactive-display')) {
+            customMessage = 'Hello GPSPL, I want to discuss Smart Classroom Interactive Displays & teaching setup for our institution.';
+        } else if (currentPath.includes('conference') || currentPath.includes('huddle') || currentPath.includes('video-conferencing')) {
+            customMessage = 'Hello GPSPL, I would like to request a BOQ estimate for our Boardroom / Video Conferencing setup.';
+        } else if (currentPath.includes('amc') || currentPath.includes('maintenance')) {
+            customMessage = 'Hello GPSPL, I would like to inquire about AV AMC & preventive maintenance support for our office.';
+        } else if (currentPath.includes('gurgaon')) {
+            customMessage = 'Hello GPSPL Gurgaon Team, I would like to request a corporate AV site survey in Gurgaon / Cyber City.';
+        } else if (currentPath.includes('noida')) {
+            customMessage = 'Hello GPSPL Noida Team, I would like to discuss an Active LED wall requirement in Noida / NCR.';
+        } else if (currentPath.includes('/blog/')) {
+            customMessage = `Hello GPSPL, I was reading your guide on "${pageTitle}" and would like to speak with an AV specialist.`;
+        }
+
+        const encodedMsg = encodeURIComponent(customMessage);
+        document.querySelectorAll('.floating-whatsapp, .whatsapp-button, a[href*="wa.me"]').forEach(btn => {
+            btn.href = `https://wa.me/919310092963?text=${encodedMsg}`;
+        });
+    }
+
     initHeroSlider();
     initProductDetailHeroStack();
     initRevealAnimations();
@@ -569,6 +596,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initIndustryExperience();
     initLeadForms();
     initConversionTrackingHooks();
+    initContextualWhatsApp();
     setTimeout(initStatsAnimation, 500); 
 });
 

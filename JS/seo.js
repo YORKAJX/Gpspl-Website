@@ -61,6 +61,9 @@
         "it-infrastructure-solutions.html": ["IT infrastructure solutions India", "server storage networking supplier", "enterprise IT hardware", "UPS and networking support", "IT AMC Delhi"],
         "ups-power-backup-solutions.html": ["UPS supplier India", "Luminous UPS solutions", "online UPS for AV IT", "power backup for conference room", "UPS AMC support"],
         "amc-maintenance-services.html": ["AV AMC services India", "AV maintenance support", "video wall AMC", "conference room AMC", "technical support 48 to 72 hours"],
+        "av-system-integrator-gurgaon.html": ["AV system integrator Gurgaon", "Cyber City AV integrator", "boardroom setup Gurgaon", "Teams Rooms Gurugram", "Active LED wall Gurgaon", "Crestron automation Gurgaon"],
+        "active-led-wall-supplier-noida.html": ["Active LED wall supplier Noida", "LED video wall Noida Sector 62", "fine pitch LED display Greater Noida", "NovaStar LED controller Noida", "outdoor LED wall Noida Expressway"],
+        "industries.html": ["AV solutions for healthcare", "corporate boardroom AV integrator", "smart classroom university setup", "hospitality Active LED displays", "command center video wall", "retail digital signage India"],
         "contact.html": ["request AV quote", "AV system integrator contact Delhi", "GPSPL enquiry", "technology supply quote India", "conference room quote"]
     };
 
@@ -246,6 +249,18 @@
             title: "Industries Served | AV, IT & Display Solutions | GPSPL",
             description: "GPSPL serves corporate, education, hospitality, government, healthcare, retail, real estate, banking, media and automotive spaces with AV and IT solutions.",
             type: "webpage"
+        },
+        "av-system-integrator-gurgaon.html": {
+            title: "AV System Integrator in Gurgaon & Cyber City | GPSPL",
+            description: "Premier AV system integrator in Gurgaon. Turnkey boardroom AV, Microsoft Teams Rooms, Active LED walls, Crestron automation, and 4-hour SLA AMC support across Cyber City.",
+            type: "service",
+            serviceType: "Audio visual integration and enterprise boardroom solutions"
+        },
+        "active-led-wall-supplier-noida.html": {
+            title: "Active LED Wall Supplier & Installation in Noida | GPSPL",
+            description: "Leading Active LED display wall supplier and installer in Noida. Fine-pitch P1.25, P1.53, P1.86 indoor LED walls, outdoor displays, and NovaStar processors.",
+            type: "service",
+            serviceType: "Active LED video wall systems and installation"
         },
         "projects.html": {
             title: "Enterprise AV, Display & IT Projects India | GPSPL Portfolio",
