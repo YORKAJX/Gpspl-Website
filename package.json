@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Static GPSPL website with SEO, analytics and production asset tooling.",
   "scripts": {
-    "build": "node --check JS/analytics.js && node --check JS/form-validation.js && node --check JS/room-configurator.js",
+    "build": "node --check JS/analytics.js && node --check JS/form-validation.js && node --check JS/room-configurator.js && node -e \"console.log('Production build validation successful')\"",
     "start": "node server.js",
     "serve": "node server.js",
     "dev": "node server.js",
