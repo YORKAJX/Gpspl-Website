@@ -296,6 +296,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://gpspl.co.in/samsung-business-tv-befx-h2</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gpspl.co.in/samsung-commercial-display-qbc</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gpspl.co.in/samsung-commercial-display-qmc</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gpspl.co.in/av-system-integrator-delhi-ncr</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -394,6 +412,12 @@
   <url>
     <loc>https://gpspl.co.in/blog/digital-podium-smart-lectern-integration-guide</loc>
     <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gpspl.co.in/blog/samsung-business-tv-commercial-signage-guide</loc>
+    <lastmod>2026-08-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>

@@ -64,10 +64,37 @@
         "av-system-integrator-gurgaon.html": ["AV system integrator Gurgaon", "Cyber City AV integrator", "boardroom setup Gurgaon", "Teams Rooms Gurugram", "Active LED wall Gurgaon", "Crestron automation Gurgaon"],
         "active-led-wall-supplier-noida.html": ["Active LED wall supplier Noida", "LED video wall Noida Sector 62", "fine pitch LED display Greater Noida", "NovaStar LED controller Noida", "outdoor LED wall Noida Expressway"],
         "industries.html": ["AV solutions for healthcare", "corporate boardroom AV integrator", "smart classroom university setup", "hospitality Active LED displays", "command center video wall", "retail digital signage India"],
+        "samsung-business-tv-befx-h2.html": ["Samsung Business TV BEFX-H2", "Samsung Commercial TV India", "BE43FH", "BE50FH", "BE55FH", "BE65FH", "BE75FH", "BE85FH", "LH43BEFH8GULXL", "Samsung VXT CMS", "PlayLock PIN"],
+        "samsung-commercial-display-qbc.html": ["Samsung QBC Series", "Samsung QB43C", "Samsung QB55C", "Samsung QB65C", "Samsung QB75C", "Samsung QB85C", "LH55QBCEBGCLXL", "Samsung digital signage India", "MagicINFO S10"],
+        "samsung-commercial-display-qmc.html": ["Samsung QMC Series", "Samsung QM43C", "Samsung QM55C", "Samsung QM65C", "Samsung QM75C", "Samsung QM85C", "LH55QMCEBGCLXL", "24/7 commercial display India", "500 nits signage"],
+        "lg-commercial-tv-nu88c.html": ["LG NU88C Series", "LG Commercial TV NanoCell", "alpha 7 AI Gen9", "LG Hotel Mode", "LG webOS 26"],
+        "lg-commercial-tv-ua831c.html": ["LG UA831C Series", "LG Commercial TV 4K", "Super Upscaling", "LG Hotel TV"],
+        "lg-createboard-tr3er.html": ["LG CreateBoard TR3ER", "LG interactive flat panel", "LG TR3ER smart board", "smart classroom panel"],
+        "blog/samsung-business-tv-commercial-signage-guide.html": ["Samsung Business TV guide", "Samsung BEFX-H2", "Samsung QBC signage", "Samsung QMC 24/7", "LH55QBCEBGCLXL", "LH55QMCEBGCLXL", "commercial display Delhi NCR"],
         "contact.html": ["request AV quote", "AV system integrator contact Delhi", "GPSPL enquiry", "technology supply quote India", "conference room quote"]
     };
 
     const pageSeo = {
+        "blog/samsung-business-tv-commercial-signage-guide.html": {
+            title: "Samsung Business TV & Commercial Signage Guide: BEFX, QBC & QMC Series Compared (2026) | GPSPL",
+            description: "Complete 2026 guide comparing Samsung Business TV BEFX-H2, Crystal UHD QBC, and 24/7 Heavy-Duty QMC displays with SKU codes, VXT CMS, and MagicINFO S10.",
+            type: "article"
+        },
+        "samsung-business-tv-befx-h2.html": {
+            title: "Samsung Business TV BEFX-H2 (43\" to 85\") 4K Commercial TV | GPSPL",
+            description: "Samsung BEFX-H2 Series Commercial Business TV with 400 nits, 16/7 duty cycle, Samsung VXT Cloud CMS, PlayLock security, and Business TV App.",
+            type: "product"
+        },
+        "samsung-commercial-display-qbc.html": {
+            title: "Samsung QBC Series Crystal UHD Signage (43\" to 85\") | GPSPL",
+            description: "Samsung QBC Series 4K UHD Commercial Displays with ultra-slim 28.5mm depth, 350 nits, Dynamic Crystal Color, Tizen 7.0, and MagicINFO S10.",
+            type: "product"
+        },
+        "samsung-commercial-display-qmc.html": {
+            title: "Samsung QMC Series 24/7 500-Nit Commercial Signage (43\" to 85\") | GPSPL",
+            description: "Samsung QMC Series Heavy-Duty 24/7 Displays with 500 nits high brightness, 25% non-glare haze, DP 1.2, and SmartView+ wireless collaboration.",
+            type: "product"
+        },
         "index.html": {
             title: "AV System Integrator & BOQ Planner India | GPSPL",
             description: "GPSPL is a Delhi NCR based AV, IT and display system integration partner. Plan conference, LED, audio and AMC setups with our AV BOQ calculator.",
