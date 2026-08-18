@@ -31,6 +31,61 @@
     <script src="JS/site-config.js" defer></script>
     <script src="JS/seo.js" defer></script>
     <script src="JS/analytics.js" defer></script>
+
+    <!-- Schema.org JSON-LD Structured Data for High-Ranking Indexing -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://gpspl.co.in/unified-communication-collaboration#service",
+      "name": "Unified Communication & Collaboration Systems Integration",
+      "serviceType": "Video Conferencing & Unified Communications",
+      "provider": {
+        "@type": "Organization",
+        "name": "Global Peripheral Solution Pvt. Ltd.",
+        "url": "https://gpspl.co.in/",
+        "telephone": "+91-9310092963",
+        "logo": "https://gpspl.co.in/assests/images/gpspl.png"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "description": "Certified design, supply, and integration of Microsoft Teams Rooms, Zoom Rooms, and hybrid meeting spaces across Delhi NCR and India.",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "url": "https://gpspl.co.in/contact"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://gpspl.co.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://gpspl.co.in/#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Unified Communication",
+          "item": "https://gpspl.co.in/unified-communication-collaboration"
+        }
+      ]
+    }
+  ]
+}
+    </script>
 </head>
 <body class="service-detail-template">
     <div id="header-container"><div class="top-bar">

@@ -16,12 +16,73 @@
     <link rel="stylesheet" href="/css/home-hero-fix.css?v=20260808">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="/JS/site-config.js" defer></script>
+
+    <!-- Schema.org JSON-LD Structured Data for High-Ranking Indexing -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://gpspl.co.in/resources#hub",
+      "name": "GPSPL AV Knowledge & Resource Hub",
+      "description": "Engineering blueprints, technology comparison guides, and procurement roadmaps for enterprise AV buyers.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Global Peripheral Solution Pvt. Ltd.",
+        "url": "https://gpspl.co.in/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://gpspl.co.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://gpspl.co.in/resources"
+        }
+      ]
+    }
+  ]
+}
+    </script>
 </head>
 <body class="service-detail-template">
+<div id="header-container"><div class="top-bar">
+    <div class="container top-bar-inner">
+        <div class="top-bar-contact">
+            <a href="tel:+919310092963"><i class="fas fa-phone" aria-hidden="true"></i> +91 93100 92963</a>
+            <a href="mailto:support@gpspl.co.in"><i class="fas fa-envelope" aria-hidden="true"></i> support@gpspl.co.in</a>
+        </div>
+        
+        <div class="top-bar-right">
+            <a href="/careers" class="top-bar-hiring" aria-label="We are hiring AV Technicians">
+                <span class="hiring-pulse" aria-hidden="true"></span>
+                <strong>We're Hiring!</strong>
+                <span class="hiring-tag">AV Technicians</span>
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <div class="social-icons">
+            <a href="https://www.instagram.com/gpspl/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="GPSPL on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/company/global-peripheral-solutions-pvt-ltd" target="_blank" rel="noopener noreferrer" aria-label="GPSPL on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/gpspl.co.in" target="_blank" rel="noopener noreferrer" aria-label="GPSPL on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/@GPSPL1997" target="_blank" rel="noopener noreferrer" aria-label="GPSPL on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+        </div>
+        </div>
+    </div>
+</div>
+
 <header class="site-header">
     <div class="container header-container">
         <a href="/" class="logo" aria-label="GPSPL homepage">
-            <img src="/assests/images/gpspl.png" alt="GPSPL logo" class="logo-img">
+            <img src="/assests/images/gpspl.png" alt="Global Peripheral Solution Pvt. Ltd." class="logo-img">
             <div class="logo-text">
                 <p class="company-name">Global Peripheral Solution Pvt. Ltd.</p>
                 <p>Estd. 1997</p>
@@ -30,6 +91,7 @@
 
         <nav class="nav-links" id="navLinks" aria-label="Main navigation">
             <a href="/">Home</a>
+            <a href="/careers" class="nav-link-careers">Careers <span class="nav-hiring-badge">Hiring</span></a>
             <a href="/resources" class="active">Resources</a>
             <details class="nav-dropdown">
                 <summary>About Us <i class="fas fa-chevron-down" aria-hidden="true"></i></summary>
@@ -80,13 +142,53 @@
                             <a href="/kvm-av-switching-solutions"><i class="fas fa-network-wired" aria-hidden="true"></i><span>KVM &amp; AV Switching Solutions</span></a>
                             <a href="/ups-power-backup-solutions"><i class="fas fa-car-battery" aria-hidden="true"></i><span>UPS &amp; Power Backup Solutions</span></a>
                         </div>
+                        <div class="dropdown-link-group dropdown-link-group-compact">
+                            <p>Infrastructure</p>
+                            <a href="/product-catalog"><i class="fas fa-table-list" aria-hidden="true"></i><span>Product Catalog</span></a>
+                            <a href="/it-infrastructure-solutions"><i class="fas fa-server" aria-hidden="true"></i><span>IT Infrastructure</span></a>
+                            <a href="/peripheral-solutions"><i class="fas fa-pen-ruler" aria-hidden="true"></i><span>Creative Peripherals</span></a>
+                            <a href="/technology-partners"><i class="fas fa-handshake" aria-hidden="true"></i><span>Technology Partners</span></a>
+                        </div>
                     </div>
+                    <div class="dropdown-menu-footer">
+                        <span><strong>Supply</strong> trusted products</span>
+                        <span><strong>Design</strong> complete systems</span>
+                        <span><strong>Support</strong> AMC and service help</span>
+                    </div>
+                </div>
+            </details>
+            <details class="nav-dropdown">
+                <summary>Work <i class="fas fa-chevron-down" aria-hidden="true"></i></summary>
+                <div class="dropdown-menu">
+                    <a href="/projects">Project Portfolio</a>
+                    <a href="/industries">Industries Served</a>
+                    <a href="/industries#industry-corporate">Corporate</a>
+                    <a href="/industries#industry-education">Education</a>
+                    <a href="/industries#industry-hospitality">Hospitality</a>
+                    <a href="/industries#industry-government">Government</a>
+                    <a href="/industries#industry-healthcare">Healthcare</a>
+                    <a href="/case-studies">Case Studies</a>
+                </div>
+            </details>
+            <details class="nav-dropdown">
+                <summary>Partners <i class="fas fa-chevron-down" aria-hidden="true"></i></summary>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="/technology-partners">Technology Partners</a>
+                    <a href="/audio-technologies">Audio Technologies</a>
+                    <a href="/video-technologies">Video Technologies</a>
+                    <a href="/control-automation">Control & Automation Technology</a>
                 </div>
             </details>
             <a href="/contact" class="btn-primary">Request Quote</a>
         </nav>
+
+        <button class="hamburger" id="hamburger-btn" type="button" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
     </div>
 </header>
+</div>
+
 
 <main class="resources-hub-page">
     <section class="blog-hero">
