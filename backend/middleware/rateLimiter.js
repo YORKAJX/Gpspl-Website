@@ -25,3 +25,10 @@ export const leadLimiter = rateLimit({
   limit: env.LEAD_RATE_LIMIT_MAX,
   message: { error: "Too many enquiries from this connection. Please call GPSPL or try again later." }
 });
+
+export const downloadLimiter = rateLimit({
+  ...standard,
+  windowMs: 60 * 1000, // 1 minute window
+  limit: 10, // Max 10 downloads per minute per IP
+  message: { error: "Download rate limit exceeded. Please wait a moment before downloading additional files." }
+});
