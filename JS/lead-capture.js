@@ -1,10 +1,10 @@
 /**
- * GPSPL Gated Lead Capture, Anti-Fake Validator & Instant Zero-Cost Alert Engine
+ * GPSPL Gated Lead Capture, Anti-Fake Validator, Instant Alert & CSV Export Engine
  * - Target Admin Mobile: +91 89208 30377
  * - Target Admin Email: global@gpspl.co.in
  * - Strict 10-digit Indian Mobile Validation (Blocks fake/sequential/dummy numbers)
  * - Strict Email Validation (Blocks disposable & dummy emails)
- * - Auto-downloads datasheet while dispatching instant lead alert
+ * - 1-Click Professional CSV / Excel Lead Export (Ctrl + Shift + L or #leads-manager)
  */
 
 (function() {
@@ -217,10 +217,25 @@
     // 3. DISPATCH LEAD ALERT (Email & WhatsApp targets)
     // -----------------------------------------------------------------
     async function dispatchLeadAlert(leadData) {
-        // 1. Save to local audit backup
+        // 1. Save to local audit backup with formatted IST time
         try {
             const history = JSON.parse(localStorage.getItem('gpspl_captured_leads') || '[]');
-            history.push({ ...leadData, timestamp: new Date().toISOString() });
+            const now = new Date();
+            const istTime = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' });
+            
+            const newLead = {
+                id: 'LEAD-' + Date.now().toString().slice(-6),
+                date_time: istTime,
+                name: leadData.name || 'Not Provided',
+                company: leadData.company || 'Not Specified',
+                phone: leadData.phone || '',
+                email: leadData.email || '',
+                source: leadData.source || 'Datasheet Download',
+                page: leadData.page || window.location.pathname,
+                timestamp: now.toISOString()
+            };
+
+            history.unshift(newLead); // Latest first
             localStorage.setItem('gpspl_captured_leads', JSON.stringify(history));
         } catch(e) {}
 
@@ -310,7 +325,7 @@
             company: companyInput.value.trim(),
             phone: phoneInput.value.trim(),
             email: emailInput.value.trim(),
-            source: `Datasheet Download: ${pendingModelName || pendingDownloadFilename}`,
+            source: `Datasheet: ${pendingModelName || pendingDownloadFilename}`,
             download_url: pendingDownloadUrl,
             page: window.location.pathname
         };
@@ -405,12 +420,202 @@
                     company: formData.get('company') || formData.get('organization') || 'Not Specified',
                     phone: (phoneInput ? phoneInput.value : formData.get('phone')) || '',
                     email: (emailInput ? emailInput.value : formData.get('email')) || '',
-                    source: `Form Submission: ${form.id || form.className || 'General Contact'}`,
+                    source: `Form: ${form.id || form.className || 'General Contact'}`,
                     page: window.location.pathname
                 };
                 dispatchLeadAlert(leadData);
             });
         });
+    }
+
+    // -----------------------------------------------------------------
+    // 6. CSV & EXCEL EXPORT ENGINE + ADMIN LEAD HUB MODAL
+    // -----------------------------------------------------------------
+    window.GPSPL_ExportLeadsCSV = function() {
+        const leads = JSON.parse(localStorage.getItem('gpspl_captured_leads') || '[]');
+        if (leads.length === 0) {
+            alert('No captured leads found in local storage yet. Submit a test form or datasheet download to test!');
+            return;
+        }
+
+        const headers = [
+            'Lead ID',
+            'Date & Time (IST)',
+            'Full Name',
+            'Company / Organization',
+            'Mobile Number',
+            'Work Email',
+            'Action / Product / Datasheet',
+            'Source Page URL'
+        ];
+
+        // Format rows with double quotes escaping
+        const csvRows = [headers.join(',')];
+        leads.forEach(lead => {
+            const row = [
+                `"${(lead.id || '').replace(/"/g, '""')}"`,
+                `"${(lead.date_time || lead.timestamp || '').replace(/"/g, '""')}"`,
+                `"${(lead.name || '').replace(/"/g, '""')}"`,
+                `"${(lead.company || '').replace(/"/g, '""')}"`,
+                `"${(lead.phone ? '+91 ' + lead.phone : '').replace(/"/g, '""')}"`,
+                `"${(lead.email || '').replace(/"/g, '""')}"`,
+                `"${(lead.source || '').replace(/"/g, '""')}"`,
+                `"${(lead.page || '').replace(/"/g, '""')}"`
+            ];
+            csvRows.push(row.join(','));
+        });
+
+        // Add UTF-8 BOM so Excel opens it with perfect character encoding and columns
+        const csvContent = '\uFEFF' + csvRows.join('\r\n');
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        const today = new Date().toISOString().slice(0, 10);
+        a.href = url;
+        a.download = `GPSPL-Leads-Export-${today}.csv`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+    };
+
+    function createAdminLeadHubModal() {
+        if (document.getElementById('gpspl-admin-lead-modal')) {
+            renderAdminLeadsList();
+            const m = document.getElementById('gpspl-admin-lead-modal');
+            m.style.display = 'flex';
+            setTimeout(() => { m.style.opacity = '1'; }, 10);
+            return;
+        }
+
+        const modal = document.createElement('div');
+        modal.id = 'gpspl-admin-lead-modal';
+        modal.style.cssText = `
+            position: fixed;
+            inset: 0;
+            z-index: 99999999;
+            background: rgba(7, 21, 38, 0.85);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        `;
+
+        modal.innerHTML = `
+            <div style="background: #ffffff; border-radius: 20px; width: 100%; max-width: 950px; max-height: 85vh; display: flex; flex-direction: column; padding: 28px; box-shadow: 0 30px 80px rgba(0,0,0,0.4); border: 1px solid #e2e8f0; position: relative;">
+                <button type="button" id="gpspl-admin-close" style="position: absolute; top: 18px; right: 18px; background: #f1f5f9; border: none; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; color: #64748b; font-size: 16px; cursor: pointer;">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; margin-bottom: 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px;">
+                    <div>
+                        <span style="font-size: 0.72rem; font-weight: 800; color: #ef3438; text-transform: uppercase; letter-spacing: 0.12em;">GPSPL Executive CRM</span>
+                        <h3 style="margin: 2px 0 0; color: #071526; font-size: 1.4rem; font-weight: 800;">Captured Leads &amp; Inquiries</h3>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <button type="button" id="gpspl-export-csv-btn" style="background: #16a34a; border: none; color: #ffffff; padding: 9px 18px; border-radius: 8px; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);">
+                            <i class="fas fa-file-excel"></i> Download Leads (CSV / Excel)
+                        </button>
+                        <button type="button" id="gpspl-clear-leads-btn" style="background: #fee2e2; border: 1px solid #fca5a5; color: #ef4444; padding: 9px 14px; border-radius: 8px; font-weight: 700; font-size: 0.82rem; cursor: pointer;">
+                            <i class="fas fa-trash"></i> Clear Test
+                        </button>
+                    </div>
+                </div>
+
+                <div id="gpspl-leads-table-container" style="overflow-y: auto; flex-grow: 1; border: 1px solid #e2e8f0; border-radius: 12px;">
+                    <!-- Leads Table Injected Here -->
+                </div>
+                
+                <div style="margin-top: 14px; display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: #64748b;">
+                    <span>Alerts automatically sent to: <strong>${ADMIN_CONFIG.email}</strong> &bull; <strong>+91 ${ADMIN_CONFIG.phone}</strong></span>
+                    <span>Shortkey: <strong>Ctrl + Shift + L</strong></span>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        document.getElementById('gpspl-admin-close').addEventListener('click', () => {
+            modal.style.opacity = '0';
+            setTimeout(() => { modal.style.display = 'none'; }, 250);
+        });
+
+        document.getElementById('gpspl-export-csv-btn').addEventListener('click', window.GPSPL_ExportLeadsCSV);
+        document.getElementById('gpspl-clear-leads-btn').addEventListener('click', () => {
+            if (confirm('Are you sure you want to clear the local test leads list?')) {
+                localStorage.removeItem('gpspl_captured_leads');
+                renderAdminLeadsList();
+            }
+        });
+
+        renderAdminLeadsList();
+        modal.style.display = 'flex';
+        setTimeout(() => { modal.style.opacity = '1'; }, 10);
+    }
+
+    function renderAdminLeadsList() {
+        const container = document.getElementById('gpspl-leads-table-container');
+        if (!container) return;
+        const leads = JSON.parse(localStorage.getItem('gpspl_captured_leads') || '[]');
+
+        if (leads.length === 0) {
+            container.innerHTML = `
+                <div style="padding: 48px 20px; text-align: center; color: #94a3b8;">
+                    <i class="fas fa-inbox" style="font-size: 2.4rem; color: #cbd5e1; margin-bottom: 12px; display: block;"></i>
+                    <p style="font-size: 1rem; font-weight: 700; color: #475569; margin: 0 0 6px;">No Leads Captured Yet</p>
+                    <p style="font-size: 0.85rem; margin: 0;">Submit any form or download a Samsung/LG datasheet to see the live data stream here.</p>
+                </div>
+            `;
+            return;
+        }
+
+        let tableHtml = `
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.84rem; text-align: left;">
+                <thead style="background: #0f172a; color: #ffffff; position: sticky; top: 0;">
+                    <tr>
+                        <th style="padding: 12px 14px;">Date/Time</th>
+                        <th style="padding: 12px 14px;">Name</th>
+                        <th style="padding: 12px 14px;">Company</th>
+                        <th style="padding: 12px 14px;">Phone</th>
+                        <th style="padding: 12px 14px;">Email</th>
+                        <th style="padding: 12px 14px;">Source / Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+
+        leads.forEach((l, idx) => {
+            const bg = idx % 2 === 0 ? '#ffffff' : '#f8fafc';
+            tableHtml += `
+                <tr style="background: ${bg}; border-bottom: 1px solid #e2e8f0;">
+                    <td style="padding: 10px 14px; font-size: 0.78rem; color: #64748b; white-space: nowrap;">${l.date_time || l.timestamp || ''}</td>
+                    <td style="padding: 10px 14px; font-weight: 700; color: #0f172a;">${l.name || ''}</td>
+                    <td style="padding: 10px 14px; color: #334155;">${l.company || ''}</td>
+                    <td style="padding: 10px 14px; font-family: monospace; font-weight: 700; color: #0284c7;">${l.phone ? '+91 ' + l.phone : ''}</td>
+                    <td style="padding: 10px 14px; color: #334155;">${l.email || ''}</td>
+                    <td style="padding: 10px 14px;"><span style="background: #e0f2fe; color: #0284c7; padding: 3px 8px; border-radius: 6px; font-size: 0.74rem; font-weight: 700;">${l.source || ''}</span></td>
+                </tr>
+            `;
+        });
+
+        tableHtml += `</tbody></table>`;
+        container.innerHTML = tableHtml;
+    }
+
+    // Bind Keyboard Shortcut Ctrl + Shift + L or URL hash #leads-manager
+    window.addEventListener('keydown', (e) => {
+        if (e.ctrlKey && e.shiftKey && (e.key === 'L' || e.key === 'l')) {
+            e.preventDefault();
+            createAdminLeadHubModal();
+        }
+    });
+
+    if (window.location.hash === '#leads-manager') {
+        window.addEventListener('DOMContentLoaded', createAdminLeadHubModal);
     }
 
     if (document.readyState === 'loading') {
