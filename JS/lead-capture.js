@@ -1,10 +1,10 @@
 /**
- * GPSPL Gated Lead Capture, Anti-Fake Validator, Instant Alert & CSV Export Engine
- * - Target Admin Mobile: +91 89208 30377
+ * GPSPL Universal Lead & Inquiry Capture Engine
+ * - Captures: Career Applications, BOQ/Project Inquiries, Contact Forms, Datasheet Downloads
  * - Target Admin Email: global@gpspl.co.in
- * - Strict 10-digit Indian Mobile Validation (Blocks fake/sequential/dummy numbers)
- * - Strict Email Validation (Blocks disposable & dummy emails)
- * - 1-Click Professional CSV / Excel Lead Export (Ctrl + Shift + L or #leads-manager)
+ * - Target Admin Mobile: +91 89208 30377
+ * - Anti-Fake 10-Digit Mobile & Email Validator
+ * - Categorized Executive CRM & 1-Click CSV / Excel Export (Ctrl + Shift + L)
  */
 
 (function() {
@@ -92,7 +92,79 @@
     };
 
     // -----------------------------------------------------------------
-    // 2. GATED DATASHEET DOWNLOAD MODAL
+    // 2. UNIVERSAL DISPATCH LEAD ALERT (Email, Webhook & Storage)
+    // -----------------------------------------------------------------
+    async function dispatchUniversalLead(leadData) {
+        const now = new Date();
+        const istTime = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' });
+        
+        const newLead = {
+            id: 'LEAD-' + Date.now().toString().slice(-6),
+            category: leadData.category || 'INQUIRY',
+            date_time: istTime,
+            name: leadData.name || 'Not Provided',
+            company: leadData.company || 'Not Specified',
+            phone: leadData.phone || '',
+            email: leadData.email || '',
+            source: leadData.source || 'General Inquiry',
+            details: leadData.details || leadData.message || 'No additional details',
+            page: leadData.page || window.location.pathname,
+            timestamp: now.toISOString()
+        };
+
+        // 1. Save to Local Storage Backup
+        try {
+            const history = JSON.parse(localStorage.getItem('gpspl_captured_leads') || '[]');
+            history.unshift(newLead);
+            localStorage.setItem('gpspl_captured_leads', JSON.stringify(history));
+        } catch(e) {}
+
+        // 2. Dispatch to Admin Email (global@gpspl.co.in) via Zero-Cost FormSubmit Gateway
+        try {
+            fetch('https://formsubmit.co/ajax/' + encodeURIComponent(ADMIN_CONFIG.email), {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({
+                    _subject: `🔥 [${newLead.category}] ${newLead.name} (${newLead.company}) - ${newLead.source}`,
+                    _template: 'table',
+                    _captcha: 'false',
+                    'Category': newLead.category,
+                    'Full Name': newLead.name,
+                    'Mobile Number': newLead.phone ? '+91 ' + newLead.phone : 'Not Provided',
+                    'Email Address': newLead.email,
+                    'Company / Org': newLead.company,
+                    'Inquiry / Action': newLead.source,
+                    'Details / Message': newLead.details,
+                    'Source Page URL': window.location.href,
+                    'Admin Alert Target': '+91 ' + ADMIN_CONFIG.phone + ' | ' + ADMIN_CONFIG.email
+                })
+            }).catch(() => {});
+        } catch(e) {}
+
+        // 3. Dispatch to Web3Forms Backup
+        try {
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    access_key: '56d7df15-776e-4b47-9759-9b62c12140bb',
+                    to_email: ADMIN_CONFIG.email,
+                    subject: `🔥 [${newLead.category}] ${newLead.name} - ${newLead.source}`,
+                    name: newLead.name,
+                    phone: newLead.phone,
+                    email: newLead.email,
+                    company: newLead.company,
+                    category: newLead.category,
+                    source: newLead.source,
+                    details: newLead.details,
+                    page_url: window.location.href
+                })
+            }).catch(() => {});
+        } catch(e) {}
+    }
+
+    // -----------------------------------------------------------------
+    // 3. GATED DATASHEET DOWNLOAD MODAL
     // -----------------------------------------------------------------
     let pendingDownloadUrl = null;
     let pendingDownloadFilename = null;
@@ -136,13 +208,13 @@
                 <form id="gpspl-datasheet-form" style="display: flex; flex-direction: column; gap: 13px;">
                     <div>
                         <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 4px;">Full Name <span style="color: #ef4444;">*</span></label>
-                        <input type="text" id="gpspl-lead-name" required placeholder="e.g. Rahul Sharma" style="width: 100%; padding: 11px 14px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.92rem; outline: none; box-sizing: border-box; transition: border-color 0.2s;">
+                        <input type="text" id="gpspl-lead-name" required placeholder="e.g. Rahul Sharma" style="width: 100%; padding: 11px 14px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.92rem; outline: none; box-sizing: border-box;">
                         <span class="field-error" id="name-error" style="color: #ef4444; font-size: 0.76rem; display: none; margin-top: 3px;"></span>
                     </div>
 
                     <div>
                         <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 4px;">Company / School / Org Name <span style="color: #ef4444;">*</span></label>
-                        <input type="text" id="gpspl-lead-company" required placeholder="e.g. DPS International / TechCorp" style="width: 100%; padding: 11px 14px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.92rem; outline: none; box-sizing: border-box; transition: border-color 0.2s;">
+                        <input type="text" id="gpspl-lead-company" required placeholder="e.g. DPS International / TechCorp" style="width: 100%; padding: 11px 14px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.92rem; outline: none; box-sizing: border-box;">
                         <span class="field-error" id="company-error" style="color: #ef4444; font-size: 0.76rem; display: none; margin-top: 3px;"></span>
                     </div>
 
@@ -150,18 +222,18 @@
                         <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 4px;">Mobile Number (10 Digits) <span style="color: #ef4444;">*</span></label>
                         <div style="display: flex; gap: 8px;">
                             <span style="background: #f1f5f9; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 11px 12px; font-weight: 700; color: #475569; font-size: 0.9rem;">+91</span>
-                            <input type="tel" id="gpspl-lead-phone" maxlength="10" required placeholder="e.g. 98100 12345" style="width: 100%; padding: 11px 14px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.92rem; outline: none; box-sizing: border-box; transition: border-color 0.2s;">
+                            <input type="tel" id="gpspl-lead-phone" maxlength="10" required placeholder="e.g. 98100 12345" style="width: 100%; padding: 11px 14px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.92rem; outline: none; box-sizing: border-box;">
                         </div>
                         <span class="field-error" id="phone-error" style="color: #ef4444; font-size: 0.76rem; display: none; margin-top: 3px;"></span>
                     </div>
 
                     <div>
                         <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 4px;">Work / Official Email <span style="color: #ef4444;">*</span></label>
-                        <input type="email" id="gpspl-lead-email" required placeholder="e.g. rahul@company.com" style="width: 100%; padding: 11px 14px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.92rem; outline: none; box-sizing: border-box; transition: border-color 0.2s;">
+                        <input type="email" id="gpspl-lead-email" required placeholder="e.g. rahul@company.com" style="width: 100%; padding: 11px 14px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.92rem; outline: none; box-sizing: border-box;">
                         <span class="field-error" id="email-error" style="color: #ef4444; font-size: 0.76rem; display: none; margin-top: 3px;"></span>
                     </div>
 
-                    <button type="submit" id="gpspl-submit-btn" style="background: #ef3438; border: none; color: #ffffff; padding: 13px 20px; border-radius: 8px; font-size: 0.96rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 4px; box-shadow: 0 4px 14px rgba(239, 52, 56, 0.25); transition: all 0.2s ease;">
+                    <button type="submit" id="gpspl-submit-btn" style="background: #ef3438; border: none; color: #ffffff; padding: 13px 20px; border-radius: 8px; font-size: 0.96rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 4px; box-shadow: 0 4px 14px rgba(239, 52, 56, 0.25);">
                         <i class="fas fa-download"></i> Verify &amp; Download Datasheet
                     </button>
                     
@@ -211,53 +283,6 @@
         setTimeout(() => {
             modal.style.display = 'none';
         }, 250);
-    }
-
-    // -----------------------------------------------------------------
-    // 3. DISPATCH LEAD ALERT (Email & Storage)
-    // -----------------------------------------------------------------
-    async function dispatchLeadAlert(leadData) {
-        // 1. Save to local audit backup with formatted IST time
-        try {
-            const history = JSON.parse(localStorage.getItem('gpspl_captured_leads') || '[]');
-            const now = new Date();
-            const istTime = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' });
-            
-            const newLead = {
-                id: 'LEAD-' + Date.now().toString().slice(-6),
-                date_time: istTime,
-                name: leadData.name || 'Not Provided',
-                company: leadData.company || 'Not Specified',
-                phone: leadData.phone || '',
-                email: leadData.email || '',
-                source: leadData.source || 'Datasheet Download',
-                page: leadData.page || window.location.pathname,
-                timestamp: now.toISOString()
-            };
-
-            history.unshift(newLead);
-            localStorage.setItem('gpspl_captured_leads', JSON.stringify(history));
-        } catch(e) {}
-
-        // 2. Dispatch to Admin Email (global@gpspl.co.in) via Zero-Cost FormSubmit / Web3Forms Gateway
-        try {
-            fetch('https://formsubmit.co/ajax/' + encodeURIComponent(ADMIN_CONFIG.email), {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                body: JSON.stringify({
-                    _subject: `🔥 NEW LEAD: ${leadData.name} (${leadData.company}) - ${leadData.source || 'Datasheet'}`,
-                    _template: 'table',
-                    _captcha: 'false',
-                    'Full Name': leadData.name,
-                    'Mobile Number': '+91 ' + leadData.phone,
-                    'Email Address': leadData.email,
-                    'Company / Organization': leadData.company,
-                    'Action / Source': leadData.source,
-                    'Page URL': window.location.href,
-                    'Admin Target Phone': '+91 ' + ADMIN_CONFIG.phone
-                })
-            }).catch(() => {});
-        } catch(e) {}
     }
 
     function handleModalSubmit(e) {
@@ -310,16 +335,17 @@
         btn.style.pointerEvents = 'none';
 
         const leadData = {
+            category: 'DATASHEET',
             name: nameInput.value.trim(),
             company: companyInput.value.trim(),
             phone: phoneInput.value.trim(),
             email: emailInput.value.trim(),
             source: `Datasheet: ${pendingModelName || pendingDownloadFilename}`,
-            download_url: pendingDownloadUrl,
+            details: `Requested PDF: ${pendingDownloadFilename}`,
             page: window.location.pathname
         };
 
-        dispatchLeadAlert(leadData);
+        dispatchUniversalLead(leadData);
 
         setTimeout(() => {
             const link = document.createElement('a');
@@ -343,7 +369,7 @@
     }
 
     // -----------------------------------------------------------------
-    // 4. ATTACH TO ALL DATASHEET BUTTONS ACROSS THE SITE (Event Delegation)
+    // 4. ATTACH TO ALL DATASHEET BUTTONS (Document Click Delegation)
     // -----------------------------------------------------------------
     function handleDocumentClick(e) {
         const target = e.target.closest('a');
@@ -353,12 +379,10 @@
         const isDownload = target.hasAttribute('download') || href.includes('.pdf') || href.includes('datasheet');
 
         if (isDownload) {
-            // Allow company profile direct download without gatekeeping
             if (href.includes('company-profile') || href.includes('brochure')) {
                 return;
             }
 
-            // Gatekeep Samsung & LG & Hardware Datasheets
             if (href.includes('datasheet') || href.includes('samsung') || href.includes('lg-') || href.includes('.pdf')) {
                 e.preventDefault();
                 e.stopPropagation();
@@ -376,20 +400,26 @@
     }
 
     // -----------------------------------------------------------------
-    // 5. ATTACH STRICT VALIDATION TO ALL SITE FORMS (Contact, BOQ, Careers)
+    // 5. ATTACH TO ALL SITE FORMS (Career, BOQ, Contact, Quotes)
     // -----------------------------------------------------------------
     function attachGlobalFormValidation() {
         const forms = document.querySelectorAll('form:not(#gpspl-datasheet-form)');
         forms.forEach(form => {
+            // Avoid double binding
+            if (form.dataset.gpsplBound === 'true') return;
+            form.dataset.gpsplBound = 'true';
+
             form.addEventListener('submit', function(e) {
                 const phoneInput = form.querySelector('input[type="tel"], input[name*="phone"], input[name*="mobile"], input[id*="phone"]');
                 const emailInput = form.querySelector('input[type="email"], input[name*="email"], input[id*="email"]');
+                const nameInput = form.querySelector('input[name*="name"], input[id*="name"], input[placeholder*="Name"]');
+                const companyInput = form.querySelector('input[name*="company"], input[name*="organization"], input[id*="company"]');
 
                 if (phoneInput && phoneInput.value) {
                     if (!window.GPSPL_Validator.isValidPhone(phoneInput.value)) {
                         e.preventDefault();
                         e.stopPropagation();
-                        alert('⚠️ Please enter a valid 10-digit Indian mobile number (e.g. 98100XXXXX). Random or sequential numbers are not accepted.');
+                        alert('⚠️ Please enter a valid 10-digit Indian mobile number (e.g. 98100XXXXX). Random or dummy numbers are not accepted.');
                         phoneInput.focus();
                         return false;
                     }
@@ -405,16 +435,43 @@
                     }
                 }
 
+                // Determine form category
+                let category = 'CONTACT INQUIRY';
+                let sourceTitle = form.id || form.className || 'Website Contact Form';
+
+                const formHtml = form.innerHTML.toLowerCase();
+                if (formHtml.includes('career') || formHtml.includes('resume') || formHtml.includes('job') || window.location.pathname.includes('career')) {
+                    category = 'CAREER APPLICATION';
+                    const roleField = form.querySelector('[name*="role"], [name*="position"], #careerModalRoleTitle');
+                    sourceTitle = roleField ? (roleField.value || roleField.textContent || 'Job Application') : 'Career Application';
+                } else if (formHtml.includes('boq') || formHtml.includes('calculator') || form.id === 'boq-form') {
+                    category = 'BOQ / PROJECT ESTIMATE';
+                    sourceTitle = 'AV BOQ Calculator';
+                } else if (formHtml.includes('quote') || formHtml.includes('inquiry')) {
+                    category = 'PROJECT QUOTE REQUEST';
+                }
+
+                // Extract all form values for rich email body
                 const formData = new FormData(form);
+                const detailsArr = [];
+                formData.forEach((val, key) => {
+                    if (key !== 'bot-field' && key !== 'form-name' && val && typeof val === 'string') {
+                        detailsArr.push(`${key}: ${val}`);
+                    }
+                });
+
                 const leadData = {
-                    name: formData.get('name') || formData.get('fullName') || 'Website Inquirer',
-                    company: formData.get('company') || formData.get('organization') || 'Not Specified',
+                    category: category,
+                    name: (nameInput ? nameInput.value : formData.get('name')) || 'Website Inquirer',
+                    company: (companyInput ? companyInput.value : formData.get('company')) || (category === 'CAREER APPLICATION' ? 'Job Candidate' : 'Not Specified'),
                     phone: (phoneInput ? phoneInput.value : formData.get('phone')) || '',
                     email: (emailInput ? emailInput.value : formData.get('email')) || '',
-                    source: `Form: ${form.id || form.className || 'General Contact'}`,
+                    source: sourceTitle,
+                    details: detailsArr.join(' | ') || 'Inquiry submitted from ' + window.location.pathname,
                     page: window.location.pathname
                 };
-                dispatchLeadAlert(leadData);
+
+                dispatchUniversalLead(leadData);
             });
         });
     }
@@ -425,18 +482,20 @@
     window.GPSPL_ExportLeadsCSV = function() {
         const leads = JSON.parse(localStorage.getItem('gpspl_captured_leads') || '[]');
         if (leads.length === 0) {
-            alert('No captured leads found in local storage yet. Submit a test form or datasheet download to test!');
+            alert('No captured leads or inquiries found in local storage yet.');
             return;
         }
 
         const headers = [
             'Lead ID',
+            'Category',
             'Date & Time (IST)',
             'Full Name',
             'Company / Organization',
             'Mobile Number',
             'Work Email',
-            'Action / Product / Datasheet',
+            'Inquiry Source / Product',
+            'Details & Requirements',
             'Source Page URL'
         ];
 
@@ -444,12 +503,14 @@
         leads.forEach(lead => {
             const row = [
                 `"${(lead.id || '').replace(/"/g, '""')}"`,
+                `"${(lead.category || '').replace(/"/g, '""')}"`,
                 `"${(lead.date_time || lead.timestamp || '').replace(/"/g, '""')}"`,
                 `"${(lead.name || '').replace(/"/g, '""')}"`,
                 `"${(lead.company || '').replace(/"/g, '""')}"`,
                 `"${(lead.phone ? '+91 ' + lead.phone : '').replace(/"/g, '""')}"`,
                 `"${(lead.email || '').replace(/"/g, '""')}"`,
                 `"${(lead.source || '').replace(/"/g, '""')}"`,
+                `"${(lead.details || '').replace(/"/g, '""')}"`,
                 `"${(lead.page || '').replace(/"/g, '""')}"`
             ];
             csvRows.push(row.join(','));
@@ -461,7 +522,7 @@
         const a = document.createElement('a');
         const today = new Date().toISOString().slice(0, 10);
         a.href = url;
-        a.download = `GPSPL-Leads-Export-${today}.csv`;
+        a.download = `GPSPL-All-Inquiries-${today}.csv`;
         document.body.appendChild(a);
         a.click();
         a.remove();
@@ -495,19 +556,19 @@
         `;
 
         modal.innerHTML = `
-            <div style="background: #ffffff; border-radius: 20px; width: 100%; max-width: 950px; max-height: 85vh; display: flex; flex-direction: column; padding: 28px; box-shadow: 0 30px 80px rgba(0,0,0,0.4); border: 1px solid #e2e8f0; position: relative;">
+            <div style="background: #ffffff; border-radius: 20px; width: 100%; max-width: 1050px; max-height: 88vh; display: flex; flex-direction: column; padding: 28px; box-shadow: 0 30px 80px rgba(0,0,0,0.4); border: 1px solid #e2e8f0; position: relative;">
                 <button type="button" id="gpspl-admin-close" style="position: absolute; top: 18px; right: 18px; background: #f1f5f9; border: none; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; color: #64748b; font-size: 16px; cursor: pointer;">
                     <i class="fas fa-times"></i>
                 </button>
 
                 <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; margin-bottom: 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px;">
                     <div>
-                        <span style="font-size: 0.72rem; font-weight: 800; color: #ef3438; text-transform: uppercase; letter-spacing: 0.12em;">GPSPL Executive CRM</span>
-                        <h3 style="margin: 2px 0 0; color: #071526; font-size: 1.4rem; font-weight: 800;">Captured Leads &amp; Inquiries</h3>
+                        <span style="font-size: 0.72rem; font-weight: 800; color: #ef3438; text-transform: uppercase; letter-spacing: 0.12em;">GPSPL Executive CRM &amp; Dispatcher</span>
+                        <h3 style="margin: 2px 0 0; color: #071526; font-size: 1.4rem; font-weight: 800;">All Website Leads, Careers &amp; Project Inquiries</h3>
                     </div>
                     <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                         <button type="button" id="gpspl-export-csv-btn" style="background: #16a34a; border: none; color: #ffffff; padding: 9px 18px; border-radius: 8px; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);">
-                            <i class="fas fa-file-excel"></i> Download Leads (CSV / Excel)
+                            <i class="fas fa-file-excel"></i> Download All Inquiries (CSV / Excel)
                         </button>
                         <button type="button" id="gpspl-clear-leads-btn" style="background: #fee2e2; border: 1px solid #fca5a5; color: #ef4444; padding: 9px 14px; border-radius: 8px; font-weight: 700; font-size: 0.82rem; cursor: pointer;">
                             <i class="fas fa-trash"></i> Clear Test
@@ -516,12 +577,12 @@
                 </div>
 
                 <div id="gpspl-leads-table-container" style="overflow-y: auto; flex-grow: 1; border: 1px solid #e2e8f0; border-radius: 12px;">
-                    <!-- Leads Table Injected Here -->
+                    <!-- Table Injected Here -->
                 </div>
                 
                 <div style="margin-top: 14px; display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: #64748b;">
                     <span>Alerts automatically sent to: <strong>${ADMIN_CONFIG.email}</strong> &bull; <strong>+91 ${ADMIN_CONFIG.phone}</strong></span>
-                    <span>Shortkey: <strong>Ctrl + Shift + L</strong></span>
+                    <span>Admin Shortcut: <strong>Ctrl + Shift + L</strong></span>
                 </div>
             </div>
         `;
@@ -535,7 +596,7 @@
 
         document.getElementById('gpspl-export-csv-btn').addEventListener('click', window.GPSPL_ExportLeadsCSV);
         document.getElementById('gpspl-clear-leads-btn').addEventListener('click', () => {
-            if (confirm('Are you sure you want to clear the local test leads list?')) {
+            if (confirm('Are you sure you want to clear test inquiries?')) {
                 localStorage.removeItem('gpspl_captured_leads');
                 renderAdminLeadsList();
             }
@@ -555,8 +616,8 @@
             container.innerHTML = `
                 <div style="padding: 48px 20px; text-align: center; color: #94a3b8;">
                     <i class="fas fa-inbox" style="font-size: 2.4rem; color: #cbd5e1; margin-bottom: 12px; display: block;"></i>
-                    <p style="font-size: 1rem; font-weight: 700; color: #475569; margin: 0 0 6px;">No Leads Captured Yet</p>
-                    <p style="font-size: 0.85rem; margin: 0;">Submit any form or download a Samsung/LG datasheet to see the live data stream here.</p>
+                    <p style="font-size: 1rem; font-weight: 700; color: #475569; margin: 0 0 6px;">No Inquiries Captured Yet</p>
+                    <p style="font-size: 0.85rem; margin: 0;">Submit any form (Contact, Career, BOQ, Datasheet) to see live entries stream here.</p>
                 </div>
             `;
             return;
@@ -567,11 +628,12 @@
                 <thead style="background: #0f172a; color: #ffffff; position: sticky; top: 0;">
                     <tr>
                         <th style="padding: 12px 14px;">Date/Time</th>
+                        <th style="padding: 12px 14px;">Category</th>
                         <th style="padding: 12px 14px;">Name</th>
-                        <th style="padding: 12px 14px;">Company</th>
+                        <th style="padding: 12px 14px;">Company / Role</th>
                         <th style="padding: 12px 14px;">Phone</th>
                         <th style="padding: 12px 14px;">Email</th>
-                        <th style="padding: 12px 14px;">Source / Action</th>
+                        <th style="padding: 12px 14px;">Source</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -579,14 +641,21 @@
 
         leads.forEach((l, idx) => {
             const bg = idx % 2 === 0 ? '#ffffff' : '#f8fafc';
+            let catColor = '#0284c7';
+            let catBg = '#e0f2fe';
+            if (l.category === 'CAREER APPLICATION') { catColor = '#16a34a'; catBg = '#dcfce7'; }
+            else if (l.category === 'BOQ / PROJECT ESTIMATE') { catColor = '#7c3aed'; catBg = '#ede9fe'; }
+            else if (l.category === 'PROJECT QUOTE REQUEST') { catColor = '#ef3438'; catBg = '#fee2e2'; }
+
             tableHtml += `
                 <tr style="background: ${bg}; border-bottom: 1px solid #e2e8f0;">
                     <td style="padding: 10px 14px; font-size: 0.78rem; color: #64748b; white-space: nowrap;">${l.date_time || l.timestamp || ''}</td>
+                    <td style="padding: 10px 14px;"><span style="background: ${catBg}; color: ${catColor}; padding: 3px 8px; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">${l.category || 'INQUIRY'}</span></td>
                     <td style="padding: 10px 14px; font-weight: 700; color: #0f172a;">${l.name || ''}</td>
                     <td style="padding: 10px 14px; color: #334155;">${l.company || ''}</td>
                     <td style="padding: 10px 14px; font-family: monospace; font-weight: 700; color: #0284c7;">${l.phone ? '+91 ' + l.phone : ''}</td>
                     <td style="padding: 10px 14px; color: #334155;">${l.email || ''}</td>
-                    <td style="padding: 10px 14px;"><span style="background: #e0f2fe; color: #0284c7; padding: 3px 8px; border-radius: 6px; font-size: 0.74rem; font-weight: 700;">${l.source || ''}</span></td>
+                    <td style="padding: 10px 14px; font-size: 0.8rem; color: #475569;">${l.source || ''}</td>
                 </tr>
             `;
         });
