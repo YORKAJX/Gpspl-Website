@@ -51,8 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(error => console.warn('Module load skipped (file:// mode):', moduleId));
     }
 
-    loadModule("header-container", "/modules/header.html?v=20260808");
-    loadModule("footer-container", "/modules/footer.html?v=20260808");
+    loadModule("header-container", "/modules/header.html?v=20260818");
+    loadModule("footer-container", "/modules/footer.html?v=20260818");
     ensureFormValidation();
 
     function ensureFormValidation() {
