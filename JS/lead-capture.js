@@ -40,7 +40,7 @@
     window.GPSPL_Validator = {
         isValidPhone: function(phoneStr) {
             if (!phoneStr) return false;
-            const cleaned = phoneStr.replace(/\D/g, '');
+            const cleaned = String(phoneStr).replace(/\D/g, '');
 
             let digits = cleaned;
             if (cleaned.length === 12 && cleaned.startsWith('91')) {
@@ -69,7 +69,7 @@
 
         isValidEmail: function(emailStr) {
             if (!emailStr) return false;
-            const email = emailStr.trim().toLowerCase();
+            const email = String(emailStr).trim().toLowerCase();
 
             const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
             if (!emailRegex.test(email)) return false;
@@ -107,7 +107,7 @@
             position: fixed;
             inset: 0;
             z-index: 9999999;
-            background: rgba(7, 21, 38, 0.78);
+            background: rgba(7, 21, 38, 0.82);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
             display: none;
@@ -185,7 +185,7 @@
     function openDatasheetModal(url, filename, modelName) {
         createDatasheetModal();
         pendingDownloadUrl = url;
-        pendingDownloadFilename = filename || url.split('/').pop();
+        pendingDownloadFilename = filename || url.split('/').pop().split('?')[0];
         pendingModelName = modelName || 'Samsung / LG Commercial Display';
 
         const modal = document.getElementById('gpspl-datasheet-modal');
@@ -214,7 +214,7 @@
     }
 
     // -----------------------------------------------------------------
-    // 3. DISPATCH LEAD ALERT (Email & WhatsApp targets)
+    // 3. DISPATCH LEAD ALERT (Email & Storage)
     // -----------------------------------------------------------------
     async function dispatchLeadAlert(leadData) {
         // 1. Save to local audit backup with formatted IST time
@@ -235,38 +235,27 @@
                 timestamp: now.toISOString()
             };
 
-            history.unshift(newLead); // Latest first
+            history.unshift(newLead);
             localStorage.setItem('gpspl_captured_leads', JSON.stringify(history));
         } catch(e) {}
 
-        // 2. Dispatch to Admin Email (global@gpspl.co.in) via Zero-Cost Gateway
+        // 2. Dispatch to Admin Email (global@gpspl.co.in) via Zero-Cost FormSubmit / Web3Forms Gateway
         try {
-            fetch('https://api.web3forms.com/submit', {
+            fetch('https://formsubmit.co/ajax/' + encodeURIComponent(ADMIN_CONFIG.email), {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                 body: JSON.stringify({
-                    access_key: '56d7df15-776e-4b47-9759-9b62c12140bb',
-                    to_email: ADMIN_CONFIG.email,
-                    subject: `🔥 NEW LEAD: ${leadData.name} (${leadData.company}) - ${leadData.source || 'Datasheet'}`,
-                    from_name: 'GPSPL Lead Engine',
-                    name: leadData.name,
-                    phone: leadData.phone,
-                    email: leadData.email,
-                    company: leadData.company,
-                    source: leadData.source,
-                    page_url: window.location.href,
-                    alert_target: `Admin: ${ADMIN_CONFIG.phone} | ${ADMIN_CONFIG.email}`,
-                    details: JSON.stringify(leadData, null, 2)
+                    _subject: `🔥 NEW LEAD: ${leadData.name} (${leadData.company}) - ${leadData.source || 'Datasheet'}`,
+                    _template: 'table',
+                    _captcha: 'false',
+                    'Full Name': leadData.name,
+                    'Mobile Number': '+91 ' + leadData.phone,
+                    'Email Address': leadData.email,
+                    'Company / Organization': leadData.company,
+                    'Action / Source': leadData.source,
+                    'Page URL': window.location.href,
+                    'Admin Target Phone': '+91 ' + ADMIN_CONFIG.phone
                 })
-            }).catch(() => {});
-        } catch(e) {}
-
-        // 3. Backend local endpoint dispatch
-        try {
-            fetch('/api/v1/leads', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(leadData)
             }).catch(() => {});
         } catch(e) {}
     }
@@ -354,34 +343,36 @@
     }
 
     // -----------------------------------------------------------------
-    // 4. ATTACH TO ALL DATASHEET BUTTONS ACROSS THE SITE
+    // 4. ATTACH TO ALL DATASHEET BUTTONS ACROSS THE SITE (Event Delegation)
     // -----------------------------------------------------------------
-    function attachDatasheetTriggers() {
-        createDatasheetModal();
+    function handleDocumentClick(e) {
+        const target = e.target.closest('a');
+        if (!target) return;
 
-        const datasheetLinks = document.querySelectorAll('a[href$=".pdf"]');
-        datasheetLinks.forEach(link => {
-            const href = link.getAttribute('href');
+        const href = target.getAttribute('href') || '';
+        const isDownload = target.hasAttribute('download') || href.includes('.pdf') || href.includes('datasheet');
+
+        if (isDownload) {
+            // Allow company profile direct download without gatekeeping
             if (href.includes('company-profile') || href.includes('brochure')) {
                 return;
             }
 
-            if (href.includes('datasheet') || href.includes('samsung') || href.includes('lg-')) {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
+            // Gatekeep Samsung & LG & Hardware Datasheets
+            if (href.includes('datasheet') || href.includes('samsung') || href.includes('lg-') || href.includes('.pdf')) {
+                e.preventDefault();
+                e.stopPropagation();
 
-                    let modelName = 'Commercial Display';
-                    if (href.includes('qmc')) modelName = 'Samsung QMC 24/7 Signage';
-                    else if (href.includes('qbc')) modelName = 'Samsung QBC Crystal UHD';
-                    else if (href.includes('befx')) modelName = 'Samsung Business TV (BEFX)';
-                    else if (href.includes('nu88c')) modelName = 'LG NU88C Commercial TV';
-                    else if (href.includes('tr3er')) modelName = 'LG CreateBoard Interactive Panel';
+                let modelName = 'Commercial Display';
+                if (href.includes('qmc')) modelName = 'Samsung QMC 24/7 Signage';
+                else if (href.includes('qbc')) modelName = 'Samsung QBC Crystal UHD';
+                else if (href.includes('befx')) modelName = 'Samsung Business TV (BEFX)';
+                else if (href.includes('nu88c')) modelName = 'LG NU88C Commercial TV';
+                else if (href.includes('tr3er')) modelName = 'LG CreateBoard Interactive Panel';
 
-                    openDatasheetModal(href, href.split('/').pop(), modelName);
-                });
+                openDatasheetModal(href, href.split('/').pop().split('?')[0], modelName);
             }
-        });
+        }
     }
 
     // -----------------------------------------------------------------
@@ -449,7 +440,6 @@
             'Source Page URL'
         ];
 
-        // Format rows with double quotes escaping
         const csvRows = [headers.join(',')];
         leads.forEach(lead => {
             const row = [
@@ -465,7 +455,6 @@
             csvRows.push(row.join(','));
         });
 
-        // Add UTF-8 BOM so Excel opens it with perfect character encoding and columns
         const csvContent = '\uFEFF' + csvRows.join('\r\n');
         const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
         const url = URL.createObjectURL(blob);
@@ -606,7 +595,11 @@
         container.innerHTML = tableHtml;
     }
 
-    // Bind Keyboard Shortcut Ctrl + Shift + L or URL hash #leads-manager
+    // -----------------------------------------------------------------
+    // 7. INITIALIZE GLOBAL LISTENERS
+    // -----------------------------------------------------------------
+    document.addEventListener('click', handleDocumentClick, true);
+
     window.addEventListener('keydown', (e) => {
         if (e.ctrlKey && e.shiftKey && (e.key === 'L' || e.key === 'l')) {
             e.preventDefault();
@@ -620,16 +613,16 @@
 
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
-            attachDatasheetTriggers();
+            createDatasheetModal();
             attachGlobalFormValidation();
         });
     } else {
-        attachDatasheetTriggers();
+        createDatasheetModal();
         attachGlobalFormValidation();
     }
 
     window.addEventListener('load', () => {
-        attachDatasheetTriggers();
+        createDatasheetModal();
         attachGlobalFormValidation();
     });
 
