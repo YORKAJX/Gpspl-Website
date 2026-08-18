@@ -1,0 +1,634 @@
+/* ==========================================================================
+   GPSPL AI AV Systems Consultant - Executive Chatbot Styles
+   ========================================================================== */
+
+#gpspl-ai-chat-root {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999999;
+    --chat-primary: #ef3438;
+    --chat-primary-dark: #cc2226;
+    --chat-dark: #071526;
+    --chat-dark-light: #0d1f38;
+    --chat-surface: #ffffff;
+    --chat-surface-subtle: #f8fafc;
+    --chat-border: #e2e8f0;
+    --chat-text: #0f172a;
+    --chat-text-muted: #64748b;
+    --chat-accent: #2563eb;
+    --chat-success: #16a34a;
+}
+
+/* Floating Launcher Button */
+.gpspl-chat-launcher {
+    background: linear-gradient(135deg, #071526 0%, #1e293b 100%);
+    color: #ffffff;
+    border: 2px solid rgba(239, 52, 56, 0.4);
+    border-radius: 999px;
+    padding: 10px 20px 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 30px rgba(7, 21, 38, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    user-select: none;
+}
+
+.gpspl-chat-launcher:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 16px 36px rgba(239, 52, 56, 0.35);
+    border-color: #ef3438;
+}
+
+.gpspl-launcher-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ef3438 0%, #b91c1c 100%);
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    color: #ffffff;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(239, 52, 56, 0.4);
+}
+
+.gpspl-launcher-pulse {
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 11px;
+    height: 11px;
+    background: #22c55e;
+    border: 2px solid #071526;
+    border-radius: 50%;
+}
+
+.gpspl-launcher-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.gpspl-launcher-text strong {
+    font-size: 0.88rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.gpspl-launcher-text span {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+/* Chat Window Modal / Drawer */
+.gpspl-chat-window {
+    position: fixed;
+    bottom: 90px;
+    right: 24px;
+    width: 420px;
+    max-width: calc(100vw - 32px);
+    height: 620px;
+    max-height: calc(100vh - 120px);
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 25px 70px rgba(7, 21, 38, 0.35), 0 0 0 1px rgba(13, 31, 56, 0.08);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px) scale(0.96);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 9999999;
+}
+
+.gpspl-chat-window.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+
+/* Header */
+.gpspl-chat-header {
+    background: linear-gradient(135deg, #071526 0%, #0d1f38 100%);
+    color: #ffffff;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gpspl-chat-header-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.gpspl-chat-header-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ef3438 0%, #b91c1c 100%);
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(239, 52, 56, 0.35);
+}
+
+.gpspl-chat-header-title h4 {
+    margin: 0;
+    font-size: 0.96rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+.gpspl-chat-header-title p {
+    margin: 2px 0 0;
+    font-size: 0.72rem;
+    color: #22c55e;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.gpspl-chat-header-title p::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 8px #22c55e;
+}
+
+.gpspl-chat-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gpspl-chat-header-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #ffffff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.gpspl-chat-header-btn:hover {
+    background: rgba(239, 52, 56, 0.8);
+}
+
+/* Chat Body */
+.gpspl-chat-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 18px 16px;
+    background: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    scroll-behavior: smooth;
+}
+
+.gpspl-chat-body::-webkit-scrollbar {
+    width: 5px;
+}
+.gpspl-chat-body::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+/* Message Bubbles */
+.gpspl-msg {
+    display: flex;
+    gap: 10px;
+    max-width: 92%;
+    animation: gpsplMsgIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes gpsplMsgIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.gpspl-msg-bot {
+    align-self: flex-start;
+}
+
+.gpspl-msg-user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.gpspl-msg-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: #071526;
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    font-size: 12px;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.gpspl-msg-bubble {
+    background: #ffffff;
+    padding: 13px 16px;
+    border-radius: 18px;
+    border-top-left-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: #1e293b;
+}
+
+.gpspl-msg-user .gpspl-msg-bubble {
+    background: linear-gradient(135deg, #ef3438 0%, #d32328 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 18px;
+    border-top-right-radius: 4px;
+    box-shadow: 0 4px 14px rgba(239, 52, 56, 0.25);
+}
+
+.gpspl-msg-bubble strong {
+    color: #071526;
+    font-weight: 800;
+}
+.gpspl-msg-user .gpspl-msg-bubble strong {
+    color: #ffffff;
+}
+
+.gpspl-msg-bubble ul {
+    margin: 8px 0;
+    padding-left: 18px;
+}
+.gpspl-msg-bubble li {
+    margin-bottom: 4px;
+}
+
+/* Action Cards inside messages */
+.gpspl-chat-card-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #071526;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-top: 8px;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gpspl-chat-card-link:hover {
+    background: #ef3438;
+    transform: translateX(3px);
+    color: #ffffff;
+}
+
+.gpspl-chat-hotline-card {
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    border-radius: 12px;
+    padding: 11px 14px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.gpspl-chat-hotline-card strong {
+    color: #065f46;
+    font-size: 0.82rem;
+    display: block;
+}
+.gpspl-chat-hotline-card span {
+    color: #047857;
+    font-size: 0.76rem;
+}
+
+.gpspl-chat-hotline-btn {
+    background: #10b981;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+/* Quick Starter Chips */
+.gpspl-chat-chips-tray {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 8px 16px 10px;
+    background: #ffffff;
+    border-top: 1px solid #f1f5f9;
+    flex-shrink: 0;
+    scrollbar-width: none;
+}
+.gpspl-chat-chips-tray::-webkit-scrollbar {
+    display: none;
+}
+
+.gpspl-chip {
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gpspl-chip:hover {
+    background: #071526;
+    color: #ffffff;
+    border-color: #071526;
+}
+
+/* Input Area */
+.gpspl-chat-input-area {
+    background: #ffffff;
+    padding: 12px 16px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gpspl-chat-input {
+    flex: 1;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 24px;
+    padding: 10px 16px;
+    font-size: 0.88rem;
+    outline: none;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    background: #f8fafc;
+}
+
+.gpspl-chat-input:focus {
+    background: #ffffff;
+    border-color: #ef3438;
+    box-shadow: 0 0 0 3px rgba(239, 52, 56, 0.12);
+}
+
+.gpspl-chat-btn-voice, .gpspl-chat-btn-send {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.gpspl-chat-btn-voice {
+    background: #f1f5f9;
+    color: #64748b;
+    font-size: 15px;
+}
+.gpspl-chat-btn-voice.listening {
+    background: #ef4444;
+    color: #ffffff;
+    animation: voicePulse 1s infinite alternate;
+}
+
+@keyframes voicePulse {
+    from { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+    to { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+}
+
+.gpspl-chat-btn-send {
+    background: #ef3438;
+    color: #ffffff;
+    font-size: 14px;
+}
+.gpspl-chat-btn-send:hover {
+    background: #d32328;
+    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+    #gpspl-ai-chat-root {
+        bottom: 16px;
+        right: 16px;
+    }
+    .gpspl-chat-window {
+        bottom: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+    .gpspl-chat-launcher {
+        padding: 8px 14px 8px 10px;
+    }
+}
+
+
+/* ==========================================================================
+   GPSPL Smart Floating WhatsApp Widget (Bottom-Left with 3 Department Hover Options)
+   ========================================================================== */
+
+#gpspl-whatsapp-root {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    z-index: 999998;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.gpspl-wa-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* WhatsApp Floating Button */
+.gpspl-wa-btn {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    font-size: 26px;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    text-decoration: none;
+}
+
+.gpspl-wa-btn:hover {
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 14px 32px rgba(37, 211, 102, 0.55);
+}
+
+.gpspl-wa-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 14px;
+    height: 14px;
+    background: #ef4444;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+}
+
+/* Hover / Active Popup Card */
+.gpspl-wa-popup {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    width: 320px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(7, 21, 38, 0.25), 0 0 0 1px rgba(13, 31, 56, 0.08);
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(15px) scale(0.95);
+    transform-origin: bottom left;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gpspl-wa-container:hover .gpspl-wa-popup,
+.gpspl-wa-container.active .gpspl-wa-popup {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+
+.gpspl-wa-header {
+    background: linear-gradient(135deg, #128c7e 0%, #075e54 100%);
+    color: #ffffff;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gpspl-wa-header i {
+    font-size: 22px;
+}
+
+.gpspl-wa-header div strong {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.gpspl-wa-header div span {
+    font-size: 0.72rem;
+    color: #a7f3d0;
+}
+
+.gpspl-wa-body {
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #f8fafc;
+}
+
+.gpspl-wa-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    text-decoration: none;
+    color: #0f172a;
+    transition: all 0.2s ease;
+}
+
+.gpspl-wa-option:hover {
+    background: #ecfdf5;
+    border-color: #25d366;
+    transform: translateX(4px);
+}
+
+.gpspl-wa-option-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.gpspl-wa-option-info strong {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.gpspl-wa-option-info span {
+    font-size: 0.72rem;
+    color: #64748b;
+}
+
+.gpspl-wa-option i.fa-whatsapp {
+    font-size: 18px;
+    color: #25d366;
+}
+
+.gpspl-wa-footer {
+    padding: 8px 14px;
+    text-align: center;
+    font-size: 0.72rem;
+    color: #64748b;
+    border-top: 1px solid #f1f5f9;
+    background: #ffffff;
+}
+
+@media (max-width: 480px) {
+    #gpspl-whatsapp-root {
+        bottom: 16px;
+        left: 16px;
+    }
+    .gpspl-wa-popup {
+        width: 280px;
+    }
+}

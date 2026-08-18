@@ -1,9 +1,9 @@
 /**
- * GPSPL Universal Lead & Inquiry Capture Engine
- * - Captures: Career Applications, BOQ/Project Inquiries, Contact Forms, Datasheet Downloads
+ * GPSPL Universal Lead & Inquiry Capture Engine + Instant Robust PDF Downloader
  * - Target Admin Email: global@gpspl.co.in
  * - Target Admin Mobile: +91 89208 30377
  * - Anti-Fake 10-Digit Mobile & Email Validator
+ * - 100% Guaranteed PDF Download (Instant execution + fallback link)
  * - Categorized Executive CRM & 1-Click CSV / Excel Export (Ctrl + Shift + L)
  */
 
@@ -164,7 +164,7 @@
     }
 
     // -----------------------------------------------------------------
-    // 3. GATED DATASHEET DOWNLOAD MODAL
+    // 3. GATED DATASHEET DOWNLOAD MODAL WITH GUARANTEED DOWNLOAD
     // -----------------------------------------------------------------
     let pendingDownloadUrl = null;
     let pendingDownloadFilename = null;
@@ -205,6 +205,17 @@
                     <p style="color: #64748b; font-size: 0.86rem; line-height: 1.5; margin: 0;">Enter your business details to instantly download full technical metrics, CAD dimensions, and tender BOQ data.</p>
                 </div>
 
+                <div id="gpspl-modal-success-state" style="display: none; text-align: center; padding: 15px 0;">
+                    <div style="width: 56px; height: 56px; background: #dcfce7; color: #16a34a; border-radius: 50%; display: grid; place-items: center; font-size: 1.6rem; margin: 0 auto 14px;">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h4 style="color: #071526; font-size: 1.2rem; font-weight: 800; margin: 0 0 8px;">Download Started!</h4>
+                    <p style="color: #475569; font-size: 0.88rem; margin: 0 0 16px;">Your datasheet PDF is downloading. If it did not start automatically, please click below:</p>
+                    <a id="gpspl-direct-fallback-link" href="#" target="_blank" download style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #ef3438; color: #ffffff; padding: 12px 24px; border-radius: 8px; font-weight: 800; text-decoration: none; font-size: 0.95rem; box-shadow: 0 4px 14px rgba(239,52,56,0.25);">
+                        <i class="fas fa-download"></i> Click to Download PDF
+                    </a>
+                </div>
+
                 <form id="gpspl-datasheet-form" style="display: flex; flex-direction: column; gap: 13px;">
                     <div>
                         <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 4px;">Full Name <span style="color: #ef4444;">*</span></label>
@@ -233,7 +244,7 @@
                         <span class="field-error" id="email-error" style="color: #ef4444; font-size: 0.76rem; display: none; margin-top: 3px;"></span>
                     </div>
 
-                    <button type="submit" id="gpspl-submit-btn" style="background: #ef3438; border: none; color: #ffffff; padding: 13px 20px; border-radius: 8px; font-size: 0.96rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 4px; box-shadow: 0 4px 14px rgba(239, 52, 56, 0.25);">
+                    <button type="submit" id="gpspl-submit-btn" style="background: #ef3438; border: none; color: #ffffff; padding: 13px 20px; border-radius: 8px; font-size: 0.96rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 4px; box-shadow: 0 4px 14px rgba(239, 52, 56, 0.25); transition: all 0.2s ease;">
                         <i class="fas fa-download"></i> Verify &amp; Download Datasheet
                     </button>
                     
@@ -256,8 +267,15 @@
 
     function openDatasheetModal(url, filename, modelName) {
         createDatasheetModal();
-        pendingDownloadUrl = url;
-        pendingDownloadFilename = filename || url.split('/').pop().split('?')[0];
+
+        // Ensure clean absolute path
+        let cleanUrl = url;
+        if (!cleanUrl.startsWith('http') && !cleanUrl.startsWith('/')) {
+            cleanUrl = '/' + cleanUrl;
+        }
+
+        pendingDownloadUrl = cleanUrl;
+        pendingDownloadFilename = filename || cleanUrl.split('/').pop().split('?')[0];
         pendingModelName = modelName || 'Samsung / LG Commercial Display';
 
         const modal = document.getElementById('gpspl-datasheet-modal');
@@ -265,6 +283,12 @@
         if (title && modelName) {
             title.textContent = `Download ${modelName} Datasheet`;
         }
+
+        // Reset views
+        const form = document.getElementById('gpspl-datasheet-form');
+        const successState = document.getElementById('gpspl-modal-success-state');
+        if (form) form.style.display = 'flex';
+        if (successState) successState.style.display = 'none';
 
         modal.style.display = 'flex';
         setTimeout(() => {
@@ -283,6 +307,23 @@
         setTimeout(() => {
             modal.style.display = 'none';
         }, 250);
+    }
+
+    function triggerFileDownload(url, filename) {
+        // Direct click trigger
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = filename;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        document.body.appendChild(link);
+        link.click();
+        setTimeout(() => link.remove(), 200);
+
+        // Fallback for browsers that block programmatic anchor clicks
+        try {
+            window.open(url, '_blank');
+        } catch(e) {}
     }
 
     function handleModalSubmit(e) {
@@ -345,27 +386,31 @@
             page: window.location.pathname
         };
 
+        // 1. Dispatch lead info to email
         dispatchUniversalLead(leadData);
 
+        // 2. Trigger instant download
+        triggerFileDownload(pendingDownloadUrl, pendingDownloadFilename);
+
+        // 3. Switch modal to success state with direct fallback link
+        const form = document.getElementById('gpspl-datasheet-form');
+        const successState = document.getElementById('gpspl-modal-success-state');
+        const directLink = document.getElementById('gpspl-direct-fallback-link');
+
+        if (form && successState && directLink) {
+            directLink.href = pendingDownloadUrl;
+            directLink.download = pendingDownloadFilename;
+            form.style.display = 'none';
+            successState.style.display = 'block';
+            btn.innerHTML = '<i class="fas fa-download"></i> Verify &amp; Download Datasheet';
+            btn.style.pointerEvents = 'auto';
+            form.reset();
+        }
+
+        // Automatically close modal after 4 seconds
         setTimeout(() => {
-            const link = document.createElement('a');
-            link.href = pendingDownloadUrl;
-            link.download = pendingDownloadFilename;
-            document.body.appendChild(link);
-            link.click();
-            link.remove();
-
-            btn.innerHTML = '<i class="fas fa-check-circle"></i> Download Complete!';
-            btn.style.background = '#16a34a';
-
-            setTimeout(() => {
-                closeDatasheetModal();
-                btn.innerHTML = '<i class="fas fa-download"></i> Verify &amp; Download Datasheet';
-                btn.style.background = '#ef3438';
-                btn.style.pointerEvents = 'auto';
-                document.getElementById('gpspl-datasheet-form').reset();
-            }, 1400);
-        }, 800);
+            closeDatasheetModal();
+        }, 4000);
     }
 
     // -----------------------------------------------------------------
@@ -393,6 +438,7 @@
                 else if (href.includes('befx')) modelName = 'Samsung Business TV (BEFX)';
                 else if (href.includes('nu88c')) modelName = 'LG NU88C Commercial TV';
                 else if (href.includes('tr3er')) modelName = 'LG CreateBoard Interactive Panel';
+                else if (href.includes('ua831c')) modelName = 'LG Commercial TV (UA831C)';
 
                 openDatasheetModal(href, href.split('/').pop().split('?')[0], modelName);
             }
@@ -405,7 +451,6 @@
     function attachGlobalFormValidation() {
         const forms = document.querySelectorAll('form:not(#gpspl-datasheet-form)');
         forms.forEach(form => {
-            // Avoid double binding
             if (form.dataset.gpsplBound === 'true') return;
             form.dataset.gpsplBound = 'true';
 
@@ -435,7 +480,6 @@
                     }
                 }
 
-                // Determine form category
                 let category = 'CONTACT INQUIRY';
                 let sourceTitle = form.id || form.className || 'Website Contact Form';
 
@@ -451,7 +495,6 @@
                     category = 'PROJECT QUOTE REQUEST';
                 }
 
-                // Extract all form values for rich email body
                 const formData = new FormData(form);
                 const detailsArr = [];
                 formData.forEach((val, key) => {

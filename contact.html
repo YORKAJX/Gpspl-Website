@@ -61,6 +61,7 @@
         ]
     }
     </script>
+    <link rel="stylesheet" href="/css/ai-chat.css?v=20260818">
 </head>
 <body class="contact-page-template">
     <div id="header-container"><div class="top-bar">
@@ -558,38 +559,167 @@
                 </a>
             </div>
 
-            <div class="contact-form-box">
-                <form name="gpspl-footer-quote" action="/thank-you" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-lead-form="Footer quick quote form">
-                    <input type="hidden" name="form-name" value="gpspl-footer-quote">
-                    <input type="hidden" name="lead_source" value="Footer quick quote form">
-                    <input type="hidden" name="page_url" value="">
-                    <input type="hidden" name="submitted_at" value="">
-                    <input type="text" name="bot-field" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
-                    <div class="form-group">
-                        <label for="footer-contact-name">Your Name</label>
-                        <input id="footer-contact-name" type="text" name="name" placeholder="Enter your full name" autocomplete="name" required>
+            
+                <div class="contact-form-box" style="background: #ffffff; border-radius: 24px; padding: 40px 36px; box-shadow: 0 20px 60px rgba(7, 21, 38, 0.08); border: 1.5px solid #e2e8f0; position: relative; overflow: hidden;">
+                    <!-- Top Gradient Accent Bar -->
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #ef3438 0%, #2563eb 50%, #7c3aed 100%);"></div>
+
+                    <!-- Form Header with Problem-Solving Value Prop -->
+                    <div class="contact-form-header" style="margin-bottom: 28px;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
+                            <span style="display: inline-flex; align-items: center; gap: 6px; background: #fee2e2; color: #ef3438; font-size: 0.74rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; padding: 5px 14px; border-radius: 999px;">
+                                <i class="fas fa-bolt" aria-hidden="true"></i> Project &amp; Enterprise Desk
+                            </span>
+                            <span style="font-size: 0.76rem; font-weight: 700; color: #16a34a; display: inline-flex; align-items: center; gap: 6px; background: #dcfce7; padding: 4px 12px; border-radius: 999px;">
+                                <span style="width: 7px; height: 7px; background: #16a34a; border-radius: 50%; display: inline-block;"></span> SLA: &lt; 2-Hour Response
+                            </span>
+                        </div>
+                        <h2 style="font-size: 2rem; color: #071526; font-weight: 800; letter-spacing: -0.025em; margin: 0 0 8px; line-height: 1.2;">Tell Us About Your Space &amp; Requirements.</h2>
+                        <p style="color: #64748b; font-size: 0.94rem; line-height: 1.55; margin: 0;">Our certified AV systems engineers will review your room scope and prepare a tailored technical architecture, OEM model recommendations, and itemized BOQ estimate.</p>
+                        
+                        <!-- Trust Strip inside Header -->
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-top: 18px; padding-top: 16px; border-top: 1px solid #f1f5f9;">
+                            <div style="display: flex; align-items: center; gap: 8px; font-size: 0.78rem; font-weight: 700; color: #334155;">
+                                <i class="fas fa-check-circle" style="color: #ef3438;"></i> 16+ Global OEM Brands
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 8px; font-size: 0.78rem; font-weight: 700; color: #334155;">
+                                <i class="fas fa-check-circle" style="color: #ef3438;"></i> Free Room Sizing &amp; BOQ
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 8px; font-size: 0.78rem; font-weight: 700; color: #334155;">
+                                <i class="fas fa-check-circle" style="color: #ef3438;"></i> Pan-India On-Site SLA
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="footer-contact-email">Email Address</label>
-                        <input id="footer-contact-email" type="email" name="email" placeholder="Enter your email" autocomplete="email" required>
-                    </div>
+                    <!-- Form Body -->
+                    <form id="contact-project-form" class="contact-form-enhanced" style="display: flex; flex-direction: column; gap: 18px;">
+                        
+                        <!-- 1. Name & Company Row -->
+                        <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;">
+                            <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                                <label for="contact-name" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Full Name <span style="color: #ef4444;">*</span></label>
+                                <div style="position: relative;">
+                                    <i class="fas fa-user" style="position: absolute; left: 14px; top: 15px; color: #94a3b8; font-size: 14px;"></i>
+                                    <input id="contact-name" type="text" name="name" placeholder="e.g. Rahul Sharma" autocomplete="name" required style="width: 100%; padding: 13px 16px 13px 40px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; box-sizing: border-box; transition: all 0.2s ease;">
+                                </div>
+                                <span class="field-error" id="err-name" style="color: #ef4444; font-size: 0.76rem; display: none;"></span>
+                            </div>
 
-                    <div class="form-group">
-                        <label for="footer-contact-phone">Phone Number</label>
-                        <input id="footer-contact-phone" type="tel" name="phone" placeholder="Enter your mobile number" autocomplete="tel" required>
-                    </div>
+                            <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                                <label for="contact-company" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Company / School / Org Name <span style="color: #ef4444;">*</span></label>
+                                <div style="position: relative;">
+                                    <i class="fas fa-building" style="position: absolute; left: 14px; top: 15px; color: #94a3b8; font-size: 14px;"></i>
+                                    <input id="contact-company" type="text" name="company" placeholder="e.g. DPS International / TechCorp" autocomplete="organization" required style="width: 100%; padding: 13px 16px 13px 40px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; box-sizing: border-box; transition: all 0.2s ease;">
+                                </div>
+                                <span class="field-error" id="err-company" style="color: #ef4444; font-size: 0.76rem; display: none;"></span>
+                            </div>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="footer-contact-message">Message</label>
-                        <textarea id="footer-contact-message" name="message" rows="4" placeholder="Room type, product category, quantity, location or support requirement" required></textarea>
-                    </div>
+                        <!-- 2. Email & Phone Row -->
+                        <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;">
+                            <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                                <label for="contact-email" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Work / Official Email <span style="color: #ef4444;">*</span></label>
+                                <div style="position: relative;">
+                                    <i class="fas fa-envelope" style="position: absolute; left: 14px; top: 15px; color: #94a3b8; font-size: 14px;"></i>
+                                    <input id="contact-email" type="email" name="email" placeholder="e.g. rahul@company.com" autocomplete="email" required style="width: 100%; padding: 13px 16px 13px 40px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; box-sizing: border-box; transition: all 0.2s ease;">
+                                </div>
+                                <span class="field-error" id="err-email" style="color: #ef4444; font-size: 0.76rem; display: none;"></span>
+                            </div>
 
-                    <p class="form-privacy-note">We use your details only to respond to your enquiry. <a href="/privacy-policy">Privacy Policy</a></p>
-                    <p class="form-submit-status" aria-live="polite"></p>
-                    <button type="submit" class="btn-primary full-width-btn" data-submit-label="Request Quote" data-loading-label="Sending Request...">Request Quote</button>
-                </form>
-            </div>
+                            <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                                <label for="contact-phone" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Mobile Number (10 Digits) <span style="color: #ef4444;">*</span></label>
+                                <div style="display: flex; gap: 8px;">
+                                    <span style="background: #f1f5f9; border: 1.5px solid #cbd5e1; border-radius: 10px; padding: 13px 14px; font-weight: 800; color: #475569; font-size: 0.92rem; display: grid; place-items: center;">+91</span>
+                                    <input id="contact-phone" type="tel" name="phone" maxlength="10" placeholder="e.g. 98100 12345" autocomplete="tel" required style="width: 100%; padding: 13px 16px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; box-sizing: border-box; transition: all 0.2s ease;">
+                                </div>
+                                <span class="field-error" id="err-phone" style="color: #ef4444; font-size: 0.76rem; display: none;"></span>
+                            </div>
+                        </div>
+
+                        <!-- 3. Interactive Category Pill Selector -->
+                        <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                            <label style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Select Solution / Requirement Area <span style="color: #ef4444;">*</span></label>
+                            
+                            <div class="requirement-pills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px;">
+                                <label class="req-pill-card" style="border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; transition: all 0.2s ease; background: #f8fafc;">
+                                    <input type="radio" name="requirement_area" value="Smart Classroom & Education" checked style="accent-color: #ef3438;">
+                                    <span style="font-size: 0.84rem; font-weight: 700; color: #1e293b;"><i class="fas fa-chalkboard-user" style="color: #ef3438; margin-right: 4px;"></i> Smart Classroom</span>
+                                </label>
+
+                                <label class="req-pill-card" style="border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; transition: all 0.2s ease; background: #f8fafc;">
+                                    <input type="radio" name="requirement_area" value="Boardroom & Video Conferencing" style="accent-color: #ef3438;">
+                                    <span style="font-size: 0.84rem; font-weight: 700; color: #1e293b;"><i class="fas fa-video" style="color: #2563eb; margin-right: 4px;"></i> Boardroom VC</span>
+                                </label>
+
+                                <label class="req-pill-card" style="border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; transition: all 0.2s ease; background: #f8fafc;">
+                                    <input type="radio" name="requirement_area" value="Active LED Video Wall (Up to 320 inch)" style="accent-color: #ef3438;">
+                                    <span style="font-size: 0.84rem; font-weight: 700; color: #1e293b;"><i class="fas fa-border-all" style="color: #7c3aed; margin-right: 4px;"></i> 320" LED Video Wall</span>
+                                </label>
+
+                                <label class="req-pill-card" style="border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; transition: all 0.2s ease; background: #f8fafc;">
+                                    <input type="radio" name="requirement_area" value="Samsung / LG Commercial TV Supply" style="accent-color: #ef3438;">
+                                    <span style="font-size: 0.84rem; font-weight: 700; color: #1e293b;"><i class="fas fa-tv" style="color: #0284c7; margin-right: 4px;"></i> Commercial TV / Signage</span>
+                                </label>
+
+                                <label class="req-pill-card" style="border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; transition: all 0.2s ease; background: #f8fafc;">
+                                    <input type="radio" name="requirement_area" value="Professional Audio & Line Arrays" style="accent-color: #ef3438;">
+                                    <span style="font-size: 0.84rem; font-weight: 700; color: #1e293b;"><i class="fas fa-volume-high" style="color: #ea580c; margin-right: 4px;"></i> Pro Audio / DSP / Mics</span>
+                                </label>
+
+                                <label class="req-pill-card" style="border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; transition: all 0.2s ease; background: #f8fafc;">
+                                    <input type="radio" name="requirement_area" value="AMC & Maintenance Services" style="accent-color: #ef3438;">
+                                    <span style="font-size: 0.84rem; font-weight: 700; color: #1e293b;"><i class="fas fa-shield-alt" style="color: #16a34a; margin-right: 4px;"></i> AMC &amp; 4-Hr SLA Support</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- 4. Project Location & Expected Timeline -->
+                        <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;">
+                            <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                                <label for="contact-location" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Project Location / City <span style="color: #ef4444;">*</span></label>
+                                <div style="position: relative;">
+                                    <i class="fas fa-map-marker-alt" style="position: absolute; left: 14px; top: 15px; color: #94a3b8; font-size: 14px;"></i>
+                                    <input id="contact-location" type="text" name="location" placeholder="e.g. Delhi NCR, Noida, Gurgaon, Mumbai" required style="width: 100%; padding: 13px 16px 13px 40px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; box-sizing: border-box; transition: all 0.2s ease;">
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                                <label for="contact-timeline" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Project Timeline</label>
+                                <select id="contact-timeline" name="timeline" style="width: 100%; padding: 13px 16px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; color: #0f172a; box-sizing: border-box; transition: all 0.2s ease;">
+                                    <option value="Immediate (< 2 Weeks)">Immediate Execution (&lt; 2 Weeks)</option>
+                                    <option value="1 to 2 Months">1 to 2 Months</option>
+                                    <option value="3+ Months / Tender Stage">Planning / Tender Stage (3+ Months)</option>
+                                    <option value="AMC / Existing System Upgrade">AMC / Maintenance Upgrade</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- 5. Scope / Requirement Details -->
+                        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                            <label for="contact-message" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Describe Your Room, Use Case, or Preferred Hardware <span style="color: #ef4444;">*</span></label>
+                            <textarea id="contact-message" name="message" rows="4" placeholder="e.g. Need a 20-seater executive boardroom AV setup with Samsung 85-inch display, ceiling beamforming mics, and Microsoft Teams integration. Require site survey in Gurgaon." required style="width: 100%; padding: 13px 16px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; font-family: inherit; resize: vertical; box-sizing: border-box; transition: all 0.2s ease;"></textarea>
+                        </div>
+
+                        <!-- Privacy Note -->
+                        <p class="form-privacy-note" style="font-size: 0.78rem; color: #64748b; line-height: 1.5; margin: 0;">
+                            <i class="fas fa-lock" style="color: #16a34a; margin-right: 4px;"></i> Your details are strictly confidential. We protect client project data and never share contact info. Read our <a href="/privacy-policy" style="color: #ef3438; text-decoration: underline;">Privacy Policy</a>.
+                        </p>
+
+                        <!-- Dynamic Status Alert Box -->
+                        <div id="contact-form-status-box" style="display: none; padding: 14px 18px; border-radius: 10px; font-size: 0.9rem; font-weight: 700;"></div>
+
+                        <!-- High Impact CTA Button -->
+                        <button type="submit" id="contact-submit-btn" class="btn-primary full-width-btn" style="padding: 16px 28px; font-size: 1.05rem; font-weight: 800; border-radius: 12px; background: linear-gradient(135deg, #ef3438 0%, #d32328 100%); color: #ffffff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 8px 24px rgba(239, 52, 56, 0.35); transition: all 0.25s ease;">
+                            <span>Submit Project Enquiry &amp; Get Free BOQ</span>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+
+                        <p class="contact-form-help" style="text-align: center; color: #64748b; font-size: 0.86rem; margin: 4px 0 0;">
+                            Need immediate engineering consultation? <a href="https://wa.me/919310092963?text=Hello%20GPSPL%2C%20I%20have%20an%20urgent%20AV%20project%20requirement." target="_blank" rel="noopener noreferrer" style="color: #16a34a; font-weight: 800; text-decoration: none;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp (+91 93100 92963)</a>
+                        </p>
+                    </form>
+                </div>
+
         </div>
 
         <div class="map-section">
@@ -714,5 +844,6 @@
             });
         });
     </script>
+    <script src="/JS/ai-av-consultant.js?v=20260818" defer></script>
 </body>
 </html>

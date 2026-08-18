@@ -1254,3 +1254,16 @@
 .office-pane a:hover {
     color: #d82d2d;
 }
+
+/* Executive Category Pill Styling */
+.req-pill-card:hover {
+    border-color: #ef3438 !important;
+    background: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 52, 56, 0.12);
+}
+.req-pill-card:has(input:checked) {
+    border-color: #ef3438 !important;
+    background: #fff5f5 !important;
+    box-shadow: 0 0 0 1px #ef3438;
+}
