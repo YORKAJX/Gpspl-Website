@@ -14,7 +14,12 @@
     // -----------------------------------------------------------------
     // 1. STATE & LOCALIZATION ENGINE
     // -----------------------------------------------------------------
-    let currentLanguage = 'hinglish'; // 'english' | 'hinglish' | 'hindi'
+    let currentLanguage = sessionStorage.getItem('gpspl_chat_lang') || 'hinglish'; // 'english' | 'hinglish' | 'hindi'
+    function persistLanguage(lang) {
+        currentLanguage = lang;
+        try { sessionStorage.setItem('gpspl_chat_lang', lang); } catch(e) {}
+        updateLanguageButtonsUI();
+    }
     let currentUtterance = null;
 
     // -----------------------------------------------------------------
@@ -506,15 +511,41 @@ Aap kis space ke baare me jaanna chahte hain?`,
     function generateSmartResponse(query) {
         const clean = query.toLowerCase().trim();
 
+        // Check for Distribution & Wholesale Procurement trigger
+        const isDistRequest = ['distribution', 'dealer', 'wholesale', 'distributor', 'reseller', 'bulk buy', 'bulk order', 'oem supply', 'stock purchase'].some(k => clean.includes(k));
+        if (isDistRequest) {
+            return {
+                id: 'dist_inquiry_intake',
+                category: 'DISTRIBUTION',
+                isDistForm: true,
+                title_en: 'GPSPL Authorized Technology Distribution Desk',
+                title_hi: 'GPSPL Authorized Technology Distribution Desk',
+                reply_en: '### 📦 GPSPL Technology Distribution & Wholesale Desk\n\nGPSPL is an **Authorized Direct Tier-1 Distributor** for Samsung, LG, Poly, Harman JBL, Shure, and BenQ. Please submit your wholesale / dealer inquiry below:',
+                reply_hi: '### 📦 GPSPL Technology Distribution & Wholesale Desk\n\nGPSPL **Samsung, LG, Poly, Harman, Shure** ka Authorized Tier-1 Distributor hai. Dealer / wholesale pricing ke liye details neeche bharein:'
+            };
+        }
+
+        // Check for Support & Service request trigger
+        const isSupportRequest = ['support', 'service', 'amc', 'repair', 'breakdown', 'complaint', 'not working', 'screen black', 'audio issue', 'mic not working', 'technician required', 'troubleshoot', 'maintenance'].some(k => clean.includes(k));
+        if (isSupportRequest) {
+            return {
+                id: 'support_ticket_intake',
+                category: 'SUPPORT',
+                isSupportForm: true,
+                title_en: 'GPSPL Instant Technical Support & Service Desk',
+                title_hi: 'GPSPL Instant Technical Support & Service Desk',
+                reply_en: '### 🛠️ GPSPL Technical Support & Service Desk\n\nPlease provide your service requirements below. Our Senior AV & IT Service Engineers will respond immediately (SLA within 2 hours):',
+                reply_hi: '### 🛠️ GPSPL Technical Support & Service Desk\n\nAapki service ya complaint details neeche darj karein. Hamare Senior AV & IT Engineers turant aapse sampark karenge:'
+            };
+        }
+
         // Check language switch phrases
         if (clean.includes('english') || clean.includes('in english') || clean.includes('speak english')) {
-            currentLanguage = 'english';
-            updateLanguageButtonsUI();
+            persistLanguage('english');
             return GRAND_AV_DATASET.find(item => item.id === 'switch_to_english');
         }
         if (clean.includes('hindi') || clean.includes('hinglish')) {
-            currentLanguage = 'hinglish';
-            updateLanguageButtonsUI();
+            persistLanguage('hinglish');
             return GRAND_AV_DATASET.find(item => item.id === 'switch_to_hindi');
         }
 
@@ -737,8 +768,7 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
         document.querySelectorAll('.gpspl-chat-lang-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const targetLang = btn.getAttribute('data-lang');
-                currentLanguage = targetLang;
-                updateLanguageButtonsUI();
+                persistLanguage(targetLang);
 
                 const switchTrigger = (targetLang === 'english') ? 'Speak in English' : 'Hindi me bolo';
                 handleUserMessage(switchTrigger);
@@ -830,12 +860,81 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
                 </div>
             `;
 
+            let supportFormHtml = '';
+            if (responseData.isDistForm) {
+                supportFormHtml = `
+                    <div class="gpspl-chat-support-card" style="margin-top: 12px; background: #ffffff; border: 1.5px solid #0056b3; border-radius: 12px; padding: 14px 16px; box-shadow: 0 4px 14px rgba(0,86,179,0.12);">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; color: #0056b3; font-weight: 800; font-size: 0.88rem;">
+                            <i class="fas fa-boxes-stacked"></i> Distribution &amp; Wholesale Quote Request
+                        </div>
+                        <form class="gpspl-chat-dist-form" onsubmit="handleChatDistSubmit(event, this)">
+                            <div style="margin-bottom: 8px;">
+                                <label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">Full Name *</label>
+                                <input type="text" name="full_name" placeholder="Your name" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.84rem; box-sizing: border-box;" required>
+                            </div>
+                            <div style="margin-bottom: 8px;">
+                                <label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">Company / Dealership *</label>
+                                <input type="text" name="company" placeholder="Company name" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.84rem; box-sizing: border-box;" required>
+                            </div>
+                            <div style="margin-bottom: 8px;">
+                                <label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">10-Digit Mobile *</label>
+                                <input type="tel" name="phone" maxlength="10" pattern="[6-9][0-9]{9}" placeholder="98100XXXXX" oninput="this.value=this.value.replace(/\\D/g,'').slice(0,10)" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.84rem; box-sizing: border-box;" required>
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">Brand / Product Requirement</label>
+                                <input type="text" name="product_requirement" placeholder="e.g. Samsung 75-inch, Poly Video Bar" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.84rem; box-sizing: border-box;" required>
+                            </div>
+                            <button type="submit" style="width: 100%; background: #0056b3; color: #ffffff; border: none; padding: 10px 14px; border-radius: 8px; font-weight: 800; font-size: 0.86rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 10px rgba(0,86,179,0.3);">
+                                <i class="fas fa-paper-plane"></i> Get Wholesale Quote
+                            </button>
+                        </form>
+                    </div>
+                `;
+            } else if (responseData.isSupportForm) {
+                supportFormHtml = `
+                    <div class="gpspl-chat-support-card" style="margin-top: 12px; background: #ffffff; border: 1.5px solid #ef3438; border-radius: 12px; padding: 14px 16px; box-shadow: 0 4px 14px rgba(239,52,56,0.12);">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; color: #ef3438; font-weight: 800; font-size: 0.88rem;">
+                            <i class="fas fa-screwdriver-wrench"></i> Quick Service &amp; Support Request
+                        </div>
+                        <form class="gpspl-chat-support-form" onsubmit="handleChatSupportSubmit(event, this)">
+                            <div style="margin-bottom: 8px;">
+                                <label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">Equipment / Service Category *</label>
+                                <select name="equipment_type" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.84rem;" required>
+                                    <option value="Commercial Display / Video Wall">Commercial Display / Active LED Wall</option>
+                                    <option value="Video Conferencing / Camera / Mic">Video Conferencing / Camera / Ceiling Mic</option>
+                                    <option value="Audio DSP / Amplifier / Speaker">Audio DSP / Amplifier / Speakers</option>
+                                    <option value="Interactive Flat Panel / Smart Classroom">Interactive Flat Panel / Smart Classroom</option>
+                                    <option value="AMC / Preventive Maintenance">AMC / Annual Maintenance Contract</option>
+                                    <option value="General Breakdown / Other">General Breakdown / Other</option>
+                                </select>
+                            </div>
+                            <div style="margin-bottom: 8px;">
+                                <label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">Full Name *</label>
+                                <input type="text" name="full_name" placeholder="Your name" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.84rem; box-sizing: border-box;" required>
+                            </div>
+                            <div style="margin-bottom: 8px;">
+                                <label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">10-Digit Mobile Number *</label>
+                                <input type="tel" name="phone" maxlength="10" pattern="[6-9][0-9]{9}" placeholder="e.g. 98100XXXXX" oninput="this.value=this.value.replace(/\\D/g,'').slice(0,10)" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.84rem; box-sizing: border-box;" required>
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">Issue Description</label>
+                                <input type="text" name="issue_desc" placeholder="Briefly describe the problem" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.84rem; box-sizing: border-box;">
+                            </div>
+                            <button type="submit" style="width: 100%; background: #ef3438; color: #ffffff; border: none; padding: 10px 14px; border-radius: 8px; font-weight: 800; font-size: 0.86rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 10px rgba(239,52,56,0.3);">
+                                <i class="fas fa-paper-plane"></i> Submit Support Ticket
+                            </button>
+                        </form>
+                    </div>
+                `;
+            }
+
             const botMsg = document.createElement('div');
             botMsg.className = 'gpspl-msg gpspl-msg-bot';
             botMsg.innerHTML = `
                 <div class="gpspl-msg-avatar"><i class="fas fa-robot"></i></div>
                 <div class="gpspl-msg-bubble">
                     ${formatMarkdownText(replyText)}
+                    ${supportFormHtml}
                     <button type="button" class="gpspl-msg-speaker-btn" title="Listen text-to-speech" aria-label="Listen">
                         <i class="fas fa-volume-high"></i>
                     </button>
@@ -1019,4 +1118,98 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
         injectChatbot();
         injectWhatsAppWidget();
     }
+
+    window.handleChatSupportSubmit = async function(e, form) {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        if (btn) {
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Registering Ticket...';
+        }
+
+        const formData = new FormData(form);
+        const name = formData.get('full_name') || 'Customer';
+        const phone = formData.get('phone') || '';
+        const eqType = formData.get('equipment_type') || 'AV Equipment';
+        const desc = formData.get('issue_desc') || 'Support & Maintenance Request';
+        const ticketId = 'GPSPL-TKT-' + Date.now().toString().slice(-5);
+
+        const leadData = {
+            category: 'TECHNICAL SUPPORT TICKET',
+            name: name,
+            phone: phone,
+            company: 'Support Request',
+            source: 'Chatbot Support Intake (' + eqType + ')',
+            details: `Ticket ID: ${ticketId} | Equipment: ${eqType} | Issue: ${desc}`,
+            page: window.location.pathname
+        };
+
+        if (window.GPSPL_LeadCapture && typeof window.GPSPL_LeadCapture.dispatchLead === 'function') {
+            await window.GPSPL_LeadCapture.dispatchLead(leadData);
+        }
+
+        form.parentElement.innerHTML = `
+            <div style="background: #f0fdf4; border: 1.5px solid #22c55e; border-radius: 10px; padding: 14px 16px; color: #166534; text-align: center;">
+                <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 4px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                    <i class="fas fa-check-circle" style="color: #22c55e;"></i> Ticket Registered!
+                </div>
+                <div style="font-size: 0.85rem; font-weight: 700; margin-bottom: 8px;">Ticket ID: <span style="font-family: monospace; background: #dcfce7; padding: 2px 6px; border-radius: 4px;">${ticketId}</span></div>
+                <p style="font-size: 0.8rem; line-height: 1.45; margin: 0 0 10px; color: #15803d;">
+                    Thank you <strong>${name}</strong>. Our Senior Support Engineer has received your request and will call you on <strong>+91 ${phone}</strong> within 2 hours.
+                </p>
+                <div style="display: flex; gap: 8px; justify-content: center;">
+                    <a href="tel:+919810317716" style="background: #16a34a; color: #ffffff; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 0.82rem; font-weight: 800; display: inline-flex; align-items: center; gap: 6px;">
+                        <i class="fas fa-phone"></i> Call Senior Tech (9810317716)
+                    </a>
+                </div>
+            </div>
+        `;
+    };
+
+
+    window.handleChatDistSubmit = async function(e, form) {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        if (btn) {
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+        }
+
+        const formData = new FormData(form);
+        const name = formData.get('full_name') || 'Customer';
+        const company = formData.get('company') || 'Dealership';
+        const phone = formData.get('phone') || '';
+        const req = formData.get('product_requirement') || '';
+
+        const leadData = {
+            category: 'WHOLESALE & DISTRIBUTION INQUIRY',
+            name: name,
+            company: company,
+            phone: phone,
+            source: 'Chatbot Distribution Intake',
+            details: `Wholesale Request: ${req}`,
+            page: window.location.pathname
+        };
+
+        if (window.GPSPL_LeadCapture && typeof window.GPSPL_LeadCapture.dispatchLead === 'function') {
+            await window.GPSPL_LeadCapture.dispatchLead(leadData);
+        }
+
+        form.parentElement.innerHTML = `
+            <div style="background: #f0fdf4; border: 1.5px solid #22c55e; border-radius: 10px; padding: 14px 16px; color: #166534; text-align: center;">
+                <div style="font-size: 1.05rem; font-weight: 800; margin-bottom: 4px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                    <i class="fas fa-check-circle" style="color: #22c55e;"></i> Wholesale Request Received!
+                </div>
+                <p style="font-size: 0.8rem; line-height: 1.45; margin: 0 0 10px; color: #15803d;">
+                    Thank you <strong>${escapeHtml(name)}</strong>. Our Distribution Team has received your inquiry for <strong>${escapeHtml(req)}</strong> and will contact you on <strong>+91 ${phone}</strong> shortly.
+                </p>
+                <div style="display: flex; gap: 8px; justify-content: center;">
+                    <a href="tel:+919810317716" style="background: #16a34a; color: #ffffff; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 0.82rem; font-weight: 800; display: inline-flex; align-items: center; gap: 6px;">
+                        <i class="fas fa-phone"></i> Call Distribution (+91 9810317716)
+                    </a>
+                </div>
+            </div>
+        `;
+    };
+
 })();

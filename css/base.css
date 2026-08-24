@@ -1226,6 +1226,7 @@ html body.service-detail-template .service-page :is(.service-search-intent, .ser
 
 #distribution-integration-support .model-pillar ul {
     list-style: none !important;
+    list-style-type: none !important;
     padding: 0 !important;
     margin: 0 0 20px !important;
     display: flex !important;
@@ -1241,26 +1242,23 @@ html body.service-detail-template .service-page :is(.service-search-intent, .ser
     line-height: 1.5 !important;
     color: #334155 !important;
     -webkit-text-fill-color: #334155 !important;
-    display: flex !important;
-    align-items: flex-start !important;
-    gap: 10px !important;
-    padding: 0 !important;
+    display: block !important;
+    position: relative !important;
+    padding: 0 0 0 16px !important;
     margin: 0 !important;
 }
 
-#distribution-integration-support .model-pillar ul li::marker { display: none !important; content: "" !important; }
+#distribution-integration-support .model-pillar ul li::marker { display: none !important; content: none !important; font-size: 0 !important; }
 #distribution-integration-support .model-pillar ul li::before {
     content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 7px !important;
     width: 6px !important;
     height: 6px !important;
-    min-width: 6px !important;
-    min-height: 6px !important;
     border-radius: 50% !important;
     background: #ef3438 !important;
-    margin-top: 7px !important;
-    display: inline-block !important;
-    position: static !important;
-    flex-shrink: 0 !important;
+    display: block !important;
 }
 
 #distribution-integration-support .model-pillar a {

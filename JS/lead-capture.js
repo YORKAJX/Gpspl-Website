@@ -151,28 +151,21 @@
             'Notification Recipients': 'itsdivesh221@gmail.com, karan@gpspl.co.in'
         };
 
-        // Send to Divesh
-        try {
-            fetch('https://formsubmit.co/ajax/itsdivesh221@gmail.com', {
+        const targets = ['itsdivesh221@gmail.com', 'karan@gpspl.co.in'];
+        const promises = targets.map(email => {
+            return fetch('https://formsubmit.co/ajax/' + encodeURIComponent(email), {
                 method: 'POST',
+                keepalive: true,
                 headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                 body: JSON.stringify(payload)
-            }).catch(() => {});
-        } catch(e) {}
-
-        // Send to Karan Sir
-        try {
-            fetch('https://formsubmit.co/ajax/karan@gpspl.co.in', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                body: JSON.stringify(payload)
-            }).catch(() => {});
-        } catch(e) {}
+            }).catch(() => null);
+        });
 
         // Also trigger Netlify serverless function
-        try {
+        promises.push(
             fetch('/.netlify/functions/boq-lead-email', {
                 method: 'POST',
+                keepalive: true,
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     type: 'lead_inquiry',
@@ -183,8 +176,14 @@
                     source: newLead.source,
                     details: newLead.details
                 })
-            }).catch(() => {});
+            }).catch(() => null)
+        );
+
+        try {
+            await Promise.allSettled(promises);
         } catch(e) {}
+
+        return newLead;
     }
 
     // 3. GATED DATASHEET DOWNLOAD MODAL WITH GUARANTEED DOWNLOAD
@@ -545,6 +544,7 @@
     // -----------------------------------------------------------------
     // 6. CSV & EXCEL EXPORT ENGINE + ADMIN LEAD HUB MODAL
     // -----------------------------------------------------------------
+    window.GPSPL_LeadCapture = { dispatchLead: dispatchUniversalLead, isValidPhone: window.GPSPL_Validator.isValidPhone, isValidEmail: window.GPSPL_Validator.isValidEmail };
     window.GPSPL_ExportLeadsCSV = function() {
         const leads = JSON.parse(localStorage.getItem('gpspl_captured_leads') || '[]');
         if (leads.length === 0) {

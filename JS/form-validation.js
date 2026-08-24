@@ -93,8 +93,6 @@
         errors.push({ field: email, message: "Please enter a valid email address." });
       } else if (disposableDomains.includes(domain)) {
         errors.push({ field: email, message: "Please use a genuine business email address." });
-      } else if (freeDomains.includes(domain) && company && company.value.trim().length < 2) {
-        errors.push({ field: company, message: "Please add your company or organization name." });
       }
     }
 
@@ -156,6 +154,44 @@
         box.textContent = "Submitting your enquiry securely...";
         track("lead_form_validated", { form_name: label, page_url: window.location.href });
         form.dispatchEvent(new CustomEvent("gpspl:lead-form-success", { bubbles: true, detail: { form_name: label } }));
+
+        if (!form.dataset.gpsplProcessed) {
+          event.preventDefault();
+          form.dataset.gpsplProcessed = "true";
+
+          const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            if (submitBtn.tagName === "INPUT") submitBtn.value = "Sending...";
+            else submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+          }
+
+          const formData = new FormData(form);
+          const leadData = {
+            category: form.getAttribute("name")?.includes("career") ? "CAREER APPLICATION" : "CONTACT INQUIRY",
+            name: formData.get("name") || formData.get("full_name") || "Website Inquirer",
+            email: formData.get("email") || "",
+            phone: formData.get("phone") || "",
+            company: formData.get("company") || formData.get("current_city") || "Not Specified",
+            source: label,
+            details: Array.from(formData.entries()).filter(([k]) => !k.startsWith("bot-")).map(([k, v]) => `${k}: ${v}`).join(" | "),
+            page: window.location.pathname
+          };
+
+          const dispatchPromise = (window.GPSPL_LeadCapture && typeof window.GPSPL_LeadCapture.dispatchLead === "function")
+            ? window.GPSPL_LeadCapture.dispatchLead(leadData)
+            : Promise.resolve();
+
+          const netlifyPromise = fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString()
+          }).catch(() => null);
+
+          Promise.allSettled([dispatchPromise, netlifyPromise]).then(() => {
+            window.location.href = form.getAttribute("action") || "/thank-you";
+          });
+        }
       }, { capture: true });
     });
   }
