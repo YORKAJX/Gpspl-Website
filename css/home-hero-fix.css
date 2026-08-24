@@ -6780,6 +6780,201 @@ html body.service-detail-template .service-page :is(.service-search-intent, .ser
     -webkit-text-fill-color: #071526 !important;
     margin: 0 0 10px !important;
 }
+    margin: 0 !important;
+}
+
+.seo-intent-copy p {
+    font-size: 0.95rem !important;
+    line-height: 1.72 !important;
+    color: rgba(210, 228, 252, 0.9) !important;
+    -webkit-text-fill-color: rgba(210, 228, 252, 0.9) !important;
+    margin: 0 !important;
+}
+
+.seo-intent-copy p strong {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Transform the right-side list into a stylish 2-column Grid of dark glass cards */
+.seo-intent-list,
+ul.seo-intent-list,
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-list {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    background: none !important;
+}
+
+.seo-intent-list li {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.seo-intent-list li a,
+.seo-intent-list > li,
+html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-list li a {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    min-height: 64px !important;
+    box-sizing: border-box !important;
+    padding: 14px 16px !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    border-left: 4px solid #ef3438 !important;
+    background: rgba(255, 255, 255, 0.07) !important;
+    backdrop-filter: blur(10px) !important;
+    text-decoration: none !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    font-size: 0.82rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    line-height: 1.35 !important;
+    transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease !important;
+}
+
+.seo-intent-list li a::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    background: #ef3438 !important;
+    flex-shrink: 0 !important;
+}
+
+.seo-intent-list li a:hover {
+    background: rgba(239, 52, 56, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    border-left-color: #ff7b80 !important;
+    transform: translateY(-2px) !important;
+}
+
+
+/* ----------------------------------------------------------
+   ISSUE 2: DISTRIBUTION + INTEGRATION + SUPPORT CONTRAST (Screenshot 2)
+   ---------------------------------------------------------- */
+#distribution-integration-support,
+.operating-model {
+    background:
+        radial-gradient(circle at 10% 15%, rgba(239, 52, 56, 0.13), transparent 28%),
+        linear-gradient(135deg, #071526 0%, #0c2342 55%, #13213a 100%) !important;
+    color: #ffffff !important;
+    padding: clamp(64px, 8vw, 100px) 0 !important;
+    position: relative !important;
+}
+
+#distribution-integration-support .model-heading {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.52fr) minmax(0, 0.48fr) !important;
+    gap: clamp(28px, 4vw, 56px) !important;
+    align-items: center !important;
+    margin-bottom: 48px !important;
+}
+
+#distribution-integration-support .model-heading h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(2rem, 3.4vw, 3.2rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.025em !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background: none !important;
+    margin: 0 !important;
+}
+
+#distribution-integration-support .section-eyebrow {
+    color: #ff9ea1 !important;
+    -webkit-text-fill-color: #ff9ea1 !important;
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 8px !important;
+}
+
+#distribution-integration-support .model-copy-panel {
+    background: rgba(255, 255, 255, 0.06) !important;
+    backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-left: 4px solid #ef3438 !important;
+    border-radius: 18px !important;
+    padding: 24px 28px !important;
+    box-sizing: border-box !important;
+}
+
+#distribution-integration-support .model-copy-panel p {
+    font-size: 0.94rem !important;
+    line-height: 1.72 !important;
+    color: rgba(215, 230, 252, 0.9) !important;
+    -webkit-text-fill-color: rgba(215, 230, 252, 0.9) !important;
+    margin: 0 0 12px !important;
+}
+
+#distribution-integration-support .model-copy-panel p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* 3 Bottom Pillar Cards */
+#distribution-integration-support .model-pillar-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: clamp(20px, 3vw, 32px) !important;
+    margin-bottom: 40px !important;
+}
+
+#distribution-integration-support .model-pillar {
+    background: #ffffff !important;
+    border: 1px solid rgba(13, 31, 56, 0.1) !important;
+    border-radius: 20px !important;
+    padding: 32px 26px !important;
+    box-shadow: 0 10px 30px rgba(7, 21, 38, 0.08) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+}
+
+#distribution-integration-support .model-pillar .pillar-index {
+    font-size: 0.75rem !important;
+    font-weight: 800 !important;
+    color: #ef3438 !important;
+    -webkit-text-fill-color: #ef3438 !important;
+    background: rgba(239, 52, 56, 0.08) !important;
+    padding: 4px 10px !important;
+    border-radius: 6px !important;
+    display: inline-block !important;
+    width: fit-content !important;
+    margin-bottom: 14px !important;
+}
+
+#distribution-integration-support .model-pillar i {
+    font-size: 1.8rem !important;
+    color: #0056b3 !important;
+    margin-bottom: 14px !important;
+}
+
+#distribution-integration-support .model-pillar h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 1.35rem !important;
+    font-weight: 800 !important;
+    color: #071526 !important;
+    -webkit-text-fill-color: #071526 !important;
+    margin: 0 0 10px !important;
+}
 
 #distribution-integration-support .model-pillar p {
     font-size: 0.9rem !important;
@@ -6791,6 +6986,7 @@ html body.service-detail-template .service-page :is(.service-search-intent, .ser
 
 #distribution-integration-support .model-pillar ul {
     list-style: none !important;
+    list-style-type: none !important;
     padding: 0 !important;
     margin: 0 0 20px !important;
     display: flex !important;
@@ -6806,26 +7002,22 @@ html body.service-detail-template .service-page :is(.service-search-intent, .ser
     line-height: 1.5 !important;
     color: #334155 !important;
     -webkit-text-fill-color: #334155 !important;
-    display: flex !important;
-    align-items: flex-start !important;
-    gap: 10px !important;
-    padding: 0 !important;
+    display: block !important;
+    position: relative !important;
+    padding: 0 0 0 16px !important;
     margin: 0 !important;
 }
 
-#distribution-integration-support .model-pillar ul li::marker { display: none !important; content: "" !important; }
+#distribution-integration-support .model-pillar ul li::marker { display: none !important; content: none !important; font-size: 0 !important; }
 #distribution-integration-support .model-pillar ul li::before {
     content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 7px !important;
     width: 6px !important;
     height: 6px !important;
-    min-width: 6px !important;
-    min-height: 6px !important;
     border-radius: 50% !important;
     background: #ef3438 !important;
-    margin-top: 7px !important;
-    display: inline-block !important;
-    position: static !important;
-    flex-shrink: 0 !important;
 }
 
 #distribution-integration-support .model-pillar a {

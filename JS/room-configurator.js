@@ -1863,8 +1863,8 @@ const CONFIG = {
   function sourceGuide() {
     return `
       <div class="av-source-guide">
-        <span class="is-auto"><b>GPSPL</b> system recommended</span>
-        <span class="is-manual"><b>Client</b> manually selected</span>
+        <span class="is-auto"><b>GPSPL</b> SYSTEM RECOMMENDED</span>
+        <span class="is-manual"><b>CLIENT</b> MANUALLY SELECTED</span>
       </div>
     `;
   }
@@ -2685,16 +2685,21 @@ const CONFIG = {
           <p class="section-eyebrow">AV Solution Design &amp; Estimate</p>
           <h3>Enterprise AV Design for ${state.rooms.length} Room${state.rooms.length > 1 ? "s" : ""}</h3>
           
-          <!-- Prominent Live Investment Range Banner -->
-          <div class="av-builder-estimate-banner" style="background: linear-gradient(135deg, #071526 0%, #1e293b 100%); border: 2px solid rgba(239, 52, 56, 0.4); border-radius: 16px; padding: 18px 20px; margin: 14px 0; color: #ffffff; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; box-shadow: 0 10px 25px rgba(7,21,38,0.25);">
-            <div>
-              <span style="font-size: 0.74rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; display: block;">Turnkey Estimated Investment (GST Incl.)</span>
-              <strong style="font-size: 1.45rem; font-weight: 900; color: #ffffff; letter-spacing: -0.02em;">${escapeHtml(bandText(project.total))}</strong>
-              <span style="font-size: 0.72rem; color: #22c55e; font-weight: 700; display: block; margin-top: 2px;">✓ Includes Hardware + Cabling + Installation + 1-Yr Support</span>
+          <!-- Locked Turnkey Estimate Callout -->
+          <div class="av-builder-estimate-banner" style="background: linear-gradient(135deg, #071526 0%, #1e293b 100%); border: 2px solid rgba(239, 52, 56, 0.4); border-radius: 16px; padding: 20px 22px; margin: 14px 0; color: #ffffff; box-shadow: 0 10px 25px rgba(7,21,38,0.25);">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
+              <div>
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
+                  <span style="background: rgba(239, 52, 56, 0.2); color: #ef3438; border: 1px solid #ef3438; font-size: 0.72rem; font-weight: 900; padding: 3px 8px; border-radius: 6px; letter-spacing: 0.06em; text-transform: uppercase;">🔒 ESTIMATE LOCKED</span>
+                  <span style="font-size: 0.74rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em;">TURNKEY AV PROJECT ESTIMATE</span>
+                </div>
+                <strong style="font-size: 1.15rem; font-weight: 900; color: #ffffff; letter-spacing: -0.01em; display: block; margin-bottom: 4px;">WANT TO KNOW FULL TURNKEY COST &amp; ITEMIZED BOQ?</strong>
+                <span style="font-size: 0.76rem; color: #22c55e; font-weight: 700; display: block;">✓ INCLUDES EXACT OEM HARDWARE MODELS + CABLING + INSTALLATION + 1-YR SUPPORT</span>
+              </div>
+              <button class="btn-primary" type="button" data-builder-proposal style="padding: 12px 22px; font-size: 0.88rem; font-weight: 800; border-radius: 10px; box-shadow: 0 4px 14px rgba(239,52,56,0.45); text-transform: uppercase; letter-spacing: 0.04em;">
+                <i class="fas fa-file-pdf"></i> DOWNLOAD FULL PROPOSAL &amp; COST PDF
+              </button>
             </div>
-            <button class="btn-primary" type="button" data-builder-proposal style="padding: 10px 18px; font-size: 0.84rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(239,52,56,0.35);">
-              <i class="fas fa-file-pdf"></i> Download PDF Proposal
-            </button>
           </div>
 
           <div class="av-builder-summary-grid">

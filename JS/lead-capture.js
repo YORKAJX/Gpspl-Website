@@ -43,48 +43,40 @@
         isValidPhone: function(phoneStr) {
             if (!phoneStr) return false;
             const cleaned = String(phoneStr).replace(/\D/g, '');
+            // Must be strictly 10 digits starting with 6, 7, 8, or 9
+            if (cleaned.length !== 10) return false;
+            if (!/^[6-9]\d{9}$/.test(cleaned)) return false;
+            if (/^(.)\1{9}$/.test(cleaned)) return false;
+            if (['1234567890', '0123456789', '9876543210', '8765432109', '9898989898', '9090909090'].includes(cleaned)) return false;
+            return true;
+        },
 
-            let digits = cleaned;
-            if (cleaned.length === 12 && cleaned.startsWith('91')) {
-                digits = cleaned.substring(2);
-            } else if (cleaned.length === 11 && cleaned.startsWith('0')) {
-                digits = cleaned.substring(1);
-            }
-
-            if (digits.length !== 10) return false;
-            if (!/^[6-9]/.test(digits)) return false;
-            if (/^(.)\1{9}$/.test(digits)) return false;
-            if (DUMMY_PHONE_PATTERNS.includes(digits)) return false;
-
-            let isAscending = true;
-            let isDescending = true;
-            for (let i = 0; i < 9; i++) {
-                const cur = parseInt(digits[i], 10);
-                const next = parseInt(digits[i+1], 10);
-                if (next !== (cur + 1) % 10) isAscending = false;
-                if (next !== (cur - 1 + 10) % 10) isDescending = false;
-            }
-            if (isAscending || isDescending) return false;
-
+        isValidCompany: function(companyStr) {
+            if (!companyStr) return false;
+            const cleaned = String(companyStr).trim();
+            // Alphanumeric + spaces/dots/ampersand, at least 2 chars
+            if (cleaned.length < 2 || cleaned.length > 100) return false;
+            if (!/[a-zA-Z]/.test(cleaned)) return false; // Must contain at least one letter
+            const lower = cleaned.toLowerCase();
+            const spamTerms = ['asdf', 'test123', 'none', 'n/a', 'na', 'null', 'xxx', 'qwerty', '12345'];
+            if (spamTerms.includes(lower)) return false;
+            if (/^(.)\1{3,}$/.test(lower)) return false; // Repeating chars like aaaa
             return true;
         },
 
         isValidEmail: function(emailStr) {
             if (!emailStr) return false;
             const email = String(emailStr).trim().toLowerCase();
-
             const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
             if (!emailRegex.test(email)) return false;
 
             const parts = email.split('@');
             if (parts.length !== 2) return false;
-            const prefix = parts[0];
             const domain = parts[1];
 
-            if (DISPOSABLE_EMAIL_DOMAINS.includes(domain)) return false;
-            if (DUMMY_EMAIL_PREFIXES.includes(prefix) && (domain === 'gmail.com' || domain === 'yahoo.com' || domain === 'hotmail.com' || domain === 'outlook.com')) {
-                return false;
-            }
+            // Block disposable throwaway email providers
+            const disposableDomains = ['tempmail.com', 'mailinator.com', '10minutemail.com', 'guerrillamail.com', 'throwawaymail.com', 'yopmail.com', 'fakeinbox.com', 'sharklasers.com', 'trashmail.com'];
+            if (disposableDomains.includes(domain)) return false;
 
             const tld = domain.split('.').pop();
             if (!tld || tld.length < 2) return false;
@@ -93,8 +85,29 @@
         }
     };
 
+    // Auto-attach 10-digit phone limiter and company sanitizer across all inputs on page
+    function attachInputEnforcers() {
+        document.querySelectorAll('input[type="tel"], input[name="phone"], input[name*="mobile"], input[id*="phone"]').forEach(input => {
+            input.setAttribute('maxlength', '10');
+            input.setAttribute('pattern', '[6-9][0-9]{9}');
+            input.addEventListener('input', (e) => {
+                e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10);
+            });
+        });
+
+        document.querySelectorAll('input[name="company"], input[id*="company"]').forEach(input => {
+            input.setAttribute('maxlength', '100');
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', attachInputEnforcers);
+    } else {
+        attachInputEnforcers();
+    }
+
     // -----------------------------------------------------------------
-    // 2. UNIVERSAL DISPATCH LEAD ALERT (Email, Webhook & Storage)
+    // 2. UNIVERSAL DUAL-EMAIL DISPATCH LEAD ALERT (Email, Webhook & Storage)
     // -----------------------------------------------------------------
     async function dispatchUniversalLead(leadData) {
         const now = new Date();
@@ -121,54 +134,59 @@
             localStorage.setItem('gpspl_captured_leads', JSON.stringify(history));
         } catch(e) {}
 
-        // 2. Dispatch to Admin Emails (karan@gpspl.co.in & itsdivesh221@gmail.com) via FormSubmit Gateway
-        const emailTargets = [ADMIN_CONFIG.email, ADMIN_CONFIG.secondaryEmail];
-        emailTargets.forEach(targetEmail => {
-            try {
-                fetch('https://formsubmit.co/ajax/' + encodeURIComponent(targetEmail), {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                    body: JSON.stringify({
-                        _subject: `🔥 [${newLead.category}] ${newLead.name} (${newLead.company}) - ${newLead.source}`,
-                        _template: 'table',
-                        _captcha: 'false',
-                        'Category': newLead.category,
-                        'Full Name': newLead.name,
-                        'Mobile Number': newLead.phone ? '+91 ' + newLead.phone : 'Not Provided',
-                        'Email Address': newLead.email,
-                        'Company / Org': newLead.company,
-                        'Inquiry / Action': newLead.source,
-                        'Details / Message': newLead.details,
-                        'Source Page URL': window.location.href,
-                        'Admin Alert Target': 'Divesh (' + ADMIN_CONFIG.secondaryEmail + ') & Karan Sir (' + ADMIN_CONFIG.email + ')'
-                    })
-                }).catch(() => {});
-            } catch(e) {}
-        });
+        // 2. Multi-Target FormSubmit Direct Deliveries to BOTH itsdivesh221@gmail.com & karan@gpspl.co.in
+        const payload = {
+            _subject: `⚡ NEW GPSPL LEAD: [${newLead.category}] ${newLead.name} (${newLead.company})`,
+            _template: 'table',
+            _captcha: 'false',
+            'Category': newLead.category,
+            'Full Name': newLead.name,
+            'Mobile Number': newLead.phone ? '+91 ' + newLead.phone : 'Not Provided',
+            'Email Address': newLead.email,
+            'Company / Organization': newLead.company,
+            'Inquiry Source': newLead.source,
+            'Requirement Details': newLead.details,
+            'Submission Time': istTime,
+            'Page URL': window.location.href,
+            'Notification Recipients': 'itsdivesh221@gmail.com, karan@gpspl.co.in'
+        };
 
-        // 3. Dispatch to Web3Forms Backup
+        // Send to Divesh
         try {
-            fetch('https://api.web3forms.com/submit', {
+            fetch('https://formsubmit.co/ajax/itsdivesh221@gmail.com', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(payload)
+            }).catch(() => {});
+        } catch(e) {}
+
+        // Send to Karan Sir
+        try {
+            fetch('https://formsubmit.co/ajax/karan@gpspl.co.in', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(payload)
+            }).catch(() => {});
+        } catch(e) {}
+
+        // Also trigger Netlify serverless function
+        try {
+            fetch('/.netlify/functions/boq-lead-email', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    access_key: '56d7df15-776e-4b47-9759-9b62c12140bb',
-                    to_email: ADMIN_CONFIG.email,
-                    subject: `🔥 [${newLead.category}] ${newLead.name} - ${newLead.source}`,
+                    type: 'lead_inquiry',
                     name: newLead.name,
-                    phone: newLead.phone,
                     email: newLead.email,
+                    phone: newLead.phone,
                     company: newLead.company,
-                    category: newLead.category,
                     source: newLead.source,
-                    details: newLead.details,
-                    page_url: window.location.href
+                    details: newLead.details
                 })
             }).catch(() => {});
         } catch(e) {}
     }
 
-    // -----------------------------------------------------------------
     // 3. GATED DATASHEET DOWNLOAD MODAL WITH GUARANTEED DOWNLOAD
     // -----------------------------------------------------------------
     let pendingDownloadUrl = null;
