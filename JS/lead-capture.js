@@ -11,7 +11,9 @@
     'use strict';
 
     const ADMIN_CONFIG = {
-        email: 'global@gpspl.co.in',
+        email: 'karan@gpspl.co.in',
+        secondaryEmail: 'itsdivesh221@gmail.com',
+        allEmails: ['itsdivesh221@gmail.com', 'karan@gpspl.co.in', 'global@gpspl.co.in', 'support@gpspl.co.in'],
         phone: '8920830377',
         whatsappCountryCode: '91'
     };
@@ -119,27 +121,30 @@
             localStorage.setItem('gpspl_captured_leads', JSON.stringify(history));
         } catch(e) {}
 
-        // 2. Dispatch to Admin Email (global@gpspl.co.in) via Zero-Cost FormSubmit Gateway
-        try {
-            fetch('https://formsubmit.co/ajax/' + encodeURIComponent(ADMIN_CONFIG.email), {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                body: JSON.stringify({
-                    _subject: `🔥 [${newLead.category}] ${newLead.name} (${newLead.company}) - ${newLead.source}`,
-                    _template: 'table',
-                    _captcha: 'false',
-                    'Category': newLead.category,
-                    'Full Name': newLead.name,
-                    'Mobile Number': newLead.phone ? '+91 ' + newLead.phone : 'Not Provided',
-                    'Email Address': newLead.email,
-                    'Company / Org': newLead.company,
-                    'Inquiry / Action': newLead.source,
-                    'Details / Message': newLead.details,
-                    'Source Page URL': window.location.href,
-                    'Admin Alert Target': '+91 ' + ADMIN_CONFIG.phone + ' | ' + ADMIN_CONFIG.email
-                })
-            }).catch(() => {});
-        } catch(e) {}
+        // 2. Dispatch to Admin Emails (karan@gpspl.co.in & itsdivesh221@gmail.com) via FormSubmit Gateway
+        const emailTargets = [ADMIN_CONFIG.email, ADMIN_CONFIG.secondaryEmail];
+        emailTargets.forEach(targetEmail => {
+            try {
+                fetch('https://formsubmit.co/ajax/' + encodeURIComponent(targetEmail), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({
+                        _subject: `🔥 [${newLead.category}] ${newLead.name} (${newLead.company}) - ${newLead.source}`,
+                        _template: 'table',
+                        _captcha: 'false',
+                        'Category': newLead.category,
+                        'Full Name': newLead.name,
+                        'Mobile Number': newLead.phone ? '+91 ' + newLead.phone : 'Not Provided',
+                        'Email Address': newLead.email,
+                        'Company / Org': newLead.company,
+                        'Inquiry / Action': newLead.source,
+                        'Details / Message': newLead.details,
+                        'Source Page URL': window.location.href,
+                        'Admin Alert Target': 'Divesh (' + ADMIN_CONFIG.secondaryEmail + ') & Karan Sir (' + ADMIN_CONFIG.email + ')'
+                    })
+                }).catch(() => {});
+            } catch(e) {}
+        });
 
         // 3. Dispatch to Web3Forms Backup
         try {

@@ -5,6 +5,46 @@
 
 const GPSPL_JOBS = [
   {
+    id: "presales-av-engineer",
+    slug: "presales-av-engineer",
+    title: "Pre-Sales AV Solution Engineer",
+    department: "Solution Engineering & Pre-Sales",
+    experience: "1–3 Years",
+    experienceRequirement: "1–3 years experience in AV Solution Design, Pre-Sales, or BOQ Estimation",
+    employmentType: "Full Time",
+    location: "Nehru Place, New Delhi",
+    shortDescription: "Design turnkey enterprise AV architectures, prepare itemized OEM BOQs (Samsung, LG, Harman, Crestron, Poly), create signal flow schematics, and lead client technical discovery.",
+    aboutRole: "As a Pre-Sales AV Solution Engineer at GPSPL, you will be the technical bridge connecting client vision with high-performance AV architecture. You will evaluate floor plans, conduct technical requirement discovery meetings, design turnkey system schematics (Active LED walls, Teams/Zoom boardrooms, DSP audio, Crestron control), prepare itemized multi-brand BOQs, and coordinate with global OEM product specialists (Samsung, LG, Harman, Poly, Crestron, Shure, Sennheiser).",
+    responsibilities: [
+      "Conduct technical requirement discovery calls and site surveys with corporate clients, architects, and IT heads",
+      "Design comprehensive turnkey AV solutions including signal flow single-line diagrams (SLD) and cable schedules",
+      "Prepare precise, itemized Bill of Quantities (BOQ) with optimal equipment matching and GST pricing models",
+      "Collaborate directly with global OEM technical teams (Samsung, LG, Harman, Crestron, Poly, Shure, Kramer)",
+      "Evaluate RFP / Tender technical specifications and prepare airtight technical compliance sheets",
+      "Create high-impact technical solution presentations and BOQ pitch decks for enterprise decision makers",
+      "Support post-award technical handoff to the on-site project execution and commissioning engineers",
+      "Stay updated on emerging AV technologies, Dante Audio over IP, NDI streaming, and Fine-Pitch MicroLED"
+    ],
+    requirements: [
+      "B.Tech / B.E. / Diploma in Electronics, Electrical, Computer Science or equivalent practical AV experience",
+      "1–3 years of hands-on experience in AV Pre-Sales, Solution Architecture, or Technical Design",
+      "Strong understanding of AV signal flows (HDMI, USB-C, Dante Audio, HDBaseT, NDI, IP Video)",
+      "Proficiency in preparing detailed BOQs in MS Excel with accurate costing and margin calculations",
+      "Familiarity with AutoCAD / Visio or AV schematic drafting tools is a strong advantage",
+      "Good knowledge of leading OEM product lines (Samsung displays, Poly/Logitech VC, Shure mics, Biamp DSP, Crestron control)",
+      "Excellent technical communication and presentation skills in English and Hindi",
+      "AVIXA CTS / CTS-D certification or OEM technical training is highly valued"
+    ],
+    preferredSkills: [
+      "AV Solution Design", "BOQ Preparation", "Signal Flow Schematics", "AutoCAD / Visio",
+      "Dante Audio", "Microsoft Teams Rooms", "Active LED Sizing", "Crestron Control",
+      "Tender Technical Compliance", "OEM Coordination", "Client Technical Discovery"
+    ],
+    roleType: "presales-engineer",
+    status: "open"
+  },
+
+  {
     id: "hr-executive",
     slug: "hr-executive",
     title: "Human Resources (HR) Executive",
@@ -352,7 +392,74 @@ function setupRoleSpecificQuestions(job) {
   const container = document.getElementById('roleSpecificQuestionsContainer');
   if (!container) return;
 
-  if (job.roleType === 'hr-executive') {
+  if (job.roleType === 'presales-engineer') {
+    container.innerHTML = `
+      <div class="career-form-section-title">
+        <h4>Pre-Sales &amp; Solution Design Experience</h4>
+        <p>Tell us about your AV technical design and BOQ capabilities</p>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Total AV Pre-Sales / Solution Design Experience *</label>
+        <select name="presales_exp" class="form-control" required>
+          <option value="">Select experience</option>
+          <option value="1-2 Years">1–2 Years</option>
+          <option value="2-3 Years">2–3 Years</option>
+          <option value="3+ Years">3+ Years</option>
+          <option value="Fresher with strong AV technical design interest">Fresher with strong AV design interest</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Which AV domains have you designed solutions &amp; BOQs for? *</label>
+        <div class="career-checkbox-grid">
+          ${[
+            "Corporate Boardrooms (Teams/Zoom)", "Active LED Video Walls (Fine-Pitch)",
+            "Smart Classrooms & IFPDs", "Auditorium & Line-Array Audio",
+            "DSP & Acoustic Echo Cancellation", "Crestron / AMX Automation",
+            "KVM & Command Control Rooms", "Public Address & Background Music"
+          ].map(skill => `
+            <label class="career-checkbox-label">
+              <input type="checkbox" name="presales_domains" value="${skill}">
+              <span>${skill}</span>
+            </label>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Which schematic &amp; estimation tools do you work with? *</label>
+        <div class="career-checkbox-grid">
+          ${[
+            "MS Excel (Advanced BOQ & Costing)", "AutoCAD (AV Layouts/SLD)",
+            "MS Visio / Draw.io", "StarDraw / Vectorworks", "Tender RFP Compliance Sheets"
+          ].map(tool => `
+            <label class="career-checkbox-label">
+              <input type="checkbox" name="presales_tools" value="${tool}">
+              <span>${tool}</span>
+            </label>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Which OEM product lines have you worked with or specified? *</label>
+        <div class="career-checkbox-grid">
+          ${[
+            "Samsung Commercial Displays", "LG Displays / CreateBoard",
+            "Harman / JBL Professional", "Poly / Logitech Video Conferencing",
+            "Shure / Sennheiser Microphones", "Biamp / BSS Audio DSPs",
+            "Crestron / AMX Control", "Kramer / ATEN Switchers"
+          ].map(brand => `
+            <label class="career-checkbox-label">
+              <input type="checkbox" name="oem_brands_handled" value="${brand}">
+              <span>${brand}</span>
+            </label>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  } else if (job.roleType === 'hr-executive') {
     container.innerHTML = `
       <div class="career-form-section-title">
         <h4>Role-Specific HR Information</h4>

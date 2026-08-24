@@ -196,6 +196,81 @@
     background: rgba(239, 52, 56, 0.8);
 }
 
+/* Language Switcher Bar */
+.gpspl-chat-lang-bar {
+    background: #0f243e;
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gpspl-chat-lang-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.gpspl-chat-lang-pills {
+    display: flex;
+    gap: 4px;
+}
+
+.gpspl-chat-lang-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #e2e8f0;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gpspl-chat-lang-btn:hover {
+    background: rgba(239, 52, 56, 0.4);
+    color: #ffffff;
+}
+
+.gpspl-chat-lang-btn.active {
+    background: #ef3438;
+    color: #ffffff;
+    border-color: #ef3438;
+    box-shadow: 0 2px 6px rgba(239, 52, 56, 0.4);
+}
+
+/* TTS Speaker Button on Bot Messages */
+.gpspl-msg-speaker-btn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    font-size: 0.78rem;
+    margin-left: 8px;
+    transition: color 0.2s;
+    padding: 2px 4px;
+}
+
+.gpspl-msg-speaker-btn:hover {
+    color: #ef3438;
+}
+
+.gpspl-msg-speaker-btn.is-speaking {
+    color: #22c55e;
+    animation: gpsplPulseSpeaker 1s infinite;
+}
+
+@keyframes gpsplPulseSpeaker {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
 /* Chat Body */
 .gpspl-chat-body {
     flex: 1;

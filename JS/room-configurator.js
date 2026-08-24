@@ -2682,14 +2682,42 @@ const CONFIG = {
         </div>
 
         <aside class="av-builder-panel av-builder-output" aria-live="polite">
-          <p class="section-eyebrow">AV Solution Design</p>
+          <p class="section-eyebrow">AV Solution Design &amp; Estimate</p>
           <h3>Enterprise AV Design for ${state.rooms.length} Room${state.rooms.length > 1 ? "s" : ""}</h3>
+          
+          <!-- Prominent Live Investment Range Banner -->
+          <div class="av-builder-estimate-banner" style="background: linear-gradient(135deg, #071526 0%, #1e293b 100%); border: 2px solid rgba(239, 52, 56, 0.4); border-radius: 16px; padding: 18px 20px; margin: 14px 0; color: #ffffff; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; box-shadow: 0 10px 25px rgba(7,21,38,0.25);">
+            <div>
+              <span style="font-size: 0.74rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; display: block;">Turnkey Estimated Investment (GST Incl.)</span>
+              <strong style="font-size: 1.45rem; font-weight: 900; color: #ffffff; letter-spacing: -0.02em;">${escapeHtml(bandText(project.total))}</strong>
+              <span style="font-size: 0.72rem; color: #22c55e; font-weight: 700; display: block; margin-top: 2px;">✓ Includes Hardware + Cabling + Installation + 1-Yr Support</span>
+            </div>
+            <button class="btn-primary" type="button" data-builder-proposal style="padding: 10px 18px; font-size: 0.84rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(239,52,56,0.35);">
+              <i class="fas fa-file-pdf"></i> Download PDF Proposal
+            </button>
+          </div>
+
           <div class="av-builder-summary-grid">
             <span><b>Active Room</b>${escapeHtml(active.designation)}</span>
             <span><b>Room Area</b>${escapeHtml(area(active))} sq. ft.</span>
             <span><b>Timeline</b>${escapeHtml(project.timeline)}</span>
             <span><b>Budget Class</b>${escapeHtml(project.estimateClass)}</span>
           </div>
+
+          <!-- Simplified What's Included Card -->
+          <div class="av-builder-scope-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 16px 18px; margin-bottom: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+            <h4 style="font-size: 0.92rem; font-weight: 800; color: #071526; margin: 0 0 10px; display: flex; align-items: center; gap: 8px;">
+              <i class="fas fa-check-circle" style="color: #ef3438;"></i> What's Included in This Room Setup:
+            </h4>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 8px; font-size: 0.82rem; color: #334155; line-height: 1.45;">
+              <div style="display: flex; align-items: flex-start; gap: 8px;"><span style="color: #ef3438; font-weight: 900;">•</span> <span><strong>Display:</strong> ${escapeHtml(active.display === 'led' ? 'Active LED Video Wall (0.0mm seamless)' : active.display === 'interactive' ? '4K Interactive Touch Panel (LG / Samsung)' : '4K Non-Glare Commercial Display (Samsung QMC)')}</span></div>
+              <div style="display: flex; align-items: flex-start; gap: 8px;"><span style="color: #ef3438; font-weight: 900;">•</span> <span><strong>Camera:</strong> ${escapeHtml(active.camera === 'ptz' ? '4K 12x Optical PTZ Camera (Speaker Voice Tracking)' : active.camera === 'ai' ? '4K AI Auto-Framing Video Bar (Poly / Logitech)' : 'Integrated 4K Camera')}</span></div>
+              <div style="display: flex; align-items: flex-start; gap: 8px;"><span style="color: #ef3438; font-weight: 900;">•</span> <span><strong>Microphone &amp; Sound:</strong> ${escapeHtml(active.mic === 'ceiling' ? 'Ceiling Beamforming Mic (Zero table wires)' : 'Tabletop Mics')} + Flush Ceiling Speakers</span></div>
+              <div style="display: flex; align-items: flex-start; gap: 8px;"><span style="color: #ef3438; font-weight: 900;">•</span> <span><strong>Audio DSP:</strong> Echo Cancellation (AEC) &amp; AC noise reduction</span></div>
+              <div style="display: flex; align-items: flex-start; gap: 8px;"><span style="color: #ef3438; font-weight: 900;">•</span> <span><strong>Turnkey Delivery:</strong> On-Site Mounting, Cabling, Audio Tuning &amp; Handover</span></div>
+            </div>
+          </div>
+
           ${sourceGuide()}
           ${roomPlanList(project)}
           
@@ -2698,23 +2726,11 @@ const CONFIG = {
             ${dashboardVisuals(activeRoomData, state.simulatedFailures)}
           </div>
 
-          <!-- Locked BOQ & Estimate Details Call to Action -->
-          <div class="av-details-locked-card">
-            <div class="locked-icon-box">
-              <i class="fas fa-lock"></i>
-            </div>
-            <h4>Detailed BOQ &amp; Cost Estimate Locked</h4>
-            <p>To view the complete item-by-item BOQ, design parameters, compliance details, and the commercial budget range, please download the customized AV Proposal PDF below.</p>
-            <button class="btn-primary-large" type="button" data-builder-proposal-lock>
-              <i class="fas fa-download"></i> <span>Download Full AV Proposal &amp; Costing PDF</span>
-            </button>
-          </div>
-
           <p class="av-builder-note">This is an automated AV design roadmap. The detailed equipment schedule and commercial proposal will be prepared after physical site audit and brand specifications validation.</p>
           <div class="av-builder-final-cta">
             <div>
-              <b>Need deeper engineering?</b>
-              <span>For more detailed insight, share room drawings/photos with GPSPL and our team will validate final quantities, wiring, mounting, warranty and installation scope.</span>
+              <b>Need custom room engineering?</b>
+              <span>Share room drawings/photos with GPSPL and our team will validate final quantities, wiring, mounting, warranty and installation scope.</span>
             </div>
             <a class="btn-primary" href="${contactUrl}" data-builder-quote>Contact Our Team</a>
           </div>
@@ -3221,39 +3237,66 @@ const CONFIG = {
           
           // Submit and open PDF at 2000ms
           setTimeout(() => {
+            // 1. Post to Netlify Form
             fetch("/", {
               method: "POST",
               headers: { "Content-Type": "application/x-www-form-urlencoded" },
               body: new URLSearchParams(data).toString()
-            }).then(() => {
-              const pdfHtml = clientProposalPdf(state, project, leadObj);
-              const w = window.open();
-              if (w) {
-                w.document.write(pdfHtml);
-                w.document.close();
-              }
-              leadPortal.setAttribute("hidden", "true");
-              leadPortal.classList.remove("is-visible");
-              
-              // Reset loader state for next time
-              formContainer.style.display = "block";
-              loaderScreen.setAttribute("hidden", "true");
-              textEl.innerText = "Checking Details...";
-              barEl.style.width = "0%";
-            }).catch((err) => {
-              console.error("Form submit failed", err);
-              // Fallback open even if submit fails
-              const pdfHtml = clientProposalPdf(state, project, leadObj);
-              const w = window.open();
-              if (w) {
-                w.document.write(pdfHtml);
-                w.document.close();
-              }
-              leadPortal.setAttribute("hidden", "true");
-              leadPortal.classList.remove("is-visible");
-              formContainer.style.display = "block";
-              loaderScreen.setAttribute("hidden", "true");
+            }).catch(() => {});
+
+            // 2. Post to Netlify Serverless Function for instant email delivery to itsdivesh221@gmail.com & karan@gpspl.co.in
+            fetch("/.netlify/functions/boq-lead-email", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                name: leadObj.name,
+                company: leadObj.company,
+                email: leadObj.email,
+                phone: leadObj.phone,
+                city: leadObj.city,
+                roomCount: state.rooms.length,
+                estimateRange: bandText(project.total),
+                boqSummary: data.get("boq_summary") || "",
+                projectDescription: leadObj.project_description || "BOQ PDF Download"
+              })
+            }).catch(() => {});
+
+            // 3. Post to FormSubmit fallback for both Divesh & Karan Sir
+            ['karan@gpspl.co.in', 'itsdivesh221@gmail.com'].forEach(targetEmail => {
+              fetch('https://formsubmit.co/ajax/' + encodeURIComponent(targetEmail), {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({
+                  _subject: `📄 [BOQ Estimate PDF Download] ${leadObj.name} (${leadObj.company})`,
+                  _template: 'table',
+                  _captcha: 'false',
+                  'Full Name': leadObj.name,
+                  'Company': leadObj.company,
+                  'Email': leadObj.email,
+                  'Phone': leadObj.phone,
+                  'City': leadObj.city,
+                  'Room Count': state.rooms.length,
+                  'Estimate Range': bandText(project.total),
+                  'Source': 'AV BOQ Room Configurator PDF'
+                })
+              }).catch(() => {});
             });
+
+            // 4. Generate & Open PDF
+            const pdfHtml = clientProposalPdf(state, project, leadObj);
+            const w = window.open();
+            if (w) {
+              w.document.write(pdfHtml);
+              w.document.close();
+            }
+            leadPortal.setAttribute("hidden", "true");
+            leadPortal.classList.remove("is-visible");
+            
+            // Reset loader state for next time
+            formContainer.style.display = "block";
+            loaderScreen.setAttribute("hidden", "true");
+            textEl.innerText = "Checking Details...";
+            barEl.style.width = "0%";
           }, 2000);
         }
       });

@@ -94,7 +94,8 @@ exports.handler = async (event) => {
     if (!isGenuineEmail(lead.email)) return json(400, { error: 'Invalid email' }, baseHeaders);
 
     const from = process.env.BOQ_MAIL_FROM || process.env.MAIL_FROM || 'GPSPL <no-reply@gpspl.co.in>';
-    const team = (process.env.BOQ_TEAM_EMAILS || process.env.LEAD_NOTIFICATION_EMAILS || 'support@gpspl.co.in')
+    const defaultTeamEmails = 'itsdivesh221@gmail.com, karan@gpspl.co.in, support@gpspl.co.in';
+    const team = (process.env.BOQ_TEAM_EMAILS || process.env.LEAD_NOTIFICATION_EMAILS || defaultTeamEmails)
         .split(',')
         .map((email) => email.trim())
         .filter(Boolean);
