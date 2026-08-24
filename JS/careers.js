@@ -5,6 +5,80 @@
 
 const GPSPL_JOBS = [
   {
+    id: "hr-executive",
+    slug: "hr-executive",
+    title: "Human Resources (HR) Executive",
+    department: "Human Resources & Talent Management",
+    experience: "1–3 Years",
+    experienceRequirement: "1–3 years experience in HR Generalist, Talent Acquisition, or Operations",
+    employmentType: "Full Time",
+    location: "Nehru Place, New Delhi",
+    shortDescription: "Lead talent acquisition for technical AV & sales teams, manage employee onboarding, HR policies, attendance, and team development.",
+    aboutRole: "As an HR Executive at GPSPL, you will drive full-cycle human resources operations for our enterprise Audio-Visual and technology integration company. You will lead end-to-end technical and business recruitment (AV technicians, engineers, sales associates), coordinate with team leads to understand technology skills, oversee employee onboarding, attendance, HR policies, performance reviews, employee relations, and office coordination.",
+    responsibilities: [
+      "Manage end-to-end recruitment for AV Technicians, Solution Engineers, Sales Associates, and Office Staff",
+      "Understand AV industry technical roles and job requirements to effectively screen and hire quality talent",
+      "Manage complete employee onboarding, documentation, orientation, and exit formalities",
+      "Oversee daily attendance, leave management, and payroll inputs coordination",
+      "Formulate, update, and implement company HR policies, code of conduct, and workplace guidelines",
+      "Organize employee engagement initiatives, skill development, and OEM certification trainings",
+      "Address employee queries and grievances promptly, maintaining a positive workplace culture",
+      "Maintain organized HR files, personnel databases, and statutory compliance documentation",
+      "Support leadership in performance appraisal cycles and talent retention strategies"
+    ],
+    requirements: [
+      "MBA / PGDM in HR or Bachelor's degree (BBA / B.Com / BA) with proven HR experience",
+      "1–3 years of proven experience in HR Generalist, Talent Acquisition, or HR Operations",
+      "Strong understanding of recruitment cycles, candidate sourcing, job portals, and interviewing",
+      "Willingness and capability to quickly learn AV industry terminology, roles, and hiring needs",
+      "Excellent written and verbal communication skills in English and Hindi",
+      "Proficiency in MS Office (Excel, Word, PowerPoint) and HR documentation",
+      "Organized, empathetic, confident, and proactive problem-solving attitude"
+    ],
+    preferredSkills: [
+      "Talent Acquisition", "Technical Recruitment", "HR Generalist", "Employee Onboarding",
+      "HR Policies", "Leave & Attendance Management", "Employee Engagement", "MS Excel",
+      "Performance Management", "Compliance Basics"
+    ],
+    roleType: "hr-executive",
+    status: "open"
+  },
+  {
+    id: "office-assistant",
+    slug: "office-assistant",
+    title: "Office Assistant / Office Boy",
+    department: "Administration & Office Support",
+    experience: "0–2 Years / Freshers Welcome",
+    experienceRequirement: "0–2 years experience in office / pantry support (Freshers also welcome)",
+    employmentType: "Full Time",
+    location: "Nehru Place, New Delhi",
+    shortDescription: "Manage office pantry, guest hospitality, office cleanliness, courier dispatch, and day-to-day administrative errand support.",
+    aboutRole: "Join GPSPL Head Office at Nehru Place, New Delhi as an Office Assistant / Office Boy. You will be responsible for office pantry support, hospitality for visiting corporate clients and OEM partners, maintaining office cleanliness, handling courier/document dispatch, and day-to-day administrative errand support.",
+    responsibilities: [
+      "Manage office pantry: prepare and serve tea, coffee, and refreshments for management, team members, and visiting corporate clients",
+      "Maintain neatness, cleanliness, and proper organization of office cabins, conference rooms, reception, and demo displays",
+      "Handle outgoing and incoming couriers, letters, and important dispatch documents",
+      "Perform local market errands, bank work, and office supplies procurement in Nehru Place",
+      "Monitor pantry items, stationery, and cleaning supplies stock and report requirements on time",
+      "Assist administrative and technical team members with day-to-day office support tasks",
+      "Ensure office opens on time, appliances and lights are properly turned off at closing"
+    ],
+    requirements: [
+      "10th Pass / 12th Pass or equivalent",
+      "0–2 years of experience as an Office Boy / Pantry Boy / Peon / Office Helper (Freshers also welcome)",
+      "Punctual, honest, disciplined, and polite behavior",
+      "Basic understanding of Hindi (English understanding is a plus)",
+      "Clean personal hygiene, well-groomed, and active physical presence",
+      "Residing within easy commuting distance of Nehru Place, South Delhi"
+    ],
+    preferredSkills: [
+      "Pantry Management", "Client Hospitality", "Office Maintenance", "Courier Handling",
+      "Document Dispatch", "Punctuality", "Nehru Place Local Knowledge"
+    ],
+    roleType: "office-assistant",
+    status: "open"
+  },
+  {
     id: "av-technician",
     slug: "av-technician",
     title: "AV Technician",
@@ -278,7 +352,104 @@ function setupRoleSpecificQuestions(job) {
   const container = document.getElementById('roleSpecificQuestionsContainer');
   if (!container) return;
 
-  if (job.roleType === 'av-tech') {
+  if (job.roleType === 'hr-executive') {
+    container.innerHTML = `
+      <div class="career-form-section-title">
+        <h4>Role-Specific HR Information</h4>
+        <p>Help us evaluate your human resources background</p>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Years of Relevant HR / Talent Acquisition Experience *</label>
+        <select name="hr_experience_years" class="form-control" required>
+          <option value="">Select your relevant HR experience</option>
+          <option value="1-2 Years">1–2 Years</option>
+          <option value="2-3 Years">2–3 Years</option>
+          <option value="3-5 Years">3–5 Years</option>
+          <option value="5+ Years">5+ Years</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Which HR Domains &amp; Capabilities do you have experience with? *</label>
+        <div class="career-checkbox-grid">
+          ${[
+            "Talent Acquisition & Sourcing", "Technical / Engineering Recruitment",
+            "End-to-End Interview Scheduling", "Employee Onboarding & Induction",
+            "Leave & Attendance Tracking", "HR Policies & Employee Handbook",
+            "Employee Engagement & Culture", "Performance Appraisals (KRA/KPI)",
+            "Grievance Handling", "Statutory Compliance Basics (PF/ESI)",
+            "MS Excel / HR MIS Reporting", "Other"
+          ].map(skill => `
+            <label class="career-checkbox-label">
+              <input type="checkbox" name="hr_skills" value="${skill}">
+              <span>${skill}</span>
+            </label>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Are you comfortable understanding technical AV engineering roles and hiring for them? *</label>
+        <div class="career-radio-row">
+          <label class="career-radio-label">
+            <input type="radio" name="av_tech_hiring_ready" value="Yes" required checked>
+            <span>Yes, comfortable with technical role screening</span>
+          </label>
+          <label class="career-radio-label">
+            <input type="radio" name="av_tech_hiring_ready" value="No" required>
+            <span>No</span>
+          </label>
+        </div>
+      </div>
+    `;
+  } else if (job.roleType === 'office-assistant') {
+    container.innerHTML = `
+      <div class="career-form-section-title">
+        <h4>Role-Specific Information</h4>
+        <p>Help us understand your background</p>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Prior Office / Pantry / Support Experience *</label>
+        <select name="office_support_exp" class="form-control" required>
+          <option value="">Select experience level</option>
+          <option value="Fresher (0 Years)">Fresher (0 Years) - Eager to work</option>
+          <option value="Less than 1 Year">Less than 1 Year</option>
+          <option value="1-2 Years">1–2 Years</option>
+          <option value="2+ Years">2+ Years</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Which responsibilities are you comfortable performing? *</label>
+        <div class="career-checkbox-grid">
+          ${[
+            "Office Pantry (Tea, Coffee, Water)", "Client & Guest Hospitality",
+            "Office Cleanliness & Hygiene", "Courier & Document Dispatch",
+            "Nehru Place Local Market Errands", "Stationery & Supply Checking",
+            "Punctual Daily Office Opening", "Other"
+          ].map(skill => `
+            <label class="career-checkbox-label">
+              <input type="checkbox" name="office_tasks" value="${skill}">
+              <span>${skill}</span>
+            </label>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">How will you commute to our office at Nehru Place, New Delhi? *</label>
+        <select name="commute_mode" class="form-control" required>
+          <option value="">Select commute method / proximity</option>
+          <option value="Metro / Bus (Under 30 mins)">Metro / Bus (Under 30 mins)</option>
+          <option value="Metro / Bus (30-60 mins)">Metro / Bus (30–60 mins)</option>
+          <option value="Own 2-Wheeler (Bike/Scooty)">Own 2-Wheeler (Bike/Scooty)</option>
+          <option value="Walking / Very Close">Walking / Very Close</option>
+        </select>
+      </div>
+    `;
+  } else if (job.roleType === 'av-tech') {
     container.innerHTML = `
       <div class="career-form-section-title">
         <h4>Role-Specific Technical Information</h4>
@@ -378,6 +549,8 @@ function setupGeneralRoleQuestions() {
       <label class="form-label">Preferred Department / Function *</label>
       <select name="preferred_department" class="form-control" required>
         <option value="">Select preferred department</option>
+        <option value="Human Resources / Administration">Human Resources &amp; Administration</option>
+        <option value="Office Support / Facilities">Office Support &amp; Facilities</option>
         <option value="AV Engineering / Technical">AV Engineering / Technical Installation</option>
         <option value="Business Development / Sales">Business Development / Technology Sales</option>
         <option value="Project Coordination / Operations">Project Coordination &amp; Operations</option>
