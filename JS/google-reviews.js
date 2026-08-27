@@ -40,7 +40,7 @@
     const showFallback = (message) => {
         track.innerHTML = fallbackHtml;
         ratingEl.innerHTML = '4.9 <span>/ 5</span>';
-        if (countEl) countEl.textContent = '(68+ Reviews)';
+        if (countEl) countEl.textContent = '(148+ Reviews)';
         starsEl.textContent = '\u2605\u2605\u2605\u2605\u2605';
         starsEl.setAttribute('aria-label', 'Google reviews link');
         statusEl.textContent = message || 'Open Google to view customer feedback';

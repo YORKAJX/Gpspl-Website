@@ -12,13 +12,14 @@ http://www.gpspl.co.in/* https://gpspl.co.in/:splat 301!
 /.env /404 404!
 /.env.* /404 404!
 /.git/* /404 404!
+/tmp/* /404 404!
 /index.html / 301
 
 # Deprecated redirects
 /active-led-video-wall.html /active-led-wall-solutions 301
 /active-led-video-wall /active-led-wall-solutions 301
 
-# Clean URLs 301 Redirects & 200 Rewrites
+# Root Pages Clean URLs
 /about-gpspl.html /about-gpspl 301
 /about-gpspl /about-gpspl.html 200
 
@@ -28,6 +29,9 @@ http://www.gpspl.co.in/* https://gpspl.co.in/:splat 301!
 /active-led-wall-solutions.html /active-led-wall-solutions 301
 /active-led-wall-solutions /active-led-wall-solutions.html 200
 
+/active-led-wall-supplier-noida.html /active-led-wall-supplier-noida 301
+/active-led-wall-supplier-noida /active-led-wall-supplier-noida.html 200
+
 /amc-maintenance-services.html /amc-maintenance-services 301
 /amc-maintenance-services /amc-maintenance-services.html 200
 
@@ -36,6 +40,12 @@ http://www.gpspl.co.in/* https://gpspl.co.in/:splat 301!
 
 /audio-visual-integration.html /audio-visual-integration 301
 /audio-visual-integration /audio-visual-integration.html 200
+
+/av-system-integrator-delhi-ncr.html /av-system-integrator-delhi-ncr 301
+/av-system-integrator-delhi-ncr /av-system-integrator-delhi-ncr.html 200
+
+/av-system-integrator-gurgaon.html /av-system-integrator-gurgaon 301
+/av-system-integrator-gurgaon /av-system-integrator-gurgaon.html 200
 
 /brand-detail.html /brand-detail 301
 /brand-detail /brand-detail.html 200
@@ -127,6 +137,18 @@ http://www.gpspl.co.in/* https://gpspl.co.in/:splat 301!
 /projects.html /projects 301
 /projects /projects.html 200
 
+/resources.html /resources 301
+/resources /resources.html 200
+
+/samsung-business-tv-befx-h2.html /samsung-business-tv-befx-h2 301
+/samsung-business-tv-befx-h2 /samsung-business-tv-befx-h2.html 200
+
+/samsung-commercial-display-qbc.html /samsung-commercial-display-qbc 301
+/samsung-commercial-display-qbc /samsung-commercial-display-qbc.html 200
+
+/samsung-commercial-display-qmc.html /samsung-commercial-display-qmc 301
+/samsung-commercial-display-qmc /samsung-commercial-display-qmc.html 200
+
 /smart-classroom-solutions.html /smart-classroom-solutions 301
 /smart-classroom-solutions /smart-classroom-solutions.html 200
 
@@ -138,9 +160,6 @@ http://www.gpspl.co.in/* https://gpspl.co.in/:splat 301!
 
 /terms-disclaimer.html /terms-disclaimer 301
 /terms-disclaimer /terms-disclaimer.html 200
-
-/thank-you.html /thank-you 301
-/thank-you /thank-you.html 200
 
 /unified-communication-collaboration.html /unified-communication-collaboration 301
 /unified-communication-collaboration /unified-communication-collaboration.html 200
@@ -154,12 +173,7 @@ http://www.gpspl.co.in/* https://gpspl.co.in/:splat 301!
 /video-wall-solutions.html /video-wall-solutions 301
 /video-wall-solutions /video-wall-solutions.html 200
 
-/av-system-integrator-delhi-ncr.html /av-system-integrator-delhi-ncr 301
-/av-system-integrator-delhi-ncr /av-system-integrator-delhi-ncr.html 200
-
-/resources.html /resources 301
-/resources /resources.html 200
-
+# Resources Section Clean URLs
 /resources/active-led-pixel-pitch-guide.html /resources/active-led-pixel-pitch-guide 301
 /resources/active-led-pixel-pitch-guide /resources/active-led-pixel-pitch-guide.html 200
 
@@ -169,6 +183,61 @@ http://www.gpspl.co.in/* https://gpspl.co.in/:splat 301!
 /resources/boardroom-acoustic-planning.html /resources/boardroom-acoustic-planning 301
 /resources/boardroom-acoustic-planning /resources/boardroom-acoustic-planning.html 200
 
+# Blog Section Clean URLs
+/blog/active-led-wall-pixel-pitch-sizing-cost-guide.html /blog/active-led-wall-pixel-pitch-sizing-cost-guide 301
+/blog/active-led-wall-pixel-pitch-sizing-cost-guide /blog/active-led-wall-pixel-pitch-sizing-cost-guide.html 200
+
+/blog/active-led-wall-vs-cob-microled-buying-cost-guide-india.html /blog/active-led-wall-vs-cob-microled-buying-cost-guide-india 301
+/blog/active-led-wall-vs-cob-microled-buying-cost-guide-india /blog/active-led-wall-vs-cob-microled-buying-cost-guide-india.html 200
+
+/blog/amc-vs-one-time-repair.html /blog/amc-vs-one-time-repair 301
+/blog/amc-vs-one-time-repair /blog/amc-vs-one-time-repair.html 200
+
+/blog/boardroom-automation-amx-crestron-touch-panel-guide.html /blog/boardroom-automation-amx-crestron-touch-panel-guide 301
+/blog/boardroom-automation-amx-crestron-touch-panel-guide /blog/boardroom-automation-amx-crestron-touch-panel-guide.html 200
+
+/blog/command-control-center-video-wall-guide.html /blog/command-control-center-video-wall-guide 301
+/blog/command-control-center-video-wall-guide /blog/command-control-center-video-wall-guide.html 200
+
+/blog/commercial-tv-vs-consumer-tv-guide.html /blog/commercial-tv-vs-consumer-tv-guide 301
+/blog/commercial-tv-vs-consumer-tv-guide /blog/commercial-tv-vs-consumer-tv-guide.html 200
+
+/blog/conference-room-av-setup-guide.html /blog/conference-room-av-setup-guide 301
+/blog/conference-room-av-setup-guide /blog/conference-room-av-setup-guide.html 200
+
+/blog/digital-podium-smart-lectern-integration-guide.html /blog/digital-podium-smart-lectern-integration-guide 301
+/blog/digital-podium-smart-lectern-integration-guide /blog/digital-podium-smart-lectern-integration-guide.html 200
+
+/blog/enterprise-digital-signage-network-cms-guide.html /blog/enterprise-digital-signage-network-cms-guide 301
+/blog/enterprise-digital-signage-network-cms-guide /blog/enterprise-digital-signage-network-cms-guide.html 200
+
+/blog/huddle-room-video-conferencing-setup-guide.html /blog/huddle-room-video-conferencing-setup-guide 301
+/blog/huddle-room-video-conferencing-setup-guide /blog/huddle-room-video-conferencing-setup-guide.html 200
+
+/blog/led-wall-vs-projector.html /blog/led-wall-vs-projector 301
+/blog/led-wall-vs-projector /blog/led-wall-vs-projector.html 200
+
+/blog/modern-smart-classroom-architecture-interactive-flat-panels-digital-podium-india.html /blog/modern-smart-classroom-architecture-interactive-flat-panels-digital-podium-india 301
+/blog/modern-smart-classroom-architecture-interactive-flat-panels-digital-podium-india /blog/modern-smart-classroom-architecture-interactive-flat-panels-digital-podium-india.html 200
+
+/blog/professional-audio-auditorium-guide.html /blog/professional-audio-auditorium-guide 301
+/blog/professional-audio-auditorium-guide /blog/professional-audio-auditorium-guide.html 200
+
+/blog/retail-digital-signage-video-wall-guide.html /blog/retail-digital-signage-video-wall-guide 301
+/blog/retail-digital-signage-video-wall-guide /blog/retail-digital-signage-video-wall-guide.html 200
+
+/blog/samsung-business-tv-commercial-signage-guide.html /blog/samsung-business-tv-commercial-signage-guide 301
+/blog/samsung-business-tv-commercial-signage-guide /blog/samsung-business-tv-commercial-signage-guide.html 200
+
+/blog/smart-classroom-solutions-interactive-displays-hybrid.html /blog/smart-classroom-solutions-interactive-displays-hybrid 301
+/blog/smart-classroom-solutions-interactive-displays-hybrid /blog/smart-classroom-solutions-interactive-displays-hybrid.html 200
+
+/blog/video-conferencing-teams-rooms-vs-zoom-rooms-byod-guide.html /blog/video-conferencing-teams-rooms-vs-zoom-rooms-byod-guide 301
+/blog/video-conferencing-teams-rooms-vs-zoom-rooms-byod-guide /blog/video-conferencing-teams-rooms-vs-zoom-rooms-byod-guide.html 200
+
+# Thank you and 404
+/thank-you.html /thank-you 301
+/thank-you /thank-you.html 200
+
 /404.html /404 301
 /404 /404.html 200
-

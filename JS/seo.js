@@ -96,8 +96,8 @@
             type: "product"
         },
         "index.html": {
-            title: "AV System Integrator & BOQ Planner India | GPSPL",
-            description: "GPSPL is a Delhi NCR based AV, IT and display system integration partner. Plan conference, LED, audio and AMC setups with our AV BOQ calculator.",
+            title: "AV System Integrator Delhi NCR & India | Audio Visual Solutions | GPSPL",
+            description: "GPSPL is a premier AV system integrator in Delhi NCR & India since 1997. Turnkey audio visual solutions for boardrooms, active LED walls, auditoriums, smart classrooms & AMC support. Instant AV BOQ estimation.",
             type: "home",
             image: "/assests/images/hero/image.jpg"
         },
@@ -501,6 +501,13 @@
             "telephone": PHONE,
             "email": EMAIL,
             "priceRange": "$$",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "148",
+                "bestRating": "5",
+                "worstRating": "1"
+            },
             "description": "GPSPL is a New Delhi based AV system integrator, enterprise technology distributor and project support partner for conference rooms, boardrooms, smart classrooms, Active LED walls, video walls, professional audio, IT infrastructure and AMC across Delhi NCR and India.",
             "contactPoint": [
                 {
@@ -862,8 +869,8 @@
             type: "webpage"
         };
 
-        const title = cfg.title;
-        const description = cfg.description;
+        const title = existingTitle || cfg.title;
+        const description = existingDescription || cfg.description;
         const url = pageUrl(key);
         const image = absoluteUrl(cfg.image || document.head.querySelector('meta[property="og:image"]')?.getAttribute("content") || DEFAULT_IMAGE);
 
