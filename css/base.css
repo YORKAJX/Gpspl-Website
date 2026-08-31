@@ -3165,3 +3165,229 @@ html body .top-bar,
         padding: 5px 0 !important;
     }
 }
+
+
+/* =====================================================================
+   ENTERPRISE HANDCRAFTED ZERO-LAG FRONTEND SYSTEM
+   ===================================================================== */
+
+/* 1. Mobile Sticky Quick Action Bar (Pure CSS - Zero JS) */
+.mobile-sticky-action-bar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 64px !important;
+    }
+
+    .mobile-sticky-action-bar {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 99999 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 10px !important;
+        padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px)) !important;
+        background: rgba(7, 21, 38, 0.96) !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+        box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .mobile-action-btn {
+        flex: 1 !important;
+        height: 42px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        border-radius: 8px !important;
+        font-family: var(--font-main) !important;
+        font-size: 0.86rem !important;
+        font-weight: 800 !important;
+        text-decoration: none !important;
+        color: #ffffff !important;
+        -webkit-tap-highlight-color: transparent !important;
+        transition: transform 0.15s ease !important;
+    }
+
+    .mobile-action-btn:active {
+        transform: scale(0.97) !important;
+    }
+
+    .mobile-call-btn {
+        background: #ef3438 !important;
+        box-shadow: 0 2px 10px rgba(239, 52, 56, 0.4) !important;
+    }
+
+    .mobile-wa-btn {
+        background: #25d366 !important;
+        box-shadow: 0 2px 10px rgba(37, 211, 102, 0.35) !important;
+    }
+}
+
+/* 2. Hardware-Accelerated 60 FPS Sector Marquee */
+.gpspl-sector-marquee {
+    position: relative !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    background: #071526 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 14px 0 !important;
+    user-select: none !important;
+}
+
+.gpspl-sector-marquee::before,
+.gpspl-sector-marquee::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 80px !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+}
+
+.gpspl-sector-marquee::before {
+    left: 0 !important;
+    background: linear-gradient(90deg, #071526 0%, rgba(7, 21, 38, 0) 100%) !important;
+}
+
+.gpspl-sector-marquee::after {
+    right: 0 !important;
+    background: linear-gradient(270deg, #071526 0%, rgba(7, 21, 38, 0) 100%) !important;
+}
+
+.gpspl-sector-track {
+    display: flex !important;
+    width: max-content !important;
+    gap: 16px !important;
+    animation: sectorMarqueeLoop 36s linear infinite !important;
+    will-change: transform !important;
+    transform: translateZ(0) !important;
+}
+
+.gpspl-sector-marquee:hover .gpspl-sector-track {
+    animation-play-state: paused !important;
+}
+
+.sector-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 8px 18px !important;
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: rgba(226, 232, 240, 0.9) !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    letter-spacing: 0.01em !important;
+}
+
+.sector-badge i {
+    color: #ef3438 !important;
+    font-size: 0.85rem !important;
+}
+
+@keyframes sectorMarqueeLoop {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* 3. Executive Enterprise Comparison Matrix */
+.gpspl-matrix-section {
+    padding: clamp(60px, 7vw, 96px) 0 !important;
+    background: #ffffff !important;
+}
+
+.gpspl-matrix-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+.gpspl-matrix-table-wrap {
+    overflow-x: auto !important;
+    border-radius: 16px !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06) !important;
+    background: #ffffff !important;
+    margin-top: 32px !important;
+}
+
+.gpspl-matrix-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    text-align: left !important;
+    font-size: 0.92rem !important;
+}
+
+.gpspl-matrix-table th {
+    padding: 18px 24px !important;
+    font-family: var(--font-main) !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.02em !important;
+}
+
+.gpspl-matrix-table th.col-param {
+    background: #0f172a !important;
+    color: #94a3b8 !important;
+    width: 30% !important;
+}
+
+.gpspl-matrix-table th.col-gpspl {
+    background: #071526 !important;
+    color: #ffffff !important;
+    width: 40% !important;
+    border-left: 2px solid #ef3438 !important;
+}
+
+.gpspl-matrix-table th.col-generic {
+    background: #1e293b !important;
+    color: #94a3b8 !important;
+    width: 30% !important;
+}
+
+.gpspl-matrix-table td {
+    padding: 16px 24px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    vertical-align: middle !important;
+    line-height: 1.55 !important;
+}
+
+.gpspl-matrix-table tr:last-child td {
+    border-bottom: none !important;
+}
+
+.gpspl-matrix-table tr:nth-child(even) td {
+    background: #f8fafc !important;
+}
+
+.gpspl-matrix-table td.col-gpspl-cell {
+    background: rgba(239, 52, 56, 0.02) !important;
+    border-left: 2px solid rgba(239, 52, 56, 0.2) !important;
+    font-weight: 600 !important;
+    color: #071526 !important;
+}
+
+.gpspl-matrix-table td.col-generic-cell {
+    color: #64748b !important;
+}
+
+/* 4. Performance & Core Web Vitals Render Acceleration */
+.lazy-render-section {
+    content-visibility: auto !important;
+    contain-intrinsic-size: 1px 500px !important;
+}

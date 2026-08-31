@@ -19,7 +19,7 @@
     <meta name="twitter:image" content="https://gpspl.co.in/assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg">
     <link rel="stylesheet" href="/css/base.css?v=20260818-master-ui-fix">
     <link rel="stylesheet" href="/css/service-page.css?v=20260818-master-ui-fix">
-    <link rel="stylesheet" href="/css/blog.css?v=20260818-master-ui-fix">
+    <link rel="stylesheet" href="/css/blog.css?v=20260830-fix">
     <link rel="stylesheet" href="/css/home-hero-fix.css?v=20260818-master-ui-fix">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="/JS/security-guard.js?v=20260818" defer></script>
@@ -214,7 +214,7 @@
     <div class="blog-filter-bar">
         <div class="container">
             <div class="blog-filter-inner">
-                <button class="filter-btn active" data-cat="All">All Guides (17)</button>
+                <button class="filter-btn active" data-cat="All">All Guides (20)</button>
                 <button class="filter-btn" data-cat="Buyers Guide">Buyer's Guides</button>
                 <button class="filter-btn" data-cat="Collaboration">Collaboration &amp; Huddle</button>
                 <button class="filter-btn" data-cat="Signage &amp; Display">Retail &amp; Signage</button>
@@ -230,6 +230,56 @@
     <section class="blog-section">
         <div class="container">
             <div class="blog-grid">
+                <!-- 001. Top AV System Integrators in India Guide -->
+                <a href="/blog/top-av-system-integrators-india-buyers-guide" class="blog-card reveal" data-cat="Buyers Guide">
+                    <div class="blog-card-thumb" style="background: linear-gradient(135deg,#071526 0%,#0d6efd 55%,#0a2240 100%);">
+                        <div class="blog-card-thumb-icon"><i class="fas fa-award" aria-hidden="true"></i></div>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-cat" style="background:#0d6efd;">Buyer's Guide</span>
+                            <span class="blog-card-date">30 Aug 2026</span>
+                            <span class="blog-card-read">12 min read</span>
+                        </div>
+                        <h2>Top AV System Integrators in India: 2026 Enterprise Buyer's Guide &amp; Evaluation Framework</h2>
+                        <p>A comprehensive evaluation roadmap for selecting professional AV system integrators in India: OEM direct tier-1 partnerships (Samsung, LG, Harman, Crestron), engineering drawings, and procurement RFP checklists.</p>
+                        <span class="blog-card-cta">Read Guide <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </div>
+                </a>
+
+                <!-- 002. AV-over-IP & Dante Network Architecture -->
+                <a href="/blog/av-over-ip-network-architecture-dante-sdvoe-enterprise-guide" class="blog-card reveal" data-cat="Control &amp; Automation">
+                    <div class="blog-card-thumb" style="background: linear-gradient(135deg,#06241e 0%,#0f766e 55%,#115e59 100%);">
+                        <div class="blog-card-thumb-icon"><i class="fas fa-network-wired" aria-hidden="true"></i></div>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-cat" style="background:#0f766e;">Control &amp; Automation</span>
+                            <span class="blog-card-date">30 Aug 2026</span>
+                            <span class="blog-card-read">11 min read</span>
+                        </div>
+                        <h2>AV-over-IP Network Architecture &amp; Dante Audio Integration: 2026 Enterprise Campus Guide</h2>
+                        <p>Replace legacy fixed HDMI matrix switchers with scalable, uncompressed 4K AV-over-IP endpoints, Dante/AES67 digital audio backbones, and enterprise Layer 3 switch configurations.</p>
+                        <span class="blog-card-cta">Read Guide <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </div>
+                </a>
+
+                <!-- 003. Boardroom Acoustic Treatment & DSP Tuning -->
+                <a href="/blog/boardroom-acoustic-treatment-dsp-tuning-echo-cancellation-guide" class="blog-card reveal" data-cat="Collaboration">
+                    <div class="blog-card-thumb" style="background: linear-gradient(135deg,#1e113a 0%,#7c3aed 55%,#5b21b6 100%);">
+                        <div class="blog-card-thumb-icon"><i class="fas fa-microphone-lines" aria-hidden="true"></i></div>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-cat" style="background:#7c3aed;">Collaboration &amp; Huddle</span>
+                            <span class="blog-card-date">30 Aug 2026</span>
+                            <span class="blog-card-read">10 min read</span>
+                        </div>
+                        <h2>Boardroom Acoustic Treatment &amp; DSP Echo Cancellation: 2026 Engineering Guide</h2>
+                        <p>Solve meeting room echo, glass reverberation, and HVAC hum using RT60 acoustic targets, ceiling beamforming microphone tiles (Shure MXA920), and dedicated hardware DSP tuning.</p>
+                        <span class="blog-card-cta">Read Guide <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                    </div>
+                </a>
 
                 <!-- 00A. Active LED Wall vs COB vs MicroLED -->
                 <a href="/blog/active-led-wall-vs-cob-microled-buying-cost-guide-india" class="blog-card reveal" data-cat="Display Systems">
@@ -557,6 +607,17 @@ const obs = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
-    <script src="/JS/ai-av-consultant.js?v=20260818" defer></script>
+    <script src="/JS/ai-av-consultant.js?v=20260830-fix" defer></script>
+
+    <!-- Mobile Sticky Direct Action Bar (Pure CSS - Zero JS) -->
+    <nav class="mobile-sticky-action-bar" aria-label="Quick contact actions">
+        <a href="tel:+919310092963" class="mobile-action-btn mobile-call-btn">
+            <i class="fas fa-phone-alt" aria-hidden="true"></i> Call AV Engineer
+        </a>
+        <a href="https://wa.me/919310092963?text=Hello%20GPSPL%2C%20I%20need%20a%20turnkey%20AV%20%2F%20Display%20BOQ%20quote." target="_blank" rel="noopener noreferrer" class="mobile-action-btn mobile-wa-btn">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp Quote
+        </a>
+    </nav>
+
 </body>
 </html>

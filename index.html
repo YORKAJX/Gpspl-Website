@@ -28,7 +28,7 @@
     <meta name="theme-color" content="#D32F2F">
     <link rel="stylesheet" href="css/base.css?v=20260818-master-ui-fix">
     <link rel="stylesheet" href="css/home-hero-fix.css?v=20260818-master-ui-fix">
-    <link rel="stylesheet" href="css/blog.css?v=20260818-master-ui-fix">
+    <link rel="stylesheet" href="css/blog.css?v=20260830-fix">
     <link rel="stylesheet" href="css/faq-preview.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="/JS/security-guard.js?v=20260818" defer></script>
@@ -521,6 +521,67 @@
             <!-- Consultant Application Mount Shell -->
             <div class="configurator-shell" style="background: transparent; border-radius: 20px;">
                 <div data-configurator-app></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== ENTERPRISE EVALUATION MATRIX ====== -->
+    <section class="gpspl-matrix-section" id="why-gpspl-matrix" aria-labelledby="matrix-heading">
+        <div class="gpspl-matrix-container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 36px;">
+                <p class="section-eyebrow" style="color: #ef3438; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; margin-bottom: 8px;">
+                    <i class="fas fa-shield-halved"></i> Engineering &amp; Procurement Standards
+                </p>
+                <h2 id="matrix-heading" style="font-size: clamp(1.8rem, 3.2vw, 2.5rem); font-weight: 900; color: #071526; line-height: 1.25; margin-bottom: 12px;">
+                    Why Enterprise Buyers Choose GPSPL Over Local Traders
+                </h2>
+                <p style="font-size: 1rem; color: #64748b; line-height: 1.6; margin: 0;">
+                    Direct tier-1 OEM relationships, turnkey in-house engineering, and SLA-backed on-site support versus generic box sellers.
+                </p>
+            </div>
+
+            <div class="gpspl-matrix-table-wrap">
+                <table class="gpspl-matrix-table">
+                    <thead>
+                        <tr>
+                            <th class="col-param">Engineering Parameter</th>
+                            <th class="col-gpspl"><i class="fas fa-check-circle" style="color: #22c55e; margin-right: 6px;"></i> GPSPL (Tier-1 Partner &amp; Integrator)</th>
+                            <th class="col-generic">Generic Box Resellers &amp; Grey Market</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>OEM Direct Partnership</strong></td>
+                            <td class="col-gpspl-cell" style="color: #16a34a;"><i class="fas fa-certificate" style="color: #ef3438; margin-right: 6px;"></i> Authorized Tier-1 (Samsung, LG, Harman, Crestron, Shure)</td>
+                            <td class="col-generic-cell">Third-party brokers &amp; uncertified parallel traders</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Warranty Authenticity</strong></td>
+                            <td class="col-gpspl-cell">100% Genuine 3-to-5 Year On-Site OEM Commercial Warranty</td>
+                            <td class="col-generic-cell">Domestic / parallel units with voided serial numbers</td>
+                        </tr>
+                        <tr>
+                            <td><strong>System Engineering</strong></td>
+                            <td class="col-gpspl-cell">In-house CAD/SLD drawings, heat load &amp; EASE acoustic simulation</td>
+                            <td class="col-generic-cell">No technical drawings; standard box drops only</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Acoustic &amp; DSP Tuning</strong></td>
+                            <td class="col-gpspl-cell">AEC calibration, Dante digital routing &amp; RTA microphone tuning</td>
+                            <td class="col-generic-cell">Uncalibrated out-of-box defaults (Audio echo issues)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Turnkey BOQ Pricing</strong></td>
+                            <td class="col-gpspl-cell">Transparent line-item BOQ with clear hardware &amp; installation splits</td>
+                            <td class="col-generic-cell">Lump-sum packages with hidden cabling &amp; labour fees</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Post-Sales On-Site SLA</strong></td>
+                            <td class="col-gpspl-cell"><strong style="color: #071526;">4-Hour Rapid On-Site Dispatch</strong> + Standby Loaner Hardware</td>
+                            <td class="col-generic-cell">Off-site service center courier (2-4 week room downtime)</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
@@ -2471,6 +2532,17 @@
     <script src="JS/room-configurator.js?v=20260728-home-seo-conversion" defer></script>
     <script src="JS/form-validation.js?v=20260727-enterprise-ux" defer></script>
     <script src="JS/google-reviews.js?v=20260723-google-reviews-polish" defer></script>
-    <script src="/JS/ai-av-consultant.js?v=20260818" defer></script>
+    <script src="/JS/ai-av-consultant.js?v=20260830-fix" defer></script>
+
+    <!-- Mobile Sticky Direct Action Bar (Pure CSS - Zero JS) -->
+    <nav class="mobile-sticky-action-bar" aria-label="Quick contact actions">
+        <a href="tel:+919310092963" class="mobile-action-btn mobile-call-btn">
+            <i class="fas fa-phone-alt" aria-hidden="true"></i> Call AV Engineer
+        </a>
+        <a href="https://wa.me/919310092963?text=Hello%20GPSPL%2C%20I%20need%20a%20turnkey%20AV%20%2F%20Display%20BOQ%20quote." target="_blank" rel="noopener noreferrer" class="mobile-action-btn mobile-wa-btn">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp Quote
+        </a>
+    </nav>
+
 </body>
 </html>

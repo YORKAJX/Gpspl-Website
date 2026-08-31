@@ -1,4 +1,4 @@
-﻿/**
+/**
  * GPSPL Enterprise AI AV Systems Architect & Consultant
  * - Dual-Language Support: English, Hindi & Hinglish with On-the-Fly Switching
  * - Dynamic Dialect Detection (Switches on phrases like "speak english", "english please", "hindi me bolo")
@@ -520,8 +520,8 @@ Aap kis space ke baare me jaanna chahte hain?`,
                 isDistForm: true,
                 title_en: 'GPSPL Authorized Technology Distribution Desk',
                 title_hi: 'GPSPL Authorized Technology Distribution Desk',
-                reply_en: '### �� GPSPL Technology Distribution & Wholesale Desk\n\nGPSPL is an **Authorized Direct Tier-1 Distributor** for Samsung, LG, Poly, Harman JBL, Shure, and BenQ. Please submit your wholesale / dealer inquiry below:',
-                reply_hi: '### �� GPSPL Technology Distribution & Wholesale Desk\n\nGPSPL **Samsung, LG, Poly, Harman, Shure** ka Authorized Tier-1 Distributor hai. Dealer / wholesale pricing ke liye details neeche bharein:'
+                reply_en: '### 📦 GPSPL Technology Distribution & Wholesale Desk\n\nGPSPL is an **Authorized Direct Tier-1 Distributor** for Samsung, LG, Poly, Harman JBL, Shure, and BenQ. Please submit your wholesale / dealer inquiry below:',
+                reply_hi: '### 📦 GPSPL Technology Distribution & Wholesale Desk\n\nGPSPL **Samsung, LG, Poly, Harman, Shure** ka Authorized Tier-1 Distributor hai. Dealer / wholesale pricing ke liye details neeche bharein:'
             };
         }
 
@@ -534,8 +534,8 @@ Aap kis space ke baare me jaanna chahte hain?`,
                 isSupportForm: true,
                 title_en: 'GPSPL Instant Technical Support & Service Desk',
                 title_hi: 'GPSPL Instant Technical Support & Service Desk',
-                reply_en: '### ��️ GPSPL Technical Support & Service Desk\n\nPlease provide your service requirements below. Our Senior AV & IT Service Engineers will respond immediately (SLA within 2 hours):',
-                reply_hi: '### ��️ GPSPL Technical Support & Service Desk\n\nAapki service ya complaint details neeche darj karein. Hamare Senior AV & IT Engineers turant aapse sampark karenge:'
+                reply_en: '### 🛠️ GPSPL Technical Support & Service Desk\n\nPlease provide your service requirements below. Our Senior AV & IT Service Engineers will respond immediately (SLA within 2 hours):',
+                reply_hi: '### 🛠️ GPSPL Technical Support & Service Desk\n\nAapki service ya complaint details neeche darj karein. Hamare Senior AV & IT Engineers turant aapse sampark karenge:'
             };
         }
 
@@ -1061,7 +1061,7 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
                     <div class="gpspl-wa-body">
                         <a href="https://wa.me/919310092963?text=Hi%20GPSPL%2C%20I%20want%20to%20inquire%20about%20AV%20Solutions%2C%20Displays%20%26%20BOQ%20pricing." target="_blank" rel="noopener noreferrer" class="gpspl-wa-option">
                             <div class="gpspl-wa-option-info">
-                                <strong>💬 Sales &amp; BOQ Quotes</strong>
+                                <strong><i class="fas fa-comments" style="color: #25D366; margin-right: 6px;"></i> Sales &amp; BOQ Quotes</strong>
                                 <span>Displays, Video Walls &amp; VC</span>
                             </div>
                             <i class="fab fa-whatsapp"></i>
@@ -1069,7 +1069,7 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
 
                         <a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20need%20urgent%20AMC%20%2F%20Breakdown%20Technical%20Support." target="_blank" rel="noopener noreferrer" class="gpspl-wa-option">
                             <div class="gpspl-wa-option-info">
-                                <strong>🛠️ AMC &amp; Technical Service</strong>
+                                <strong><i class="fas fa-wrench" style="color: #25D366; margin-right: 6px;"></i> AMC &amp; Technical Service</strong>
                                 <span>Support Desk &amp; Field Visit</span>
                             </div>
                             <i class="fab fa-whatsapp"></i>
@@ -1077,7 +1077,7 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
 
                         <a href="https://wa.me/919310092963?text=Hi%20GPSPL%20HR%2C%20I%20am%20inquiring%20about%20Career%20Openings%20at%20GPSPL." target="_blank" rel="noopener noreferrer" class="gpspl-wa-option">
                             <div class="gpspl-wa-option-info">
-                                <strong>💼 Careers &amp; Recruitment</strong>
+                                <strong><i class="fas fa-briefcase" style="color: #25D366; margin-right: 6px;"></i> Careers &amp; Recruitment</strong>
                                 <span>Job Opportunities</span>
                             </div>
                             <i class="fab fa-whatsapp"></i>

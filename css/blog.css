@@ -254,6 +254,9 @@
     border: 1px solid rgba(13, 31, 56, 0.08) !important;
     border-left: 5px solid #ef3438 !important;
     box-shadow: 0 4px 20px rgba(13, 31, 56, 0.04) !important;
+    display: flex !important;
+    gap: 16px !important;
+    align-items: flex-start !important;
 }
 
 .blog-highlight-box p,
@@ -265,17 +268,95 @@
     -webkit-text-fill-color: #1e293b !important;
 }
 
-.blog-highlight-box i,
-.post-callout i {
+.post-callout-icon {
+    font-size: 1.5rem !important;
+    line-height: 1 !important;
+    flex-shrink: 0 !important;
+    margin-top: 2px !important;
+}
+
+/* Visual Figures and Images */
+.post-figure {
+    margin: 2.4em 0 !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(13, 31, 56, 0.08) !important;
+    border: 1px solid rgba(13, 31, 56, 0.08) !important;
+    background: #ffffff !important;
+}
+
+.post-figure img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    max-height: 480px !important;
+    object-fit: cover !important;
+}
+
+.post-figure figcaption {
+    padding: 12px 18px !important;
+    background: #f8fafc !important;
+    font-size: 0.84rem !important;
+    color: #64748b !important;
+    border-top: 1px solid #e2e8f0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-weight: 600 !important;
+}
+
+/* In-Article Table of Contents Box */
+.post-toc {
+    background: #f8fafc !important;
+    border: 1.5px solid #e2e8f0 !important;
+    border-radius: 16px !important;
+    padding: 22px 26px !important;
+    margin: 2em 0 !important;
+}
+
+.post-toc-title {
+    font-size: 1.05rem !important;
+    font-weight: 800 !important;
+    color: #071526 !important;
+    margin-bottom: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.post-toc ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+    gap: 8px !important;
+}
+
+.post-toc a {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    color: #0284c7 !important;
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    padding: 6px 10px !important;
+    border-radius: 8px !important;
+    transition: all 0.2s ease !important;
+}
+
+.post-toc a:hover {
+    background: #ffffff !important;
     color: #ef3438 !important;
-    margin-right: 6px !important;
-    font-size: 1.1rem !important;
+    transform: translateX(3px) !important;
 }
 
 /* Tables in Blog */
 .blog-content table,
 .post-content table,
-.post-table {
+.post-table,
+.comparison-table {
     width: 100% !important;
     border-collapse: separate !important;
     border-spacing: 0 !important;
@@ -290,7 +371,8 @@
 
 .blog-content thead tr,
 .post-content thead tr,
-.post-table th {
+.post-table th,
+.comparison-table thead tr {
     background: #071526 !important;
     color: #ffffff !important;
     font-family: 'Plus Jakarta Sans', sans-serif !important;
@@ -300,7 +382,8 @@
 
 .blog-content th,
 .post-content th,
-.post-table th {
+.post-table th,
+.comparison-table th {
     padding: 16px 18px !important;
     text-align: left !important;
     border: none !important;
@@ -308,7 +391,8 @@
 
 .blog-content td,
 .post-content td,
-.post-table td {
+.post-table td,
+.comparison-table td {
     padding: 14px 18px !important;
     border-bottom: 1px solid #f1f5f9 !important;
     color: #334155 !important;
@@ -319,12 +403,14 @@
 
 .blog-content tbody tr:last-child td,
 .post-content tbody tr:last-child td,
-.post-table tr:last-child td {
+.post-table tr:last-child td,
+.comparison-table tbody tr:last-child td {
     border-bottom: none !important;
 }
 
 .blog-content tbody tr:nth-child(even),
-.post-content tbody tr:nth-child(even) {
+.post-content tbody tr:nth-child(even),
+.comparison-table tbody tr:nth-child(even) {
     background: #f8fafc !important;
 }
 
@@ -345,7 +431,7 @@
     -webkit-text-fill-color: #334155 !important;
 }
 
-/* Sidebar Widgets */
+/* Sidebar Widgets & Related Post Links */
 .blog-sidebar,
 .post-sidebar {
     position: sticky !important;
@@ -356,7 +442,8 @@
 }
 
 .blog-sidebar-widget,
-.sidebar-card {
+.sidebar-card,
+.sidebar-widget {
     background: #ffffff !important;
     border: 1px solid rgba(13, 31, 56, 0.1) !important;
     border-radius: 20px !important;
@@ -365,7 +452,9 @@
 }
 
 .blog-sidebar-widget h3,
-.sidebar-card h3 {
+.sidebar-card h3,
+.sidebar-widget h3,
+.sidebar-widget h4 {
     font-family: 'Plus Jakarta Sans', sans-serif !important;
     font-size: 1.05rem !important;
     font-weight: 800 !important;
@@ -376,25 +465,109 @@
     border-bottom: 2px solid #f1f5f9 !important;
 }
 
-.blog-sidebar-widget a {
+/* Sleek Card Links in Sidebar */
+.related-post-link,
+.sidebar-card a:not(.sidebar-cta-btn),
+.blog-sidebar-widget a,
+.sidebar-widget a:not(.btn-primary) {
     display: flex !important;
     align-items: center !important;
-    gap: 10px !important;
-    padding: 10px 14px !important;
+    gap: 12px !important;
+    padding: 12px 14px !important;
     border-radius: 12px !important;
     background: #f8fafc !important;
-    border: 1px solid rgba(13, 31, 56, 0.05) !important;
+    border: 1px solid rgba(13, 31, 56, 0.08) !important;
     text-decoration: none !important;
     font-weight: 700 !important;
-    font-size: 0.86rem !important;
-    transition: all 0.22s ease !important;
+    font-size: 0.88rem !important;
+    color: #071526 !important;
+    -webkit-text-fill-color: #071526 !important;
+    transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    margin-bottom: 8px !important;
 }
 
-.blog-sidebar-widget a:hover {
+.related-post-link:hover,
+.sidebar-card a:not(.sidebar-cta-btn):hover,
+.blog-sidebar-widget a:hover,
+.sidebar-widget a:not(.btn-primary):hover {
     background: #ffffff !important;
-    border-color: rgba(239, 52, 56, 0.3) !important;
+    border-color: #ef3438 !important;
     transform: translateX(4px) !important;
-    box-shadow: 0 4px 14px rgba(13, 31, 56, 0.08) !important;
+    box-shadow: 0 6px 18px rgba(239, 52, 56, 0.1) !important;
+    color: #ef3438 !important;
+    -webkit-text-fill-color: #ef3438 !important;
+}
+
+.related-post-link i,
+.sidebar-card a i,
+.blog-sidebar-widget a i,
+.sidebar-widget a i {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 8px !important;
+    background: rgba(13, 110, 253, 0.08) !important;
+    color: #0d6efd !important;
+    -webkit-text-fill-color: #0d6efd !important;
+    display: grid !important;
+    place-items: center !important;
+    flex-shrink: 0 !important;
+    font-size: 0.85rem !important;
+    transition: all 0.2s ease !important;
+}
+
+.related-post-link:hover i,
+.sidebar-card a:hover i,
+.blog-sidebar-widget a:hover i,
+.sidebar-widget a:hover i {
+    background: #ef3438 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Sidebar Call to Action Box */
+.sidebar-cta,
+.sidebar-card.sidebar-cta {
+    background: linear-gradient(135deg, #071526 0%, #0d274a 100%) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 20px !important;
+    padding: 28px 24px !important;
+    box-shadow: 0 10px 30px rgba(7, 21, 38, 0.2) !important;
+}
+
+.sidebar-cta h3 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.sidebar-cta p {
+    color: rgba(226, 232, 240, 0.88) !important;
+    -webkit-text-fill-color: rgba(226, 232, 240, 0.88) !important;
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+    margin: 12px 0 20px 0 !important;
+}
+
+.sidebar-cta-btn {
+    display: block !important;
+    text-align: center !important;
+    background: #ef3438 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    padding: 12px 20px !important;
+    border-radius: 10px !important;
+    font-weight: 800 !important;
+    font-size: 0.9rem !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 16px rgba(239, 52, 56, 0.35) !important;
+    transition: all 0.2s ease !important;
+}
+
+.sidebar-cta-btn:hover {
+    background: #dc2626 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(239, 52, 56, 0.45) !important;
 }
 
 /* --- 3. RESPONSIVE BREAKPOINTS FOR BLOG --- */
@@ -416,7 +589,8 @@
 
 @media (max-width: 640px) {
     .blog-content table,
-    .post-content table {
+    .post-content table,
+    .comparison-table {
         display: block !important;
         overflow-x: auto !important;
         -webkit-overflow-scrolling: touch !important;
