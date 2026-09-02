@@ -707,3 +707,34 @@
         width: 280px;
     }
 }
+
+/* Mobile Clean Non-Overlapping Floating Widgets */
+@media (max-width: 768px) {
+    #gpspl-whatsapp-root {
+        bottom: 20px !important;
+        left: 16px !important;
+        right: auto !important;
+    }
+    #gpspl-ai-chat-root {
+        bottom: 20px !important;
+        right: 16px !important;
+        left: auto !important;
+    }
+    .gpspl-chat-launcher {
+        padding: 0 !important;
+        width: 52px !important;
+        height: 52px !important;
+        border-radius: 50% !important;
+        justify-content: center !important;
+        align-items: center !important;
+        box-shadow: 0 8px 24px rgba(7, 21, 38, 0.4) !important;
+    }
+    .gpspl-launcher-text {
+        display: none !important;
+    }
+    .gpspl-launcher-avatar {
+        width: 44px !important;
+        height: 44px !important;
+        box-shadow: none !important;
+    }
+}

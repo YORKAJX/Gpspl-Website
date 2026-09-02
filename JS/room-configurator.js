@@ -497,7 +497,7 @@
         </div>
 
         <!-- 2-COLUMN MAIN WORKSPACE -->
-        <div style="display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 28px; align-items: start;">
+        <div class="configurator-workspace-grid">
           
           <!-- LEFT: TECHNOLOGY SELECTION & ROOM SPECS -->
           <div>
@@ -513,7 +513,7 @@
                 </span>
               </div>
 
-              <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
+              <div class="configurator-dimensions-grid">
                 <div>
                   <label style="font-size: 0.74rem; font-weight: 700; color: #64748b; display: block; margin-bottom: 4px;">Length (ft)</label>
                   <input type="number" name="length" min="8" max="150" value="${active.length}" style="width: 100%; padding: 10px 8px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.92rem; font-weight: 800; color: #071526; text-align: center; background: #fff; box-sizing: border-box;">
@@ -537,7 +537,7 @@
             <div style="display: flex; flex-direction: column; gap: 14px;">
               
               <!-- Display Row -->
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div class="configurator-select-pair">
                 <div>
                   <label style="font-size: 0.78rem; font-weight: 800; color: #334155; display: block; margin-bottom: 5px;">Display Technology</label>
                   <select name="display" style="width: 100%; padding: 11px 12px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.86rem; color: #0f172a; font-weight: 600; background: #f8fafc;">
@@ -553,7 +553,7 @@
               </div>
 
               <!-- Camera & Collaboration Platform -->
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div class="configurator-select-pair">
                 <div>
                   <label style="font-size: 0.78rem; font-weight: 800; color: #334155; display: block; margin-bottom: 5px;">Camera Subsystem</label>
                   <select name="camera" style="width: 100%; padding: 11px 12px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.86rem; color: #0f172a; font-weight: 600; background: #f8fafc;">
@@ -569,7 +569,7 @@
               </div>
 
               <!-- Microphone & Speakers -->
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div class="configurator-select-pair">
                 <div>
                   <label style="font-size: 0.78rem; font-weight: 800; color: #334155; display: block; margin-bottom: 5px;">Microphone Subsystem</label>
                   <select name="microphone" style="width: 100%; padding: 11px 12px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.86rem; color: #0f172a; font-weight: 600; background: #f8fafc;">

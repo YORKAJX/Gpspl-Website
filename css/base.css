@@ -3171,66 +3171,6 @@ html body .top-bar,
    ENTERPRISE HANDCRAFTED ZERO-LAG FRONTEND SYSTEM
    ===================================================================== */
 
-/* 1. Mobile Sticky Quick Action Bar (Pure CSS - Zero JS) */
-.mobile-sticky-action-bar {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    body {
-        padding-bottom: 64px !important;
-    }
-
-    .mobile-sticky-action-bar {
-        position: fixed !important;
-        bottom: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        z-index: 99999 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        gap: 10px !important;
-        padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px)) !important;
-        background: rgba(7, 21, 38, 0.96) !important;
-        backdrop-filter: blur(16px) !important;
-        -webkit-backdrop-filter: blur(16px) !important;
-        border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
-        box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.3) !important;
-    }
-
-    .mobile-action-btn {
-        flex: 1 !important;
-        height: 42px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 8px !important;
-        border-radius: 8px !important;
-        font-family: var(--font-main) !important;
-        font-size: 0.86rem !important;
-        font-weight: 800 !important;
-        text-decoration: none !important;
-        color: #ffffff !important;
-        -webkit-tap-highlight-color: transparent !important;
-        transition: transform 0.15s ease !important;
-    }
-
-    .mobile-action-btn:active {
-        transform: scale(0.97) !important;
-    }
-
-    .mobile-call-btn {
-        background: #ef3438 !important;
-        box-shadow: 0 2px 10px rgba(239, 52, 56, 0.4) !important;
-    }
-
-    .mobile-wa-btn {
-        background: #25d366 !important;
-        box-shadow: 0 2px 10px rgba(37, 211, 102, 0.35) !important;
-    }
-}
-
 /* 2. Hardware-Accelerated 60 FPS Sector Marquee */
 .gpspl-sector-marquee {
     position: relative !important;
@@ -3310,4 +3250,66 @@ html body .top-bar,
 .lazy-render-section {
     content-visibility: auto !important;
     contain-intrinsic-size: 1px 500px !important;
+}
+
+/* =====================================================================
+   RESPONSIVE LAYOUT ENGINE FOR CONFIGURATOR & DISTRIBUTION SECTIONS
+   ===================================================================== */
+.configurator-workspace-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+
+.configurator-dimensions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.configurator-select-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.distribution-main-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.95fr);
+    gap: 40px;
+    align-items: center;
+}
+
+.distribution-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+@media (max-width: 992px) {
+    .configurator-workspace-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+    .distribution-main-grid {
+        grid-template-columns: 1fr !important;
+        gap: 36px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .configurator-dimensions-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+    .configurator-select-pair {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+    .distribution-features-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
 }
