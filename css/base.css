@@ -3313,3 +3313,138 @@ html body .top-bar,
         gap: 10px !important;
     }
 }
+
+/* =====================================================================
+   GLOBAL MASTER HEADER & NAVBAR RESPONSIVE ENGINE (ZERO OVERFLOW)
+   ===================================================================== */
+.site-header,
+header.site-header {
+    width: 100% !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(7, 21, 38, 0.06) !important;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+}
+
+.site-header .container.header-container,
+.site-header .header-container,
+.header-container {
+    max-width: 1440px !important;
+    width: min(100% - 24px, 1440px) !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 8px 14px !important;
+    min-height: 72px !important;
+    height: auto !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+}
+
+.site-header .logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex-shrink: 0 !important;
+    min-width: auto !important;
+    text-decoration: none !important;
+}
+
+.site-header .logo-img {
+    height: 44px !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
+
+.site-header .logo-text .company-name {
+    font-size: 0.82rem !important;
+    font-weight: 900 !important;
+    color: #071526 !important;
+    line-height: 1.15 !important;
+    white-space: nowrap !important;
+}
+
+.site-header .nav-links {
+    display: flex !important;
+    align-items: center !important;
+    gap: clamp(6px, 0.8vw, 14px) !important;
+    flex-wrap: nowrap !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-shrink: 1 !important;
+}
+
+.site-header .nav-links > a:not(.btn-primary),
+.site-header .nav-dropdown summary {
+    font-size: clamp(0.76rem, 0.8vw, 0.85rem) !important;
+    font-weight: 700 !important;
+    color: #1e293b !important;
+    padding: 6px 4px !important;
+    white-space: nowrap !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+
+.site-header .nav-links .btn-primary {
+    padding: 8px 16px !important;
+    font-size: 0.82rem !important;
+    font-weight: 800 !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    margin-left: 4px !important;
+    border-radius: 6px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #ffffff !important;
+    background: #ef3438 !important;
+    border: 1px solid #ef3438 !important;
+    text-decoration: none !important;
+}
+
+.site-header .nav-links .btn-primary:hover {
+    background: #cc2226 !important;
+    border-color: #cc2226 !important;
+}
+
+/* Switch to mobile hamburger navigation earlier (1200px) so items never clip or wrap */
+@media (max-width: 1200px) {
+    .site-header .nav-links {
+        display: none !important;
+    }
+    .site-header .hamburger,
+    .hamburger {
+        display: block !important;
+        background: transparent !important;
+        border: none !important;
+        font-size: 24px !important;
+        color: #071526 !important;
+        cursor: pointer !important;
+        padding: 6px !important;
+    }
+    .site-header .nav-links.active {
+        display: flex !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: #ffffff !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 20px 24px !important;
+        box-shadow: 0 20px 50px rgba(7, 21, 38, 0.18) !important;
+        border-top: 1px solid #e2e8f0 !important;
+        z-index: 99999 !important;
+        gap: 12px !important;
+    }
+    .site-header .nav-links.active .btn-primary {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 12px 20px !important;
+        margin-top: 8px !important;
+    }
+}
