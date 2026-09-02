@@ -7,10 +7,11 @@
     "tempmail.com",
     "guerrillamail.com",
     "yopmail.com",
-    "sharklasers.com"
+    "sharklasers.com",
+    "throwawaymail.com",
+    "burnermail.io"
   ];
 
-  const freeDomains = ["gmail.com", "yahoo.com", "outlook.com", "hotmail.com", "icloud.com", "proton.me"];
   const spamWords = ["casino", "crypto", "loan offer", "viagra", "betting", "telegram promo"];
 
   function track(name, payload) {
@@ -39,7 +40,7 @@
   function setFieldError(field, message) {
     field.classList.add("has-error");
     field.setAttribute("aria-invalid", "true");
-    let error = field.parentElement && field.parentElement.querySelector(`.form-field-error[data-for="${field.name}"]`);
+    let error = field.parentElement && field.parentElement.querySelector(".form-field-error[data-for=\"" + field.name + "\"]");
     if (!error && field.parentElement) {
       error = document.createElement("small");
       error.className = "form-field-error";
@@ -70,8 +71,7 @@
     const errors = [];
     const fields = visibleFields(form);
     const email = form.querySelector("input[type='email'], input[name*='email' i]");
-    const phone = form.querySelector("input[type='tel'], input[name*='phone' i]");
-    const company = form.querySelector("input[name*='company' i], input[name*='organization' i]");
+    const phone = form.querySelector("input[type='tel'], input[name*='phone' i], input[name*='mobile' i]");
     const message = form.querySelector("textarea, input[name*='message' i], input[name*='detail' i]");
     const honeypot = form.querySelector("input[name='bot-field']");
 
@@ -98,9 +98,9 @@
 
     if (phone && phone.value.trim()) {
       const normalized = phone.value.replace(/[^\d+]/g, "");
-      const validPhone = /^\+?[0-9]{8,15}$/.test(normalized);
+      const validPhone = /^[6-9]\d{9}$/.test(normalized) || /^\+91[6-9]\d{9}$/.test(normalized) || /^\+?[0-9]{10,15}$/.test(normalized);
       if (!validPhone) {
-        errors.push({ field: phone, message: "Please enter a valid phone number with country code if possible." });
+        errors.push({ field: phone, message: "Please enter a valid 10-digit mobile number." });
       }
     }
 
@@ -124,9 +124,15 @@
 
   function initFormValidation() {
     document.querySelectorAll("form").forEach((form) => {
+      // Skip custom-handled forms (Room configurator proposal & Distribution desk)
+      if (form.id === "consultantProposalForm" || form.id === "distributionSupplyForm" || form.dataset.customHandler === "true") {
+        return;
+      }
+
       if (form.dataset.validationBound === "true") return;
       form.dataset.validationBound = "true";
       form.setAttribute("novalidate", "novalidate");
+
       form.addEventListener("submit", (event) => {
         clearErrors(form);
         enrichHiddenFields(form);
@@ -135,64 +141,68 @@
 
         if (errors.length) {
           event.preventDefault();
-          event.stopImmediatePropagation();
           errors.forEach((error) => {
             if (error.field && error.field.type !== "hidden") setFieldError(error.field, error.message);
           });
           const box = statusBox(form);
           box.className = "form-submit-status is-error";
-          box.textContent = "Please correct the highlighted details before submitting.";
+          box.textContent = "Please correct the highlighted fields before submitting.";
           track("lead_form_validation_failed", { form_name: label, error_count: errors.length, page_url: window.location.href });
-          form.dispatchEvent(new CustomEvent("gpspl:lead-form-error", { bubbles: true, detail: { errors } }));
           const firstVisibleError = errors.find((error) => error.field && error.field.type !== "hidden");
           if (firstVisibleError) firstVisibleError.field.focus({ preventScroll: false });
           return;
+        }
+
+        // Form is valid - process submission
+        event.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          if (submitBtn.tagName === "INPUT") submitBtn.value = "Sending...";
+          else submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting Enquiry...';
         }
 
         const box = statusBox(form);
         box.className = "form-submit-status is-success";
         box.textContent = "Submitting your enquiry securely...";
         track("lead_form_validated", { form_name: label, page_url: window.location.href });
-        form.dispatchEvent(new CustomEvent("gpspl:lead-form-success", { bubbles: true, detail: { form_name: label } }));
 
-        if (!form.dataset.gpsplProcessed) {
-          event.preventDefault();
-          form.dataset.gpsplProcessed = "true";
+        const formData = new FormData(form);
+        const leadData = {
+          category: form.getAttribute("name") && form.getAttribute("name").includes("career") ? "CAREER APPLICATION" : "CONTACT INQUIRY",
+          name: formData.get("name") || formData.get("full_name") || "Website Inquirer",
+          email: formData.get("email") || "",
+          phone: formData.get("phone") || "",
+          company: formData.get("company") || formData.get("current_city") || "Not Specified",
+          source: label,
+          details: Array.from(formData.entries()).filter(([k]) => !k.startsWith("bot-") && k !== "page_url" && k !== "submitted_at").map(([k, v]) => k + ": " + v).join(" | "),
+          page: window.location.pathname
+        };
 
-          const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
-          if (submitBtn) {
-            submitBtn.disabled = true;
-            if (submitBtn.tagName === "INPUT") submitBtn.value = "Sending...";
-            else submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-          }
+        // 1. Dispatch lead in background
+        const dispatchPromise = (window.GPSPL_LeadCapture && typeof window.GPSPL_LeadCapture.dispatchLead === "function")
+          ? window.GPSPL_LeadCapture.dispatchLead(leadData)
+          : Promise.resolve();
 
-          const formData = new FormData(form);
-          const leadData = {
-            category: form.getAttribute("name")?.includes("career") ? "CAREER APPLICATION" : "CONTACT INQUIRY",
-            name: formData.get("name") || formData.get("full_name") || "Website Inquirer",
-            email: formData.get("email") || "",
-            phone: formData.get("phone") || "",
-            company: formData.get("company") || formData.get("current_city") || "Not Specified",
-            source: label,
-            details: Array.from(formData.entries()).filter(([k]) => !k.startsWith("bot-")).map(([k, v]) => `${k}: ${v}`).join(" | "),
-            page: window.location.pathname
-          };
+        // 2. Netlify static form post
+        const netlifyPromise = fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
+        }).catch(() => null);
 
-          const dispatchPromise = (window.GPSPL_LeadCapture && typeof window.GPSPL_LeadCapture.dispatchLead === "function")
-            ? window.GPSPL_LeadCapture.dispatchLead(leadData)
-            : Promise.resolve();
+        // 3. Fast guarantee: Redirect to /thank-you within maximum 1.5 seconds regardless of network speed
+        const timeoutPromise = new Promise((resolve) => setTimeout(resolve, 1500));
 
-          const netlifyPromise = fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams(formData).toString()
-          }).catch(() => null);
-
-          Promise.allSettled([dispatchPromise, netlifyPromise]).then(() => {
-            window.location.href = form.getAttribute("action") || "/thank-you";
-          });
-        }
-      }, { capture: true });
+        Promise.race([
+          Promise.allSettled([dispatchPromise, netlifyPromise]),
+          timeoutPromise
+        ]).finally(() => {
+          const action = form.getAttribute("action") || "/thank-you";
+          window.location.href = action;
+        });
+      });
     });
   }
 

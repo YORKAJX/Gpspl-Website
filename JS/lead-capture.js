@@ -180,7 +180,8 @@
         );
 
         try {
-            await Promise.allSettled(promises);
+            const timeout = new Promise(resolve => setTimeout(resolve, 1200));
+            await Promise.race([Promise.allSettled(promises), timeout]);
         } catch(e) {}
 
         return newLead;
