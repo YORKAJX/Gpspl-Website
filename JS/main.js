@@ -630,3 +630,13 @@ document.addEventListener("DOMContentLoaded", () => {
         initIndustryTabs();
     }
 })();
+
+// Inject Recurring AV Intake Popup across all pages
+(function() {
+    if (!document.querySelector('script[src*="av-intake-popup.js"]')) {
+        const s = document.createElement('script');
+        s.src = '/JS/av-intake-popup.js?v=20260903-popup-fix';
+        s.defer = true;
+        document.head.appendChild(s);
+    }
+})();
