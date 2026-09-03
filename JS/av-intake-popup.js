@@ -45,6 +45,13 @@
         `;
 
         document.body.appendChild(toast);
+        // Hide toast if user opens AI chat so they never compete
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.gpspl-chat-launcher') || e.target.closest('#gpspl-ai-chat-root')) {
+                dismissToast();
+            }
+        });
+
         toastElement = toast;
 
         // Attach event listeners

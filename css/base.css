@@ -3657,7 +3657,7 @@ header.site-header {
    ========================================================================== */
 .av-engineer-toast {
     position: fixed;
-    bottom: 24px;
+    bottom: 92px;
     right: 24px;
     width: min(calc(100vw - 32px), 420px);
     background: linear-gradient(145deg, #071526 0%, #0d223f 100%);
@@ -3796,7 +3796,7 @@ header.site-header {
 
 @media (max-width: 640px) {
     .av-engineer-toast {
-        bottom: 12px;
+        bottom: 84px;
         right: 12px;
         left: 12px;
         width: auto;
