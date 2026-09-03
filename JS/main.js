@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     loadModule("header-container", "/modules/header.html?v=20260818");
-    loadModule("footer-container", "/modules/footer.html?v=20260818");
+    loadModule("footer-container", "/modules/footer.html?v=20260903-ribbon-fix");
     ensureFormValidation();
 
     function ensureFormValidation() {

@@ -3448,3 +3448,205 @@ header.site-header {
         margin-top: 8px !important;
     }
 }
+
+/* =====================================================================
+   ENTERPRISE FOOTER MEGA-DIRECTORY & AUTHORITY TRUST RIBBON (Aug 2026)
+   ===================================================================== */
+.footer-enterprise-directory {
+    width: 100% !important;
+    background: linear-gradient(180deg, #071526 0%, #050e1a 100%) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    clear: both !important;
+}
+
+.footer-enterprise-directory .directory-container {
+    max-width: 1320px !important;
+    width: min(100% - 32px, 1320px) !important;
+    margin: 0 auto !important;
+    padding: 48px 0 38px !important;
+    box-sizing: border-box !important;
+}
+
+.footer-enterprise-directory .directory-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: clamp(20px, 2.5vw, 36px) !important;
+    align-items: start !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.footer-enterprise-directory .directory-col {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    min-width: 0 !important;
+}
+
+.footer-enterprise-directory .col-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding-bottom: 12px !important;
+    border-bottom: 2px solid rgba(239, 52, 56, 0.85) !important;
+    width: 100% !important;
+}
+
+.footer-enterprise-directory .col-header i {
+    color: #ef3438 !important;
+    font-size: 0.95rem !important;
+    flex-shrink: 0 !important;
+}
+
+.footer-enterprise-directory .col-header h3 {
+    color: #ffffff !important;
+    font-size: 0.82rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.footer-enterprise-directory .col-links {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+}
+
+.footer-enterprise-directory .col-links li {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.footer-enterprise-directory .col-links a {
+    color: #94a3b8 !important;
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.footer-enterprise-directory .col-links a i {
+    font-size: 0.62rem !important;
+    color: rgba(239, 52, 56, 0.6) !important;
+    transition: transform 0.2s ease, color 0.2s ease !important;
+}
+
+.footer-enterprise-directory .col-links a:hover {
+    color: #ffffff !important;
+    transform: translateX(4px) !important;
+}
+
+.footer-enterprise-directory .col-links a:hover i {
+    color: #ef3438 !important;
+    transform: translateX(2px) !important;
+}
+
+/* Bottom Authority Ribbon */
+.footer-trust-ribbon {
+    width: 100% !important;
+    background: rgba(11, 23, 39, 0.75) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+    padding: 18px 0 !important;
+    box-sizing: border-box !important;
+}
+
+.footer-trust-ribbon .ribbon-container {
+    max-width: 1320px !important;
+    width: min(100% - 32px, 1320px) !important;
+    margin: 0 auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+}
+
+.footer-trust-ribbon .ribbon-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    padding: 6px 10px !important;
+    box-sizing: border-box !important;
+}
+
+.footer-trust-ribbon .ribbon-icon {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 10px !important;
+    background: rgba(239, 52, 56, 0.12) !important;
+    border: 1px solid rgba(239, 52, 56, 0.25) !important;
+    color: #ef3438 !important;
+    display: grid !important;
+    place-items: center !important;
+    font-size: 1rem !important;
+    flex-shrink: 0 !important;
+    transition: transform 0.25s ease, background 0.25s ease !important;
+}
+
+.footer-trust-ribbon .ribbon-item:hover .ribbon-icon {
+    transform: scale(1.08) !important;
+    background: rgba(239, 52, 56, 0.22) !important;
+}
+
+.footer-trust-ribbon .ribbon-text {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+    min-width: 0 !important;
+}
+
+.footer-trust-ribbon .ribbon-text strong {
+    color: #ffffff !important;
+    font-size: 0.82rem !important;
+    font-weight: 750 !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+}
+
+.footer-trust-ribbon .ribbon-text span {
+    color: #94a3b8 !important;
+    font-size: 0.72rem !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+}
+
+@media (max-width: 1024px) {
+    .footer-enterprise-directory .directory-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 32px !important;
+    }
+    .footer-trust-ribbon .ribbon-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer-enterprise-directory .directory-container {
+        padding: 32px 0 24px !important;
+    }
+    .footer-enterprise-directory .directory-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+    .footer-trust-ribbon .ribbon-container {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+    .footer-trust-ribbon .ribbon-item {
+        padding: 4px 0 !important;
+    }
+}
