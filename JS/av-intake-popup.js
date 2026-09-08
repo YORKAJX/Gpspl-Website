@@ -1,7 +1,7 @@
 /* ==========================================================================
-   GPSPL RECURRING AV PROJECT DISCOVERY BOTTOM STRIP BANNER
-   Cookie-style horizontal bottom bar covering half length.
-   Triggers immediately on load, then re-prompts every 30 seconds upon dismissal.
+   GPSPL AV PROJECT DISCOVERY BOTTOM STRIP BANNER
+   Compact horizontal bottom bar covering half website length.
+   Closes permanently upon user dismissal.
    ========================================================================== */
 (function() {
     // Do not show on the discovery page itself or the thank-you confirmation page
@@ -10,9 +10,14 @@
         return;
     }
 
+    // If user previously closed the banner in this session, keep it closed ("band ho jaye")
+    try {
+        if (sessionStorage.getItem('gpspl_av_strip_dismissed') === '1') {
+            return;
+        }
+    } catch (e) {}
+
     let toastElement = null;
-    let toastTimer = null;
-    const INTERVAL_MS = 30000; // 30 seconds
 
     function createToast() {
         if (document.getElementById('avEngineerToast')) return;
@@ -32,7 +37,7 @@
                     </span>
                     <div class="av-strip-text">
                         <strong>Planning an AV, Sound, or Video Wall Setup?</strong>
-                        <span>Mandirs, Hospitals, Malls, NOC/SOC, Auditoriums &amp; Boardrooms. Let our engineers draft your design.</span>
+                        <span>Mandirs, Hospitals, Malls, NOC/SOC, Auditoriums &amp; Boardrooms.</span>
                     </div>
                 </div>
                 <div class="av-strip-right">
@@ -44,7 +49,7 @@
                         <i class="fas fa-phone-alt" aria-hidden="true"></i>
                         <span>+91 93100 92963</span>
                     </a>
-                    <button type="button" class="av-strip-close" id="avToastCloseBtn" aria-label="Close notification">&times;</button>
+                    <button type="button" class="av-strip-close" id="avToastCloseBtn" aria-label="Close notification" title="Close">&times;</button>
                 </div>
             </div>
         `;
@@ -54,18 +59,18 @@
         // Hide banner if user opens AI chat so they never compete
         document.addEventListener('click', (e) => {
             if (e.target.closest('.gpspl-chat-launcher') || e.target.closest('#gpspl-ai-chat-root')) {
-                dismissToast();
+                dismissBanner(false);
             }
         });
 
         toastElement = toast;
 
-        // Attach event listeners
+        // When user clicks close (✕), it closes permanently ("band ho jaye")
         const closeBtn = document.getElementById('avToastCloseBtn');
         if (closeBtn) {
             closeBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                dismissToast();
+                dismissBanner(true);
             });
         }
 
@@ -82,7 +87,7 @@
         }
     }
 
-    function showToast() {
+    function showBanner() {
         if (!toastElement) {
             createToast();
         }
@@ -91,23 +96,29 @@
         }
     }
 
-    function dismissToast() {
+    function dismissBanner(permanent = true) {
         if (toastElement) {
             toastElement.classList.remove('is-visible');
+            setTimeout(() => {
+                if (toastElement && toastElement.parentNode) {
+                    toastElement.parentNode.removeChild(toastElement);
+                    toastElement = null;
+                }
+            }, 350);
         }
-        // Clear any existing timer and schedule next prompt in 30 seconds
-        if (toastTimer) clearTimeout(toastTimer);
-        toastTimer = setTimeout(() => {
-            showToast();
-        }, INTERVAL_MS);
+        if (permanent) {
+            try {
+                sessionStorage.setItem('gpspl_av_strip_dismissed', '1');
+            } catch (e) {}
+        }
     }
 
-    // Initial trigger: Immediately after page load (1.2s delay for smooth page render)
+    // Trigger after initial smooth page load (1.2s delay)
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(showToast, 1200);
+            setTimeout(showBanner, 1200);
         });
     } else {
-        setTimeout(showToast, 1200);
+        setTimeout(showBanner, 1200);
     }
 })();
