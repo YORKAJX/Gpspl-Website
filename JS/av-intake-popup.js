@@ -1,5 +1,6 @@
 /* ==========================================================================
-   GPSPL RECURRING AV PROJECT DISCOVERY TOAST POPUP
+   GPSPL RECURRING AV PROJECT DISCOVERY BOTTOM STRIP BANNER
+   Cookie-style horizontal bottom bar covering half length.
    Triggers immediately on load, then re-prompts every 30 seconds upon dismissal.
    ========================================================================== */
 (function() {
@@ -18,34 +19,39 @@
 
         const toast = document.createElement('div');
         toast.id = 'avEngineerToast';
-        toast.className = 'av-engineer-toast';
+        toast.className = 'av-bottom-strip-banner';
         toast.setAttribute('role', 'dialog');
         toast.setAttribute('aria-label', 'AV Project Discovery Consultation');
 
         toast.innerHTML = `
-            <button type="button" class="av-toast-close" id="avToastCloseBtn" aria-label="Close notification">&times;</button>
-            <div class="av-toast-badge">
-                <span class="pulse-dot"></span>
-                <span>FOR ALL YOUR AV &amp; IT INTEGRATION NEEDS</span>
-            </div>
-            <h3 class="av-toast-title">Planning an AV, Sound, or Video Wall Setup?</h3>
-            <p class="av-toast-desc">
-                Mandirs, Hospitals, Malls, Command Centers (NOC/SOC), Auditoriums &amp; Boardrooms. Let our senior systems engineers draft your turnkey design &amp; BOQ.
-            </p>
-            <div class="av-toast-actions">
-                <a href="/av-project-discovery-consultation" class="av-toast-btn-primary" id="avToastActionBtn">
-                    <span>Let Our Engineers Know</span>
-                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                </a>
-                <a href="tel:+919310092963" class="av-toast-phone-link">
-                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
-                    <span>Direct Hotline: +91 93100 92963</span>
-                </a>
+            <div class="av-strip-inner">
+                <div class="av-strip-left">
+                    <span class="av-strip-badge">
+                        <span class="pulse-dot"></span>
+                        <span>ALL AV &amp; IT NEEDS</span>
+                    </span>
+                    <div class="av-strip-text">
+                        <strong>Planning an AV, Sound, or Video Wall Setup?</strong>
+                        <span>Mandirs, Hospitals, Malls, NOC/SOC, Auditoriums &amp; Boardrooms. Let our engineers draft your design.</span>
+                    </div>
+                </div>
+                <div class="av-strip-right">
+                    <a href="/av-project-discovery-consultation" class="av-strip-btn" id="avToastActionBtn">
+                        <span>Let Our Engineers Know</span>
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                    <a href="tel:+919310092963" class="av-strip-phone" title="Call Senior Engineers">
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        <span>+91 93100 92963</span>
+                    </a>
+                    <button type="button" class="av-strip-close" id="avToastCloseBtn" aria-label="Close notification">&times;</button>
+                </div>
             </div>
         `;
 
         document.body.appendChild(toast);
-        // Hide toast if user opens AI chat so they never compete
+
+        // Hide banner if user opens AI chat so they never compete
         document.addEventListener('click', (e) => {
             if (e.target.closest('.gpspl-chat-launcher') || e.target.closest('#gpspl-ai-chat-root')) {
                 dismissToast();

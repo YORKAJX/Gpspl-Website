@@ -3653,76 +3653,70 @@ header.site-header {
 
 
 /* ==========================================================================
-   RECURRING SLIDE-UP AV ENGINEER INTAKE POPUP
+   RECURRING SLIDE-UP AV ENGINEER BOTTOM STRIP BANNER (COOKIE STYLE - HALF LENGTH)
    ========================================================================== */
-.av-engineer-toast {
+.av-bottom-strip-banner {
     position: fixed;
-    bottom: 92px;
-    right: 24px;
-    width: min(calc(100vw - 32px), 420px);
-    background: linear-gradient(145deg, #071526 0%, #0d223f 100%);
-    border: 1.5px solid rgba(239, 52, 56, 0.5);
-    border-radius: 18px;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.08);
-    padding: 22px 24px;
+    bottom: 0;
+    left: 0;
+    width: min(100%, 780px);
+    background: linear-gradient(135deg, #071526 0%, #0d274a 100%);
+    border-top: 2px solid #ef3438;
+    border-right: 1.5px solid rgba(239, 52, 56, 0.4);
+    border-radius: 0 16px 0 0;
+    box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.45);
+    padding: 10px 18px;
     z-index: 9998;
     color: #ffffff;
-    transform: translateY(140%);
+    transform: translateY(110%);
     opacity: 0;
     pointer-events: none;
-    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
     box-sizing: border-box;
 }
 
-.av-engineer-toast.is-visible {
+.av-bottom-strip-banner.is-visible {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
 }
 
-.av-toast-close {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #cbd5e1;
-    display: grid;
-    place-items: center;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
+.av-strip-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
 }
 
-.av-toast-close:hover {
-    background: #ef3438;
-    border-color: #ef3438;
-    color: #ffffff;
-    transform: scale(1.1);
+.av-strip-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    flex: 1;
 }
 
-.av-toast-badge {
+.av-strip-badge {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 4px 10px;
+    gap: 5px;
+    padding: 3px 8px;
     background: rgba(239, 52, 56, 0.2);
     border: 1px solid rgba(239, 52, 56, 0.5);
     border-radius: 999px;
-    font-size: 0.68rem;
+    font-size: 0.62rem;
     font-weight: 800;
     color: #ff8589;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
-.av-toast-badge span.pulse-dot {
-    width: 6px;
-    height: 6px;
+.av-strip-badge span.pulse-dot {
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background: #ef3438;
     animation: avPulse 1.8s infinite;
@@ -3734,72 +3728,119 @@ header.site-header {
     100% { transform: scale(0.9); opacity: 0.7; }
 }
 
-.av-toast-title {
-    font-size: 1.12rem;
+.av-strip-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 2px;
+}
+
+.av-strip-text strong {
+    font-size: 0.86rem;
     font-weight: 850;
     color: #ffffff;
-    line-height: 1.28;
-    margin: 0 0 8px;
-    padding-right: 28px;
+    line-height: 1.25;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.av-toast-desc {
-    font-size: 0.82rem;
-    line-height: 1.55;
+.av-strip-text span {
+    font-size: 0.73rem;
     color: #cbd5e1;
-    margin: 0 0 16px;
+    line-height: 1.35;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.av-toast-actions {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 8px;
-}
-
-.av-toast-btn-primary {
+.av-strip-right {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.av-strip-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     background: #ef3438;
     color: #ffffff !important;
     text-decoration: none;
-    font-size: 0.86rem;
-    font-weight: 800;
-    padding: 11px 16px;
-    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 850;
+    padding: 8px 14px;
+    border-radius: 6px;
+    white-space: nowrap;
     transition: background 0.2s ease, transform 0.2s ease;
-    text-align: center;
-    box-shadow: 0 6px 18px rgba(239, 52, 56, 0.35);
+    box-shadow: 0 4px 12px rgba(239, 52, 56, 0.35);
 }
 
-.av-toast-btn-primary:hover {
+.av-strip-btn:hover {
     background: #d92226;
     transform: translateY(-1px);
 }
 
-.av-toast-phone-link {
-    display: flex;
+.av-strip-phone {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 6px;
+    gap: 5px;
     color: #94a3b8;
     text-decoration: none;
-    font-size: 0.76rem;
+    font-size: 0.74rem;
     font-weight: 700;
+    white-space: nowrap;
     transition: color 0.2s ease;
 }
 
-.av-toast-phone-link:hover {
+.av-strip-phone:hover {
     color: #ffffff;
 }
 
-@media (max-width: 640px) {
-    .av-engineer-toast {
-        bottom: 84px;
-        right: 12px;
-        left: 12px;
-        width: auto;
-        padding: 18px 20px;
+.av-strip-close {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #cbd5e1;
+    display: grid;
+    place-items: center;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.av-strip-close:hover {
+    background: #ef3438;
+    border-color: #ef3438;
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+    .av-bottom-strip-banner {
+        width: 100%;
+        border-radius: 12px 12px 0 0;
+        border-right: none;
+        padding: 10px 14px;
+    }
+    .av-strip-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    .av-strip-text strong,
+    .av-strip-text span {
+        white-space: normal;
+    }
+    .av-strip-right {
+        justify-content: space-between;
+    }
+    .av-strip-btn {
+        flex: 1;
+        justify-content: center;
     }
 }
