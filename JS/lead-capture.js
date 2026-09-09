@@ -763,3 +763,219 @@
     });
 
 })();
+
+
+    // -----------------------------------------------------------------
+    // 4. INTERACTIVE 60-SECOND PAN-INDIA QUICK BOQ MODAL ENGINE
+    // -----------------------------------------------------------------
+    function createQuickBoqModal() {
+        if (document.getElementById('gpspl-quick-boq-modal')) return;
+
+        const overlay = document.createElement('div');
+        overlay.id = 'gpspl-quick-boq-modal';
+        overlay.style.cssText = `
+            position: fixed;
+            inset: 0;
+            z-index: 9999999;
+            background: rgba(7, 21, 38, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        `;
+
+        overlay.innerHTML = `
+            <div class="gpspl-quick-boq-card" style="background: #ffffff; border-radius: 20px; width: 100%; max-width: 520px; padding: 28px 24px; box-shadow: 0 25px 60px rgba(0,0,0,0.4); position: relative; border: 1.5px solid rgba(239, 52, 56, 0.3); font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; box-sizing: border-box; max-height: 92vh; overflow-y: auto;">
+                <button type="button" id="gpspl-quick-boq-close" style="position: absolute; top: 16px; right: 16px; background: #f1f5f9; border: none; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; color: #64748b; font-size: 16px; cursor: pointer; transition: all 0.2s ease;" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div style="margin-bottom: 20px; text-align: center;">
+                    <span style="background: rgba(239, 52, 56, 0.12); color: #ef3438; font-size: 0.74rem; font-weight: 850; padding: 4px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; margin-bottom: 8px;">
+                        <i class="fas fa-bolt"></i> Pan-India Fast BOQ Estimator
+                    </span>
+                    <h3 style="color: #071526; font-size: 1.35rem; font-weight: 900; margin: 0 0 6px; line-height: 1.25;">Get Instant AV Project Cost &amp; BOQ</h3>
+                    <p style="color: #64748b; font-size: 0.84rem; line-height: 1.45; margin: 0;">Direct OEM pricing, 3D room schematics &amp; 4-hour SLA support across India.</p>
+                </div>
+
+                <div id="gpspl-boq-success" style="display: none; text-align: center; padding: 20px 0;">
+                    <div style="width: 60px; height: 60px; background: #dcfce7; color: #16a34a; border-radius: 50%; display: grid; place-items: center; font-size: 1.8rem; margin: 0 auto 14px;">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h4 style="color: #071526; font-size: 1.25rem; font-weight: 850; margin: 0 0 8px;">BOQ Request Received!</h4>
+                    <p style="color: #475569; font-size: 0.88rem; line-height: 1.5; margin: 0 0 16px;">
+                        Our senior AV systems engineer will review your room specs and connect via WhatsApp/Call within 30 minutes with the estimated pricing.
+                    </p>
+                    <a id="gpspl-boq-wa-direct" href="#" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #22c55e; color: #ffffff; padding: 12px 20px; border-radius: 8px; font-weight: 850; text-decoration: none; font-size: 0.92rem; box-shadow: 0 4px 14px rgba(34,197,94,0.35);">
+                        <i class="fab fa-whatsapp"></i> Chat with Senior Engineer on WhatsApp
+                    </a>
+                </div>
+
+                <form id="gpspl-quick-boq-form" style="display: flex; flex-direction: column; gap: 14px;">
+                    <div>
+                        <label style="display: block; font-size: 0.8rem; font-weight: 800; color: #334155; margin-bottom: 6px;">1. Select Required Solution *</label>
+                        <select id="boq-solution-type" required style="width: 100%; padding: 10px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem; font-weight: 600; color: #0f172a; background: #f8fafc; outline: none; box-sizing: border-box;">
+                            <option value="Active LED Video Wall">Active LED Video Wall (Indoor / Outdoor / COB)</option>
+                            <option value="Conference Room / Boardroom Setup">Conference Room / Boardroom Setup (Teams/Zoom Rooms)</option>
+                            <option value="Huddle Room Video Conferencing">Huddle Room Video Conferencing (3-6 People)</option>
+                            <option value="Auditorium AV & Line Array Sound">Auditorium AV &amp; Acoustic Sound Tuning</option>
+                            <option value="Smart Classroom / Education AV">Smart Classroom &amp; Interactive Flat Panels</option>
+                            <option value="Command & Control Center (NOC/SOC)">Command &amp; Control Center (NOC/SOC 24/7)</option>
+                            <option value="Mandir / Religious Sanctuary Sound & LED">Mandir / Religious Sanctuary Audio &amp; LED</option>
+                            <option value="Hospital & Surgical OT Streaming">Hospital &amp; Surgical OT AV Integration</option>
+                            <option value="Enterprise AV AMC & Maintenance">Annual Maintenance Contract (AV AMC)</option>
+                        </select>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <div>
+                            <label style="display: block; font-size: 0.8rem; font-weight: 800; color: #334155; margin-bottom: 6px;">2. Room / Crowd Scale *</label>
+                            <select id="boq-room-scale" required style="width: 100%; padding: 10px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.86rem; font-weight: 600; color: #0f172a; background: #f8fafc; outline: none; box-sizing: border-box;">
+                                <option value="Small (4 - 10 people)">Small (4 - 10 people)</option>
+                                <option value="Medium (10 - 25 people)" selected>Medium (10 - 25 people)</option>
+                                <option value="Large (25 - 75 people)">Large (25 - 75 people)</option>
+                                <option value="Grand Auditorium (100 - 1500+ people)">Grand Hall (100 - 1500+)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display: block; font-size: 0.8rem; font-weight: 800; color: #334155; margin-bottom: 6px;">3. Project City *</label>
+                            <input type="text" id="boq-city" required placeholder="e.g. Mumbai, Delhi, Bengaluru" style="width: 100%; padding: 10px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.86rem; outline: none; box-sizing: border-box;">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label style="display: block; font-size: 0.8rem; font-weight: 800; color: #334155; margin-bottom: 4px;">4. Full Name *</label>
+                        <input type="text" id="boq-name" required placeholder="Your full name" style="width: 100%; padding: 10px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem; outline: none; box-sizing: border-box;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; font-size: 0.8rem; font-weight: 800; color: #334155; margin-bottom: 4px;">5. Mobile Number (10 Digits) *</label>
+                        <div style="display: flex; gap: 8px;">
+                            <span style="background: #f1f5f9; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 10px 12px; font-weight: 800; color: #475569; font-size: 0.88rem;">+91</span>
+                            <input type="tel" id="boq-phone" maxlength="10" pattern="[6-9][0-9]{9}" required placeholder="e.g. 98100 12345" style="width: 100%; padding: 10px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.88rem; outline: none; box-sizing: border-box;">
+                        </div>
+                        <span id="boq-phone-error" style="color: #ef4444; font-size: 0.76rem; display: none; margin-top: 3px;">Please enter a valid 10-digit mobile number.</span>
+                    </div>
+
+                    <button type="submit" id="boq-submit-btn" style="background: #ef3438; color: #ffffff; border: none; padding: 13px 20px; border-radius: 8px; font-size: 0.94rem; font-weight: 850; cursor: pointer; transition: all 0.2s ease; margin-top: 6px; box-shadow: 0 4px 14px rgba(239,52,56,0.35); display: flex; align-items: center; justify-content: center; gap: 8px;">
+                        <span>Get Instant BOQ &amp; Price Estimate &rarr;</span>
+                    </button>
+                    <p style="text-align: center; color: #94a3b8; font-size: 0.72rem; margin: 0;">100% Privacy Guaranteed &bull; Direct OEM Pricing &bull; Zero Spam</p>
+                </form>
+            </div>
+        `;
+
+        document.body.appendChild(overlay);
+
+        const closeBtn = document.getElementById('gpspl-quick-boq-close');
+        closeBtn.addEventListener('click', closeQuickBoqModal);
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closeQuickBoqModal();
+        });
+
+        const form = document.getElementById('gpspl-quick-boq-form');
+        form.addEventListener('submit', handleQuickBoqSubmit);
+    }
+
+    function openQuickBoqModal(defaultSolution) {
+        createQuickBoqModal();
+        const overlay = document.getElementById('gpspl-quick-boq-modal');
+        if (!overlay) return;
+
+        if (defaultSolution) {
+            const select = document.getElementById('boq-solution-type');
+            if (select) select.value = defaultSolution;
+        }
+
+        document.getElementById('gpspl-quick-boq-form').style.display = 'flex';
+        document.getElementById('gpspl-boq-success').style.display = 'none';
+
+        overlay.style.display = 'flex';
+        setTimeout(() => {
+            overlay.style.opacity = '1';
+        }, 10);
+    }
+
+    function closeQuickBoqModal() {
+        const overlay = document.getElementById('gpspl-quick-boq-modal');
+        if (!overlay) return;
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+        }, 250);
+    }
+
+    async function handleQuickBoqSubmit(e) {
+        e.preventDefault();
+        const phoneInput = document.getElementById('boq-phone');
+        const phoneError = document.getElementById('boq-phone-error');
+        const submitBtn = document.getElementById('boq-submit-btn');
+
+        const phone = phoneInput.value.trim();
+        if (!window.GPSPL_Validator.isValidPhone(phone)) {
+            phoneError.style.display = 'block';
+            phoneInput.focus();
+            return;
+        }
+        phoneError.style.display = 'none';
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting Request...';
+
+        const solution = document.getElementById('boq-solution-type').value;
+        const scale = document.getElementById('boq-room-scale').value;
+        const city = document.getElementById('boq-city').value.trim();
+        const name = document.getElementById('boq-name').value.trim();
+
+        const leadData = {
+            category: 'FAST_PROJECT_BOQ',
+            name: name,
+            phone: phone,
+            email: 'inquiry-lead@gpspl.co.in',
+            company: city + ' (Location)',
+            source: 'Quick BOQ Modal Estimator',
+            details: 'Solution: ' + solution + ' | Scale: ' + scale + ' | City: ' + city,
+            page: window.location.pathname
+        };
+
+        try {
+            await dispatchUniversalLead(leadData);
+        } catch(err) {}
+
+        // Set pre-filled WhatsApp link
+        const waMsg = encodeURIComponent('Hello GPSPL, I just requested a BOQ estimate for ' + solution + ' (' + scale + ') in ' + city + '. My name is ' + name + '. Please share the pricing.');
+        const waLink = document.getElementById('gpspl-boq-wa-direct');
+        waLink.href = 'https://wa.me/919310092963?text=' + waMsg;
+
+        document.getElementById('gpspl-quick-boq-form').style.display = 'none';
+        document.getElementById('gpspl-boq-success').style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Get Instant BOQ &amp; Price Estimate &rarr;';
+    }
+
+    // Attach trigger listeners to all quote/boq buttons across site
+    function attachBoqTriggers() {
+        document.querySelectorAll('.top-bar-cta-quote, .hero-btn[href*="boq"], a[href="#av-boq-calculator"], .av-strip-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                // If it is the discovery page link, allow normal navigation or modal
+                e.preventDefault();
+                openQuickBoqModal();
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            createQuickBoqModal();
+            attachBoqTriggers();
+        });
+    } else {
+        createQuickBoqModal();
+        attachBoqTriggers();
+    }
+    window.openQuickBoqModal = openQuickBoqModal;
