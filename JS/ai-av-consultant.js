@@ -1059,31 +1059,38 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
                     </div>
 
                     <div class="gpspl-wa-body">
-                        <a href="https://wa.me/919310092963?text=Hi%20GPSPL%2C%20I%20want%20to%20inquire%20about%20AV%20Solutions%2C%20Displays%20%26%20BOQ%20pricing." target="_blank" rel="noopener noreferrer" class="gpspl-wa-option">
+                        <a href="https://wa.me/919310092963?text=Hi%20GPSPL%2C%20I%20have%20an%20enterprise%20AV%20%2F%20Active%20LED%20%2F%20Boardroom%20requirement.%20Please%20share%20pricing%20and%20turnkey%20BOQ%20details." target="_blank" rel="noopener noreferrer" class="gpspl-wa-option">
                             <div class="gpspl-wa-option-info">
-                                <strong><i class="fas fa-comments" style="color: #25D366; margin-right: 6px;"></i> Sales &amp; BOQ Quotes</strong>
-                                <span>Displays, Video Walls &amp; VC</span>
+                                <strong><i class="fas fa-comments" style="color: #25D366; margin-right: 6px;"></i> Pan-India AV Projects &amp; BOQ</strong>
+                                <span>Active LED, Boardrooms &amp; Auditoriums</span>
                             </div>
                             <i class="fab fa-whatsapp"></i>
                         </a>
 
-                        <a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20need%20urgent%20AMC%20%2F%20Breakdown%20Technical%20Support." target="_blank" rel="noopener noreferrer" class="gpspl-wa-option">
+                        <a href="https://wa.me/919310092963?text=Hi%20GPSPL%2C%20I%20want%20to%20consult%20a%20senior%20systems%20engineer%20for%20an%20upcoming%20AV%20project." target="_blank" rel="noopener noreferrer" class="gpspl-wa-option">
                             <div class="gpspl-wa-option-info">
-                                <strong><i class="fas fa-wrench" style="color: #25D366; margin-right: 6px;"></i> AMC &amp; Technical Service</strong>
-                                <span>Support Desk &amp; Field Visit</span>
+                                <strong><i class="fas fa-headset" style="color: #25D366; margin-right: 6px;"></i> Talk to Senior AV Systems Engineer</strong>
+                                <span>Free 3D Layout &amp; Feasibility Check</span>
                             </div>
                             <i class="fab fa-whatsapp"></i>
                         </a>
 
-                        <a href="https://wa.me/919310092963?text=Hi%20GPSPL%20HR%2C%20I%20am%20inquiring%20about%20Career%20Openings%20at%20GPSPL." target="_blank" rel="noopener noreferrer" class="gpspl-wa-option">
+                        <a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20need%20urgent%20AV%20AMC%20or%20breakdown%20support%20for%20my%20facility." target="_blank" rel="noopener noreferrer" class="gpspl-wa-option">
                             <div class="gpspl-wa-option-info">
-                                <strong><i class="fas fa-briefcase" style="color: #25D366; margin-right: 6px;"></i> Careers &amp; Recruitment</strong>
-                                <span>Job Opportunities</span>
+                                <strong><i class="fas fa-wrench" style="color: #25D366; margin-right: 6px;"></i> Enterprise AMC &amp; 4-Hr SLA Support</strong>
+                                <span>Emergency Field Desk &amp; Spares</span>
                             </div>
                             <i class="fab fa-whatsapp"></i>
+                        </a>
+
+                        <a href="https://wa.me/919310092963?text=Hi%20GPSPL%20HR%2C%20I%20am%20inquiring%20about%20Career%20Openings%20at%20GPSPL." target="_blank" rel="noopener noreferrer" class="gpspl-wa-option" style="opacity: 0.85; border-top: 1px dashed #e2e8f0; padding-top: 6px;">
+                            <div class="gpspl-wa-option-info">
+                                <strong style="font-size: 0.82rem;"><i class="fas fa-briefcase" style="color: #64748b; margin-right: 6px;"></i> Careers &amp; Recruitment Desk</strong>
+                                <span style="font-size: 0.68rem;">Job Inquiries &amp; HR</span>
+                            </div>
+                            <i class="fab fa-whatsapp" style="font-size: 0.9rem;"></i>
                         </a>
                     </div>
-
                     <div class="gpspl-wa-footer">
                         <span>Typical reply time: &lt; 5 minutes</span>
                     </div>
