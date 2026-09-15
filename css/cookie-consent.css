@@ -1,0 +1,127 @@
+/* GPSPL DPDP & GDPR Compliant Cookie Consent Banner */
+.gpspl-cookie-banner {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    max-width: 500px;
+    margin: 0;
+    background: rgba(7, 21, 38, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-left: 4px solid #ef3438;
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    z-index: 999999;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #e2e8f0;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+}
+
+.gpspl-cookie-banner.active {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.gpspl-cookie-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.gpspl-cookie-header i {
+    color: #ef3438;
+    font-size: 1.1rem;
+}
+
+.gpspl-cookie-header h4 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+.gpspl-cookie-text {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: #94a3b8;
+    margin: 0 0 14px 0;
+}
+
+.gpspl-cookie-text a {
+    color: #38bdf8;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s;
+}
+
+.gpspl-cookie-text a:hover {
+    color: #ffffff;
+}
+
+.gpspl-cookie-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.gpspl-cookie-btn {
+    padding: 8px 18px;
+    font-size: 0.82rem;
+    font-weight: 750;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.gpspl-cookie-btn-accept {
+    background: #ef3438;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(239, 52, 56, 0.3);
+}
+
+.gpspl-cookie-btn-accept:hover {
+    background: #d8252f;
+    transform: translateY(-1px);
+}
+
+.gpspl-cookie-btn-decline {
+    background: rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.gpspl-cookie-btn-decline:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+@media (max-width: 640px) {
+    .gpspl-cookie-banner {
+        left: 12px;
+        right: 12px;
+        bottom: 84px; /* Above mobile sticky action bar */
+        padding: 16px 18px;
+    }
+
+    .gpspl-cookie-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .gpspl-cookie-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

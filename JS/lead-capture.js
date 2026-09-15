@@ -862,6 +862,9 @@
                         <span id="boq-phone-error" style="color: #ef4444; font-size: 0.76rem; display: none; margin-top: 3px;">Please enter a valid 10-digit mobile number.</span>
                     </div>
 
+                    <!-- Spam Bot Protection Honeypot -->
+                    <input type="text" name="b_field_honey" id="boq-honey" tabindex="-1" autocomplete="off" style="display:none !important; visibility:hidden !important; position:absolute; left:-9999px;" aria-hidden="true">
+
                     <button type="submit" id="boq-submit-btn" style="background: #ef3438; color: #ffffff; border: none; padding: 13px 20px; border-radius: 8px; font-size: 0.94rem; font-weight: 850; cursor: pointer; transition: all 0.2s ease; margin-top: 6px; box-shadow: 0 4px 14px rgba(239,52,56,0.35); display: flex; align-items: center; justify-content: center; gap: 8px;">
                         <span>Get Instant BOQ &amp; Price Estimate &rarr;</span>
                     </button>
@@ -912,6 +915,12 @@
 
     async function handleQuickBoqSubmit(e) {
         e.preventDefault();
+        const honeyInput = document.getElementById('boq-honey');
+        if (honeyInput && honeyInput.value.trim() !== '') {
+            // Silently drop spam submission
+            return;
+        }
+
         const phoneInput = document.getElementById('boq-phone');
         const phoneError = document.getElementById('boq-phone-error');
         const submitBtn = document.getElementById('boq-submit-btn');
