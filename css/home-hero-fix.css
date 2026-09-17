@@ -9695,6 +9695,7 @@ html body #home .hero-message-grid {
     margin: 0 auto !important;
     padding: 0 !important;
     box-sizing: border-box !important;
+    overflow: visible !important;
 }
 
 html body #home .hero-message-copy {
@@ -10126,6 +10127,25 @@ html body #home .hero-executive-card:hover {
     html body #home .hero-message-grid {
         grid-template-columns: 1fr !important;
         gap: 28px !important;
+        width: calc(100% - 32px) !important;
+        max-width: 100% !important;
+        overflow: visible !important;
+    }
+
+    /* Prevent horizontal scroll from hero on mobile */
+    html body #home.hero,
+    html body #home {
+        overflow-x: hidden !important;
+    }
+
+    /* Hero executive card — full width on mobile, never overflow */
+    html body #home .hero-executive-card,
+    html body main #home .hero-executive-card,
+    .hero-executive-card {
+        max-width: 100% !important;
+        width: 100% !important;
+        justify-self: stretch !important;
+        box-sizing: border-box !important;
     }
 
     html body #home .hero-calc-card,
@@ -10141,15 +10161,45 @@ html body #home .hero-executive-card:hover {
         width: 100% !important;
     }
 
+    /* Hero buttons — guaranteed white text + icon visibility on tablet/mobile */
     html body #home .hero-message-copy .hero-actions .hero-btn,
-    html body #home .hero-actions a {
+    html body #home .hero-actions a,
+    html body #home .hero-actions a.hero-btn,
+    html body #home .hero-actions a.btn-primary,
+    html body #home .hero-actions a.btn-secondary {
         width: 100% !important;
         min-width: 100% !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+    }
+
+    html body #home .hero-actions a span,
+    html body #home .hero-actions a i {
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
     }
 
     .partner-logo-item img {
         height: 18px !important;
         max-width: 75px !important;
+    }
+
+    /* Hero message copy never clips on mobile */
+    html body #home .hero-message-copy {
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    html body #home .hero-message-copy .main-headline {
+        max-width: 100% !important;
+        word-break: break-word !important;
+        hyphens: none !important;
+    }
+
+    html body #home .hero-message-copy .hero-description {
+        max-width: 100% !important;
+        width: 100% !important;
     }
 }
 

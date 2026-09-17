@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top AV System Integrator India | Conference Room Setup, Active LED Walls & Education AV | GPSPL</title>
     <meta name="description" content="Looking for turnkey AV solutions across India? GPSPL (Estd. 1997) engineers enterprise Conference Room Setups, Huddle Rooms, Active LED Video Walls, and Education AV Solutions with direct OEM pricing & 4-hour SLA.">
     <meta name="keywords" content="conference room setup, huddle room av solutions, education av solution, best av solution provider in india, active led wall price in india, corporate boardroom video conferencing setup, top av system integrators delhi ncr mumbai bangalore hyderabad, smart classroom setup cost, turnkey commercial av company, gpspl">
@@ -3099,6 +3101,16 @@
             var switchingItem = '4K Ultra-HD Structured Switching & Wall/Table Interface Matrix';
             var switchingSpecs = 'High-Speed HDMI 2.1 / USB-C 4K@60Hz 4:4:4 Distribution with Auto-Priority';
             var switchingBrands = checkedOems.filter(function(b){ return /Crestron|ATEN/i.test(b); }).join(' / ') || 'Crestron / ATEN Professional';
+            // Switching cost scaled per room size
+            if (scaleTier === 'huddle') {
+                switchingCost = 18000;
+            } else if (scaleTier === 'medium') {
+                switchingCost = 38000;
+            } else if (scaleTier === 'large') {
+                switchingCost = 72000;
+            } else {
+                switchingCost = 145000;
+            }
 
             var cablingLaborCost = 0;
 
