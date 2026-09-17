@@ -795,38 +795,74 @@
                     </div>
                 </form>
 
-                <!-- Dynamic Results / Confirmation Box (Hidden until submit) -->
+                <!-- Dynamic Results / Confirmation Box (Revealed ONLY AFTER submit) -->
                 <div id="boqOutputCard" class="boq-output-card" style="display: none;" aria-live="polite">
                     <div class="boq-output-header">
                         <div class="boq-output-status">
                             <span class="success-icon"><i class="fas fa-circle-check"></i></span>
                             <div>
-                                <h4>Custom BOQ Configuration Schedule Registered!</h4>
-                                <p id="boqSummaryHeadline">Equipment schedule tailored for your facility specifications</p>
+                                <h4>Official BOQ Configuration &amp; Equipment Schedule Generated</h4>
+                                <p id="boqSummaryHeadline">Custom engineering schedule tailored for your space</p>
                             </div>
                         </div>
-                        <span class="boq-assigned-badge"><i class="fas fa-user-tie"></i> Assigned AV Architect: Senior Systems Engineer, GPSPL</span>
+                        <span class="boq-assigned-badge"><i class="fas fa-user-tie"></i> Assigned AV Architect: Senior Systems Engineer, GPSPL (Nehru Place HQ)</span>
+                    </div>
+
+                    <!-- Revealed Pricing Banner (Only visible after contact details entered) -->
+                    <div class="boq-pricing-banner">
+                        <div class="boq-pricing-info">
+                            <span class="boq-pricing-badge"><i class="fas fa-calculator"></i> Estimated Turnkey Project Value</span>
+                            <div class="boq-price-val" id="boqPriceRangeDisplay">₹3,40,000 – ₹4,15,000*</div>
+                            <p class="boq-pricing-note-sub">*Estimated turnkey cost based on current Indian commercial AV market rates (2026). Includes Tier-1 OEM supply, high-speed structured cabling, rigid mounts, DSP calibration, and 1-year comprehensive on-site SLA warranty. Excl. 18% GST (ITC Eligible).</p>
+                        </div>
+                        <div class="boq-pricing-action">
+                            <button type="button" id="btnDownloadBoqPdf" class="btn-download-pdf-boq">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Download Official Itemized BOQ (PDF)</span>
+                            </button>
+                        </div>
                     </div>
 
                     <div class="boq-output-details-grid">
                         <div class="boq-output-col">
-                            <strong>Project Summary</strong>
+                            <strong>Project &amp; Client Scope</strong>
                             <ul id="boqSummaryList"></ul>
                         </div>
                         <div class="boq-output-col">
-                            <strong>Itemized Schedule Inclusions</strong>
-                            <ul class="boq-inclusions-list">
-                                <li><i class="fas fa-check"></i> Direct Tier-1 OEM Hardware Supply &amp; Bill of Materials</li>
-                                <li><i class="fas fa-check"></i> Structured High-Speed Audio/Video Cabling &amp; Rigid Brackets</li>
-                                <li><i class="fas fa-check"></i> On-Site Installation, Commissioning &amp; DSP Tuning</li>
-                                <li><i class="fas fa-check"></i> 1-Year Comprehensive On-Site Warranty &amp; 4-Hour SLA</li>
-                            </ul>
+                            <strong>Turnkey Cost Components Breakdown</strong>
+                            <ul id="boqCostBreakdownList" class="boq-breakdown-list"></ul>
+                        </div>
+                    </div>
+
+                    <!-- Itemized Equipment Schedule Table -->
+                    <div class="boq-schedule-table-wrap">
+                        <div class="boq-table-header-title">
+                            <strong><i class="fas fa-list-check" style="color: #ef3438;"></i> Itemized Bill of Materials (BOM) &amp; Technical Schedule</strong>
+                            <span class="bom-badge">Official GPSPL Engineering Schedule</span>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="boq-items-table" id="boqItemsTable">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 22%;">Subsystem Category</th>
+                                        <th style="width: 46%;">Equipment Description &amp; Technical Specifications</th>
+                                        <th style="width: 20%;">Approved OEM Brands</th>
+                                        <th style="width: 12%; text-align: center;">Qty</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="boqTableBody">
+                                    <!-- Populated dynamically via JS calculation -->
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 
                     <div class="boq-output-cta-row">
+                        <button type="button" id="btnDownloadBoqPdfBottom" class="btn-download-pdf-boq">
+                            <i class="fas fa-file-pdf"></i> Download Official BOQ (PDF)
+                        </button>
                         <a href="#" id="boqWhatsAppFastTrack" class="btn-whatsapp-boq" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-whatsapp"></i> Receive Itemized PDF &amp; Direct OEM Quotation on WhatsApp
+                            <i class="fab fa-whatsapp"></i> Send BOQ to Engineer on WhatsApp
                         </a>
                         <a href="tel:+919310092963" class="btn-call-boq">
                             <i class="fas fa-phone-alt"></i> Speak to Assigned Engineer (+91 93100 92963)
@@ -2874,17 +2910,54 @@
     <script src="JS/main.js?v=20260914-seo-lead-v1" defer></script>
     <script src="JS/room-configurator.js?v=20260902-mobile-fix" defer></script>
     <script src="JS/form-validation.js?v=20260902-form-fix" defer></script>
-    <!-- Dedicated Enterprise AV & LED BOQ Planner Controller -->
+    <!-- Dedicated Enterprise AV & LED BOQ Planner Controller & Accurate Calculation Engine -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         var boqForm = document.getElementById('enterpriseBoqForm');
         var outputCard = document.getElementById('boqOutputCard');
         var summaryHeadline = document.getElementById('boqSummaryHeadline');
         var summaryList = document.getElementById('boqSummaryList');
+        var costBreakdownList = document.getElementById('boqCostBreakdownList');
+        var priceRangeDisplay = document.getElementById('boqPriceRangeDisplay');
+        var boqTableBody = document.getElementById('boqTableBody');
         var waFastTrack = document.getElementById('boqWhatsAppFastTrack');
         var submitBtn = document.getElementById('boqSubmitBtn');
+        var btnDownloadPdf = document.getElementById('btnDownloadBoqPdf');
+        var btnDownloadPdfBottom = document.getElementById('btnDownloadBoqPdfBottom');
 
         if (!boqForm || !outputCard) return;
+
+        // Interactive visual selection on radio cards
+        var facilityRadios = boqForm.querySelectorAll('input[name="facility_type"]');
+        facilityRadios.forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                facilityRadios.forEach(function(r) {
+                    var parent = r.closest('.boq-facility-option');
+                    if (parent) parent.classList.remove('active');
+                });
+                var currentParent = this.closest('.boq-facility-option');
+                if (currentParent) currentParent.classList.add('active');
+            });
+        });
+
+        var capacityRadios = boqForm.querySelectorAll('input[name="room_capacity"]');
+        capacityRadios.forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                capacityRadios.forEach(function(r) {
+                    var parent = r.closest('.boq-chip-option');
+                    if (parent) parent.classList.remove('active');
+                });
+                var currentParent = this.closest('.boq-chip-option');
+                if (currentParent) currentParent.classList.add('active');
+            });
+        });
+
+        // Store last calculated estimate for PDF export
+        var currentBoqData = null;
+
+        function formatINR(val) {
+            return '₹' + Number(val).toLocaleString('en-IN');
+        }
 
         boqForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -2898,7 +2971,7 @@
             var phoneInput = document.getElementById('boqPhone');
             var phoneVal = phoneInput ? phoneInput.value.trim().replace(/\D/g, '') : '';
             if (phoneVal.length !== 10) {
-                alert('Please enter a valid 10-digit mobile number so our senior engineer can send the itemized BOQ.');
+                alert('Please enter a valid 10-digit mobile number so our senior systems engineer can send your formal BOQ quotation.');
                 if (phoneInput) phoneInput.focus();
                 return;
             }
@@ -2911,72 +2984,664 @@
             var timeline = timelineSelect ? timelineSelect.value : 'Within 1 Month';
 
             // Selected Facility
-            var selectedFacilityEl = boqForm.querySelector('input[name="boq_facility"]:checked');
-            var facilityName = selectedFacilityEl ? selectedFacilityEl.value : 'Executive Boardroom';
+            var selectedFacilityEl = boqForm.querySelector('input[name="facility_type"]:checked');
+            var facilityType = selectedFacilityEl ? selectedFacilityEl.value : 'Boardroom & Conference Room';
 
             // Selected Capacity
-            var selectedCapacityEl = boqForm.querySelector('input[name="boq_capacity"]:checked');
-            var capacityName = selectedCapacityEl ? selectedCapacityEl.value : 'Medium Conference (8-16 Pax)';
+            var selectedCapacityEl = boqForm.querySelector('input[name="room_capacity"]:checked');
+            var roomCapacity = selectedCapacityEl ? selectedCapacityEl.value : 'Compact Huddle (4-8 Pax • 150-250 sq.ft)';
 
             // Selected Modules
             var checkedModules = [];
-            boqForm.querySelectorAll('input[name="boq_module"]:checked').forEach(function(cb) {
+            boqForm.querySelectorAll('input[name="tech_modules"]:checked').forEach(function(cb) {
                 checkedModules.push(cb.value);
             });
-            var modulesText = checkedModules.length ? checkedModules.join(', ') : 'Standard Complete Turnkey Integration';
 
             // Selected Preferred OEMs
             var checkedOems = [];
             boqForm.querySelectorAll('input[name="preferred_oem"]:checked').forEach(function(cb) {
                 checkedOems.push(cb.value);
             });
-            var oemsText = checkedOems.length ? checkedOems.join(', ') : 'Samsung, LG, Crestron, Sennheiser';
+            var oemsText = checkedOems.length ? checkedOems.join(', ') : 'Samsung, LG, Crestron, Sennheiser, Poly';
+
+            // Determine scale tier
+            var scaleTier = 'huddle';
+            if (roomCapacity.indexOf('Medium') !== -1 || roomCapacity.indexOf('10-18') !== -1) {
+                scaleTier = 'medium';
+            } else if (roomCapacity.indexOf('Large') !== -1 || roomCapacity.indexOf('20-40') !== -1) {
+                scaleTier = 'large';
+            } else if (roomCapacity.indexOf('Grand') !== -1 || roomCapacity.indexOf('50+') !== -1) {
+                scaleTier = 'grand';
+            }
+
+            // High-Precision Commercial Calculation Engine (2026 Indian AV Integration Benchmarks)
+            var displayCost = 0;
+            var displayItem = '';
+            var displaySpecs = '';
+            var displayBrands = checkedOems.filter(function(b){ return /Samsung|LG|Sony|Absen/i.test(b); }).join(' / ') || 'Samsung / LG Commercial UHD';
+
+            var cameraCost = 0;
+            var cameraItem = '';
+            var cameraSpecs = '';
+            var cameraBrands = checkedOems.filter(function(b){ return /Poly|Sony/i.test(b); }).join(' / ') || 'Poly / Aver / Logitech';
+
+            var audioCost = 0;
+            var audioItem = '';
+            var audioSpecs = '';
+            var audioBrands = checkedOems.filter(function(b){ return /Sennheiser|Harman|JBL/i.test(b); }).join(' / ') || 'Sennheiser / Shure / JBL Professional';
+
+            var switchingCost = 0;
+            var switchingItem = '4K Ultra-HD Structured Switching & Wall/Table Interface Matrix';
+            var switchingSpecs = 'High-Speed HDMI 2.1 / USB-C 4K@60Hz 4:4:4 Distribution with Auto-Priority';
+            var switchingBrands = checkedOems.filter(function(b){ return /Crestron|ATEN/i.test(b); }).join(' / ') || 'Crestron / ATEN Professional';
+
+            var cablingLaborCost = 0;
+
+            // Facility-Specific Modeling
+            if (facilityType.indexOf('Boardroom') !== -1) {
+                if (scaleTier === 'huddle') {
+                    displayItem = '55" 4K Non-Glare Commercial Signage Display (24/7 Duty)';
+                    displaySpecs = '500 Nits, Non-Glare Haze 25%, Ultra-Slim 28.5mm, 4K UHD, Landscape/Portrait';
+                    displayCost = 68000;
+                    cameraItem = '4K AI Auto-Framing All-in-One Video Collaboration Bar';
+                    cameraSpecs = 'Integrated 4K ePTZ Camera, Beamforming 6-Mic Array, Stereo Hi-Fi Speakers, MTR/Zoom';
+                    cameraCost = 85000;
+                    audioItem = 'Acoustic Echo Cancellation (AEC) & Voice Clarity DSP Engine';
+                    audioSpecs = 'Full-duplex audio processing with background noise suppression';
+                    audioCost = 25000;
+                    cablingLaborCost = 28000;
+                } else if (scaleTier === 'medium') {
+                    displayItem = '75" 4K Commercial Signage Display (Samsung QMC / LG UHD)';
+                    displaySpecs = '500 Nits, Anti-Glare Panel, Built-in Quantum Processor 4K, 24/7 Operational Rating';
+                    displayCost = 145000;
+                    cameraItem = '4K 12x Optical Zoom PTZ Video Conference Camera';
+                    cameraSpecs = '12x Optical Zoom, Dual Stream, Preset Positions, Auto Voice-Tracking AI';
+                    cameraCost = 125000;
+                    audioItem = 'Ceiling Beamforming Array or Dual Boundary Microphones + DSP Matrix';
+                    audioSpecs = 'Wide pickup radius (up to 6 meters), Hardware DSP Acoustic Echo Cancellation';
+                    audioCost = 115000;
+                    cablingLaborCost = 45000;
+                } else if (scaleTier === 'large') {
+                    displayItem = '85"-98" Ultra-Large Commercial 4K Display / Dual 75" Video Matrix';
+                    displaySpecs = '500 Nits, Anti-Glare, Quad-Core SOC, Heavy-Duty Articulating Wall Bracket';
+                    displayCost = 275000;
+                    cameraItem = 'Dual 4K Multi-Presenter PTZ Voice Tracking Camera System';
+                    cameraSpecs = 'Dual 4K Sensors, AI Presenter Tracking & Room Auto-Framing, IP Streaming';
+                    cameraCost = 220000;
+                    audioItem = 'Ceiling Beamforming Microphone Array (Shure MXA920 / Sennheiser TCC2)';
+                    audioSpecs = 'Dante Audio-over-IP, 8 Steerable Lobes, Invisible Zero Table Wiring';
+                    audioCost = 260000;
+                    cablingLaborCost = 68000;
+                } else {
+                    displayItem = '136" Active LED All-in-One Seamless Video Wall / Dual 98" Displays';
+                    displaySpecs = '0.0mm Bezel, P1.56 Fine Pixel Pitch, 600 Nits HDR, Factory Color Calibrated';
+                    displayCost = 890000;
+                    cameraItem = 'Multi-Camera Broadcast Tracking Network with Controller';
+                    cameraSpecs = 'Triple 4K PTZ Cameras with Hardware Joystick IP Controller & Seamless Video Switcher';
+                    cameraCost = 320000;
+                    audioItem = 'Multi-Ceiling Array Network + Biamp/QSC Dante Audio DSP Engine';
+                    audioSpecs = 'Multi-zone acoustic echo cancellation, Dante networked ceiling coaxial speakers';
+                    audioCost = 440000;
+                    cablingLaborCost = 115000;
+                }
+            } else if (facilityType.indexOf('Active LED') !== -1) {
+                if (scaleTier === 'huddle') {
+                    displayItem = '8 × 5 ft Fine-Pitch P1.86/P2.5 Indoor Active LED Video Wall';
+                    displaySpecs = 'Die-cast aluminum cabinets, Novastar 4K controller, front-service magnetic modules';
+                    displayCost = 340000;
+                    cameraItem = '4K Wide-Angle ePTZ Video Conferencing Camera';
+                    cameraSpecs = '120° Wide Field of View, 4K UHD Sensor, Digital Zoom & ePTZ Presets';
+                    cameraCost = 45000;
+                    audioItem = 'Commercial PA Audio Soundbar & Dual Wireless Lapel Mics';
+                    audioSpecs = 'Clear speech reinforcement and presentation audio output';
+                    audioCost = 42000;
+                    cablingLaborCost = 55000;
+                } else if (scaleTier === 'medium') {
+                    displayItem = '10 × 6 ft Seamless Fine-Pitch P1.53/P1.86 Active LED Display Wall';
+                    displaySpecs = 'Absen / Samsung / LG LED, Novastar VX Series Processor, 600 Nits, HDR10+';
+                    displayCost = 580000;
+                    cameraItem = '4K 12x Optical PTZ Camera with Auto Voice Tracking';
+                    cameraSpecs = '12x Optical Zoom, 4K@60fps, Auto-Framing AI, Low-Light Performance';
+                    cameraCost = 115000;
+                    audioItem = 'Ceiling Flush Coaxial Audio System (JBL Pro) + DSP Matrix';
+                    audioSpecs = 'Even 360° dispersion, speech intelligibility acoustic filters';
+                    audioCost = 95000;
+                    cablingLaborCost = 85000;
+                } else if (scaleTier === 'large') {
+                    displayItem = '14 × 8 ft Ultra-Fine P1.25/P1.53 Active LED Video Wall System';
+                    displaySpecs = 'Ultra-fine pixel pitch, NovaStar 4K Processor, Dual Redundant Power Supply';
+                    displayCost = 1180000;
+                    cameraItem = 'Dual 4K PTZ Broadcast Tracking Camera System';
+                    cameraSpecs = 'Dual 4K sensors, presenter tracking, IP control, HDMI/SDI outputs';
+                    cameraCost = 195000;
+                    audioItem = 'Digital Wireless Quad Mic System + DSP Acoustic Matrix';
+                    audioSpecs = 'Automatic feedback suppression, Dante audio distribution';
+                    audioCost = 165000;
+                    cablingLaborCost = 125000;
+                } else {
+                    displayItem = '20 × 10+ ft Cinematic P1.25 Active LED Video Stage Wall';
+                    displaySpecs = 'COB / SMD Fine-Pitch LED, NovaStar Taurus 4K/8K Quad Video Processor';
+                    displayCost = 2150000;
+                    cameraItem = 'Multi-PTZ Production Cameras + Live Video Switcher';
+                    cameraSpecs = 'Broadcast-grade optical zoom, IP tracking, SDI/NDI matrix';
+                    cameraCost = 340000;
+                    audioItem = 'Auditorium Pro Audio Column Array + Dante DSP System';
+                    audioSpecs = 'Line-array column speakers, digital mixing matrix, multi-channel wireless';
+                    audioCost = 320000;
+                    cablingLaborCost = 195000;
+                }
+            } else if (facilityType.indexOf('Classroom') !== -1) {
+                if (scaleTier === 'huddle') {
+                    displayItem = '65" 4K Interactive Flat Panel (40-Point Touch, LG / Samsung)';
+                    displaySpecs = 'Zero-gap bonding, 40-pt multi-touch, Anti-Glare 9H toughened glass, Android 13';
+                    displayCost = 115000;
+                    cameraItem = 'Wide-Angle 4K USB Classroom Camera with Integrated Mic';
+                    cameraSpecs = '120° FOV, 4K UHD sensor, auto white balance, privacy shutter';
+                    cameraCost = 28000;
+                    audioItem = 'Classroom Stereo Soundbar System (2 × 20W)';
+                    audioSpecs = 'High-clarity vocal reproduction, 3.5mm / Bluetooth / optical inputs';
+                    audioCost = 22000;
+                    cablingLaborCost = 22000;
+                } else if (scaleTier === 'medium') {
+                    displayItem = '75" 4K Interactive Flat Panel + Windows OPS i5 Slot-in PC';
+                    displaySpecs = 'LG CreateBoard / Samsung Flip 4K, Windows 11 Pro OPS PC, 40-pt Touch, Whiteboard';
+                    displayCost = 185000;
+                    cameraItem = '4K AI Teacher-Tracking PTZ Camera';
+                    cameraSpecs = 'Auto-tracking AI algorithm, 12x optical zoom, presenter zone framing';
+                    cameraCost = 68000;
+                    audioItem = 'Wireless Teacher Collar Mic + Wall-Mounted Stereo Column Speakers';
+                    audioSpecs = 'UHF wireless microphone, feedback suppression, 60W stereo output';
+                    audioCost = 42000;
+                    cablingLaborCost = 32000;
+                } else if (scaleTier === 'large') {
+                    displayItem = '86" 4K Interactive Flat Panel + Dual Side Ceramic Writing Boards';
+                    displaySpecs = '86" 4K Touch Panel, Intel i7 OPS PC, 4K writing resolution, dual sliding boards';
+                    displayCost = 275000;
+                    cameraItem = 'Dual-Camera Lecture Capture & Student Auto-Framing System';
+                    cameraSpecs = 'Teacher tracking camera + wide-angle student panoramic camera';
+                    cameraCost = 115000;
+                    audioItem = 'Voice-Lift Ceiling Audio System + Dual Handheld & Collar Mics';
+                    audioSpecs = 'Even classroom audio coverage without feedback or vocal strain';
+                    audioCost = 85000;
+                    cablingLaborCost = 48000;
+                } else {
+                    displayItem = 'Dual 86" Interactive Panels or 150" Active LED Video Backdrop';
+                    displaySpecs = 'Dual 4K Touch Displays synchronized or seamless P1.86 Active LED wall';
+                    displayCost = 540000;
+                    cameraItem = 'Multi-Camera Hybrid Broadcast System with Auto-Tracking';
+                    cameraSpecs = 'Lecture recording station, live streaming encoder, 3x PTZ cameras';
+                    cameraCost = 195000;
+                    audioItem = 'University Hall Sound Reinforcement, Digital Podium & DSP';
+                    audioSpecs = 'Interactive digital touch podium with gooseneck mic, DSP line array';
+                    audioCost = 175000;
+                    cablingLaborCost = 85000;
+                }
+            } else if (facilityType.indexOf('Command') !== -1 || facilityType.indexOf('NOC') !== -1) {
+                if (scaleTier === 'huddle') {
+                    displayItem = '2 × 2 55" Ultra-Narrow Bezel (0.88mm) Video Wall Array';
+                    displaySpecs = 'LG / Samsung 24/7 Industrial Displays, 0.88mm razor-thin bezel, 500 Nits';
+                    displayCost = 360000;
+                    cameraItem = '4K Situational PTZ Camera';
+                    cameraSpecs = '4K UHD, 12x zoom, motorized pan/tilt, IP control';
+                    cameraCost = 65000;
+                    audioItem = 'Operator Room Audio System & Table Boundary Mics';
+                    audioSpecs = 'Voice clarity audio processing, mute sync, emergency alert override';
+                    audioCost = 38000;
+                    cablingLaborCost = 58000;
+                } else if (scaleTier === 'medium') {
+                    displayItem = '3 × 2 55" Video Wall or P1.53 Seamless LED Wall (24/7 Duty)';
+                    displaySpecs = '0.88mm bezel video wall array with Novastar multi-window controller';
+                    displayCost = 720000;
+                    cameraItem = '4K 12x Optical PTZ Monitoring Camera';
+                    cameraSpecs = 'Dual stream, H.264/H.265 IP stream, 24/7 reliability';
+                    cameraCost = 115000;
+                    audioItem = 'Ceiling Distributed Audio & Conference Boundary Mics';
+                    audioSpecs = 'Low-latency digital audio matrix with acoustic echo cancellation';
+                    audioCost = 75000;
+                    cablingLaborCost = 95000;
+                } else if (scaleTier === 'large') {
+                    displayItem = '4 × 2 / 5 × 2 55" Video Wall Matrix + KVM Over IP Network';
+                    displaySpecs = 'Industrial 700 Nits anti-glare video wall, 0.88mm bezel, dual power redundancy';
+                    displayCost = 1380000;
+                    cameraItem = 'Dual 4K PTZ Control Room Tracking Cameras';
+                    cameraSpecs = 'Dual 4K cameras with IP matrix integration and video wall PIP routing';
+                    cameraCost = 185000;
+                    audioItem = 'Dante Integrated Audio Management & DSP Architecture';
+                    audioSpecs = 'Multi-channel Dante network, zoning, acoustic voice isolation';
+                    audioCost = 145000;
+                    cablingLaborCost = 165000;
+                } else {
+                    displayItem = 'Full Mission-Critical Active LED Video Wall (P1.25 COB, Dual Power)';
+                    displaySpecs = 'COB Chip-on-Board LED, 0.0mm Bezel, 800 Nits, Dual redundant controllers';
+                    displayCost = 2650000;
+                    cameraItem = 'Multi-Point Command Bridge System';
+                    cameraSpecs = 'Broadcast-grade multi-camera tracking with dedicated KVM console control';
+                    cameraCost = 290000;
+                    audioItem = 'Enterprise Disaster Recovery Audio Matrix & Consoles';
+                    audioSpecs = 'Failover redundant DSP, multi-operator dispatch intercom, Dante audio';
+                    audioCost = 240000;
+                    cablingLaborCost = 240000;
+                }
+            } else { // Auditorium & Townhall
+                if (scaleTier === 'huddle') {
+                    displayItem = '4K High-Lumen Laser Projector (6000 Lumens) + 150" Tensioned Screen';
+                    displaySpecs = 'Epson / Panasonic 4K Enhancement, 20,000 hrs laser, RF motorized screen';
+                    displayCost = 260000;
+                    cameraItem = '4K Broadcast PTZ Camera';
+                    cameraSpecs = '12x Optical Zoom, 4K@60fps, SDI & HDMI outputs, preset recall';
+                    cameraCost = 85000;
+                    audioItem = 'Compact Line-Array Audio Columns (JBL / Harman) + 4 Wireless Mics';
+                    audioSpecs = 'High-output column speakers, dual handheld + dual lapel wireless mics';
+                    audioCost = 140000;
+                    cablingLaborCost = 65000;
+                } else if (scaleTier === 'medium') {
+                    displayItem = '163" Active LED Video Wall / High-Lumen Laser Projection';
+                    displaySpecs = 'Fine-pitch P1.86 LED backdrop or 10,000 Lumens laser projection with 200" screen';
+                    displayCost = 780000;
+                    cameraItem = 'Dual 4K 12x PTZ Broadcast Cameras with Controller';
+                    cameraSpecs = 'Dual PTZ tracking cameras with joystick broadcast controller';
+                    cameraCost = 195000;
+                    audioItem = 'Line-Array Pro Audio Sound Columns + Digital DSP Matrix';
+                    audioSpecs = 'JBL / Harman line-array sound columns, subwoofers, 8-ch digital DSP mixer';
+                    audioCost = 295000;
+                    cablingLaborCost = 115000;
+                } else if (scaleTier === 'large') {
+                    displayItem = 'Large-Format P1.56/P1.86 Active LED Backdrop (approx 16 × 9 ft)';
+                    displaySpecs = 'Seamless Active LED video wall with NovaStar 4K processor, 800 Nits';
+                    displayCost = 1550000;
+                    cameraItem = 'Triple PTZ Broadcast Camera Studio Network with Video Switcher';
+                    cameraSpecs = '3x 4K PTZ broadcast cameras with Blackmagic / ATEN live video switcher';
+                    cameraCost = 380000;
+                    audioItem = 'Concert-Grade Line Array PA System + Subwoofers + Shure 6-Mic Kit';
+                    audioSpecs = 'Active line array hanging clusters, dual 18" subs, Shure wireless mic system';
+                    audioCost = 580000;
+                    cablingLaborCost = 185000;
+                } else {
+                    displayItem = 'Cinematic Grand P1.25/P1.53 Active LED Stage Wall (approx 24 × 12 ft)';
+                    displaySpecs = 'Cinema-grade Fine-Pitch LED Wall, HDR10+, Quad 4K NovaStar Taurus processor';
+                    displayCost = 3200000;
+                    cameraItem = 'Multi-Camera Broadcast Tracking Network with Production Switcher';
+                    cameraSpecs = '4x 4K PTZ broadcast cameras with hardware switcher and tally system';
+                    cameraCost = 650000;
+                    audioItem = 'Full Auditorium Line Array Cluster, Subwoofers & Dante Audio Infrastructure';
+                    audioSpecs = 'Concert line array, motorized stage mic system, digital mixing console (32-ch)';
+                    audioCost = 980000;
+                    cablingLaborCost = 295000;
+                }
+            }
+
+            // Optional Module Calculations
+            var wirelessCost = 0;
+            var wirelessItem = '';
+            var wirelessSpecs = '';
+            var hasWireless = checkedModules.some(function(m){ return /Wireless/i.test(m); });
+            if (hasWireless) {
+                wirelessCost = (scaleTier === 'huddle') ? 42000 : (scaleTier === 'medium') ? 58000 : 85000;
+                wirelessItem = 'Wireless Presentation & BYOD Screen Sharing System';
+                wirelessSpecs = 'Barco ClickShare / Crestron AirMedia, 4K dual screen sharing, iOS/Android/Windows/Mac';
+            }
+
+            var automationCost = 0;
+            var automationItem = '';
+            var automationSpecs = '';
+            var hasAutomation = checkedModules.some(function(m){ return /Touch|Automation/i.test(m); });
+            if (hasAutomation) {
+                automationCost = (scaleTier === 'huddle') ? 65000 : (scaleTier === 'medium') ? 110000 : 185000;
+                automationItem = '7"-10" Tabletop Touch Screen Controller & Room Automation Processor';
+                automationSpecs = 'Crestron / Extron Touch Panel, One-touch meeting launch, motorized display/screen/lighting control';
+            }
+
+            var acousticCost = 0;
+            var acousticItem = '';
+            var acousticSpecs = '';
+            var hasAcoustics = checkedModules.some(function(m){ return /Acoustic/i.test(m); });
+            if (hasAcoustics) {
+                acousticCost = (scaleTier === 'huddle') ? 45000 : (scaleTier === 'medium') ? 85000 : (scaleTier === 'large') ? 185000 : 350000;
+                acousticItem = 'High-NRC Architectural Acoustic Fabric Wall Panels & Baffles';
+                acousticSpecs = 'NRC 0.85+ sound absorption, reverberation time (RT60) reduction to 0.5s for pristine speech clarity';
+            }
+
+            // Compute Grand Subtotals
+            var subtotalHardware = displayCost + cameraCost + audioCost + wirelessCost + automationCost + acousticCost + switchingCost;
+            var totalTurnkey = subtotalHardware + cablingLaborCost;
+
+            // Compute realistic range
+            var minEstimate = Math.round((totalTurnkey * 0.94) / 5000) * 5000;
+            var maxEstimate = Math.round((totalTurnkey * 1.08) / 5000) * 5000;
+            var gstEstimateMin = Math.round(minEstimate * 0.18);
+            var gstEstimateMax = Math.round(maxEstimate * 0.18);
+
+            // Populate currentBoqData for PDF Generation
+            var boqRefNumber = 'GPSPL/BOQ/2026/' + Math.floor(100000 + Math.random() * 900000);
+            var currentDate = new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' });
+
+            var bomItems = [
+                {
+                    category: 'Visual & Display Subsystem',
+                    item: displayItem,
+                    specs: displaySpecs,
+                    brands: displayBrands,
+                    qty: 1
+                },
+                {
+                    category: 'Video Conferencing & Optics',
+                    item: cameraItem,
+                    specs: cameraSpecs,
+                    brands: cameraBrands,
+                    qty: (scaleTier === 'large' || scaleTier === 'grand') ? 2 : 1
+                },
+                {
+                    category: 'Pro Audio & Microphone Array',
+                    item: audioItem,
+                    specs: audioSpecs,
+                    brands: audioBrands,
+                    qty: (scaleTier === 'grand') ? 4 : (scaleTier === 'large') ? 2 : 1
+                }
+            ];
+
+            if (hasWireless) {
+                bomItems.push({
+                    category: 'Wireless Collaboration / BYOD',
+                    item: wirelessItem,
+                    specs: wirelessSpecs,
+                    brands: 'Barco ClickShare / Crestron AirMedia',
+                    qty: 1
+                });
+            }
+
+            if (hasAutomation) {
+                bomItems.push({
+                    category: 'Control & Room Automation',
+                    item: automationItem,
+                    specs: automationSpecs,
+                    brands: 'Crestron / Extron / AMX',
+                    qty: 1
+                });
+            }
+
+            if (hasAcoustics) {
+                bomItems.push({
+                    category: 'Architectural Acoustics',
+                    item: acousticItem,
+                    specs: acousticSpecs,
+                    brands: 'Anutone / Armstrong / Saint-Gobain',
+                    qty: (scaleTier === 'huddle' ? '1 Lot (40 sq.ft)' : scaleTier === 'medium' ? '1 Lot (120 sq.ft)' : '1 Lot (250+ sq.ft)')
+                });
+            }
+
+            bomItems.push(
+                {
+                    category: 'Switching & Signal Routing',
+                    item: switchingItem,
+                    specs: switchingSpecs,
+                    brands: switchingBrands,
+                    qty: 1
+                },
+                {
+                    category: 'Structured Cabling & Rigging',
+                    item: 'High-Speed 4K Optical HDMI, Shielded Cat6A & Heavy-Duty Mounts',
+                    specs: 'Belden / Kramer / Extron 18Gbps cables, rigid ceiling/wall bracket system, concealed conduit dressing',
+                    brands: 'Kramer / Belden / Legrand',
+                    qty: '1 Lot'
+                },
+                {
+                    category: 'Installation, DSP Tuning & SLA',
+                    item: 'On-Site Installation, Audio/Video Commissioning & 1-Year Comprehensive On-Site SLA',
+                    specs: 'Factory-certified engineers, DSP acoustic tuning, camera preset calibration, user handover training, 4-hr SLA',
+                    brands: 'GPSPL Certified Senior Engineers',
+                    qty: 'Turnkey Scope'
+                }
+            );
+
+            currentBoqData = {
+                refNumber: boqRefNumber,
+                date: currentDate,
+                clientName: fullName,
+                company: company,
+                phone: phoneVal,
+                email: email,
+                city: city,
+                timeline: timeline,
+                facilityType: facilityType,
+                roomCapacity: roomCapacity,
+                oemsText: oemsText,
+                minEstimate: minEstimate,
+                maxEstimate: maxEstimate,
+                gstEstimateMin: gstEstimateMin,
+                gstEstimateMax: gstEstimateMax,
+                bomItems: bomItems,
+                displayCost: displayCost,
+                cameraCost: cameraCost,
+                audioCost: audioCost,
+                auxCost: wirelessCost + automationCost + acousticCost + switchingCost,
+                cablingLaborCost: cablingLaborCost
+            };
 
             // Submit Button UX
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Compiling Technical BOQ Schedule...</span>';
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Computing Itemized Engineering BOQ...</span>';
 
             setTimeout(function() {
-                // Populate Summary
+                // 1. Update Headline & Price Display
                 if (summaryHeadline) {
-                    summaryHeadline.textContent = facilityName + ' — ' + capacityName;
+                    summaryHeadline.textContent = facilityType + ' — ' + roomCapacity;
                 }
 
+                if (priceRangeDisplay) {
+                    priceRangeDisplay.textContent = formatINR(minEstimate) + ' – ' + formatINR(maxEstimate) + '*';
+                }
+
+                // 2. Populate Scope Summary
                 if (summaryList) {
                     summaryList.innerHTML = 
-                        '<li><strong>Facility Environment:</strong> ' + facilityName + '</li>' +
-                        '<li><strong>Room Scale &amp; Capacity:</strong> ' + capacityName + '</li>' +
-                        '<li><strong>Key Tech Modules:</strong> ' + modulesText + '</li>' +
+                        '<li><strong>Facility Space:</strong> ' + facilityType + '</li>' +
+                        '<li><strong>Room Scale:</strong> ' + roomCapacity + '</li>' +
                         '<li><strong>Preferred OEMs:</strong> ' + oemsText + '</li>' +
-                        '<li><strong>Client Organization:</strong> ' + company + ' (' + fullName + ')</li>' +
-                        '<li><strong>Project Location &amp; Timeline:</strong> ' + city + ' &bull; ' + timeline + '</li>';
+                        '<li><strong>Client Organization:</strong> ' + company + '</li>' +
+                        '<li><strong>Client Contact:</strong> ' + fullName + ' (' + phoneVal + ')</li>' +
+                        '<li><strong>Site Location &amp; Handover:</strong> ' + city + ' &bull; ' + timeline + '</li>';
                 }
 
-                // WhatsApp message formation
-                var waMsg = 'Hello GPSPL Engineering Team,\n\n' +
-                    'I have registered our Project BOQ requirement:\n' +
-                    '• Facility: ' + facilityName + ' (' + capacityName + ')\n' +
-                    '• Modules: ' + modulesText + '\n' +
+                // 3. Populate Cost Components Breakdown
+                if (costBreakdownList) {
+                    costBreakdownList.innerHTML = 
+                        '<li><span>Visuals &amp; Active Display:</span> <strong>' + formatINR(displayCost) + ' (Approx)</strong></li>' +
+                        '<li><span>VC Optics &amp; PTZ Tracking:</span> <strong>' + formatINR(cameraCost) + ' (Approx)</strong></li>' +
+                        '<li><span>Pro Audio, Ceiling Mics &amp; DSP:</span> <strong>' + formatINR(audioCost) + ' (Approx)</strong></li>' +
+                        '<li><span>Switching, BYOD &amp; Automation:</span> <strong>' + formatINR(wirelessCost + automationCost + acousticCost + switchingCost) + ' (Approx)</strong></li>' +
+                        '<li><span>Structured Cabling, Mounts &amp; Labor:</span> <strong>' + formatINR(cablingLaborCost) + ' (Approx)</strong></li>' +
+                        '<li><span>Estimated GST (18% ITC Eligible):</span> <strong>' + formatINR(gstEstimateMin) + ' – ' + formatINR(gstEstimateMax) + '</strong></li>' +
+                        '<li><span>Total Estimated Project Range:</span> <strong style="color: #16a34a; font-size: 0.96rem;">' + formatINR(minEstimate) + ' – ' + formatINR(maxEstimate) + '*</strong></li>';
+                }
+
+                // 4. Populate Itemized Schedule Table
+                if (boqTableBody) {
+                    var tableHtml = '';
+                    bomItems.forEach(function(item) {
+                        tableHtml += 
+                            '<tr>' +
+                                '<td><span class="boq-category-tag">' + item.category + '</span></td>' +
+                                '<td><strong>' + item.item + '</strong><br><span style="color: #64748b; font-size: 0.76rem;">' + item.specs + '</span></td>' +
+                                '<td><strong>' + item.brands + '</strong></td>' +
+                                '<td style="text-align: center; font-weight: 800;">' + item.qty + '</td>' +
+                            '</tr>';
+                    });
+                    boqTableBody.innerHTML = tableHtml;
+                }
+
+                // 5. WhatsApp Fast-Track URL
+                var waMsg = 'Hello GPSPL AV Engineering Team,\n\n' +
+                    'I have registered our official Project BOQ requirement:\n' +
+                    '• Reference: ' + boqRefNumber + '\n' +
+                    '• Facility: ' + facilityType + ' (' + roomCapacity + ')\n' +
+                    '• Calculated Turnkey Estimate: ' + formatINR(minEstimate) + ' – ' + formatINR(maxEstimate) + ' + GST\n' +
                     '• Preferred OEMs: ' + oemsText + '\n' +
                     '• Client: ' + fullName + ' (' + company + ')\n' +
                     '• Mobile: ' + phoneVal + ' | Email: ' + email + '\n' +
                     '• Site City: ' + city + ' | Timeline: ' + timeline + '\n\n' +
-                    'Please share our customized itemized BOQ quotation and equipment schedule.';
+                    'Please share our formal itemized BOQ quotation and schedule on WhatsApp.';
 
                 if (waFastTrack) {
                     waFastTrack.href = 'https://wa.me/919310092963?text=' + encodeURIComponent(waMsg);
                 }
 
-                // Show Output Card
+                // 6. Reveal Card & Reset Button
                 outputCard.style.display = 'block';
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> <span>BOQ Specifications Registered Successfully!</span>';
+                submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> <span>Official BOQ Generated &amp; Pricing Revealed!</span>';
                 submitBtn.style.background = '#16a34a';
 
-                // Scroll output into view smoothly
+                // Scroll smoothly into view
                 outputCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }, 600);
+            }, 650);
         });
+
+        // PDF Generation Function
+        function generateBoqPdf() {
+            if (!currentBoqData) {
+                alert('Please submit the BOQ form with your room requirements and contact details first.');
+                return;
+            }
+
+            var d = currentBoqData;
+            var rowsHtml = '';
+            d.bomItems.forEach(function(i, idx) {
+                rowsHtml += 
+                    '<tr>' +
+                        '<td style="text-align: center; padding: 10px 8px; border: 1px solid #cbd5e1; font-weight: 700;">' + (idx + 1) + '</td>' +
+                        '<td style="padding: 10px 10px; border: 1px solid #cbd5e1;"><strong style="color: #0f172a;">' + i.category + '</strong></td>' +
+                        '<td style="padding: 10px 10px; border: 1px solid #cbd5e1;"><strong style="color: #0f172a; font-size: 11px;">' + i.item + '</strong><br><span style="color: #64748b; font-size: 10px; line-height: 1.4;">' + i.specs + '</span></td>' +
+                        '<td style="padding: 10px 10px; border: 1px solid #cbd5e1; font-size: 11px;"><strong>' + i.brands + '</strong></td>' +
+                        '<td style="text-align: center; padding: 10px 8px; border: 1px solid #cbd5e1; font-weight: 800;">' + i.qty + '</td>' +
+                    '</tr>';
+            });
+
+            var printHtml = 
+                '<!DOCTYPE html>' +
+                '<html lang="en">' +
+                '<head>' +
+                    '<meta charset="UTF-8">' +
+                    '<title>GPSPL Official Project BOQ - ' + d.refNumber + '</title>' +
+                    '<style>' +
+                        '@page { size: A4 portrait; margin: 12mm 15mm; }' +
+                        'body { font-family: "Helvetica Neue", Arial, sans-serif; color: #0f172a; margin: 0; padding: 15px; font-size: 11px; line-height: 1.45; background: #ffffff; }' +
+                        '.header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #ef3438; padding-bottom: 12px; margin-bottom: 15px; }' +
+                        '.brand-title { font-size: 18px; font-weight: 900; color: #071526; margin: 0 0 2px 0; }' +
+                        '.brand-sub { font-size: 10px; color: #64748b; margin: 0; line-height: 1.35; }' +
+                        '.doc-title-badge { text-align: right; }' +
+                        '.doc-title-badge h2 { margin: 0 0 4px 0; font-size: 14px; color: #ef3438; text-transform: uppercase; font-weight: 900; }' +
+                        '.meta-table { width: 100%; border-collapse: collapse; margin-bottom: 15px; }' +
+                        '.meta-table td { padding: 6px 10px; border: 1px solid #e2e8f0; font-size: 10.5px; }' +
+                        '.pricing-box { background: #f8fafc; border: 1.5px solid #0f172a; border-radius: 6px; padding: 12px 16px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; }' +
+                        '.pricing-box .price-val { font-size: 18px; font-weight: 900; color: #16a34a; }' +
+                        'table.bom-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }' +
+                        'table.bom-table th { background: #0f172a; color: #ffffff; padding: 8px 10px; font-size: 10px; text-transform: uppercase; border: 1px solid #0f172a; text-align: left; }' +
+                        '.terms-box { font-size: 9.5px; color: #475569; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px 14px; margin-bottom: 18px; line-height: 1.5; }' +
+                        '.signature-row { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 25px; padding-top: 15px; border-top: 1px solid #cbd5e1; }' +
+                        '.sig-block { font-size: 10px; color: #334155; }' +
+                    '</style>' +
+                '</head>' +
+                '<body>' +
+                    '<div class="header">' +
+                        '<div>' +
+                            '<div class="brand-title">GLOBAL PERIPHERAL SOLUTION PVT. LTD.</div>' +
+                            '<p class="brand-sub">Estd. 1997 &bull; Turnkey AV System Integrator &amp; Direct Tier-1 OEM Partner<br>Regd. Office: 304, Padma Palace, 86, Nehru Place, New Delhi-110019<br>Phone: +91 93100 92963 &bull; Email: support@gpspl.co.in &bull; Web: https://gpspl.co.in</p>' +
+                        '</div>' +
+                        '<div class="doc-title-badge">' +
+                            '<h2>Official Turnkey BOQ</h2>' +
+                            '<div><strong>Ref:</strong> ' + d.refNumber + '</div>' +
+                            '<div><strong>Date:</strong> ' + d.date + '</div>' +
+                            '<div><strong>Status:</strong> Budgetary Schedule (2026)</div>' +
+                        '</div>' +
+                    '</div>' +
+
+                    '<table class="meta-table">' +
+                        '<tr>' +
+                            '<td style="background: #f1f5f9; width: 18%;"><strong>Client Name:</strong></td>' +
+                            '<td style="width: 32%;">' + d.clientName + '</td>' +
+                            '<td style="background: #f1f5f9; width: 18%;"><strong>Facility Type:</strong></td>' +
+                            '<td style="width: 32%;"><strong>' + d.facilityType + '</strong></td>' +
+                        '</tr>' +
+                        '<tr>' +
+                            '<td style="background: #f1f5f9;"><strong>Organization:</strong></td>' +
+                            '<td>' + d.company + '</td>' +
+                            '<td style="background: #f1f5f9;"><strong>Room Scale:</strong></td>' +
+                            '<td>' + d.roomCapacity + '</td>' +
+                        '</tr>' +
+                        '<tr>' +
+                            '<td style="background: #f1f5f9;"><strong>Mobile / Email:</strong></td>' +
+                            '<td>' + d.phone + ' &bull; ' + d.email + '</td>' +
+                            '<td style="background: #f1f5f9;"><strong>Site Location:</strong></td>' +
+                            '<td>' + d.city + ' (Handover: ' + d.timeline + ')</td>' +
+                        '</tr>' +
+                    '</table>' +
+
+                    '<div class="pricing-box">' +
+                        '<div>' +
+                            '<div style="font-size: 10px; text-transform: uppercase; font-weight: 800; color: #ef3438;">Estimated Turnkey Project Investment</div>' +
+                            '<div class="price-val">' + formatINR(d.minEstimate) + ' &ndash; ' + formatINR(d.maxEstimate) + '*</div>' +
+                            '<div style="font-size: 9px; color: #64748b;">*Excl. 18% GST (ITC Eligible: ' + formatINR(d.gstEstimateMin) + ' &ndash; ' + formatINR(d.gstEstimateMax) + ')</div>' +
+                        '</div>' +
+                        '<div style="text-align: right; font-size: 10px; color: #334155;">' +
+                            '<strong>Inclusions:</strong> OEM Hardware, 4K Cables, Brackets, DSP Tuning &amp; 1-Yr On-Site SLA' +
+                        '</div>' +
+                    '</div>' +
+
+                    '<table class="bom-table">' +
+                        '<thead>' +
+                            '<tr>' +
+                                '<th style="width: 6%; text-align: center;">S.No</th>' +
+                                '<th style="width: 22%;">Subsystem Category</th>' +
+                                '<th style="width: 44%;">Equipment Description &amp; Technical Specifications</th>' +
+                                '<th style="width: 18%;">Approved OEMs</th>' +
+                                '<th style="width: 10%; text-align: center;">Qty</th>' +
+                            '</tr>' +
+                        '</thead>' +
+                        '<tbody>' +
+                            rowsHtml +
+                        '</tbody>' +
+                    '</table>' +
+
+                    '<div class="terms-box">' +
+                        '<strong>Turnkey Scope of Work &amp; Delivery Commitments:</strong><br>' +
+                        '&bull; <strong>1. Direct OEM Supply:</strong> 100% Brand new factory-sealed hardware with manufacturer serial warranty certificates (1 to 3 Years).<br>' +
+                        '&bull; <strong>2. Physical Installation:</strong> Heavy-duty ceiling/wall mounting, concealed conduit high-speed cabling, structural load anchors, and rack dressing.<br>' +
+                        '&bull; <strong>3. System Testing &amp; Commissioning:</strong> Firmware upgrades, DSP acoustic echo cancellation (AEC) calibration, camera voice-tracking preset tuning, and video wall color calibration.<br>' +
+                        '&bull; <strong>4. Comprehensive On-Site AMC Support:</strong> Backed by GPSPL guaranteed 4-Hour Response SLA across Delhi NCR and dedicated engineering support Pan-India.' +
+                    '</div>' +
+
+                    '<div class="signature-row">' +
+                        '<div class="sig-block">' +
+                            'Prepared for: <strong>' + d.company + '</strong> (' + d.clientName + ')<br>' +
+                            'Document Hash: ' + d.refNumber + ' &bull; Valid for 30 Days' +
+                        '</div>' +
+                        '<div class="sig-block" style="text-align: right;">' +
+                            '<strong>For Global Peripheral Solution Pvt. Ltd.</strong><br><br>' +
+                            '<span style="color: #ef3438; font-weight: 800;">Senior AV Systems Integration Engineer</span><br>' +
+                            'Enterprise Systems Engineering Desk, New Delhi' +
+                        '</div>' +
+                    '</div>' +
+                '</body>' +
+                '</html>';
+
+            var printWin = window.open('', '_blank', 'width=950,height=850');
+            if (printWin) {
+                printWin.document.open();
+                printWin.document.write(printHtml);
+                printWin.document.close();
+                printWin.focus();
+                setTimeout(function() {
+                    printWin.print();
+                }, 600);
+            }
+        }
+
+        if (btnDownloadPdf) {
+            btnDownloadPdf.addEventListener('click', generateBoqPdf);
+        }
+        if (btnDownloadPdfBottom) {
+            btnDownloadPdfBottom.addEventListener('click', generateBoqPdf);
+        }
     });
     </script>
 
