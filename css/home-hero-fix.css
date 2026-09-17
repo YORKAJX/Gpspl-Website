@@ -9675,7 +9675,7 @@ html body #home,
     height: auto !important;
     max-height: none !important;
     display: block !important;
-    padding: clamp(38px, 5.5vh, 64px) 0 clamp(44px, 5.5vh, 68px) !important;
+    padding: clamp(24px, 3.6vh, 48px) 0 clamp(28px, 4vh, 54px) !important;
     overflow: visible !important;
     color: #ffffff !important;
     background: #06111f !important;
@@ -9690,7 +9690,7 @@ html body #home .hero-message-grid {
     max-width: 1280px !important;
     display: grid !important;
     grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr) !important;
-    gap: clamp(28px, 3.5vw, 52px) !important;
+    gap: clamp(24px, 3vw, 48px) !important;
     align-items: center !important;
     margin: 0 auto !important;
     padding: 0 !important;
@@ -9710,14 +9710,14 @@ html body #home .hero-message-copy .hero-eyebrow {
     gap: 8px !important;
     background: rgba(239, 52, 56, 0.16) !important;
     border: 1px solid rgba(239, 52, 56, 0.4) !important;
-    padding: 5px 14px !important;
+    padding: 4px 12px !important;
     border-radius: 999px !important;
-    margin: 0 0 14px 0 !important;
+    margin: 0 0 10px 0 !important;
     color: #ff8b8f !important;
     -webkit-text-fill-color: #ff8b8f !important;
-    font-size: 0.74rem !important;
+    font-size: 0.72rem !important;
     font-weight: 800 !important;
-    letter-spacing: 0.1em !important;
+    letter-spacing: 0.08em !important;
     text-transform: uppercase !important;
 }
 html body #home .hero-message-copy .hero-eyebrow::before {
@@ -9729,13 +9729,13 @@ html body #home .hero-message-copy .main-headline,
 html body #home .main-headline,
 html body:has(#home.hero) .hero-message-copy .main-headline {
     font-family: 'Plus Jakarta Sans', sans-serif !important;
-    font-size: clamp(1.8rem, 2.7vw, 2.65rem) !important;
-    line-height: 1.16 !important;
+    font-size: clamp(1.72rem, 2.35vw, 2.45rem) !important;
+    line-height: 1.18 !important;
     font-weight: 850 !important;
     letter-spacing: -0.025em !important;
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
-    margin: 0 0 14px 0 !important;
+    margin: 0 0 12px 0 !important;
     max-width: 760px !important;
     text-shadow: 0 3px 18px rgba(0, 0, 0, 0.5) !important;
 }
@@ -9748,11 +9748,11 @@ html body #home .hero-message-copy .main-headline span {
 html body #home .hero-message-copy .hero-description {
     width: min(100%, 700px) !important;
     max-width: 700px !important;
-    margin: 0 0 20px 0 !important;
+    margin: 0 0 14px 0 !important;
     color: rgba(241, 245, 249, 0.92) !important;
     -webkit-text-fill-color: rgba(241, 245, 249, 0.92) !important;
-    font-size: clamp(0.92rem, 1.05vw, 1.02rem) !important;
-    line-height: 1.62 !important;
+    font-size: clamp(0.9rem, 1vw, 1rem) !important;
+    line-height: 1.55 !important;
 }
 
 /* Hero Actions & Buttons */
@@ -10450,12 +10450,12 @@ html body #home .hero-executive-card:hover {
     margin: 2px 0 0 0 !important;
 }
 
-/* Facility Choice Cards (Step 1) */
+/* Facility Choice Cards (Step 1 - Featureful Enterprise Layout) */
 .boq-facility-grid,
 .boq-facility-selector {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
-    gap: 12px !important;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)) !important;
+    gap: 14px !important;
 }
 
 .boq-choice-card,
@@ -10479,23 +10479,113 @@ html body #home .hero-executive-card:hover {
 .boq-facility-option .facility-option-inner {
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    padding: 18px 14px !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    padding: 18px 16px !important;
     border: 1.5px solid #e2e8f0 !important;
     border-radius: 16px !important;
     background: #f8fafc !important;
-    transition: all 0.2s ease !important;
+    transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
     height: 100% !important;
     box-sizing: border-box !important;
+    gap: 8px !important;
 }
 
+.facility-icon-wrap {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 12px !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+    margin-bottom: 4px !important;
+}
+
+.facility-icon-wrap i {
+    font-size: 1.35rem !important;
+    color: #475569 !important;
+    -webkit-text-fill-color: #475569 !important;
+    transition: all 0.2s ease !important;
+}
+
+.facility-header-row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    gap: 8px !important;
+    flex-wrap: wrap !important;
+}
+
+.boq-choice-card strong,
+.boq-facility-option strong {
+    font-size: 0.95rem !important;
+    font-weight: 850 !important;
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    line-height: 1.25 !important;
+}
+
+.facility-pills-badge {
+    font-size: 0.66rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    padding: 2px 7px !important;
+    border-radius: 6px !important;
+    background: rgba(15, 23, 42, 0.06) !important;
+    color: #475569 !important;
+    -webkit-text-fill-color: #475569 !important;
+}
+
+.facility-desc {
+    font-size: 0.76rem !important;
+    color: #64748b !important;
+    -webkit-text-fill-color: #64748b !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+}
+
+.facility-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 5px !important;
+    margin-top: 4px !important;
+    width: 100% !important;
+}
+
+.facility-tags .ftag {
+    font-size: 0.68rem !important;
+    font-weight: 700 !important;
+    color: #334155 !important;
+    -webkit-text-fill-color: #334155 !important;
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 6px !important;
+    padding: 2px 7px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    line-height: 1.3 !important;
+}
+
+.facility-tags .ftag i {
+    font-size: 0.65rem !important;
+    color: #ef3438 !important;
+    -webkit-text-fill-color: #ef3438 !important;
+}
+
+/* Facility Card Hover & Checked States */
 .boq-choice-card:hover .choice-content,
 .boq-facility-option:hover .facility-option-inner {
     border-color: #cbd5e1 !important;
     background: #ffffff !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06) !important;
 }
 
 .boq-choice-card input:checked + .choice-content,
@@ -10505,53 +10595,45 @@ html body #home .hero-executive-card:hover {
 .boq-choice-card:has(input:checked) .choice-content,
 .boq-facility-option:has(input:checked) .facility-option-inner {
     border-color: #ef3438 !important;
-    background: #fff5f5 !important;
-    box-shadow: 0 8px 20px rgba(239, 52, 56, 0.12) !important;
+    background: #ffffff !important;
+    box-shadow: 0 10px 26px rgba(239, 52, 56, 0.12), inset 0 0 0 1px #ef3438 !important;
 }
 
-.boq-choice-card .choice-content i,
-.boq-facility-option .facility-option-inner i {
-    font-size: 1.6rem !important;
-    color: #64748b !important;
-    -webkit-text-fill-color: #64748b !important;
-    margin-bottom: 10px !important;
-    transition: color 0.2s ease !important;
+.boq-choice-card input:checked + .choice-content .facility-icon-wrap,
+.boq-facility-option input:checked + .facility-option-inner .facility-icon-wrap,
+.boq-choice-card.active .facility-icon-wrap,
+.boq-facility-option.active .facility-icon-wrap,
+.boq-choice-card:has(input:checked) .facility-icon-wrap {
+    background: rgba(239, 52, 56, 0.1) !important;
+    border-color: rgba(239, 52, 56, 0.35) !important;
 }
 
-.boq-choice-card input:checked + .choice-content i,
-.boq-facility-option input:checked + .facility-option-inner i,
-.boq-choice-card.active .choice-content i,
-.boq-facility-option.active .facility-option-inner i,
-.boq-choice-card:has(input:checked) .choice-content i,
-.boq-facility-option:has(input:checked) .facility-option-inner i {
+.boq-choice-card input:checked + .choice-content .facility-icon-wrap i,
+.boq-facility-option input:checked + .facility-option-inner .facility-icon-wrap i,
+.boq-choice-card.active .facility-icon-wrap i,
+.boq-facility-option.active .facility-icon-wrap i,
+.boq-choice-card:has(input:checked) .facility-icon-wrap i {
     color: #ef3438 !important;
     -webkit-text-fill-color: #ef3438 !important;
 }
 
-.boq-choice-card .choice-content strong,
-.boq-facility-option .facility-option-inner strong {
-    font-size: 0.88rem !important;
-    font-weight: 800 !important;
-    color: #0f172a !important;
-    -webkit-text-fill-color: #0f172a !important;
-    line-height: 1.3 !important;
+.boq-choice-card input:checked + .choice-content .facility-pills-badge,
+.boq-facility-option input:checked + .facility-option-inner .facility-pills-badge,
+.boq-choice-card.active .facility-pills-badge,
+.boq-facility-option.active .facility-pills-badge {
+    background: rgba(239, 52, 56, 0.12) !important;
+    color: #ef3438 !important;
+    -webkit-text-fill-color: #ef3438 !important;
 }
 
-.boq-choice-card .choice-content span,
-.boq-facility-option .facility-option-inner span {
-    font-size: 0.74rem !important;
-    color: #64748b !important;
-    -webkit-text-fill-color: #64748b !important;
-    margin-top: 5px !important;
-    line-height: 1.35 !important;
-}
-
-/* Capacity Choice Cards (Step 2) */
+/* =====================================================================
+   Capacity Choice Cards (Step 2 - Executive Card UI Overhaul)
+   ===================================================================== */
 .boq-capacity-grid,
 .boq-capacity-selector {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
-    gap: 10px !important;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)) !important;
+    gap: 14px !important;
 }
 
 .boq-pill-card,
@@ -10576,24 +10658,135 @@ html body #home .hero-executive-card:hover {
 .boq-chip-option .pill-content {
     display: flex !important;
     flex-direction: column !important;
-    padding: 14px 14px !important;
+    padding: 16px 18px !important;
     border: 1.5px solid #e2e8f0 !important;
-    border-radius: 12px !important;
+    border-radius: 16px !important;
     background: #f8fafc !important;
-    transition: all 0.2s ease !important;
+    transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
     height: 100% !important;
     box-sizing: border-box !important;
-    font-size: 0.86rem !important;
+    gap: 10px !important;
+}
+
+.pill-top-row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    gap: 8px !important;
+}
+
+.pill-scale-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-size: 0.74rem !important;
     font-weight: 800 !important;
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 3px 10px !important;
+    border-radius: 99px !important;
+}
+
+.pill-scale-badge.popular {
+    background: rgba(239, 52, 56, 0.08) !important;
+    border-color: rgba(239, 52, 56, 0.35) !important;
+    color: #ef3438 !important;
+    -webkit-text-fill-color: #ef3438 !important;
+}
+
+.pill-scale-badge.enterprise {
+    background: rgba(15, 23, 42, 0.08) !important;
+    border-color: rgba(15, 23, 42, 0.25) !important;
     color: #0f172a !important;
     -webkit-text-fill-color: #0f172a !important;
 }
 
+.pill-area-tag {
+    font-size: 0.72rem !important;
+    font-weight: 750 !important;
+    color: #64748b !important;
+    -webkit-text-fill-color: #64748b !important;
+}
+
+.pill-title-row {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+}
+
+.pill-icon {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 10px !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03) !important;
+}
+
+.pill-icon i {
+    font-size: 1.15rem !important;
+    color: #475569 !important;
+    -webkit-text-fill-color: #475569 !important;
+    transition: all 0.2s ease !important;
+}
+
+.boq-pill-card strong,
+.boq-chip-option strong {
+    font-size: 0.96rem !important;
+    font-weight: 850 !important;
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    line-height: 1.25 !important;
+    display: block !important;
+}
+
+.pill-subtitle {
+    font-size: 0.74rem !important;
+    color: #64748b !important;
+    -webkit-text-fill-color: #64748b !important;
+    line-height: 1.35 !important;
+    display: block !important;
+    margin-top: 2px !important;
+    font-weight: 500 !important;
+}
+
+.pill-features-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 5px !important;
+    margin-top: 2px !important;
+    width: 100% !important;
+}
+
+.pill-mini-tag {
+    font-size: 0.68rem !important;
+    font-weight: 700 !important;
+    color: #475569 !important;
+    -webkit-text-fill-color: #475569 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 6px !important;
+    padding: 2px 7px !important;
+    line-height: 1.3 !important;
+}
+
+/* Step 2 Hover and Active States */
 .boq-pill-card:hover .pill-content,
 .boq-chip-option:hover > span,
 .boq-chip-option:hover .pill-content {
     border-color: #cbd5e1 !important;
     background: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05) !important;
 }
 
 .boq-pill-card input:checked + .pill-content,
@@ -10603,25 +10796,30 @@ html body #home .hero-executive-card:hover {
 .boq-chip-option:has(input:checked) > span,
 .boq-pill-card:has(input:checked) .pill-content {
     border-color: #ef3438 !important;
-    background: #fff5f5 !important;
-    box-shadow: 0 6px 16px rgba(239, 52, 56, 0.1) !important;
+    background: #ffffff !important;
+    box-shadow: 0 10px 26px rgba(239, 52, 56, 0.12), inset 0 0 0 1px #ef3438 !important;
 }
 
-.boq-pill-card .pill-content strong,
-.boq-chip-option .pill-content strong {
-    font-size: 0.86rem !important;
-    font-weight: 800 !important;
-    color: #0f172a !important;
-    -webkit-text-fill-color: #0f172a !important;
+.boq-pill-card input:checked + .pill-content .pill-icon,
+.boq-chip-option.active .pill-icon,
+.boq-pill-card:has(input:checked) .pill-icon {
+    background: rgba(239, 52, 56, 0.1) !important;
+    border-color: rgba(239, 52, 56, 0.35) !important;
 }
 
-.boq-pill-card .pill-content span,
-.boq-chip-option .pill-content span {
-    font-size: 0.74rem !important;
-    color: #64748b !important;
-    -webkit-text-fill-color: #64748b !important;
-    margin-top: 3px !important;
-    font-weight: 500 !important;
+.boq-pill-card input:checked + .pill-content .pill-icon i,
+.boq-chip-option.active .pill-icon i,
+.boq-pill-card:has(input:checked) .pill-icon i {
+    color: #ef3438 !important;
+    -webkit-text-fill-color: #ef3438 !important;
+}
+
+.boq-pill-card input:checked + .pill-content .pill-scale-badge,
+.boq-chip-option.active .pill-scale-badge {
+    background: rgba(239, 52, 56, 0.1) !important;
+    border-color: rgba(239, 52, 56, 0.4) !important;
+    color: #ef3438 !important;
+    -webkit-text-fill-color: #ef3438 !important;
 }
 
 /* Modules Checkbox Cards (Step 3) */
