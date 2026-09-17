@@ -2847,23 +2847,58 @@ ul.seo-intent-list {
     align-items: start !important;
 }
 
-/* GLOBAL: All dark service page section headings — force contrast */
-html body .service-page h2,
-html body .service-page h1,
-html body [class*="service-"] h2,
-html body [class*="service-"] h1 {
+/* GLOBAL: Dark service page section headings ONLY */
+html body .service-page :is(.service-hero, .solution-page-hero, .solution-hero, .service-cta, .bg-dark, .bg-navy, .section-dark, [data-theme="dark"]) :is(h1, h2, h3) {
     color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
 }
 
 /* Dark bg h2 — any section with dark background classes */
-html body .bg-dark h2,
-html body .bg-dark h1,
-html body .bg-navy h2,
-html body .bg-navy h1,
-html body .section-dark h2,
-html body .section-dark h1 {
+html body .bg-dark :is(h1, h2, h3),
+html body .bg-navy :is(h1, h2, h3),
+html body .section-dark :is(h1, h2, h3) {
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Light service page section headings — STRICT dark text for readability */
+html body .service-page :is(
+    .bg-light,
+    .roadmap-process-section,
+    .service-faq,
+    .service-approach,
+    .service-scope-section,
+    .buyer-guide-expansion,
+    .product-depth-section,
+    .product-value-section,
+    .product-rfq-section,
+    .section-padding:not(.bg-dark):not(.service-hero):not(.service-cta):not(.solution-page-hero):not(.solution-hero)
+) :is(h1, h2, h3, h4),
+html body .service-page .section-title-center :is(h1, h2, h3),
+html body .service-page .roadmap-process-section :is(h1, h2, h3),
+html body .service-page .service-faq :is(h1, h2, h3),
+html body .service-page #process :is(h1, h2, h3),
+html body .service-page #faq :is(h1, h2, h3),
+html body .service-page #overview :is(h1, h2, h3),
+html body .service-page #standards :is(h1, h2, h3),
+html body .service-page #sectors :is(h1, h2, h3),
+html body .service-page #pricing :is(h1, h2, h3) {
+    color: #071526 !important;
+    -webkit-text-fill-color: #071526 !important;
+    text-shadow: none !important;
+}
+
+/* FAQs question contrast */
+html body .service-page .service-faq-list summary,
+html body .service-page .faq-details summary {
+    color: #071526 !important;
+    -webkit-text-fill-color: #071526 !important;
+    font-weight: 750 !important;
+}
+html body .service-page .service-faq-list p,
+html body .service-page .faq-details p {
+    color: #334155 !important;
+    -webkit-text-fill-color: #334155 !important;
 }
 
 /* Aggressive fix: any h2 directly inside a dark navy parent */
@@ -8641,13 +8676,67 @@ section.reveal {
     visibility: visible !important;
 }
 
-/* AMC / Support Scope Cards - Crystal Clear Black Text on White Cards */
+/* AMC / Support Scope Cards - Harmonized Orientation & Spacing */
+.product-support-scope {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+    margin: 28px 0 !important;
+}
+
+.product-support-scope article {
+    display: flex !important;
+    flex-direction: column !important;
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-top: 3px solid #ef3438 !important;
+    border-radius: 14px !important;
+    padding: 24px 22px !important;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04) !important;
+    box-sizing: border-box !important;
+    height: 100% !important;
+}
+
+.product-support-scope article span {
+    display: inline-flex !important;
+    align-self: flex-start !important;
+    padding: 4px 10px !important;
+    background: #f1f5f9 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 6px !important;
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    color: #ef3438 !important;
+    -webkit-text-fill-color: #ef3438 !important;
+    margin-bottom: 12px !important;
+}
+
+.product-support-scope article strong {
+    display: block !important;
+    font-size: 1.05rem !important;
+    font-weight: 800 !important;
+    color: #071526 !important;
+    -webkit-text-fill-color: #071526 !important;
+    margin-bottom: 8px !important;
+    line-height: 1.35 !important;
+}
+
+.product-support-scope article p {
+    color: #475569 !important;
+    -webkit-text-fill-color: #475569 !important;
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
 .product-brand-cloud-support,
 .product-brand-cloud.product-brand-cloud-support {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 20px !important;
-    margin: 32px 0 !important;
+    margin: 24px 0 36px !important;
 }
 
 .product-brand-cloud-support span,
@@ -8659,18 +8748,21 @@ section.reveal {
     text-align: left !important;
     background: #ffffff !important;
     border: 1px solid #cbd5e1 !important;
-    border-left: 4px solid #ef3438 !important;
+    border-top: 3px solid #0d274a !important;
+    border-left: none !important;
     border-radius: 14px !important;
     padding: 24px 22px !important;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05) !important;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04) !important;
+    box-sizing: border-box !important;
+    height: 100% !important;
 }
 
 .product-brand-cloud-support b,
 .product-brand-cloud.product-brand-cloud-support b,
 .product-brand-cloud.product-brand-cloud-support span b {
     display: block !important;
-    color: #0f172a !important;
-    -webkit-text-fill-color: #0f172a !important;
+    color: #071526 !important;
+    -webkit-text-fill-color: #071526 !important;
     font-size: 1.05rem !important;
     font-weight: 800 !important;
     letter-spacing: -0.01em !important;
@@ -8682,14 +8774,15 @@ section.reveal {
 .product-brand-cloud.product-brand-cloud-support small,
 .product-brand-cloud.product-brand-cloud-support span small {
     display: block !important;
-    color: #334155 !important;
-    -webkit-text-fill-color: #334155 !important;
+    color: #475569 !important;
+    -webkit-text-fill-color: #475569 !important;
     font-size: 0.88rem !important;
-    line-height: 1.58 !important;
-    font-weight: 500 !important;
+    line-height: 1.6 !important;
+    font-weight: 400 !important;
 }
 
 @media (max-width: 900px) {
+    .product-support-scope,
     .product-brand-cloud-support,
     .product-brand-cloud.product-brand-cloud-support {
         grid-template-columns: 1fr !important;
@@ -10145,5 +10238,135 @@ html body #home .hero-calc-card:hover {
         height: 18px !important;
         max-width: 75px !important;
     }
+}
+
+/* =====================================================================
+   HERO BRAND STACK & PRODUCT HERO LOGO BADGES
+   Ensures 100% readable text (dark on white badges) in service/product hero
+   ===================================================================== */
+.product-hero-brand-panel {
+    display: flex !important;
+    flex-direction: column !important;
+    background: rgba(7, 21, 38, 0.82) !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border-radius: 20px !important;
+    padding: 22px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35) !important;
+    margin-top: 24px !important;
+    box-sizing: border-box !important;
+}
+
+.product-hero-panel-label {
+    align-self: flex-start !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 5px 14px !important;
+    background: rgba(239, 52, 56, 0.16) !important;
+    border: 1px solid rgba(239, 52, 56, 0.45) !important;
+    border-radius: 99px !important;
+    color: #ff8589 !important;
+    -webkit-text-fill-color: #ff8589 !important;
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    margin: 0 0 16px !important;
+}
+
+.product-hero-brand-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important;
+    gap: 14px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.product-hero-brand-grid article {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: 14px !important;
+    padding: 14px 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+    transition: transform 0.2s ease, border-color 0.2s ease !important;
+    box-sizing: border-box !important;
+}
+
+.product-hero-brand-grid article:hover {
+    transform: translateY(-2px) !important;
+    border-color: rgba(239, 52, 56, 0.5) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.product-hero-logo {
+    width: 100% !important;
+    min-height: 46px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    border-radius: 10px !important;
+    padding: 6px 12px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+    box-sizing: border-box !important;
+}
+
+.product-hero-logo img {
+    max-width: 100% !important;
+    max-height: 32px !important;
+    object-fit: contain !important;
+    filter: none !important;
+}
+
+.product-hero-logo strong,
+.product-hero-logo span,
+.product-hero-logo b {
+    color: #071526 !important;
+    -webkit-text-fill-color: #071526 !important;
+    font-size: 0.8rem !important;
+    font-weight: 850 !important;
+    letter-spacing: 0.02em !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+}
+
+.product-hero-badge-pill {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+}
+
+.product-hero-badge-pill i,
+.product-hero-logo i {
+    color: #ef3438 !important;
+    -webkit-text-fill-color: #ef3438 !important;
+    font-size: 1rem !important;
+}
+
+.product-hero-brand-grid h2 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    font-size: 0.88rem !important;
+    font-weight: 750 !important;
+    margin: 0 !important;
+    line-height: 1.3 !important;
+}
+
+.product-hero-brand-grid p {
+    color: rgba(210, 228, 252, 0.82) !important;
+    -webkit-text-fill-color: rgba(210, 228, 252, 0.82) !important;
+    font-size: 0.74rem !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
 }
 

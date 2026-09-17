@@ -12168,16 +12168,19 @@ html body.service-detail-template .service-page :is(.service-search-intent, .ser
     box-sizing: border-box !important;
 }
 
-.seo-intent-list li {
+.seo-intent-list li,
+.seo-intent-list > li {
     display: block !important;
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
-.seo-intent-list li a,
-.seo-intent-list > li {
+.seo-intent-list li a {
     display: flex !important;
     align-items: center !important;
     gap: 12px !important;
@@ -12721,15 +12724,18 @@ html body.service-detail-template .service-page :is(.service-search-intent, .ser
     background: none !important;
 }
 
-.seo-intent-list li {
+.seo-intent-list li,
+.seo-intent-list > li {
     display: block !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 .seo-intent-list li a,
-.seo-intent-list > li,
 html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-list li a {
     display: flex !important;
     align-items: center !important;
@@ -13590,15 +13596,18 @@ html body.service-detail-template .service-page :is(.service-search-intent, .ser
     box-shadow: none !important;
 }
 
-.seo-intent-list li {
+.seo-intent-list li,
+.seo-intent-list > li {
     display: block !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 .seo-intent-list li a,
-.seo-intent-list > li,
 html body.service-detail-template .service-page :is(.service-search-intent, .service-seo-intent, .seo-intent-section) .seo-intent-list li a {
     display: flex !important;
     align-items: center !important;

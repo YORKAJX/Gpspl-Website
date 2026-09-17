@@ -122,9 +122,19 @@ document.addEventListener("DOMContentLoaded", () => {
             const img = item.querySelector('img');
             const name = item.querySelector('b')?.textContent?.trim() || img?.alt?.replace(/\s+logo$/i, '').trim() || 'Partner';
             const brandKey = getBrandKey(name);
-            const imageMarkup = img
-                ? `<img src="${img.getAttribute('src')}" alt="${img.getAttribute('alt') || `${name} logo`}" loading="lazy" decoding="async">`
-                : `<strong>${name}</strong>`;
+            let imageMarkup;
+            if (img) {
+                imageMarkup = `<img src="${img.getAttribute('src')}" alt="${img.getAttribute('alt') || `${name} logo`}" loading="lazy" decoding="async">`;
+            } else {
+                let iconClass = 'fa-shield-alt';
+                const lowerName = name.toLowerCase();
+                if (lowerName.includes('multi-brand') || lowerName.includes('oem')) iconClass = 'fa-layer-group';
+                else if (lowerName.includes('coordination') || lowerName.includes('warranty')) iconClass = 'fa-award';
+                else if (lowerName.includes('existing') || lowerName.includes('audit')) iconClass = 'fa-clipboard-check';
+                else if (lowerName.includes('maintenance') || lowerName.includes('amc') || lowerName.includes('service')) iconClass = 'fa-tools';
+                
+                imageMarkup = `<span class="product-hero-badge-pill"><i class="fas ${iconClass}" aria-hidden="true"></i><strong>${name}</strong></span>`;
+            }
             return `
                 <article data-brand="${brandKey}">
                     <div class="product-hero-logo">${imageMarkup}</div>
