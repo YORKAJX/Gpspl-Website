@@ -26,11 +26,11 @@
     <meta name="twitter:description" content="GPSPL is the top AV system integrator in India since 1997. Turnkey audio visual solutions for conference room setup, huddle rooms, active LED walls, smart classrooms & AMC support with direct OEM pricing.">
     <meta name="twitter:image" content="https://gpspl.co.in/assests/images/hero/image.jpg">
     <meta name="theme-color" content="#D32F2F">
-    <link rel="stylesheet" href="css/base.css?v=20260917-r3">
-    <link rel="stylesheet" href="css/home-hero-fix.css?v=20260917-r3">
+    <link rel="stylesheet" href="css/base.css?v=20260917-r4">
+    <link rel="stylesheet" href="css/home-hero-fix.css?v=20260917-r4">
     <link rel="stylesheet" href="css/cookie-consent.css?v=20260915-v1">
     <link rel="stylesheet" href="css/blog.css?v=20260830-fix">
-    <link rel="stylesheet" href="css/faq-preview.css?v=20260917-r3">
+    <link rel="stylesheet" href="css/faq-preview.css?v=20260917-r4">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="/JS/security-guard.js?v=20260818" defer></script>
     <script src="/JS/lead-capture.js?v=20260914-seo-lead-v1" defer></script>
@@ -678,7 +678,7 @@
                             <label class="boq-choice-card boq-facility-option">
                                 <input type="radio" name="facility_type" value="24/7 Command Center (NOC/SOC)">
                                 <div class="choice-content facility-option-inner">
-                                    <div class="facility-icon-wrap"><i class="fas fa-shield-halved"></i></div>
+                                    <div class="facility-icon-wrap"><i class="fas fa-desktop"></i></div>
                                     <div class="facility-header-row">
                                         <strong>24/7 NOC/SOC Center</strong>
                                         <span class="facility-pills-badge">Mission Critical</span>
@@ -694,7 +694,7 @@
                             <label class="boq-choice-card boq-facility-option">
                                 <input type="radio" name="facility_type" value="Auditorium & Townhall">
                                 <div class="choice-content facility-option-inner">
-                                    <div class="facility-icon-wrap"><i class="fas fa-users-viewfinder"></i></div>
+                                    <div class="facility-icon-wrap"><i class="fas fa-landmark"></i></div>
                                     <div class="facility-header-row">
                                         <strong>Townhall &amp; Auditorium</strong>
                                         <span class="facility-pills-badge">Pro Audio</span>
@@ -704,6 +704,22 @@
                                         <span class="ftag">Line Array Sound</span>
                                         <span class="ftag">Broadcast PTZ</span>
                                         <span class="ftag">Dante DSP Network</span>
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="boq-choice-card boq-facility-option">
+                                <input type="radio" name="facility_type" value="Experience Center & Immersive Studio">
+                                <div class="choice-content facility-option-inner">
+                                    <div class="facility-icon-wrap"><i class="fas fa-cubes"></i></div>
+                                    <div class="facility-header-row">
+                                        <strong>Experience Center &amp; Studio</strong>
+                                        <span class="facility-pills-badge">Immersive</span>
+                                    </div>
+                                    <span class="facility-desc">Curved MicroLED, Transparent OLED &amp; Spatial Sound</span>
+                                    <div class="facility-tags">
+                                        <span class="ftag">Curved MicroLED</span>
+                                        <span class="ftag">Spatial Audio</span>
+                                        <span class="ftag">Touch Interactivity</span>
                                     </div>
                                 </div>
                             </label>
@@ -3395,7 +3411,7 @@
                     audioCost = 240000;
                     cablingLaborCost = 240000;
                 }
-            } else { // Auditorium & Townhall
+            } else if (facilityType.indexOf('Auditorium') !== -1 || facilityType.indexOf('Townhall') !== -1) {
                 if (scaleTier === 'huddle') {
                     displayItem = '4K High-Lumen Laser Projector (6000 Lumens) + 150" Tensioned Screen';
                     displaySpecs = 'Epson / Panasonic 4K Enhancement, 20,000 hrs laser, RF motorized screen';
@@ -3440,6 +3456,52 @@
                     audioSpecs = 'Concert line array, motorized stage mic system, digital mixing console (32-ch)';
                     audioCost = 980000;
                     cablingLaborCost = 295000;
+                }
+            } else { // Experience Center & Immersive Studio
+                if (scaleTier === 'huddle') {
+                    displayItem = 'Curved 110" Fine-Pitch P1.25 MicroLED / Dual 65" OLED Interactive Wall';
+                    displaySpecs = 'Samsung The Wall / LG MAGNIT MicroLED, 800 Nits HDR, Zero Glare, Touch Overlay';
+                    displayCost = 750000;
+                    cameraItem = '4K Multi-Zone Optical Gesture & Presenter Tracking Camera';
+                    cameraSpecs = 'High-speed sensor, 4K@60fps, interactive gesture mapping & auto-tracking';
+                    cameraCost = 95000;
+                    audioItem = 'Directional Beamforming Soundbar & Spatial Ceiling Audio Array';
+                    audioSpecs = 'Hyper-directional audio spotlighting with zero sound spillage outside the zone';
+                    audioCost = 85000;
+                    cablingLaborCost = 75000;
+                } else if (scaleTier === 'medium') {
+                    displayItem = '136" Curved MicroLED Studio Display Wall / Transparent OLED Array';
+                    displaySpecs = 'P0.9/P1.25 Fine Pixel Pitch, Novastar Ultra-HD HDR10+ Processor, Touch Overlay';
+                    displayCost = 1450000;
+                    cameraItem = 'Dual 4K Motion Capture & Presenter Tracking Studio Cameras';
+                    cameraSpecs = 'Dual 4K broadcast sensors with IP streaming and motorized tracking';
+                    cameraCost = 185000;
+                    audioItem = 'Immersive Spatial 3D Audio Array + Biamp Tesira Dante DSP';
+                    audioSpecs = 'Multi-channel 3D spatial sound field rendering, invisible flush speakers';
+                    audioCost = 175000;
+                    cablingLaborCost = 125000;
+                } else if (scaleTier === 'large') {
+                    displayItem = '163"-217" Large-Format MicroLED Experience Wall / Cave Studio';
+                    displaySpecs = 'Cinematic MicroLED wall with ultra-black coating, 1000 Nits peak, multi-touch interactive radar';
+                    displayCost = 2650000;
+                    cameraItem = 'Multi-Camera Broadcast Tracking Network with Live Video Matrix';
+                    cameraSpecs = 'Triple 4K PTZ tracking cameras with hardware video switcher and SDI/NDI matrix';
+                    cameraCost = 285000;
+                    audioItem = 'Spatial Surround Sound Network + Shure Multi-Channel Wireless Studio Mic Kit';
+                    audioSpecs = '12-channel immersive acoustic surround with Dante DSP and digital noise suppression';
+                    audioCost = 320000;
+                    cablingLaborCost = 210000;
+                } else {
+                    displayItem = 'Grand Immersive Cave / 360° Wrap-Around Active LED Studio Matrix';
+                    displaySpecs = 'Ultra-fine P0.9/P1.2 MicroLED multi-surface floor & wall display with NovaStar 8K Taurus processing';
+                    displayCost = 4500000;
+                    cameraItem = 'Production-Grade Studio Camera Tracking & Live Virtual Production Suite';
+                    cameraSpecs = 'Broadcast optical tracking network with live media server integration';
+                    cameraCost = 480000;
+                    audioItem = 'Full Dolby Atmos / Architectural Spatial Sound Reinforcement & Stage Audio';
+                    audioSpecs = 'Multi-zone 3D object audio rendering, steerable line array, Dante audio matrix';
+                    audioCost = 550000;
+                    cablingLaborCost = 350000;
                 }
             }
 

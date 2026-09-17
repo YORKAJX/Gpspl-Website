@@ -1203,7 +1203,7 @@ html body #home.hero {
     min-height: auto !important;
     height: auto !important;
     display: block !important;
-    padding: clamp(28px, 4vh, 48px) 0 !important;
+    padding: clamp(14px, 2vh, 24px) 0 !important;
     overflow: visible !important;
     color: #fff !important;
     background: #06111f !important;
@@ -1244,7 +1244,7 @@ html body #home .hero-message-grid {
     max-width: 1280px !important;
     display: grid !important;
     grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr) !important;
-    gap: clamp(24px, 3vw, 48px) !important;
+    gap: clamp(20px, 2.5vw, 36px) !important;
     align-items: start !important;
     margin: 0 auto !important;
     padding: 0 20px !important;
@@ -1252,26 +1252,25 @@ html body #home .hero-message-grid {
 }
 
 html body #home .hero-message-copy {
-    max-width: 780px !important;
+    max-width: 740px !important;
 }
 
 html body #home .hero-message-copy .hero-eyebrow {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 10px !important;
-    margin: 0 0 12px !important;
+    gap: 8px !important;
+    margin: 0 0 8px !important;
     color: #ff6b70 !important;
-    font-size: 0.76rem !important;
+    font-size: 0.72rem !important;
     font-weight: 900 !important;
-    letter-spacing: 0.18em !important;
-    line-height: 1.4 !important;
+    letter-spacing: 0.14em !important;
+    line-height: 1.3 !important;
     text-transform: uppercase !important;
 }
 
 html body #home .hero-message-copy .hero-eyebrow::before {
-    flex: 0 0 auto !important;
-    width: 32px !important;
-    height: 3px !important;
+    width: 6px !important;
+    height: 6px !important;
     border-radius: 999px !important;
     background: #ef3438 !important;
     content: "" !important;
@@ -1279,14 +1278,14 @@ html body #home .hero-message-copy .hero-eyebrow::before {
 
 html body #home .hero-message-copy .main-headline {
     font-family: 'Plus Jakarta Sans', sans-serif !important;
-    max-width: 850px !important;
-    margin: 0 0 14px !important;
+    max-width: 720px !important;
+    margin: 0 0 10px !important;
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
-    font-size: clamp(1.85rem, 2.5vw, 2.75rem) !important;
-    line-height: 1.18 !important;
+    font-size: clamp(1.35rem, 1.75vw, 1.85rem) !important;
+    line-height: 1.22 !important;
     letter-spacing: -0.02em !important;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+    text-shadow: 0 3px 16px rgba(0, 0, 0, 0.4) !important;
 }
 
 html body #home .hero-message-copy .main-headline span {
@@ -1300,12 +1299,12 @@ html body #home .hero-message-copy .main-headline span {
 }
 
 html body #home .hero-message-copy .hero-description {
-    width: min(100%, 720px) !important;
-    max-width: 720px !important;
-    margin: 0 0 18px !important;
+    width: min(100%, 660px) !important;
+    max-width: 660px !important;
+    margin: 0 0 14px !important;
     color: rgba(255, 255, 255, 0.86) !important;
-    font-size: clamp(0.92rem, 1vw, 1.02rem) !important;
-    line-height: 1.65 !important;
+    font-size: clamp(0.84rem, 0.95vw, 0.92rem) !important;
+    line-height: 1.48 !important;
 }
 
 html body #home .hero-message-copy .hero-actions {
@@ -8989,55 +8988,58 @@ html, body {
     html body #home.hero > .hero-message-grid,
     html body #home .hero-message-grid {
         grid-template-columns: minmax(0, 1.28fr) minmax(310px, 0.72fr) !important;
-        gap: clamp(24px, 3vw, 44px) !important;
+        gap: clamp(20px, 2.5vw, 36px) !important;
         width: min(calc(100% - 48px), 1280px) !important;
         max-width: 1280px !important;
         align-items: start !important;
     }
 
     html body #home .hero-message-copy {
-        max-width: 700px !important;
+        max-width: 680px !important;
         width: 100% !important;
+        align-self: start !important;
+        margin-top: 0 !important;
     }
 
     html body #home .hero-message-copy .main-headline {
-        font-size: clamp(1.65rem, 2.2vw, 2.35rem) !important;
-        line-height: 1.2 !important;
-        letter-spacing: -0.025em !important;
+        font-size: clamp(1.35rem, 1.75vw, 1.85rem) !important;
+        line-height: 1.22 !important;
+        letter-spacing: -0.02em !important;
         max-width: 100% !important;
-        margin-bottom: 12px !important;
+        margin-bottom: 10px !important;
     }
 
     html body #home .hero-message-copy .hero-description {
-        margin-bottom: 16px !important;
-        font-size: clamp(0.88rem, 1vw, 0.98rem) !important;
-        line-height: 1.55 !important;
+        margin-bottom: 14px !important;
+        font-size: clamp(0.84rem, 0.95vw, 0.92rem) !important;
+        line-height: 1.48 !important;
     }
 
     html body #home .hero-message-copy .hero-actions {
         flex-direction: row !important;
         flex-wrap: wrap !important;
         width: auto !important;
-        gap: 10px !important;
+        gap: 8px !important;
     }
 
     html body #home .hero-message-copy .hero-actions .hero-btn,
     html body #home .hero-message-copy .hero-actions a {
         width: auto !important;
         min-width: auto !important;
-        padding: 11px 20px !important;
-        font-size: 0.88rem !important;
+        padding: 9px 18px !important;
+        font-size: 0.84rem !important;
+        min-height: 40px !important;
     }
 
     html body main #home .hero-executive-card,
     html body .hero-executive-card {
         width: 100% !important;
-        max-width: 440px !important;
+        max-width: 420px !important;
         justify-self: end !important;
         align-self: start !important;
         margin-top: 0 !important;
-        padding: 20px 22px !important;
-        gap: 11px !important;
+        padding: 16px 18px !important;
+        gap: 9px !important;
     }
 }
 
@@ -9223,13 +9225,13 @@ html body #home .main-headline,
 html body main #home .main-headline,
 .main-headline {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-    font-size: clamp(1.85rem, 2.5vw, 2.75rem) !important;
-    line-height: 1.18 !important;
+    font-size: clamp(1.35rem, 1.75vw, 1.85rem) !important;
+    line-height: 1.22 !important;
     letter-spacing: -0.02em !important;
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
-    max-width: 780px !important;
-    margin: 0 0 16px 0 !important;
+    max-width: 680px !important;
+    margin: 0 0 10px 0 !important;
     text-wrap: balance !important;
     word-break: normal !important;
     overflow-wrap: break-word !important;
@@ -9249,7 +9251,7 @@ html body #home .main-headline span {
 @media (max-width: 1024px) {
     html body:has(#home.hero) .hero-message-copy .main-headline,
     html body #home .main-headline {
-        font-size: clamp(1.65rem, 4.5vw, 2.25rem) !important;
+        font-size: clamp(1.3rem, 3.5vw, 1.65rem) !important;
         line-height: 1.2 !important;
     }
 }
@@ -9257,7 +9259,7 @@ html body #home .main-headline span {
 @media (max-width: 600px) {
     html body:has(#home.hero) .hero-message-copy .main-headline,
     html body #home .main-headline {
-        font-size: 1.65rem !important;
+        font-size: 1.45rem !important;
         line-height: 1.22 !important;
     }
 }
@@ -9272,13 +9274,13 @@ html body #home .main-headline,
 html body main #home .main-headline,
 .main-headline {
     font-family: 'Plus Jakarta Sans', sans-serif !important;
-    font-size: clamp(1.75rem, 2.2vw, 2.35rem) !important;
-    line-height: 1.2 !important;
+    font-size: clamp(1.35rem, 1.75vw, 1.85rem) !important;
+    line-height: 1.22 !important;
     letter-spacing: -0.02em !important;
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
-    max-width: 760px !important;
-    margin: 0 !important;
+    max-width: 680px !important;
+    margin: 0 0 10px 0 !important;
     display: block !important;
 }
 
@@ -9678,7 +9680,7 @@ html body #home,
     height: auto !important;
     max-height: none !important;
     display: block !important;
-    padding: clamp(24px, 3.6vh, 48px) 0 clamp(28px, 4vh, 54px) !important;
+    padding: clamp(14px, 2vh, 20px) 0 clamp(16px, 2.5vh, 24px) !important;
     overflow: visible !important;
     color: #ffffff !important;
     background: #06111f !important;
@@ -9692,8 +9694,8 @@ html body #home .hero-message-grid {
     width: min(calc(100% - 36px), 1280px) !important;
     max-width: 1280px !important;
     display: grid !important;
-    grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr) !important;
-    gap: clamp(24px, 3vw, 48px) !important;
+    grid-template-columns: minmax(0, 1.28fr) minmax(310px, 0.72fr) !important;
+    gap: clamp(16px, 2.2vw, 32px) !important;
     align-items: start !important;
     margin: 0 auto !important;
     padding: 0 !important;
@@ -9734,14 +9736,14 @@ html body #home .hero-message-copy .main-headline,
 html body #home .main-headline,
 html body:has(#home.hero) .hero-message-copy .main-headline {
     font-family: 'Plus Jakarta Sans', sans-serif !important;
-    font-size: clamp(1.72rem, 2.35vw, 2.45rem) !important;
-    line-height: 1.18 !important;
+    font-size: clamp(1.35rem, 1.75vw, 1.85rem) !important;
+    line-height: 1.22 !important;
     font-weight: 850 !important;
-    letter-spacing: -0.025em !important;
+    letter-spacing: -0.02em !important;
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
-    margin: 0 0 12px 0 !important;
-    max-width: 760px !important;
+    margin: 0 0 10px 0 !important;
+    max-width: 680px !important;
     text-shadow: 0 3px 18px rgba(0, 0, 0, 0.5) !important;
 }
 
@@ -9751,13 +9753,13 @@ html body #home .hero-message-copy .main-headline span {
 
 /* Description */
 html body #home .hero-message-copy .hero-description {
-    width: min(100%, 700px) !important;
-    max-width: 700px !important;
-    margin: 0 0 14px 0 !important;
+    width: min(100%, 660px) !important;
+    max-width: 660px !important;
+    margin: 0 0 12px 0 !important;
     color: rgba(241, 245, 249, 0.92) !important;
     -webkit-text-fill-color: rgba(241, 245, 249, 0.92) !important;
-    font-size: clamp(0.9rem, 1vw, 1rem) !important;
-    line-height: 1.55 !important;
+    font-size: clamp(0.84rem, 0.95vw, 0.92rem) !important;
+    line-height: 1.48 !important;
 }
 
 /* Hero Actions & Buttons */
@@ -9767,8 +9769,8 @@ html body #home .hero-actions {
     flex-direction: row !important;
     flex-wrap: wrap !important;
     align-items: center !important;
-    gap: 12px !important;
-    margin-top: 6px !important;
+    gap: 8px !important;
+    margin-top: 4px !important;
     width: 100% !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -9780,11 +9782,11 @@ html body #home .hero-actions a {
     align-items: center !important;
     justify-content: center !important;
     gap: 8px !important;
-    min-height: 48px !important;
-    padding: 12px 22px !important;
-    font-size: 0.9rem !important;
+    min-height: 40px !important;
+    padding: 9px 18px !important;
+    font-size: 0.84rem !important;
     font-weight: 800 !important;
-    border-radius: 10px !important;
+    border-radius: 9px !important;
     text-decoration: none !important;
     white-space: nowrap !important;
     box-sizing: border-box !important;
@@ -9861,23 +9863,23 @@ html body #home .hero-executive-card,
 html body main #home .hero-executive-card,
 .hero-executive-card {
     width: 100% !important;
-    max-width: 460px !important;
+    max-width: 420px !important;
     justify-self: end !important;
     align-self: start !important;
     margin-top: 0 !important;
-    padding: clamp(20px, 2.2vw, 26px) !important;
+    padding: 16px 18px !important;
     border: 1px solid rgba(255, 255, 255, 0.16) !important;
     border-top: 3.5px solid #ef3438 !important;
-    border-radius: 20px !important;
+    border-radius: 18px !important;
     background: linear-gradient(145deg, rgba(13, 27, 46, 0.94) 0%, rgba(6, 17, 31, 0.98) 100%) !important;
     backdrop-filter: blur(20px) !important;
     -webkit-backdrop-filter: blur(20px) !important;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(239, 52, 56, 0.18) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(239, 52, 56, 0.18) !important;
     box-sizing: border-box !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 13px !important;
+    gap: 9px !important;
 }
 
 html body #home .hero-executive-card:hover {
@@ -9976,8 +9978,8 @@ html body #home .hero-executive-card:hover {
 .hero-card-actions {
     display: flex !important;
     flex-direction: column !important;
-    gap: 9px !important;
-    margin-top: 4px !important;
+    gap: 7px !important;
+    margin-top: 2px !important;
 }
 
 .btn-hero-card-boq {
@@ -9985,22 +9987,22 @@ html body #home .hero-executive-card:hover {
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
     text-decoration: none !important;
-    padding: 12px 18px !important;
-    border-radius: 10px !important;
+    padding: 10px 14px !important;
+    border-radius: 9px !important;
     font-weight: 800 !important;
-    font-size: 0.88rem !important;
+    font-size: 0.82rem !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     gap: 8px !important;
-    box-shadow: 0 6px 20px rgba(239, 52, 56, 0.35) !important;
+    box-shadow: 0 4px 14px rgba(239, 52, 56, 0.35) !important;
     transition: all 0.2s ease !important;
     text-align: center !important;
 }
 
 .btn-hero-card-boq:hover {
     transform: translateY(-2px) !important;
-    box-shadow: 0 10px 26px rgba(239, 52, 56, 0.45) !important;
+    box-shadow: 0 8px 20px rgba(239, 52, 56, 0.45) !important;
 }
 
 .btn-hero-card-wa {
@@ -10009,10 +10011,10 @@ html body #home .hero-executive-card:hover {
     color: #e2fbe8 !important;
     -webkit-text-fill-color: #e2fbe8 !important;
     text-decoration: none !important;
-    padding: 10px 18px !important;
-    border-radius: 10px !important;
+    padding: 8px 14px !important;
+    border-radius: 9px !important;
     font-weight: 800 !important;
-    font-size: 0.84rem !important;
+    font-size: 0.8rem !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -10499,12 +10501,20 @@ html body #home .hero-executive-card:hover {
     margin: 2px 0 0 0 !important;
 }
 
-/* Facility Choice Cards (Step 1 - Featureful Enterprise Layout) */
+/* Facility Choice Cards (Step 1 - Symmetrical 3 Columns x 2 Rows) */
 .boq-facility-grid,
 .boq-facility-selector {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)) !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 14px !important;
+}
+
+@media (max-width: 1024px) {
+    .boq-facility-grid,
+    .boq-facility-selector {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
 }
 
 .boq-choice-card,
@@ -10530,31 +10540,31 @@ html body #home .hero-executive-card:hover {
     flex-direction: column !important;
     align-items: flex-start !important;
     text-align: left !important;
-    padding: 18px 16px !important;
+    padding: 16px 14px !important;
     border: 1.5px solid #e2e8f0 !important;
     border-radius: 16px !important;
     background: #f8fafc !important;
     transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
     height: 100% !important;
     box-sizing: border-box !important;
-    gap: 8px !important;
+    gap: 7px !important;
 }
 
 .facility-icon-wrap {
-    width: 44px !important;
-    height: 44px !important;
-    border-radius: 12px !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 10px !important;
     background: #ffffff !important;
     border: 1px solid #e2e8f0 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 2px !important;
 }
 
 .facility-icon-wrap i {
-    font-size: 1.35rem !important;
+    font-size: 1.2rem !important;
     color: #475569 !important;
     -webkit-text-fill-color: #475569 !important;
     transition: all 0.2s ease !important;
@@ -10571,7 +10581,7 @@ html body #home .hero-executive-card:hover {
 
 .boq-choice-card strong,
 .boq-facility-option strong {
-    font-size: 0.95rem !important;
+    font-size: 0.92rem !important;
     font-weight: 850 !important;
     color: #0f172a !important;
     -webkit-text-fill-color: #0f172a !important;
@@ -10592,30 +10602,30 @@ html body #home .hero-executive-card:hover {
 }
 
 .facility-desc {
-    font-size: 0.76rem !important;
+    font-size: 0.74rem !important;
     color: #64748b !important;
     -webkit-text-fill-color: #64748b !important;
-    line-height: 1.4 !important;
+    line-height: 1.35 !important;
     margin: 0 !important;
 }
 
 .facility-tags {
     display: flex !important;
     flex-wrap: wrap !important;
-    gap: 6px !important;
-    margin-top: 6px !important;
+    gap: 5px !important;
+    margin-top: 4px !important;
     width: 100% !important;
 }
 
 .facility-tags .ftag {
-    font-size: 0.72rem !important;
+    font-size: 0.68rem !important;
     font-weight: 700 !important;
     color: #334155 !important;
     -webkit-text-fill-color: #334155 !important;
     background: #f1f5f9 !important;
     border: 1px solid #e2e8f0 !important;
     border-radius: 6px !important;
-    padding: 3px 8px !important;
+    padding: 2px 7px !important;
     display: inline-block !important;
     white-space: nowrap !important;
     line-height: 1.3 !important;
@@ -11285,10 +11295,10 @@ html body #home .hero-executive-card:hover {
 
     /* Hero headline never collides with status bar */
     #home .main-headline {
-        font-size: clamp(1.65rem, 5vw, 2.1rem) !important;
-        line-height: 1.2 !important;
-        margin-bottom: 14px !important;
-        padding-top: 8px !important;
+        font-size: clamp(1.35rem, 4.8vw, 1.75rem) !important;
+        line-height: 1.22 !important;
+        margin-bottom: 12px !important;
+        padding-top: 4px !important;
     }
 
     #home .hero-eyebrow {
