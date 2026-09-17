@@ -2,12 +2,13 @@
    GPSPL AI AV Systems Consultant - Executive Chatbot Styles
    ========================================================================== */
 
-#gpspl-ai-chat-root {
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 999999;
+#gpspl-ai-chat-root,
+.gpspl-chat-launcher {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
     --chat-primary: #ef3438;
     --chat-primary-dark: #cc2226;
     --chat-dark: #071526;

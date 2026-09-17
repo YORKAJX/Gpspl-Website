@@ -10,8 +10,8 @@
 
 (function() {
     'use strict';
-
-    // -----------------------------------------------------------------
+    // Disabled: Zero AI touch requested by business owner. All customer inquiries route directly to human engineers.
+    return;
     // 1. STATE & LOCALIZATION ENGINE
     // -----------------------------------------------------------------
     let currentLanguage = sessionStorage.getItem('gpspl_chat_lang') || 'hinglish'; // 'english' | 'hinglish' | 'hindi'

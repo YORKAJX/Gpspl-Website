@@ -404,7 +404,7 @@
 
         <nav class="nav-links" id="navLinks" aria-label="Main navigation">
             <a href="/">Home</a>
-            <a href="/#av-boq-calculator" class="nav-link-boq"><i class="fas fa-calculator" style="color:#ef3438;"></i> Quick BOQ</a>
+            <a href="#instant-boq-planner" class="nav-link-boq"><i class="fas fa-file-invoice" style="color:#ef3438;"></i> BOQ Planner</a>
             <a href="/resources">Resources</a>
             <details class="nav-dropdown">
                 <summary>About Us <i class="fas fa-chevron-down" aria-hidden="true"></i></summary>
@@ -524,9 +524,9 @@
                     GPSPL is India's trusted turnkey audio-visual and active LED display system integrator. We engineer mission-critical AV experiences across all 28 States &amp; UTs for corporate boardrooms, auditoriums, 24/7 command centers, hospitals, and educational campuses with direct OEM pricing and guaranteed 4-hour SLA.
                 </p>
                 <div class="hero-actions">
-                    <a href="/av-project-discovery-consultation" class="btn-primary hero-btn js-open-quick-boq"><i class="fas fa-file-invoice"></i> Get Free Project BOQ &rarr;</a>
-                    <a href="https://wa.me/919310092963?text=Hi%20GPSPL%2C%20I%20have%20an%20urgent%20commercial%20AV%20%2F%20Active%20LED%20Wall%20requirement.%20Please%20share%20BOQ%20pricing." class="btn-secondary hero-btn hero-btn-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp Quote</a>
-                    <a href="tel:+919310092963" class="btn-secondary hero-btn"><i class="fas fa-phone-alt"></i> Call: +91 93100 92963</a>
+                    <a href="#instant-boq-planner" class="btn-primary hero-btn"><i class="fas fa-file-invoice"></i> <span>Configure Project BOQ &rarr;</span></a>
+                    <a href="https://wa.me/919310092963?text=Hi%20GPSPL%2C%20I%20have%20an%20urgent%20commercial%20AV%20%2F%20Active%20LED%20Wall%20requirement.%20Please%20share%20BOQ%20pricing." class="btn-secondary hero-btn hero-btn-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> <span>WhatsApp Quote</span></a>
+                    <a href="tel:+919310092963" class="btn-secondary hero-btn"><i class="fas fa-phone-alt"></i> <span>Call: +91 93100 92963</span></a>
                 </div>
                 <div class="hero-partner-logos" aria-label="Authorized OEM Brands">
                     <div class="hero-partner-header">
@@ -564,58 +564,274 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-calc-card reveal" id="heroEstimatorWidget" aria-label="Instant AV &amp; LED Project Cost Estimator">
-                <div class="hero-calc-header">
-                    <div class="hero-calc-badge">
-                        <span class="calc-pulse-dot"></span>
-                        <span>Instant BOQ Calculator</span>
-                    </div>
-                    <span class="hero-calc-tag"><i class="fas fa-bolt"></i> 15-Sec Estimate</span>
-                </div>
-                <h3 class="hero-calc-heading">Commercial AV &amp; LED Project Estimator</h3>
-                <p class="hero-calc-sub">Select your facility type to see indicative turnkey pricing:</p>
-                
-                <div class="hero-calc-tabs" role="tablist" aria-label="Select AV solution type">
-                    <button type="button" class="calc-tab active" data-solution="led" role="tab" aria-selected="true">
-                        <i class="fas fa-tv"></i> Active LED
-                    </button>
-                    <button type="button" class="calc-tab" data-solution="boardroom" role="tab" aria-selected="false">
-                        <i class="fas fa-handshake"></i> Boardroom
-                    </button>
-                    <button type="button" class="calc-tab" data-solution="classroom" role="tab" aria-selected="false">
-                        <i class="fas fa-chalkboard-teacher"></i> Smart Class
-                    </button>
-                    <button type="button" class="calc-tab" data-solution="auditorium" role="tab" aria-selected="false">
-                        <i class="fas fa-users-viewfinder"></i> Auditorium
-                    </button>
-                </div>
+        </div>
+    </section>
 
-                <div class="hero-calc-body">
-                    <div class="calc-price-row">
-                        <span class="calc-price-label">Indicative Turnkey BOQ Range:</span>
-                        <div class="calc-price-val" id="calcPriceVal">&#8377;3,80,000 &ndash; &#8377;8,50,000*</div>
-                    </div>
-                    <p class="calc-scope-desc" id="calcScopeDesc">P1.8 / P2.5 Indoor Fine-Pitch Video Wall (approx 10 &times; 6 ft) with Novastar 4K Controller, Rigging &amp; Factory Color Calibration.</p>
-                    <div class="calc-perks-list">
-                        <span><i class="fas fa-check"></i> Direct OEM Hardware</span>
-                        <span><i class="fas fa-check"></i> Turnkey Cabling &amp; Mounts</span>
-                        <span><i class="fas fa-check"></i> 4-Hr SLA &amp; 1-Yr AMC</span>
-                    </div>
-                </div>
+    <!-- ====== DEDICATED INSTANT BOQ CONFIGURATOR SECTION (PROPER ENTERPRISE UI - ZERO AI GIMMICKS) ====== -->
+    <section id="instant-boq-planner" class="enterprise-boq-section section-padding" aria-label="Commercial AV and Active LED Project BOQ Configurator">
+        <div class="container">
+            <div class="boq-section-header">
+                <span class="section-eyebrow"><i class="fas fa-sliders" style="color: #ef3438;"></i> Certified AV Engineering &bull; Estd. 1997</span>
+                <h2>Commercial AV &amp; Active LED Project BOQ Configurator</h2>
+                <p>Configure your room specifications, display dimensions, and OEM brand preferences. Submit your project requirements to receive a customized itemized Bill of Quantities (BOQ) with direct OEM pricing prepared by GPSPL Senior AV Systems Integration Engineers.</p>
+            </div>
 
-                <div class="hero-calc-actions">
-                    <a href="https://wa.me/919310092963?text=Hi%20GPSPL%2C%20I%20checked%20your%20Instant%20Estimator%20for%20Active%20LED%20Wall.%20Please%20share%20an%20itemized%20BOQ%20quote." class="calc-btn-whatsapp" id="calcWhatsAppLink" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-whatsapp"></i> Get Itemized BOQ on WhatsApp
-                    </a>
-                    <button type="button" class="calc-btn-boq js-open-quick-boq" id="calcBoqModalBtn" data-solution-title="Active LED Video Wall">
-                        <i class="fas fa-file-invoice"></i> Request Official PDF BOQ &rarr;
-                    </button>
-                </div>
+            <div class="boq-configurator-card">
+                <form id="enterpriseBoqForm" class="boq-form-grid" novalidate>
+                    <!-- STEP 1: Facility Type -->
+                    <div class="boq-step-group">
+                        <div class="boq-step-title">
+                            <span class="step-num">01</span>
+                            <div>
+                                <h3>Select Facility Environment</h3>
+                                <p>Choose the target space for turnkey AV integration</p>
+                            </div>
+                        </div>
+                        <div class="boq-facility-selector" role="radiogroup" aria-label="Facility Type">
+                            <label class="boq-facility-option active">
+                                <input type="radio" name="facility_type" value="Boardroom & Conference Room" checked>
+                                <div class="facility-option-inner">
+                                    <i class="fas fa-handshake"></i>
+                                    <strong>Executive Boardroom</strong>
+                                    <span>Video Conferencing, PTZ &amp; Ceiling Mics</span>
+                                </div>
+                            </label>
+                            <label class="boq-facility-option">
+                                <input type="radio" name="facility_type" value="Active LED Video Wall">
+                                <div class="facility-option-inner">
+                                    <i class="fas fa-tv"></i>
+                                    <strong>Active LED Display Wall</strong>
+                                    <span>Seamless Fine-Pitch P1.2–P2.5 Wall</span>
+                                </div>
+                            </label>
+                            <label class="boq-facility-option">
+                                <input type="radio" name="facility_type" value="Smart Classroom / Training Hall">
+                                <div class="facility-option-inner">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                    <strong>Smart Classroom</strong>
+                                    <span>Interactive Flat Panel &amp; Digital Podium</span>
+                                </div>
+                            </label>
+                            <label class="boq-facility-option">
+                                <input type="radio" name="facility_type" value="24/7 Command Center (NOC/SOC)">
+                                <div class="facility-option-inner">
+                                    <i class="fas fa-shield-halved"></i>
+                                    <strong>24/7 NOC/SOC Center</strong>
+                                    <span>Multi-Screen Video Wall &amp; KVM Matrix</span>
+                                </div>
+                            </label>
+                            <label class="boq-facility-option">
+                                <input type="radio" name="facility_type" value="Auditorium & Townhall">
+                                <div class="facility-option-inner">
+                                    <i class="fas fa-users-viewfinder"></i>
+                                    <strong>Townhall &amp; Auditorium</strong>
+                                    <span>Line Array Sound &amp; Large Format Visuals</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
 
-                <div class="hero-calc-trust-strip">
-                    <span><i class="fas fa-shield-halved" style="color: #ef3438;"></i> 500+ Boardrooms &amp; Video Walls</span>
-                    <span class="dot">&bull;</span>
-                    <span>28+ States Across India</span>
+                    <!-- STEP 2: Room Capacity & Scale -->
+                    <div class="boq-step-group">
+                        <div class="boq-step-title">
+                            <span class="step-num">02</span>
+                            <div>
+                                <h3>Room Capacity &amp; Scale</h3>
+                                <p>Helps our engineers determine display size, camera zoom, and acoustic reach</p>
+                            </div>
+                        </div>
+                        <div class="boq-capacity-selector">
+                            <label class="boq-chip-option active">
+                                <input type="radio" name="room_capacity" value="Compact Huddle (4-8 Pax • 150-250 sq.ft)" checked>
+                                <span>Compact Huddle (4–8 Pax &bull; ~150–250 sq.ft)</span>
+                            </label>
+                            <label class="boq-chip-option">
+                                <input type="radio" name="room_capacity" value="Medium Boardroom (10-18 Pax • 300-500 sq.ft)">
+                                <span>Medium Boardroom (10–18 Pax &bull; ~300–500 sq.ft)</span>
+                            </label>
+                            <label class="boq-chip-option">
+                                <input type="radio" name="room_capacity" value="Large Conference (20-40 Pax • 600-1200 sq.ft)">
+                                <span>Large Conference (20–40 Pax &bull; ~600–1,200 sq.ft)</span>
+                            </label>
+                            <label class="boq-chip-option">
+                                <input type="radio" name="room_capacity" value="Grand Facility (50+ Pax • 1500+ sq.ft / Custom LED)">
+                                <span>Grand Facility (50+ Pax &bull; 1,500+ sq.ft / Custom LED Wall)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Technology Modules -->
+                    <div class="boq-step-group">
+                        <div class="boq-step-title">
+                            <span class="step-num">03</span>
+                            <div>
+                                <h3>Core Technology Requirements</h3>
+                                <p>Select all subsystems required for your deployment</p>
+                            </div>
+                        </div>
+                        <div class="boq-modules-grid">
+                            <label class="boq-module-checkbox">
+                                <input type="checkbox" name="tech_modules" value="Commercial 4K Display / Active LED Video Wall" checked>
+                                <span class="checkbox-custom"></span>
+                                <div>
+                                    <strong>Commercial Display / Active LED Wall</strong>
+                                    <small>24/7 Anti-Glare Display or Seamless Fine-Pitch LED</small>
+                                </div>
+                            </label>
+                            <label class="boq-module-checkbox">
+                                <input type="checkbox" name="tech_modules" value="PTZ Camera with Auto-Tracking" checked>
+                                <span class="checkbox-custom"></span>
+                                <div>
+                                    <strong>PTZ Video Conference Camera</strong>
+                                    <small>Optical Zoom, AI Auto-Framing &amp; Speaker Tracking</small>
+                                </div>
+                            </label>
+                            <label class="boq-module-checkbox">
+                                <input type="checkbox" name="tech_modules" value="Beamforming Ceiling Mic & DSP" checked>
+                                <span class="checkbox-custom"></span>
+                                <div>
+                                    <strong>Ceiling Microphone Array &amp; DSP</strong>
+                                    <small>Zero Table Clutter, Acoustic Echo Cancellation</small>
+                                </div>
+                            </label>
+                            <label class="boq-module-checkbox">
+                                <input type="checkbox" name="tech_modules" value="Wireless Screen Sharing & BYOD" checked>
+                                <span class="checkbox-custom"></span>
+                                <div>
+                                    <strong>Wireless Presentation &amp; BYOD</strong>
+                                    <small>Cable-free instant content sharing from laptops/phones</small>
+                                </div>
+                            </label>
+                            <label class="boq-module-checkbox">
+                                <input type="checkbox" name="tech_modules" value="Centralized Touch Panel Controller">
+                                <span class="checkbox-custom"></span>
+                                <div>
+                                    <strong>Touch Screen Room Automation</strong>
+                                    <small>One-touch meeting launch, lighting &amp; motorized control</small>
+                                </div>
+                            </label>
+                            <label class="boq-module-checkbox">
+                                <input type="checkbox" name="tech_modules" value="Acoustic Treatment & Sound Reinforcement">
+                                <span class="checkbox-custom"></span>
+                                <div>
+                                    <strong>Acoustic Panels &amp; PA Audio</strong>
+                                    <small>Echo reduction, wall acoustic baffles &amp; line-array audio</small>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4: Preferred Brands -->
+                    <div class="boq-step-group">
+                        <div class="boq-step-title">
+                            <span class="step-num">04</span>
+                            <div>
+                                <h3>Preferred OEM Technology Ecosystem</h3>
+                                <p>GPSPL is an authorized tier-1 partner with direct commercial pricing</p>
+                            </div>
+                        </div>
+                        <div class="boq-brands-selector">
+                            <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="Samsung" checked><span>Samsung</span></label>
+                            <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="LG Electronics" checked><span>LG Electronics</span></label>
+                            <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="Crestron" checked><span>Crestron</span></label>
+                            <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="Poly"><span>HP / Poly</span></label>
+                            <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="Sennheiser" checked><span>Sennheiser</span></label>
+                            <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="Absen"><span>Absen LED</span></label>
+                            <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="Sony"><span>Sony</span></label>
+                            <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="Harman / JBL"><span>Harman / JBL</span></label>
+                            <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="Epson"><span>Epson</span></label>
+                            <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="ATEN"><span>ATEN Switching</span></label>
+                        </div>
+                    </div>
+
+                    <!-- STEP 5: Project Details & Verification -->
+                    <div class="boq-step-group boq-details-group">
+                        <div class="boq-step-title">
+                            <span class="step-num">05</span>
+                            <div>
+                                <h3>Project &amp; Contact Details</h3>
+                                <p>Provide details to receive your customized, itemized BOQ with direct OEM discounts</p>
+                            </div>
+                        </div>
+                        <div class="boq-inputs-row">
+                            <div class="boq-field">
+                                <label for="boqFullName">Full Name *</label>
+                                <input type="text" id="boqFullName" name="full_name" placeholder="e.g. Rajiv Sharma" required autocomplete="name">
+                            </div>
+                            <div class="boq-field">
+                                <label for="boqCompany">Organization / Company Name *</label>
+                                <input type="text" id="boqCompany" name="company_name" placeholder="e.g. Acme Enterprises Ltd." required autocomplete="organization">
+                            </div>
+                            <div class="boq-field">
+                                <label for="boqPhone">Mobile Number *</label>
+                                <input type="tel" id="boqPhone" name="phone_number" placeholder="10-digit mobile number" required pattern="[0-9]{10}" maxlength="10" autocomplete="tel">
+                            </div>
+                            <div class="boq-field">
+                                <label for="boqEmail">Official Email *</label>
+                                <input type="email" id="boqEmail" name="email_address" placeholder="rajiv@company.com" required autocomplete="email">
+                            </div>
+                            <div class="boq-field">
+                                <label for="boqCity">Site City / Location *</label>
+                                <input type="text" id="boqCity" name="project_city" placeholder="e.g. Delhi NCR, Noida, Gurgaon, Mumbai..." required>
+                            </div>
+                            <div class="boq-field">
+                                <label for="boqTimeline">Project Timeline / Target Handover</label>
+                                <select id="boqTimeline" name="project_timeline">
+                                    <option value="Immediate (Within 15 Days)">Immediate (Within 15 Days)</option>
+                                    <option value="1 Month" selected>Within 1 Month</option>
+                                    <option value="2 to 3 Months">2 to 3 Months</option>
+                                    <option value="Planning & Budgeting Stage">Budgeting / RFQ Planning Stage</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="boq-submit-wrapper">
+                            <button type="submit" class="btn-primary boq-submit-action-btn" id="boqSubmitBtn">
+                                <i class="fas fa-file-invoice"></i>
+                                <span>Generate Itemized Project BOQ &amp; Equipment Schedule &rarr;</span>
+                            </button>
+                            <p class="boq-privacy-note"><i class="fas fa-shield-halved"></i> 100% Confidential. Official quotation generated by GPSPL Certified Systems Engineers. Zero spam.</p>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Dynamic Results / Confirmation Box (Hidden until submit) -->
+                <div id="boqOutputCard" class="boq-output-card" style="display: none;" aria-live="polite">
+                    <div class="boq-output-header">
+                        <div class="boq-output-status">
+                            <span class="success-icon"><i class="fas fa-circle-check"></i></span>
+                            <div>
+                                <h4>Custom BOQ Configuration Schedule Registered!</h4>
+                                <p id="boqSummaryHeadline">Equipment schedule tailored for your facility specifications</p>
+                            </div>
+                        </div>
+                        <span class="boq-assigned-badge"><i class="fas fa-user-tie"></i> Assigned AV Architect: Senior Systems Engineer, GPSPL</span>
+                    </div>
+
+                    <div class="boq-output-details-grid">
+                        <div class="boq-output-col">
+                            <strong>Project Summary</strong>
+                            <ul id="boqSummaryList"></ul>
+                        </div>
+                        <div class="boq-output-col">
+                            <strong>Itemized Schedule Inclusions</strong>
+                            <ul class="boq-inclusions-list">
+                                <li><i class="fas fa-check"></i> Direct Tier-1 OEM Hardware Supply &amp; Bill of Materials</li>
+                                <li><i class="fas fa-check"></i> Structured High-Speed Audio/Video Cabling &amp; Rigid Brackets</li>
+                                <li><i class="fas fa-check"></i> On-Site Installation, Commissioning &amp; DSP Tuning</li>
+                                <li><i class="fas fa-check"></i> 1-Year Comprehensive On-Site Warranty &amp; 4-Hour SLA</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="boq-output-cta-row">
+                        <a href="#" id="boqWhatsAppFastTrack" class="btn-whatsapp-boq" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i> Receive Itemized PDF &amp; Direct OEM Quotation on WhatsApp
+                        </a>
+                        <a href="tel:+919310092963" class="btn-call-boq">
+                            <i class="fas fa-phone-alt"></i> Speak to Assigned Engineer (+91 93100 92963)
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2658,71 +2874,108 @@
     <script src="JS/main.js?v=20260914-seo-lead-v1" defer></script>
     <script src="JS/room-configurator.js?v=20260902-mobile-fix" defer></script>
     <script src="JS/form-validation.js?v=20260902-form-fix" defer></script>
-    <script src="JS/google-reviews.js?v=20260723-google-reviews-polish" defer></script>
-    <script src="/JS/ai-av-consultant.js?v=20260830-fix" defer></script>
-    <script src="JS/cookie-consent.js?v=20260915-v1" defer></script>
-    <!-- Hero Interactive AV & LED Estimator Widget Controller -->
+    <!-- Dedicated Enterprise AV & LED BOQ Planner Controller -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        var calcTabs = document.querySelectorAll('.hero-calc-tabs .calc-tab');
-        var priceVal = document.getElementById('calcPriceVal');
-        var scopeDesc = document.getElementById('calcScopeDesc');
-        var waLink = document.getElementById('calcWhatsAppLink');
-        var boqBtn = document.getElementById('calcBoqModalBtn');
-        if (!calcTabs.length || !priceVal || !scopeDesc || !waLink || !boqBtn) return;
+        var boqForm = document.getElementById('enterpriseBoqForm');
+        var outputCard = document.getElementById('boqOutputCard');
+        var summaryHeadline = document.getElementById('boqSummaryHeadline');
+        var summaryList = document.getElementById('boqSummaryList');
+        var waFastTrack = document.getElementById('boqWhatsAppFastTrack');
+        var submitBtn = document.getElementById('boqSubmitBtn');
 
-        var solutions = {
-            led: {
-                title: 'Active LED Video Wall',
-                price: '&#8377;3,80,000 &ndash; &#8377;8,50,000*',
-                desc: 'P1.8 / P2.5 Indoor Fine-Pitch Video Wall (approx 10 &times; 6 ft) with Novastar 4K Controller, Rigging &amp; Factory Color Calibration.',
-                waMsg: 'Hi GPSPL, I checked your Instant Estimator for Active LED Wall. Please share an itemized BOQ quote.'
-            },
-            boardroom: {
-                title: 'Conference Room / Boardroom Setup',
-                price: '&#8377;2,20,000 &ndash; &#8377;5,80,000*',
-                desc: '75" 4K Commercial Display, 4K AI Auto-Framing Soundbar/PTZ, Beamforming Table Mics &amp; Wireless Content Sharing.',
-                waMsg: 'Hi GPSPL, I checked your Instant Estimator for Boardroom Video Conferencing. Please share an itemized BOQ quote.'
-            },
-            classroom: {
-                title: 'Smart Classroom Solutions',
-                price: '&#8377;1,40,000 &ndash; &#8377;2,90,000*',
-                desc: '75" 4K Interactive Flat Panel with 40-pt Touch, Windows OPS i5 PC, Classroom Sound Kit &amp; Interactive Teaching Software.',
-                waMsg: 'Hi GPSPL, I checked your Instant Estimator for Smart Classroom. Please share an itemized BOQ quote.'
-            },
-            auditorium: {
-                title: 'Auditorium AV & Line Array Sound',
-                price: '&#8377;6,50,000 &ndash; &#8377;18,50,000*',
-                desc: 'High-Lumen Laser Projection / LED Wall, Line Array Audio Columns, Digital DSP Matrix, Stage Lighting &amp; Wireless Podiums.',
-                waMsg: 'Hi GPSPL, I checked your Instant Estimator for Auditorium AV. Please share an itemized BOQ quote.'
-            }
-        };
+        if (!boqForm || !outputCard) return;
 
-        calcTabs.forEach(function(tab) {
-            tab.addEventListener('click', function() {
-                calcTabs.forEach(function(t) {
-                    t.classList.remove('active');
-                    t.setAttribute('aria-selected', 'false');
-                });
-                this.classList.add('active');
-                this.setAttribute('aria-selected', 'true');
-                var solKey = this.getAttribute('data-solution');
-                var data = solutions[solKey];
-                if (!data) return;
-
-                priceVal.innerHTML = data.price;
-                scopeDesc.innerHTML = data.desc;
-                waLink.href = 'https://wa.me/919310092963?text=' + encodeURIComponent(data.waMsg);
-                boqBtn.setAttribute('data-solution-title', data.title);
-            });
-        });
-
-        boqBtn.addEventListener('click', function(e) {
+        boqForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            var targetSolution = this.getAttribute('data-solution-title') || 'Active LED Video Wall';
-            if (typeof window.openQuickBoqModal === 'function') {
-                window.openQuickBoqModal(targetSolution);
+
+            // Validate form
+            if (!boqForm.checkValidity()) {
+                boqForm.reportValidity();
+                return;
             }
+
+            var phoneInput = document.getElementById('boqPhone');
+            var phoneVal = phoneInput ? phoneInput.value.trim().replace(/\D/g, '') : '';
+            if (phoneVal.length !== 10) {
+                alert('Please enter a valid 10-digit mobile number so our senior engineer can send the itemized BOQ.');
+                if (phoneInput) phoneInput.focus();
+                return;
+            }
+
+            var fullName = (document.getElementById('boqFullName') ? document.getElementById('boqFullName').value.trim() : '') || 'Valued Client';
+            var company = (document.getElementById('boqCompany') ? document.getElementById('boqCompany').value.trim() : '') || 'Enterprise Client';
+            var email = (document.getElementById('boqEmail') ? document.getElementById('boqEmail').value.trim() : '');
+            var city = (document.getElementById('boqCity') ? document.getElementById('boqCity').value.trim() : '') || 'Delhi NCR';
+            var timelineSelect = document.getElementById('boqTimeline');
+            var timeline = timelineSelect ? timelineSelect.value : 'Within 1 Month';
+
+            // Selected Facility
+            var selectedFacilityEl = boqForm.querySelector('input[name="boq_facility"]:checked');
+            var facilityName = selectedFacilityEl ? selectedFacilityEl.value : 'Executive Boardroom';
+
+            // Selected Capacity
+            var selectedCapacityEl = boqForm.querySelector('input[name="boq_capacity"]:checked');
+            var capacityName = selectedCapacityEl ? selectedCapacityEl.value : 'Medium Conference (8-16 Pax)';
+
+            // Selected Modules
+            var checkedModules = [];
+            boqForm.querySelectorAll('input[name="boq_module"]:checked').forEach(function(cb) {
+                checkedModules.push(cb.value);
+            });
+            var modulesText = checkedModules.length ? checkedModules.join(', ') : 'Standard Complete Turnkey Integration';
+
+            // Selected Preferred OEMs
+            var checkedOems = [];
+            boqForm.querySelectorAll('input[name="preferred_oem"]:checked').forEach(function(cb) {
+                checkedOems.push(cb.value);
+            });
+            var oemsText = checkedOems.length ? checkedOems.join(', ') : 'Samsung, LG, Crestron, Sennheiser';
+
+            // Submit Button UX
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Compiling Technical BOQ Schedule...</span>';
+
+            setTimeout(function() {
+                // Populate Summary
+                if (summaryHeadline) {
+                    summaryHeadline.textContent = facilityName + ' — ' + capacityName;
+                }
+
+                if (summaryList) {
+                    summaryList.innerHTML = 
+                        '<li><strong>Facility Environment:</strong> ' + facilityName + '</li>' +
+                        '<li><strong>Room Scale &amp; Capacity:</strong> ' + capacityName + '</li>' +
+                        '<li><strong>Key Tech Modules:</strong> ' + modulesText + '</li>' +
+                        '<li><strong>Preferred OEMs:</strong> ' + oemsText + '</li>' +
+                        '<li><strong>Client Organization:</strong> ' + company + ' (' + fullName + ')</li>' +
+                        '<li><strong>Project Location &amp; Timeline:</strong> ' + city + ' &bull; ' + timeline + '</li>';
+                }
+
+                // WhatsApp message formation
+                var waMsg = 'Hello GPSPL Engineering Team,\n\n' +
+                    'I have registered our Project BOQ requirement:\n' +
+                    '• Facility: ' + facilityName + ' (' + capacityName + ')\n' +
+                    '• Modules: ' + modulesText + '\n' +
+                    '• Preferred OEMs: ' + oemsText + '\n' +
+                    '• Client: ' + fullName + ' (' + company + ')\n' +
+                    '• Mobile: ' + phoneVal + ' | Email: ' + email + '\n' +
+                    '• Site City: ' + city + ' | Timeline: ' + timeline + '\n\n' +
+                    'Please share our customized itemized BOQ quotation and equipment schedule.';
+
+                if (waFastTrack) {
+                    waFastTrack.href = 'https://wa.me/919310092963?text=' + encodeURIComponent(waMsg);
+                }
+
+                // Show Output Card
+                outputCard.style.display = 'block';
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> <span>BOQ Specifications Registered Successfully!</span>';
+                submitBtn.style.background = '#16a34a';
+
+                // Scroll output into view smoothly
+                outputCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 600);
         });
     });
     </script>
