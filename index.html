@@ -26,11 +26,11 @@
     <meta name="twitter:description" content="GPSPL is the top AV system integrator in India since 1997. Turnkey audio visual solutions for conference room setup, huddle rooms, active LED walls, smart classrooms & AMC support with direct OEM pricing.">
     <meta name="twitter:image" content="https://gpspl.co.in/assests/images/hero/image.jpg">
     <meta name="theme-color" content="#D32F2F">
-    <link rel="stylesheet" href="css/base.css?v=20260917-r5">
-    <link rel="stylesheet" href="css/home-hero-fix.css?v=20260917-r5">
+    <link rel="stylesheet" href="css/base.css?v=20260917-r6">
+    <link rel="stylesheet" href="css/home-hero-fix.css?v=20260917-r6">
     <link rel="stylesheet" href="css/cookie-consent.css?v=20260915-v1">
     <link rel="stylesheet" href="css/blog.css?v=20260830-fix">
-    <link rel="stylesheet" href="css/faq-preview.css?v=20260917-r5">
+    <link rel="stylesheet" href="css/faq-preview.css?v=20260917-r6">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="/JS/security-guard.js?v=20260818" defer></script>
     <script src="/JS/lead-capture.js?v=20260914-seo-lead-v1" defer></script>
@@ -399,6 +399,10 @@
     }
 
     /* Compact Crisp Headline — Never exceeds 2 clean lines, never wraps awkwardly */
+    body:has(#home.hero) #home .hero-message-copy .main-headline,
+    body:has(#home.hero) #home .hero-message-copy #home-heading,
+    html body:has(#home.hero) #home.hero .hero-message-copy .main-headline,
+    html body:has(#home.hero) #home.hero .hero-message-copy #home-heading,
     html body:has(#home.hero) .hero-message-copy .main-headline,
     html body #home .hero-message-copy .main-headline,
     html body #home .main-headline,
@@ -416,8 +420,15 @@
         max-width: 660px !important;
         text-shadow: 0 2px 14px rgba(0, 0, 0, 0.4) !important;
         display: block !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+        hyphens: none !important;
     }
 
+    body:has(#home.hero) #home .hero-message-copy .main-headline span,
+    body:has(#home.hero) #home .hero-message-copy #home-heading span,
+    html body:has(#home.hero) #home.hero .hero-message-copy .main-headline span,
+    html body:has(#home.hero) #home.hero .hero-message-copy #home-heading span,
     html body:has(#home.hero) .hero-message-copy .main-headline span,
     html body #home .hero-message-copy .main-headline span,
     html body #home .main-headline span,
@@ -429,6 +440,10 @@
         letter-spacing: inherit !important;
         color: inherit !important;
         -webkit-text-fill-color: inherit !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+        white-space: normal !important;
+        hyphens: none !important;
     }
 
     html body #home .hero-message-copy .hero-description,
@@ -538,15 +553,44 @@
     }
 
     @media (max-width: 640px) {
+        html body #home.hero,
+        html body #home {
+            padding: 16px 0 20px !important;
+        }
         html body:has(#home.hero) .hero-message-copy .main-headline,
         html body #home .main-headline,
         #home-heading,
         .main-headline {
-            font-size: clamp(1.05rem, 4.2vw, 1.22rem) !important;
+            font-size: clamp(1rem, 4.4vw, 1.22rem) !important;
             line-height: 1.24 !important;
+            max-width: 100% !important;
         }
-        html body #home .hero-message-copy .hero-actions .hero-btn {
+        html body:has(#home.hero) .hero-message-copy .main-headline span,
+        html body #home .main-headline span,
+        #home-heading span,
+        .main-headline span {
+            display: inline !important;
+            white-space: normal !important;
+            word-break: normal !important;
+        }
+        html body #home .hero-message-copy .hero-actions {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 10px !important;
             width: 100% !important;
+        }
+        html body #home .hero-message-copy .hero-actions .hero-btn,
+        html body #home .hero-actions a {
+            width: 100% !important;
+            min-height: 44px !important;
+            padding: 10px 16px !important;
+            font-size: 0.88rem !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 8px !important;
         }
     }
     </style>
@@ -704,8 +748,8 @@
             <div class="hero-message-copy reveal">
                 <p class="hero-eyebrow"><i class="fas fa-shield-halved"></i> Pan-India Turnkey AV Integrator &amp; Direct OEM Partner &bull; Estd. 1997</p>
                 <h1 id="home-heading" class="main-headline">
-                    <span>Pan-India AV System Integration &amp; Active LED Walls</span>
-                    <span>&amp; Turnkey Enterprise BOQ Planning</span>
+                    <span>Pan-India AV System Integration</span>
+                    <span>Active LED Walls &amp; Turnkey Enterprise BOQ</span>
                 </h1>
                 <p class="hero-description">
                     GPSPL is India's trusted turnkey audio-visual and active LED display system integrator. We engineer mission-critical AV experiences across all 28 States &amp; UTs for corporate boardrooms, auditoriums, 24/7 command centers, hospitals, and educational campuses with direct OEM pricing and guaranteed 4-hour SLA.
