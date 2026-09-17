@@ -11674,5 +11674,468 @@ html body #home .hero-executive-card:hover {
     }
 }
 
+/* ==========================================================================
+   ENTERPRISE AV BOQ CONFIGURATOR: STEPPER, LIVE SUMMARY & COMMERCIAL BOM
+   ========================================================================== */
 
+/* Visual Stepper Progress Bar */
+.boq-stepper-progress {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 16px !important;
+    padding: 14px 20px !important;
+    margin-bottom: 28px !important;
+    overflow-x: auto !important;
+}
 
+.boq-step-indicator {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+    transition: all 0.25s ease !important;
+}
+
+.boq-step-indicator .step-dot {
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 50% !important;
+    background: #e2e8f0 !important;
+    color: #475569 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.82rem !important;
+    transition: all 0.25s ease !important;
+}
+
+.boq-step-indicator.active .step-dot {
+    background: #ef3438 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(239, 52, 56, 0.35) !important;
+}
+
+.boq-step-indicator .step-info {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.boq-step-indicator .step-index {
+    font-size: 0.68rem !important;
+    font-weight: 800 !important;
+    color: #ef3438 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.boq-step-indicator .step-name {
+    font-size: 0.8rem !important;
+    font-weight: 750 !important;
+    color: #0f172a !important;
+    white-space: nowrap !important;
+}
+
+.boq-step-line {
+    flex: 1 !important;
+    height: 2px !important;
+    background: #e2e8f0 !important;
+    margin: 0 12px !important;
+    min-width: 20px !important;
+    transition: all 0.25s ease !important;
+}
+
+.boq-step-line.active {
+    background: #ef3438 !important;
+}
+
+/* Step 2 Sub-Parameter Box: Ceiling Height & Acoustic Profile */
+.boq-sub-parameter-box {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    padding: 16px 18px !important;
+    margin-top: 16px !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 16px !important;
+}
+
+.boq-param-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+
+.boq-param-label {
+    font-size: 0.82rem !important;
+    font-weight: 750 !important;
+    color: #1e293b !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+}
+
+.boq-param-label i {
+    color: #ef3438 !important;
+}
+
+.boq-mini-chips-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+}
+
+.mini-chip {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 7px 13px !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 8px !important;
+    background: #ffffff !important;
+    font-size: 0.78rem !important;
+    font-weight: 650 !important;
+    color: #334155 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.mini-chip input {
+    display: none !important;
+}
+
+.mini-chip:hover {
+    border-color: #94a3b8 !important;
+    background: #f1f5f9 !important;
+}
+
+.mini-chip.active,
+.mini-chip:has(input:checked) {
+    border-color: #ef3438 !important;
+    background: rgba(239, 52, 56, 0.08) !important;
+    color: #ef3438 !important;
+    font-weight: 750 !important;
+}
+
+/* Step 3 UC Conferencing Ecosystem Selector */
+.boq-vc-platform-selector {
+    margin-bottom: 18px !important;
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    padding: 16px 18px !important;
+}
+
+.boq-vc-chips-row {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)) !important;
+    gap: 10px !important;
+    margin-top: 10px !important;
+}
+
+.vc-chip {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 10px 14px !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 10px !important;
+    background: #ffffff !important;
+    cursor: pointer !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    color: #1e293b !important;
+    transition: all 0.2s ease !important;
+}
+
+.vc-chip input {
+    display: none !important;
+}
+
+.vc-chip i {
+    color: #64748b !important;
+    font-size: 1.05rem !important;
+    transition: color 0.2s ease !important;
+}
+
+.vc-chip:hover {
+    border-color: #94a3b8 !important;
+    background: #f1f5f9 !important;
+}
+
+.vc-chip.active,
+.vc-chip:has(input:checked) {
+    border-color: #ef3438 !important;
+    background: rgba(239, 52, 56, 0.07) !important;
+    color: #ef3438 !important;
+}
+
+.vc-chip.active i,
+.vc-chip:has(input:checked) i {
+    color: #ef3438 !important;
+}
+
+/* DYNAMIC REAL-TIME ARCHITECTURAL & BUDGET PREVIEW BAR */
+.boq-live-summary-bar {
+    background: linear-gradient(135deg, #071526 0%, #0d233e 100%) !important;
+    border: 1px solid rgba(239, 52, 56, 0.35) !important;
+    border-radius: 16px !important;
+    padding: 18px 24px !important;
+    margin: 26px 0 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 20px !important;
+    box-shadow: 0 10px 30px rgba(7, 21, 38, 0.15) !important;
+}
+
+.live-summary-left {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    flex: 1 !important;
+}
+
+.live-indicator-tag {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-size: 0.7rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    color: #ef3438 !important;
+    background: rgba(239, 52, 56, 0.15) !important;
+    padding: 3px 8px !important;
+    border-radius: 6px !important;
+    width: fit-content !important;
+}
+
+.live-config-text {
+    font-size: 1.02rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    line-height: 1.35 !important;
+}
+
+.live-tech-summary {
+    font-size: 0.8rem !important;
+    color: #94a3b8 !important;
+    line-height: 1.4 !important;
+}
+
+.live-summary-right {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    text-align: right !important;
+    flex-shrink: 0 !important;
+}
+
+.live-est-label {
+    font-size: 0.72rem !important;
+    font-weight: 750 !important;
+    text-transform: uppercase !important;
+    color: #94a3b8 !important;
+    letter-spacing: 0.5px !important;
+}
+
+.live-est-price {
+    font-size: 1.55rem !important;
+    font-weight: 900 !important;
+    color: #22c55e !important;
+    line-height: 1.2 !important;
+    margin: 2px 0 !important;
+}
+
+.live-est-tax-note {
+    font-size: 0.72rem !important;
+    color: #cbd5e1 !important;
+}
+
+/* Header Ref Badge */
+.boq-header-meta {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-top: 8px !important;
+}
+
+.boq-ref-badge {
+    background: #0f172a !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    font-size: 0.78rem !important;
+    padding: 5px 12px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+.boq-ref-badge i {
+    color: #ef3438 !important;
+}
+
+/* Formal Commercial Quotation Summary Box */
+.boq-quotation-summary-box {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    padding: 16px 20px !important;
+    margin-top: 16px !important;
+}
+
+.quotation-summary-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 8px 0 !important;
+    border-bottom: 1px dashed #e2e8f0 !important;
+    font-size: 0.86rem !important;
+    color: #475569 !important;
+}
+
+.quotation-summary-row strong {
+    color: #0f172a !important;
+    font-weight: 750 !important;
+}
+
+.quotation-summary-row.quotation-net-total {
+    border-top: 1.5px solid #cbd5e1 !important;
+    margin-top: 6px !important;
+    padding-top: 10px !important;
+    font-weight: 800 !important;
+    font-size: 0.92rem !important;
+    color: #0f172a !important;
+}
+
+.quotation-summary-row.quotation-net-total strong {
+    font-size: 1.05rem !important;
+    color: #0f172a !important;
+}
+
+.quotation-summary-row.quotation-gst-row {
+    color: #64748b !important;
+    font-size: 0.82rem !important;
+}
+
+.quotation-summary-row.quotation-grand-total {
+    border-top: 2px solid #0f172a !important;
+    border-bottom: none !important;
+    margin-top: 6px !important;
+    padding-top: 12px !important;
+    font-size: 1.05rem !important;
+    font-weight: 900 !important;
+    color: #0f172a !important;
+}
+
+.quotation-summary-row.quotation-grand-total strong {
+    font-size: 1.32rem !important;
+    color: #16a34a !important;
+}
+
+/* Commercial Handover Terms & SLA Box */
+.boq-commercial-terms-card {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    padding: 18px 20px !important;
+    margin: 20px 0 !important;
+}
+
+.boq-commercial-terms-card h5 {
+    font-size: 0.95rem !important;
+    font-weight: 850 !important;
+    color: #0f172a !important;
+    margin: 0 0 14px 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.commercial-terms-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 12px !important;
+}
+
+.commercial-terms-grid .term-col {
+    background: #f8fafc !important;
+    border: 1px solid #f1f5f9 !important;
+    border-radius: 10px !important;
+    padding: 12px 14px !important;
+}
+
+.commercial-terms-grid .term-col strong {
+    font-size: 0.82rem !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin-bottom: 4px !important;
+}
+
+.commercial-terms-grid .term-col strong i {
+    color: #ef3438 !important;
+}
+
+.commercial-terms-grid .term-col p {
+    font-size: 0.75rem !important;
+    color: #64748b !important;
+    margin: 0 !important;
+    line-height: 1.45 !important;
+}
+
+/* Mobile Responsiveness for Stepper and Live Bar */
+@media (max-width: 768px) {
+    .boq-stepper-progress {
+        padding: 10px 14px !important;
+        gap: 12px !important;
+    }
+
+    .boq-step-indicator .step-info {
+        display: none !important;
+    }
+
+    .boq-step-line {
+        margin: 0 4px !important;
+        min-width: 14px !important;
+    }
+
+    .boq-live-summary-bar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 16px 18px !important;
+        gap: 14px !important;
+    }
+
+    .live-summary-right {
+        align-items: flex-start !important;
+        text-align: left !important;
+        width: 100% !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        padding-top: 12px !important;
+    }
+
+    .live-est-price {
+        font-size: 1.35rem !important;
+    }
+
+    .boq-vc-chips-row {
+        grid-template-columns: 1fr !important;
+    }
+
+    .quotation-summary-row {
+        font-size: 0.78rem !important;
+    }
+
+    .quotation-summary-row.quotation-grand-total strong {
+        font-size: 1.15rem !important;
+    }
+}

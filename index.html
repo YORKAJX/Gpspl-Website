@@ -26,11 +26,11 @@
     <meta name="twitter:description" content="GPSPL is the top AV system integrator in India since 1997. Turnkey audio visual solutions for conference room setup, huddle rooms, active LED walls, smart classrooms & AMC support with direct OEM pricing.">
     <meta name="twitter:image" content="https://gpspl.co.in/assests/images/hero/image.jpg">
     <meta name="theme-color" content="#D32F2F">
-    <link rel="stylesheet" href="css/base.css?v=20260917-r6">
-    <link rel="stylesheet" href="css/home-hero-fix.css?v=20260917-r6">
+    <link rel="stylesheet" href="css/base.css?v=20260917-r7">
+    <link rel="stylesheet" href="css/home-hero-fix.css?v=20260917-r7">
     <link rel="stylesheet" href="css/cookie-consent.css?v=20260915-v1">
     <link rel="stylesheet" href="css/blog.css?v=20260830-fix">
-    <link rel="stylesheet" href="css/faq-preview.css?v=20260917-r6">
+    <link rel="stylesheet" href="css/faq-preview.css?v=20260917-r7">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="/JS/security-guard.js?v=20260818" defer></script>
     <script src="/JS/lead-capture.js?v=20260914-seo-lead-v1" defer></script>
@@ -850,9 +850,52 @@
             </div>
 
             <div class="boq-configurator-card">
-                <form id="enterpriseBoqForm" class="boq-form-grid" novalidate>
+                <!-- Visual Stepper Progress Bar -->
+                <div class="boq-stepper-progress" id="boqStepper">
+                    <div class="boq-step-indicator active" data-step="1">
+                        <span class="step-dot"><i class="fas fa-building"></i></span>
+                        <div class="step-info">
+                            <span class="step-index">STEP 01</span>
+                            <span class="step-name">Facility Space</span>
+                        </div>
+                    </div>
+                    <div class="boq-step-line active"></div>
+                    <div class="boq-step-indicator" data-step="2">
+                        <span class="step-dot"><i class="fas fa-users-viewfinder"></i></span>
+                        <div class="step-info">
+                            <span class="step-index">STEP 02</span>
+                            <span class="step-name">Scale &amp; Acoustics</span>
+                        </div>
+                    </div>
+                    <div class="boq-step-line"></div>
+                    <div class="boq-step-indicator" data-step="3">
+                        <span class="step-dot"><i class="fas fa-network-wired"></i></span>
+                        <div class="step-info">
+                            <span class="step-index">STEP 03</span>
+                            <span class="step-name">UC &amp; Subsystems</span>
+                        </div>
+                    </div>
+                    <div class="boq-step-line"></div>
+                    <div class="boq-step-indicator" data-step="4">
+                        <span class="step-dot"><i class="fas fa-handshake"></i></span>
+                        <div class="step-info">
+                            <span class="step-index">STEP 04</span>
+                            <span class="step-name">Tier-1 OEMs</span>
+                        </div>
+                    </div>
+                    <div class="boq-step-line"></div>
+                    <div class="boq-step-indicator" data-step="5">
+                        <span class="step-dot"><i class="fas fa-file-invoice"></i></span>
+                        <div class="step-info">
+                            <span class="step-index">STEP 05</span>
+                            <span class="step-name">Quotation &amp; Scope</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="enterpriseBoqForm" class="boq-form-grid" action="javascript:void(0);" onsubmit="return false;" novalidate>
                     <!-- STEP 1: Facility Type -->
-                    <div class="boq-step-group">
+                    <div class="boq-step-group" data-step-group="1">
                         <div class="boq-step-title">
                             <span class="step-num">01</span>
                             <div>
@@ -960,13 +1003,13 @@
                         </div>
                     </div>
 
-                    <!-- STEP 2: Room Capacity & Scale -->
-                    <div class="boq-step-group">
+                    <!-- STEP 2: Room Capacity & Scale + Acoustics -->
+                    <div class="boq-step-group" data-step-group="2">
                         <div class="boq-step-title">
                             <span class="step-num">02</span>
                             <div>
-                                <h3>Room Capacity &amp; Scale</h3>
-                                <p>Helps our engineers determine display size, camera zoom, and acoustic reach</p>
+                                <h3>Room Capacity, Scale &amp; Acoustics</h3>
+                                <p>Helps our engineers determine display size, camera optical zoom, and acoustic reach</p>
                             </div>
                         </div>
                         <div class="boq-capacity-grid boq-capacity-selector" role="radiogroup" aria-label="Room Capacity">
@@ -1051,17 +1094,49 @@
                                 </div>
                             </label>
                         </div>
+
+                        <!-- Architectural Ceiling & Acoustic Environment Parameters -->
+                        <div class="boq-sub-parameter-box">
+                            <div class="boq-param-group">
+                                <label class="boq-param-label"><i class="fas fa-arrows-up-down"></i> Ceiling Height &amp; Speaker Mount Architecture:</label>
+                                <div class="boq-mini-chips-row" role="radiogroup" aria-label="Ceiling Height">
+                                    <label class="mini-chip active"><input type="radio" name="ceiling_height" value="Standard (9–10 ft)" checked><span>Standard (9–10 ft) • Flush Ceiling</span></label>
+                                    <label class="mini-chip"><input type="radio" name="ceiling_height" value="High / Exposed (11–14 ft)"><span>High / Open (11–14 ft) • Pendant / Drop</span></label>
+                                    <label class="mini-chip"><input type="radio" name="ceiling_height" value="Double Height (15+ ft)"><span>Double Height (15+ ft) • Line Array</span></label>
+                                </div>
+                            </div>
+                            <div class="boq-param-group">
+                                <label class="boq-param-label"><i class="fas fa-wave-square"></i> Room Acoustic Profile &amp; Wall Surfaces:</label>
+                                <div class="boq-mini-chips-row" role="radiogroup" aria-label="Acoustic Profile">
+                                    <label class="mini-chip active"><input type="radio" name="acoustic_env" value="Standard Drywall / Carpeted" checked><span>Standard Drywall / Carpeted</span></label>
+                                    <label class="mini-chip"><input type="radio" name="acoustic_env" value="Glass Partitions (High Echo)"><span>Glass Walls (High Echo • Panels Rec.)</span></label>
+                                    <label class="mini-chip"><input type="radio" name="acoustic_env" value="Acoustically Treated Space"><span>Acoustically Treated Space</span></label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- STEP 3: Technology Modules -->
-                    <div class="boq-step-group">
+                    <!-- STEP 3: Unified Communications & Technology Modules -->
+                    <div class="boq-step-group" data-step-group="3">
                         <div class="boq-step-title">
                             <span class="step-num">03</span>
                             <div>
-                                <h3>Core Technology Requirements</h3>
-                                <p>Select all subsystems required for your deployment</p>
+                                <h3>Conferencing Platform &amp; Core Subsystems</h3>
+                                <p>Select your native video conferencing ecosystem and required technical modules</p>
                             </div>
                         </div>
+
+                        <!-- UC Ecosystem Selector -->
+                        <div class="boq-vc-platform-selector">
+                            <label class="boq-param-label"><i class="fas fa-video"></i> Primary UC &amp; Conferencing Platform:</label>
+                            <div class="boq-vc-chips-row" role="radiogroup" aria-label="UC Platform">
+                                <label class="vc-chip active"><input type="radio" name="vc_platform" value="Microsoft Teams Rooms (MTR)" checked><i class="fab fa-windows"></i> <span>Microsoft Teams Rooms (MTR)</span></label>
+                                <label class="vc-chip"><input type="radio" name="vc_platform" value="Zoom Rooms Native"><i class="fas fa-video"></i> <span>Zoom Rooms Native</span></label>
+                                <label class="vc-chip"><input type="radio" name="vc_platform" value="Cisco Webex / Universal SIP"><i class="fas fa-network-wired"></i> <span>Cisco Webex / SIP</span></label>
+                                <label class="vc-chip"><input type="radio" name="vc_platform" value="BYOD USB-C / Wireless Host"><i class="fas fa-laptop"></i> <span>BYOD (USB-C 4K Host)</span></label>
+                            </div>
+                        </div>
+
                         <div class="boq-modules-grid">
                             <label class="boq-check-card boq-module-checkbox">
                                 <input type="checkbox" name="tech_modules" value="Commercial 4K Display / Active LED Video Wall" checked>
@@ -1074,7 +1149,7 @@
                                 </div>
                             </label>
                             <label class="boq-check-card boq-module-checkbox">
-                                <input type="checkbox" name="tech_modules" value="PTZ Camera with Auto-Tracking">
+                                <input type="checkbox" name="tech_modules" value="PTZ Camera with Auto-Tracking" checked>
                                 <div class="check-content">
                                     <i class="fas fa-check-circle check-indicator"></i>
                                     <div>
@@ -1084,7 +1159,7 @@
                                 </div>
                             </label>
                             <label class="boq-check-card boq-module-checkbox">
-                                <input type="checkbox" name="tech_modules" value="Beamforming Ceiling Mic & DSP">
+                                <input type="checkbox" name="tech_modules" value="Beamforming Ceiling Mic & DSP" checked>
                                 <div class="check-content">
                                     <i class="fas fa-check-circle check-indicator"></i>
                                     <div>
@@ -1094,7 +1169,7 @@
                                 </div>
                             </label>
                             <label class="boq-check-card boq-module-checkbox">
-                                <input type="checkbox" name="tech_modules" value="Wireless Screen Sharing & BYOD">
+                                <input type="checkbox" name="tech_modules" value="Wireless Screen Sharing & BYOD" checked>
                                 <div class="check-content">
                                     <i class="fas fa-check-circle check-indicator"></i>
                                     <div>
@@ -1127,7 +1202,7 @@
                     </div>
 
                     <!-- STEP 4: Preferred Brands -->
-                    <div class="boq-step-group">
+                    <div class="boq-step-group" data-step-group="4">
                         <div class="boq-step-title">
                             <span class="step-num">04</span>
                             <div>
@@ -1141,6 +1216,8 @@
                             <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="Crestron" checked><span>Crestron</span></label>
                             <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="Poly"><span>HP / Poly</span></label>
                             <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="Sennheiser" checked><span>Sennheiser</span></label>
+                            <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="Shure" checked><span>Shure Audio</span></label>
+                            <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="Barco"><span>Barco ClickShare</span></label>
                             <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="Absen"><span>Absen LED</span></label>
                             <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="Sony"><span>Sony</span></label>
                             <label class="brand-chip"><input type="checkbox" name="preferred_oem" value="Harman / JBL"><span>Harman / JBL</span></label>
@@ -1149,8 +1226,26 @@
                         </div>
                     </div>
 
+                    <!-- DYNAMIC REAL-TIME ARCHITECTURAL & BUDGET PREVIEW BAR -->
+                    <div class="boq-live-summary-bar" id="boqLiveSummaryBar">
+                        <div class="live-summary-left">
+                            <span class="live-indicator-tag"><i class="fas fa-sliders"></i> Real-Time Engineering Scope</span>
+                            <div class="live-config-text" id="liveConfigText">
+                                Executive Boardroom • Compact Huddle (4–8 Pax) • Standard Ceiling • Microsoft Teams Rooms
+                            </div>
+                            <div class="live-tech-summary" id="liveTechSummary">
+                                Subsystems: 55" 4K Commercial Display • 4K Auto-Framing Bar • AEC Audio DSP • Direct OEM Supply
+                            </div>
+                        </div>
+                        <div class="live-summary-right">
+                            <div class="live-est-label">Estimated Turnkey Equipment &amp; SLA</div>
+                            <div class="live-est-price" id="liveEstPrice">₹2,80,000 – ₹3,45,000*</div>
+                            <span class="live-est-tax-note">+ 18% GST (ITC Eligible) • Direct OEM Supply</span>
+                        </div>
+                    </div>
+
                     <!-- STEP 5: Project Details & Verification -->
-                    <div class="boq-step-group boq-details-group">
+                    <div class="boq-step-group boq-details-group" data-step-group="5">
                         <div class="boq-step-title">
                             <span class="step-num">05</span>
                             <div>
@@ -1210,7 +1305,10 @@
                                 <p id="boqSummaryHeadline">Custom engineering schedule tailored for your space</p>
                             </div>
                         </div>
-                        <span class="boq-assigned-badge"><i class="fas fa-user-tie"></i> Assigned AV Architect: Senior Systems Engineer, GPSPL (Nehru Place HQ)</span>
+                        <div class="boq-header-meta">
+                            <span class="boq-ref-badge" id="boqRefDisplay"><i class="fas fa-hashtag"></i> Ref: GPSPL/BOQ/2026/849201</span>
+                            <span class="boq-assigned-badge"><i class="fas fa-user-tie"></i> Assigned AV Architect: Senior Systems Engineer, GPSPL (Nehru Place HQ)</span>
+                        </div>
                     </div>
 
                     <!-- Revealed Pricing Banner (Only visible after contact details entered) -->
@@ -1230,11 +1328,11 @@
 
                     <div class="boq-output-details-grid">
                         <div class="boq-output-col">
-                            <strong>Project &amp; Client Scope</strong>
+                            <strong><i class="fas fa-clipboard-list" style="color: #ef3438;"></i> Project &amp; Client Scope</strong>
                             <ul id="boqSummaryList"></ul>
                         </div>
                         <div class="boq-output-col">
-                            <strong>Turnkey Cost Components Breakdown</strong>
+                            <strong><i class="fas fa-coins" style="color: #ef3438;"></i> Turnkey Cost Components Breakdown</strong>
                             <ul id="boqCostBreakdownList" class="boq-breakdown-list"></ul>
                         </div>
                     </div>
@@ -1249,16 +1347,69 @@
                             <table class="boq-items-table" id="boqItemsTable">
                                 <thead>
                                     <tr>
-                                        <th style="width: 22%;">Subsystem Category</th>
-                                        <th style="width: 46%;">Equipment Description &amp; Technical Specifications</th>
-                                        <th style="width: 20%;">Approved OEM Brands</th>
-                                        <th style="width: 12%; text-align: center;">Qty</th>
+                                        <th style="width: 5%; text-align: center;">S.No</th>
+                                        <th style="width: 18%;">Subsystem Category</th>
+                                        <th style="width: 38%;">Equipment Description &amp; Technical Specifications</th>
+                                        <th style="width: 17%;">Approved OEM Brands</th>
+                                        <th style="width: 8%; text-align: center;">Qty</th>
+                                        <th style="width: 14%; text-align: right;">Indicative Value (₹)</th>
                                     </tr>
                                 </thead>
                                 <tbody id="boqTableBody">
                                     <!-- Populated dynamically via JS calculation -->
                                 </tbody>
                             </table>
+                        </div>
+
+                        <!-- Formal Commercial Quotation Summary Box -->
+                        <div class="boq-quotation-summary-box">
+                            <div class="quotation-summary-row">
+                                <span>Direct OEM Hardware &amp; Equipment Supply Subtotal:</span>
+                                <strong id="boqHwSubtotal">₹0</strong>
+                            </div>
+                            <div class="quotation-summary-row">
+                                <span>High-Speed 4K Optical Cabling, Rigid Mounts &amp; Conduit:</span>
+                                <strong id="boqCablingSubtotal">₹0</strong>
+                            </div>
+                            <div class="quotation-summary-row">
+                                <span>DSP Audio Calibration, Acoustic RT60 Commissioning &amp; Handover:</span>
+                                <strong id="boqLaborSubtotal">Included in Turnkey Scope</strong>
+                            </div>
+                            <div class="quotation-summary-row quotation-net-total">
+                                <span>Estimated Turnkey Investment (Excl. Taxes):</span>
+                                <strong id="boqNetSubtotal">₹0</strong>
+                            </div>
+                            <div class="quotation-summary-row quotation-gst-row">
+                                <span>Applicable GST @ 18% (Eligible for Input Tax Credit - ITC):</span>
+                                <strong id="boqGstSubtotal">₹0</strong>
+                            </div>
+                            <div class="quotation-summary-row quotation-grand-total">
+                                <span>Estimated Grand Total (Turnkey Project Value):</span>
+                                <strong id="boqGrandSubtotal">₹0*</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Commercial Handover Terms & SLA Box -->
+                    <div class="boq-commercial-terms-card">
+                        <h5><i class="fas fa-file-contract" style="color: #ef3438;"></i> GPSPL Turnkey Commercial &amp; Engineering SLA Terms</h5>
+                        <div class="commercial-terms-grid">
+                            <div class="term-col">
+                                <strong><i class="fas fa-truck-ramp-box"></i> Direct OEM Supply &amp; Staging</strong>
+                                <p>100% Brand new factory-sealed hardware with manufacturer serial warranty certificates (1 to 3 Years). Staged &amp; delivered in 2–3 weeks.</p>
+                            </div>
+                            <div class="term-col">
+                                <strong><i class="fas fa-screwdriver-wrench"></i> Certified Physical Rigging</strong>
+                                <p>Concealed Cat6A/Optical HDMI conduits, heavy-duty Chief/Sanus tilt brackets, seismic structural load anchors, and 19" equipment rack dressing.</p>
+                            </div>
+                            <div class="term-col">
+                                <strong><i class="fas fa-sliders"></i> DSP Tuning &amp; Acoustic Handover</strong>
+                                <p>On-site Acoustic Echo Cancellation (AEC) calibration, room RT60 tuning, camera auto-tracking preset alignment, and administrative handover training.</p>
+                            </div>
+                            <div class="term-col">
+                                <strong><i class="fas fa-shield-halved"></i> 1-Year Comprehensive On-Site SLA</strong>
+                                <p>Backed by GPSPL guaranteed 4-Hour Response SLA across Delhi NCR and dedicated senior engineering support Pan-India.</p>
+                            </div>
                         </div>
                     </div>
 
@@ -3332,92 +3483,81 @@
         var summaryList = document.getElementById('boqSummaryList');
         var costBreakdownList = document.getElementById('boqCostBreakdownList');
         var priceRangeDisplay = document.getElementById('boqPriceRangeDisplay');
+        var boqRefDisplay = document.getElementById('boqRefDisplay');
         var boqTableBody = document.getElementById('boqTableBody');
         var waFastTrack = document.getElementById('boqWhatsAppFastTrack');
         var submitBtn = document.getElementById('boqSubmitBtn');
         var btnDownloadPdf = document.getElementById('btnDownloadBoqPdf');
         var btnDownloadPdfBottom = document.getElementById('btnDownloadBoqPdfBottom');
 
+        // Live preview elements
+        var liveConfigText = document.getElementById('liveConfigText');
+        var liveTechSummary = document.getElementById('liveTechSummary');
+        var liveEstPrice = document.getElementById('liveEstPrice');
+        var boqStepper = document.getElementById('boqStepper');
+
+        // Quotation summary box elements
+        var boqHwSubtotal = document.getElementById('boqHwSubtotal');
+        var boqCablingSubtotal = document.getElementById('boqCablingSubtotal');
+        var boqLaborSubtotal = document.getElementById('boqLaborSubtotal');
+        var boqNetSubtotal = document.getElementById('boqNetSubtotal');
+        var boqGstSubtotal = document.getElementById('boqGstSubtotal');
+        var boqGrandSubtotal = document.getElementById('boqGrandSubtotal');
+
         if (!boqForm || !outputCard) return;
-
-        // Interactive visual selection on radio cards
-        var facilityRadios = boqForm.querySelectorAll('input[name="facility_type"]');
-        facilityRadios.forEach(function(radio) {
-            radio.addEventListener('change', function() {
-                facilityRadios.forEach(function(r) {
-                    var parent = r.closest('.boq-facility-option');
-                    if (parent) parent.classList.remove('active');
-                });
-                var currentParent = this.closest('.boq-facility-option');
-                if (currentParent) currentParent.classList.add('active');
-            });
-        });
-
-        var capacityRadios = boqForm.querySelectorAll('input[name="room_capacity"]');
-        capacityRadios.forEach(function(radio) {
-            radio.addEventListener('change', function() {
-                capacityRadios.forEach(function(r) {
-                    var parent = r.closest('.boq-chip-option');
-                    if (parent) parent.classList.remove('active');
-                });
-                var currentParent = this.closest('.boq-chip-option');
-                if (currentParent) currentParent.classList.add('active');
-            });
-        });
-
-        // Store last calculated estimate for PDF export
-        var currentBoqData = null;
 
         function formatINR(val) {
             return '₹' + Number(val).toLocaleString('en-IN');
         }
 
-        boqForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Validate form
-            if (!boqForm.checkValidity()) {
-                boqForm.reportValidity();
-                return;
-            }
-
-            var phoneInput = document.getElementById('boqPhone');
-            var phoneVal = phoneInput ? phoneInput.value.trim().replace(/\D/g, '') : '';
-            if (phoneVal.length !== 10) {
-                alert('Please enter a valid 10-digit mobile number so our senior systems engineer can send your formal BOQ quotation.');
-                if (phoneInput) phoneInput.focus();
-                return;
-            }
-
-            var fullName = (document.getElementById('boqFullName') ? document.getElementById('boqFullName').value.trim() : '') || 'Valued Client';
-            var company = (document.getElementById('boqCompany') ? document.getElementById('boqCompany').value.trim() : '') || 'Enterprise Client';
-            var email = (document.getElementById('boqEmail') ? document.getElementById('boqEmail').value.trim() : '');
-            var city = (document.getElementById('boqCity') ? document.getElementById('boqCity').value.trim() : '') || 'Delhi NCR';
-            var timelineSelect = document.getElementById('boqTimeline');
-            var timeline = timelineSelect ? timelineSelect.value : 'Within 1 Month';
-
-            // Selected Facility
-            var selectedFacilityEl = boqForm.querySelector('input[name="facility_type"]:checked');
-            var facilityType = selectedFacilityEl ? selectedFacilityEl.value : 'Boardroom & Conference Room';
-
-            // Selected Capacity
-            var selectedCapacityEl = boqForm.querySelector('input[name="room_capacity"]:checked');
-            var roomCapacity = selectedCapacityEl ? selectedCapacityEl.value : 'Compact Huddle (4-8 Pax • 150-250 sq.ft)';
-
-            // Selected Modules
-            var checkedModules = [];
-            boqForm.querySelectorAll('input[name="tech_modules"]:checked').forEach(function(cb) {
-                checkedModules.push(cb.value);
+        // Helper to bind radio chip group active classes
+        function bindRadioGroup(inputName, parentSelector) {
+            var radios = boqForm.querySelectorAll('input[name="' + inputName + '"]');
+            radios.forEach(function(radio) {
+                radio.addEventListener('change', function() {
+                    radios.forEach(function(r) {
+                        var p = r.closest(parentSelector);
+                        if (p) p.classList.remove('active');
+                    });
+                    var cur = this.closest(parentSelector);
+                    if (cur) cur.classList.add('active');
+                    updateLivePreview();
+                });
             });
+        }
 
-            // Selected Preferred OEMs
-            var checkedOems = [];
-            boqForm.querySelectorAll('input[name="preferred_oem"]:checked').forEach(function(cb) {
-                checkedOems.push(cb.value);
+        bindRadioGroup('facility_type', '.boq-facility-option');
+        bindRadioGroup('room_capacity', '.boq-chip-option');
+        bindRadioGroup('ceiling_height', '.mini-chip');
+        bindRadioGroup('acoustic_env', '.mini-chip');
+        bindRadioGroup('vc_platform', '.vc-chip');
+
+        // Checkboxes change listeners
+        boqForm.querySelectorAll('input[name="tech_modules"], input[name="preferred_oem"]').forEach(function(cb) {
+            cb.addEventListener('change', function() {
+                updateLivePreview();
             });
-            var oemsText = checkedOems.length ? checkedOems.join(', ') : 'Samsung, LG, Crestron, Sennheiser, Poly';
+        });
 
-            // Determine scale tier
+        // Stepper click support
+        if (boqStepper) {
+            var stepIndicators = boqStepper.querySelectorAll('.boq-step-indicator');
+            stepIndicators.forEach(function(ind) {
+                ind.addEventListener('click', function() {
+                    var stepNum = this.getAttribute('data-step');
+                    var targetGroup = boqForm.querySelector('.boq-step-group[data-step-group="' + stepNum + '"]');
+                    if (targetGroup) {
+                        targetGroup.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        }
+
+        // Store last calculated estimate for PDF export
+        var currentBoqData = null;
+
+        // Core Calculation Engine
+        function computeBoq(facilityType, roomCapacity, ceilingHeight, acousticEnv, vcPlatform, checkedModules, checkedOems) {
             var scaleTier = 'huddle';
             if (roomCapacity.indexOf('Medium') !== -1 || roomCapacity.indexOf('10-18') !== -1) {
                 scaleTier = 'medium';
@@ -3427,46 +3567,33 @@
                 scaleTier = 'grand';
             }
 
-            // High-Precision Commercial Calculation Engine (2026 Indian AV Integration Benchmarks)
-            var displayCost = 0;
-            var displayItem = '';
-            var displaySpecs = '';
+            var displayCost = 0, displayItem = '', displaySpecs = '';
             var displayBrands = checkedOems.filter(function(b){ return /Samsung|LG|Sony|Absen/i.test(b); }).join(' / ') || 'Samsung / LG Commercial UHD';
 
-            var cameraCost = 0;
-            var cameraItem = '';
-            var cameraSpecs = '';
-            var cameraBrands = checkedOems.filter(function(b){ return /Poly|Sony/i.test(b); }).join(' / ') || 'Poly / Aver / Logitech';
+            var cameraCost = 0, cameraItem = '', cameraSpecs = '';
+            var cameraBrands = checkedOems.filter(function(b){ return /Poly|Sony/i.test(b); }).join(' / ') || 'HP Poly / Aver Pro';
 
-            var audioCost = 0;
-            var audioItem = '';
-            var audioSpecs = '';
-            var audioBrands = checkedOems.filter(function(b){ return /Sennheiser|Harman|JBL/i.test(b); }).join(' / ') || 'Sennheiser / Shure / JBL Professional';
+            var audioCost = 0, audioItem = '', audioSpecs = '';
+            var audioBrands = checkedOems.filter(function(b){ return /Sennheiser|Shure|Harman|JBL/i.test(b); }).join(' / ') || 'Sennheiser / Shure / JBL Pro';
 
             var switchingCost = 0;
             var switchingItem = '4K Ultra-HD Structured Switching & Wall/Table Interface Matrix';
             var switchingSpecs = 'High-Speed HDMI 2.1 / USB-C 4K@60Hz 4:4:4 Distribution with Auto-Priority';
             var switchingBrands = checkedOems.filter(function(b){ return /Crestron|ATEN/i.test(b); }).join(' / ') || 'Crestron / ATEN Professional';
-            // Switching cost scaled per room size
-            if (scaleTier === 'huddle') {
-                switchingCost = 18000;
-            } else if (scaleTier === 'medium') {
-                switchingCost = 38000;
-            } else if (scaleTier === 'large') {
-                switchingCost = 72000;
-            } else {
-                switchingCost = 145000;
-            }
+
+            if (scaleTier === 'huddle') switchingCost = 18000;
+            else if (scaleTier === 'medium') switchingCost = 38000;
+            else if (scaleTier === 'large') switchingCost = 72000;
+            else switchingCost = 145000;
 
             var cablingLaborCost = 0;
 
-            // Facility-Specific Modeling
             if (facilityType.indexOf('Boardroom') !== -1) {
                 if (scaleTier === 'huddle') {
                     displayItem = '55" 4K Non-Glare Commercial Signage Display (24/7 Duty)';
                     displaySpecs = '500 Nits, Non-Glare Haze 25%, Ultra-Slim 28.5mm, 4K UHD, Landscape/Portrait';
                     displayCost = 68000;
-                    cameraItem = '4K Auto-Framing All-in-One Video Collaboration Bar';
+                    cameraItem = '4K Auto-Framing All-in-One Video Collaboration Bar (' + vcPlatform.split(' ')[0] + ' Certified)';
                     cameraSpecs = 'Integrated 4K ePTZ Camera, Beamforming 6-Mic Array, Stereo Hi-Fi Speakers, MTR/Zoom';
                     cameraCost = 85000;
                     audioItem = 'Acoustic Echo Cancellation (AEC) & Voice Clarity DSP Engine';
@@ -3477,7 +3604,7 @@
                     displayItem = '75" 4K Commercial Signage Display (Samsung QMC / LG UHD)';
                     displaySpecs = '500 Nits, Anti-Glare Panel, Built-in Quantum Processor 4K, 24/7 Operational Rating';
                     displayCost = 145000;
-                    cameraItem = '4K 12x Optical Zoom PTZ Video Conference Camera';
+                    cameraItem = '4K 12x Optical Zoom PTZ Video Conference Camera (' + vcPlatform.split(' ')[0] + ' Certified)';
                     cameraSpecs = '12x Optical Zoom, Dual Stream, Preset Positions, Auto Voice-Tracking';
                     cameraCost = 125000;
                     audioItem = 'Ceiling Beamforming Array or Dual Boundary Microphones + DSP Matrix';
@@ -3691,7 +3818,7 @@
                     audioCost = 980000;
                     cablingLaborCost = 295000;
                 }
-            } else { // Experience Center & Immersive Studio
+            } else { // Experience Center & Studio
                 if (scaleTier === 'huddle') {
                     displayItem = 'Curved 110" Fine-Pitch P1.25 MicroLED / Dual 65" OLED Interactive Wall';
                     displaySpecs = 'Samsung The Wall / LG MAGNIT MicroLED, 800 Nits HDR, Zero Glare, Touch Overlay';
@@ -3739,72 +3866,68 @@
                 }
             }
 
-            // Optional Module Calculations
-            var wirelessCost = 0;
-            var wirelessItem = '';
-            var wirelessSpecs = '';
+            // Ceiling & Acoustic Adjustments
+            if (ceilingHeight.indexOf('High') !== -1) cablingLaborCost += 15000;
+            else if (ceilingHeight.indexOf('Double') !== -1) cablingLaborCost += 35000;
+
+            var wirelessCost = 0, wirelessItem = '', wirelessSpecs = '';
             var hasWireless = checkedModules.some(function(m){ return /Wireless/i.test(m); });
             if (hasWireless) {
                 wirelessCost = (scaleTier === 'huddle') ? 42000 : (scaleTier === 'medium') ? 58000 : 85000;
-                wirelessItem = 'Wireless Presentation & BYOD Screen Sharing System';
+                wirelessItem = 'Wireless Presentation & BYOD Screen Sharing System (' + vcPlatform.split(' ')[0] + ')';
                 wirelessSpecs = 'Barco ClickShare / Crestron AirMedia, 4K dual screen sharing, iOS/Android/Windows/Mac';
             }
 
-            var automationCost = 0;
-            var automationItem = '';
-            var automationSpecs = '';
+            var automationCost = 0, automationItem = '', automationSpecs = '';
             var hasAutomation = checkedModules.some(function(m){ return /Touch|Automation/i.test(m); });
             if (hasAutomation) {
                 automationCost = (scaleTier === 'huddle') ? 65000 : (scaleTier === 'medium') ? 110000 : 185000;
                 automationItem = '7"-10" Tabletop Touch Screen Controller & Room Automation Processor';
-                automationSpecs = 'Crestron / Extron Touch Panel, One-touch meeting launch, motorized display/screen/lighting control';
+                automationSpecs = 'Crestron / Extron Touch Panel, One-touch meeting launch, motorized display/lighting control';
             }
 
-            var acousticCost = 0;
-            var acousticItem = '';
-            var acousticSpecs = '';
-            var hasAcoustics = checkedModules.some(function(m){ return /Acoustic/i.test(m); });
+            var acousticCost = 0, acousticItem = '', acousticSpecs = '';
+            var hasAcoustics = checkedModules.some(function(m){ return /Acoustic/i.test(m); }) || acousticEnv.indexOf('Glass') !== -1;
             if (hasAcoustics) {
                 acousticCost = (scaleTier === 'huddle') ? 45000 : (scaleTier === 'medium') ? 85000 : (scaleTier === 'large') ? 185000 : 350000;
                 acousticItem = 'High-NRC Architectural Acoustic Fabric Wall Panels & Baffles';
                 acousticSpecs = 'NRC 0.85+ sound absorption, reverberation time (RT60) reduction to 0.5s for pristine speech clarity';
             }
 
-            // Compute Grand Subtotals
+            // Subtotals
             var subtotalHardware = displayCost + cameraCost + audioCost + wirelessCost + automationCost + acousticCost + switchingCost;
             var totalTurnkey = subtotalHardware + cablingLaborCost;
 
-            // Compute realistic range
             var minEstimate = Math.round((totalTurnkey * 0.94) / 5000) * 5000;
             var maxEstimate = Math.round((totalTurnkey * 1.08) / 5000) * 5000;
-            var gstEstimateMin = Math.round(minEstimate * 0.18);
-            var gstEstimateMax = Math.round(maxEstimate * 0.18);
+            var gstMin = Math.round(minEstimate * 0.18);
+            var gstMax = Math.round(maxEstimate * 0.18);
 
-            // Populate currentBoqData for PDF Generation
-            var boqRefNumber = 'GPSPL/BOQ/2026/' + Math.floor(100000 + Math.random() * 900000);
-            var currentDate = new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' });
-
+            // BOM Items List
             var bomItems = [
                 {
-                    category: 'Visual & Display Subsystem',
+                    category: 'Visual & Commercial Display',
                     item: displayItem,
                     specs: displaySpecs,
                     brands: displayBrands,
-                    qty: 1
+                    qty: 1,
+                    indicativeCost: displayCost
                 },
                 {
-                    category: 'Video Conferencing & Optics',
+                    category: 'VC Optics & Tracking',
                     item: cameraItem,
                     specs: cameraSpecs,
                     brands: cameraBrands,
-                    qty: (scaleTier === 'large' || scaleTier === 'grand') ? 2 : 1
+                    qty: (scaleTier === 'large' || scaleTier === 'grand') ? 2 : 1,
+                    indicativeCost: cameraCost
                 },
                 {
                     category: 'Pro Audio & Microphone Array',
                     item: audioItem,
                     specs: audioSpecs,
                     brands: audioBrands,
-                    qty: (scaleTier === 'grand') ? 4 : (scaleTier === 'large') ? 2 : 1
+                    qty: (scaleTier === 'grand') ? 4 : (scaleTier === 'large') ? 2 : 1,
+                    indicativeCost: audioCost
                 }
             ];
 
@@ -3814,7 +3937,8 @@
                     item: wirelessItem,
                     specs: wirelessSpecs,
                     brands: 'Barco ClickShare / Crestron AirMedia',
-                    qty: 1
+                    qty: 1,
+                    indicativeCost: wirelessCost
                 });
             }
 
@@ -3824,7 +3948,8 @@
                     item: automationItem,
                     specs: automationSpecs,
                     brands: 'Crestron / Extron / AMX',
-                    qty: 1
+                    qty: 1,
+                    indicativeCost: automationCost
                 });
             }
 
@@ -3834,7 +3959,8 @@
                     item: acousticItem,
                     specs: acousticSpecs,
                     brands: 'Anutone / Armstrong / Saint-Gobain',
-                    qty: (scaleTier === 'huddle' ? '1 Lot (40 sq.ft)' : scaleTier === 'medium' ? '1 Lot (120 sq.ft)' : '1 Lot (250+ sq.ft)')
+                    qty: (scaleTier === 'huddle' ? '1 Lot (40 sq.ft)' : scaleTier === 'medium' ? '1 Lot (120 sq.ft)' : '1 Lot (250+ sq.ft)'),
+                    indicativeCost: acousticCost
                 });
             }
 
@@ -3844,23 +3970,146 @@
                     item: switchingItem,
                     specs: switchingSpecs,
                     brands: switchingBrands,
-                    qty: 1
+                    qty: 1,
+                    indicativeCost: switchingCost
                 },
                 {
                     category: 'Structured Cabling & Rigging',
                     item: 'High-Speed 4K Optical HDMI, Shielded Cat6A & Heavy-Duty Mounts',
                     specs: 'Belden / Kramer / Extron 18Gbps cables, rigid ceiling/wall bracket system, concealed conduit dressing',
                     brands: 'Kramer / Belden / Legrand',
-                    qty: '1 Lot'
+                    qty: '1 Lot',
+                    indicativeCost: Math.round(cablingLaborCost * 0.55)
                 },
                 {
                     category: 'Installation, DSP Tuning & SLA',
                     item: 'On-Site Installation, Audio/Video Commissioning & 1-Year Comprehensive On-Site SLA',
                     specs: 'Factory-certified engineers, DSP acoustic tuning, camera preset calibration, user handover training, 4-hr SLA',
                     brands: 'GPSPL Certified Senior Engineers',
-                    qty: 'Turnkey Scope'
+                    qty: 'Turnkey Scope',
+                    indicativeCost: Math.round(cablingLaborCost * 0.45)
                 }
             );
+
+            return {
+                scaleTier: scaleTier,
+                displayCost: displayCost,
+                cameraCost: cameraCost,
+                audioCost: audioCost,
+                auxCost: wirelessCost + automationCost + acousticCost + switchingCost,
+                subtotalHardware: subtotalHardware,
+                cablingLaborCost: cablingLaborCost,
+                totalTurnkey: totalTurnkey,
+                minEstimate: minEstimate,
+                maxEstimate: maxEstimate,
+                gstMin: gstMin,
+                gstMax: gstMax,
+                bomItems: bomItems
+            };
+        }
+
+        // Live Real-Time Preview Updater
+        function updateLivePreview() {
+            var selectedFacilityEl = boqForm.querySelector('input[name="facility_type"]:checked');
+            var facilityType = selectedFacilityEl ? selectedFacilityEl.value : 'Boardroom & Conference Room';
+
+            var selectedCapacityEl = boqForm.querySelector('input[name="room_capacity"]:checked');
+            var roomCapacity = selectedCapacityEl ? selectedCapacityEl.value : 'Compact Huddle (4-8 Pax • 150-250 sq.ft)';
+
+            var selectedCeilingEl = boqForm.querySelector('input[name="ceiling_height"]:checked');
+            var ceilingHeight = selectedCeilingEl ? selectedCeilingEl.value : 'Standard (9–10 ft)';
+
+            var selectedAcousticEl = boqForm.querySelector('input[name="acoustic_env"]:checked');
+            var acousticEnv = selectedAcousticEl ? selectedAcousticEl.value : 'Standard Drywall / Carpeted';
+
+            var selectedVcEl = boqForm.querySelector('input[name="vc_platform"]:checked');
+            var vcPlatform = selectedVcEl ? selectedVcEl.value : 'Microsoft Teams Rooms (MTR)';
+
+            var checkedModules = [];
+            boqForm.querySelectorAll('input[name="tech_modules"]:checked').forEach(function(cb) {
+                checkedModules.push(cb.value);
+            });
+
+            var checkedOems = [];
+            boqForm.querySelectorAll('input[name="preferred_oem"]:checked').forEach(function(cb) {
+                checkedOems.push(cb.value);
+            });
+
+            var res = computeBoq(facilityType, roomCapacity, ceilingHeight, acousticEnv, vcPlatform, checkedModules, checkedOems);
+
+            if (liveConfigText) {
+                var shortCap = roomCapacity.split('(')[0].trim();
+                liveConfigText.textContent = facilityType + ' • ' + shortCap + ' • ' + vcPlatform.split(' ')[0] + ' • ' + ceilingHeight.split('•')[0].trim();
+            }
+
+            if (liveTechSummary) {
+                var dispSnippet = (res.bomItems[0] ? res.bomItems[0].item.split('(')[0].slice(0, 35) : 'Commercial Display');
+                var camSnippet = (res.bomItems[1] ? res.bomItems[1].item.split('(')[0].slice(0, 30) : 'PTZ Camera');
+                liveTechSummary.textContent = 'Hardware: ' + dispSnippet + ' • ' + camSnippet + ' • Dante DSP • Direct OEM Supply';
+            }
+
+            if (liveEstPrice) {
+                liveEstPrice.textContent = formatINR(res.minEstimate) + ' – ' + formatINR(res.maxEstimate) + '*';
+            }
+        }
+
+        // Initialize live preview on load
+        updateLivePreview();
+
+        // Form Submit Handler
+        boqForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (!boqForm.checkValidity()) {
+                boqForm.reportValidity();
+                return;
+            }
+
+            var phoneInput = document.getElementById('boqPhone');
+            var phoneVal = phoneInput ? phoneInput.value.trim().replace(/\D/g, '') : '';
+            if (phoneVal.length !== 10) {
+                alert('Please enter a valid 10-digit mobile number so our senior systems engineer can send your formal BOQ quotation.');
+                if (phoneInput) phoneInput.focus();
+                return;
+            }
+
+            var fullName = (document.getElementById('boqFullName') ? document.getElementById('boqFullName').value.trim() : '') || 'Valued Client';
+            var company = (document.getElementById('boqCompany') ? document.getElementById('boqCompany').value.trim() : '') || 'Enterprise Client';
+            var email = (document.getElementById('boqEmail') ? document.getElementById('boqEmail').value.trim() : '');
+            var city = (document.getElementById('boqCity') ? document.getElementById('boqCity').value.trim() : '') || 'Delhi NCR';
+            var timelineSelect = document.getElementById('boqTimeline');
+            var timeline = timelineSelect ? timelineSelect.value : 'Within 1 Month';
+
+            var selectedFacilityEl = boqForm.querySelector('input[name="facility_type"]:checked');
+            var facilityType = selectedFacilityEl ? selectedFacilityEl.value : 'Boardroom & Conference Room';
+
+            var selectedCapacityEl = boqForm.querySelector('input[name="room_capacity"]:checked');
+            var roomCapacity = selectedCapacityEl ? selectedCapacityEl.value : 'Compact Huddle (4-8 Pax • 150-250 sq.ft)';
+
+            var selectedCeilingEl = boqForm.querySelector('input[name="ceiling_height"]:checked');
+            var ceilingHeight = selectedCeilingEl ? selectedCeilingEl.value : 'Standard (9–10 ft)';
+
+            var selectedAcousticEl = boqForm.querySelector('input[name="acoustic_env"]:checked');
+            var acousticEnv = selectedAcousticEl ? selectedAcousticEl.value : 'Standard Drywall / Carpeted';
+
+            var selectedVcEl = boqForm.querySelector('input[name="vc_platform"]:checked');
+            var vcPlatform = selectedVcEl ? selectedVcEl.value : 'Microsoft Teams Rooms (MTR)';
+
+            var checkedModules = [];
+            boqForm.querySelectorAll('input[name="tech_modules"]:checked').forEach(function(cb) {
+                checkedModules.push(cb.value);
+            });
+
+            var checkedOems = [];
+            boqForm.querySelectorAll('input[name="preferred_oem"]:checked').forEach(function(cb) {
+                checkedOems.push(cb.value);
+            });
+            var oemsText = checkedOems.length ? checkedOems.join(', ') : 'Samsung, LG, Crestron, Sennheiser, Poly, Shure';
+
+            var res = computeBoq(facilityType, roomCapacity, ceilingHeight, acousticEnv, vcPlatform, checkedModules, checkedOems);
+            var boqRefNumber = 'GPSPL/BOQ/2026/' + Math.floor(100000 + Math.random() * 900000);
+            var currentDate = new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' });
 
             currentBoqData = {
                 refNumber: boqRefNumber,
@@ -3873,96 +4122,116 @@
                 timeline: timeline,
                 facilityType: facilityType,
                 roomCapacity: roomCapacity,
+                ceilingHeight: ceilingHeight,
+                acousticEnv: acousticEnv,
+                vcPlatform: vcPlatform,
                 oemsText: oemsText,
-                minEstimate: minEstimate,
-                maxEstimate: maxEstimate,
-                gstEstimateMin: gstEstimateMin,
-                gstEstimateMax: gstEstimateMax,
-                bomItems: bomItems,
-                displayCost: displayCost,
-                cameraCost: cameraCost,
-                audioCost: audioCost,
-                auxCost: wirelessCost + automationCost + acousticCost + switchingCost,
-                cablingLaborCost: cablingLaborCost
+                minEstimate: res.minEstimate,
+                maxEstimate: res.maxEstimate,
+                gstMin: res.gstMin,
+                gstMax: res.gstMax,
+                bomItems: res.bomItems,
+                displayCost: res.displayCost,
+                cameraCost: res.cameraCost,
+                audioCost: res.audioCost,
+                auxCost: res.auxCost,
+                subtotalHardware: res.subtotalHardware,
+                cablingLaborCost: res.cablingLaborCost,
+                totalTurnkey: res.totalTurnkey
             };
 
-            // Submit Button UX
+            // Submit Button Spinner
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Computing Itemized Engineering BOQ...</span>';
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Computing Engineering BOQ &amp; Technical Schedule...</span>';
 
             setTimeout(function() {
-                // 1. Update Headline & Price Display
+                // 1. Ref & Headline
+                if (boqRefDisplay) {
+                    boqRefDisplay.innerHTML = '<i class="fas fa-hashtag"></i> Ref: ' + boqRefNumber;
+                }
                 if (summaryHeadline) {
-                    summaryHeadline.textContent = facilityType + ' — ' + roomCapacity;
+                    summaryHeadline.textContent = facilityType + ' — ' + roomCapacity.split('(')[0].trim() + ' (' + vcPlatform.split(' ')[0] + ')';
                 }
-
                 if (priceRangeDisplay) {
-                    priceRangeDisplay.textContent = formatINR(minEstimate) + ' – ' + formatINR(maxEstimate) + '*';
+                    priceRangeDisplay.textContent = formatINR(res.minEstimate) + ' – ' + formatINR(res.maxEstimate) + '*';
                 }
 
-                // 2. Populate Scope Summary
+                // 2. Scope Summary List
                 if (summaryList) {
                     summaryList.innerHTML = 
                         '<li><strong>Facility Space:</strong> ' + facilityType + '</li>' +
                         '<li><strong>Room Scale:</strong> ' + roomCapacity + '</li>' +
+                        '<li><strong>Ceiling &amp; Acoustics:</strong> ' + ceilingHeight.split('•')[0].trim() + ' &bull; ' + acousticEnv.split('•')[0].trim() + '</li>' +
+                        '<li><strong>UC Ecosystem:</strong> ' + vcPlatform + '</li>' +
                         '<li><strong>Preferred OEMs:</strong> ' + oemsText + '</li>' +
                         '<li><strong>Client Organization:</strong> ' + company + '</li>' +
                         '<li><strong>Client Contact:</strong> ' + fullName + ' (' + phoneVal + ')</li>' +
                         '<li><strong>Site Location &amp; Handover:</strong> ' + city + ' &bull; ' + timeline + '</li>';
                 }
 
-                // 3. Populate Cost Components Breakdown
+                // 3. Cost Breakdown List
                 if (costBreakdownList) {
                     costBreakdownList.innerHTML = 
-                        '<li><span>Visuals &amp; Active Display:</span> <strong>' + formatINR(displayCost) + ' (Approx)</strong></li>' +
-                        '<li><span>VC Optics &amp; PTZ Tracking:</span> <strong>' + formatINR(cameraCost) + ' (Approx)</strong></li>' +
-                        '<li><span>Pro Audio, Ceiling Mics &amp; DSP:</span> <strong>' + formatINR(audioCost) + ' (Approx)</strong></li>' +
-                        '<li><span>Switching, BYOD &amp; Automation:</span> <strong>' + formatINR(wirelessCost + automationCost + acousticCost + switchingCost) + ' (Approx)</strong></li>' +
-                        '<li><span>Structured Cabling, Mounts &amp; Labor:</span> <strong>' + formatINR(cablingLaborCost) + ' (Approx)</strong></li>' +
-                        '<li><span>Estimated GST (18% ITC Eligible):</span> <strong>' + formatINR(gstEstimateMin) + ' – ' + formatINR(gstEstimateMax) + '</strong></li>' +
-                        '<li><span>Total Estimated Project Range:</span> <strong style="color: #16a34a; font-size: 0.96rem;">' + formatINR(minEstimate) + ' – ' + formatINR(maxEstimate) + '*</strong></li>';
+                        '<li><span>Visuals &amp; Active Display:</span> <strong>' + formatINR(res.displayCost) + ' (Approx)</strong></li>' +
+                        '<li><span>VC Optics &amp; PTZ Tracking:</span> <strong>' + formatINR(res.cameraCost) + ' (Approx)</strong></li>' +
+                        '<li><span>Pro Audio, Ceiling Mics &amp; DSP:</span> <strong>' + formatINR(res.audioCost) + ' (Approx)</strong></li>' +
+                        '<li><span>Switching, BYOD &amp; Automation:</span> <strong>' + formatINR(res.auxCost) + ' (Approx)</strong></li>' +
+                        '<li><span>Structured Cabling, Mounts &amp; Rigging:</span> <strong>' + formatINR(res.cablingLaborCost) + ' (Approx)</strong></li>' +
+                        '<li><span>Estimated GST (18% ITC Eligible):</span> <strong>' + formatINR(res.gstMin) + ' – ' + formatINR(res.gstMax) + '</strong></li>' +
+                        '<li><span>Total Estimated Project Range:</span> <strong style="color: #16a34a; font-size: 0.96rem;">' + formatINR(res.minEstimate) + ' – ' + formatINR(res.maxEstimate) + '*</strong></li>';
                 }
 
-                // 4. Populate Itemized Schedule Table
+                // 4. BOM Table (6 Columns)
                 if (boqTableBody) {
                     var tableHtml = '';
-                    bomItems.forEach(function(item) {
+                    res.bomItems.forEach(function(item, idx) {
                         tableHtml += 
                             '<tr>' +
+                                '<td style="text-align: center; font-weight: 700; color: #64748b;">' + (idx + 1) + '</td>' +
                                 '<td><span class="boq-category-tag">' + item.category + '</span></td>' +
                                 '<td><strong>' + item.item + '</strong><br><span style="color: #64748b; font-size: 0.76rem;">' + item.specs + '</span></td>' +
                                 '<td><strong>' + item.brands + '</strong></td>' +
                                 '<td style="text-align: center; font-weight: 800;">' + item.qty + '</td>' +
+                                '<td style="text-align: right; font-weight: 800; color: #0f172a;">' + formatINR(item.indicativeCost) + '</td>' +
                             '</tr>';
                     });
                     boqTableBody.innerHTML = tableHtml;
                 }
 
-                // 5. WhatsApp Fast-Track URL
+                // 5. Commercial Quotation Summary Box
+                if (boqHwSubtotal) boqHwSubtotal.textContent = formatINR(res.subtotalHardware);
+                if (boqCablingSubtotal) boqCablingSubtotal.textContent = formatINR(Math.round(res.cablingLaborCost * 0.55));
+                if (boqLaborSubtotal) boqLaborSubtotal.textContent = 'Included in Turnkey Scope (' + formatINR(Math.round(res.cablingLaborCost * 0.45)) + ')';
+                if (boqNetSubtotal) boqNetSubtotal.textContent = formatINR(res.minEstimate);
+                if (boqGstSubtotal) boqGstSubtotal.textContent = formatINR(res.gstMin) + ' – ' + formatINR(res.gstMax);
+                if (boqGrandSubtotal) boqGrandSubtotal.textContent = formatINR(Math.round(res.minEstimate * 1.18)) + ' – ' + formatINR(Math.round(res.maxEstimate * 1.18)) + '*';
+
+                // 6. WhatsApp Fast-Track Message
                 var waMsg = 'Hello GPSPL AV Engineering Team,\n\n' +
-                    'I have registered our official Project BOQ requirement:\n' +
+                    'I have generated an official Project BOQ requirement on the GPSPL Portal:\n' +
                     '• Reference: ' + boqRefNumber + '\n' +
-                    '• Facility: ' + facilityType + ' (' + roomCapacity + ')\n' +
-                    '• Calculated Turnkey Estimate: ' + formatINR(minEstimate) + ' – ' + formatINR(maxEstimate) + ' + GST\n' +
+                    '• Facility: ' + facilityType + ' (' + roomCapacity.split('(')[0].trim() + ')\n' +
+                    '• Ceiling & Acoustics: ' + ceilingHeight.split('•')[0].trim() + ' | ' + acousticEnv.split('•')[0].trim() + '\n' +
+                    '• UC Platform: ' + vcPlatform + '\n' +
                     '• Preferred OEMs: ' + oemsText + '\n' +
+                    '• Turnkey Valuation: ' + formatINR(res.minEstimate) + ' – ' + formatINR(res.maxEstimate) + ' (+ 18% GST)\n' +
                     '• Client: ' + fullName + ' (' + company + ')\n' +
-                    '• Mobile: ' + phoneVal + ' | Email: ' + email + '\n' +
+                    '• Contact: ' + phoneVal + ' | ' + email + '\n' +
                     '• Site City: ' + city + ' | Timeline: ' + timeline + '\n\n' +
-                    'Please share our formal itemized BOQ quotation and schedule on WhatsApp.';
+                    'Please review our technical requirement and share the official itemized BOQ quotation with direct OEM discount on WhatsApp.';
 
                 if (waFastTrack) {
                     waFastTrack.href = 'https://wa.me/919310092963?text=' + encodeURIComponent(waMsg);
                 }
 
-                // 6. Reveal Card & Reset Button
+                // 7. Reveal & Scroll
                 outputCard.style.display = 'block';
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> <span>Official BOQ Generated &amp; Pricing Revealed!</span>';
                 submitBtn.style.background = '#16a34a';
 
-                // Scroll smoothly into view
                 outputCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }, 650);
+            }, 550);
         });
 
         // PDF Generation Function
@@ -3977,11 +4246,12 @@
             d.bomItems.forEach(function(i, idx) {
                 rowsHtml += 
                     '<tr>' +
-                        '<td style="text-align: center; padding: 10px 8px; border: 1px solid #cbd5e1; font-weight: 700;">' + (idx + 1) + '</td>' +
-                        '<td style="padding: 10px 10px; border: 1px solid #cbd5e1;"><strong style="color: #0f172a;">' + i.category + '</strong></td>' +
-                        '<td style="padding: 10px 10px; border: 1px solid #cbd5e1;"><strong style="color: #0f172a; font-size: 11px;">' + i.item + '</strong><br><span style="color: #64748b; font-size: 10px; line-height: 1.4;">' + i.specs + '</span></td>' +
-                        '<td style="padding: 10px 10px; border: 1px solid #cbd5e1; font-size: 11px;"><strong>' + i.brands + '</strong></td>' +
-                        '<td style="text-align: center; padding: 10px 8px; border: 1px solid #cbd5e1; font-weight: 800;">' + i.qty + '</td>' +
+                        '<td style="text-align: center; padding: 8px 6px; border: 1px solid #cbd5e1; font-weight: 700;">' + (idx + 1) + '</td>' +
+                        '<td style="padding: 8px 8px; border: 1px solid #cbd5e1;"><strong style="color: #0f172a; font-size: 10px;">' + i.category + '</strong></td>' +
+                        '<td style="padding: 8px 8px; border: 1px solid #cbd5e1;"><strong style="color: #0f172a; font-size: 10px;">' + i.item + '</strong><br><span style="color: #64748b; font-size: 9px; line-height: 1.35;">' + i.specs + '</span></td>' +
+                        '<td style="padding: 8px 8px; border: 1px solid #cbd5e1; font-size: 10px;"><strong>' + i.brands + '</strong></td>' +
+                        '<td style="text-align: center; padding: 8px 6px; border: 1px solid #cbd5e1; font-weight: 800;">' + i.qty + '</td>' +
+                        '<td style="text-align: right; padding: 8px 8px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">' + formatINR(i.indicativeCost) + '</td>' +
                     '</tr>';
             });
 
@@ -3992,22 +4262,22 @@
                     '<meta charset="UTF-8">' +
                     '<title>GPSPL Official Project BOQ - ' + d.refNumber + '</title>' +
                     '<style>' +
-                        '@page { size: A4 portrait; margin: 12mm 15mm; }' +
-                        'body { font-family: "Helvetica Neue", Arial, sans-serif; color: #0f172a; margin: 0; padding: 15px; font-size: 11px; line-height: 1.45; background: #ffffff; }' +
-                        '.header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #ef3438; padding-bottom: 12px; margin-bottom: 15px; }' +
-                        '.brand-title { font-size: 18px; font-weight: 900; color: #071526; margin: 0 0 2px 0; }' +
-                        '.brand-sub { font-size: 10px; color: #64748b; margin: 0; line-height: 1.35; }' +
+                        '@page { size: A4 portrait; margin: 10mm 12mm; }' +
+                        'body { font-family: "Helvetica Neue", Arial, sans-serif; color: #0f172a; margin: 0; padding: 12px; font-size: 10px; line-height: 1.4; background: #ffffff; }' +
+                        '.header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #ef3438; padding-bottom: 10px; margin-bottom: 12px; }' +
+                        '.brand-title { font-size: 17px; font-weight: 900; color: #071526; margin: 0 0 2px 0; }' +
+                        '.brand-sub { font-size: 9.5px; color: #64748b; margin: 0; line-height: 1.35; }' +
                         '.doc-title-badge { text-align: right; }' +
-                        '.doc-title-badge h2 { margin: 0 0 4px 0; font-size: 14px; color: #ef3438; text-transform: uppercase; font-weight: 900; }' +
-                        '.meta-table { width: 100%; border-collapse: collapse; margin-bottom: 15px; }' +
-                        '.meta-table td { padding: 6px 10px; border: 1px solid #e2e8f0; font-size: 10.5px; }' +
-                        '.pricing-box { background: #f8fafc; border: 1.5px solid #0f172a; border-radius: 6px; padding: 12px 16px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; }' +
-                        '.pricing-box .price-val { font-size: 18px; font-weight: 900; color: #16a34a; }' +
-                        'table.bom-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }' +
-                        'table.bom-table th { background: #0f172a; color: #ffffff; padding: 8px 10px; font-size: 10px; text-transform: uppercase; border: 1px solid #0f172a; text-align: left; }' +
-                        '.terms-box { font-size: 9.5px; color: #475569; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px 14px; margin-bottom: 18px; line-height: 1.5; }' +
-                        '.signature-row { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 25px; padding-top: 15px; border-top: 1px solid #cbd5e1; }' +
-                        '.sig-block { font-size: 10px; color: #334155; }' +
+                        '.doc-title-badge h2 { margin: 0 0 4px 0; font-size: 13px; color: #ef3438; text-transform: uppercase; font-weight: 900; }' +
+                        '.meta-table { width: 100%; border-collapse: collapse; margin-bottom: 12px; }' +
+                        '.meta-table td { padding: 5px 8px; border: 1px solid #e2e8f0; font-size: 10px; }' +
+                        '.pricing-box { background: #f8fafc; border: 1.5px solid #0f172a; border-radius: 6px; padding: 10px 14px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; }' +
+                        '.pricing-box .price-val { font-size: 16px; font-weight: 900; color: #16a34a; }' +
+                        'table.bom-table { width: 100%; border-collapse: collapse; margin-bottom: 14px; }' +
+                        'table.bom-table th { background: #0f172a; color: #ffffff; padding: 7px 8px; font-size: 9.5px; text-transform: uppercase; border: 1px solid #0f172a; text-align: left; }' +
+                        '.terms-box { font-size: 9px; color: #475569; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px 12px; margin-bottom: 14px; line-height: 1.45; }' +
+                        '.signature-row { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 18px; padding-top: 12px; border-top: 1px solid #cbd5e1; }' +
+                        '.sig-block { font-size: 9.5px; color: #334155; }' +
                     '</style>' +
                 '</head>' +
                 '<body>' +
@@ -4020,7 +4290,7 @@
                             '<h2>Official Turnkey BOQ</h2>' +
                             '<div><strong>Ref:</strong> ' + d.refNumber + '</div>' +
                             '<div><strong>Date:</strong> ' + d.date + '</div>' +
-                            '<div><strong>Status:</strong> Budgetary Schedule (2026)</div>' +
+                            '<div><strong>Status:</strong> Engineering Budgetary Schedule (2026)</div>' +
                         '</div>' +
                     '</div>' +
 
@@ -4038,6 +4308,12 @@
                             '<td>' + d.roomCapacity + '</td>' +
                         '</tr>' +
                         '<tr>' +
+                            '<td style="background: #f1f5f9;"><strong>Ceiling &amp; Acoustics:</strong></td>' +
+                            '<td>' + d.ceilingHeight.split('•')[0].trim() + ' &bull; ' + d.acousticEnv.split('•')[0].trim() + '</td>' +
+                            '<td style="background: #f1f5f9;"><strong>UC Platform:</strong></td>' +
+                            '<td>' + d.vcPlatform + '</td>' +
+                        '</tr>' +
+                        '<tr>' +
                             '<td style="background: #f1f5f9;"><strong>Mobile / Email:</strong></td>' +
                             '<td>' + d.phone + ' &bull; ' + d.email + '</td>' +
                             '<td style="background: #f1f5f9;"><strong>Site Location:</strong></td>' +
@@ -4047,23 +4323,24 @@
 
                     '<div class="pricing-box">' +
                         '<div>' +
-                            '<div style="font-size: 10px; text-transform: uppercase; font-weight: 800; color: #ef3438;">Estimated Turnkey Project Investment</div>' +
+                            '<div style="font-size: 9.5px; text-transform: uppercase; font-weight: 800; color: #ef3438;">Estimated Turnkey Project Investment</div>' +
                             '<div class="price-val">' + formatINR(d.minEstimate) + ' &ndash; ' + formatINR(d.maxEstimate) + '*</div>' +
-                            '<div style="font-size: 9px; color: #64748b;">*Excl. 18% GST (ITC Eligible: ' + formatINR(d.gstEstimateMin) + ' &ndash; ' + formatINR(d.gstEstimateMax) + ')</div>' +
+                            '<div style="font-size: 8.5px; color: #64748b;">*Excl. 18% GST (ITC Eligible: ' + formatINR(d.gstMin) + ' &ndash; ' + formatINR(d.gstMax) + ')</div>' +
                         '</div>' +
-                        '<div style="text-align: right; font-size: 10px; color: #334155;">' +
-                            '<strong>Inclusions:</strong> OEM Hardware, 4K Cables, Brackets, DSP Tuning &amp; 1-Yr On-Site SLA' +
+                        '<div style="text-align: right; font-size: 9.5px; color: #334155;">' +
+                            '<strong>Inclusions:</strong> Direct OEM Supply, High-Speed Optical HDMI/Cat6A, Mounts, DSP Tuning &amp; 1-Yr On-Site SLA' +
                         '</div>' +
                     '</div>' +
 
                     '<table class="bom-table">' +
                         '<thead>' +
                             '<tr>' +
-                                '<th style="width: 6%; text-align: center;">S.No</th>' +
-                                '<th style="width: 22%;">Subsystem Category</th>' +
-                                '<th style="width: 44%;">Equipment Description &amp; Technical Specifications</th>' +
-                                '<th style="width: 18%;">Approved OEMs</th>' +
-                                '<th style="width: 10%; text-align: center;">Qty</th>' +
+                                '<th style="width: 5%; text-align: center;">S.No</th>' +
+                                '<th style="width: 18%;">Subsystem Category</th>' +
+                                '<th style="width: 42%;">Equipment Description &amp; Technical Specifications</th>' +
+                                '<th style="width: 17%;">Approved OEMs</th>' +
+                                '<th style="width: 6%; text-align: center;">Qty</th>' +
+                                '<th style="width: 12%; text-align: right;">Indicative Cost (₹)</th>' +
                             '</tr>' +
                         '</thead>' +
                         '<tbody>' +
