@@ -11,9 +11,9 @@
     'use strict';
 
     const ADMIN_CONFIG = {
-        email: 'karan@gpspl.co.in',
-        secondaryEmail: 'itsdivesh221@gmail.com',
-        allEmails: ['itsdivesh221@gmail.com', 'karan@gpspl.co.in', 'global@gpspl.co.in'],
+        email: 'global@gpspl.co.in',
+        secondaryEmail: 'karan@gpspl.co.in',
+        allEmails: ['global@gpspl.co.in', 'karan@gpspl.co.in', 'itsdivesh221@gmail.com'],
         phone: '8920830377',
         whatsappCountryCode: '91'
     };
@@ -148,10 +148,10 @@
             'Requirement Details': newLead.details,
             'Submission Time': istTime,
             'Page URL': window.location.href,
-            'Notification Recipients': 'itsdivesh221@gmail.com, karan@gpspl.co.in'
+            'Notification Recipients': 'global@gpspl.co.in, karan@gpspl.co.in, itsdivesh221@gmail.com'
         };
 
-        const targets = ['itsdivesh221@gmail.com', 'karan@gpspl.co.in'];
+        const targets = ['global@gpspl.co.in', 'karan@gpspl.co.in', 'itsdivesh221@gmail.com'];
         const promises = targets.map(email => {
             return fetch('https://formsubmit.co/ajax/' + encodeURIComponent(email), {
                 method: 'POST',
