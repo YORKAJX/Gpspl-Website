@@ -11951,6 +11951,22 @@ html body #home .hero-executive-card:hover {
     margin: 2px 0 !important;
 }
 
+.live-est-status {
+    font-size: 1.15rem !important;
+    font-weight: 850 !important;
+    color: #38bdf8 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin: 3px 0 !important;
+    line-height: 1.3 !important;
+}
+
+.live-est-status i {
+    color: #22c55e !important;
+    font-size: 1.1rem !important;
+}
+
 .live-est-tax-note {
     font-size: 0.72rem !important;
     color: #cbd5e1 !important;
