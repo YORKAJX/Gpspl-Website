@@ -17,11 +17,15 @@
     ];
 
     const defaultKeywords = [
+        "best AV integrator",
+        "best AV integrator India",
+        "turnkey AV solution",
+        "turnkey AV solutions India",
+        "conference room AV solutions",
         "turnkey AV system integrator India",
         "audio visual integrator Delhi NCR",
-        "technology distributor India",
+        "top AV system integrators India",
         "AV turnkey solution provider",
-        "conference room AV solutions",
         "boardroom video conferencing setup",
         "education AV solutions",
         "smart classroom solutions India",
@@ -40,10 +44,14 @@
 
     const pageKeywordOverrides = {
         "index.html": [
-            "turnkey AV system integrator India",
-            "technology distributor India",
-            "AV turnkey solution provider",
+            "best AV integrator",
+            "best AV integrator India",
+            "turnkey AV solution",
+            "turnkey AV solutions provider India",
             "conference room AV solutions",
+            "turnkey AV system integrator India",
+            "top AV system integrators India",
+            "technology distributor India",
             "boardroom video conferencing setup",
             "education AV solutions",
             "smart classroom setup cost India",
@@ -61,8 +69,32 @@
             "boardroom AV estimate",
             "GPSPL"
         ],
-        "audio-visual-integration.html": ["AV system integrator Delhi NCR", "audio visual integration company India", "enterprise AV installation", "boardroom AV integrator", "AV AMC support"],
-        "conference-room-solutions.html": ["conference room AV integrator Delhi NCR", "boardroom AV setup", "meeting room AV solutions", "video conferencing room setup", "Teams Zoom room setup", "conference room audio video", "wireless presentation system"],
+        "audio-visual-integration.html": [
+            "best AV integrator",
+            "best AV integrator India",
+            "turnkey AV solution",
+            "turnkey AV solutions provider India",
+            "top AV system integrators India",
+            "AV system integrator Delhi NCR",
+            "audio visual integration company India",
+            "commercial AV integrator",
+            "enterprise AV installation",
+            "boardroom AV integrator",
+            "AV AMC support"
+        ],
+        "conference-room-solutions.html": [
+            "conference room AV solutions",
+            "conference room AV solution",
+            "turnkey conference room AV solutions",
+            "best conference room AV solutions",
+            "conference room AV integrator Delhi NCR",
+            "boardroom AV setup",
+            "meeting room AV solutions",
+            "video conferencing room setup",
+            "Teams Zoom room setup",
+            "conference room audio video",
+            "wireless presentation system"
+        ],
         "unified-communication-collaboration.html": ["video conferencing solutions India", "unified communication integrator", "hybrid meeting room solutions", "PTZ camera meeting room", "collaboration room AV"],
         "video-wall-solutions.html": ["video wall supplier India", "video wall integrator Delhi", "control room video wall", "LCD video wall systems", "commercial display wall"],
         "active-led-wall-solutions.html": ["active LED wall supplier India", "active LED wall installer India", "LED video wall installation", "indoor LED wall Delhi NCR", "outdoor LED display supplier", "fine pitch LED wall", "LED wall AMC"],
@@ -118,8 +150,8 @@
             type: "product"
         },
         "index.html": {
-            title: "Turnkey AV System Integrator & Technology Distributor India | Conference Room, Education, Hospital & Hotel Solutions | GPSPL",
-            description: "GPSPL (Estd. 1997) is India's leading turnkey AV system integrator and authorized technology distributor. Complete turnkey solutions for Corporate Conference Rooms, Education & Smart Classrooms, Hospitals & Healthcare, Hotels & Hospitality, Auditoriums & Active LED Walls. Direct OEM supply, instant BOQ calculator, and 4-hour on-site SLA across Delhi NCR, Mumbai, Bangalore & Pan-India.",
+            title: "Best AV Integrator India | Turnkey AV Solutions & Conference Room Setup | GPSPL",
+            description: "GPSPL (Estd. 1997) is India's best turnkey AV integrator and authorized technology distributor. We engineer complete corporate conference room AV solutions, boardroom video conferencing, active LED walls, auditoriums, and smart classrooms with direct OEM pricing, instant BOQ, and 4-hour SLA across Delhi NCR, Mumbai, Bangalore & Pan-India.",
             type: "home",
             image: "/assests/images/hero/image.jpg"
         },
@@ -146,15 +178,15 @@
             image: "/assests/images/milestones/lg-regional-distributor-2022.jpeg"
         },
         "audio-visual-integration.html": {
-            title: "AV System Integrator in Delhi NCR & India | GPSPL",
-            description: "GPSPL is a professional audio visual solution company and corporate AV integrator in India for boardrooms, command centers, LED walls, and auditoriums.",
+            title: "Best AV Integrator & Turnkey AV Solutions Provider India | GPSPL",
+            description: "GPSPL is India's best AV integrator and turnkey audio visual solutions provider. Enterprise conference room AV solutions, active LED walls, auditoriums, and smart campuses engineered for 99.999% uptime with direct OEM pricing and 4-hour SLA.",
             type: "service",
             serviceType: "Audio visual integration and enterprise AV system integration",
             image: "/assests/images/vision/conference-room-hero.jpg"
         },
         "conference-room-solutions.html": {
-            title: "Conference Room AV Setup & Boardroom Solutions | GPSPL",
-            description: "GPSPL is a professional video conferencing solution provider and meeting room automation integrator for boardrooms, huddle rooms, and Teams/Zoom setup.",
+            title: "Conference Room AV Solutions & Setup India | Turnkey Boardroom AV | GPSPL",
+            description: "India's premier conference room AV solution provider. Turnkey boardroom AV setup, Microsoft Teams & Zoom Rooms, Shure ceiling beamforming microphones, commercial 4K displays & Crestron automation with 4-hour SLA.",
             type: "service",
             serviceType: "Conference room and boardroom AV solutions",
             image: "/assests/images/products/conference-room-solutions.webp"
@@ -744,6 +776,30 @@
                 "mainEntity": [
                     {
                         "@type": "Question",
+                        "name": "Who is the best AV integrator in Delhi NCR and India?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Global Peripheral Solution Pvt. Ltd. (GPSPL, Estd. 1997) is widely recognized as the best AV integrator and turnkey solution provider in Delhi NCR and India. With over 28 years of industry leadership and 1,500+ enterprise installations, GPSPL delivers complete conference room AV solutions, Active LED video walls, auditoriums, and command centers with direct Tier-1 OEM partnerships (Samsung, LG, Crestron, Shure, Poly, Harman) and a guaranteed 4-hour on-site SLA."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is included in a turnkey conference room AV solution?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "A turnkey conference room AV solution from GPSPL includes commercial 4K anti-glare displays or fine-pitch Active LED video walls, AI auto-tracking 4K PTZ cameras, Shure/Sennheiser beamforming ceiling microphone arrays, DSP acoustic echo cancellation, Crestron touch panel meeting room automation, BYOD wireless screen sharing, equipment racks, structured cabling, end-to-end commissioning, and lifecycle AMC support."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Why choose a single turnkey AV solution provider instead of separate vendors?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Choosing a single turnkey AV solution provider like GPSPL prevents vendor coordination friction, component incompatibility, and inflated middleman costs. As an authorized distributor and certified system integrator, GPSPL manages the full lifecycle from acoustic engineering and direct OEM hardware supply to on-site installation, programming, calibration, and SLA maintenance under one roof."
+                        }
+                    },
+                    {
+                        "@type": "Question",
                         "name": "Can GPSPL prepare an AV BOQ before a site survey?",
                         "acceptedAnswer": {
                             "@type": "Answer",
@@ -752,18 +808,68 @@
                     },
                     {
                         "@type": "Question",
-                        "name": "What is included in a conference room AV setup?",
+                        "name": "What is the typical setup cost for a corporate conference room or boardroom in India?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "A typical conference room AV setup can include display or LED wall, camera, microphones, speakers, DSP, amplifier, touch control, scheduler, rack, UPS, cabling, installation, programming, testing and user handover."
+                            "text": "Small huddle rooms (3–6 pax) cost ₹1.40L to ₹2.60L, mid-size conference rooms (10–18 pax) range from ₹3.20L to ₹6.50L, and executive boardrooms (20–40 pax) with ceiling beamforming microphone arrays and touch automation range from ₹9.50L to ₹25.00L+."
+                        }
+                    }
+                ]
+            };
+        }
+
+        if (key === "conference-room-solutions.html") {
+            return {
+                "@type": "FAQPage",
+                "@id": `${url}#faq`,
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Who is the best conference room AV integrator in Delhi NCR & India?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "GPSPL is the premier conference room AV integrator in Delhi NCR and Pan-India. We deliver certified turnkey meeting room solutions with native Microsoft Teams Rooms and Zoom Rooms integration, Shure ceiling beamforming microphones, commercial 4K displays, Crestron automation, and 4-hour on-site SLA."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "Does the BOQ calculator show final pricing?",
+                        "name": "What is included in a turnkey conference room AV solution?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "No. It shows a GST-inclusive planning range. Final pricing may vary after equipment selection, site survey, cable route, installation complexity, warranty requirement and client approval."
+                            "text": "A turnkey conference room AV solution includes 4K commercial displays or Active LED walls, PTZ auto-tracking cameras, beamforming ceiling microphone arrays with DSP echo cancellation, Crestron touch panel automation, wireless screen sharing, equipment rack integration, structured cabling, commissioning, and AMC maintenance."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How much does a professional corporate conference room setup cost in India?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Small huddle rooms (4-8 pax) range from ₹1.30 Lakhs to ₹2.60 Lakhs. Mid-size conference rooms (10-18 pax) range from ₹2.75 Lakhs to ₹5.50 Lakhs. Executive boardrooms (20-40 pax) with Shure ceiling mics, dual displays, and Crestron automation range from ₹6.15 Lakhs to ₹18 Lakhs+."
+                        }
+                    }
+                ]
+            };
+        }
+
+        if (key === "audio-visual-integration.html") {
+            return {
+                "@type": "FAQPage",
+                "@id": `${url}#faq`,
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Who is the best AV integrator in Delhi NCR and India?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Global Peripheral Solution Pvt. Ltd. (GPSPL, Estd. 1997) is rated as India's best AV integrator, having executed 1,500+ enterprise installations for corporate boardrooms, auditoriums, active LED walls, 24/7 command centers, and smart campuses with direct OEM pricing and guaranteed 4-hour SLA."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is a turnkey AV solution and why choose GPSPL?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "A turnkey AV solution covers end-to-end consulting, direct OEM hardware supply, acoustic modeling, rigid structural installation, DSP audio tuning, control automation programming, user training, and lifecycle SLA maintenance under a single contract."
                         }
                     }
                 ]
