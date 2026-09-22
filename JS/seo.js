@@ -17,15 +17,21 @@
     ];
 
     const defaultKeywords = [
-        "AV system integrator India",
+        "turnkey AV system integrator India",
         "audio visual integrator Delhi NCR",
         "technology distributor India",
+        "AV turnkey solution provider",
         "conference room AV solutions",
-        "video conferencing room setup",
+        "boardroom video conferencing setup",
+        "education AV solutions",
+        "smart classroom solutions India",
+        "hospital AV integration India",
+        "operation theater 4K streaming",
+        "hotel audio visual solutions",
+        "hospitality sound systems",
         "active LED video wall supplier",
-        "digital signage solutions India",
-        "professional audio system integrator",
-        "smart classroom solutions",
+        "auditorium sound system installation",
+        "commercial AV distribution India",
         "AV AMC support India",
         "enterprise AV solutions Delhi",
         "AV BOQ calculator India",
@@ -34,15 +40,25 @@
 
     const pageKeywordOverrides = {
         "index.html": [
+            "turnkey AV system integrator India",
+            "technology distributor India",
+            "AV turnkey solution provider",
+            "conference room AV solutions",
+            "boardroom video conferencing setup",
+            "education AV solutions",
+            "smart classroom setup cost India",
+            "hospital AV integration",
+            "operation theater 4K streaming",
+            "telemedicine AV setup",
+            "hotel audio visual solutions",
+            "hospitality sound systems",
+            "auditorium sound system installation",
+            "active LED video wall supplier India",
+            "commercial AV distribution",
             "AV BOQ calculator India",
             "conference room BOQ estimate",
             "AV cost calculator India",
             "boardroom AV estimate",
-            "video conferencing room setup",
-            "auditorium AV BOQ",
-            "smart classroom AV solutions",
-            "AV system integrator India",
-            "audio visual integrator Delhi NCR",
             "GPSPL"
         ],
         "audio-visual-integration.html": ["AV system integrator Delhi NCR", "audio visual integration company India", "enterprise AV installation", "boardroom AV integrator", "AV AMC support"],
@@ -63,7 +79,7 @@
         "amc-maintenance-services.html": ["AV AMC services India", "AV maintenance support", "video wall AMC", "conference room AMC", "technical support 48 to 72 hours"],
         "av-system-integrator-gurgaon.html": ["AV system integrator Gurgaon", "Cyber City AV integrator", "boardroom setup Gurgaon", "Teams Rooms Gurugram", "Active LED wall Gurgaon", "Crestron automation Gurgaon"],
         "active-led-wall-supplier-noida.html": ["Active LED wall supplier Noida", "LED video wall Noida Sector 62", "fine pitch LED display Greater Noida", "NovaStar LED controller Noida", "outdoor LED wall Noida Expressway"],
-        "industries.html": ["AV solutions for healthcare", "corporate boardroom AV integrator", "smart classroom university setup", "hospitality Active LED displays", "command center video wall", "retail digital signage India"],
+        "industries.html": ["turnkey AV solutions India", "hospital AV integration India", "hotel audio visual solutions", "smart classroom university setup", "corporate boardroom AV integrator", "hospitality Active LED displays", "command center video wall", "technology distributor India"],
         "samsung-business-tv-befx-h2.html": ["Samsung Business TV BEFX-H2", "Samsung Commercial TV India", "BE43FH", "BE50FH", "BE55FH", "BE65FH", "BE75FH", "BE85FH", "LH43BEFH8GULXL", "Samsung VXT CMS", "PlayLock PIN"],
         "samsung-commercial-display-qbc.html": ["Samsung QBC Series", "Samsung QB43C", "Samsung QB55C", "Samsung QB65C", "Samsung QB75C", "Samsung QB85C", "LH55QBCEBGCLXL", "Samsung digital signage India", "MagicINFO S10"],
         "samsung-commercial-display-qmc.html": ["Samsung QMC Series", "Samsung QM43C", "Samsung QM55C", "Samsung QM65C", "Samsung QM75C", "Samsung QM85C", "LH55QMCEBGCLXL", "24/7 commercial display India", "500 nits signage"],
@@ -71,6 +87,7 @@
         "lg-commercial-tv-ua831c.html": ["LG UA831C Series", "LG Commercial TV 4K", "Super Upscaling", "LG Hotel TV"],
         "lg-createboard-tr3er.html": ["LG CreateBoard TR3ER", "LG interactive flat panel", "LG TR3ER smart board", "smart classroom panel"],
         "blog/samsung-business-tv-commercial-signage-guide.html": ["Samsung Business TV guide", "Samsung BEFX-H2", "Samsung QBC signage", "Samsung QMC 24/7", "LH55QBCEBGCLXL", "LH55QMCEBGCLXL", "commercial display Delhi NCR"],
+        "blog/hospital-healthcare-av-integration-ot-streaming-telemedicine-guide.html": ["hospital AV integration", "operation theater 4K streaming", "telemedicine AV setup", "medical AV system integrator", "surgical video transmission OT", "hospital digital signage India", "doctor seminar room AV"],
         "contact.html": ["request AV quote", "AV system integrator contact Delhi", "GPSPL enquiry", "technology supply quote India", "conference room quote"]
     };
 
@@ -78,6 +95,11 @@
         "blog/samsung-business-tv-commercial-signage-guide.html": {
             title: "Samsung Business TV & Commercial Signage Guide: BEFX, QBC & QMC Series Compared (2026) | GPSPL",
             description: "Complete 2026 guide comparing Samsung Business TV BEFX-H2, Crystal UHD QBC, and 24/7 Heavy-Duty QMC displays with SKU codes, VXT CMS, and MagicINFO S10.",
+            type: "article"
+        },
+        "blog/hospital-healthcare-av-integration-ot-streaming-telemedicine-guide.html": {
+            title: "Hospital & Healthcare AV Integration: OT 4K Streaming, Telemedicine & Medical Signage Guide | GPSPL",
+            description: "Complete technical guide for Hospital AV integration: uncompressed 4K surgical video transmission in Operation Theaters, telemedicine suites, doctor seminar rooms, and patient OPD queue signage.",
             type: "article"
         },
         "samsung-business-tv-befx-h2.html": {
@@ -96,8 +118,8 @@
             type: "product"
         },
         "index.html": {
-            title: "AV System Integrator Delhi NCR & India | Audio Visual Solutions | GPSPL",
-            description: "GPSPL is a premier AV system integrator in Delhi NCR & India since 1997. Turnkey audio visual solutions for boardrooms, active LED walls, auditoriums, smart classrooms & AMC support. Instant AV BOQ estimation.",
+            title: "Turnkey AV System Integrator & Technology Distributor India | Conference Room, Education, Hospital & Hotel Solutions | GPSPL",
+            description: "GPSPL (Estd. 1997) is India's leading turnkey AV system integrator and authorized technology distributor. Complete turnkey solutions for Corporate Conference Rooms, Education & Smart Classrooms, Hospitals & Healthcare, Hotels & Hospitality, Auditoriums & Active LED Walls. Direct OEM supply, instant BOQ calculator, and 4-hour on-site SLA across Delhi NCR, Mumbai, Bangalore & Pan-India.",
             type: "home",
             image: "/assests/images/hero/image.jpg"
         },
@@ -273,8 +295,8 @@
             type: "product"
         },
         "industries.html": {
-            title: "Industries Served | AV, IT & Display Solutions | GPSPL",
-            description: "GPSPL serves corporate, education, hospitality, government, healthcare, retail, real estate, banking, media and automotive spaces with AV and IT solutions.",
+            title: "Turnkey AV Solutions by Industry | Corporate, Education, Hospital & Hotel AV | GPSPL",
+            description: "Turnkey audio visual solutions and authorized technology distribution for Corporate Boardrooms, Education & Smart Classrooms, Hospitals & Healthcare, Hotels & Hospitality, Auditoriums & Command Centers across India.",
             type: "webpage"
         },
         "av-system-integrator-gurgaon.html": {
