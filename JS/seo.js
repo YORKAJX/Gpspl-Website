@@ -99,8 +99,51 @@
         "video-wall-solutions.html": ["video wall supplier India", "video wall integrator Delhi", "control room video wall", "LCD video wall systems", "commercial display wall"],
         "active-led-wall-solutions.html": ["active LED wall supplier India", "active LED wall installer India", "LED video wall installation", "indoor LED wall Delhi NCR", "outdoor LED display supplier", "fine pitch LED wall", "LED wall AMC"],
         "digital-signage-solutions.html": ["digital signage solutions India", "digital signage display supplier", "menu board display", "commercial signage screen", "retail digital signage"],
-        "interactive-display-solutions.html": ["interactive flat panel supplier", "smart board supplier India", "interactive display for classrooms", "MAXHUB Newline BenQ panels", "IFPD installation"],
-        "smart-classroom-solutions.html": ["smart classroom solutions India", "interactive classroom setup", "interactive flat panel for classroom", "digital classroom AV integrator", "classroom projector audio system", "hybrid learning classroom setup", "lecture capture classroom", "education AV solutions"],
+        "interactive-display-solutions.html": [
+            "smart board price india",
+            "smartboard for school",
+            "smart board price",
+            "interactive flat panel display price",
+            "4k smart board for classroom",
+            "interactive touch screen board for teaching",
+            "smart class board price",
+            "digital smart board for teaching",
+            "smart board supplier india",
+            "interactive display for classrooms",
+            "LG CreateBoard TR3ER",
+            "Samsung Flip",
+            "Maxhub interactive panel",
+            "IFPD installation"
+        ],
+        "smart-classroom-solutions.html": [
+            "smart class solutions",
+            "smart classroom solutions india",
+            "smart class setup",
+            "smart class setup cost india",
+            "digital classroom setup",
+            "smartboard for school",
+            "interactive flat panel for classroom",
+            "smart classroom provider",
+            "education av solutions india",
+            "college smart classroom setup",
+            "digital classroom AV integrator",
+            "lecture capture classroom",
+            "CBSE smart class setup"
+        ],
+        "hotel-hospitality-av-solutions.html": [
+            "hotel audio visual solutions",
+            "hospitality av solutions india",
+            "hotel banquet sound system installation",
+            "banquet audio visual setup",
+            "hotel ballroom led wall setup",
+            "hotel commercial tv supplier india",
+            "restaurant background music system",
+            "hospitality sound systems india",
+            "hotel av system integrator",
+            "hotel conference room setup",
+            "JBL banquet sound",
+            "LG ProCentric hotel TV"
+        ],
         "professional-audio-solutions.html": ["professional audio system integrator India", "auditorium sound system", "seminar hall audio system", "conference room audio", "DSP audio system design", "JBL professional audio", "Sennheiser microphones"],
         "audio-technologies.html": ["meeting room audio technology", "professional microphones speakers DSP", "audio system design India", "auditorium audio integration", "room audio tuning"],
         "video-technologies.html": ["PTZ camera supplier India", "video technology solutions", "lecture capture cameras", "video conferencing camera", "enterprise display systems"],
@@ -234,18 +277,25 @@
             image: "/assests/images/products/digital-signage-solutions.webp"
         },
         "interactive-display-solutions.html": {
-            title: "Interactive Flat Panel Supplier & Smart Board Solutions | GPSPL",
-            description: "GPSPL is an interactive flat panel supplier and smart board distributor in India for school classrooms, college training labs, and corporate huddle rooms.",
+            title: "Smart Board Price India | 4K Interactive Flat Panel for Schools & Smart Class | GPSPL",
+            description: "Get direct OEM pricing on smart boards & interactive flat panels in India. Authorized distributor for LG CreateBoard, Samsung Flip, BenQ & Maxhub with Pan-India installation, teacher training, and instant BOQ.",
             type: "service",
-            serviceType: "Interactive display and smart board solutions",
+            serviceType: "Smart board and interactive flat panel display solutions",
             image: "/assests/images/products/interactive-display-solutions.webp"
         },
         "smart-classroom-solutions.html": {
-            title: "Smart Classroom Solution & Educational AV Integration | GPSPL",
-            description: "GPSPL delivers smart classroom solutions and interactive flat panel displays for schools, colleges, coaching campuses, and university auditoriums.",
+            title: "Smart Class Solutions & Setup Cost India | 4K Smart Board & Classroom AV | GPSPL",
+            description: "Complete smart class solutions & smart classroom setup in India by GPSPL (Estd. 1997). Turnkey 4K smart boards, hybrid lecture capture, school audio systems, CBSE compliance, and Pan-India AMC.",
             type: "service",
             serviceType: "Smart classroom, interactive display and education AV integration",
             image: "/assests/images/projects/gpspl-real/polished/direct-education-classroom-panels.webp"
+        },
+        "hotel-hospitality-av-solutions.html": {
+            title: "Hotel Audio Visual Solutions India | Hospitality AV System Integrator | Banquet LED & Sound | GPSPL",
+            description: "India's premier hotel audio visual solutions provider. Turnkey grand ballroom Active LED video walls, banquet line-array sound systems, multi-zone restaurant audio matrices, LG & Samsung hospitality TVs with 4-hour SLA.",
+            type: "service",
+            serviceType: "Hotel & hospitality audio visual system integration",
+            image: "/assests/images/projects/gpspl-real/polished/real-hospitality-restaurant-led.jpg"
         },
         "professional-audio-solutions.html": {
             title: "Professional Audio System Integrator India | GPSPL",
@@ -870,6 +920,89 @@
                         "acceptedAnswer": {
                             "@type": "Answer",
                             "text": "A turnkey AV solution covers end-to-end consulting, direct OEM hardware supply, acoustic modeling, rigid structural installation, DSP audio tuning, control automation programming, user training, and lifecycle SLA maintenance under a single contract."
+                        }
+                    }
+                ]
+            };
+        }
+
+        if (key === "smart-classroom-solutions.html") {
+            return {
+                "@type": "FAQPage",
+                "@id": `${url}#faq`,
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What is the cost of setting up a smart class in India?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "In India (2026), a basic smart class setup with a 65-inch 4K Interactive Flat Panel costs ₹1.25L to ₹1.65L. A standard K-12 classroom with a 75-inch panel and audio costs ₹1.85L to ₹2.60L. University hybrid lecture halls with 86-inch panels, digital podiums, and lecture capture range from ₹3.50L to ₹7.50L+."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What equipment is included in a turnkey smart classroom solution?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "A turnkey smart classroom solution from GPSPL includes 4K UHD interactive flat panels (LG, Samsung, Maxhub, BenQ), digital podiums, teacher collar microphones, classroom speakers, auto-tracking PTZ cameras for hybrid teaching, UPS backup, and teacher orientation training."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Which is the best smart class solutions provider and installer in India?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Global Peripheral Solution Pvt. Ltd. (GPSPL, Estd. 1997) is one of India's leading education AV system integrators and authorized technology distributors with 28+ years of experience, thousands of classrooms deployed, Tier-1 OEM pricing, and SLA-backed AMC support."
+                        }
+                    }
+                ]
+            };
+        }
+
+        if (key === "interactive-display-solutions.html") {
+            return {
+                "@type": "FAQPage",
+                "@id": `${url}#faq`,
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What is the price of a smart board for schools and classrooms in India?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "In India (2026), 4K Interactive Flat Panel smart boards range from ₹85,000 to ₹1,15,000 for 65-inch, ₹1,25,000 to ₹1,65,000 for 75-inch, and ₹1,95,000 to ₹2,80,000 for 86-inch displays depending on brands (LG CreateBoard, Samsung Flip, Maxhub, BenQ) and OPS PC options."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Which smart board size is best for a school classroom or coaching room?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "For small batches (15-25 students), a 65-inch panel is ideal. For standard K-12 classrooms (30-50 students), a 75-inch panel is standard. For university lecture rooms (50-80+ students), an 86-inch or dual-display configuration is recommended."
+                        }
+                    }
+                ]
+            };
+        }
+
+        if (key === "hotel-hospitality-av-solutions.html") {
+            return {
+                "@type": "FAQPage",
+                "@id": `${url}#faq`,
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What audio visual solutions does GPSPL provide for hotels and luxury resorts?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "GPSPL provides turnkey hospitality AV integration: Active LED video walls for grand ballrooms and banquets, high-headroom line-array sound systems, Dante multi-zone BGM for restaurants and lobbies, LG Pro:Centric and Samsung hospitality TVs, and meeting room video conferencing."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What equipment is included in a hotel banquet and grand ballroom AV setup?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "A hotel banquet AV setup includes fine-pitch indoor Active LED video walls (P1.86 to P2.5), line-array speakers, digital audio consoles, wireless Shure/Sennheiser microphones, motorized partition audio switching matrices, and centralized iPad automation."
                         }
                     }
                 ]
