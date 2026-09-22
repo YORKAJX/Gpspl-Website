@@ -13,7 +13,7 @@
     const ADMIN_CONFIG = {
         email: 'karan@gpspl.co.in',
         secondaryEmail: 'itsdivesh221@gmail.com',
-        allEmails: ['itsdivesh221@gmail.com', 'karan@gpspl.co.in', 'global@gpspl.co.in', 'support@gpspl.co.in'],
+        allEmails: ['itsdivesh221@gmail.com', 'karan@gpspl.co.in', 'global@gpspl.co.in'],
         phone: '8920830377',
         whatsappCountryCode: '91'
     };
@@ -959,7 +959,7 @@
         // Set pre-filled WhatsApp link
         const waMsg = encodeURIComponent('Hello GPSPL, I just requested a BOQ estimate for ' + solution + ' (' + scale + ') in ' + city + '. My name is ' + name + '. Please share the pricing.');
         const waLink = document.getElementById('gpspl-boq-wa-direct');
-        waLink.href = 'https://wa.me/919310092963?text=' + waMsg;
+        waLink.href = 'https://wa.me/918920830377?text=' + waMsg;
 
         document.getElementById('gpspl-quick-boq-form').style.display = 'none';
         document.getElementById('gpspl-boq-success').style.display = 'block';

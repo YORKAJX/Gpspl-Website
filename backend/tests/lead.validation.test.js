@@ -7,7 +7,7 @@ describe("lead validation", () => {
       body: {
         name: "Divesh Kumar",
         email: "divesh@example.com",
-        phone: "+91 9310092963",
+        phone: "+91 8920830377",
         requirement: "Conference Room Solutions",
         message: "Need display, audio and VC setup."
       }

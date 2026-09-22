@@ -21,7 +21,7 @@ export const swaggerSpec = swaggerJSDoc({
           properties: {
             name: { type: "string", example: "Divesh Kumar" },
             email: { type: "string", format: "email", example: "buyer@example.com" },
-            phone: { type: "string", example: "+91 9310092963" },
+            phone: { type: "string", example: "+91 8920830377" },
             company: { type: "string", example: "Example Pvt. Ltd." },
             requirement: { type: "string", example: "Conference Room Solutions" },
             location: { type: "string", example: "New Delhi" },

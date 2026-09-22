@@ -59,7 +59,7 @@ The contact page and footer quote form submit through Netlify Forms:
 
 The AV BOQ download form captures client name, company, email, phone, project location, remarks, room count, estimate range, validation status, BOQ summary and the full requirement payload.
 
-After deploy, configure Netlify Form Notifications so submissions are emailed to the GPSPL team, for example `khurana.s@gpspl.co.in`, `support@gpspl.co.in` and `khanna.g@gpspl.co.in`. Submissions will still be stored in the Netlify dashboard even before email notifications are configured.
+After deploy, configure Netlify Form Notifications so submissions are emailed to the GPSPL team, for example `khurana.s@gpspl.co.in`, `global@gpspl.co.in` and `khanna.g@gpspl.co.in`. Submissions will still be stored in the Netlify dashboard even before email notifications are configured.
 
 Optional AV BOQ auto-email:
 

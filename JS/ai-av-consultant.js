@@ -5,7 +5,7 @@
  * - 35+ Comprehensive JSON Knowledge Base Intents
  * - Text-to-Speech (TTS) Voice Synthesizer & Speech-to-Text (STT) Voice Input
  * - Interactive Sizing Calculators (Active LED Pixel Pitch, Boardroom Tiers, Smart Classrooms)
- * - 16+ Global OEM Partnerships & Direct Consultation Hotline (+91 93100 92963)
+ * - 16+ Global OEM Partnerships & Direct Consultation Hotline (+91 89208 30377)
  */
 
 (function() {
@@ -420,7 +420,7 @@ Aap kis space ke baare me jaanna chahte hain?`,
 • ⏱️ **4-Hour On-Site SLA:** Guaranteed rapid on-site engineer dispatch for critical boardroom or display failures.
 • 🔄 **Standby Hardware Replacement:** Temporary loaner units provided during off-site repairs so meetings never stop.
 • 🧹 **Quarterly Preventive Audits:** Proactive sound re-calibration, display color balance, firmware updates, and lens cleaning.
-• 📞 **Dedicated Support Desk:** Dedicated WhatsApp & phone support hotline (+91 93100 92963 / +91 89208 30377).`,
+• 📞 **Dedicated Support Desk:** Dedicated WhatsApp & phone support hotline (+91 89208 30377 / +91 89208 30377).`,
             reply_hi: `GPSPL sirf equipment supply nahi karta, balki poora setup install aur maintain bhi karta hai:
 
 🛡️ **Hamari Service Guarantee:**
@@ -854,8 +854,8 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
                         <strong>Senior AV Systems Consultant</strong>
                         <span>Direct Call &bull; Free Site Survey &amp; Quote</span>
                     </div>
-                    <a href="tel:+919310092963" class="gpspl-chat-hotline-btn">
-                        <i class="fas fa-phone"></i> Call +91 93100 92963
+                    <a href="tel:+918920830377" class="gpspl-chat-hotline-btn">
+                        <i class="fas fa-phone"></i> Call +91 89208 30377
                     </a>
                 </div>
             `;
@@ -1044,7 +1044,7 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
 
         waRoot.innerHTML = `
             <div class="gpspl-wa-container" id="gpsplWaContainer">
-                <a href="https://wa.me/919310092963?text=Hello%20GPSPL%2C%20I%20would%20like%20to%20discuss%20an%20AV%20or%20IT%20requirement." class="gpspl-wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20would%20like%20to%20discuss%20an%20AV%20or%20IT%20requirement." class="gpspl-wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
                     <i class="fab fa-whatsapp"></i>
                     <span class="gpspl-wa-badge"></span>
                 </a>
@@ -1059,7 +1059,7 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
                     </div>
 
                     <div class="gpspl-wa-body">
-                        <a href="https://wa.me/919310092963?text=Hi%20GPSPL%2C%20I%20have%20an%20enterprise%20AV%20%2F%20Active%20LED%20%2F%20Boardroom%20requirement.%20Please%20share%20pricing%20and%20turnkey%20BOQ%20details." target="_blank" rel="noopener noreferrer" class="gpspl-wa-option">
+                        <a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20have%20an%20enterprise%20AV%20%2F%20Active%20LED%20%2F%20Boardroom%20requirement.%20Please%20share%20pricing%20and%20turnkey%20BOQ%20details." target="_blank" rel="noopener noreferrer" class="gpspl-wa-option">
                             <div class="gpspl-wa-option-info">
                                 <strong><i class="fas fa-comments" style="color: #25D366; margin-right: 6px;"></i> Pan-India AV Projects &amp; BOQ</strong>
                                 <span>Active LED, Boardrooms &amp; Auditoriums</span>
@@ -1067,7 +1067,7 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
                             <i class="fab fa-whatsapp"></i>
                         </a>
 
-                        <a href="https://wa.me/919310092963?text=Hi%20GPSPL%2C%20I%20want%20to%20consult%20a%20senior%20systems%20engineer%20for%20an%20upcoming%20AV%20project." target="_blank" rel="noopener noreferrer" class="gpspl-wa-option">
+                        <a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20want%20to%20consult%20a%20senior%20systems%20engineer%20for%20an%20upcoming%20AV%20project." target="_blank" rel="noopener noreferrer" class="gpspl-wa-option">
                             <div class="gpspl-wa-option-info">
                                 <strong><i class="fas fa-headset" style="color: #25D366; margin-right: 6px;"></i> Talk to Senior AV Systems Engineer</strong>
                                 <span>Free 3D Layout &amp; Feasibility Check</span>
@@ -1083,7 +1083,7 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
                             <i class="fab fa-whatsapp"></i>
                         </a>
 
-                        <a href="https://wa.me/919310092963?text=Hi%20GPSPL%20HR%2C%20I%20am%20inquiring%20about%20Career%20Openings%20at%20GPSPL." target="_blank" rel="noopener noreferrer" class="gpspl-wa-option" style="opacity: 0.85; border-top: 1px dashed #e2e8f0; padding-top: 6px;">
+                        <a href="https://wa.me/918920830377?text=Hi%20GPSPL%20HR%2C%20I%20am%20inquiring%20about%20Career%20Openings%20at%20GPSPL." target="_blank" rel="noopener noreferrer" class="gpspl-wa-option" style="opacity: 0.85; border-top: 1px dashed #e2e8f0; padding-top: 6px;">
                             <div class="gpspl-wa-option-info">
                                 <strong style="font-size: 0.82rem;"><i class="fas fa-briefcase" style="color: #64748b; margin-right: 6px;"></i> Careers &amp; Recruitment Desk</strong>
                                 <span style="font-size: 0.68rem;">Job Inquiries &amp; HR</span>

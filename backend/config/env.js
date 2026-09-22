@@ -38,7 +38,7 @@ const envSchema = z.object({
   SMTP_USER: z.string().optional(),
   SMTP_PASS: z.string().optional(),
   MAIL_FROM: z.string().default("GPSPL Website <no-reply@gpspl.co.in>"),
-  LEAD_NOTIFICATION_EMAILS: z.string().default("support@gpspl.co.in"),
+  LEAD_NOTIFICATION_EMAILS: z.string().default("global@gpspl.co.in"),
   GA4_MEASUREMENT_ID: z.string().optional(),
   GOOGLE_TAG_MANAGER_ID: z.string().optional(),
   GOOGLE_SEARCH_CONSOLE_VERIFICATION: z.string().optional(),

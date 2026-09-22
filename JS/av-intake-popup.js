@@ -45,9 +45,9 @@
                         <span>Let Our Engineers Know</span>
                         <i class="fas fa-arrow-right" aria-hidden="true"></i>
                     </a>
-                    <a href="tel:+919310092963" class="av-strip-phone" title="Call Senior Engineers">
+                    <a href="tel:+918920830377" class="av-strip-phone" title="Call Senior Engineers">
                         <i class="fas fa-phone-alt" aria-hidden="true"></i>
-                        <span>+91 93100 92963</span>
+                        <span>+91 89208 30377</span>
                     </a>
                     <button type="button" class="av-strip-close" id="avToastCloseBtn" aria-label="Close notification" title="Close">&times;</button>
                 </div>

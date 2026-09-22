@@ -16,8 +16,8 @@
             name: 'Global Peripheral Solution Pvt. Ltd.',
             alternateName: 'GPSPL',
             url: 'https://gpspl.co.in/',
-            email: 'support@gpspl.co.in',
-            telephone: '+91 93100 92963',
+            email: 'global@gpspl.co.in',
+            telephone: '+91 89208 30377',
             foundingDate: '1997',
             description: "India's Technology Distribution & Enterprise Integration Partner"
         },

@@ -595,7 +595,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const encodedMsg = encodeURIComponent(customMessage);
         document.querySelectorAll('.floating-whatsapp, .whatsapp-button, a[href*="wa.me"]').forEach(btn => {
-            btn.href = `https://wa.me/919310092963?text=${encodedMsg}`;
+            btn.href = `https://wa.me/918920830377?text=${encodedMsg}`;
         });
     }
 

@@ -44,7 +44,7 @@ New enquiries are stored in PostgreSQL. If SMTP is configured, notifications are
 Recommended production recipients:
 
 ```env
-LEAD_NOTIFICATION_EMAILS=support@gpspl.co.in,khurana.s@gpspl.co.in,khanna.g@gpspl.co.in
+LEAD_NOTIFICATION_EMAILS=global@gpspl.co.in,khurana.s@gpspl.co.in,khanna.g@gpspl.co.in
 ```
 
 ## Deployment Notes

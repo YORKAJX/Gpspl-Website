@@ -94,7 +94,7 @@ exports.handler = async (event) => {
     if (!isGenuineEmail(lead.email)) return json(400, { error: 'Invalid email' }, baseHeaders);
 
     const from = process.env.BOQ_MAIL_FROM || process.env.MAIL_FROM || 'GPSPL <no-reply@gpspl.co.in>';
-    const defaultTeamEmails = 'itsdivesh221@gmail.com, karan@gpspl.co.in, support@gpspl.co.in';
+    const defaultTeamEmails = 'itsdivesh221@gmail.com, karan@gpspl.co.in, global@gpspl.co.in';
     const team = (process.env.BOQ_TEAM_EMAILS || process.env.LEAD_NOTIFICATION_EMAILS || defaultTeamEmails)
         .split(',')
         .map((email) => email.trim())
@@ -117,7 +117,7 @@ exports.handler = async (event) => {
             <p><strong>Planning estimate:</strong> ${estimate || 'Shared in downloaded proposal'}<br>
             <strong>Rooms:</strong> ${roomCount || 'As selected in calculator'}</p>
             <p>For final pricing, GPSPL will validate site condition, equipment selection, cable routes, mounting, warranty and installation scope.</p>
-            <p style="margin-top:18px"><strong>GPSPL</strong><br>www.gpspl.co.in<br>info@gpspl.co.in<br>+91 93100 92963</p>
+            <p style="margin-top:18px"><strong>GPSPL</strong><br>www.gpspl.co.in<br>info@gpspl.co.in<br>+91 89208 30377</p>
         </div>
     `;
 
@@ -143,7 +143,7 @@ exports.handler = async (event) => {
                 from,
                 subject: 'Thank you for downloading GPSPL AV BOQ Estimate',
                 html: clientHtml,
-                replyTo: team[0] || 'support@gpspl.co.in'
+                replyTo: team[0] || 'global@gpspl.co.in'
             }),
             team.length ? sendResendEmail({
                 to: team,

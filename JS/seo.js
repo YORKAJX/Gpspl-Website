@@ -5,8 +5,8 @@
     const SITE_NAME = "Global Peripheral Solution Pvt. Ltd.";
     const LOGO_URL = `${BASE_URL}/assests/images/gpspl.png`;
     const DEFAULT_IMAGE = `${BASE_URL}/assests/images/hero/Vconf.webp`;
-    const PHONE = "+91 93100 92963";
-    const EMAIL = "support@gpspl.co.in";
+    const PHONE = "+91 89208 30377";
+    const EMAIL = "global@gpspl.co.in";
     const runtimeConfig = window.GPSPL_CONFIG || {};
 
     const sameAs = [

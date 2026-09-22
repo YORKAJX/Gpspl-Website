@@ -26,7 +26,7 @@
 - [ ] Do not deploy until business owner gives final approval.
 - [ ] Submit a real test from the contact form and footer quote form.
 - [ ] Confirm Netlify detects forms `gpspl-contact-enquiry` and `gpspl-footer-quote`.
-- [ ] Configure Netlify Form Notifications for `khurana.s@gpspl.co.in`, `support@gpspl.co.in` and `khanna.g@gpspl.co.in`.
+- [ ] Configure Netlify Form Notifications for `khurana.s@gpspl.co.in`, `global@gpspl.co.in` and `khanna.g@gpspl.co.in`.
 - [ ] Confirm both forms redirect to `https://gpspl.co.in/thank-you.html`.
 - [ ] Deploy `_redirects`, `_headers`, `robots.txt` and `sitemap.xml` with the site.
 - [ ] Check deployed mobile, tablet and desktop pages after upload.
