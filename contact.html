@@ -282,61 +282,59 @@
                         <input type="hidden" name="lead_source" value="Contact page project enquiry">
                         <input type="hidden" name="page_url" value="">
                         <input type="hidden" name="submitted_at" value="">
+                        <input type="hidden" name="form_time_token" id="contact_form_time_token" value="">
                         <input type="text" name="bot-field" class="form-honeypot" style="display:none !important; visibility:hidden !important; position:absolute !important; left:-9999px !important; opacity:0 !important; pointer-events:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <input type="text" name="website_url_hp" class="form-honeypot" style="display:none !important; visibility:hidden !important; position:absolute !important; left:-9999px !important; opacity:0 !important; pointer-events:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="contact-name">Full Name</label>
+                                <label for="contact-name">Full Name <span style="color: #ef3438;">*</span></label>
                                 <input id="contact-name" type="text" name="name" placeholder="Enter your full name" autocomplete="name" required>
                             </div>
                             <div class="form-group">
-                                <label for="contact-company">Company / Organization</label>
-                                <input id="contact-company" type="text" name="company" placeholder="Company name" autocomplete="organization">
+                                <label for="contact-company">Company / Organization <span style="color: #ef3438;">*</span></label>
+                                <input id="contact-company" type="text" name="company" placeholder="Company / institution name" autocomplete="organization" required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="contact-email">Email Address</label>
-                                <input id="contact-email" type="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+                                <label for="contact-email">Business Email <span style="color: #ef3438;">*</span></label>
+                                <input id="contact-email" type="email" name="email" placeholder="name@company.com" autocomplete="email" required>
                             </div>
                             <div class="form-group">
-                                <label for="contact-phone">Phone Number</label>
+                                <label for="contact-phone">Mobile Number <span style="color: #ef3438;">*</span></label>
                                 <input id="contact-phone" type="tel" name="phone" placeholder="Enter 10-digit mobile number" maxlength="10" pattern="[6-9][0-9]{9}" autocomplete="tel" required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="contact-service">Requirement Type</label>
+                                <label for="contact-service">Requirement Sector / Solution <span style="color: #ef3438;">*</span></label>
                                 <select id="contact-service" name="requirement" required>
-                                    <option value="">Select a service</option>
-                                    <option>Technology Product Supply / Distribution</option>
-                                    <option>Audio Visual Integration</option>
-                                    <option>Conference Room Solutions</option>
-                                    <option>Active LED Video Wall</option>
-                                    <option>Smart Classroom Solutions</option>
-                                    <option>Video Conferencing</option>
-                                    <option>Professional Audio</option>
-                                    <option>Digital Signage</option>
-                                    <option>Interactive Display / Smart Board</option>
-                                    <option>KVM & AV Switching</option>
-                                    <option>UPS & Power Backup</option>
-                                    <option>Wacom / Creative Peripherals</option>
-                                    <option>IT Infrastructure</option>
-                                    <option>AMC & Maintenance</option>
-                                    <option>Other Requirement</option>
+                                    <option value="">Select your sector or solution</option>
+                                    <option value="Conference Room Solutions">Conference Room &amp; Boardroom AV (Teams/Zoom Rooms)</option>
+                                    <option value="Smart Classroom Solutions">Smart Classroom &amp; Interactive Flat Panels (Education)</option>
+                                    <option value="Hotel & Hospitality AV">Hotel &amp; Hospitality AV (Ballroom LED, Banquet Sound, Hotel TVs)</option>
+                                    <option value="Coworking Space AV">Coworking Space AV &amp; Meeting Pods (Shared Offices)</option>
+                                    <option value="AV Technology Distribution">AV Technology Distribution &amp; B2B Wholesale Supply (GeM / OEM)</option>
+                                    <option value="Active LED Video Wall">Active LED Video Wall (Indoor / Outdoor)</option>
+                                    <option value="Auditorium AV Solutions">Auditorium Sound Reinforcement &amp; Stage AV</option>
+                                    <option value="Command Control Center">Command &amp; Control Center 24/7 Video Wall</option>
+                                    <option value="Digital Signage Solutions">Commercial Displays &amp; Digital Signage Networks</option>
+                                    <option value="AMC Maintenance Services">AMC &amp; SLA Support Maintenance</option>
+                                    <option value="Other Requirement">Other Technology Requirement</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="contact-location">Project Location</label>
-                                <input id="contact-location" type="text" name="location" placeholder="City / site location" autocomplete="address-level2">
+                                <label for="contact-location">Project Location / City <span style="color: #ef3438;">*</span></label>
+                                <input id="contact-location" type="text" name="location" placeholder="e.g. Delhi NCR, Mumbai, Bangalore, Pan-India" autocomplete="address-level2" required>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="contact-message">Project Details</label>
-                            <textarea id="contact-message" name="message" rows="5" placeholder="Share scope, timeline, room type, quantity, or any product requirement" required></textarea>
+                            <label for="contact-message">Project Scope &amp; Details <span style="color: #ef3438;">*</span></label>
+                            <textarea id="contact-message" name="message" rows="5" placeholder="Share room dimensions, seating, equipment requirements, preferred brands (Samsung, LG, Harman, Crestron, Poly, etc.), or tender timeline." required></textarea>
                         </div>
 
                         <p class="form-privacy-note">By submitting this form, you agree that GPSPL may contact you about your enquiry. We use your details only to respond to your requirement. Read our <a href="/privacy-policy">Privacy Policy</a>.</p>

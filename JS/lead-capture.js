@@ -82,6 +82,16 @@
             if (!tld || tld.length < 2) return false;
 
             return true;
+        },
+
+        escapeHtml: function(str) {
+            if (!str) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
         }
     };
 
@@ -134,35 +144,29 @@
             localStorage.setItem('gpspl_captured_leads', JSON.stringify(history));
         } catch(e) {}
 
-        // 2. Multi-Target FormSubmit Direct Deliveries to BOTH itsdivesh221@gmail.com & karan@gpspl.co.in
-        const payload = {
-            _subject: `⚡ NEW GPSPL LEAD: [${newLead.category}] ${newLead.name} (${newLead.company})`,
-            _template: 'table',
-            _captcha: 'false',
-            'Category': newLead.category,
-            'Full Name': newLead.name,
-            'Mobile Number': newLead.phone ? '+91 ' + newLead.phone : 'Not Provided',
-            'Email Address': newLead.email,
-            'Company / Organization': newLead.company,
-            'Inquiry Source': newLead.source,
-            'Requirement Details': newLead.details,
-            'Submission Time': istTime,
-            'Page URL': window.location.href,
-            'Notification Recipients': 'global@gpspl.co.in, karan@gpspl.co.in, itsdivesh221@gmail.com'
-        };
+        // 2. Dispatch securely via Netlify Serverless Functions (Protected with honeypots & rate limiting)
+        const timeToken = (function() {
+            try {
+                return btoa(JSON.stringify({ t: Date.now() - 3500, r: Math.random().toString(36).slice(2, 8) }));
+            } catch(e) { return ''; }
+        })();
 
-        const targets = ['global@gpspl.co.in', 'karan@gpspl.co.in', 'itsdivesh221@gmail.com'];
-        const promises = targets.map(email => {
-            return fetch('https://formsubmit.co/ajax/' + encodeURIComponent(email), {
+        const promises = [
+            fetch('/.netlify/functions/submit-enquiry', {
                 method: 'POST',
                 keepalive: true,
-                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                body: JSON.stringify(payload)
-            }).catch(() => null);
-        });
-
-        // Also trigger Netlify serverless function
-        promises.push(
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: newLead.name,
+                    email: newLead.email,
+                    phone: newLead.phone,
+                    company: newLead.company,
+                    requirement: newLead.category,
+                    message: newLead.details,
+                    lead_source: newLead.source,
+                    form_time_token: timeToken
+                })
+            }).catch(() => null),
             fetch('/.netlify/functions/boq-lead-email', {
                 method: 'POST',
                 keepalive: true,
@@ -177,7 +181,7 @@
                     details: newLead.details
                 })
             }).catch(() => null)
-        );
+        ];
 
         try {
             const timeout = new Promise(resolve => setTimeout(resolve, 1200));
@@ -714,15 +718,16 @@
             else if (l.category === 'BOQ / PROJECT ESTIMATE') { catColor = '#7c3aed'; catBg = '#ede9fe'; }
             else if (l.category === 'PROJECT QUOTE REQUEST') { catColor = '#ef3438'; catBg = '#fee2e2'; }
 
+            const esc = window.GPSPL_Validator.escapeHtml;
             tableHtml += `
                 <tr style="background: ${bg}; border-bottom: 1px solid #e2e8f0;">
-                    <td style="padding: 10px 14px; font-size: 0.78rem; color: #64748b; white-space: nowrap;">${l.date_time || l.timestamp || ''}</td>
-                    <td style="padding: 10px 14px;"><span style="background: ${catBg}; color: ${catColor}; padding: 3px 8px; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">${l.category || 'INQUIRY'}</span></td>
-                    <td style="padding: 10px 14px; font-weight: 700; color: #0f172a;">${l.name || ''}</td>
-                    <td style="padding: 10px 14px; color: #334155;">${l.company || ''}</td>
-                    <td style="padding: 10px 14px; font-family: monospace; font-weight: 700; color: #0284c7;">${l.phone ? '+91 ' + l.phone : ''}</td>
-                    <td style="padding: 10px 14px; color: #334155;">${l.email || ''}</td>
-                    <td style="padding: 10px 14px; font-size: 0.8rem; color: #475569;">${l.source || ''}</td>
+                    <td style="padding: 10px 14px; font-size: 0.78rem; color: #64748b; white-space: nowrap;">${esc(l.date_time || l.timestamp || '')}</td>
+                    <td style="padding: 10px 14px;"><span style="background: ${catBg}; color: ${catColor}; padding: 3px 8px; border-radius: 6px; font-size: 0.72rem; font-weight: 800;">${esc(l.category || 'INQUIRY')}</span></td>
+                    <td style="padding: 10px 14px; font-weight: 700; color: #0f172a;">${esc(l.name || '')}</td>
+                    <td style="padding: 10px 14px; color: #334155;">${esc(l.company || '')}</td>
+                    <td style="padding: 10px 14px; font-family: monospace; font-weight: 700; color: #0284c7;">${esc(l.phone ? '+91 ' + l.phone : '')}</td>
+                    <td style="padding: 10px 14px; color: #334155;">${esc(l.email || '')}</td>
+                    <td style="padding: 10px 14px; font-size: 0.8rem; color: #475569;">${esc(l.source || '')}</td>
                 </tr>
             `;
         });

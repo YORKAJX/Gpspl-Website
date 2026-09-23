@@ -12,6 +12,7 @@ https://www.gpspl.co.in/* https://gpspl.co.in/:splat 301!
 /.env.* /404 404!
 /.git/* /404 404!
 /tmp/* /404 404!
+/backend/* /404 404!
 
 # 3. Homepage & Deprecated URLs
 /index.html / 301
@@ -99,6 +100,15 @@ https://www.gpspl.co.in/* https://gpspl.co.in/:splat 301!
 
 /healthcare-projects.html /healthcare-projects 301
 /healthcare-projects /healthcare-projects.html 200
+
+/hotel-hospitality-av-solutions.html /hotel-hospitality-av-solutions 301
+/hotel-hospitality-av-solutions /hotel-hospitality-av-solutions.html 200
+
+/coworking-space-av-solutions.html /coworking-space-av-solutions 301
+/coworking-space-av-solutions /coworking-space-av-solutions.html 200
+
+/av-technology-distribution.html /av-technology-distribution 301
+/av-technology-distribution /av-technology-distribution.html 200
 
 /industries.html /industries 301
 /industries /industries.html 200

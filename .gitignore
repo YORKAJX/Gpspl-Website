@@ -8,3 +8,4 @@ backend/node_modules/
 backend/logs/*.log
 backend/uploads/*
 !backend/uploads/.gitkeep
+scratch/

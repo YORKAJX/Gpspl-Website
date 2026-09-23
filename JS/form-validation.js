@@ -63,6 +63,14 @@
     }
   }
 
+  window.__gpspl_page_load_time = Date.now();
+
+  const dummyPhones = [
+    "1234567890", "0123456789", "9876543210", "8765432109",
+    "9898989898", "9090909090", "1212121212", "9000000000",
+    "9999900000", "9876500000", "1122334455", "9988776655"
+  ];
+
   function getDomain(email) {
     return String(email || "").split("@").pop().toLowerCase().trim();
   }
@@ -74,9 +82,10 @@
     const phone = form.querySelector("input[type='tel'], input[name*='phone' i], input[name*='mobile' i]");
     const message = form.querySelector("textarea, input[name*='message' i], input[name*='detail' i]");
     const honeypot = form.querySelector("input[name='bot-field']");
+    const honeypot2 = form.querySelector("input[name='website_url_hp']");
 
-    if (honeypot && honeypot.value.trim()) {
-      errors.push({ field: honeypot, message: "Spam submission blocked." });
+    if ((honeypot && honeypot.value.trim()) || (honeypot2 && honeypot2.value.trim())) {
+      errors.push({ field: honeypot || honeypot2, message: "Spam submission blocked." });
     }
 
     fields.forEach((field) => {
@@ -97,10 +106,10 @@
     }
 
     if (phone && phone.value.trim()) {
-      const normalized = phone.value.replace(/[^\d+]/g, "");
-      const validPhone = /^[6-9]\d{9}$/.test(normalized) || /^\+91[6-9]\d{9}$/.test(normalized) || /^\+?[0-9]{10,15}$/.test(normalized);
+      const normalized = phone.value.replace(/\D/g, "").slice(-10);
+      const validPhone = /^[6-9]\d{9}$/.test(normalized) && !/^(.)\1{9}$/.test(normalized) && !dummyPhones.includes(normalized);
       if (!validPhone) {
-        errors.push({ field: phone, message: "Please enter a valid 10-digit mobile number." });
+        errors.push({ field: phone, message: "Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9." });
       }
     }
 
@@ -120,6 +129,18 @@
     const submittedAt = form.querySelector("input[name='submitted_at']");
     if (pageUrl) pageUrl.value = window.location.href;
     if (submittedAt) submittedAt.value = new Date().toISOString();
+
+    let timeToken = form.querySelector("input[name='form_time_token']");
+    if (!timeToken) {
+      timeToken = document.createElement("input");
+      timeToken.type = "hidden";
+      timeToken.name = "form_time_token";
+      form.appendChild(timeToken);
+    }
+    try {
+      const loadTime = window.__gpspl_page_load_time || (Date.now() - 3500);
+      timeToken.value = btoa(JSON.stringify({ t: loadTime, r: Math.random().toString(36).slice(2, 8) }));
+    } catch (e) {}
   }
 
   function initFormValidation() {
@@ -180,10 +201,26 @@
           page: window.location.pathname
         };
 
-        // 1. Dispatch lead in background
-        const dispatchPromise = (window.GPSPL_LeadCapture && typeof window.GPSPL_LeadCapture.dispatchLead === "function")
-          ? window.GPSPL_LeadCapture.dispatchLead(leadData)
-          : Promise.resolve();
+        // 1. Dispatch to hardened serverless handler
+        const serverlessPromise = fetch("/.netlify/functions/submit-enquiry", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: leadData.name,
+            email: leadData.email,
+            phone: leadData.phone,
+            company: formData.get("company") || leadData.company,
+            location: formData.get("location") || "",
+            requirement: formData.get("requirement") || leadData.category,
+            message: formData.get("message") || leadData.details,
+            lead_source: label,
+            form_time_token: formData.get("form_time_token") || "",
+            "cf-turnstile-response": formData.get("cf-turnstile-response") || ""
+          })
+        }).then(async (res) => {
+          const data = await res.json().catch(() => ({}));
+          return { ok: res.ok, status: res.status, data };
+        }).catch(() => ({ ok: true }));
 
         // 2. Netlify static form post
         const netlifyPromise = fetch("/", {
@@ -192,13 +229,24 @@
           body: new URLSearchParams(formData).toString()
         }).catch(() => null);
 
-        // 3. Fast guarantee: Redirect to /thank-you within maximum 1.5 seconds regardless of network speed
-        const timeoutPromise = new Promise((resolve) => setTimeout(resolve, 1500));
+        // 3. Fast guarantee: Process response within maximum 2.0s
+        const timeoutPromise = new Promise((resolve) => setTimeout(resolve, 2000));
 
         Promise.race([
-          Promise.allSettled([dispatchPromise, netlifyPromise]),
+          Promise.allSettled([serverlessPromise, netlifyPromise]),
           timeoutPromise
-        ]).finally(() => {
+        ]).then((results) => {
+          const serverlessResult = results && results[0] && results[0].value;
+          if (serverlessResult && !serverlessResult.ok && serverlessResult.data && serverlessResult.data.error) {
+            box.className = "form-submit-status is-error";
+            box.textContent = serverlessResult.data.error;
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              if (submitBtn.tagName === "INPUT") submitBtn.value = "Submit Again";
+              else submitBtn.innerHTML = submitBtn.dataset.submitLabel || "Send Project Enquiry";
+            }
+            return;
+          }
           const action = form.getAttribute("action") || "/thank-you";
           window.location.href = action;
         });
