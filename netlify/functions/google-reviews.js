@@ -16,7 +16,8 @@ const corsHeaders = (event) => {
         };
     }
     return {
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': 'https://gpspl.co.in',
+        'Vary': 'Origin'
     };
 };
 

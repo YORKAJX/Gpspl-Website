@@ -8,6 +8,28 @@
     const VISITOR_STORAGE_KEY = "gpspl_visitor_profile_v2";
     const SESSION_TRAIL_KEY = "gpspl_journey_trail_v2";
 
+    // Production Domain Verification & Bot Filter
+    function isProductionDomain() {
+        const host = (window.location.hostname || "").toLowerCase();
+        return host === "gpspl.co.in" || host === "www.gpspl.co.in";
+    }
+
+    function isAutomatedBotOrCrawler() {
+        try {
+            // 1. Webdriver flag (Puppeteer, Selenium, Playwright, automated browser runners)
+            if (navigator.webdriver) return true;
+
+            // 2. Headless browser automation hooks
+            if (window._phantom || window.__nightmare || window.callPhantom || window.__selenium_unwrapped) return true;
+
+            // 3. User agent pattern matching for bots, crawlers, and scrapers
+            const ua = (navigator.userAgent || "").toLowerCase();
+            const botRegex = /bot|crawler|spider|slurp|headless|lighthouse|phantom|scrape|curl|wget|python|postman|preview|uptime|monitis|pingdom/i;
+            if (botRegex.test(ua)) return true;
+        } catch (_) {}
+        return false;
+    }
+
     // 1. Generate or Retrieve Persistent Visitor ID & Visit Count
     function getVisitorProfile() {
         let profile = null;
@@ -206,6 +228,12 @@
         // Append to local journey trail for lead forms
         appendJourneyTrail(cleanEvent, params);
 
+        // Security & Quality Gate: Only send external telemetry from real humans on official production domains
+        if (!isProductionDomain() || isAutomatedBotOrCrawler()) {
+            document.dispatchEvent(new CustomEvent("gpspl:analytics-event", { detail: { event: cleanEvent, payload } }));
+            return;
+        }
+
         // Push to GTM DataLayer
         dataLayer.push({ event: cleanEvent, ...payload });
 
@@ -237,6 +265,11 @@
 
     // 9. Initialize GA4 with Enhanced Config
     function initGa4() {
+        // Enforce production domain & human visitor check
+        if (!isProductionDomain() || isAutomatedBotOrCrawler()) {
+            return;
+        }
+
         const gaId = config.ga4MeasurementId || "G-DWG4ZQNV0W";
         if (!gaId) return;
 
@@ -261,25 +294,30 @@
 
     // 10. Initialize GTM
     function initGtm() {
-        if (!config.googleTagManagerId) return;
+        if (!isProductionDomain() || isAutomatedBotOrCrawler() || !config.googleTagManagerId) return;
         dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
         injectScript(`https://www.googletagmanager.com/gtm.js?id=${encodeURIComponent(config.googleTagManagerId)}`);
     }
 
     // 11. Initialize Microsoft Clarity (Session Recording & Heatmaps)
     function initClarity() {
+        if (!isProductionDomain() || isAutomatedBotOrCrawler()) return;
         const clarityId = config.microsoftClarityProjectId;
         if (!clarityId) return;
         window.clarity = window.clarity || function () { (window.clarity.q = window.clarity.q || []).push(arguments); };
         injectScript(`https://www.clarity.ms/tag/${encodeURIComponent(clarityId)}`);
     }
 
-    // 12. Track Page Views with Path Diffing
-    let lastTrackedPath = "";
+    // 12. Track Page Views with Path Diffing (Canonical Pathname Only)
+    let lastTrackedPathname = "";
+    let lastTrackedTime = 0;
     function trackPageView(force = false) {
-        const path = `${window.location.pathname}${window.location.search}${window.location.hash}`;
-        if (!force && path === lastTrackedPath) return;
-        lastTrackedPath = path;
+        const pathname = window.location.pathname;
+        const now = Date.now();
+        // Prevent duplicate pageviews within 2 seconds or on identical pathname
+        if (!force && pathname === lastTrackedPathname && (now - lastTrackedTime < 2000)) return;
+        lastTrackedPathname = pathname;
+        lastTrackedTime = now;
 
         track("page_view", {
             page_referrer: document.referrer || "Direct",
@@ -300,7 +338,8 @@
             window.setTimeout(() => trackPageView(), 0);
         };
         window.addEventListener("popstate", () => trackPageView());
-        window.addEventListener("hashchange", () => trackPageView());
+        // NOTE: hashchange is deliberately NOT listened to here.
+        // Anchor hash navigation (#step-1, #step-2, #pricing) must never trigger duplicate pageviews.
     }
 
     // 14. High-Intent Link & Interaction Categorization
@@ -468,21 +507,24 @@
         }, { passive: true });
     }
 
-    // 18. Time-on-Page & Engaged Reader Heartbeat (15s, 30s, 60s, 120s, 300s)
+    // 18. Time-on-Page & Engaged Reader Heartbeat (30s, 60s, 180s - Visibility Aware)
     function bindEngagementHeartbeat() {
-        const timeIntervals = [15, 30, 60, 120, 300];
+        const timeIntervals = [30, 60, 180];
         let secondsSpent = 0;
 
         const timer = setInterval(() => {
-            secondsSpent += 5;
+            // Do not record engagement if page is in an inactive background tab
+            if (document.hidden) return;
+
+            secondsSpent += 10;
             if (timeIntervals.includes(secondsSpent)) {
                 track("user_engagement_time", {
                     engaged_seconds: secondsSpent,
                     is_long_dwell: secondsSpent >= 60
                 });
             }
-            if (secondsSpent > 600) clearInterval(timer);
-        }, 5000);
+            if (secondsSpent >= 180) clearInterval(timer);
+        }, 10000);
     }
 
     // Expose Global Helper
