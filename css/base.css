@@ -3657,14 +3657,14 @@ header.site-header {
    ========================================================================== */
 .av-bottom-strip-banner {
     position: fixed;
-    bottom: 12px;
-    left: 92px;
-    width: min(calc(100vw - 340px), 720px);
+    bottom: 14px;
+    left: 88px;
+    width: min(calc(100vw - 260px), 860px);
     background: linear-gradient(135deg, #071526 0%, #0d274a 100%);
-    border: 1.5px solid rgba(239, 52, 56, 0.5);
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08);
-    padding: 8px 16px;
+    border: 1.5px solid rgba(239, 52, 56, 0.55);
+    border-radius: 14px;
+    box-shadow: 0 16px 44px rgba(0, 0, 0, 0.6), 0 0 24px rgba(239, 52, 56, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    padding: 10px 18px;
     z-index: 9998;
     color: #ffffff;
     transform: translateY(140%);
@@ -3684,14 +3684,14 @@ header.site-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 14px;
+    gap: 16px;
     width: 100%;
 }
 
 .av-strip-left {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     min-width: 0;
     flex: 1;
 }
@@ -3699,23 +3699,23 @@ header.site-header {
 .av-strip-badge {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    padding: 3px 8px;
+    gap: 6px;
+    padding: 4px 10px;
     background: rgba(239, 52, 56, 0.2);
-    border: 1px solid rgba(239, 52, 56, 0.5);
+    border: 1px solid rgba(239, 52, 56, 0.55);
     border-radius: 999px;
-    font-size: 0.62rem;
-    font-weight: 800;
+    font-size: 0.64rem;
+    font-weight: 850;
     color: #ff8589;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     white-space: nowrap;
     flex-shrink: 0;
 }
 
 .av-strip-badge span.pulse-dot {
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     background: #ef3438;
     animation: avPulse 1.8s infinite;
@@ -3731,11 +3731,11 @@ header.site-header {
     display: flex;
     flex-direction: column;
     min-width: 0;
-    gap: 1px;
+    gap: 2px;
 }
 
 .av-strip-text strong {
-    font-size: 0.84rem;
+    font-size: 0.88rem;
     font-weight: 850;
     color: #ffffff;
     line-height: 1.25;
@@ -3745,7 +3745,7 @@ header.site-header {
 }
 
 .av-strip-text span {
-    font-size: 0.72rem;
+    font-size: 0.74rem;
     color: #cbd5e1;
     line-height: 1.35;
     white-space: nowrap;
@@ -3760,6 +3760,33 @@ header.site-header {
     flex-shrink: 0;
 }
 
+/* Eye-Catchy Direct WhatsApp Button */
+.av-strip-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #25d366;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 850;
+    padding: 8px 14px;
+    border-radius: 8px;
+    white-space: nowrap;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+    transition: all 0.2s ease;
+}
+
+.av-strip-wa:hover {
+    background: #20ba59;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.55);
+}
+
+.av-strip-wa i {
+    font-size: 1.05rem;
+}
+
 .av-strip-btn {
     display: inline-flex;
     align-items: center;
@@ -3767,18 +3794,19 @@ header.site-header {
     background: #ef3438;
     color: #ffffff !important;
     text-decoration: none;
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     font-weight: 850;
-    padding: 7px 13px;
-    border-radius: 6px;
+    padding: 8px 14px;
+    border-radius: 8px;
     white-space: nowrap;
     transition: background 0.2s ease, transform 0.2s ease;
-    box-shadow: 0 4px 12px rgba(239, 52, 56, 0.35);
+    box-shadow: 0 4px 14px rgba(239, 52, 56, 0.35);
 }
 
 .av-strip-btn:hover {
     background: #d92226;
     transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(239, 52, 56, 0.5);
 }
 
 .av-strip-phone {
@@ -3787,7 +3815,7 @@ header.site-header {
     gap: 5px;
     color: #94a3b8;
     text-decoration: none;
-    font-size: 0.73rem;
+    font-size: 0.74rem;
     font-weight: 700;
     white-space: nowrap;
     transition: color 0.2s ease;
@@ -3798,15 +3826,15 @@ header.site-header {
 }
 
 .av-strip-close {
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.18);
     color: #cbd5e1;
     display: grid;
     place-items: center;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     cursor: pointer;
     transition: all 0.2s ease;
     flex-shrink: 0;
@@ -3821,28 +3849,45 @@ header.site-header {
 
 @media (max-width: 860px) {
     .av-bottom-strip-banner {
-        left: 12px;
-        right: 12px;
-        bottom: 84px;
+        left: 10px;
+        right: 10px;
+        bottom: 12px;
         width: auto;
-        border-radius: 12px;
-        padding: 10px 14px;
+        border-radius: 14px;
+        padding: 12px 14px;
+        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.75), 0 0 18px rgba(239, 52, 56, 0.3);
     }
     .av-strip-inner {
         flex-direction: column;
         align-items: stretch;
+        gap: 10px;
+    }
+    .av-strip-left {
         gap: 8px;
     }
-    .av-strip-text strong,
-    .av-strip-text span {
+    .av-strip-text strong {
+        font-size: 0.86rem;
         white-space: normal;
     }
-    .av-strip-right {
-        justify-content: space-between;
+    .av-strip-text span {
+        white-space: normal;
+        font-size: 0.72rem;
     }
+    .av-strip-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+    }
+    .av-strip-wa,
     .av-strip-btn {
         flex: 1;
         justify-content: center;
+        padding: 10px 8px;
+        font-size: 0.78rem;
+    }
+    .av-strip-phone {
+        display: none; /* Hide phone text on narrow mobile so 2 big action buttons have full width */
     }
 }
 

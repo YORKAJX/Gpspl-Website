@@ -420,6 +420,54 @@
                             "@type": "Answer",
                             "text": "GPSPL provides turnkey luxury hotel ballroom line-array sound systems, banquet seamless active LED video walls for conferences and events, multi-zone background music (BGM) for lobbies and restaurants, and cloud-managed digital signage displays."
                         }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What AV, video wall, and digital signage solutions are best for retail stores, food chains, and shopping malls?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "GPSPL delivers ultra-bright storefront active LED video walls, cloud-managed 4K digital menu boards, interactive touch kiosks for self-ordering, multi-zone background music sound systems, and central digital signage networks that drive footfall and sales across retail chains in India."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What audiovisual and display technology is required for real estate experience centers and sales galleries?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Modern real estate sales galleries require immersive curved active LED presentation walls, interactive touch projection tables, automated architectural scale-model spotlighting, surround sound presentation rooms, and digital customer registration kiosks designed and integrated turnkey by GPSPL."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What secure AV and video conferencing solutions does GPSPL engineer for banking and financial institutions (BFSI)?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "For BFSI institutions, GPSPL engineers encrypted boardrooms, multi-display trading floor financial data walls, ISO-compliant acoustic sound masking, AES-256 encrypted video conferencing, and automated compliance meeting audio recording systems with zero data leakage."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What creative displays and studio AV setups does GPSPL provide for media, animation, and broadcast houses?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "As an authorized Wacom partner, GPSPL supplies Cintiq Pro 16/24/27 interactive pen displays, graphic tablets, color-calibrated 4K reference monitors, broadcast production switcher racks, podcast/recording studio acoustic treatment, and high-performance editing workstation peripherals."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What active LED displays and digital signage does GPSPL supply for automotive showrooms and service centers?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "GPSPL installs high-impact curved fine-pitch active LED display backdrops for new vehicle launches, interactive digital car configurator touchscreens, service bay progress status monitors, and dynamic customer lounge digital signage across major automotive dealerships in India."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What enterprise IT infrastructure, servers, and networking hardware does GPSPL distribute?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "GPSPL provides authorized distribution and supply for HP & Lenovo enterprise rack servers, SAN/NAS storage arrays, Cisco and Aruba managed network switching, commercial workstations, laptops, RAM/SSD memory upgrades, and APC/Luminous online UPS power backup systems with on-site warranty support."
+                        }
                     }
                 ]
             }
@@ -641,24 +689,83 @@
             white-space: normal !important;
             word-break: normal !important;
         }
-        html body #home .hero-message-copy .hero-actions {
+        html body #home .hero-message-copy .hero-actions,
+        html body #home .hero-actions {
             display: flex !important;
             flex-direction: column !important;
-            gap: 10px !important;
+            gap: 12px !important;
             width: 100% !important;
+            margin-top: 14px !important;
+            margin-bottom: 20px !important;
+            position: relative !important;
+            z-index: 10 !important;
         }
         html body #home .hero-message-copy .hero-actions .hero-btn,
-        html body #home .hero-actions a {
+        html body #home .hero-actions a,
+        html body #home .hero-actions a.hero-btn {
             width: 100% !important;
-            min-height: 44px !important;
-            padding: 10px 16px !important;
-            font-size: 0.88rem !important;
+            min-height: 48px !important;
+            padding: 12px 18px !important;
+            font-size: 0.92rem !important;
+            font-weight: 800 !important;
+            border-radius: 10px !important;
             color: #ffffff !important;
             -webkit-text-fill-color: #ffffff !important;
             display: inline-flex !important;
             align-items: center !important;
             justify-content: center !important;
-            gap: 8px !important;
+            gap: 10px !important;
+            box-sizing: border-box !important;
+            text-align: center !important;
+            text-decoration: none !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+        }
+        html body #home .hero-actions a *,
+        html body #home .hero-actions a span {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            font-size: inherit !important;
+            font-weight: 800 !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: inline-block !important;
+            line-height: 1 !important;
+        }
+        html body #home .hero-actions a.btn-primary {
+            background: linear-gradient(135deg, #ef3438 0%, #c91f28 100%) !important;
+            border: 1.5px solid #ef3438 !important;
+            box-shadow: 0 8px 24px rgba(239, 52, 56, 0.4) !important;
+        }
+        html body #home .hero-actions a.btn-primary i {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            font-size: 1.05rem !important;
+        }
+        html body #home .hero-actions a.hero-btn-whatsapp,
+        html body #home .hero-actions a[href*="wa.me"] {
+            background: rgba(37, 211, 102, 0.16) !important;
+            border: 1.5px solid rgba(37, 211, 102, 0.5) !important;
+            backdrop-filter: blur(12px) !important;
+            box-shadow: 0 4px 18px rgba(37, 211, 102, 0.2) !important;
+        }
+        html body #home .hero-actions a.hero-btn-whatsapp i,
+        html body #home .hero-actions a[href*="wa.me"] i {
+            color: #25d366 !important;
+            -webkit-text-fill-color: #25d366 !important;
+            font-size: 1.15rem !important;
+        }
+        html body #home .hero-actions a.btn-secondary:not(.hero-btn-whatsapp) {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border: 1.5px solid rgba(255, 255, 255, 0.28) !important;
+            backdrop-filter: blur(12px) !important;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25) !important;
+        }
+        html body #home .hero-actions a.btn-secondary:not(.hero-btn-whatsapp) i {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            font-size: 0.95rem !important;
         }
     }
     </style>
@@ -2424,13 +2531,13 @@
                 <a href="/interactive-display-solutions" class="featured-product-card">
                     <article>
                         <div class="product-card-visual" data-card-label="Interactive Displays">
-                            <img src="/assests/images/products/interactive-display-solutions.webp" alt="Enterprise interactive flat panels, smart boards and digital signage displays" loading="lazy" decoding="async">
+                            <img src="/assests/images/products/interactive-display-solutions.webp" alt="Enterprise interactive flat panels, 4K smart boards and digital classroom displays" loading="lazy" decoding="async">
                             <span class="product-card-icon"><i class="fas fa-chalkboard-user" aria-hidden="true"></i></span>
                         </div>
                         <div class="product-card-content">
-                            <h3>Interactive &amp; Digital Display Solutions</h3>
-                            <p>Engaging smart classroom, Newline-style interactive panels, and digital display technology for education, enterprise, and public spaces.</p>
-                            <div class="product-tags"><span>Newline</span><span>Smart Boards</span><span>Interactive Panels</span><span>Digital Signage</span></div>
+                            <h3>Interactive Displays &amp; Smart Classroom Solutions</h3>
+                            <p>India's best 4K Interactive Flat Panels (IFPD), Newline, Samsung Flip &amp; LG CreateBoard touch displays for smart classrooms, coaching institutes, university lecture halls, and corporate digital signage.</p>
+                            <div class="product-tags"><span>Interactive Flat Panels</span><span>Smart Classrooms</span><span>Newline &amp; Samsung</span><span>Digital Signage</span></div>
                             <span class="product-explore">Explore Solution <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </article>
@@ -2438,13 +2545,13 @@
                 <a href="/professional-audio-solutions" class="featured-product-card">
                     <article>
                         <div class="product-card-visual" data-card-label="Professional Audio">
-                            <img src="/assests/images/products/professional-audio-solutions.webp" alt="Professional loudspeakers, DSP processors, amplifiers and AV audio racks" loading="lazy" decoding="async">
+                            <img src="/assests/images/products/professional-audio-solutions.webp" alt="Professional loudspeakers, DSP processors, line array amplifiers and pro audio racks" loading="lazy" decoding="async">
                             <span class="product-card-icon"><i class="fas fa-volume-high" aria-hidden="true"></i></span>
                         </div>
                         <div class="product-card-content">
-                            <h3>Professional Audio &amp; AV Systems</h3>
-                            <p>Engineered professional audio, microphones, and AV integration for auditoriums, meeting rooms, classrooms, and large venues.</p>
-                            <div class="product-tags"><span>Sennheiser</span><span>JBL Audio</span><span>Meeting Audio</span><span>Installed Audio</span></div>
+                            <h3>Professional Audio &amp; Sound System Integration</h3>
+                            <p>Best enterprise pro audio solutions, JBL &amp; Bose line-array speakers, Shure &amp; Sennheiser ceiling beamforming microphones, Biamp/Q-SYS DSP processors, and acoustic RT60 tuning for auditoriums and venues.</p>
+                            <div class="product-tags"><span>Auditorium Sound</span><span>Ceiling Beamforming Mic</span><span>JBL &amp; Sennheiser</span><span>DSP Acoustic Tuning</span></div>
                             <span class="product-explore">Explore Solution <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </article>
@@ -2452,13 +2559,13 @@
                 <a href="/active-led-wall-solutions" class="featured-product-card">
                     <article>
                         <div class="product-card-visual" data-card-label="LED & Video Walls">
-                            <img src="/assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg" alt="Mall atrium active LED wall, curved video wall and digital display system" loading="lazy" decoding="async">
+                            <img src="/assests/images/projects/gpspl-real/polished/active-led-mall-atrium-cover.jpeg" alt="Mall atrium active LED wall, curved video wall and fine pitch digital display system" loading="lazy" decoding="async">
                             <span class="product-card-icon"><i class="fas fa-border-all" aria-hidden="true"></i></span>
                         </div>
                         <div class="product-card-content">
-                            <h3>Active LED Display Systems</h3>
-                            <p>Indoor and outdoor active LED wall systems with pixel-pitch planning, controllers, mounting, calibration and support.</p>
-                            <div class="product-tags"><span>Active LED</span><span>Indoor LED</span><span>Outdoor LED</span><span>Controllers</span></div>
+                            <h3>Active LED Video Wall Displays (Indoor &amp; Outdoor)</h3>
+                            <p>India's premier fine-pitch active LED video wall supplier. Seamless P0.9 to P2.5 COB/SMD video walls, NovaStar 4K processors, aluminum die-cast cabinets, and front-maintenance calibration for command centers &amp; malls.</p>
+                            <div class="product-tags"><span>Active LED Video Wall</span><span>Fine Pitch P1.2-P2.5</span><span>NovaStar Controllers</span><span>Command Center Displays</span></div>
                             <span class="product-explore">Explore Solution <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </article>
@@ -2466,13 +2573,13 @@
                 <a href="/conference-room-solutions" class="featured-product-card">
                     <article>
                         <div class="product-card-visual" data-card-label="Conference Rooms">
-                            <img src="/assests/images/projects/gpspl-real/polished/boardroom-display-cover.jpeg" alt="Boardroom display, collaboration table and conference room AV setup" loading="lazy" decoding="async">
+                            <img src="/assests/images/projects/gpspl-real/polished/boardroom-display-cover.jpeg" alt="Boardroom display, collaboration table and turnkey conference room AV setup" loading="lazy" decoding="async">
                             <span class="product-card-icon"><i class="fas fa-video" aria-hidden="true"></i></span>
                         </div>
                         <div class="product-card-content">
-                            <h3>Conference Room &amp; Boardroom Solutions</h3>
-                            <p>Conference-room setup for presentations, video meetings, wireless sharing, microphones, cameras and room control.</p>
-                            <div class="product-tags"><span>Video Conferencing</span><span>Cameras</span><span>Microphones</span><span>Touch Control</span></div>
+                            <h3>Turnkey Conference Room &amp; Boardroom AV Setup</h3>
+                            <p>Best conference room AV setup in India. Native Microsoft Teams Rooms &amp; Zoom Rooms, 4K PTZ auto-tracking cameras, wireless BYOD screen sharing, and Crestron touch panel meeting room automation with zero cable clutter.</p>
+                            <div class="product-tags"><span>Conference Room Setup</span><span>Microsoft Teams Rooms</span><span>Zoom Rooms Integration</span><span>PTZ 4K Cameras</span></div>
                             <span class="product-explore">Explore Solution <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </article>
@@ -2480,13 +2587,13 @@
                 <a href="/projector-accessories" class="featured-product-card">
                     <article>
                         <div class="product-card-visual" data-card-label="Projection Systems">
-                            <img src="/assests/images/products/projector-accessories.webp" alt="Enterprise laser projector, projection screen, ceiling mount and AV accessories" loading="lazy" decoding="async">
+                            <img src="/assests/images/products/projector-accessories.webp" alt="Enterprise laser projector, motorized ALR screen, ceiling mount and AV accessories" loading="lazy" decoding="async">
                             <span class="product-card-icon"><i class="fas fa-desktop" aria-hidden="true"></i></span>
                         </div>
                         <div class="product-card-content">
-                            <h3>Projectors &amp; Accessories</h3>
-                            <p>Reliable Epson, BenQ and Sony projection systems with essential connectivity accessories selected for professional environments.</p>
-                            <div class="product-tags"><span>Epson</span><span>BenQ</span><span>Projectors</span><span>Mounts</span></div>
+                            <h3>Commercial Laser Projectors &amp; AV Accessories</h3>
+                            <p>High-lumen Epson, Sony &amp; BenQ laser projection systems, ambient light rejecting (ALR) motorized screens, 4K HDMI/KVM matrix switchers, and precision motorized ceiling lift mounts for auditoriums &amp; training spaces.</p>
+                            <div class="product-tags"><span>Epson Laser Projectors</span><span>Motorized ALR Screens</span><span>4K HDMI Matrix</span><span>Auditorium Projection</span></div>
                             <span class="product-explore">Explore Solution <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </article>
@@ -2494,13 +2601,13 @@
                 <a href="/it-infrastructure-solutions" class="featured-product-card">
                     <article>
                         <div class="product-card-visual" data-card-label="IT Infrastructure">
-                            <img src="/assests/images/products/it-infrastructure-solutions.webp" alt="Enterprise servers, storage, networking switches, UPS systems and rack cabinets" loading="lazy" decoding="async">
+                            <img src="/assests/images/products/it-infrastructure-solutions.webp" alt="Enterprise servers, storage, networking switches, UPS systems and server rack cabinets" loading="lazy" decoding="async">
                             <span class="product-card-icon"><i class="fas fa-server" aria-hidden="true"></i></span>
                         </div>
                         <div class="product-card-content">
-                            <h3>IT Infrastructure &amp; Peripherals</h3>
-                            <p>Scalable IT infrastructure and distribution support for servers, storage, networking, laptops, desktops, RAM, SSD, printers, cartridges, toner and UPS continuity.</p>
-                            <div class="product-tags"><span>HP</span><span>Lenovo</span><span>RAM / SSD</span><span>Printers</span></div>
+                            <h3>Enterprise IT Infrastructure &amp; Distribution</h3>
+                            <p>Turnkey IT distribution and infrastructure deployment: HP &amp; Lenovo servers, enterprise storage SAN/NAS, Cisco &amp; Aruba network switching, commercial desktops, laptops, RAM/SSD upgrades, and APC/Luminous online UPS power backup.</p>
+                            <div class="product-tags"><span>Enterprise Servers</span><span>Network Switching</span><span>Workstations &amp; Laptops</span><span>Online UPS Backup</span></div>
                             <span class="product-explore">Explore Solution <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </article>
@@ -2508,13 +2615,13 @@
                 <a href="/peripheral-solutions" class="featured-product-card">
                     <article>
                         <div class="product-card-visual" data-card-label="Creative Peripherals">
-                            <img src="/assests/images/products/peripheral-solutions.webp" alt="Professional digital pen display and creative workstation peripheral solution" loading="lazy" decoding="async">
+                            <img src="/assests/images/products/peripheral-solutions.webp" alt="Professional Wacom digital pen display and creative workstation peripheral solution" loading="lazy" decoding="async">
                             <span class="product-card-icon"><i class="fas fa-pen-ruler" aria-hidden="true"></i></span>
                         </div>
                         <div class="product-card-content">
-                            <h3>Creative &amp; Peripheral Solutions</h3>
-                            <p>Specialist Wacom, Cintiq, DTH, DTC, and workstation peripherals backed by expert sales and service support.</p>
-                            <div class="product-tags"><span>Wacom</span><span>Cintiq</span><span>DTH &amp; DTC</span><span>Workstations</span></div>
+                            <h3>Wacom Creative Displays &amp; Studio Peripherals</h3>
+                            <p>India's authorized Wacom partner for creative pen displays (Cintiq Pro 16/24/27, Intuos Pro, DTH/DTC series), graphic tablets, color-calibrated monitors, and animation/VFX studio workstation peripherals.</p>
+                            <div class="product-tags"><span>Authorized Wacom Partner</span><span>Cintiq Pro Displays</span><span>Animation VFX Tablets</span><span>Studio Peripherals</span></div>
                             <span class="product-explore">Explore Solution <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </article>
@@ -2526,9 +2633,9 @@
                             <span class="product-card-icon"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i></span>
                         </div>
                         <div class="product-card-content">
-                            <h3>AMC, Installation &amp; Service Support</h3>
-                            <p>Installation, commissioning, warranty assistance and AMC support for long-term system performance.</p>
-                            <div class="product-tags"><span>Installation</span><span>Warranty</span><span>Maintenance</span><span>Support</span></div>
+                            <h3>AV AMC Maintenance &amp; Turnkey Installation Support</h3>
+                            <p>Comprehensive multi-brand AV annual maintenance contracts (AMC), guaranteed 4-hour SLA emergency on-site response, certified AV engineers, preventative maintenance, and direct OEM warranty coordination across India.</p>
+                            <div class="product-tags"><span>4-Hour SLA Support</span><span>Multi-Brand AV AMC</span><span>On-Site Engineering</span><span>Preventative Maintenance</span></div>
                             <span class="product-explore">Explore Solution <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </article>
@@ -2950,6 +3057,15 @@
     border-radius: 14px !important;
 }
 
+#industries .industry-panel-actions,
+.industries-served .industry-panel-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    align-items: center !important;
+    margin-top: 4px !important;
+}
+
 #industries .industry-panel-content a,
 .industries-served .industry-panel-content a {
     display: inline-flex !important;
@@ -2967,6 +3083,19 @@
     text-decoration: none !important;
     width: fit-content !important;
     transition: all 0.2s ease !important;
+}
+
+#industries .industry-panel-content a.industry-panel-wa,
+.industries-served .industry-panel-content a.industry-panel-wa {
+    background: #25d366 !important;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4) !important;
+}
+
+#industries .industry-panel-content a.industry-panel-wa:hover,
+.industries-served .industry-panel-content a.industry-panel-wa:hover {
+    background: #20ba59 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.55) !important;
 }
 
 @media (max-width: 980px) {
@@ -3009,43 +3138,43 @@
                 <div class="industry-stage">
                     <article class="industry-panel active" data-industry-panel="corporate">
                         <img src="assests/images/projects/gpspl-real/polished/corporate-conference-room.webp" alt="Corporate conference room with integrated AV and video conferencing" loading="lazy" decoding="async">
-                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Corporate &amp; Professional Services</span><h3>Smarter workplaces built for collaboration</h3><p>Enterprise boardrooms, consulting offices, conference room setup, unified communications, room automation, and dependable IT infrastructure.</p><ul><li>Video conferencing</li><li>Boardroom AV integration</li><li>Smart control systems</li></ul><a href="/industries#industry-corporate">View Corporate Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Corporate &amp; Professional Services</span><h3>Best Corporate AV, Boardroom Setup &amp; Video Conferencing</h3><p>Enterprise boardrooms, IT-grade conference room AV setup, native Microsoft Teams Rooms, Zoom Rooms, wireless 4K BYOD sharing, beamforming ceiling mic arrays, and Crestron automation.</p><ul><li>Conference room AV</li><li>Boardroom video systems</li><li>Ceiling mic arrays</li><li>Crestron automation</li></ul><div class="industry-panel-actions"><a href="/industries#industry-corporate">View Corporate Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a><a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20need%20a%20quote%20for%20Corporate%20Conference%20Room%20AV" class="industry-panel-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp Quote</a></div></div>
                     </article>
                     <article class="industry-panel" data-industry-panel="education">
                         <img src="assests/images/projects/gpspl-real/polished/direct-education-classroom-panels.webp" alt="Smart classroom with interactive learning technology" loading="lazy" decoding="async">
-                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Education &amp; Coaching Technology</span><h3>Interactive learning that connects every student</h3><p>Smart classrooms, coaching studios, interactive panels, lecture capture, professional audio, and hybrid learning environments.</p><ul><li>Smart classrooms</li><li>Interactive displays</li><li>Hybrid learning</li></ul><a href="/industries#industry-education">View Education Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Education &amp; Coaching Technology</span><h3>Best Smart Classroom Setup, Interactive Panels &amp; Lecture Capture</h3><p>Turnkey 4K Interactive Flat Panels (IFPD), digital podiums, hybrid classroom audio, teacher voice-lift systems, and university auditorium acoustics across India.</p><ul><li>Smart classrooms</li><li>Interactive flat panels</li><li>Digital podiums</li><li>Lecture capture</li></ul><div class="industry-panel-actions"><a href="/industries#industry-education">View Education Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a><a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20need%20a%20quote%20for%20Smart%20Classroom%20AV%20Solutions" class="industry-panel-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp Quote</a></div></div>
                     </article>
                     <article class="industry-panel" data-industry-panel="hospitality">
                         <img src="assests/images/projects/gpspl-real/polished/hospitality-banquet-av.webp" alt="Hospitality venue with professional display, audio and event AV solutions" loading="lazy" decoding="async">
-                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Hospitality Technology</span><h3>Memorable guest and event experiences</h3><p>Professional audio, digital signage, active LED walls, lighting control, and AV systems for hotels and venues.</p><ul><li>Ballroom audio</li><li>Digital signage</li><li>Active LED walls</li></ul><a href="/industries#industry-hospitality">View Hospitality Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Hospitality &amp; Hotel Technology</span><h3>Best Hotel Audio Visual, Ballroom Active LED &amp; Banquet Sound</h3><p>Grand ballroom active LED video walls, banquet line-array sound systems, multi-zone restaurant background music (BGM), and guest digital signage for hotels and venues.</p><ul><li>Ballroom line arrays</li><li>Banquet active LED walls</li><li>Multi-zone BGM</li><li>Hotel digital signage</li></ul><div class="industry-panel-actions"><a href="/industries#industry-hospitality">View Hospitality Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a><a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20need%20a%20quote%20for%20Hotel%20and%20Hospitality%20AV" class="industry-panel-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp Quote</a></div></div>
                     </article>
                     <article class="industry-panel" data-industry-panel="government">
                         <img src="assests/images/hero/video-wall-command-center.webp" alt="Command and control display wall for government operations" loading="lazy" decoding="async">
-                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Government &amp; Public Sector</span><h3>Reliable technology for critical operations</h3><p>Command and control centers, video walls, monitoring rooms, secure networking, and integrated communication systems.</p><ul><li>Command centers</li><li>Video wall systems</li><li>Secure infrastructure</li></ul><a href="/industries#industry-government">View Government Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Government &amp; Public Sector</span><h3>Best Command &amp; Control Room (NOC/SOC) Video Wall Systems</h3><p>24/7 mission-critical operations centers, fine-pitch active LED video walls, zero-latency KVM-over-IP matrix switching, and secure command monitoring infrastructure.</p><ul><li>Command centers (NOC/SOC)</li><li>Active LED video walls</li><li>Zero-latency KVM matrix</li><li>Secure infrastructure</li></ul><div class="industry-panel-actions"><a href="/industries#industry-government">View Government Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a><a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20need%20a%20quote%20for%20Command%20Center%20Video%20Walls" class="industry-panel-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp Quote</a></div></div>
                     </article>
                     <article class="industry-panel" data-industry-panel="healthcare">
                         <img src="assests/images/projects/gpspl-real/polished/clinic-treatment-room-clean.webp" alt="Healthcare clinic display and consultation technology" loading="lazy" decoding="async">
-                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Healthcare Technology</span><h3>Connected spaces supporting better care</h3><p>Reliable clinic displays, consultation-room AV, patient communication, training environments, networking, and support for healthcare and dentistry facilities.</p><ul><li>Clinic displays</li><li>Consultation rooms</li><li>Digital communication</li></ul><a href="/industries#industry-healthcare">View Healthcare Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Healthcare &amp; Hospital Technology</span><h3>Best Hospital AV, Operation Theater Video &amp; Telemedicine Setup</h3><p>Medical-grade 4K OT surgical video recording and streaming, doctor training seminar AV, telemedicine conference rooms, and patient OPD queue digital signage.</p><ul><li>OT 4K surgical video</li><li>Telemedicine conferencing</li><li>Hospital digital signage</li><li>Consultation room AV</li></ul><div class="industry-panel-actions"><a href="/industries#industry-healthcare">View Healthcare Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a><a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20need%20a%20quote%20for%20Hospital%20and%20Healthcare%20AV" class="industry-panel-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp Quote</a></div></div>
                     </article>
                     <article class="industry-panel" data-industry-panel="retail">
                         <img src="assests/images/projects/gpspl-real/polished/direct-retail-menu-board.webp" alt="Digital signage and display technology for retail and public spaces" loading="lazy" decoding="async">
-                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Retail, Food &amp; Public Spaces</span><h3>Visual experiences that capture attention</h3><p>Digital signage, menu boards, commercial displays, active LED walls, professional audio, and centrally managed content experiences.</p><ul><li>Digital signage</li><li>Menu displays</li><li>Customer engagement</li></ul><a href="/industries#industry-retail">View Retail Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Retail, Food &amp; Commercial Spaces</span><h3>Best Retail Digital Signage, Commercial Displays &amp; Video Walls</h3><p>Storefront active LED video walls, cloud-managed 4K digital menu boards, interactive touch kiosks, commercial displays, and background music sound systems.</p><ul><li>Active LED storefronts</li><li>Digital menu boards</li><li>Interactive touch kiosks</li><li>Commercial displays</li></ul><div class="industry-panel-actions"><a href="/industries#industry-retail">View Retail Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a><a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20need%20a%20quote%20for%20Retail%20Digital%20Signage%20and%20Displays" class="industry-panel-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp Quote</a></div></div>
                     </article>
                     <article class="industry-panel" data-industry-panel="real-estate">
                         <img src="assests/images/projects/gpspl-real/polished/direct-real-estate-residential-av.webp" alt="Real estate sales and smart property technology display environment" loading="lazy" decoding="async">
-                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Real Estate &amp; Infrastructure</span><h3>Smart property experiences from lobby to boardroom</h3><p>Sales-gallery displays, experience centers, meeting-room AV, digital signage, building automation, and smart lighting for modern properties.</p><ul><li>Experience centers</li><li>Building automation</li><li>Digital signage</li></ul><a href="/industries#industry-real-estate">View Real Estate Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Real Estate &amp; Infrastructure</span><h3>Best Experience Center AV, Interactive 3D Property Walls &amp; Smart Tech</h3><p>Turnkey real estate sales gallery displays, interactive touch projection walls, architectural scale model lighting automation, and executive presentation rooms.</p><ul><li>Sales experience centers</li><li>Interactive touch walls</li><li>Model lighting automation</li><li>Presentation suites</li></ul><div class="industry-panel-actions"><a href="/industries#industry-real-estate">View Real Estate Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a><a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20need%20a%20quote%20for%20Real%20Estate%20Experience%20Center%20AV" class="industry-panel-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp Quote</a></div></div>
                     </article>
                     <article class="industry-panel" data-industry-panel="banking">
                         <img src="assests/images/projects/gpspl-real/polished/corporate-boardroom-display.webp" alt="Secure banking and financial services collaboration environment" loading="lazy" decoding="async">
-                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Banking &amp; Financial Services</span><h3>Secure collaboration for fast-moving financial teams</h3><p>Executive boardrooms, video conferencing, secure IT infrastructure, command displays, and digital communication for banking and financial institutions.</p><ul><li>Secure collaboration</li><li>IT infrastructure</li><li>Executive boardrooms</li></ul><a href="/industries#industry-bfsi">View BFSI Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Banking &amp; Financial Services (BFSI)</span><h3>Best BFSI Secure Video Conferencing &amp; Trading Floor Data Walls</h3><p>Ultra-secure financial boardroom video conferencing, multi-screen trading floor data walls, encrypted audio matrices, and compliance-grade AV recording.</p><ul><li>Secure financial boardrooms</li><li>Trading floor data walls</li><li>Encrypted conferencing</li><li>Compliance audio recording</li></ul><div class="industry-panel-actions"><a href="/industries#industry-bfsi">View BFSI Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a><a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20need%20a%20quote%20for%20Banking%20and%20BFSI%20AV%20Solutions" class="industry-panel-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp Quote</a></div></div>
                     </article>
                     <article class="industry-panel" data-industry-panel="media">
                         <img src="assests/images/projects/gpspl-real/polished/media-production-rack-clean.webp" alt="Media production rack and creative workflow AV infrastructure" loading="lazy" decoding="async">
-                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Media &amp; Broadcast</span><h3>Creative technology for content-driven teams</h3><p>Wacom creative displays, professional monitors, production-room AV, storage, networking, and visualization tools for media workflows.</p><ul><li>Creative displays</li><li>Production AV</li><li>Workstation peripherals</li></ul><a href="/industries#industry-media">View Media Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Media, Broadcast &amp; Studios</span><h3>Best Studio AV, Wacom Creative Displays &amp; Broadcast Racks</h3><p>Authorized Wacom pen displays (Cintiq Pro 27), color-accurate editing monitors, production control room AV, acoustic soundproofing, and studio workstation distribution.</p><ul><li>Wacom Cintiq Pro displays</li><li>Studio production AV</li><li>Color-accurate monitors</li><li>Acoustic soundproofing</li></ul><div class="industry-panel-actions"><a href="/industries#industry-media">View Media Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a><a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20need%20a%20quote%20for%20Media%20Studio%20AV%20and%20Wacom" class="industry-panel-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp Quote</a></div></div>
                     </article>
                     <article class="industry-panel" data-industry-panel="automotive">
                         <img src="assests/images/projects/gpspl-real/polished/training-conference-display.webp" alt="Automotive showroom and training room display technology" loading="lazy" decoding="async">
-                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Automotive Technology</span><h3>Immersive showrooms and connected training spaces</h3><p>Active LED walls, digital signage, interactive displays, professional audio, and training-room solutions for automotive brands and dealerships.</p><ul><li>Showroom displays</li><li>Active LED walls</li><li>Training rooms</li></ul><a href="/industries#industry-automotive">View Automotive Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+                        <div class="industry-panel-content" style="display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start;"><span>Automotive &amp; Dealership Technology</span><h3>Best Automotive Showroom AV, Curved LED Walls &amp; Digital Signage</h3><p>Showroom curved fine-pitch active LED display backdrops, interactive digital car configurator touchscreens, service center digital signage, and technician training AV.</p><ul><li>Showroom active LED walls</li><li>Digital car configurators</li><li>Service bay digital signage</li><li>Dealer training rooms</li></ul><div class="industry-panel-actions"><a href="/industries#industry-automotive">View Automotive Solutions <i class="fas fa-arrow-right" aria-hidden="true"></i></a><a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20need%20a%20quote%20for%20Automotive%20Showroom%20AV%20and%20LED" class="industry-panel-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp Quote</a></div></div>
                     </article>
                     <div class="industry-progress" aria-hidden="true"><span></span></div>
                 </div>

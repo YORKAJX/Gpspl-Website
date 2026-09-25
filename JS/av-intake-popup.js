@@ -33,19 +33,23 @@
                 <div class="av-strip-left">
                     <span class="av-strip-badge">
                         <span class="pulse-dot"></span>
-                        <span>ALL AV &amp; IT NEEDS</span>
+                        <span>URGENT AV &amp; IT PROJECT</span>
                     </span>
                     <div class="av-strip-text">
                         <strong>Planning an AV, Sound, or Video Wall Setup?</strong>
-                        <span>Mandirs, Hospitals, Malls, NOC/SOC, Auditoriums &amp; Boardrooms.</span>
+                        <span>Direct OEM Quotes &bull; Boardrooms, Auditoriums, Smart Classes, Hotels, Hospitals &amp; Malls.</span>
                     </div>
                 </div>
                 <div class="av-strip-right">
-                    <a href="/av-project-discovery-consultation" class="av-strip-btn" id="avToastActionBtn">
-                        <span>Let Our Engineers Know</span>
+                    <a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20have%20an%20urgent%20commercial%20AV%20%2F%20Active%20LED%20Wall%20requirement.%20Please%20connect%20with%20an%20engineer." class="av-strip-wa" id="avToastWaBtn" target="_blank" rel="noopener noreferrer" title="Chat with Senior AV Engineer on WhatsApp">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        <span>WhatsApp Quote</span>
+                    </a>
+                    <a href="/av-project-discovery-consultation" class="av-strip-btn" id="avToastActionBtn" title="Request Itemized BOQ Specification">
+                        <span>Free BOQ Quote</span>
                         <i class="fas fa-arrow-right" aria-hidden="true"></i>
                     </a>
-                    <a href="tel:+918920830377" class="av-strip-phone" title="Call Senior Engineers">
+                    <a href="tel:+918920830377" class="av-strip-phone" title="Call Senior AV Engineers">
                         <i class="fas fa-phone-alt" aria-hidden="true"></i>
                         <span>+91 89208 30377</span>
                     </a>
@@ -113,12 +117,13 @@
         }
     }
 
-    // Trigger after initial smooth page load (1.2s delay)
+    // Trigger after initial smooth page load (mobile: 3.5s delay so hero buttons are clear, desktop: 1.2s)
+    const initialDelay = window.innerWidth < 768 ? 3500 : 1200;
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(showBanner, 1200);
+            setTimeout(showBanner, initialDelay);
         });
     } else {
-        setTimeout(showBanner, 1200);
+        setTimeout(showBanner, initialDelay);
     }
 })();
