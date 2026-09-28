@@ -24,7 +24,8 @@ const json = (statusCode, body, headers = {}) => ({
 });
 
 const corsHeaders = (event) => {
-    const origin = event.headers.origin || event.headers.Origin || '';
+    const headers = event?.headers || {};
+    const origin = headers.origin || headers.Origin || '';
     if (ALLOWED_ORIGINS.has(origin) || origin.endsWith('.netlify.app')) {
         return {
             'Access-Control-Allow-Origin': origin,
@@ -153,7 +154,8 @@ async function sendResendEmail({ to, from, subject, html, replyTo }) {
     }
 }
 
-export const handler = async (event) => {
+export const handler = async (event = {}) => {
+    event.headers = event.headers || {};
     const baseHeaders = corsHeaders(event);
 
     if (event.httpMethod === 'OPTIONS') {
@@ -256,14 +258,19 @@ export const handler = async (event) => {
         return json(400, { error: 'Please enter a genuine, active mobile number.' }, baseHeaders);
     }
 
-    // Email validation
-    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
-    if (!email || !emailRegex.test(email)) {
-        return json(400, { error: 'Please enter a valid business email address.' }, baseHeaders);
-    }
-    const emailDomain = email.split('@')[1];
-    if (DISPOSABLE_EMAIL_DOMAINS.has(emailDomain)) {
-        return json(400, { error: 'Temporary or disposable email addresses are not accepted. Please provide your business or personal email.' }, baseHeaders);
+    // Email validation (Strict if provided, or default placeholder for phone-first fast quotes)
+    let clientEmail = email;
+    if (clientEmail) {
+        const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+        if (!emailRegex.test(clientEmail)) {
+            return json(400, { error: 'Please enter a valid business or personal email address.' }, baseHeaders);
+        }
+        const emailDomain = clientEmail.split('@')[1];
+        if (DISPOSABLE_EMAIL_DOMAINS.has(emailDomain)) {
+            return json(400, { error: 'Temporary or disposable email addresses are not accepted. Please provide your business or personal email.' }, baseHeaders);
+        }
+    } else {
+        clientEmail = `inquiry-${phone}@gpspl.co.in`;
     }
 
     // Content / Spam keyword check
@@ -317,7 +324,7 @@ export const handler = async (event) => {
                     </tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;">
                         <td style="padding: 10px 0; color: #64748b; font-weight: bold;">Email Address</td>
-                        <td style="padding: 10px 0; color: #0f172a;"><a href="mailto:${email}">${email}</a></td>
+                        <td style="padding: 10px 0; color: #0f172a;">${email ? `<a href="mailto:${email}">${email}</a>` : '<span style="color:#64748b;font-style:italic;">Not shared (Phone Lead)</span>'}</td>
                     </tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;">
                         <td style="padding: 10px 0; color: #64748b; font-weight: bold;">Organization</td>
@@ -353,7 +360,7 @@ export const handler = async (event) => {
         from: mailFrom,
         subject: emailSubject,
         html: emailHtml,
-        replyTo: email
+        replyTo: email || recipientEmails[0] || 'global@gpspl.co.in'
     });
 
     return json(200, {

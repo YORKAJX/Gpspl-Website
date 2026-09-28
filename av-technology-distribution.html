@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="/JS/security-guard.js?v=20260818" defer></script>
     <script src="/JS/lead-capture.js?v=20260909-boq-v1" defer></script>
-    <script src="/JS/form-validation.js?v=20260923" defer></script>
+    <script src="/JS/form-validation.js?v=20260928-lead-fix" defer></script>
     <script src="JS/site-config.js" defer></script>
     <script src="JS/seo.js" defer></script>
     <script src="JS/analytics.js" defer></script>
@@ -585,8 +585,8 @@
 
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
                             <div>
-                                <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 4px;">Official Business Email *</label>
-                                <input type="email" name="email" required placeholder="procurement@company.com" style="width: 100%; padding: 10px 12px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; box-sizing: border-box;">
+                                <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 4px;">Official Business Email (Optional)</label>
+                                <input type="email" name="email" placeholder="procurement@company.com" style="width: 100%; padding: 10px 12px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; box-sizing: border-box;">
                             </div>
                             <div>
                                 <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 4px;">10-Digit Mobile / WhatsApp *</label>
@@ -614,15 +614,20 @@
                         </div>
 
                         <div style="margin-bottom: 16px;">
-                            <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 4px;">Required Models, Quantities or Tender Scope *</label>
-                            <textarea name="message" required rows="3" placeholder="Share specific model numbers (e.g. LG TR3ER 75, Samsung QMC 65, JBL Control 26C, Barco CX-30), quantities, target price or tender MAF requirement." style="width: 100%; padding: 10px 12px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; box-sizing: border-box;"></textarea>
+                            <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 4px;">Required Models, Quantities or Tender Scope</label>
+                            <textarea name="message" rows="3" placeholder="Share specific model numbers (e.g. LG TR3ER 75, Samsung QMC 65, JBL Control 26C, Barco CX-30), quantities, target price or tender MAF requirement." style="width: 100%; padding: 10px 12px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; box-sizing: border-box;"></textarea>
                         </div>
 
                         <div class="form-submit-status" style="margin-bottom: 12px; font-size: 0.85rem;"></div>
 
-                        <button type="submit" class="btn-primary" style="width: 100%; padding: 12px; font-size: 1rem; font-weight: 800; border-radius: 8px; cursor: pointer;">
-                            Submit Wholesale BOQ / Deal Registration &rarr;
-                        </button>
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+                            <button type="submit" class="btn-primary" style="flex: 1; min-width: 220px; padding: 13px; font-size: 0.96rem; font-weight: 800; border-radius: 8px; cursor: pointer; border: none;">
+                                Submit Wholesale BOQ / Deal Registration &rarr;
+                            </button>
+                            <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20am%20an%20AV%20System%20Integrator%20%2F%20Buyer%20requesting%20wholesale%20distribution%20pricing." target="_blank" rel="noopener noreferrer" style="background: #25d366; color: #ffffff; padding: 13px 20px; border-radius: 8px; text-decoration: none; font-weight: 800; display: inline-flex; align-items: center; gap: 8px; font-size: 0.92rem; box-shadow: 0 4px 15px rgba(37,211,102,0.35);">
+                                <i class="fab fa-whatsapp" style="font-size: 1.15rem;"></i> WhatsApp Direct
+                            </a>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -720,5 +725,8 @@
     </div>
 </footer>
 
+<script src="/JS/main.js?v=20260909-boq-v1" defer></script>
+<script src="/JS/form-validation.js?v=20260928-lead-fix" defer></script>
+<script src="/JS/ai-av-consultant.js?v=20260830-fix" defer></script>
 </body>
 </html>

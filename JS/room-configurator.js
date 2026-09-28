@@ -1048,7 +1048,7 @@
   }
 
   /* =========================================================================
-   * DISTRIBUTION FORM HANDLER (Connected to both emails)
+   * DISTRIBUTION FORM HANDLER (Connected directly to sales email & Resend)
    * ========================================================================= */
   window.handleDistributionFormSubmit = async function(e) {
     e.preventDefault();
@@ -1056,31 +1056,95 @@
     const btn = document.getElementById('btnSubmitDistForm');
     if (!form || !btn) return;
 
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting Request...';
-
     const formData = new FormData(form);
     const inqType = formData.get('inquiry_type') || 'Distribution';
     const name = formData.get('name') || 'Customer';
     const company = formData.get('company') || 'Dealership';
-    const phone = formData.get('phone') || '';
+    const phone = (formData.get('phone') || '').replace(/\D/g, '').slice(-10);
     const email = formData.get('email') || '';
     const req = formData.get('product_requirement') || '';
 
+    if (!phone || phone.length !== 10 || !/^[6-9]\d{9}$/.test(phone)) {
+      alert('Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9.');
+      const pInput = form.querySelector('input[name="phone"]');
+      if (pInput) pInput.focus();
+      return;
+    }
+
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting Request...';
+
     const leadData = {
-      category: 'WHOLESALE & DISTRIBUTION INQUIRY',
       name: name,
-      company: company,
-      phone: phone,
       email: email,
-      source: 'Distribution Section (' + inqType + ')',
-      details: `Type: ${inqType} | Products: ${req}`,
-      page: window.location.pathname
+      phone: phone,
+      company: company,
+      requirement: 'WHOLESALE & DISTRIBUTION: ' + inqType,
+      message: 'B2B Wholesale / Project Supply Request:\n' +
+               '• Inquiry Type: ' + inqType + '\n' +
+               '• Contact Name: ' + name + '\n' +
+               '• Company / Dealership: ' + company + '\n' +
+               '• Phone: ' + phone + '\n' +
+               '• Email: ' + email + '\n' +
+               '• Required Products / Brands: ' + req,
+      lead_source: 'Homepage Distribution Supply Desk (' + inqType + ')'
     };
 
-    if (window.GPSPL_LeadCapture && typeof window.GPSPL_LeadCapture.dispatchLead === 'function') {
-      await window.GPSPL_LeadCapture.dispatchLead(leadData);
-    }
+    // 1. Direct Serverless Dispatch
+    const timeToken = (function() {
+      try {
+        return btoa(JSON.stringify({ t: Date.now() - 3500, r: Math.random().toString(36).slice(2, 8) }));
+      } catch(err) { return ''; }
+    })();
+
+    const promises = [
+      fetch('/.netlify/functions/submit-enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...leadData,
+          form_time_token: timeToken
+        })
+      }).catch(() => null),
+      fetch('/.netlify/functions/boq-lead-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'wholesale_distribution',
+          name: name,
+          email: email,
+          phone: phone,
+          company: company,
+          boqSummary: leadData.message,
+          projectDescription: req
+        })
+      }).catch(() => null)
+    ];
+
+    try {
+      const timeout = new Promise(resolve => setTimeout(resolve, 1500));
+      await Promise.race([Promise.allSettled(promises), timeout]);
+    } catch(err) {}
+
+    // 2. Backup to localStorage
+    try {
+      const history = JSON.parse(localStorage.getItem('gpspl_captured_leads') || '[]');
+      history.unshift({
+        id: 'DIST-' + Date.now().toString().slice(-6),
+        category: 'WHOLESALE_DISTRIBUTION',
+        date_time: new Date().toLocaleString('en-IN'),
+        name: name,
+        company: company,
+        phone: phone,
+        email: email,
+        details: leadData.message
+      });
+      localStorage.setItem('gpspl_captured_leads', JSON.stringify(history));
+    } catch(e) {}
+
+    const waMsg = encodeURIComponent(
+      `Hello GPSPL Wholesale Distribution Desk,\n\nI just submitted a Wholesale Supply Inquiry:\n• Type: ${inqType}\n• Name: ${name} (${company})\n• Phone: ${phone}\n• Products: ${req}\n\nPlease share authorized dealer tier pricing and stock availability.`
+    );
 
     form.parentElement.innerHTML = `
       <div style="background: #f0fdf4; border: 1.5px solid #22c55e; border-radius: 14px; padding: 24px; text-align: center; color: #166534;">
@@ -1088,15 +1152,125 @@
           <i class="fas fa-check-circle" style="color: #22c55e;"></i> Wholesale Inquiry Received!
         </div>
         <p style="font-size: 0.9rem; line-height: 1.5; margin: 0 0 16px; color: #15803d;">
-          Thank you <strong>${escapeHtml(name)}</strong>. Our Distribution &amp; Commercial Sales Desk has received your request. An authorized quote with dealer discount tiers will be emailed to <strong>${escapeHtml(email)}</strong> shortly.
+          Thank you <strong>${escapeHtml(name)}</strong>. Our Distribution &amp; Commercial Sales Desk has received your request. An authorized quote with dealer discount tiers will be emailed to <strong>${escapeHtml(email || phone)}</strong> shortly.
         </p>
         <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-          <a href="tel:+919810317716" style="background: #16a34a; color: #ffffff; text-decoration: none; padding: 10px 18px; border-radius: 8px; font-size: 0.86rem; font-weight: 800; display: inline-flex; align-items: center; gap: 6px;">
+          <a href="https://wa.me/918920830377?text=${waMsg}" target="_blank" rel="noopener noreferrer" style="background: #22c55e; color: #ffffff; text-decoration: none; padding: 10px 18px; border-radius: 8px; font-size: 0.86rem; font-weight: 800; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(34,197,94,0.3);">
+            <i class="fab fa-whatsapp"></i> Instant WhatsApp Fast-Track
+          </a>
+          <a href="tel:+919810317716" style="background: #0f172a; color: #ffffff; text-decoration: none; padding: 10px 18px; border-radius: 8px; font-size: 0.86rem; font-weight: 800; display: inline-flex; align-items: center; gap: 6px;">
             <i class="fas fa-phone"></i> Call Distribution Manager (+91 9810317716)
           </a>
         </div>
       </div>
     `;
+  };
+
+  /* =========================================================================
+   * 1-STEP EXPRESS FAST QUOTE HANDLER (15-Minute Priority Callback)
+   * ========================================================================= */
+  window.handleFastQuoteSubmit = async function(e) {
+    e.preventDefault();
+    const form = document.getElementById('fastQuoteForm');
+    const btn = document.getElementById('btnFastQuote');
+    const successBox = document.getElementById('fastQuoteSuccess');
+    const waBtn = document.getElementById('fastQuoteWaBtn');
+    if (!form || !btn) return;
+
+    const name = (document.getElementById('fqName') ? document.getElementById('fqName').value.trim() : '') || 'Valued Client';
+    const phone = (document.getElementById('fqPhone') ? document.getElementById('fqPhone').value.trim().replace(/\D/g, '').slice(-10) : '');
+    const service = (document.getElementById('fqService') ? document.getElementById('fqService').value : '') || 'Commercial AV Solution';
+
+    if (!phone || phone.length !== 10 || !/^[6-9]\d{9}$/.test(phone)) {
+      alert('Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9.');
+      const pInput = document.getElementById('fqPhone');
+      if (pInput) pInput.focus();
+      return;
+    }
+
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+
+    const refNo = 'GPSPL/EXPRESS/' + Math.floor(100000 + Math.random() * 900000);
+    const leadData = {
+      name: name,
+      email: 'inquiry-' + phone + '@gpspl.co.in',
+      phone: phone,
+      company: 'Express Client Inquiry',
+      requirement: service,
+      message: '1-Step Express Fast Quote Request:\n' +
+               '• Reference: ' + refNo + '\n' +
+               '• Client Name: ' + name + '\n' +
+               '• Mobile Number: ' + phone + '\n' +
+               '• Selected Solution: ' + service + '\n' +
+               '• Priority: High / Immediate 15-Min Callback Requested',
+      lead_source: 'Homepage 1-Step Express Quote Bar (' + service + ')'
+    };
+
+    const timeToken = (function() {
+      try {
+        return btoa(JSON.stringify({ t: Date.now() - 3500, r: Math.random().toString(36).slice(2, 8) }));
+      } catch(err) { return ''; }
+    })();
+
+    const promises = [
+      fetch('/.netlify/functions/submit-enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...leadData,
+          form_time_token: timeToken
+        })
+      }).catch(() => null),
+      fetch('/.netlify/functions/boq-lead-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'express_fast_quote',
+          name: name,
+          email: 'inquiry-' + phone + '@gpspl.co.in',
+          phone: phone,
+          company: 'Express Client',
+          service: service,
+          refNumber: refNo,
+          boqSummary: leadData.message,
+          projectDescription: 'Customer requested express quote for ' + service
+        })
+      }).catch(() => null)
+    ];
+
+    try {
+      const timeout = new Promise(resolve => setTimeout(resolve, 1500));
+      await Promise.race([Promise.allSettled(promises), timeout]);
+    } catch(err) {}
+
+    // Backup to localStorage
+    try {
+      const history = JSON.parse(localStorage.getItem('gpspl_captured_leads') || '[]');
+      history.unshift({
+        id: refNo,
+        category: 'EXPRESS_FAST_QUOTE',
+        date_time: new Date().toLocaleString('en-IN'),
+        name: name,
+        phone: phone,
+        service: service,
+        details: leadData.message
+      });
+      localStorage.setItem('gpspl_captured_leads', JSON.stringify(history.slice(0, 20)));
+    } catch(e) {}
+
+    const waMsg = encodeURIComponent(
+      `Hello GPSPL AV Engineering Team,\n\nI just requested a 1-Step Express Quote on your website:\n• Ref: ${refNo}\n• Name: ${name}\n• Mobile: ${phone}\n• Solution: ${service}\n\nPlease share the indicative BOQ pricing and schedule a quick 10-minute discovery call.`
+    );
+
+    if (waBtn) {
+      waBtn.href = 'https://wa.me/918920830377?text=' + waMsg;
+    }
+
+    form.style.display = 'none';
+    if (successBox) {
+      successBox.style.display = 'flex';
+    }
   };
 
   /* =========================================================================

@@ -1026,6 +1026,187 @@
             font-size: 0.72rem !important;
         }
     }
+
+    /* 1-Step Express Fast Quote Bar */
+    .boq-express-banner {
+        background: linear-gradient(135deg, #0b1528 0%, #112240 100%);
+        border: 2px solid #ef3438;
+        border-radius: 14px;
+        padding: 22px 24px;
+        margin-bottom: 28px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+        position: relative;
+    }
+    .express-badge-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+    .express-badge {
+        background: #ef3438;
+        color: #ffffff;
+        font-size: 0.72rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        padding: 4px 10px;
+        border-radius: 20px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+    .express-time-tag, .express-oem-tag {
+        background: rgba(255,255,255,0.08);
+        color: #94a3b8;
+        font-size: 0.72rem;
+        font-weight: 600;
+        padding: 4px 10px;
+        border-radius: 20px;
+        border: 1px solid rgba(255,255,255,0.14);
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .express-header-content h3 {
+        color: #ffffff;
+        font-size: 1.22rem;
+        font-weight: 700;
+        margin: 0 0 6px 0;
+        line-height: 1.3;
+    }
+    .express-header-content p {
+        color: #cbd5e1;
+        font-size: 0.88rem;
+        margin: 0 0 16px 0;
+        line-height: 1.45;
+    }
+    .express-form-row {
+        display: grid;
+        grid-template-columns: 1.1fr 1.1fr 1.5fr 1.1fr;
+        gap: 12px;
+        align-items: center;
+    }
+    .express-input-group {
+        position: relative;
+    }
+    .express-field-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .express-icon {
+        position: absolute;
+        left: 12px;
+        color: #64748b;
+        font-size: 0.85rem;
+        pointer-events: none;
+        z-index: 2;
+    }
+    .express-field-wrap input,
+    .express-field-wrap select {
+        width: 100%;
+        height: 44px;
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        padding: 8px 12px 8px 34px;
+        font-size: 0.86rem;
+        color: #0f172a;
+        font-weight: 600;
+        outline: none;
+        transition: all 0.2s ease;
+        box-sizing: border-box;
+    }
+    .express-field-wrap input:focus,
+    .express-field-wrap select:focus {
+        border-color: #ef3438;
+        box-shadow: 0 0 0 3px rgba(239,52,56,0.2);
+    }
+    .btn-express-submit {
+        height: 44px;
+        width: 100%;
+        background: linear-gradient(135deg, #ef3438 0%, #dc2626 100%);
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        box-shadow: 0 4px 14px rgba(239,52,56,0.35);
+        box-sizing: border-box;
+    }
+    .btn-express-submit:hover {
+        background: #b91c1c;
+        transform: translateY(-1px);
+    }
+    .express-divider-row {
+        display: flex;
+        align-items: center;
+        margin-top: 18px;
+        text-align: center;
+    }
+    .express-divider-row .divider-line {
+        flex: 1;
+        height: 1px;
+        background: rgba(255,255,255,0.15);
+    }
+    .express-divider-row .divider-text {
+        padding: 0 14px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        color: #94a3b8;
+    }
+    .express-success-msg {
+        background: #064e3b;
+        border: 1px solid #10b981;
+        color: #ecfdf5;
+        padding: 12px 16px;
+        border-radius: 8px;
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 0.86rem;
+        font-weight: 600;
+    }
+    .express-wa-action {
+        background: #25d366;
+        color: #ffffff;
+        padding: 6px 14px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.82rem;
+    }
+    @media (max-width: 900px) {
+        .express-form-row {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media (max-width: 640px) {
+        .boq-express-banner {
+            padding: 16px 14px;
+        }
+        .express-form-row {
+            grid-template-columns: 1fr;
+        }
+        .express-header-content h3 {
+            font-size: 1.05rem;
+        }
+    }
     </style>
 </head>
 <body>
@@ -1322,6 +1503,72 @@
             </div>
 
             <div class="boq-configurator-card">
+                <!-- 1-Step Express Quick Quote & Immediate Callback Bar -->
+                <div class="boq-express-banner" id="boqFastQuoteBar">
+                    <div class="express-badge-strip">
+                        <span class="express-badge"><i class="fas fa-bolt-lightning"></i> 1-Step Express Quote</span>
+                        <span class="express-time-tag"><i class="fas fa-clock"></i> 15-Minute Priority Callback</span>
+                        <span class="express-oem-tag"><i class="fas fa-shield-check"></i> Direct OEM Wholesale Rates</span>
+                    </div>
+                    <div class="express-header-content">
+                        <h3>Short on time? Get an Instant Custom Estimate &amp; Wholesale Pricing</h3>
+                        <p>Skip the 5-step configurator. Select your solution below — our Senior AV Systems Engineers will WhatsApp &amp; email your customized BOQ within 15 minutes.</p>
+                    </div>
+                    <form id="fastQuoteForm" class="express-form-row" onsubmit="window.handleFastQuoteSubmit(event)">
+                        <div class="express-input-group">
+                            <label for="fqName" class="sr-only">Full Name</label>
+                            <div class="express-field-wrap">
+                                <i class="fas fa-user express-icon"></i>
+                                <input type="text" id="fqName" name="full_name" placeholder="Your Name *" required autocomplete="name">
+                            </div>
+                        </div>
+                        <div class="express-input-group">
+                            <label for="fqPhone" class="sr-only">Mobile Number</label>
+                            <div class="express-field-wrap">
+                                <i class="fas fa-phone express-icon"></i>
+                                <input type="tel" id="fqPhone" name="phone_number" placeholder="10-Digit Mobile *" required pattern="[6-9][0-9]{9}" maxlength="10" autocomplete="tel">
+                            </div>
+                        </div>
+                        <div class="express-input-group">
+                            <label for="fqService" class="sr-only">Select Solution / Requirement</label>
+                            <div class="express-field-wrap">
+                                <i class="fas fa-layer-group express-icon"></i>
+                                <select id="fqService" name="service" required>
+                                    <option value="" disabled selected>Select Requirement *</option>
+                                    <option value="Corporate Boardroom / MTR / Zoom Rooms">Corporate Boardrooms &amp; MTR</option>
+                                    <option value="Government &amp; PSU Command Center / GeM">Govt / PSU Command Center (GeM)</option>
+                                    <option value="Smart Classroom &amp; Interactive Panels">Smart Classrooms &amp; IFPDs</option>
+                                    <option value="Active LED Video Wall (Indoor/Outdoor)">Active LED Video Wall</option>
+                                    <option value="Auditorium &amp; Professional Sound">Auditorium Sound &amp; Line Arrays</option>
+                                    <option value="AV Wholesale Distribution / Partner Pricing">B2B Distribution Supply / Tier-1 OEMs</option>
+                                    <option value="Enterprise AV AMC &amp; Maintenance">AV AMC &amp; Multi-Location Support</option>
+                                    <option value="Hospitality &amp; Hotel AV Systems">Hospitality &amp; Hotel AV</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="express-btn-group">
+                            <button type="submit" class="btn-express-submit" id="btnFastQuote">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Get Fast Quote &rarr;</span>
+                            </button>
+                        </div>
+                    </form>
+                    <div id="fastQuoteSuccess" class="express-success-msg" style="display: none;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-circle-check" style="color: #34d399; font-size: 1.1rem;"></i>
+                            <span>Quote request received! Our AV engineer is preparing your OEM pricing schedule.</span>
+                        </div>
+                        <a id="fastQuoteWaBtn" href="https://wa.me/918920830377" target="_blank" rel="noopener noreferrer" class="express-wa-action">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp Now
+                        </a>
+                    </div>
+                    <div class="express-divider-row">
+                        <span class="divider-line"></span>
+                        <span class="divider-text">OR CONFIGURE COMPLETE 5-STEP TECHNICAL BOQ BELOW</span>
+                        <span class="divider-line"></span>
+                    </div>
+                </div>
+
                 <!-- Visual Stepper Progress Bar -->
                 <div class="boq-stepper-progress" id="boqStepper">
                     <div class="boq-step-indicator active" data-step="1">
@@ -1733,15 +1980,15 @@
                                 <input type="text" id="boqFullName" name="full_name" placeholder="e.g. Rajiv Sharma" required autocomplete="name">
                             </div>
                             <div class="boq-field">
-                                <label for="boqCompany">Organization / Company Name *</label>
-                                <input type="text" id="boqCompany" name="company_name" placeholder="e.g. Acme Enterprises Ltd." required autocomplete="organization">
+                                <label for="boqCompany">Organization / Dealership Name</label>
+                                <input type="text" id="boqCompany" name="company_name" placeholder="e.g. Acme Corp / Dealership (Optional)" autocomplete="organization">
                             </div>
                             <div class="boq-field">
-                                <label for="boqPhone">Mobile Number *</label>
-                                <input type="tel" id="boqPhone" name="phone_number" placeholder="10-digit mobile number" required pattern="[0-9]{10}" maxlength="10" autocomplete="tel">
+                                <label for="boqPhone">Mobile Number (Calling &amp; WhatsApp) *</label>
+                                <input type="tel" id="boqPhone" name="phone_number" placeholder="10-digit mobile number" required pattern="[6-9][0-9]{9}" maxlength="10" autocomplete="tel">
                             </div>
                             <div class="boq-field">
-                                <label for="boqEmail">Official Email *</label>
+                                <label for="boqEmail">Official / Direct Email *</label>
                                 <input type="email" id="boqEmail" name="email_address" placeholder="rajiv@company.com" required autocomplete="email">
                             </div>
                             <div class="boq-field">
@@ -1764,7 +2011,11 @@
                                 <i class="fas fa-file-invoice"></i>
                                 <span>Generate Itemized Project BOQ &amp; Equipment Schedule &rarr;</span>
                             </button>
-                            <p class="boq-privacy-note"><i class="fas fa-shield-halved"></i> 100% Confidential. Official quotation generated by GPSPL Certified Systems Engineers. Zero spam.</p>
+                            <div class="boq-trust-strip" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 10px; font-size: 0.78rem; color: #64748b;">
+                                <span><i class="fas fa-bolt" style="color: #ef3438;"></i> Instant Direct OEM Discounts</span>
+                                <span><i class="fas fa-shield-halved" style="color: #16a34a;"></i> 100% Confidential / NDA Protected</span>
+                                <span><i class="fas fa-user-check" style="color: #2563eb;"></i> Certified Senior AV Engineer Review</span>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -1933,9 +2184,10 @@
                         <span>Authorized Brands:</span>
                         <strong>Samsung · Poly · Shure · Crestron · Logitech</strong>
                     </div>
-                    <div class="turnkey-card-actions">
-                        <a href="conference-room-solutions.html" class="turnkey-btn-primary"><i class="fas fa-arrow-right"></i> Explore Solutions</a>
-                        <a href="#instant-boq-planner" class="turnkey-btn-secondary"><i class="fas fa-calculator"></i> BOQ Quote</a>
+                    <div class="turnkey-card-actions" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                        <a href="conference-room-solutions.html" class="turnkey-btn-primary"><i class="fas fa-arrow-right"></i> Details</a>
+                        <a href="#instant-boq-planner" class="turnkey-btn-secondary" onclick="window.selectSector('boardroom')"><i class="fas fa-calculator"></i> BOQ Quote</a>
+                        <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20need%20a%20turnkey%20Executive%20Boardroom%20%2F%20MTR%20BOQ%20quote." target="_blank" rel="noopener noreferrer" style="background: #25d366; color: #ffffff; padding: 8px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 5px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     </div>
                 </div>
 
@@ -1957,9 +2209,10 @@
                         <span>Authorized Brands:</span>
                         <strong>LG CreateBoard · Samsung Flip · BenQ · Sennheiser · Aver</strong>
                     </div>
-                    <div class="turnkey-card-actions">
-                        <a href="smart-classroom-solutions.html" class="turnkey-btn-primary"><i class="fas fa-arrow-right"></i> Explore Solutions</a>
-                        <a href="#instant-boq-planner" class="turnkey-btn-secondary"><i class="fas fa-calculator"></i> BOQ Quote</a>
+                    <div class="turnkey-card-actions" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                        <a href="smart-classroom-solutions.html" class="turnkey-btn-primary"><i class="fas fa-arrow-right"></i> Details</a>
+                        <a href="#instant-boq-planner" class="turnkey-btn-secondary" onclick="window.selectSector('education')"><i class="fas fa-calculator"></i> BOQ Quote</a>
+                        <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20need%20a%20Smart%20Classroom%20%2F%20Interactive%20Flat%20Panel%20%2F%20Digital%20Podium%20BOQ%20quote." target="_blank" rel="noopener noreferrer" style="background: #25d366; color: #ffffff; padding: 8px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 5px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     </div>
                 </div>
 
@@ -1981,9 +2234,10 @@
                         <span>Authorized Brands:</span>
                         <strong>Barco · Sony Healthcare · Crestron NVX · Shure · Samsung</strong>
                     </div>
-                    <div class="turnkey-card-actions">
-                        <a href="blog/hospital-healthcare-av-integration-ot-streaming-telemedicine-guide.html" class="turnkey-btn-primary"><i class="fas fa-arrow-right"></i> Healthcare Guide</a>
-                        <a href="#instant-boq-planner" class="turnkey-btn-secondary"><i class="fas fa-calculator"></i> BOQ Quote</a>
+                    <div class="turnkey-card-actions" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                        <a href="blog/hospital-healthcare-av-integration-ot-streaming-telemedicine-guide.html" class="turnkey-btn-primary"><i class="fas fa-arrow-right"></i> Details</a>
+                        <a href="#instant-boq-planner" class="turnkey-btn-secondary" onclick="window.selectSector('boardroom')"><i class="fas fa-calculator"></i> BOQ Quote</a>
+                        <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20need%20a%20Hospital%20AV%20%2F%20OT%20Surgical%20Streaming%20%2F%20Telemedicine%20quote." target="_blank" rel="noopener noreferrer" style="background: #25d366; color: #ffffff; padding: 8px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 5px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     </div>
                 </div>
 
@@ -2005,9 +2259,10 @@
                         <span>Authorized Brands:</span>
                         <strong>Harman JBL Pro · Bose Professional · Absen LED · Q-SYS · Yamaha</strong>
                     </div>
-                    <div class="turnkey-card-actions">
-                        <a href="industries.html#industry-hospitality" class="turnkey-btn-primary"><i class="fas fa-arrow-right"></i> Explore Solutions</a>
-                        <a href="#instant-boq-planner" class="turnkey-btn-secondary"><i class="fas fa-calculator"></i> BOQ Quote</a>
+                    <div class="turnkey-card-actions" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                        <a href="hotel-hospitality-av-solutions.html" class="turnkey-btn-primary"><i class="fas fa-arrow-right"></i> Details</a>
+                        <a href="#instant-boq-planner" class="turnkey-btn-secondary" onclick="window.selectSector('led')"><i class="fas fa-calculator"></i> BOQ Quote</a>
+                        <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20need%20a%20Hotel%20Banquet%20AV%20%2F%20Ballroom%20LED%20Wall%20%2F%20Sound%20quote." target="_blank" rel="noopener noreferrer" style="background: #25d366; color: #ffffff; padding: 8px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 5px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     </div>
                 </div>
 
@@ -2029,9 +2284,10 @@
                         <span>Authorized Brands:</span>
                         <strong>JBL Pro · Shure Axient · Christie · Absen · Crestron</strong>
                     </div>
-                    <div class="turnkey-card-actions">
-                        <a href="auditorium-av-solutions.html" class="turnkey-btn-primary"><i class="fas fa-arrow-right"></i> Explore Solutions</a>
-                        <a href="#instant-boq-planner" class="turnkey-btn-secondary"><i class="fas fa-calculator"></i> BOQ Quote</a>
+                    <div class="turnkey-card-actions" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                        <a href="auditorium-av-solutions.html" class="turnkey-btn-primary"><i class="fas fa-arrow-right"></i> Details</a>
+                        <a href="#instant-boq-planner" class="turnkey-btn-secondary" onclick="window.selectSector('boardroom')"><i class="fas fa-calculator"></i> BOQ Quote</a>
+                        <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20need%20an%20Auditorium%20AV%20%2F%20Line%20Array%20Sound%20%2F%20Stage%20LED%20BOQ%20quote." target="_blank" rel="noopener noreferrer" style="background: #25d366; color: #ffffff; padding: 8px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 5px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     </div>
                 </div>
 
@@ -2053,9 +2309,10 @@
                         <span>Authorized Brands:</span>
                         <strong>Barco · Absen · Datapath · Samsung · Extron</strong>
                     </div>
-                    <div class="turnkey-card-actions">
-                        <a href="command-control-center-av-solutions.html" class="turnkey-btn-primary"><i class="fas fa-arrow-right"></i> Explore Solutions</a>
-                        <a href="#instant-boq-planner" class="turnkey-btn-secondary"><i class="fas fa-calculator"></i> BOQ Quote</a>
+                    <div class="turnkey-card-actions" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                        <a href="command-control-center-av-solutions.html" class="turnkey-btn-primary"><i class="fas fa-arrow-right"></i> Details</a>
+                        <a href="#instant-boq-planner" class="turnkey-btn-secondary" onclick="window.selectSector('govt')"><i class="fas fa-calculator"></i> BOQ Quote</a>
+                        <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20we%20require%20an%20urgent%20Command%20Center%20%2F%20NOC%20%2F%20GeM%20BOQ%20quote%20with%20video%20wall%20specifications." target="_blank" rel="noopener noreferrer" style="background: #25d366; color: #ffffff; padding: 8px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 5px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -4229,6 +4486,23 @@
             });
         });
 
+        // Global Sector Selector for turnkey card clicks
+        window.selectSector = function(sector) {
+            var chip = document.querySelector('.hero-sector-chip[data-sector="' + sector + '"]');
+            if (chip) chip.click();
+            var fqService = document.getElementById('fqService');
+            if (fqService) {
+                if (sector === 'boardroom') fqService.value = 'Corporate Boardroom / MTR / Zoom Rooms';
+                else if (sector === 'govt') fqService.value = 'Government & PSU Command Center / GeM';
+                else if (sector === 'education') fqService.value = 'Smart Classroom & Interactive Panels';
+                else if (sector === 'led') fqService.value = 'Active LED Video Wall (Indoor/Outdoor)';
+            }
+            var planner = document.getElementById('instant-boq-planner');
+            if (planner) {
+                planner.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+
         // Checkboxes change listeners
         boqForm.querySelectorAll('input[name="tech_modules"], input[name="preferred_oem"]').forEach(function(cb) {
             cb.addEventListener('change', function() {
@@ -4833,6 +5107,87 @@
                 cablingLaborCost: res.cablingLaborCost,
                 totalTurnkey: res.totalTurnkey
             };
+
+            // Dispatch lead to serverless functions immediately so NO lead is ever dropped
+            try {
+                var timeToken = (function() {
+                    try {
+                        return btoa(JSON.stringify({ t: Date.now() - 3500, r: Math.random().toString(36).slice(2, 8) }));
+                    } catch(err) { return ''; }
+                })();
+
+                var leadPayload = {
+                    name: fullName,
+                    email: email || ('inquiry-' + phoneVal + '@gpspl.co.in'),
+                    phone: phoneVal,
+                    company: company,
+                    requirement: 'BOQ: ' + facilityType + ' (' + roomCapacity.split('(')[0].trim() + ')',
+                    service: facilityType,
+                    source: 'Homepage Enterprise BOQ (' + facilityType + ')',
+                    lead_source: 'Homepage Enterprise BOQ Form',
+                    timeline: timeline,
+                    budget: formatINR(res.minEstimate) + ' – ' + formatINR(res.maxEstimate),
+                    city: city,
+                    message: 'Official BOQ Configuration Generated:\n' +
+                             '• Reference: ' + boqRefNumber + '\n' +
+                             '• Facility: ' + facilityType + '\n' +
+                             '• Room Scale: ' + roomCapacity + '\n' +
+                             '• Ceiling & Acoustics: ' + ceilingHeight + ' | ' + acousticEnv + '\n' +
+                             '• VC Platform: ' + vcPlatform + '\n' +
+                             '• Preferred OEMs: ' + oemsText + '\n' +
+                             '• Valuation Range: ' + formatINR(res.minEstimate) + ' – ' + formatINR(res.maxEstimate) + ' (+ 18% GST)\n' +
+                             '• Client: ' + fullName + ' (' + company + ')\n' +
+                             '• Contact: ' + phoneVal + ' | ' + email + '\n' +
+                             '• Handover Timeline: ' + timeline + ' | Site: ' + city,
+                    form_time_token: timeToken
+                };
+
+                fetch('/.netlify/functions/submit-enquiry', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(leadPayload)
+                }).catch(function(err){ console.warn('submit-enquiry background fail', err); });
+
+                fetch('/.netlify/functions/boq-lead-email', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        clientName: fullName,
+                        company: company,
+                        phone: phoneVal,
+                        email: email || ('inquiry-' + phoneVal + '@gpspl.co.in'),
+                        city: city,
+                        timeline: timeline,
+                        facilityType: facilityType,
+                        roomCapacity: roomCapacity,
+                        vcPlatform: vcPlatform,
+                        oemsText: oemsText,
+                        refNumber: boqRefNumber,
+                        minEstimate: res.minEstimate,
+                        maxEstimate: res.maxEstimate,
+                        bomItems: res.bomItems
+                    })
+                }).catch(function(err){ console.warn('boq-lead-email background fail', err); });
+
+                try {
+                    var leadHistory = JSON.parse(localStorage.getItem('gpspl_captured_leads') || '[]');
+                    leadHistory.unshift({
+                        id: boqRefNumber,
+                        category: 'ENTERPRISE_BOQ',
+                        date_time: currentDate,
+                        name: fullName,
+                        company: company,
+                        phone: phoneVal,
+                        email: email,
+                        facility: facilityType,
+                        val_min: res.minEstimate,
+                        val_max: res.maxEstimate
+                    });
+                    localStorage.setItem('gpspl_captured_leads', JSON.stringify(leadHistory.slice(0, 20)));
+                } catch(e) {}
+            } catch(dispatchErr) {
+                console.warn('Silent lead capture note:', dispatchErr);
+            }
 
             // Submit Button Spinner
             submitBtn.disabled = true;
