@@ -163,10 +163,75 @@
         "lg-createboard-tr3er.html": ["LG CreateBoard TR3ER", "LG interactive flat panel", "LG TR3ER smart board", "smart classroom panel"],
         "blog/samsung-business-tv-commercial-signage-guide.html": ["Samsung Business TV guide", "Samsung BEFX-H2", "Samsung QBC signage", "Samsung QMC 24/7", "LH55QBCEBGCLXL", "LH55QMCEBGCLXL", "commercial display Delhi NCR"],
         "blog/hospital-healthcare-av-integration-ot-streaming-telemedicine-guide.html": ["hospital AV integration", "operation theater 4K streaming", "telemedicine AV setup", "medical AV system integrator", "surgical video transmission OT", "hospital digital signage India", "doctor seminar room AV"],
-        "contact.html": ["request AV quote", "AV system integrator contact Delhi", "GPSPL enquiry", "technology supply quote India", "conference room quote"]
+        "contact.html": ["request AV quote", "AV system integrator contact Delhi", "GPSPL enquiry", "technology supply quote India", "conference room quote"],
+        "command-control-center-av-solutions.html": [
+            "command control center av solutions",
+            "noc soc video wall setup delhi ncr",
+            "control room video wall solutions india",
+            "24 7 mission critical video wall integration",
+            "scada video wall solutions",
+            "kvm over ip matrix switcher",
+            "gem registered control room supplier",
+            "disaster management war room av"
+        ],
+        "auditorium-av-solutions.html": [
+            "auditorium av solutions",
+            "auditorium av integration india",
+            "line array sound system installation",
+            "jbl pro line array delhi ncr",
+            "ease 3d acoustic modeling",
+            "auditorium rt60 acoustic treatment",
+            "auditorium stage active led wall",
+            "cpwd gem compliant auditorium av"
+        ],
+        "av-technology-distribution.html": [
+            "av technology distributor india",
+            "commercial av wholesale supplier",
+            "samsung commercial display distributor",
+            "lg business tv wholesale delhi ncr",
+            "harman pro audio distributor india",
+            "crestron distributor india",
+            "system integrator deal registration b2b",
+            "gem tender maf letters av"
+        ],
+        "coworking-space-av-solutions.html": [
+            "coworking space av solutions",
+            "shared workspace meeting room av",
+            "hot desk meeting pod av setup",
+            "byod wireless conferencing coworking",
+            "digital signage for coworking spaces"
+        ]
     };
 
     const pageSeo = {
+        "command-control-center-av-solutions.html": {
+            title: "Best Command & Control Room (NOC/SOC) AV Solutions in Delhi NCR & India | GPSPL",
+            description: "India's premier command & control room AV systems integrator. 24/7 mission-critical Active LED video walls, zero-latency KVM-over-IP matrix, ISO 11064 ergonomic consoles, and GeM tender MAF support.",
+            type: "service",
+            serviceType: "Command and control center, NOC, SOC, and mission-critical AV systems integration",
+            image: "/assests/images/hero/video-technologies-boardroom.webp"
+        },
+        "auditorium-av-solutions.html": {
+            title: "Auditorium AV Integration, Line Arrays & Acoustic Engineering India | GPSPL",
+            description: "Turnkey auditorium AV integration for 300 to 1,500+ seaters. EASE 3D acoustic RT60 tuning, Harman JBL line arrays, stage Active LED backdrops, Shure wireless audio, and CPWD/GeM compliance across India.",
+            type: "service",
+            serviceType: "Auditorium audio-visual integration, line array sound, and acoustic engineering",
+            image: "/assests/images/products/professional-audio-solutions.webp"
+        },
+        "av-technology-distribution.html": {
+            title: "AV Technology Distributor India | Wholesale Commercial Audio Visual Supply | GPSPL",
+            description: "India's authorized Tier-1 commercial AV distributor. Direct B2B wholesale pricing on Samsung & LG commercial displays, Harman Pro audio, Crestron, Poly, and Barco with deal registration and GeM MAF support.",
+            type: "service",
+            serviceType: "Commercial AV technology distribution and B2B wholesale supply",
+            image: "/assests/images/milestones/harman-best-regional-distributor-2024.jpeg"
+        },
+        "coworking-space-av-solutions.html": {
+            title: "Coworking Space AV Solutions | Flexible Meeting Room & BYOD Audio Visual | GPSPL",
+            description: "Turnkey AV solutions for coworking spaces and flex offices: plug-and-play BYOD meeting rooms, video bars, digital signage totems, and sound masking systems across India.",
+            type: "service",
+            serviceType: "Coworking and flexible workspace audio-visual solutions",
+            image: "/assests/images/products/conference-room-solutions.webp"
+        },
         "blog/samsung-business-tv-commercial-signage-guide.html": {
             title: "Samsung Business TV & Commercial Signage Guide: BEFX, QBC & QMC Series Compared (2026) | GPSPL",
             description: "Complete 2026 guide comparing Samsung Business TV BEFX-H2, Crystal UHD QBC, and 24/7 Heavy-Duty QMC displays with SKU codes, VXT CMS, and MagicINFO S10.",
@@ -193,8 +258,8 @@
             type: "product"
         },
         "index.html": {
-            title: "Best AV Integrator India | Turnkey AV Solutions & Conference Room Setup | GPSPL",
-            description: "GPSPL (Estd. 1997) is India's best turnkey AV integrator and authorized technology distributor. We engineer complete corporate conference room AV solutions, boardroom video conferencing, active LED walls, auditoriums, and smart classrooms with direct OEM pricing, instant BOQ, and 4-hour SLA across Delhi NCR, Mumbai, Bangalore & Pan-India.",
+            title: "Spaces that Work. Technology that Lasts | Best AV Integrator & Technology Distributor India | GPSPL",
+            description: "GPSPL (Estd. 1997) is India's premier turnkey AV integrator & authorized technology distributor. We design, supply and integrate display, audio, collaboration, and control systems behind corporate boardrooms, campuses, command centers, and auditoriums across India.",
             type: "home",
             image: "/assests/images/hero/image.jpg"
         },
