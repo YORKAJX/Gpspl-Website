@@ -495,414 +495,535 @@
         box-sizing: border-box !important;
     }
 
-    /* =========================================================================
-       EDITORIAL ARCHITECTURAL HERO (Matched to Reference Design)
-       ========================================================================= */
     html body #home.hero,
     html body #home,
     #home.hero,
-    .hero-editorial-section {
-        background: #ffffff !important;
-        color: #0f172a !important;
-        position: relative !important;
-        padding: clamp(28px, 4vh, 56px) 0 clamp(28px, 4vh, 52px) !important;
-        border-bottom: 1px solid #e2e8f0 !important;
+    .hero-message-section {
         min-height: auto !important;
         height: auto !important;
+        padding: clamp(12px, 1.8vh, 18px) 0 clamp(14px, 2vh, 22px) !important;
         overflow-x: hidden !important;
         max-width: 100vw !important;
         width: 100% !important;
         box-sizing: border-box !important;
     }
 
-    .hero-editorial-grid {
-        display: grid !important;
-        grid-template-columns: minmax(0, 1.28fr) minmax(340px, 0.92fr) !important;
-        align-items: center !important;
-        gap: clamp(28px, 3.5vw, 56px) !important;
-        width: min(calc(100% - 36px), 1320px) !important;
-        max-width: 1320px !important;
-        margin: 0 auto !important;
+    html body #home .hero-message-grid,
+    html body #home.hero > .hero-message-grid,
+    .hero-message-grid {
+        align-items: start !important;
+        gap: clamp(16px, 2vw, 32px) !important;
+        width: min(calc(100% - 36px), 1280px) !important;
+        max-width: 1280px !important;
         box-sizing: border-box !important;
     }
 
-    .hero-editorial-copy {
+    html body #home .hero-message-copy,
+    .hero-message-copy {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        align-self: start !important;
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important;
-        text-align: left !important;
+        gap: 8px !important;
         width: 100% !important;
-        max-width: 720px !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
         box-sizing: border-box !important;
     }
 
-    /* Top Red Accent Line + Uppercase Eyebrow */
-    .editorial-eyebrow {
+    html body #home .hero-message-copy .hero-eyebrow,
+    .hero-message-copy .hero-eyebrow {
+        font-size: 0.72rem !important;
+        line-height: 1.3 !important;
+        margin: 0 !important;
+        padding: 4px 10px !important;
         display: inline-flex !important;
         align-items: center !important;
-        gap: 14px !important;
-        margin-bottom: 22px !important;
+        gap: 6px !important;
+        letter-spacing: 0.08em !important;
+        text-transform: uppercase !important;
+        font-weight: 800 !important;
     }
+
     .editorial-red-line {
         display: inline-block !important;
-        width: 44px !important;
+        width: 28px !important;
         height: 3px !important;
         background: #ef3438 !important;
         border-radius: 2px !important;
+        vertical-align: middle !important;
+        margin-right: 4px !important;
         flex-shrink: 0 !important;
     }
-    .editorial-eyebrow-text {
-        font-family: 'Plus Jakarta Sans', -apple-system, sans-serif !important;
-        font-size: clamp(0.74rem, 0.85vw, 0.82rem) !important;
-        font-weight: 800 !important;
-        color: #1e293b !important;
-        -webkit-text-fill-color: #1e293b !important;
-        letter-spacing: 0.1em !important;
-        text-transform: uppercase !important;
-        line-height: 1.2 !important;
+
+    .editorial-work-italic {
+        font-family: 'Playfair Display', Georgia, serif !important;
+        font-style: italic !important;
+        font-weight: 600 !important;
+        color: #ef3438 !important;
+        -webkit-text-fill-color: #ef3438 !important;
+        letter-spacing: -0.01em !important;
+        display: inline-block !important;
+        padding-right: 3px !important;
     }
 
-    /* Editorial Headline with Playfair Display Italic Serif 'work.' */
-    .editorial-main-headline {
+    /* Editorial Compact Crisp Headline — Matches Reference Typography */
+    body:has(#home.hero) #home .hero-message-copy .main-headline,
+    body:has(#home.hero) #home .hero-message-copy #home-heading,
+    html body:has(#home.hero) #home.hero .hero-message-copy .main-headline,
+    html body:has(#home.hero) #home.hero .hero-message-copy #home-heading,
+    html body:has(#home.hero) .hero-message-copy .main-headline,
+    html body #home .hero-message-copy .main-headline,
+    html body #home .main-headline,
+    html body main #home .main-headline,
+    #home-heading,
+    .main-headline {
         font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
-        font-size: clamp(2.6rem, 5.2vw, 4.4rem) !important;
+        font-size: clamp(1.4rem, 2.1vw, 2.15rem) !important;
+        line-height: 1.16 !important;
         font-weight: 850 !important;
-        line-height: 0.98 !important;
-        letter-spacing: -0.04em !important;
-        color: #0f172a !important;
-        -webkit-text-fill-color: #0f172a !important;
-        margin: 0 0 24px 0 !important;
-        text-shadow: none !important;
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 2px !important;
-    }
-    .editorial-main-headline .headline-row {
+        letter-spacing: -0.025em !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        margin: 0 !important;
+        max-width: 660px !important;
+        text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6) !important;
         display: block !important;
-        color: #0f172a !important;
-        -webkit-text-fill-color: #0f172a !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+        hyphens: none !important;
+    }
+
+    body:has(#home.hero) #home .hero-message-copy .main-headline span,
+    body:has(#home.hero) #home .hero-message-copy #home-heading span,
+    html body:has(#home.hero) #home.hero .hero-message-copy .main-headline span,
+    html body:has(#home.hero) #home.hero .hero-message-copy #home-heading span,
+    html body:has(#home.hero) .hero-message-copy .main-headline span,
+    html body #home .hero-message-copy .main-headline span,
+    html body #home .main-headline span,
+    #home-heading span,
+    .main-headline span {
+        display: block !important;
         font-size: inherit !important;
         line-height: inherit !important;
         letter-spacing: inherit !important;
-    }
-    .editorial-main-headline .editorial-italic-work {
-        font-family: 'Playfair Display', Georgia, serif !important;
-        font-style: italic !important;
-        font-weight: 500 !important;
-        color: #ef3438 !important;
-        -webkit-text-fill-color: #ef3438 !important;
-        letter-spacing: -0.02em !important;
-        display: inline-block !important;
-        padding-right: 4px !important;
+        color: inherit !important;
+        -webkit-text-fill-color: inherit !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+        white-space: normal !important;
+        hyphens: none !important;
     }
 
-    /* Clean Body Paragraph */
-    .editorial-description {
-        font-family: 'Plus Jakarta Sans', -apple-system, sans-serif !important;
-        font-size: clamp(1rem, 1.22vw, 1.16rem) !important;
-        line-height: 1.62 !important;
-        color: #475569 !important;
-        -webkit-text-fill-color: #475569 !important;
+    html body #home .hero-message-copy .hero-description,
+    .hero-message-copy .hero-description {
+        font-size: clamp(0.8rem, 0.88vw, 0.86rem) !important;
+        line-height: 1.44 !important;
+        color: rgba(241, 245, 249, 0.9) !important;
+        -webkit-text-fill-color: rgba(241, 245, 249, 0.9) !important;
+        margin: 0 !important;
         max-width: 620px !important;
-        margin: 0 0 28px 0 !important;
-        font-weight: 500 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    /* Action Buttons */
-    .editorial-actions {
+    html body #home .hero-message-copy .hero-actions,
+    .hero-message-copy .hero-actions {
         display: flex !important;
-        align-items: center !important;
+        flex-direction: row !important;
         flex-wrap: wrap !important;
-        gap: 16px !important;
-        margin-bottom: 26px !important;
-        width: 100% !important;
-    }
-    .btn-start-project {
-        background: #0f172a !important;
-        color: #ffffff !important;
-        -webkit-text-fill-color: #ffffff !important;
-        padding: 13px 26px !important;
-        font-size: 0.94rem !important;
-        font-weight: 750 !important;
-        border-radius: 4px !important;
-        text-decoration: none !important;
-        display: inline-flex !important;
         align-items: center !important;
         gap: 8px !important;
+        margin-top: 2px !important;
+    }
+
+    html body #home .hero-message-copy .hero-actions .hero-btn,
+    .hero-message-copy .hero-actions .hero-btn {
+        min-height: 38px !important;
+        padding: 8px 16px !important;
+        font-size: 0.82rem !important;
+        font-weight: 800 !important;
+        border-radius: 8px !important;
+    }
+    .btn-see-work-link {
+        background: rgba(255, 255, 255, 0.08) !important;
+        border: 1px solid rgba(255, 255, 255, 0.22) !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        text-decoration: underline !important;
+        text-underline-offset: 4px !important;
         transition: all 0.2s ease !important;
-        box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15) !important;
-        border: none !important;
     }
-    .btn-start-project:hover {
-        background: #ef3438 !important;
-        transform: translateY(-2px) !important;
-        box-shadow: 0 8px 24px rgba(239, 52, 56, 0.3) !important;
+    .btn-see-work-link:hover {
+        background: rgba(255, 255, 255, 0.18) !important;
+        border-color: rgba(239, 52, 56, 0.6) !important;
+        color: #ef3438 !important;
+        -webkit-text-fill-color: #ef3438 !important;
     }
-    .btn-start-project .cta-arrow {
-        font-size: 1.1rem !important;
-        line-height: 1 !important;
-        display: inline-block !important;
-        transition: transform 0.2s ease !important;
+
+    /* Commercial Sector Gateway (Corporate, Govt/PSU, Education, Large Venue) */
+    .hero-sector-gateway {
+        margin-top: 10px !important;
+        margin-bottom: 8px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
-    .btn-start-project:hover .cta-arrow {
-        transform: translate(2px, -2px) !important;
+    .hero-sector-header {
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        margin-bottom: 6px !important;
     }
-    .btn-see-work {
-        color: #0f172a !important;
-        -webkit-text-fill-color: #0f172a !important;
-        font-size: 0.94rem !important;
-        font-weight: 750 !important;
-        text-decoration: none !important;
-        border-bottom: 2px solid #0f172a !important;
-        padding-bottom: 3px !important;
+    .sector-tagline {
+        font-size: 0.74rem !important;
+        font-weight: 800 !important;
+        color: #e2e8f0 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.04em !important;
         display: inline-flex !important;
         align-items: center !important;
         gap: 6px !important;
-        transition: all 0.2s ease !important;
     }
-    .btn-see-work:hover {
+    .sector-tagline i {
         color: #ef3438 !important;
-        -webkit-text-fill-color: #ef3438 !important;
-        border-bottom-color: #ef3438 !important;
-        transform: translateX(3px) !important;
     }
-    .btn-editorial-wa {
-        background: #25d366 !important;
-        color: #ffffff !important;
-        -webkit-text-fill-color: #ffffff !important;
-        padding: 13px 22px !important;
-        font-size: 0.9rem !important;
-        font-weight: 750 !important;
-        border-radius: 4px !important;
-        text-decoration: none !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        gap: 8px !important;
-        box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25) !important;
-        transition: all 0.2s ease !important;
-        border: none !important;
-    }
-    .btn-editorial-wa:hover {
-        background: #1da851 !important;
-        transform: translateY(-2px) !important;
-    }
-
-    /* Minimalist Clean Sector Chips */
-    .editorial-sector-gateway {
-        width: 100% !important;
-        margin-top: 4px !important;
-        margin-bottom: 16px !important;
-    }
-    .editorial-sector-gateway .hero-sector-chips {
+    .hero-sector-chips {
         display: grid !important;
         grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-        gap: 8px !important;
+        gap: 6px !important;
         width: 100% !important;
-    }
-    .editorial-sector-gateway .hero-sector-chip {
-        display: flex !important;
-        align-items: center !important;
-        gap: 8px !important;
-        background: #f8fafc !important;
-        border: 1px solid #e2e8f0 !important;
-        border-radius: 8px !important;
-        padding: 8px 10px !important;
-        color: #0f172a !important;
-        text-decoration: none !important;
-        transition: all 0.2s ease !important;
         box-sizing: border-box !important;
     }
-    .editorial-sector-gateway .hero-sector-chip:hover,
-    .editorial-sector-gateway .hero-sector-chip.active {
-        background: #fff5f5 !important;
+    .hero-sector-chip {
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        background: rgba(15, 23, 42, 0.75) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        border-radius: 8px !important;
+        padding: 6px 10px !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+        transition: all 0.2s ease !important;
+        cursor: pointer !important;
+        box-sizing: border-box !important;
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+    }
+    .hero-sector-chip:hover,
+    .hero-sector-chip.active {
+        background: rgba(239, 52, 56, 0.22) !important;
         border-color: #ef3438 !important;
         transform: translateY(-1px) !important;
     }
-    .editorial-sector-gateway .hero-sector-chip strong {
-        color: #0f172a !important;
-        -webkit-text-fill-color: #0f172a !important;
-        font-size: 0.76rem !important;
-        font-weight: 800 !important;
+    .hero-sector-chip i {
+        font-size: 0.95rem !important;
+        color: #ef3438 !important;
+        flex-shrink: 0 !important;
     }
-    .editorial-sector-gateway .hero-sector-chip span {
-        color: #64748b !important;
-        -webkit-text-fill-color: #64748b !important;
-        font-size: 0.65rem !important;
-    }
-
-    /* Partner Logos in Light Editorial Mode */
-    .editorial-partner-logos {
-        width: 100% !important;
-        margin-top: 10px !important;
-        padding-top: 10px !important;
-        border-top: 1px solid #e2e8f0 !important;
-    }
-    .editorial-partner-logos .hero-partner-track .partner-logo-item img {
-        filter: grayscale(100%) !important;
-        opacity: 0.65 !important;
-        transition: all 0.25s ease !important;
-    }
-    .editorial-partner-logos .hero-partner-track .partner-logo-item:hover img {
-        filter: grayscale(0%) !important;
-        opacity: 1 !important;
-        transform: scale(1.05) !important;
-    }
-
-    /* Right Showcase Architecture Card */
-    .hero-editorial-showcase {
-        width: 100% !important;
-        max-width: 460px !important;
-        margin: 0 auto !important;
-    }
-    .showcase-card {
-        background: #ffffff !important;
-        border: 1px solid #e2e8f0 !important;
-        border-radius: 18px !important;
-        overflow: hidden !important;
-        box-shadow: 0 20px 48px rgba(15, 23, 42, 0.08) !important;
-        transition: transform 0.25s ease, box-shadow 0.25s ease !important;
-    }
-    .showcase-card:hover {
-        transform: translateY(-4px) !important;
-        box-shadow: 0 28px 60px rgba(15, 23, 42, 0.12) !important;
-    }
-    .showcase-media-wrap {
-        position: relative !important;
-        width: 100% !important;
-        height: 220px !important;
-        background: #0f172a !important;
-        overflow: hidden !important;
-    }
-    .showcase-video {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        opacity: 0.9 !important;
-    }
-    .showcase-badge-pill {
-        position: absolute !important;
-        top: 14px !important;
-        left: 14px !important;
-        background: rgba(15, 23, 42, 0.85) !important;
-        backdrop-filter: blur(8px) !important;
-        border: 1px solid rgba(255, 255, 255, 0.2) !important;
-        color: #ffffff !important;
-        padding: 5px 12px !important;
-        border-radius: 20px !important;
-        font-size: 0.72rem !important;
-        font-weight: 800 !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        gap: 6px !important;
-    }
-    .showcase-body {
-        padding: 20px !important;
-        background: #ffffff !important;
-    }
-    .showcase-metrics-row {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        gap: 10px !important;
-        margin-bottom: 16px !important;
-    }
-    .showcase-stat {
-        background: #f8fafc !important;
-        border: 1px solid #e2e8f0 !important;
-        border-radius: 10px !important;
-        padding: 10px 12px !important;
-        text-align: left !important;
-    }
-    .showcase-stat strong {
-        display: block !important;
-        font-size: 1.15rem !important;
-        font-weight: 850 !important;
-        color: #0f172a !important;
-        line-height: 1.1 !important;
-    }
-    .showcase-stat span {
-        font-size: 0.68rem !important;
-        color: #64748b !important;
-        font-weight: 600 !important;
-        line-height: 1.2 !important;
-    }
-    .showcase-actions {
+    .hero-sector-chip div {
         display: flex !important;
         flex-direction: column !important;
-        gap: 8px !important;
+        min-width: 0 !important;
+        text-align: left !important;
     }
-    .showcase-btn-boq {
-        background: #ef3438 !important;
+    .hero-sector-chip strong {
+        font-size: 0.74rem !important;
         color: #ffffff !important;
-        -webkit-text-fill-color: #ffffff !important;
-        padding: 10px !important;
-        border-radius: 8px !important;
-        font-size: 0.84rem !important;
-        font-weight: 800 !important;
-        text-align: center !important;
-        text-decoration: none !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 6px !important;
-        box-shadow: 0 4px 14px rgba(239, 52, 56, 0.3) !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        line-height: 1.2 !important;
     }
-    .showcase-btn-wa {
-        background: #f1f5f9 !important;
-        color: #0f172a !important;
-        -webkit-text-fill-color: #0f172a !important;
-        border: 1px solid #cbd5e1 !important;
-        padding: 9px !important;
-        border-radius: 8px !important;
-        font-size: 0.82rem !important;
-        font-weight: 750 !important;
-        text-align: center !important;
-        text-decoration: none !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
+    .hero-sector-chip span {
+        font-size: 0.62rem !important;
+        color: #94a3b8 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        line-height: 1.2 !important;
+    }
+
+    html body #home .hero-partner-logos,
+    .hero-partner-logos {
+        margin-top: 6px !important;
+        padding-top: 6px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Right-side executive card compact scaling */
+    html body #home .hero-executive-card,
+    html body main #home .hero-executive-card,
+    .hero-executive-card {
+        max-width: 400px !important;
+        padding: 14px 16px !important;
+        gap: 8px !important;
+        align-self: start !important;
+        margin-top: 0 !important;
+        border-radius: 16px !important;
+        box-sizing: border-box !important;
+    }
+
+    .hero-executive-card .hero-card-title {
+        font-size: 0.92rem !important;
+        line-height: 1.22 !important;
+        margin: 0 !important;
+    }
+
+    .hero-executive-card .hero-card-desc {
+        font-size: 0.74rem !important;
+        line-height: 1.36 !important;
+        margin: 0 !important;
+    }
+
+    .hero-card-metrics {
         gap: 6px !important;
     }
-    .showcase-footer {
-        margin-top: 12px !important;
-        padding-top: 10px !important;
-        border-top: 1px solid #f1f5f9 !important;
-        font-size: 0.72rem !important;
-        color: #64748b !important;
-        text-align: center !important;
+
+    .hero-metric-item {
+        padding: 8px 10px !important;
+    }
+
+    .hero-metric-item .metric-num {
+        font-size: 1.1rem !important;
+        line-height: 1.1 !important;
+    }
+
+    .hero-metric-item .metric-label {
+        font-size: 0.65rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .hero-card-actions {
+        gap: 6px !important;
+        margin-top: 2px !important;
+    }
+
+    .btn-hero-card-boq {
+        padding: 9px 12px !important;
+        font-size: 0.8rem !important;
+    }
+
+    .btn-hero-card-wa {
+        padding: 7px 12px !important;
+        font-size: 0.78rem !important;
     }
 
     @media (max-width: 980px) {
-        .hero-editorial-grid {
-            grid-template-columns: 1fr !important;
-            gap: 28px !important;
+        html body #home.hero,
+        html body #home {
+            padding: 16px 0 24px !important;
+            overflow-x: hidden !important;
         }
-        .hero-editorial-showcase {
+        html body #home .hero-message-grid,
+        html body #home.hero > .hero-message-grid,
+        .hero-message-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            width: 100% !important;
             max-width: 100% !important;
+            min-width: 0 !important;
+            padding: 0 16px !important;
+            margin: 0 auto !important;
+            gap: 20px !important;
+            box-sizing: border-box !important;
+            overflow-x: hidden !important;
         }
-        .editorial-sector-gateway .hero-sector-chips {
-            grid-template-columns: repeat(2, 1fr) !important;
+        html body #home .hero-message-copy,
+        .hero-message-copy {
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+            box-sizing: border-box !important;
+            overflow-x: hidden !important;
+        }
+        html body #home .hero-executive-card,
+        .hero-executive-card {
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+            box-sizing: border-box !important;
+        }
+        .hero-partner-logos,
+        .hero-partner-marquee {
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+            box-sizing: border-box !important;
+            overflow: hidden !important;
+        }
+        html body:has(#home.hero) .hero-message-copy .main-headline,
+        html body #home .main-headline,
+        #home-heading,
+        .main-headline {
+            font-size: clamp(1.12rem, 3.2vw, 1.35rem) !important;
+            line-height: 1.22 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            overflow-wrap: break-word !important;
         }
     }
 
     @media (max-width: 640px) {
-        .editorial-main-headline {
-            font-size: clamp(2.1rem, 9.5vw, 2.9rem) !important;
-            line-height: 1.02 !important;
+        html body #home.hero,
+        html body #home {
+            padding: 12px 0 16px !important;
+            overflow-x: hidden !important;
+            width: 100% !important;
+            max-width: 100vw !important;
         }
-        .editorial-actions {
+        html body #home .hero-message-grid,
+        html body #home.hero > .hero-message-grid,
+        .hero-message-grid {
+            padding: 0 12px !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+            gap: 16px !important;
+            box-sizing: border-box !important;
+            overflow-x: hidden !important;
+        }
+        html body #home .hero-message-copy,
+        .hero-message-copy {
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+            box-sizing: border-box !important;
+            overflow-x: hidden !important;
+        }
+        html body:has(#home.hero) .hero-message-copy .main-headline,
+        html body #home .main-headline,
+        #home-heading,
+        .main-headline {
+            font-size: clamp(1.02rem, 4.4vw, 1.2rem) !important;
+            line-height: 1.25 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            word-break: normal !important;
+            overflow-wrap: break-word !important;
+            box-sizing: border-box !important;
+        }
+        html body:has(#home.hero) .hero-message-copy .main-headline span,
+        html body #home .main-headline span,
+        #home-heading span,
+        .main-headline span {
+            display: inline !important;
+            white-space: normal !important;
+            word-break: normal !important;
+            overflow-wrap: break-word !important;
+        }
+        html body #home .hero-message-copy .hero-description,
+        .hero-description {
+            font-size: 0.82rem !important;
+            line-height: 1.45 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+            overflow-wrap: break-word !important;
+        }
+        html body #home .hero-message-copy .hero-actions,
+        html body #home .hero-actions,
+        .hero-actions {
+            display: flex !important;
             flex-direction: column !important;
-            align-items: stretch !important;
+            gap: 10px !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+            margin-top: 12px !important;
+            margin-bottom: 16px !important;
+            position: relative !important;
+            z-index: 10 !important;
+            box-sizing: border-box !important;
         }
-        .btn-start-project,
-        .btn-editorial-wa,
-        .btn-see-work {
+        html body #home .hero-message-copy .hero-actions .hero-btn,
+        html body #home .hero-actions a,
+        html body #home .hero-actions a.hero-btn,
+        html body #home .hero-actions a.btn-primary,
+        html body #home .hero-actions a.btn-secondary {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
             justify-content: center !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+            min-height: 48px !important;
+            padding: 12px 14px !important;
+            border-radius: 12px !important;
+            font-size: 0.94rem !important;
+            font-weight: 800 !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
             text-align: center !important;
+            text-decoration: none !important;
+            box-sizing: border-box !important;
+            white-space: normal !important;
+            line-height: 1.2 !important;
+            gap: 10px !important;
+            opacity: 1 !important;
+            visibility: visible !important;
         }
-        .editorial-sector-gateway .hero-sector-chips {
-            grid-template-columns: 1fr !important;
+        html body #home .hero-actions a *,
+        html body #home .hero-actions a span {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            font-size: inherit !important;
+            font-weight: 800 !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: inline-block !important;
+            line-height: 1.2 !important;
         }
-    }
+        /* 1. Primary Red BOQ Button */
+        html body #home .hero-actions a.btn-primary {
+            background: linear-gradient(135deg, #ef3438 0%, #c91f28 100%) !important;
+            border: 1.5px solid #ef3438 !important;
+            box-shadow: 0 8px 24px rgba(239, 52, 56, 0.45) !important;
+        }
+        html body #home .hero-actions a.btn-primary i {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            font-size: 1.05rem !important;
+        }
+        /* 2. WhatsApp Button: Solid vibrant green for immediate lead generation */
+        html body #home .hero-actions a.hero-btn-whatsapp,
+        html body #home .hero-actions a[href*="wa.me"] {
+            background: #25d366 !important;
+            border: 1.5px solid #25d366 !important;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35) !important;
+        }
+        html body #home .hero-actions a.hero-btn-whatsapp i,
+        html body #home .hero-actions a[href*="wa.me"] i {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            font-size: 1.15rem !important;
+        }
+        /* 3. Call Button: Frosted glass */
+        html body #home .hero-actions a.btn-secondary:not(.hero-btn-whatsapp):not([href*="wa.me"]) {
+            background: rgba(255, 255, 255, 0.12) !important;
+            border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+        }
+        html body #home .hero-actions a.btn-secondary:not(.hero-btn-whatsapp):not([href*="wa.me"]) i {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+            font-size: 0.95rem !important;
+        }
+
+        /* Sector Chips Mobile 2x2 Grid */
+        .hero-sector-chips {
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            gap: 6px !important;
+            width: 100% !important;
+        }
         .hero-sector-chip {
             padding: 6px 8px !important;
             gap: 6px !important;
@@ -1280,45 +1401,34 @@
 
 <!-- Hero section styles managed by css/home-hero-fix.css?v=20260909-lead-v1 -->
 
-    <section id="home" class="hero hero-editorial-section" aria-label="GPSPL Turnkey AV & Technology Distribution">
-        <div class="container hero-editorial-grid">
-            <div class="hero-editorial-copy">
-                <!-- Eyebrow with Red Line -->
-                <div class="editorial-eyebrow">
+    <section id="home" class="hero hero-message-section" aria-label="GPSPL enterprise AV showcase video">
+        <video class="hero-video" autoplay muted loop playsinline poster="assests/images/hero/Vconf.webp" aria-hidden="true">
+            <source src="assests/videos/gpspl-brochure-hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-video-overlay"></div>
+        <div class="container hero-message-grid">
+            <div class="hero-message-copy reveal">
+                <p class="hero-eyebrow">
                     <span class="editorial-red-line" aria-hidden="true"></span>
-                    <span class="editorial-eyebrow-text">AV INTEGRATION &bull; TECHNOLOGY DISTRIBUTION &bull; SINCE 1997</span>
-                </div>
-
-                <!-- Main Editorial Headline with Serif Italic 'work.' -->
-                <h1 id="home-heading" class="editorial-main-headline">
-                    <span class="headline-row">Spaces that</span>
-                    <span class="headline-row"><em class="editorial-italic-work">work.</em></span>
-                    <span class="headline-row">Technology</span>
-                    <span class="headline-row">that lasts.</span>
-                </h1>
-
-                <!-- Architectural Description -->
-                <p class="editorial-description">
-                    We design, supply and integrate the display, audio, collaboration and control systems behind boardrooms, campuses, hospitals, hotels and public spaces.
+                    <span>AV INTEGRATION &bull; TECHNOLOGY DISTRIBUTION &bull; SINCE 1997</span>
                 </p>
-
-                <!-- High-Impact Action Buttons -->
-                <div class="editorial-actions">
-                    <a href="#instant-boq-planner" class="btn-start-project">
-                        Start a project <span class="cta-arrow">&nearr;</span>
-                    </a>
-                    <a href="#turnkey-industry-solutions" class="btn-see-work">
-                        See the work &rarr;
-                    </a>
-                    <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20want%20to%20start%20an%20AV%20project." target="_blank" rel="noopener noreferrer" class="btn-editorial-wa">
-                        <i class="fab fa-whatsapp"></i> WhatsApp Quote
-                    </a>
+                <h1 id="home-heading" class="main-headline">
+                    <span>Spaces that <em class="editorial-work-italic">work.</em></span>
+                    <span>Technology that lasts.</span>
+                </h1>
+                <p class="hero-description">
+                    We design, supply and integrate the display, audio, collaboration and control systems behind boardrooms, campuses, hospitals, hotels and public spaces across India with direct Tier-1 OEM pricing &amp; guaranteed 4-hour on-site SLA.
+                </p>
+                <div class="hero-actions" style="width: 100%; max-width: 100%; box-sizing: border-box;">
+                    <a href="#instant-boq-planner" class="btn-primary hero-btn" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;"><i class="fas fa-file-invoice" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;"></i> <span style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; font-weight: 800;">Start a project &nearr;</span></a>
+                    <a href="#turnkey-industry-solutions" class="btn-secondary hero-btn btn-see-work-link" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;"><span style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; font-weight: 700;">See the work &rarr;</span></a>
+                    <a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20have%20an%20urgent%20commercial%20AV%20%2F%20Active%20LED%20Wall%20requirement.%20Please%20share%20BOQ%20pricing." class="btn-secondary hero-btn hero-btn-whatsapp" target="_blank" rel="noopener noreferrer" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;"><i class="fab fa-whatsapp" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;"></i> <span style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; font-weight: 800;">WhatsApp Quote</span></a>
+                    <a href="tel:+918920830377" class="btn-secondary hero-btn" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;"><i class="fas fa-phone-alt" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;"></i> <span style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; font-weight: 800;">Call: +91 89208 30377</span></a>
                 </div>
-
-                <!-- Sector Fast-Select Gateway (Clean Minimalist Design) -->
-                <div class="hero-sector-gateway editorial-sector-gateway" aria-label="Commercial AV by Sector">
+                <!-- SECTOR FAST-SELECT GATEWAY (CORPORATE, GOVT, EDUCATION, LED) -->
+                <div class="hero-sector-gateway" aria-label="Commercial AV by Sector">
                     <div class="hero-sector-header">
-                        <span class="sector-tagline" style="color: #64748b !important;"><i class="fas fa-layer-group" style="color: #ef3438 !important;"></i> Solutions By Commercial Sector:</span>
+                        <span class="sector-tagline"><i class="fas fa-layer-group"></i> Fast Project Quotes By Commercial Sector:</span>
                     </div>
                     <div class="hero-sector-chips">
                         <a href="#instant-boq-planner" class="hero-sector-chip active" data-sector="boardroom" title="Corporate Boardroom &amp; Conference Room AV Solutions">
@@ -1351,12 +1461,10 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- Authorized OEM Partners Marquee -->
-                <div class="hero-partner-logos editorial-partner-logos" aria-label="Authorized OEM Brands">
+                <div class="hero-partner-logos" aria-label="Authorized OEM Brands">
                     <div class="hero-partner-header">
-                        <span class="hero-partner-label" style="color: #475569 !important;"><i class="fas fa-certificate" style="color: #ef3438;"></i> Authorized OEM Supply &amp; System Integration</span>
-                        <span class="hero-partner-badge" style="background: #f1f5f9 !important; color: #0f172a !important; border: 1px solid #cbd5e1 !important;">Tier-1 Direct Commercial Pricing</span>
+                        <span class="hero-partner-label"><i class="fas fa-certificate" style="color: #ef3438;"></i> Authorized OEM Supply &amp; System Integration</span>
+                        <span class="hero-partner-badge">Tier-1 Direct Commercial Pricing</span>
                     </div>
                     <div class="hero-partner-marquee">
                         <div class="hero-partner-track">
@@ -1389,50 +1497,46 @@
                     </div>
                 </div>
             </div>
+            <div class="hero-executive-card reveal" aria-label="GPSPL Turnkey Delivery & OEM Matrix">
+                <div class="hero-card-top">
+                    <div class="hero-card-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Enterprise Delivery Matrix</span>
+                    </div>
+                    <span class="hero-card-estd"><i class="fas fa-shield-alt"></i> Estd. 1997</span>
+                </div>
+                <h3 class="hero-card-title">Pan-India Turnkey Delivery &amp; Direct OEM Supply</h3>
+                <p class="hero-card-desc">Commercial audio-visual engineering, active LED display walls, and 4-hour SLA lifecycle support for corporate, defense, healthcare &amp; education campuses across all 28 States &amp; UTs.</p>
+                
+                <div class="hero-card-metrics">
+                    <div class="hero-metric-item">
+                        <span class="metric-num">1,500+</span>
+                        <span class="metric-label">Enterprise Facilities Deployed</span>
+                    </div>
+                    <div class="hero-metric-item">
+                        <span class="metric-num">28 States</span>
+                        <span class="metric-label">Pan-India On-Site Engineering</span>
+                    </div>
+                    <div class="hero-metric-item">
+                        <span class="metric-num">4 Hours</span>
+                        <span class="metric-label">Guaranteed Emergency SLA</span>
+                    </div>
+                    <div class="hero-metric-item">
+                        <span class="metric-num">Tier-1 Direct</span>
+                        <span class="metric-label">Authorized OEM Commercial Supply</span>
+                    </div>
+                </div>
 
-            <!-- Right Showcase Architecture Card -->
-            <div class="hero-editorial-showcase" aria-label="GPSPL Turnkey Delivery &amp; OEM Matrix">
-                <div class="showcase-card">
-                    <div class="showcase-media-wrap">
-                        <video class="showcase-video" autoplay muted loop playsinline poster="assests/images/hero/Vconf.webp">
-                            <source src="assests/videos/gpspl-brochure-hero.mp4" type="video/mp4">
-                        </video>
-                        <div class="showcase-badge-pill">
-                            <i class="fas fa-certificate" style="color: #ef3438;"></i>
-                            <span>Enterprise Integration Matrix</span>
-                        </div>
-                    </div>
-                    <div class="showcase-body">
-                        <div class="showcase-metrics-row">
-                            <div class="showcase-stat">
-                                <strong>1,500+</strong>
-                                <span>Facilities Deployed</span>
-                            </div>
-                            <div class="showcase-stat">
-                                <strong>28 States</strong>
-                                <span>Pan-India On-Site</span>
-                            </div>
-                            <div class="showcase-stat">
-                                <strong>4 Hours</strong>
-                                <span>Emergency SLA</span>
-                            </div>
-                            <div class="showcase-stat">
-                                <strong>Tier-1</strong>
-                                <span>Direct OEM Pricing</span>
-                            </div>
-                        </div>
-                        <div class="showcase-actions">
-                            <a href="#instant-boq-planner" class="showcase-btn-boq">
-                                <i class="fas fa-file-invoice"></i> Configure Project BOQ &darr;
-                            </a>
-                            <a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20have%20an%20urgent%20commercial%20AV%20%2F%20Active%20LED%20Wall%20requirement.%20Please%20share%20BOQ%20pricing." class="showcase-btn-wa" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-whatsapp"></i> WhatsApp Team
-                            </a>
-                        </div>
-                        <div class="showcase-footer">
-                            <i class="fas fa-check-circle" style="color: #16a34a;"></i> Authorized: Samsung &bull; LG &bull; Crestron &bull; Sennheiser &bull; Absen &bull; Poly
-                        </div>
-                    </div>
+                <div class="hero-card-actions">
+                    <a href="#instant-boq-planner" class="btn-hero-card-boq">
+                        <i class="fas fa-file-invoice"></i> Configure Project BOQ Below &darr;
+                    </a>
+                    <a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20have%20an%20urgent%20commercial%20AV%20%2F%20Active%20LED%20Wall%20requirement.%20Please%20share%20BOQ%20pricing." class="btn-hero-card-wa" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Technical Team
+                    </a>
+                </div>
+                <div class="hero-card-footer">
+                    <i class="fas fa-check-circle" style="color: #22c55e;"></i> Authorized OEM: Samsung &bull; LG &bull; Crestron &bull; Sennheiser &bull; Poly &bull; Absen
                 </div>
             </div>
         </div>
