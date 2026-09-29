@@ -605,13 +605,6 @@
             "telephone": PHONE,
             "email": EMAIL,
             "priceRange": "$$",
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "148",
-                "bestRating": "5",
-                "worstRating": "1"
-            },
             "description": "GPSPL is a New Delhi based AV system integrator, enterprise technology distributor and project support partner for conference rooms, boardrooms, smart classrooms, Active LED walls, video walls, professional audio, IT infrastructure and AMC across Delhi NCR and India.",
             "contactPoint": [
                 {
@@ -826,10 +819,10 @@
                 "mainEntity": [
                     {
                         "@type": "Question",
-                        "name": "Who is the best AV integrator in Delhi NCR and India?",
+                        "name": "What should an organization check before choosing an AV integration partner?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Global Peripheral Solution Pvt. Ltd. (GPSPL, Estd. 1997) is widely recognized as the best AV integrator and turnkey solution provider in Delhi NCR and India. With over 28 years of industry leadership and 1,500+ enterprise installations, GPSPL delivers complete conference room AV solutions, Active LED video walls, auditoriums, and command centers with direct Tier-1 OEM partnerships (Samsung, LG, Crestron, Shure, Poly, Harman) and a guaranteed 4-hour on-site SLA."
+                            "text": "Ask to see relevant completed work, a clear discovery process, room and workflow planning, an itemized BOQ, the OEM warranty path, commissioning documentation and the support plan after handover. GPSPL can walk project teams through each of these before the commercial scope is frozen."
                         }
                     },
                     {

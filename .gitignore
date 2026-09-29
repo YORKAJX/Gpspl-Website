@@ -5,6 +5,7 @@ tmp/
 JS/site-config.local.js
 backend/.env
 backend/node_modules/
+node_modules/
 backend/logs/*.log
 backend/uploads/*
 !backend/uploads/.gitkeep

@@ -61,6 +61,11 @@ const SPAM_KEYWORDS = [
     'porn', 'dating service', 'hack service', 'ranking guarantee'
 ];
 
+const GENERIC_EMAIL_DOMAINS = new Set([
+    'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'icloud.com',
+    'rediffmail.com', 'proton.me', 'protonmail.com'
+]);
+
 const clean = (val, max = 500) =>
     String(val || '')
         .replace(/[<>]/g, '')
@@ -237,6 +242,8 @@ export const handler = async (event = {}) => {
     const company = clean(body.company || body.organization || '', 100);
     const location = clean(body.location || body.city || '', 100);
     const requirement = clean(body.requirement || body.service || body.category || 'General AV Enquiry', 120);
+    const timeline = clean(body.timeline || body.project_timeline || '', 100);
+    const budget = clean(body.budget || body.budget_range || '', 100);
     const message = clean(body.message || body.details || '', 2000);
     const leadSource = clean(body.lead_source || body.source || 'Website Contact Form', 100);
     const turnstileToken = body['cf-turnstile-response'] || '';
@@ -297,7 +304,22 @@ export const handler = async (event = {}) => {
         return json(400, { error: 'Bot verification check failed. Please refresh the page and try again.' }, baseHeaders);
     }
 
-    // 9. DISPATCH ALERTS TO TEAM
+    // 9. SCORE COMMERCIAL READINESS SO THE SALES TEAM CAN PRIORITIZE FOLLOW-UP
+    let leadScore = 0;
+    if (company) leadScore += 10;
+    if (email) leadScore += 5;
+    if (email && !GENERIC_EMAIL_DOMAINS.has(email.split('@')[1])) leadScore += 10;
+    if (location) leadScore += 5;
+    if (requirement && !/general|other/i.test(requirement)) leadScore += 10;
+    if (message.length >= 60) leadScore += 10;
+    if (message.length >= 180) leadScore += 5;
+    if (timeline) leadScore += 5;
+    if (/immediate|under 2 weeks|1 to 2 months/i.test(timeline)) leadScore += 10;
+    if (budget && !/guidance/i.test(budget)) leadScore += 10;
+
+    const leadQuality = leadScore >= 55 ? 'HIGH' : leadScore >= 30 ? 'MEDIUM' : 'EARLY';
+
+    // 10. DISPATCH ALERTS TO TEAM
     const istTime = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' });
     const defaultTeamEmails = 'global@gpspl.co.in, karan@gpspl.co.in, itsdivesh221@gmail.com';
     const recipientEmails = (process.env.LEAD_NOTIFICATION_EMAILS || defaultTeamEmails)
@@ -305,15 +327,19 @@ export const handler = async (event = {}) => {
         .map(e => e.trim())
         .filter(Boolean);
 
-    const emailSubject = `⚡ NEW VERIFIED LEAD: [${requirement}] ${name} - ${company || 'Individual'}`;
+    const emailSubject = `[${leadQuality} ${leadScore}] New website lead: ${requirement} — ${name}`;
     const emailHtml = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
             <div style="background: #0f172a; color: #ffffff; padding: 18px 24px;">
-                <h2 style="margin: 0; font-size: 20px;">⚡ New Verified GPSPL Project Lead</h2>
+                <h2 style="margin: 0; font-size: 20px;">New GPSPL Project Lead · ${leadQuality} priority</h2>
                 <p style="margin: 4px 0 0; color: #94a3b8; font-size: 13px;">Received via website enquiry desk (${istTime})</p>
             </div>
             <div style="padding: 24px; background: #ffffff;">
                 <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                    <tr style="border-bottom: 1px solid #f1f5f9;">
+                        <td style="padding: 10px 0; color: #64748b; font-weight: bold;">Lead Score</td>
+                        <td style="padding: 10px 0; color: #0f172a;"><strong>${leadQuality}</strong> · ${leadScore}/75</td>
+                    </tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;">
                         <td style="padding: 10px 0; color: #64748b; font-weight: bold; width: 140px;">Client Name</td>
                         <td style="padding: 10px 0; color: #0f172a; font-weight: bold;">${name}</td>
@@ -339,6 +365,14 @@ export const handler = async (event = {}) => {
                         <td style="padding: 10px 0; color: #ef3438; font-weight: bold;">${requirement}</td>
                     </tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;">
+                        <td style="padding: 10px 0; color: #64748b; font-weight: bold;">Timeline</td>
+                        <td style="padding: 10px 0; color: #0f172a;">${timeline || 'Not specified'}</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #f1f5f9;">
+                        <td style="padding: 10px 0; color: #64748b; font-weight: bold;">Budget Range</td>
+                        <td style="padding: 10px 0; color: #0f172a;">${budget || 'Not specified'}</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #f1f5f9;">
                         <td style="padding: 10px 0; color: #64748b; font-weight: bold;">Lead Source</td>
                         <td style="padding: 10px 0; color: #475569;">${leadSource}</td>
                     </tr>
@@ -355,16 +389,44 @@ export const handler = async (event = {}) => {
     `;
 
     const mailFrom = process.env.MAIL_FROM || 'GPSPL Leads <no-reply@gpspl.co.in>';
-    await sendResendEmail({
+    const acknowledgementHtml = `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #172033;">
+            <div style="background:#071526;color:#fff;padding:24px;border-radius:12px 12px 0 0;">
+                <p style="margin:0 0 8px;color:#ff6b6f;font-weight:700;">GPSPL PROJECT DESK</p>
+                <h2 style="margin:0;font-size:22px;">We have received your requirement.</h2>
+            </div>
+            <div style="padding:24px;border:1px solid #e2e8f0;border-top:0;border-radius:0 0 12px 12px;">
+                <p>Hello ${name},</p>
+                <p>Thank you for sharing your ${requirement} requirement. Our project team will review the scope, location${timeline ? ` and ${timeline.toLowerCase()} timeline` : ''} before contacting you.</p>
+                <p><strong>What happens next:</strong> requirement review, a short discovery call if needed, then a solution recommendation or itemized BOQ based on the available details.</p>
+                <p>If the project is urgent, call <a href="tel:+918920830377">+91 89208 30377</a> or reply to this email with drawings, room dimensions or tender documents.</p>
+                <p style="margin-top:24px;">GPSPL Project Desk<br>Global Peripheral Solution Pvt. Ltd.</p>
+            </div>
+        </div>`;
+
+    const deliveries = [sendResendEmail({
         to: recipientEmails,
         from: mailFrom,
         subject: emailSubject,
         html: emailHtml,
         replyTo: email || recipientEmails[0] || 'global@gpspl.co.in'
-    });
+    })];
+
+    if (email) {
+        deliveries.push(sendResendEmail({
+            to: [email],
+            from: mailFrom,
+            subject: `We received your GPSPL project enquiry — ${requirement}`,
+            html: acknowledgementHtml,
+            replyTo: recipientEmails[0] || 'global@gpspl.co.in'
+        }));
+    }
+
+    await Promise.allSettled(deliveries);
 
     return json(200, {
         success: true,
-        message: 'Thank you for contacting GPSPL! Your enquiry has been routed to our project engineering desk. Our team will contact you within 2 business hours.'
+        leadQuality,
+        message: 'Thank you for contacting GPSPL. Your enquiry has been routed to our project team for review.'
     }, baseHeaders);
 };

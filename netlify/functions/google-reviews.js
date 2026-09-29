@@ -112,8 +112,6 @@ exports.handler = async (event) => {
     if (!apiKey || !placeId) {
         return json(200, {
             configured: false,
-            rating: 4.9,
-            totalReviews: 68,
             googleMapsUrl,
             reviews: []
         }, baseHeaders);
@@ -152,8 +150,8 @@ exports.handler = async (event) => {
             return json(200, {
                 configured: true,
                 name: place.displayName && place.displayName.text ? place.displayName.text : 'Global Peripheral Solution Pvt. Ltd.',
-                rating: place.rating || 4.9,
-                totalReviews: place.userRatingCount || 68,
+                rating: place.rating || 0,
+                totalReviews: place.userRatingCount || 0,
                 googleMapsUrl: place.googleMapsUri || googleMapsUrl,
                 reviews: reviews.slice(0, 6)
             }, baseHeaders);
@@ -180,8 +178,8 @@ exports.handler = async (event) => {
                 return json(200, {
                     configured: true,
                     name: res.name || 'Global Peripheral Solution Pvt. Ltd.',
-                    rating: res.rating || 4.9,
-                    totalReviews: res.user_ratings_total || 68,
+                    rating: res.rating || 0,
+                    totalReviews: res.user_ratings_total || 0,
                     googleMapsUrl: res.url || googleMapsUrl,
                     reviews: reviews.slice(0, 6)
                 }, baseHeaders);
@@ -193,8 +191,6 @@ exports.handler = async (event) => {
 
     return json(200, {
         configured: true,
-        rating: 4.9,
-        totalReviews: 68,
         googleMapsUrl,
         reviews: []
     }, baseHeaders);

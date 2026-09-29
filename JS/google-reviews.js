@@ -39,12 +39,37 @@
 
     const showFallback = (message) => {
         track.innerHTML = fallbackHtml;
-        ratingEl.innerHTML = '4.9 <span>/ 5</span>';
-        if (countEl) countEl.textContent = '(148+ Reviews)';
+        ratingEl.innerHTML = 'Google <span>Reviews</span>';
+        if (countEl) countEl.textContent = '';
         starsEl.textContent = '\u2605\u2605\u2605\u2605\u2605';
-        starsEl.setAttribute('aria-label', 'Google reviews link');
-        statusEl.textContent = message || 'Open Google to view customer feedback';
+        starsEl.setAttribute('aria-label', 'Open the current GPSPL rating on Google');
+        statusEl.textContent = message || 'View the current rating and customer feedback on Google';
         document.dispatchEvent(new CustomEvent('gpspl:reviews-loaded'));
+    };
+
+    const publishReviewSchema = (payload) => {
+        const rating = Number(payload.rating || 0);
+        const total = Number(payload.totalReviews || 0);
+        if (!rating || !total) return;
+
+        document.getElementById('gpspl-live-review-schema')?.remove();
+        const schema = document.createElement('script');
+        schema.id = 'gpspl-live-review-schema';
+        schema.type = 'application/ld+json';
+        schema.textContent = JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Global Peripheral Solution Pvt. Ltd.',
+            url: 'https://gpspl.co.in/',
+            aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: rating.toFixed(1),
+                reviewCount: Math.round(total),
+                bestRating: '5',
+                worstRating: '1'
+            }
+        });
+        document.head.appendChild(schema);
     };
 
     const renderReviews = (payload) => {
@@ -58,7 +83,7 @@
         if (countEl) countEl.textContent = total ? `${total}+ reviews` : 'Google reviews';
         starsEl.textContent = rating ? starText(rating) : '\u2605\u2605\u2605\u2605\u2605';
         starsEl.setAttribute('aria-label', rating ? `${rating.toFixed(1)} out of 5 Google rating` : 'Google rating');
-        statusEl.textContent = 'Verified customer feedback from Google';
+        statusEl.textContent = 'Current customer feedback loaded from Google';
         if (payload.googleMapsUrl && linkEl) linkEl.href = payload.googleMapsUrl;
 
         const liveReviewCards = reviews.map((review, index) => `
@@ -67,13 +92,13 @@
                     ${reviewerAvatar(review)}
                     <div>
                         <h3>${escapeHtml(review.author || 'Google Reviewer')}</h3>
-                        <p>${escapeHtml(review.date || 'Recent review')}</p>
+                        <p>${escapeHtml(review.date || 'Google review')}</p>
                     </div>
                     <span class="google-live-mark" aria-label="Google review">G</span>
                 </div>
                 <div class="testimonial-stars" aria-label="${escapeHtml(review.rating)} star Google review">${escapeHtml(starText(review.rating))}</div>
                 <p class="testimonial-text">${escapeHtml(review.text || 'Reviewed GPSPL on Google.')}</p>
-                <footer><span>Verified Google feedback</span><span class="google-review-badge"><b>${index + 1}</b> Review</span></footer>
+                <footer><span>Google customer feedback</span><span class="google-review-badge"><b>${index + 1}</b> Review</span></footer>
             </article>
         `);
 
@@ -96,6 +121,7 @@
         }
 
         track.innerHTML = liveReviewCards.join('');
+        publishReviewSchema(payload);
 
         document.dispatchEvent(new CustomEvent('gpspl:reviews-loaded'));
         return true;
@@ -116,7 +142,7 @@
         .then((payload) => {
             if (payload.googleMapsUrl && linkEl) linkEl.href = payload.googleMapsUrl;
             if (payload.configured === false) {
-                showFallback('Add Google Places API key and Place ID to show live reviews');
+                showFallback('View the current rating and customer feedback on Google');
                 return;
             }
             if (!renderReviews(payload)) showFallback('Open Google to view customer feedback');
