@@ -34,12 +34,12 @@
     <link rel="stylesheet" href="css/cookie-consent.css?v=20260925-fix2">
     <link rel="stylesheet" href="css/blog.css?v=20260925-fix2">
     <link rel="stylesheet" href="css/faq-preview.css?v=20260925-fix2">
-    <link rel="stylesheet" href="css/studio-experience.css?v=20260930-v4">
+    <link rel="stylesheet" href="css/studio-experience.css?v=20260930-v6">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="/JS/security-guard.js?v=20260818" defer></script>
     <script src="/JS/lead-capture.js?v=20260914-seo-lead-v1" defer></script>
     <script src="JS/seo.js?v=20260728-boq-seo" defer></script>
-    <script src="JS/studio-interactive.js?v=20260930-v4" defer></script>
+    <script src="JS/studio-interactive.js?v=20260930-v6" defer></script>
     <script src="JS/analytics.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
             <script type="application/ld+json">
@@ -1409,25 +1409,61 @@
             <div class="studio-hero-copy">
                 <div class="studio-kicker">
                     <span class="studio-kicker-bar" aria-hidden="true"></span>
-                    <span>AV INTEGRATION &bull; TECHNOLOGY DISTRIBUTION &bull; SINCE 1997</span>
+                    <span>WHOLESALE TECHNOLOGY DISTRIBUTION &bull; TURNKEY AV &bull; ESTD 1997</span>
                 </div>
                 <h1 class="studio-headline">
-                    Spaces that <em>work.</em><br>Technology that lasts.
+                    Spaces that <em>work.</em><br>Systems that scale.
                 </h1>
                 <p class="studio-intro">
-                    We design, supply and integrate the display, audio, collaboration and control systems behind corporate boardrooms, government command centers, higher education campuses, hospitals, and auditoriums across India.
+                    India's premier Tier-1 Authorized Technology Distributor &amp; Certified Turnkey AV Integrator. Direct OEM wholesale supply, engineering, and 4-hour SLA support for Corporate Boardrooms, Active LED Walls, Digital Signage, Smart Classrooms, CCTV Surveillance, and Auditoriums across 28 States.
                 </p>
                 <div class="studio-actions-row">
                     <a href="#instant-boq-planner" class="btn-studio-primary">
                         Start a project &nearr;
                     </a>
                     <a href="#explore-environments" class="btn-studio-explore">
-                        Explore environments &darr;
+                        Explore verticals &darr;
                     </a>
-                    <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20have%20an%20urgent%20AV%20%2F%20Active%20LED%20project%20requirement.%20Please%20share%20estimate." target="_blank" rel="noopener noreferrer" class="btn-studio-wa-fast">
+                    <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20have%20an%20urgent%20Wholesale%20Distribution%20%2F%20Turnkey%20AV%20project%20requirement.%20Please%20share%20estimate." target="_blank" rel="noopener noreferrer" class="btn-studio-wa-fast">
                         <i class="fab fa-whatsapp"></i> WhatsApp Quote
                     </a>
                 </div>
+
+                <!-- 5-SECOND INSTANT INQUIRY BAR -->
+                <div class="hero-express-query-bar" aria-label="Instant Project Quote & Wholesale Pricing Inquiry">
+                    <div class="express-query-head">
+                        <span class="live-pulse-amber"></span>
+                        <strong>Instant Project Estimate &bull; Direct OEM Wholesale Pricing</strong>
+                        <span class="express-pill-time"><i class="fas fa-bolt"></i> 15-Min Response</span>
+                    </div>
+                    <form class="hero-express-form" onsubmit="window.handleHeroExpressSubmit(event)">
+                        <div class="express-field-input">
+                            <i class="fas fa-phone-alt"></i>
+                            <input type="tel" id="heroExpPhone" name="phone" placeholder="Enter 10-Digit Mobile *" required pattern="[6-9][0-9]{9}" maxlength="10">
+                        </div>
+                        <div class="express-field-select">
+                            <i class="fas fa-layer-group"></i>
+                            <select id="heroExpSector" name="sector" required>
+                                <option value="" disabled selected>Select Requirement *</option>
+                                <option value="Corporate Boardroom / MTR">Corporate Boardrooms &amp; MTR</option>
+                                <option value="Active LED Display Wall">Active LED Video Wall (P0.9–P2.5)</option>
+                                <option value="Digital Signage & Kiosks">Digital Signage &amp; Touch Kiosks</option>
+                                <option value="Smart Classroom IFPD">Smart Classrooms &amp; IFPDs</option>
+                                <option value="CCTV & Command Center">CCTV &amp; 24/7 Command Center (NOC/SOC)</option>
+                                <option value="Auditorium Sound & Lighting">Auditorium Sound &amp; Line Arrays</option>
+                                <option value="Wholesale OEM Supply / GeM">Wholesale OEM Distribution (GeM/Tender)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-hero-express-submit">
+                            <span>Get Pricing &rarr;</span>
+                        </button>
+                    </form>
+                    <div id="heroExpSuccess" class="hero-express-success" style="display:none;">
+                        <i class="fas fa-circle-check"></i>
+                        <span>Connecting with Senior AV Systems Engineer on WhatsApp...</span>
+                    </div>
+                </div>
+
                 <div class="studio-trust-strip">
                     <div class="trust-item">
                         <strong>1,500+</strong>
@@ -1490,17 +1526,24 @@
                 </div>
             </div>
 
-            <!-- RIGHT COLUMN: INTERACTIVE SIGNAL BOARD -->
+            <!-- RIGHT COLUMN: INTERACTIVE SIGNAL BOARD WITH LIVE WAVEFORM -->
             <div class="studio-signal-board" id="studioSignalBoard">
                 <div class="signal-board-top">
-                    <span class="signal-label">LIVE INTEGRATION MATRIX / 01</span>
-                    <span class="signal-live-indicator"><span class="pulse-dot"></span> READY</span>
+                    <div class="signal-top-left">
+                        <span class="signal-label">LIVE INTEGRATION MATRIX / 01</span>
+                        <span class="signal-live-indicator"><span class="pulse-dot"></span> LIVE SIGNAL LOCK</span>
+                    </div>
+                    <div class="signal-waveform-badge">
+                        <canvas id="studioWaveformCanvas" class="signal-waveform-canvas" width="130" height="22" aria-hidden="true"></canvas>
+                        <span class="waveform-rate">DANTE &bull; 4K60</span>
+                    </div>
                 </div>
                 <div class="signal-tabs" role="tablist">
                     <button class="signal-tab-btn active" data-scene="boardroom" type="button">Boardrooms</button>
                     <button class="signal-tab-btn" data-scene="led" type="button">Active LED</button>
-                    <button class="signal-tab-btn" data-scene="hospitality" type="button">Hospitality</button>
-                    <button class="signal-tab-btn" data-scene="healthcare" type="button">Healthcare</button>
+                    <button class="signal-tab-btn" data-scene="signage" type="button">Signage</button>
+                    <button class="signal-tab-btn" data-scene="classroom" type="button">Smart Class</button>
+                    <button class="signal-tab-btn" data-scene="cctv" type="button">CCTV / NOC</button>
                     <button class="signal-tab-btn" data-scene="auditorium" type="button">Auditoriums</button>
                 </div>
                 <div class="signal-stage">
@@ -1531,9 +1574,14 @@
                         <strong>Crestron MTR &bull; 4-Hour On-Site SLA</strong>
                     </div>
                 </div>
-                <a href="#instant-boq-planner" id="signalActionBtn" class="signal-action-btn" data-target-sector="boardroom">
-                    Configure Boardroom BOQ &rarr;
-                </a>
+                <div class="signal-action-row">
+                    <a href="#instant-boq-planner" id="signalActionBtn" class="signal-action-btn" data-target-sector="boardroom">
+                        Configure Boardroom BOQ &rarr;
+                    </a>
+                    <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20have%20an%20urgent%20Boardroom%20AV%20requirement.%20Please%20connect%20with%20an%20engineer." id="signalWaBtn" target="_blank" rel="noopener noreferrer" class="signal-wa-btn">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Quote
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -1747,142 +1795,257 @@
         </button>
     </div>
 
-    <section id="home" class="hero hero-message-section" aria-label="GPSPL enterprise AV showcase video">
-        <video class="hero-video" autoplay muted loop playsinline poster="assests/images/hero/Vconf.webp" aria-hidden="true">
-            <source src="assests/videos/gpspl-brochure-hero.mp4" type="video/mp4">
-        </video>
-        <div class="hero-video-overlay"></div>
-        <div class="container hero-message-grid">
-            <div class="hero-message-copy reveal">
-                <p class="hero-eyebrow">
-                    <span class="editorial-red-line" aria-hidden="true"></span>
-                    <span>AV INTEGRATION &bull; TECHNOLOGY DISTRIBUTION &bull; SINCE 1997</span>
-                </p>
-                <h1 id="home-heading" class="main-headline">
-                    <span>Spaces that <em class="editorial-work-italic">work.</em></span>
-                    <span>Technology that lasts.</span>
-                </h1>
-                <p class="hero-description">
-                    We design, supply and integrate the display, audio, collaboration and control systems behind boardrooms, campuses, hospitals, hotels and public spaces across India with direct Tier-1 OEM pricing &amp; guaranteed 4-hour on-site SLA.
-                </p>
-                <div class="hero-actions" style="width: 100%; max-width: 100%; box-sizing: border-box;">
-                    <a href="#instant-boq-planner" class="btn-primary hero-btn" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;"><i class="fas fa-file-invoice" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;"></i> <span style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; font-weight: 800;">Start a project &nearr;</span></a>
-                    <a href="#turnkey-industry-solutions" class="btn-secondary hero-btn btn-see-work-link" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;"><span style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; font-weight: 700;">See the work &rarr;</span></a>
-                    <a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20have%20an%20urgent%20commercial%20AV%20%2F%20Active%20LED%20Wall%20requirement.%20Please%20share%20BOQ%20pricing." class="btn-secondary hero-btn hero-btn-whatsapp" target="_blank" rel="noopener noreferrer" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;"><i class="fab fa-whatsapp" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;"></i> <span style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; font-weight: 800;">WhatsApp Quote</span></a>
-                    <a href="tel:+918920830377" class="btn-secondary hero-btn" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;"><i class="fas fa-phone-alt" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;"></i> <span style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; font-weight: 800;">Call: +91 89208 30377</span></a>
+    <!-- ====== DUAL POWERHOUSE OPERATING MODEL (Wholesale Distribution + Turnkey Integration) ====== -->
+    <section class="studio-dual-powerhouse-section" id="distribution-and-integration" aria-label="Wholesale Technology Distribution & Certified Turnkey Integration">
+        <div class="studio-powerhouse-container">
+            <div class="powerhouse-header">
+                <div class="powerhouse-header-copy">
+                    <span class="eyebrow">TWO COMPLEMENTARY CAPABILITIES &bull; MARKET DOMINANCE</span>
+                    <h2>Wholesale Technology Distribution &amp;<br>Certified Turnkey Engineering.</h2>
                 </div>
-                <!-- SECTOR FAST-SELECT GATEWAY (CORPORATE, GOVT, EDUCATION, LED) -->
-                <div class="hero-sector-gateway" aria-label="Commercial AV by Sector">
-                    <div class="hero-sector-header">
-                        <span class="sector-tagline"><i class="fas fa-layer-group"></i> Fast Project Quotes By Commercial Sector:</span>
-                    </div>
-                    <div class="hero-sector-chips">
-                        <a href="#instant-boq-planner" class="hero-sector-chip active" data-sector="boardroom" title="Corporate Boardroom &amp; Conference Room AV Solutions">
-                            <i class="fas fa-building"></i>
-                            <div>
-                                <strong>Corporate Boardrooms</strong>
-                                <span>MTR &bull; Zoom &bull; Shure Mics</span>
-                            </div>
-                        </a>
-                        <a href="#instant-boq-planner" class="hero-sector-chip" data-sector="govt" title="Government &amp; PSU Command Centers &amp; GeM Ready AV">
-                            <i class="fas fa-landmark"></i>
-                            <div>
-                                <strong>Government &amp; PSU (GeM)</strong>
-                                <span>NOC/SOC &bull; War Rooms &bull; Tenders</span>
-                            </div>
-                        </a>
-                        <a href="#instant-boq-planner" class="hero-sector-chip" data-sector="education" title="Smart Classrooms &amp; Education AV Solutions">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div>
-                                <strong>Smart Class &amp; Education</strong>
-                                <span>4K Touch IFPD &bull; Podiums</span>
-                            </div>
-                        </a>
-                        <a href="#instant-boq-planner" class="hero-sector-chip" data-sector="led" title="Active LED Video Walls &amp; Auditoriums">
-                            <i class="fas fa-border-all"></i>
-                            <div>
-                                <strong>Active LED &amp; Auditoriums</strong>
-                                <span>P1.2–P2.5 &bull; Line Array Sound</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-partner-logos" aria-label="Authorized OEM Brands">
-                    <div class="hero-partner-header">
-                        <span class="hero-partner-label"><i class="fas fa-certificate" style="color: #ef3438;"></i> Authorized OEM Supply &amp; System Integration</span>
-                        <span class="hero-partner-badge">Tier-1 Direct Commercial Pricing</span>
-                    </div>
-                    <div class="hero-partner-marquee">
-                        <div class="hero-partner-track">
-                            <div class="partner-logo-item"><img src="assests/images/patners/samsung-wordmark.svg" alt="Samsung Authorized Partner" loading="lazy"></div>
-                            <div class="partner-logo-item"><img src="assests/images/patners/lg-electronics-modern.svg" alt="LG Commercial Displays" loading="lazy"></div>
-                            <div class="partner-logo-item"><img src="assests/images/patners/crestron.svg" alt="Crestron Control Systems" loading="lazy"></div>
-                            <div class="partner-logo-item"><img src="assests/images/patners/hp-poly-clean.png" alt="Poly Video Conferencing" loading="lazy"></div>
-                            <div class="partner-logo-item"><img src="assests/images/patners/sony-logo.svg" alt="Sony Professional AV" loading="lazy"></div>
-                            <div class="partner-logo-item"><img src="assests/images/patners/harman-logo.svg" alt="Harman Professional Audio" loading="lazy"></div>
-                            <div class="partner-logo-item"><img src="assests/images/patners/jbl-logo-clean.svg" alt="JBL Professional" loading="lazy"></div>
-                            <div class="partner-logo-item"><img src="assests/images/patners/sennheiser-wordmark.svg" alt="Sennheiser Business Audio" loading="lazy"></div>
-                            <div class="partner-logo-item"><img src="assests/images/patners/benq-logo.svg" alt="BenQ Commercial" loading="lazy"></div>
-                            <div class="partner-logo-item"><img src="assests/images/patners/absen-wordmark-clean.png" alt="Absen Commercial LED" loading="lazy"></div>
-                            <div class="partner-logo-item"><img src="assests/images/patners/epson.svg" alt="Epson Professional" loading="lazy"></div>
-                            <div class="partner-logo-item"><img src="assests/images/patners/dell.svg" alt="Dell Commercial" loading="lazy"></div>
-                            <!-- Duplicate for continuous infinite smooth loop -->
-                            <div class="partner-logo-item" aria-hidden="true"><img src="assests/images/patners/samsung-wordmark.svg" alt="Samsung" loading="lazy"></div>
-                            <div class="partner-logo-item" aria-hidden="true"><img src="assests/images/patners/lg-electronics-modern.svg" alt="LG" loading="lazy"></div>
-                            <div class="partner-logo-item" aria-hidden="true"><img src="assests/images/patners/crestron.svg" alt="Crestron" loading="lazy"></div>
-                            <div class="partner-logo-item" aria-hidden="true"><img src="assests/images/patners/hp-poly-clean.png" alt="Poly" loading="lazy"></div>
-                            <div class="partner-logo-item" aria-hidden="true"><img src="assests/images/patners/sony-logo.svg" alt="Sony" loading="lazy"></div>
-                            <div class="partner-logo-item" aria-hidden="true"><img src="assests/images/patners/harman-logo.svg" alt="Harman" loading="lazy"></div>
-                            <div class="partner-logo-item" aria-hidden="true"><img src="assests/images/patners/jbl-logo-clean.svg" alt="JBL" loading="lazy"></div>
-                            <div class="partner-logo-item" aria-hidden="true"><img src="assests/images/patners/sennheiser-wordmark.svg" alt="Sennheiser" loading="lazy"></div>
-                            <div class="partner-logo-item" aria-hidden="true"><img src="assests/images/patners/benq-logo.svg" alt="BenQ" loading="lazy"></div>
-                            <div class="partner-logo-item" aria-hidden="true"><img src="assests/images/patners/absen-wordmark-clean.png" alt="Absen" loading="lazy"></div>
-                            <div class="partner-logo-item" aria-hidden="true"><img src="assests/images/patners/epson.svg" alt="Epson" loading="lazy"></div>
-                            <div class="partner-logo-item" aria-hidden="true"><img src="assests/images/patners/dell.svg" alt="Dell" loading="lazy"></div>
-                        </div>
-                    </div>
+                <div class="powerhouse-header-desc">
+                    <p>GPSPL operates at the intersection of wholesale technology supply and high-precision system integration. Whether you are an enterprise seeking a turnkey conference room or an IT contractor requiring factory-sealed OEM hardware with GeM authorization, we deliver with direct manufacturer serial warranties and zero distributor markup.</p>
                 </div>
             </div>
-            <div class="hero-executive-card reveal" aria-label="GPSPL Turnkey Delivery & OEM Matrix">
-                <div class="hero-card-top">
-                    <div class="hero-card-badge">
-                        <i class="fas fa-certificate"></i>
-                        <span>Enterprise Delivery Matrix</span>
+
+            <div class="powerhouse-grid">
+                <!-- PILLAR 1: WHOLESALE DISTRIBUTION -->
+                <div class="powerhouse-card powerhouse-card-dist">
+                    <div class="powerhouse-badge">
+                        <i class="fas fa-boxes-packing"></i>
+                        <span>DIRECT WHOLESALE DISTRIBUTION</span>
                     </div>
-                    <span class="hero-card-estd"><i class="fas fa-shield-alt"></i> Estd. 1997</span>
-                </div>
-                <h3 class="hero-card-title">Pan-India Turnkey Delivery &amp; Direct OEM Supply</h3>
-                <p class="hero-card-desc">Commercial audio-visual engineering, active LED display walls, and 4-hour SLA lifecycle support for corporate, defense, healthcare &amp; education campuses across all 28 States &amp; UTs.</p>
-                
-                <div class="hero-card-metrics">
-                    <div class="hero-metric-item">
-                        <span class="metric-num">1,500+</span>
-                        <span class="metric-label">Enterprise Facilities Deployed</span>
+                    <h3>Tier-1 Authorized OEM Supply &amp; Institutional Procurement</h3>
+                    <p class="powerhouse-desc">
+                        As a registered and regional authorized distributor for HARMAN Professional, LG Business Solutions, and LUMINOUS Power Technologies — alongside 16+ global partners — GPSPL supplies factory-sealed commercial hardware with manufacturer price protection.
+                    </p>
+                    <ul class="powerhouse-features">
+                        <li><i class="fas fa-check-circle"></i> <strong>GeM Portal Supply &amp; Tender MAF Letters:</strong> Direct manufacturer authorizations and bid compliance documentation.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Wholesale Reseller &amp; Dealer Pricing:</strong> Volume discount schedules for contractors, builders &amp; system houses.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Fast Pan-India Dispatch (28 States &amp; UTs):</strong> Buffer inventory maintained at our Delhi NCR logistics hub.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>100% Genuine Serial Warranty:</strong> Direct RMA access and official manufacturer service backing.</li>
+                    </ul>
+                    <div class="powerhouse-brands-tagline">
+                        <span>Authorized Distribution Portfolio:</span>
+                        <strong>Harman &bull; LG &bull; Luminous &bull; Samsung &bull; Sony &bull; Barco &bull; Lumens &bull; Crestron &bull; Shure &bull; ATEN &bull; Absen &bull; BenQ</strong>
                     </div>
-                    <div class="hero-metric-item">
-                        <span class="metric-num">28 States</span>
-                        <span class="metric-label">Pan-India On-Site Engineering</span>
-                    </div>
-                    <div class="hero-metric-item">
-                        <span class="metric-num">4 Hours</span>
-                        <span class="metric-label">Guaranteed Emergency SLA</span>
-                    </div>
-                    <div class="hero-metric-item">
-                        <span class="metric-num">Tier-1 Direct</span>
-                        <span class="metric-label">Authorized OEM Commercial Supply</span>
+                    <div class="powerhouse-card-actions">
+                        <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20need%20a%20Wholesale%20Distribution%20%2F%20Dealer%20Price%20List%20for%20OEM%20hardware." target="_blank" rel="noopener noreferrer" class="btn-powerhouse-primary">
+                            <i class="fab fa-whatsapp"></i> Request Wholesale Price List &rarr;
+                        </a>
+                        <a href="/av-technology-distribution" class="btn-powerhouse-link">
+                            Explore Distribution Portfolio &rarr;
+                        </a>
                     </div>
                 </div>
 
-                <div class="hero-card-actions">
-                    <a href="#instant-boq-planner" class="btn-hero-card-boq">
-                        <i class="fas fa-file-invoice"></i> Configure Project BOQ Below &darr;
-                    </a>
-                    <a href="https://wa.me/918920830377?text=Hi%20GPSPL%2C%20I%20have%20an%20urgent%20commercial%20AV%20%2F%20Active%20LED%20Wall%20requirement.%20Please%20share%20BOQ%20pricing." class="btn-hero-card-wa" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-whatsapp"></i> WhatsApp Technical Team
-                    </a>
+                <!-- PILLAR 2: TURNKEY SYSTEM INTEGRATION -->
+                <div class="powerhouse-card powerhouse-card-integ">
+                    <div class="powerhouse-badge">
+                        <i class="fas fa-screwdriver-wrench"></i>
+                        <span>CERTIFIED SYSTEM INTEGRATION</span>
+                    </div>
+                    <h3>Complete Turnkey Engineering &amp; 4-Hour Emergency SLA</h3>
+                    <p class="powerhouse-desc">
+                        From initial CAD drafting and EASE 3D acoustic simulation to conduit optical cabling, DSP tuning, and Crestron touchpanel programming, our senior engineers build enterprise spaces that perform flawlessly from day one.
+                    </p>
+                    <ul class="powerhouse-features">
+                        <li><i class="fas fa-check-circle"></i> <strong>EASE 3D Acoustic &amp; RT60 Simulation:</strong> Reverberation control and speech intelligibility optimization (STI &gt; 0.65).</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>One-Touch Automation &amp; MTR Programming:</strong> Crestron, AMX by Harman, and Extron touch controllers.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Concealed Structural Conduit Cabling:</strong> Laser-measured rack dressing, vibration dampening, and clean tables.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Guaranteed 4-Hour On-Site SLA:</strong> Dedicated enterprise AMC engineers and immediate spare replacement.</li>
+                    </ul>
+                    <div class="powerhouse-brands-tagline">
+                        <span>Certified Turnkey Integration Across:</span>
+                        <strong>Boardrooms &bull; Active LED &bull; Signage &bull; Classrooms &bull; CCTV &bull; Auditoriums</strong>
+                    </div>
+                    <div class="powerhouse-card-actions">
+                        <a href="#instant-boq-planner" class="btn-powerhouse-primary">
+                            <i class="fas fa-calculator"></i> Configure Turnkey BOQ Schedule &rarr;
+                        </a>
+                        <a href="tel:+918920830377" class="btn-powerhouse-link">
+                            <i class="fas fa-phone-alt"></i> Speak with Systems Engineer &rarr;
+                        </a>
+                    </div>
                 </div>
-                <div class="hero-card-footer">
-                    <i class="fas fa-check-circle" style="color: #22c55e;"></i> Authorized OEM: Samsung &bull; LG &bull; Crestron &bull; Sennheiser &bull; Poly &bull; Absen
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== 6 CORE COMMERCIAL VERTICALS (Market Dominance Inquiry Funnels) ====== -->
+    <section class="studio-verticals-section" id="commercial-verticals" aria-label="Commercial AV, Signage, CCTV and Display Verticals">
+        <div class="studio-verticals-container">
+            <div class="verticals-header">
+                <div class="verticals-header-copy">
+                    <span class="eyebrow">SIX HIGH-CONVERTING COMMERCIAL VERTICALS &bull; PAN-INDIA DEPLOYMENT</span>
+                    <h2>Engineering &amp; Wholesale Supply.<br>Across Every Operational Domain.</h2>
+                </div>
+                <div class="verticals-header-desc">
+                    <p>Whether you require multi-location digital signage rollout, mission-critical CCTV surveillance for a government command center, or an active LED auditorium wall, GPSPL provides dedicated engineering teams and direct OEM wholesale pricing.</p>
+                </div>
+            </div>
+
+            <div class="verticals-grid">
+                <!-- 1. Corporate Boardrooms & MTR -->
+                <div class="vertical-card" id="vert-boardroom">
+                    <div class="vertical-card-top">
+                        <span class="vertical-index">VERTICAL 01</span>
+                        <span class="vertical-badge">NATIVE MTR &bull; ZOOM</span>
+                    </div>
+                    <h3>Corporate Boardrooms &amp; Video Conferencing</h3>
+                    <p class="vertical-desc">
+                        Executive conference spaces engineered with ceiling beamforming microphone arrays, auto-framing 4K PTZ cameras, dual commercial displays, and zero-touch wireless BYOD presentation.
+                    </p>
+                    <div class="vertical-specs-chipset">
+                        <span>Shure MXA920 Array</span>
+                        <span>Samsung 4K Displays</span>
+                        <span>Barco ClickShare CX</span>
+                        <span>Crestron Control</span>
+                        <span>Dante AEC Tuning</span>
+                    </div>
+                    <div class="vertical-footer-actions">
+                        <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20need%20a%20turnkey%20Executive%20Boardroom%20%2F%20MTR%20BOQ%20quote." target="_blank" rel="noopener noreferrer" class="btn-vert-wa">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Quote
+                        </a>
+                        <a href="#instant-boq-planner" class="btn-vert-boq" onclick="window.selectSector('boardroom')">
+                            Configure BOQ &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. Active LED Display Walls -->
+                <div class="vertical-card" id="vert-led">
+                    <div class="vertical-card-top">
+                        <span class="vertical-index">VERTICAL 02</span>
+                        <span class="vertical-badge">FINE-PITCH P0.9&ndash;P2.5</span>
+                    </div>
+                    <h3>Active LED Video Walls (Indoor &amp; Outdoor)</h3>
+                    <p class="vertical-desc">
+                        Seamless fine-pitch active LED walls for corporate lobbies, experience centers, and outdoor billboards. Featuring NovaStar 4K processors, aluminum die-cast cabinets, and magnetic front-service access.
+                    </p>
+                    <div class="vertical-specs-chipset">
+                        <span>LG Active LED</span>
+                        <span>Absen Commercial</span>
+                        <span>Samsung The Wall</span>
+                        <span>NovaStar 4K COEx</span>
+                        <span>JBL Sound Subwoofers</span>
+                    </div>
+                    <div class="vertical-footer-actions">
+                        <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20need%20a%20quote%20for%20Active%20LED%20Video%20Walls." target="_blank" rel="noopener noreferrer" class="btn-vert-wa">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Quote
+                        </a>
+                        <a href="#instant-boq-planner" class="btn-vert-boq" onclick="window.selectSector('led')">
+                            Configure BOQ &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. Digital Signage & Interactive Kiosks -->
+                <div class="vertical-card" id="vert-signage">
+                    <div class="vertical-card-top">
+                        <span class="vertical-index">VERTICAL 03</span>
+                        <span class="vertical-badge">CLOUD CMS &bull; 24/7 RUNTIME</span>
+                    </div>
+                    <h3>Digital Signage, Menu Boards &amp; Touch Kiosks</h3>
+                    <p class="vertical-desc">
+                        High-brightness commercial displays (500–700 nits) for retail chains, shopping malls, airports, and QSRs. Centralized remote cloud content management with multi-touch self-ordering totems.
+                    </p>
+                    <div class="vertical-specs-chipset">
+                        <span>Samsung MagicINFO</span>
+                        <span>LG SuperSign CMS</span>
+                        <span>Ultra-Stretch Displays</span>
+                        <span>Self-Ordering Kiosks</span>
+                        <span>Remote Playback Sync</span>
+                    </div>
+                    <div class="vertical-footer-actions">
+                        <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20need%20a%20quote%20for%20Commercial%20Digital%20Signage%20Displays%20and%20Cloud%20CMS." target="_blank" rel="noopener noreferrer" class="btn-vert-wa">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Quote
+                        </a>
+                        <a href="#instant-boq-planner" class="btn-vert-boq" onclick="window.selectSector('signage')">
+                            Configure BOQ &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. Smart Classrooms & Higher Education -->
+                <div class="vertical-card" id="vert-classroom">
+                    <div class="vertical-card-top">
+                        <span class="vertical-index">VERTICAL 04</span>
+                        <span class="vertical-badge">4K IFPD &bull; HYBRID LEARNING</span>
+                    </div>
+                    <h3>Smart Classrooms &amp; Interactive Flat Panels</h3>
+                    <p class="vertical-desc">
+                        Interactive flat panel displays (65", 75", 86") paired with motorized digital teacher podiums, Lumens PTZ tracking cameras, and wireless hybrid classroom lecture capture systems across India.
+                    </p>
+                    <div class="vertical-specs-chipset">
+                        <span>4K Touch IFPD (40-pt)</span>
+                        <span>Digital Audio Podiums</span>
+                        <span>Lumens PTZ Tracking</span>
+                        <span>GeM Portal Ready</span>
+                        <span>Wireless Whiteboard</span>
+                    </div>
+                    <div class="vertical-footer-actions">
+                        <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20need%20wholesale%20%2F%20turnkey%20pricing%20for%20Smart%20Classrooms%20and%20Interactive%20Panels." target="_blank" rel="noopener noreferrer" class="btn-vert-wa">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Quote
+                        </a>
+                        <a href="#instant-boq-planner" class="btn-vert-boq" onclick="window.selectSector('education')">
+                            Configure BOQ &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. CCTV, Surveillance & 24/7 Command Centers -->
+                <div class="vertical-card" id="vert-cctv">
+                    <div class="vertical-card-top">
+                        <span class="vertical-index">VERTICAL 05</span>
+                        <span class="vertical-badge">MISSION-CRITICAL NOC/SOC</span>
+                    </div>
+                    <h3>CCTV Surveillance &amp; Command Control Centers</h3>
+                    <p class="vertical-desc">
+                        24/7 mission-critical operations centers for defense, smart cities, and enterprise security. Ultra-narrow bezel video walls, AI surveillance analytics, and ATEN zero-latency KVM-over-IP matrix.
+                    </p>
+                    <div class="vertical-specs-chipset">
+                        <span>AI IP Surveillance</span>
+                        <span>Multi-Channel NVR/SAN</span>
+                        <span>ATEN Zero-Latency KVM</span>
+                        <span>ISO 11064 Consoles</span>
+                        <span>Redundant Power</span>
+                    </div>
+                    <div class="vertical-footer-actions">
+                        <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20we%20require%20an%20urgent%20Command%20Center%20%2F%20CCTV%20Surveillance%20BOQ%20quote." target="_blank" rel="noopener noreferrer" class="btn-vert-wa">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Quote
+                        </a>
+                        <a href="#instant-boq-planner" class="btn-vert-boq" onclick="window.selectSector('govt')">
+                            Configure BOQ &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. Auditoriums, Ballrooms & Large Venues -->
+                <div class="vertical-card" id="vert-auditorium">
+                    <div class="vertical-card-top">
+                        <span class="vertical-index">VERTICAL 06</span>
+                        <span class="vertical-badge">LARGE VENUE &bull; PRO AUDIO</span>
+                    </div>
+                    <h3>Auditoriums, Ballrooms &amp; Large Venues</h3>
+                    <p class="vertical-desc">
+                        Civic auditoriums, university halls, and luxury hotel ballrooms engineered with precision Harman JBL line arrays, stage Active LED backdrops, stage lighting mechanics, and Luminous online UPS.
+                    </p>
+                    <div class="vertical-specs-chipset">
+                        <span>Harman JBL Line Arrays</span>
+                        <span>Crown DSP Amplifiers</span>
+                        <span>Stage Active LED Wall</span>
+                        <span>EASE 3D RT60 Acoustic</span>
+                        <span>Luminous Online UPS</span>
+                    </div>
+                    <div class="vertical-footer-actions">
+                        <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20need%20an%20Auditorium%20AV%20%2F%20Line%20Array%20Sound%20%2F%20Stage%20LED%20BOQ%20quote." target="_blank" rel="noopener noreferrer" class="btn-vert-wa">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Quote
+                        </a>
+                        <a href="#instant-boq-planner" class="btn-vert-boq" onclick="window.selectSector('education')">
+                            Configure BOQ &rarr;
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

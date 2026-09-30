@@ -1484,3 +1484,676 @@ body:not(.gpspl-classic-mode) .copyright-section {
     border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
     color: #737875 !important;
 }
+
+/* ==========================================================================
+   HERO 5-SECOND EXPRESS LEAD BAR & WAVEFORM CANVAS
+   ========================================================================== */
+.hero-express-query-bar {
+    background: var(--studio-paper-card);
+    border: 1px solid var(--studio-line);
+    border-left: 3px solid var(--studio-accent);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 22px 0 26px 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.express-query-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.82rem;
+    color: var(--studio-ink);
+    margin-bottom: 12px;
+}
+
+.live-pulse-amber {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f59e0b;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25);
+    display: inline-block;
+    animation: amberPulseDot 2s infinite ease-in-out;
+}
+
+@keyframes amberPulseDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.express-pill-time {
+    background: var(--studio-accent-subtle);
+    color: var(--studio-accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 750;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: auto;
+    letter-spacing: 0.02em;
+}
+
+.hero-express-form {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.express-field-input,
+.express-field-select {
+    position: relative;
+    flex: 1;
+    min-width: 170px;
+    display: flex;
+    align-items: center;
+}
+
+.express-field-input i,
+.express-field-select i {
+    position: absolute;
+    left: 12px;
+    color: var(--studio-muted);
+    font-size: 0.82rem;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.express-field-input input,
+.express-field-select select {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px 0 34px;
+    border: 1px solid var(--studio-line);
+    border-radius: 6px;
+    background: #ffffff;
+    color: var(--studio-ink);
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.express-field-input input:focus,
+.express-field-select select:focus {
+    border-color: var(--studio-accent);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(217, 101, 56, 0.15);
+}
+
+.express-field-select select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 28px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23737875' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.btn-hero-express-submit {
+    height: 42px;
+    padding: 0 20px;
+    background: var(--studio-accent);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-weight: 750;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 12px rgba(217, 101, 56, 0.3);
+}
+
+.btn-hero-express-submit:hover {
+    background: var(--studio-accent-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(217, 101, 56, 0.4);
+}
+
+.hero-express-success {
+    margin-top: 10px;
+    padding: 10px 14px;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    border-radius: 6px;
+    color: #065f46;
+    font-size: 0.82rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Waveform Badge on Hero Signal Board */
+.signal-waveform-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(22, 24, 23, 0.04);
+    border: 1px solid var(--studio-line);
+    border-radius: 4px;
+    padding: 2px 8px;
+}
+
+.signal-waveform-canvas {
+    display: block;
+    width: 110px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.waveform-rate {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--studio-accent);
+}
+
+/* Signal Action Row (Configure BOQ + WhatsApp Specialist) */
+.signal-action-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.signal-action-row .signal-action-btn {
+    flex: 1;
+    margin-top: 0;
+    padding: 11px 16px;
+    background: var(--studio-ink);
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signal-action-row .signal-action-btn:hover {
+    background: var(--studio-accent);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.signal-wa-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 11px 16px;
+    background: #25d366;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border-radius: 6px;
+    font-size: 0.84rem;
+    font-weight: 750;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 12px rgba(37, 211, 102, 0.25);
+    white-space: nowrap;
+}
+
+.signal-wa-btn:hover {
+    background: #1ebd58;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* ==========================================================================
+   DUAL POWERHOUSE: WHOLESALE DISTRIBUTION & TURNKEY INTEGRATION
+   ========================================================================== */
+.studio-dual-powerhouse-section {
+    background: var(--studio-paper);
+    border-bottom: 1px solid var(--studio-line);
+    padding: clamp(64px, 8vw, 100px) 0;
+}
+
+.studio-powerhouse-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 4vw, 48px);
+}
+
+.powerhouse-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(24px, 4vw, 56px);
+    align-items: end;
+    margin-bottom: clamp(36px, 5vw, 56px);
+    border-bottom: 1px solid var(--studio-line);
+    padding-bottom: clamp(24px, 3vw, 36px);
+}
+
+.powerhouse-header-copy h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    font-weight: 850;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    color: var(--studio-ink);
+    margin: 12px 0 0 0;
+}
+
+.powerhouse-header-desc p {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--studio-muted);
+    margin: 0;
+}
+
+.powerhouse-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(20px, 3vw, 32px);
+}
+
+.powerhouse-card {
+    background: var(--studio-paper-card);
+    border: 1px solid var(--studio-line);
+    border-radius: 10px;
+    padding: clamp(28px, 4vw, 44px);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+}
+
+.powerhouse-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.07);
+    border-color: var(--studio-accent);
+}
+
+.powerhouse-card-dist {
+    border-top: 4px solid #0284c7;
+}
+
+.powerhouse-card-integ {
+    border-top: 4px solid var(--studio-accent);
+}
+
+.powerhouse-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 0.06em;
+    padding: 5px 12px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+    width: fit-content;
+}
+
+.powerhouse-card-dist .powerhouse-badge {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.powerhouse-card-integ .powerhouse-badge {
+    background: var(--studio-accent-subtle);
+    color: var(--studio-accent);
+}
+
+.powerhouse-card h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.3rem, 1.8vw, 1.6rem);
+    font-weight: 850;
+    letter-spacing: -0.02em;
+    color: var(--studio-ink);
+    margin-bottom: 14px;
+    line-height: 1.25;
+}
+
+.powerhouse-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--studio-muted);
+    margin-bottom: 22px;
+}
+
+.powerhouse-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.powerhouse-features li {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--studio-ink);
+}
+
+.powerhouse-features li i {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: var(--studio-accent);
+    font-size: 0.95rem;
+}
+
+.powerhouse-features li strong {
+    font-weight: 750;
+    color: var(--studio-ink);
+}
+
+.powerhouse-brands-tagline {
+    padding: 14px 18px;
+    background: rgba(22, 24, 23, 0.03);
+    border: 1px solid var(--studio-line);
+    border-radius: 6px;
+    font-size: 0.82rem;
+    margin-bottom: 26px;
+    margin-top: auto;
+    line-height: 1.5;
+}
+
+.powerhouse-brands-tagline span {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--studio-muted);
+    margin-bottom: 4px;
+}
+
+.powerhouse-brands-tagline strong {
+    color: var(--studio-ink);
+    font-weight: 750;
+}
+
+.powerhouse-card-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-powerhouse-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    background: var(--studio-accent);
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border-radius: 6px;
+    font-weight: 750;
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(217, 101, 56, 0.25);
+}
+
+.btn-powerhouse-primary:hover {
+    background: var(--studio-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(217, 101, 56, 0.35);
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+.powerhouse-card-dist .btn-powerhouse-primary {
+    background: #25d366;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
+}
+
+.powerhouse-card-dist .btn-powerhouse-primary:hover {
+    background: #1ebd58;
+    box-shadow: 0 8px 22px rgba(37, 211, 102, 0.35);
+}
+
+.btn-powerhouse-link {
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: var(--studio-ink);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s ease;
+}
+
+.btn-powerhouse-link:hover {
+    color: var(--studio-accent);
+}
+
+/* ==========================================================================
+   6 CORE COMMERCIAL VERTICALS (Market Dominance Inquiry Funnels)
+   ========================================================================== */
+.studio-verticals-section {
+    background: var(--studio-paper-warm);
+    border-bottom: 1px solid var(--studio-line);
+    padding: clamp(64px, 8vw, 100px) 0;
+}
+
+.studio-verticals-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 4vw, 48px);
+}
+
+.verticals-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(24px, 4vw, 56px);
+    align-items: end;
+    margin-bottom: clamp(36px, 5vw, 56px);
+    border-bottom: 1px solid var(--studio-line);
+    padding-bottom: clamp(24px, 3vw, 36px);
+}
+
+.verticals-header-copy h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    font-weight: 850;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    color: var(--studio-ink);
+    margin: 12px 0 0 0;
+}
+
+.verticals-header-desc p {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--studio-muted);
+    margin: 0;
+}
+
+.verticals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(16px, 2.5vw, 28px);
+}
+
+.vertical-card {
+    background: var(--studio-paper-card);
+    border: 1px solid var(--studio-line);
+    border-radius: 8px;
+    padding: clamp(22px, 3vw, 30px);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.vertical-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+    border-color: var(--studio-accent);
+}
+
+.vertical-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.vertical-index {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--studio-accent);
+}
+
+.vertical-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 750;
+    letter-spacing: 0.05em;
+    padding: 3px 8px;
+    border-radius: 3px;
+    background: var(--studio-accent-subtle);
+    color: var(--studio-accent);
+}
+
+.vertical-card h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.15rem, 1.4vw, 1.35rem);
+    font-weight: 850;
+    letter-spacing: -0.02em;
+    color: var(--studio-ink);
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.vertical-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--studio-muted);
+    margin-bottom: 18px;
+}
+
+.vertical-specs-chipset {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 22px;
+    margin-top: auto;
+}
+
+.vertical-specs-chipset span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: rgba(22, 24, 23, 0.04);
+    border: 1px solid var(--studio-line);
+    color: var(--studio-ink);
+}
+
+.vertical-footer-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-vert-wa {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 12px;
+    background: #25d366;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 750;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
+    white-space: nowrap;
+}
+
+.btn-vert-wa:hover {
+    background: #1ebd58;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+.btn-vert-boq {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 14px;
+    background: var(--studio-ink);
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-vert-boq:hover {
+    background: var(--studio-accent);
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   RESPONSIVE ADJUSTMENTS FOR POWERHOUSE & VERTICALS
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .powerhouse-grid {
+        grid-template-columns: 1fr;
+    }
+    .verticals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .powerhouse-header,
+    .verticals-header {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 680px) {
+    .verticals-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-express-form {
+        flex-direction: column;
+    }
+    .express-field-input,
+    .express-field-select,
+    .btn-hero-express-submit {
+        width: 100%;
+    }
+    .signal-action-row {
+        flex-direction: column;
+    }
+}
