@@ -8,68 +8,84 @@
 (function () {
     'use strict';
 
-    // Interactive Environment Definitions
+    // Interactive Environment Definitions using 100% Real Commissioned Project Photos
     const ENVIRONMENTS = {
         boardroom: {
             tabText: 'Boardroom',
-            tag: 'Microsoft Teams & Zoom Native',
+            tag: 'Shure • Samsung • Barco • Crestron',
             kicker: 'ENTERPRISE COLLABORATION',
-            title: 'Executive Boardroom Integration',
-            img: '/assests/images/hero/video-technologies-boardroom.webp',
-            alt: 'GPSPL Executive Boardroom AV Integration with Shure Microphones',
+            title: 'Executive Video Conference Boardroom',
+            img: '/assests/images/projects/gpspl-real/real-boardroom-vc-conference.jpg',
+            alt: 'GPSPL Executive Boardroom with Video Conferencing and Shure Microphones',
             specs: [
                 { label: 'Audio Architecture', value: 'Shure MXA920 · Dante DSP' },
-                { label: 'Display & Visuals', value: 'Dual 85" 4K Commercial Displays' },
-                { label: 'Cable Management', value: 'Zero Clutter · Wireless BYOD' },
-                { label: 'SLA Guarantee', value: '4-Hour Pan-India On-Site' }
+                { label: 'Display & Visuals', value: 'Samsung 4K Commercial Displays' },
+                { label: 'Wireless Sharing', value: 'Barco ClickShare · Zero Clutter' },
+                { label: 'Control & SLA', value: 'Crestron MTR · 4-Hour On-Site SLA' }
             ],
             boqSector: 'boardroom',
             ctaText: 'Configure Boardroom BOQ →'
         },
         led: {
             tabText: 'Active LED',
-            tag: 'Seamless Fine Pitch P1.25',
-            kicker: 'LARGE-FORMAT VISUALS',
-            title: 'Fine Pitch Active LED Video Wall',
-            img: '/assests/images/hero/VideoWall_3.webp',
-            alt: 'GPSPL Installed Seamless Active LED Display Wall',
+            tag: 'LG Business Solutions • JBL Pro Audio',
+            kicker: 'LARGE-FORMAT VISUALS & PRO AUDIO',
+            title: 'LG Active LED Wall with JBL Sound',
+            img: '/assests/images/projects/gpspl-real/real-lg-active-led-jbl-audio.jpg',
+            alt: 'GPSPL Installed LG Commercial Active LED Wall with Floor Standing JBL Pro Subwoofers',
             specs: [
-                { label: 'Pixel Pitch & Tech', value: 'P1.25 / P1.56 COB & SMD' },
-                { label: 'Controller Engine', value: 'NovaStar COEx Processing' },
-                { label: 'Serviceability', value: '100% Front-Service Magnetic' },
-                { label: 'SLA Guarantee', value: 'Buffer Module Inventory' }
+                { label: 'Display Technology', value: 'LG Commercial Fine Pitch LED' },
+                { label: 'Sound Reinforcement', value: 'Floor-standing JBL Pro Audio' },
+                { label: 'Video Engine', value: 'NovaStar Ultra-HD Controller' },
+                { label: 'Service & Spares', value: '100% Front-Service Magnetic Spares' }
             ],
             boqSector: 'led',
             ctaText: 'Configure Active LED Wall BOQ →'
         },
-        command: {
-            tabText: 'Command Center',
-            tag: '24/7/365 Mission Critical',
-            kicker: 'CRITICAL INFRASTRUCTURE',
-            title: 'NOC / SOC Command & Control Room',
-            img: '/assests/images/hero/video-wall-command-center.webp',
-            alt: 'GPSPL 24/7 Command and Control Room Video Wall Integration',
+        hospitality: {
+            tabText: 'Hospitality',
+            tag: 'Sony / LG Visuals • Harman Multi-Zone Audio',
+            kicker: 'ARCHITECTURAL INTEGRATION',
+            title: 'Luxury Hotel Lounge & Ballroom Display',
+            img: '/assests/images/projects/gpspl-real/real-luxury-lounge-led-wall.jpg',
+            alt: 'GPSPL Hotel Lounge Display Wall integrated into curved architectural woodwork',
             specs: [
-                { label: 'Console & Standards', value: 'ISO 11064 Ergonomic Consoles' },
-                { label: 'Switching Fabric', value: 'Zero-Latency KVM-over-IP' },
-                { label: 'Procurement', value: 'GeM Registered · OEM MAF Letters' },
-                { label: 'SLA Guarantee', value: '24/7 Dedicated Emergency SLA' }
+                { label: 'Display Wall', value: 'Sony / LG High-Brightness Display' },
+                { label: 'Sound Distribution', value: 'Harman / JBL Multi-Zone BGM' },
+                { label: 'Architectural Finish', value: 'Curved Acoustic Wood Paneling' },
+                { label: 'Turnkey Integration', value: 'Luxury Hotel & Ballroom AV Handover' }
             ],
-            boqSector: 'govt',
-            ctaText: 'Configure Command Center BOQ →'
+            boqSector: 'hospitality',
+            ctaText: 'Configure Hospitality BOQ →'
+        },
+        healthcare: {
+            tabText: 'Healthcare',
+            tag: 'Lumens 4K PTZ • Clinical OT Telemedicine',
+            kicker: 'MEDICAL & SURGICAL AV',
+            title: 'Mobile OT Surgical Workstation Cart',
+            img: '/assests/images/projects/gpspl-real/real-healthcare-medical-cart-display.png',
+            alt: 'GPSPL Healthcare Operation Theater Workstation Cart and Interactive Display',
+            specs: [
+                { label: 'Clinical Cart', value: 'Ergonomic Medical Cart Workstation' },
+                { label: 'Camera & Video', value: 'Lumens 4K PTZ Surgical Transmission' },
+                { label: 'Telemedicine Stream', value: 'Bi-directional Low-Latency Consult' },
+                { label: 'Chassis Compliance', value: 'Hospital-Grade Cleanable Stainless Unit' }
+            ],
+            boqSector: 'healthcare',
+            ctaText: 'Configure Healthcare BOQ →'
         },
         auditorium: {
             tabText: 'Auditorium',
-            tag: 'EASE 3D Acoustic Tuning',
+            tag: 'Harman JBL Pro • Luminous Online UPS',
             kicker: 'LARGE VENUE ACOUSTICS',
-            title: 'Turnkey Smart Auditorium AV',
-            img: '/assests/images/products/professional-audio-solutions.webp',
-            alt: 'GPSPL Large Venue Auditorium Sound and Stage LED Systems',
+            title: 'Heritage Auditorium Stage Active LED',
+            img: '/assests/images/projects/gpspl-real/real-heritage-auditorium-led.jpg',
+            alt: 'GPSPL Heritage Civic Auditorium Stage Active LED Display Backdrop and Line Array Audio',
             specs: [
-                { label: 'Sound Reinforcement', value: 'Harman JBL Pro Line Arrays' },
-                { label: 'Speech Intelligibility', value: 'STI > 0.65 · RT60 Acoustic Tuning' },
-                { label: 'Stage Production', value: '4K Backdrop LED · Digital Podium' },
-                { label: 'SLA Guarantee', value: 'Annual Maintenance (AMC) SLA' }
+                { label: 'Sound Reinforcement', value: 'Harman JBL Pro Line Array System' },
+                { label: 'Stage Visuals', value: 'Large-Format Stage Active LED Wall' },
+                { label: 'Acoustic Engineering', value: 'EASE 3D RT60 Reverberation Tuning' },
+                { label: 'Power Infrastructure', value: 'Luminous Online Double-Conversion UPS' }
             ],
             boqSector: 'education',
             ctaText: 'Configure Auditorium BOQ →'

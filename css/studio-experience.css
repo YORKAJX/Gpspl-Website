@@ -1,33 +1,38 @@
 /* ==========================================================================
-   GPSPL STUDIO EXPERIENCE (Inspired by SQLSpace Architectural Design System)
-   - Eliminates generic AI blue/green palette in favor of warm carbon & paper
-   - High-contrast editorial typography & authentic photographic presentation
-   - Interactive Signal Board with real project photos and live spec readouts
-   - Reversible view switcher with instant 1-click Reset
+   GPSPL ARCHITECTURAL STUDIO DESIGN SYSTEM (Top-to-Bottom Mastercraft)
+   - Inspired by SQLSpace Architectural Design Language
+   - Warm Carbon Ink (#161817) & Warm Alabaster Paper (#faf8f5)
+   - Accent: Warm Terracotta / Rust Copper (#d96538) - NO garish blue/red
+   - Real, authentic enterprise project photography (Zero AI slop)
    ========================================================================== */
 
 :root {
     --studio-ink: #161817;
-    --studio-ink-surface: #1e2220;
-    --studio-ink-card: #242926;
+    --studio-ink-surface: #202321;
+    --studio-ink-card: #272c29;
     --studio-paper: #faf8f5;
     --studio-paper-card: #ffffff;
-    --studio-paper-warm: #f3efe8;
+    --studio-paper-warm: #f2eee7;
+    --studio-paper-tint: #eae5dc;
     --studio-line: #e3ded6;
     --studio-line-dark: #353a37;
-    --studio-accent: #ef3438;
-    --studio-accent-hover: #dc2626;
+    --studio-line-soft: #424744;
+    --studio-accent: #d96538;
+    --studio-accent-hover: #c25327;
+    --studio-accent-subtle: #f8ece7;
     --studio-text: #191b1a;
     --studio-muted: #5e6460;
     --studio-muted-light: #9ea3a0;
     --studio-green: #22c55e;
 }
 
-/* Base resets for studio container */
+/* ==========================================================================
+   1. HERO SECTION (Warm Paper & Deep Ink Architecture)
+   ========================================================================== */
 .studio-hero-section {
     background: var(--studio-paper) !important;
     color: var(--studio-text) !important;
-    padding: clamp(36px, 5vw, 68px) 0 40px !important;
+    padding: clamp(40px, 5.5vw, 76px) 0 44px !important;
     border-bottom: 1px solid var(--studio-line) !important;
     position: relative !important;
     overflow: hidden !important;
@@ -35,10 +40,10 @@
 
 .studio-hero-grid {
     display: grid !important;
-    grid-template-columns: minmax(0, 1.15fr) minmax(360px, 1fr) !important;
-    gap: clamp(32px, 4vw, 64px) !important;
+    grid-template-columns: minmax(0, 1.14fr) minmax(380px, 1fr) !important;
+    gap: clamp(36px, 4.5vw, 68px) !important;
     align-items: start !important;
-    width: min(calc(100% - 40px), 1340px) !important;
+    width: min(calc(100% - 48px), 1340px) !important;
     max-width: 1340px !important;
     margin: 0 auto !important;
 }
@@ -49,24 +54,24 @@
     flex-direction: column !important;
     align-items: flex-start !important;
     text-align: left !important;
-    padding-top: 8px !important;
+    padding-top: 6px !important;
 }
 
 .studio-kicker {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 10px !important;
-    font-size: 0.76rem !important;
+    gap: 12px !important;
+    font-size: 0.74rem !important;
     font-weight: 800 !important;
-    letter-spacing: 0.14em !important;
+    letter-spacing: 0.16em !important;
     text-transform: uppercase !important;
     color: var(--studio-text) !important;
-    margin-bottom: 22px !important;
+    margin-bottom: 24px !important;
 }
 
 .studio-kicker-bar {
     display: inline-block !important;
-    width: 32px !important;
+    width: 34px !important;
     height: 3px !important;
     background: var(--studio-accent) !important;
     border-radius: 2px !important;
@@ -75,9 +80,9 @@
 
 .studio-headline {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
-    font-size: clamp(2.8rem, 4.8vw, 4.4rem) !important;
+    font-size: clamp(2.9rem, 5vw, 4.6rem) !important;
     font-weight: 850 !important;
-    line-height: 1.02 !important;
+    line-height: 1.01 !important;
     letter-spacing: -0.04em !important;
     color: var(--studio-ink) !important;
     -webkit-text-fill-color: var(--studio-ink) !important;
@@ -88,7 +93,7 @@
 .studio-headline em {
     font-family: 'Playfair Display', Georgia, serif !important;
     font-style: italic !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     color: var(--studio-accent) !important;
     -webkit-text-fill-color: var(--studio-accent) !important;
     letter-spacing: -0.02em !important;
@@ -96,12 +101,12 @@
 }
 
 .studio-intro {
-    font-size: clamp(1rem, 1.15vw, 1.14rem) !important;
+    font-size: clamp(1.02rem, 1.15vw, 1.16rem) !important;
     line-height: 1.62 !important;
     color: var(--studio-muted) !important;
     -webkit-text-fill-color: var(--studio-muted) !important;
     max-width: 600px !important;
-    margin: 0 0 32px 0 !important;
+    margin: 0 0 34px 0 !important;
 }
 
 .studio-actions-row {
@@ -109,7 +114,7 @@
     align-items: center !important;
     flex-wrap: wrap !important;
     gap: 16px !important;
-    margin-bottom: 34px !important;
+    margin-bottom: 36px !important;
 }
 
 .btn-studio-primary {
@@ -131,7 +136,7 @@
 .btn-studio-primary:hover {
     background: var(--studio-accent) !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 8px 22px rgba(239, 52, 56, 0.3) !important;
+    box-shadow: 0 8px 22px rgba(217, 101, 56, 0.35) !important;
 }
 
 .btn-studio-explore {
@@ -173,13 +178,13 @@
     border-color: #15803d !important;
 }
 
-/* Quick Trust Metrics Under CTA */
+/* Quick Trust Metrics */
 .studio-trust-strip {
     display: flex !important;
     align-items: center !important;
     flex-wrap: wrap !important;
     gap: clamp(14px, 2vw, 24px) !important;
-    padding-top: 20px !important;
+    padding-top: 22px !important;
     border-top: 1px solid var(--studio-line) !important;
     width: 100% !important;
     max-width: 600px !important;
@@ -192,22 +197,109 @@
 }
 
 .trust-item strong {
-    font-size: 1.15rem !important;
+    font-size: 1.18rem !important;
     font-weight: 850 !important;
     color: var(--studio-ink) !important;
     letter-spacing: -0.02em !important;
 }
 
 .trust-item span {
-    font-size: 0.75rem !important;
+    font-size: 0.74rem !important;
     font-weight: 600 !important;
     color: var(--studio-muted) !important;
     text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+
+/* Registered & Authorized OEM Strip */
+.studio-oem-strip {
+    margin-top: 24px !important;
+    padding-top: 18px !important;
+    border-top: 1px solid var(--studio-line) !important;
+    width: 100% !important;
+    max-width: 620px !important;
+}
+
+.oem-strip-label {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 12px !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+}
+
+.badge-registered {
+    font-size: 0.68rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    color: var(--studio-accent) !important;
+    background: var(--studio-accent-subtle) !important;
+    padding: 3px 8px !important;
+    border-radius: 4px !important;
+    border: 1px solid rgba(217, 101, 56, 0.25) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+}
+
+.oem-count {
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    color: var(--studio-muted) !important;
     letter-spacing: 0.04em !important;
 }
 
+.oem-logos-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    align-items: center !important;
+}
+
+.oem-logo-pill {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 6px 12px !important;
+    background: #ffffff !important;
+    border: 1px solid var(--studio-line) !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+}
+
+.oem-logo-pill:hover {
+    border-color: var(--studio-accent) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 14px rgba(217, 101, 56, 0.12) !important;
+}
+
+.oem-logo-pill img {
+    height: 18px !important;
+    width: auto !important;
+    max-width: 80px !important;
+    object-fit: contain !important;
+    filter: grayscale(25%) contrast(1.05) !important;
+    transition: filter 0.2s ease !important;
+}
+
+.oem-logo-pill:hover img {
+    filter: grayscale(0%) contrast(1) !important;
+}
+
+.oem-role {
+    font-size: 0.68rem !important;
+    font-weight: 750 !important;
+    color: var(--studio-text) !important;
+    letter-spacing: 0.02em !important;
+    white-space: nowrap !important;
+}
+
 /* ==========================================================================
-   RIGHT COLUMN: THE INTERACTIVE SIGNAL BOARD
+   2. INTERACTIVE SIGNAL BOARD (Live Real Photo Engine)
    ========================================================================== */
 .studio-signal-board {
     background: var(--studio-ink) !important;
@@ -262,11 +354,11 @@
     50% { transform: scale(1.25); opacity: 0.6; }
 }
 
-/* Interactive Tabs */
+/* 5 Clean Real Sector Tabs */
 .signal-tabs {
     display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 6px !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 5px !important;
     background: var(--studio-ink-surface) !important;
     padding: 4px !important;
     border-radius: 6px !important;
@@ -276,8 +368,8 @@
     background: transparent !important;
     border: none !important;
     color: var(--studio-muted-light) !important;
-    padding: 8px 6px !important;
-    font-size: 0.76rem !important;
+    padding: 8px 4px !important;
+    font-size: 0.74rem !important;
     font-weight: 700 !important;
     border-radius: 4px !important;
     cursor: pointer !important;
@@ -296,7 +388,7 @@
 .signal-tab-btn.active {
     background: var(--studio-accent) !important;
     color: #ffffff !important;
-    box-shadow: 0 2px 8px rgba(239, 52, 56, 0.4) !important;
+    box-shadow: 0 2px 8px rgba(217, 101, 56, 0.4) !important;
 }
 
 /* Media Showcase Screen */
@@ -304,7 +396,7 @@
     position: relative !important;
     border-radius: 8px !important;
     overflow: hidden !important;
-    height: 220px !important;
+    height: 230px !important;
     background: #0d0f0e !important;
     border: 1px solid var(--studio-line-dark) !important;
 }
@@ -324,7 +416,7 @@
 .signal-stage-overlay {
     position: absolute !important;
     inset: 0 !important;
-    background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(22,24,23,0.85) 100%) !important;
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(22,24,23,0.88) 100%) !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
@@ -333,9 +425,9 @@
 
 .signal-pill-tag {
     align-self: flex-start !important;
-    background: rgba(0, 0, 0, 0.65) !important;
+    background: rgba(0, 0, 0, 0.72) !important;
     backdrop-filter: blur(8px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
     color: #ffffff !important;
     font-size: 0.7rem !important;
     font-weight: 700 !important;
@@ -353,9 +445,9 @@
 .signal-stage-kicker {
     font-size: 0.68rem !important;
     font-weight: 800 !important;
-    letter-spacing: 0.12em !important;
+    letter-spacing: 0.14em !important;
     text-transform: uppercase !important;
-    color: #fca5a5 !important;
+    color: #fed7aa !important;
 }
 
 .signal-stage-title {
@@ -423,7 +515,7 @@
 }
 
 /* ==========================================================================
-   DISCIPLINE TICKER STRIP
+   3. DISCIPLINE TICKER STRIP
    ========================================================================== */
 .studio-discipline-ticker {
     background: var(--studio-ink) !important;
@@ -438,7 +530,7 @@
 .studio-ticker-track {
     display: inline-flex !important;
     gap: 28px !important;
-    animation: studioTicker 30s linear infinite !important;
+    animation: studioTicker 32s linear infinite !important;
     font-size: 0.74rem !important;
     font-weight: 700 !important;
     letter-spacing: 0.12em !important;
@@ -456,7 +548,7 @@
 }
 
 /* ==========================================================================
-   OUTCOME BAND (3 ARCHITECTURAL COLUMNS)
+   4. OUTCOME BAND (3 Architectural Columns)
    ========================================================================== */
 .studio-outcome-band {
     background: var(--studio-ink) !important;
@@ -467,13 +559,13 @@
 .studio-outcome-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    width: min(calc(100% - 40px), 1340px) !important;
+    width: min(calc(100% - 48px), 1340px) !important;
     max-width: 1340px !important;
     margin: 0 auto !important;
 }
 
 .outcome-col {
-    padding: clamp(32px, 4vw, 48px) clamp(20px, 2.5vw, 36px) !important;
+    padding: clamp(36px, 4.5vw, 54px) clamp(24px, 2.8vw, 40px) !important;
     border-right: 1px solid var(--studio-line-dark) !important;
     display: flex !important;
     flex-direction: column !important;
@@ -493,12 +585,12 @@
     font-weight: 800 !important;
     letter-spacing: 0.14em !important;
     color: var(--studio-accent) !important;
-    margin-bottom: 18px !important;
+    margin-bottom: 20px !important;
 }
 
 .outcome-col strong {
     font-family: 'Plus Jakarta Sans', sans-serif !important;
-    font-size: clamp(1.35rem, 1.8vw, 1.7rem) !important;
+    font-size: clamp(1.4rem, 1.8vw, 1.75rem) !important;
     font-weight: 800 !important;
     line-height: 1.18 !important;
     letter-spacing: -0.03em !important;
@@ -507,18 +599,192 @@
 }
 
 .outcome-col p {
-    font-size: 0.92rem !important;
-    line-height: 1.55 !important;
+    font-size: 0.94rem !important;
+    line-height: 1.58 !important;
     color: #a3a8a5 !important;
     margin: 0 !important;
 }
 
 /* ==========================================================================
-   DISCIPLINE MATRIX (8 ENGINEERING DISCIPLINES)
+   5. REAL PROJECT PROOF GALLERY (Verified Installations)
+   ========================================================================== */
+.studio-proof-section {
+    background: var(--studio-paper) !important;
+    padding: clamp(64px, 8vw, 108px) 0 !important;
+    border-bottom: 1px solid var(--studio-line) !important;
+}
+
+.studio-proof-container {
+    width: min(calc(100% - 48px), 1340px) !important;
+    max-width: 1340px !important;
+    margin: 0 auto !important;
+}
+
+.proof-header {
+    display: grid !important;
+    grid-template-columns: 1.25fr 0.75fr !important;
+    gap: 40px !important;
+    align-items: flex-end !important;
+    margin-bottom: 48px !important;
+}
+
+.proof-header-copy .eyebrow {
+    font-size: 0.74rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    color: var(--studio-accent) !important;
+    margin-bottom: 12px !important;
+    display: block !important;
+}
+
+.proof-header-copy h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(2.1rem, 3.4vw, 3.1rem) !important;
+    font-weight: 850 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.03em !important;
+    color: var(--studio-ink) !important;
+    margin: 0 !important;
+}
+
+.proof-header-desc p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    color: var(--studio-muted) !important;
+    margin: 0 !important;
+}
+
+/* Proof Cards Grid */
+.proof-grid {
+    display: grid !important;
+    grid-template-columns: repeat(12, 1fr) !important;
+    gap: 24px !important;
+}
+
+.proof-card {
+    background: var(--studio-paper-card) !important;
+    border: 1px solid var(--studio-line) !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.proof-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08) !important;
+    border-color: var(--studio-accent) !important;
+}
+
+.proof-card-featured {
+    grid-column: span 7 !important;
+}
+
+.proof-card-standard {
+    grid-column: span 5 !important;
+}
+
+.proof-card-third {
+    grid-column: span 4 !important;
+}
+
+.proof-img-wrap {
+    position: relative !important;
+    width: 100% !important;
+    height: 280px !important;
+    overflow: hidden !important;
+    background: #111312 !important;
+}
+
+.proof-card-featured .proof-img-wrap {
+    height: 360px !important;
+}
+
+.proof-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.proof-card:hover .proof-img {
+    transform: scale(1.04) !important;
+}
+
+.proof-badge {
+    position: absolute !important;
+    top: 14px !important;
+    left: 14px !important;
+    background: rgba(22, 24, 23, 0.85) !important;
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+    padding: 4px 10px !important;
+    border-radius: 4px !important;
+    letter-spacing: 0.05em !important;
+}
+
+.proof-body {
+    padding: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    flex: 1 !important;
+}
+
+.proof-sector {
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    color: var(--studio-accent) !important;
+}
+
+.proof-body h3 {
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.02em !important;
+    color: var(--studio-ink) !important;
+    margin: 0 !important;
+}
+
+.proof-body p {
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+    color: var(--studio-muted) !important;
+    margin: 0 !important;
+}
+
+.proof-footer {
+    margin-top: auto !important;
+    padding-top: 14px !important;
+    border-top: 1px solid var(--studio-line) !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    color: var(--studio-ink) !important;
+}
+
+.proof-footer span i {
+    color: var(--studio-accent) !important;
+    margin-right: 4px !important;
+}
+
+/* ==========================================================================
+   6. DISCIPLINE MATRIX (8 Engineering Disciplines)
    ========================================================================== */
 .studio-discipline-matrix {
     background: var(--studio-paper-warm) !important;
-    padding: clamp(56px, 7vw, 92px) 0 !important;
+    padding: clamp(64px, 8vw, 108px) 0 !important;
     border-bottom: 1px solid var(--studio-line) !important;
 }
 
@@ -527,7 +793,7 @@
     grid-template-columns: 1.25fr 0.75fr !important;
     gap: 40px !important;
     align-items: flex-end !important;
-    width: min(calc(100% - 40px), 1340px) !important;
+    width: min(calc(100% - 48px), 1340px) !important;
     max-width: 1340px !important;
     margin: 0 auto 48px auto !important;
 }
@@ -544,7 +810,7 @@
 
 .matrix-header-copy h2 {
     font-family: 'Plus Jakarta Sans', sans-serif !important;
-    font-size: clamp(2rem, 3.2vw, 2.9rem) !important;
+    font-size: clamp(2.1rem, 3.4vw, 3.1rem) !important;
     font-weight: 850 !important;
     line-height: 1.08 !important;
     letter-spacing: -0.03em !important;
@@ -562,7 +828,7 @@
 .matrix-grid {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
-    width: min(calc(100% - 40px), 1340px) !important;
+    width: min(calc(100% - 48px), 1340px) !important;
     max-width: 1340px !important;
     margin: 0 auto !important;
     border-top: 1px solid var(--studio-line) !important;
@@ -644,7 +910,7 @@
 }
 
 /* ==========================================================================
-   INSTANT 1-CLICK RESET VIEW SWITCHER (DOCK)
+   7. REVERSIBLE 1-CLICK RESET VIEW SWITCHER
    ========================================================================== */
 .gpspl-view-switch-dock {
     position: fixed !important;
@@ -689,6 +955,7 @@
 body.gpspl-classic-mode .studio-hero-section,
 body.gpspl-classic-mode .studio-discipline-ticker,
 body.gpspl-classic-mode .studio-outcome-band,
+body.gpspl-classic-mode .studio-proof-section,
 body.gpspl-classic-mode .studio-discipline-matrix {
     display: none !important;
 }
@@ -710,9 +977,15 @@ body:not(.gpspl-classic-mode) #home.hero-message-section {
         border-left: 1px solid var(--studio-line-dark) !important;
         border-bottom: 1px solid var(--studio-line-dark) !important;
     }
+    .proof-header,
     .matrix-header {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
+    }
+    .proof-card-featured,
+    .proof-card-standard,
+    .proof-card-third {
+        grid-column: span 6 !important;
     }
     .matrix-grid {
         grid-template-columns: 1fr 1fr !important;
@@ -721,7 +994,12 @@ body:not(.gpspl-classic-mode) #home.hero-message-section {
 
 @media (max-width: 640px) {
     .signal-tabs {
-        grid-template-columns: 1fr 1fr !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    .proof-card-featured,
+    .proof-card-standard,
+    .proof-card-third {
+        grid-column: span 12 !important;
     }
     .matrix-grid {
         grid-template-columns: 1fr !important;
@@ -730,7 +1008,479 @@ body:not(.gpspl-classic-mode) #home.hero-message-section {
         gap: 12px !important;
     }
     .gpspl-view-switch-dock {
-        bottom: 16px !important;
+        bottom: 74px !important;
         left: 16px !important;
     }
+}
+
+/* ==========================================================================
+   8. TOP-TO-BOTTOM HOMEPAGE ARCHITECTURAL UNIFICATION
+   - Replaces garish neon reds and navy blues with Warm Carbon & Terracotta
+   - Gives the entire page a cohesive human-crafted architectural studio aesthetic
+   ========================================================================== */
+
+/* Site Navigation & Top Bar */
+body:not(.gpspl-classic-mode) .top-bar {
+    background: var(--studio-ink) !important;
+    border-bottom: 1px solid var(--studio-line-dark) !important;
+    color: #a3a8a5 !important;
+}
+
+body:not(.gpspl-classic-mode) .top-bar a {
+    color: #d1d5db !important;
+    transition: color 0.2s ease !important;
+}
+
+body:not(.gpspl-classic-mode) .top-bar a:hover {
+    color: var(--studio-accent) !important;
+}
+
+body:not(.gpspl-classic-mode) .top-bar-cta-quote,
+body:not(.gpspl-classic-mode) .top-bar .top-bar-right .top-bar-cta-quote,
+body:not(.gpspl-classic-mode) .top-bar .top-bar-cta-quote {
+    background: var(--studio-accent) !important;
+    border: 1px solid var(--studio-accent) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 8px rgba(217, 101, 56, 0.25) !important;
+}
+
+body:not(.gpspl-classic-mode) .top-bar-cta-quote:hover,
+body:not(.gpspl-classic-mode) .top-bar .top-bar-right .top-bar-cta-quote:hover {
+    background: var(--studio-accent-hover) !important;
+    border-color: var(--studio-accent-hover) !important;
+}
+
+body:not(.gpspl-classic-mode) .site-header {
+    background: var(--studio-paper) !important;
+    border-bottom: 1px solid var(--studio-line) !important;
+    box-shadow: none !important;
+}
+
+body:not(.gpspl-classic-mode) .site-header .logo-text .company-name {
+    color: var(--studio-ink) !important;
+    font-weight: 850 !important;
+}
+
+body:not(.gpspl-classic-mode) .site-header .nav-links > a,
+body:not(.gpspl-classic-mode) .site-header .nav-dropdown summary {
+    color: var(--studio-ink) !important;
+    font-weight: 650 !important;
+    font-size: 0.88rem !important;
+    transition: color 0.2s ease !important;
+}
+
+body:not(.gpspl-classic-mode) .site-header .nav-links > a:hover,
+body:not(.gpspl-classic-mode) .site-header .nav-dropdown summary:hover {
+    color: var(--studio-accent) !important;
+}
+
+body:not(.gpspl-classic-mode) .nav-link-boq i {
+    color: var(--studio-accent) !important;
+}
+
+body:not(.gpspl-classic-mode) .site-header .nav-links .btn-primary,
+body:not(.gpspl-classic-mode) .site-header .btn-primary {
+    background: var(--studio-ink) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border: 1px solid var(--studio-ink) !important;
+    border-radius: 6px !important;
+    font-weight: 700 !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 4px 12px rgba(22, 24, 23, 0.15) !important;
+}
+
+body:not(.gpspl-classic-mode) .site-header .nav-links .btn-primary:hover,
+body:not(.gpspl-classic-mode) .site-header .btn-primary:hover {
+    background: var(--studio-accent) !important;
+    border-color: var(--studio-accent) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 18px rgba(217, 101, 56, 0.3) !important;
+}
+
+/* Bottom Lead Intake Toast (#av-lead-strip) */
+body:not(.gpspl-classic-mode) .av-strip-btn {
+    background: var(--studio-accent) !important;
+    border-color: var(--studio-accent) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(217, 101, 56, 0.35) !important;
+}
+
+body:not(.gpspl-classic-mode) .av-strip-btn:hover {
+    background: var(--studio-accent-hover) !important;
+    border-color: var(--studio-accent-hover) !important;
+}
+
+body:not(.gpspl-classic-mode) .av-toast-badge {
+    background: rgba(217, 101, 56, 0.18) !important;
+    color: var(--studio-accent) !important;
+    border: 1px solid rgba(217, 101, 56, 0.4) !important;
+}
+
+/* BOQ Configurator & Calculator (#instant-boq-planner) */
+body:not(.gpspl-classic-mode) #instant-boq-planner,
+body:not(.gpspl-classic-mode) .enterprise-boq-section {
+    background: var(--studio-paper) !important;
+    border-bottom: 1px solid var(--studio-line) !important;
+    color: var(--studio-text) !important;
+    padding: clamp(60px, 7vw, 96px) 0 !important;
+}
+
+body:not(.gpspl-classic-mode) .enterprise-boq-section .section-header h2,
+body:not(.gpspl-classic-mode) .enterprise-boq-section h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(2rem, 3.4vw, 3.1rem) !important;
+    font-weight: 850 !important;
+    letter-spacing: -0.03em !important;
+    color: var(--studio-ink) !important;
+}
+
+body:not(.gpspl-classic-mode) .enterprise-boq-section .eyebrow,
+body:not(.gpspl-classic-mode) .enterprise-boq-section .section-eyebrow {
+    color: var(--studio-accent) !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+}
+
+body:not(.gpspl-classic-mode) .boq-step-card,
+body:not(.gpspl-classic-mode) .boq-planner-container,
+body:not(.gpspl-classic-mode) .boq-form-card {
+    background: var(--studio-paper-card) !important;
+    border: 1px solid var(--studio-line) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+}
+
+body:not(.gpspl-classic-mode) .boq-sector-btn.active,
+body:not(.gpspl-classic-mode) .boq-tab.active,
+body:not(.gpspl-classic-mode) .boq-pill.active {
+    background: var(--studio-accent-subtle) !important;
+    border-color: var(--studio-accent) !important;
+    color: var(--studio-accent) !important;
+}
+
+body:not(.gpspl-classic-mode) .boq-cta-btn,
+body:not(.gpspl-classic-mode) .btn-generate-boq,
+body:not(.gpspl-classic-mode) .btn-boq-submit {
+    background: var(--studio-accent) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border-radius: 6px !important;
+    font-weight: 750 !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 4px 14px rgba(217, 101, 56, 0.35) !important;
+}
+
+body:not(.gpspl-classic-mode) .boq-cta-btn:hover,
+body:not(.gpspl-classic-mode) .btn-generate-boq:hover,
+body:not(.gpspl-classic-mode) .btn-boq-submit:hover {
+    background: var(--studio-accent-hover) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 22px rgba(217, 101, 56, 0.45) !important;
+}
+
+body:not(.gpspl-classic-mode) .boq-estimate-summary,
+body:not(.gpspl-classic-mode) .boq-summary-card {
+    background: var(--studio-ink) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--studio-line-dark) !important;
+    border-radius: 10px !important;
+}
+
+body:not(.gpspl-classic-mode) .boq-summary-card strong,
+body:not(.gpspl-classic-mode) .boq-estimate-summary .price-display {
+    color: #fed7aa !important;
+    font-weight: 850 !important;
+}
+
+/* Turnkey Industry Solutions (#turnkey-industry-solutions) */
+body:not(.gpspl-classic-mode) #turnkey-industry-solutions,
+body:not(.gpspl-classic-mode) .turnkey-industry-section {
+    background: var(--studio-paper-warm) !important;
+    border-bottom: 1px solid var(--studio-line) !important;
+    padding: clamp(60px, 7vw, 96px) 0 !important;
+}
+
+body:not(.gpspl-classic-mode) .turnkey-industry-section h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(2.1rem, 3.4vw, 3.1rem) !important;
+    font-weight: 850 !important;
+    letter-spacing: -0.03em !important;
+    color: var(--studio-ink) !important;
+}
+
+body:not(.gpspl-classic-mode) .turnkey-industry-card,
+body:not(.gpspl-classic-mode) .industry-card {
+    background: var(--studio-paper-card) !important;
+    border: 1px solid var(--studio-line) !important;
+    border-radius: 8px !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+body:not(.gpspl-classic-mode) .turnkey-industry-card:hover,
+body:not(.gpspl-classic-mode) .industry-card:hover {
+    transform: translateY(-4px) !important;
+    border-color: var(--studio-accent) !important;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08) !important;
+}
+
+body:not(.gpspl-classic-mode) .turnkey-industry-card h3,
+body:not(.gpspl-classic-mode) .industry-card h3 {
+    color: var(--studio-ink) !important;
+    font-weight: 800 !important;
+}
+
+body:not(.gpspl-classic-mode) .turnkey-industry-card .card-tag,
+body:not(.gpspl-classic-mode) .industry-card-badge {
+    background: var(--studio-accent-subtle) !important;
+    color: var(--studio-accent) !important;
+    font-weight: 800 !important;
+}
+
+/* Solution Architecture (#solution-architecture) */
+body:not(.gpspl-classic-mode) #solution-architecture,
+body:not(.gpspl-classic-mode) .gpspl-arch-section {
+    background: var(--studio-paper) !important;
+    border-bottom: 1px solid var(--studio-line) !important;
+    padding: clamp(60px, 7vw, 96px) 0 !important;
+}
+
+body:not(.gpspl-classic-mode) .gpspl-arch-section h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(2.1rem, 3.4vw, 3.1rem) !important;
+    font-weight: 850 !important;
+    letter-spacing: -0.03em !important;
+    color: var(--studio-ink) !important;
+}
+
+body:not(.gpspl-classic-mode) .arch-step-card {
+    background: var(--studio-paper-card) !important;
+    border: 1px solid var(--studio-line) !important;
+    border-radius: 8px !important;
+    transition: all 0.2s ease !important;
+}
+
+body:not(.gpspl-classic-mode) .arch-step-card:hover {
+    border-color: var(--studio-accent) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06) !important;
+}
+
+body:not(.gpspl-classic-mode) .arch-step-num {
+    color: var(--studio-accent) !important;
+    font-weight: 850 !important;
+}
+
+/* Why GPSPL & Premium About (#why-gpspl-premium, #about) */
+body:not(.gpspl-classic-mode) #why-gpspl-premium,
+body:not(.gpspl-classic-mode) .gpspl-why-section,
+body:not(.gpspl-classic-mode) #about,
+body:not(.gpspl-classic-mode) .premium-about {
+    background: var(--studio-paper) !important;
+    border-bottom: 1px solid var(--studio-line) !important;
+}
+
+body:not(.gpspl-classic-mode) .premium-stat-card {
+    background: var(--studio-paper-card) !important;
+    border: 1px solid var(--studio-line) !important;
+    border-radius: 8px !important;
+}
+
+body:not(.gpspl-classic-mode) .premium-stat-card h3,
+body:not(.gpspl-classic-mode) .premium-stat-card .counter {
+    color: var(--studio-ink) !important;
+    font-weight: 850 !important;
+}
+
+body:not(.gpspl-classic-mode) .premium-stat-card i {
+    color: var(--studio-accent) !important;
+}
+
+/* Milestones (#home-milestones) */
+body:not(.gpspl-classic-mode) #home-milestones,
+body:not(.gpspl-classic-mode) .home-milestones-section {
+    background: var(--studio-paper-warm) !important;
+    border-bottom: 1px solid var(--studio-line) !important;
+}
+
+body:not(.gpspl-classic-mode) .milestone-card {
+    background: var(--studio-paper-card) !important;
+    border: 1px solid var(--studio-line) !important;
+    border-left: 4px solid var(--studio-accent) !important;
+    border-radius: 8px !important;
+}
+
+body:not(.gpspl-classic-mode) .milestone-year {
+    color: var(--studio-accent) !important;
+    font-weight: 850 !important;
+}
+
+/* Services (#services) */
+body:not(.gpspl-classic-mode) #services,
+body:not(.gpspl-classic-mode) .enterprise-services {
+    background: var(--studio-paper) !important;
+    border-bottom: 1px solid var(--studio-line) !important;
+}
+
+body:not(.gpspl-classic-mode) .service-card {
+    background: var(--studio-paper-card) !important;
+    border: 1px solid var(--studio-line) !important;
+    border-radius: 8px !important;
+    transition: all 0.25s ease !important;
+}
+
+body:not(.gpspl-classic-mode) .service-card:hover {
+    transform: translateY(-4px) !important;
+    border-color: var(--studio-accent) !important;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+body:not(.gpspl-classic-mode) .service-card-icon {
+    color: var(--studio-accent) !important;
+}
+
+/* Featured Products (#featured-products) */
+body:not(.gpspl-classic-mode) #featured-products,
+body:not(.gpspl-classic-mode) .featured-products {
+    background: var(--studio-paper-warm) !important;
+    border-bottom: 1px solid var(--studio-line) !important;
+}
+
+body:not(.gpspl-classic-mode) .product-card {
+    background: var(--studio-paper-card) !important;
+    border: 1px solid var(--studio-line) !important;
+    border-radius: 8px !important;
+}
+
+body:not(.gpspl-classic-mode) .product-card:hover {
+    border-color: var(--studio-accent) !important;
+}
+
+/* Testimonials (#testimonials) */
+body:not(.gpspl-classic-mode) #testimonials,
+body:not(.gpspl-classic-mode) .premium-testimonials {
+    background: var(--studio-paper) !important;
+    border-bottom: 1px solid var(--studio-line) !important;
+}
+
+body:not(.gpspl-classic-mode) .testimonial-card {
+    background: var(--studio-paper-card) !important;
+    border: 1px solid var(--studio-line) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+}
+
+body:not(.gpspl-classic-mode) .testimonial-stars,
+body:not(.gpspl-classic-mode) .testimonial-rating i {
+    color: #eab308 !important;
+}
+
+/* Strategic Partners (#partners) */
+body:not(.gpspl-classic-mode) #partners,
+body:not(.gpspl-classic-mode) .strategic-partners {
+    background: var(--studio-paper) !important;
+    border-bottom: 1px solid var(--studio-line) !important;
+}
+
+body:not(.gpspl-classic-mode) .partner-card,
+body:not(.gpspl-classic-mode) .brand-logo-card {
+    background: var(--studio-paper-card) !important;
+    border: 1px solid var(--studio-line) !important;
+    border-radius: 8px !important;
+}
+
+/* Insights & Case Studies Preview (#home-insights, .home-case-study-preview) */
+body:not(.gpspl-classic-mode) #home-insights,
+body:not(.gpspl-classic-mode) .home-insights-section,
+body:not(.gpspl-classic-mode) .home-case-study-preview {
+    background: var(--studio-paper-warm) !important;
+    border-bottom: 1px solid var(--studio-line) !important;
+}
+
+body:not(.gpspl-classic-mode) .blog-card,
+body:not(.gpspl-classic-mode) .case-study-card {
+    background: var(--studio-paper-card) !important;
+    border: 1px solid var(--studio-line) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
+}
+
+body:not(.gpspl-classic-mode) .blog-card:hover,
+body:not(.gpspl-classic-mode) .case-study-card:hover {
+    border-color: var(--studio-accent) !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08) !important;
+}
+
+body:not(.gpspl-classic-mode) .blog-card-tag {
+    background: var(--studio-accent-subtle) !important;
+    color: var(--studio-accent) !important;
+}
+
+/* FAQ Preview (#faq-preview) */
+body:not(.gpspl-classic-mode) #faq-preview,
+body:not(.gpspl-classic-mode) .home-faq-preview {
+    background: var(--studio-paper) !important;
+    border-bottom: 1px solid var(--studio-line) !important;
+}
+
+body:not(.gpspl-classic-mode) .faq-preview-item {
+    background: var(--studio-paper-card) !important;
+    border: 1px solid var(--studio-line) !important;
+    border-radius: 8px !important;
+    margin-bottom: 12px !important;
+}
+
+body:not(.gpspl-classic-mode) .faq-preview-item[open] {
+    border-color: var(--studio-accent) !important;
+}
+
+body:not(.gpspl-classic-mode) .faq-preview-item summary {
+    color: var(--studio-ink) !important;
+    font-weight: 750 !important;
+}
+
+body:not(.gpspl-classic-mode) .faq-preview-item[open] summary {
+    color: var(--studio-accent) !important;
+}
+
+/* Footer Enterprise Directory */
+body:not(.gpspl-classic-mode) .footer-enterprise-directory {
+    background: var(--studio-ink) !important;
+    color: #a3a8a5 !important;
+    border-top: 1px solid var(--studio-line-dark) !important;
+}
+
+body:not(.gpspl-classic-mode) .footer-enterprise-directory h3,
+body:not(.gpspl-classic-mode) .footer-enterprise-directory h4,
+body:not(.gpspl-classic-mode) .footer-col-title {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+}
+
+body:not(.gpspl-classic-mode) .footer-enterprise-directory a {
+    color: #a3a8a5 !important;
+    transition: color 0.2s ease !important;
+}
+
+body:not(.gpspl-classic-mode) .footer-enterprise-directory a:hover {
+    color: var(--studio-accent) !important;
+}
+
+body:not(.gpspl-classic-mode) #contact,
+body:not(.gpspl-classic-mode) .site-footer {
+    background: #111312 !important;
+    border-top: 1px solid var(--studio-line-dark) !important;
+    color: #a3a8a5 !important;
+}
+
+body:not(.gpspl-classic-mode) .copyright-section {
+    background: #0d0f0e !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+    color: #737875 !important;
 }
