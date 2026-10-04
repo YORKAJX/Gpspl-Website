@@ -1,0 +1,769 @@
+/* ==========================================================================
+   GPSPL MULTI-BRAND AMC & LIFECYCLE SERVICE SUITE
+   - Aesthetic: Warm Alabaster Paper (#faf8f5), Carbon Ink (#161817), Warm Terracotta (#d96538)
+   - Live SLA Telemetry Console, Multi-OEM Matrix, SLA Cost Estimator
+   ========================================================================== */
+
+:root {
+    --amc-paper: #faf8f5;
+    --amc-paper-card: #ffffff;
+    --amc-paper-warm: #f3efe9;
+    --amc-paper-tint: #eae5dc;
+    --amc-line: #e3ded6;
+    --amc-line-soft: #ede8e1;
+    --amc-ink: #161817;
+    --amc-text: #191b1a;
+    --amc-muted: #5e6460;
+    --amc-muted-light: #8e9490;
+    
+    --amc-accent: #d96538;
+    --amc-accent-hover: #c25327;
+    --amc-accent-subtle: #fbf0eb;
+    --amc-accent-border: #f0c9ba;
+
+    --amc-emerald: #10b981;
+    --amc-emerald-subtle: #ecfdf5;
+
+    --amc-console-bg: #141716;
+    --amc-console-card: #1c201e;
+    --amc-console-border: #2e3531;
+    --amc-console-text: #f4f6f5;
+
+    --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-italic: 'Playfair Display', Georgia, serif;
+    --font-mono: 'Space Grotesk', monospace;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body.amc-page {
+    background-color: var(--amc-paper) !important;
+    color: var(--amc-text) !important;
+    font-family: var(--font-body) !important;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body.amc-page * {
+    box-sizing: border-box;
+}
+
+body.amc-page em,
+body.amc-page .amc-italic {
+    font-family: var(--font-italic) !important;
+    font-style: italic !important;
+    font-weight: 500 !important;
+    color: var(--amc-accent) !important;
+}
+
+.amc-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ==========================================================================
+   HERO & LIVE SLA TELEMETRY CONSOLE
+   ========================================================================== */
+.amc-hero {
+    position: relative;
+    padding: clamp(60px, 8vw, 100px) 0 clamp(48px, 6vw, 80px);
+    background: radial-gradient(ellipse 90% 60% at 50% -10%, #fff7f2 0%, var(--amc-paper) 100%);
+    border-bottom: 1px solid var(--amc-line);
+    overflow: hidden;
+}
+
+.amc-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.95fr);
+    gap: clamp(32px, 5vw, 64px);
+    align-items: center;
+}
+
+.amc-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--amc-accent-subtle);
+    border: 1px solid var(--amc-accent-border);
+    color: var(--amc-accent);
+    padding: 7px 16px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.amc-kicker-beacon {
+    width: 8px;
+    height: 8px;
+    background: var(--amc-accent);
+    border-radius: 50%;
+    animation: amcBeaconPulse 2s infinite;
+}
+
+@keyframes amcBeaconPulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(217, 101, 56, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(217, 101, 56, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(217, 101, 56, 0); }
+}
+
+.amc-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.3rem, 4.5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: var(--amc-ink);
+    margin: 0 0 22px;
+}
+
+.amc-hero-sub {
+    font-size: clamp(1.02rem, 1.25vw, 1.18rem);
+    color: var(--amc-muted);
+    line-height: 1.7;
+    margin: 0 0 32px;
+    max-width: 620px;
+}
+
+.amc-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 36px;
+}
+
+.amc-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--amc-accent);
+    color: #ffffff !important;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 20px rgba(217, 101, 56, 0.28);
+}
+
+.amc-btn-primary:hover {
+    background: var(--amc-accent-hover);
+    transform: translateY(-2px);
+}
+
+.amc-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--amc-paper-card);
+    color: var(--amc-ink) !important;
+    border: 1px solid var(--amc-line);
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.amc-btn-secondary:hover {
+    background: var(--amc-paper-warm);
+    border-color: var(--amc-accent-border);
+}
+
+.amc-trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    padding-top: 24px;
+    border-top: 1px solid var(--amc-line-soft);
+}
+
+.amc-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--amc-text);
+}
+
+.amc-trust-item i {
+    color: var(--amc-emerald);
+}
+
+/* SLA Live Health Telemetry Console */
+.amc-console {
+    background: var(--amc-console-bg);
+    border: 1px solid var(--amc-console-border);
+    border-radius: 20px;
+    padding: 28px;
+    color: var(--amc-console-text);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.25);
+}
+
+.amc-console-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--amc-console-border);
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+}
+
+.amc-console-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amc-emerald);
+}
+
+.amc-console-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--amc-emerald);
+    border-radius: 50%;
+}
+
+/* Facility Tabs */
+.amc-facility-tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    background: var(--amc-console-card);
+    padding: 6px;
+    border-radius: 12px;
+    border: 1px solid var(--amc-console-border);
+    margin-bottom: 22px;
+}
+
+.amc-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--amc-muted-light);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.78rem;
+    padding: 8px 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.amc-tab-btn:hover {
+    color: #ffffff;
+}
+
+.amc-tab-btn.active {
+    background: var(--amc-accent);
+    color: #ffffff;
+}
+
+/* Console Metrics Grid */
+.amc-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.amc-metric-box {
+    background: var(--amc-console-card);
+    border: 1px solid var(--amc-console-border);
+    border-radius: 12px;
+    padding: 12px 14px;
+}
+
+.amc-metric-lbl {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--amc-muted-light);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.amc-metric-val {
+    font-family: var(--font-mono);
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.amc-metric-desc {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    margin-top: 2px;
+}
+
+.amc-console-note {
+    background: rgba(217, 101, 56, 0.1);
+    border: 1px solid rgba(217, 101, 56, 0.3);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 0.84rem;
+    color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.amc-console-note i {
+    color: var(--amc-accent);
+    font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   MULTI-OEM ECOSYSTEM GRID
+   ========================================================================== */
+.amc-oem-section {
+    padding: clamp(60px, 7vw, 90px) 0;
+    background: var(--amc-paper);
+}
+
+.amc-section-header {
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto clamp(36px, 5vw, 54px);
+}
+
+.amc-section-header .section-eyebrow {
+    color: var(--amc-accent);
+    font-weight: 800;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.amc-section-header h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--amc-ink);
+    margin: 0 0 14px;
+}
+
+.amc-section-header p {
+    color: var(--amc-muted);
+    font-size: 1rem;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.amc-oem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.amc-oem-card {
+    background: var(--amc-paper-card);
+    border: 1px solid var(--amc-line);
+    border-radius: 16px;
+    padding: 24px 20px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.amc-oem-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--amc-accent-border);
+}
+
+.amc-oem-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.amc-oem-name {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--amc-ink);
+}
+
+.amc-oem-cat {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--amc-accent);
+    background: var(--amc-accent-subtle);
+    padding: 3px 8px;
+    border-radius: 999px;
+}
+
+.amc-oem-card p {
+    font-size: 0.84rem;
+    color: var(--amc-muted);
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* ==========================================================================
+   INTERACTIVE SLA TIER & COST ESTIMATOR
+   ========================================================================== */
+.amc-calc-section {
+    padding: clamp(60px, 7vw, 90px) 0;
+    background: var(--amc-paper-warm);
+    border-top: 1px solid var(--amc-line);
+    border-bottom: 1px solid var(--amc-line);
+}
+
+.amc-calc-card {
+    background: var(--amc-paper-card);
+    border: 1px solid var(--amc-line);
+    border-radius: 20px;
+    padding: clamp(28px, 4vw, 44px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+}
+
+.amc-calc-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.9fr);
+    gap: clamp(32px, 4vw, 50px);
+    align-items: center;
+}
+
+.amc-ctrl-group {
+    margin-bottom: 24px;
+}
+
+.amc-ctrl-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.amc-ctrl-title {
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: var(--amc-ink);
+}
+
+.amc-ctrl-badge {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--amc-accent);
+}
+
+.amc-slider {
+    width: 100%;
+    height: 7px;
+    border-radius: 5px;
+    background: var(--amc-line);
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.amc-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--amc-accent);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(217, 101, 56, 0.4);
+    transition: transform 0.15s ease;
+}
+
+.amc-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+/* SLA Level Chips */
+.amc-sla-chips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.amc-chip {
+    border: 1px solid var(--amc-line);
+    background: var(--amc-paper-warm);
+    border-radius: 10px;
+    padding: 12px 10px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--amc-text);
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.amc-chip.selected {
+    background: var(--amc-accent-subtle);
+    border-color: var(--amc-accent);
+    color: var(--amc-accent);
+}
+
+/* Result Box */
+.amc-res-console {
+    background: var(--amc-console-bg);
+    border: 1px solid var(--amc-console-border);
+    border-radius: 16px;
+    padding: 28px;
+    color: #ffffff;
+}
+
+.amc-res-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amc-emerald);
+    margin-bottom: 12px;
+}
+
+.amc-res-title {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 6px;
+}
+
+.amc-res-scope {
+    font-size: 0.86rem;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.amc-res-table {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+    border-top: 1px solid var(--amc-console-border);
+    padding-top: 16px;
+}
+
+.amc-res-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.84rem;
+}
+
+.amc-res-row span:first-child { color: #94a3b8; }
+.amc-res-row span:last-child {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.amc-price-box {
+    background: rgba(217, 101, 56, 0.15);
+    border: 1px solid var(--amc-accent-border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.amc-price-val {
+    font-family: var(--font-mono);
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   PREVENTIVE VS EMERGENCY COMPARISON
+   ========================================================================== */
+.amc-compare-section {
+    padding: clamp(60px, 7vw, 90px) 0;
+    background: var(--amc-paper);
+}
+
+.amc-table-wrap {
+    overflow-x: auto;
+    background: var(--amc-paper-card);
+    border: 1px solid var(--amc-line);
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.amc-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+    text-align: left;
+}
+
+.amc-table th {
+    padding: 18px 24px;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 800;
+    border-bottom: 2px solid var(--amc-line);
+}
+
+.amc-table th:first-child { width: 34%; color: var(--amc-muted); }
+.amc-table th:nth-child(2) { width: 33%; color: #dc2626; background: #fff5f5; }
+.amc-table th:nth-child(3) { width: 33%; color: var(--amc-accent); background: var(--amc-accent-subtle); }
+
+.amc-table td {
+    padding: 16px 24px;
+    font-size: 0.88rem;
+    border-bottom: 1px solid var(--amc-line-soft);
+    line-height: 1.55;
+}
+
+.amc-table tr:last-child td { border-bottom: none; }
+.amc-table td:nth-child(2) { background: #fffbfb; color: #475569; }
+.amc-table td:nth-child(3) { background: #fffcfb; font-weight: 700; color: var(--amc-text); }
+
+/* ==========================================================================
+   PHOTO GALLERY & FAQ
+   ========================================================================== */
+.amc-gallery-section {
+    padding: clamp(60px, 7vw, 90px) 0;
+    background: var(--amc-paper-warm);
+    border-top: 1px solid var(--amc-line);
+}
+
+.amc-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.amc-gallery-card {
+    background: var(--amc-paper-card);
+    border: 1px solid var(--amc-line);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.amc-gallery-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.amc-gallery-card-body {
+    padding: 18px;
+}
+
+.amc-gallery-tag {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--amc-accent);
+    margin-bottom: 4px;
+    display: block;
+}
+
+.amc-gallery-card-body h4 {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--amc-ink);
+    margin: 0 0 6px;
+}
+
+.amc-gallery-card-body p {
+    font-size: 0.84rem;
+    color: var(--amc-muted);
+    margin: 0;
+}
+
+/* FAQ Accordion */
+.amc-faq-section {
+    padding: clamp(60px, 7vw, 90px) 0;
+    background: var(--amc-paper);
+    border-top: 1px solid var(--amc-line);
+}
+
+.amc-faq-list {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.amc-faq-item {
+    background: var(--amc-paper-card);
+    border: 1px solid var(--amc-line);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+}
+
+.amc-faq-item.active {
+    border-color: var(--amc-accent-border);
+}
+
+.amc-faq-question {
+    padding: 20px 24px;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--amc-ink);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.amc-faq-icon {
+    font-size: 0.88rem;
+    color: var(--amc-accent);
+    transition: transform 0.25s ease;
+}
+
+.amc-faq-item.active .amc-faq-icon {
+    transform: rotate(180deg);
+}
+
+.amc-faq-answer {
+    padding: 0 24px 20px;
+    font-size: 0.94rem;
+    color: var(--amc-muted);
+    line-height: 1.65;
+    display: none;
+}
+
+.amc-faq-item.active .amc-faq-answer {
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .amc-hero-grid,
+    .amc-calc-grid {
+        grid-template-columns: 1fr;
+    }
+    .amc-facility-tabs,
+    .amc-sla-chips {
+        grid-template-columns: 1fr 1fr;
+    }
+}

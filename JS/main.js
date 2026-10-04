@@ -392,26 +392,35 @@ document.addEventListener("DOMContentLoaded", () => {
             experience.classList.remove('industry-cycle');
             void experience.offsetWidth;
             experience.classList.add('industry-cycle');
-        }
 
-        function start() {
-            clearInterval(timer);
-            timer = setInterval(() => showIndustry(activeIndex + 1), 6500);
+            const currentTab = tabs[activeIndex];
+            const tabContainer = experience.querySelector('.industry-tabs');
+            if (currentTab && tabContainer) {
+                const tabLeft = currentTab.offsetLeft;
+                const tabWidth = currentTab.offsetWidth;
+                const containerWidth = tabContainer.offsetWidth;
+                const scrollLeft = tabContainer.scrollLeft;
+                if (tabLeft < scrollLeft || tabLeft + tabWidth > scrollLeft + containerWidth) {
+                    tabContainer.scrollTo({
+                        left: Math.max(0, tabLeft - 24),
+                        behavior: 'smooth'
+                    });
+                }
+            }
         }
 
         tabs.forEach((tab, index) => {
-            tab.addEventListener('click', () => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
                 showIndustry(index);
-                start();
             });
         });
 
-        experience.addEventListener('mouseenter', () => clearInterval(timer));
-        experience.addEventListener('mouseleave', start);
-        experience.addEventListener('focusin', () => clearInterval(timer));
-        experience.addEventListener('focusout', start);
         showIndustry(0);
-        start();
+        const tabContainer = experience.querySelector('.industry-tabs');
+        if (tabContainer) {
+            tabContainer.scrollLeft = 0;
+        }
     }
 
     function initLeadForms() {

@@ -1413,8 +1413,8 @@ html body :is(.av-pathways-heading h2, #av-boq-calculator .section-title h2, #ab
     display: inline-block !important;
 }
 
-/* Dark sections H2 gradient clip (White to Pink) - Solves 4th Image Visibility */
-html body :is(.model-heading h2, .why-heading h2, .testimonial-heading h2) {
+/* Dark sections H2 gradient clip (White to Pink) */
+html body :is(.model-heading h2) {
     background: linear-gradient(135deg, #ffffff 0%, #dbe8f7 65%, #ffacae 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
@@ -1931,27 +1931,7 @@ html body .why-section .why-copy-panel p {
     -webkit-text-fill-color: rgba(215, 232, 252, 0.9) !important;
 }
 
-/* === 5. Featured products heading copy panel - dark glass === */
-html body #featured-products .product-heading-copy,
-html body .featured-products .product-heading-copy {
-    background:
-        radial-gradient(circle at 90% 10%, rgba(239, 52, 56, 0.12), transparent 40%),
-        linear-gradient(145deg, rgba(8, 24, 46, 0.88), rgba(18, 40, 68, 0.82)) !important;
-    border: 1px solid rgba(255, 255, 255, 0.14) !important;
-    border-left: 4px solid #ef3438 !important;
-    border-radius: 20px !important;
-    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28) !important;
-    backdrop-filter: blur(14px) !important;
-    -webkit-backdrop-filter: blur(14px) !important;
-    color: #ffffff !important;
-}
-
-html body #featured-products .product-heading-copy p,
-html body .featured-products .product-heading-copy p {
-    color: rgba(215, 232, 252, 0.9) !important;
-    -webkit-text-fill-color: rgba(215, 232, 252, 0.9) !important;
-    text-shadow: none !important;
-}
+/* === 5. Featured products heading copy panel (delegated to studio-experience.css) === */
 
 /* === 6. Generic dark section text contrast fallback === */
 html body :is(.operating-model, #why-gpspl, .testimonials-section, .industries-served, .home-dark-section) h2,

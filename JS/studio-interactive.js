@@ -86,25 +86,6 @@
             ctaText: 'Configure Smart Class BOQ →',
             waText: 'Hi GPSPL, I need wholesale / turnkey pricing for Smart Classrooms & Interactive Panels.'
         },
-        cctv: {
-            tabText: 'CCTV / NOC',
-            tag: '24/7 Video Wall • AI Analytics • KVM Matrix',
-            kicker: 'MISSION-CRITICAL SURVEILLANCE & NOC',
-            title: 'Command Center Video Wall & Surveillance',
-            img: '/assests/images/hero/video-wall-command-center.webp',
-            alt: 'GPSPL 24/7 Command and Control Room Video Wall with Zero-Latency KVM Matrix',
-            waveformColor: '#ef4444',
-            waveformRate: 'ZERO-LATENCY • KVM',
-            specs: [
-                { label: 'Mission Display', value: '24/7 Ultra-Narrow Bezel / LED Wall' },
-                { label: 'Surveillance Stream', value: 'AI IP Cameras & Multi-Channel NVR' },
-                { label: 'Matrix Control', value: 'ATEN Zero-Latency KVM-over-IP' },
-                { label: 'Console Design', value: 'ISO 11064 Ergonomic Operator Desk' }
-            ],
-            boqSector: 'govt',
-            ctaText: 'Configure Command Center BOQ →',
-            waText: 'Hi GPSPL, I require a quote for Command Center Video Walls & CCTV Surveillance.'
-        },
         auditorium: {
             tabText: 'Auditoriums',
             tag: 'Harman JBL Pro • Luminous Online UPS',
@@ -356,16 +337,91 @@
         }
     }
 
+    function initArchPipelineInteractivity() {
+        const flowNodes = document.querySelectorAll('.arch-flow-node');
+        const steps = document.querySelectorAll('.arch-step');
+        if (!flowNodes.length || !steps.length) return;
+
+        flowNodes.forEach((node, idx) => {
+            node.style.cursor = 'pointer';
+            node.addEventListener('click', () => {
+                flowNodes.forEach(n => n.classList.remove('active'));
+                node.classList.add('active');
+                if (steps[idx]) {
+                    steps[idx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    steps[idx].style.borderColor = '#d96538';
+                    setTimeout(() => {
+                        steps[idx].style.borderColor = '';
+                    }, 1400);
+                }
+            });
+        });
+
+        steps.forEach((step, idx) => {
+            step.addEventListener('mouseenter', () => {
+                flowNodes.forEach(n => n.classList.remove('active'));
+                if (flowNodes[idx]) flowNodes[idx].classList.add('active');
+            });
+        });
+    }
+
+    /**
+     * 3D Tilt Parallax & Dynamic Mouse-Tracking Spotlight for 3 Pillars
+     */
+    function initPillarInteractivity() {
+        const cards = document.querySelectorAll('.model-pillar-card');
+        if (!cards.length) return;
+
+        cards.forEach((card) => {
+            let bounds;
+
+            function updateBounds() {
+                bounds = card.getBoundingClientRect();
+            }
+
+            card.addEventListener('mouseenter', () => {
+                updateBounds();
+                card.style.transition = 'transform 0.12s ease-out, box-shadow 0.25s ease, border-color 0.25s ease';
+            });
+
+            card.addEventListener('mousemove', (e) => {
+                if (!bounds) updateBounds();
+                const mouseX = e.clientX - bounds.left;
+                const mouseY = e.clientY - bounds.top;
+
+                // Relative percentages (-1 to 1)
+                const xPct = Math.max(-1, Math.min(1, (mouseX / bounds.width - 0.5) * 2));
+                const yPct = Math.max(-1, Math.min(1, (mouseY / bounds.height - 0.5) * 2));
+
+                const rotX = (-yPct * 7).toFixed(2);
+                const rotY = (xPct * 7).toFixed(2);
+
+                card.style.setProperty('--mouse-x', `${mouseX}px`);
+                card.style.setProperty('--mouse-y', `${mouseY}px`);
+                card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-8px) scale(1.02)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transition = 'transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.55s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease';
+                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0) scale(1)';
+            });
+        });
+    }
+
     // Initialize on DOM ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
             initWaveformEngine();
             initSignalBoard();
             initViewSwitcher();
+            initArchPipelineInteractivity();
+            initPillarInteractivity();
         });
     } else {
         initWaveformEngine();
         initSignalBoard();
         initViewSwitcher();
+        initArchPipelineInteractivity();
+        initPillarInteractivity();
     }
 })();

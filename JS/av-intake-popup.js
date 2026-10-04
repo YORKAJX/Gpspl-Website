@@ -10,9 +10,9 @@
         return;
     }
 
-    // If user previously closed the banner in this session, keep it closed ("band ho jaye")
+    // If user previously closed the banner, keep it closed
     try {
-        if (sessionStorage.getItem('gpspl_av_strip_dismissed') === '1') {
+        if (sessionStorage.getItem('gpspl_av_strip_dismissed') === '1' || localStorage.getItem('gpspl_av_strip_dismissed') === '1') {
             return;
         }
     } catch (e) {}
@@ -67,6 +67,26 @@
             }
         });
 
+        // Collision Avoidance: Automatically hide banner when operating pillars, footer, or contact section is visible
+        const hideTargets = document.querySelectorAll('footer, #contact, .footer-trust-ribbon, .copyright-section, #distribution-integration-support, .model-pillar-grid');
+        if ('IntersectionObserver' in window && hideTargets.length) {
+            const collisionObserver = new IntersectionObserver(() => {
+                const isAnyTargetVisible = Array.from(hideTargets).some(el => {
+                    const rect = el.getBoundingClientRect();
+                    return rect.top < (window.innerHeight - 60) && rect.bottom > 80;
+                });
+                if (toastElement) {
+                    if (isAnyTargetVisible) {
+                        toastElement.classList.add('is-hidden-footer');
+                    } else {
+                        toastElement.classList.remove('is-hidden-footer');
+                    }
+                }
+            }, { threshold: [0, 0.05, 0.1, 0.2, 0.5] });
+
+            hideTargets.forEach(el => collisionObserver.observe(el));
+        }
+
         toastElement = toast;
 
         // When user clicks close (✕), it closes permanently ("band ho jaye")
@@ -113,17 +133,26 @@
         if (permanent) {
             try {
                 sessionStorage.setItem('gpspl_av_strip_dismissed', '1');
+                localStorage.setItem('gpspl_av_strip_dismissed', '1');
             } catch (e) {}
         }
     }
 
-    // Trigger after initial smooth page load (mobile: 3.5s delay so hero buttons are clear, desktop: 1.2s)
-    const initialDelay = window.innerWidth < 768 ? 3500 : 1200;
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(showBanner, initialDelay);
-        });
-    } else {
-        setTimeout(showBanner, initialDelay);
+    // Trigger politely only after user has scrolled 950px or after 25s, so it never interrupts early browsing
+    let bannerTriggered = false;
+    function tryShowBanner() {
+        if (bannerTriggered) return;
+        bannerTriggered = true;
+        showBanner();
     }
+
+    function onScrollCheck() {
+        if (window.scrollY > 950) {
+            window.removeEventListener('scroll', onScrollCheck);
+            tryShowBanner();
+        }
+    }
+
+    window.addEventListener('scroll', onScrollCheck, { passive: true });
+    setTimeout(tryShowBanner, 25000);
 })();
