@@ -250,15 +250,62 @@
     }
 
     // =========================================================================
-    // 3. 5-SECOND HERO EXPRESS INQUIRY HANDLER
+    // 3. 5-SECOND HERO EXPRESS INQUIRY HANDLER (WITH CUSTOM REQUIREMENT SUPPORT)
     // =========================================================================
+    window.toggleHeroCustomReq = function (enable) {
+        const wrap = document.getElementById('heroExpCustomWrap');
+        const sel = document.getElementById('heroExpSector');
+        const input = document.getElementById('heroExpCustom');
+        if (!wrap || !sel || !input) return;
+
+        if (enable === true || sel.value === 'CUSTOM_OTHER') {
+            wrap.style.display = 'flex';
+            if (sel.value !== 'CUSTOM_OTHER') {
+                sel.value = 'CUSTOM_OTHER';
+            }
+            setTimeout(() => {
+                input.focus();
+                input.style.borderColor = 'var(--studio-accent, #d96538)';
+                input.style.boxShadow = '0 0 0 2px rgba(217, 101, 56, 0.25)';
+            }, 60);
+        } else {
+            wrap.style.display = 'none';
+            input.style.borderColor = '';
+            input.style.boxShadow = '';
+        }
+    };
+
     window.handleHeroExpressSubmit = function (event) {
         event.preventDefault();
-        const phone = document.getElementById('heroExpPhone')?.value.trim();
-        const sector = document.getElementById('heroExpSector')?.value;
+        const phoneInput = document.getElementById('heroExpPhone');
+        const phone = phoneInput ? phoneInput.value.trim().replace(/\D/g, '').slice(-10) : '';
+        const sectorSelect = document.getElementById('heroExpSector');
+        const sector = sectorSelect ? sectorSelect.value : '';
+        const customInput = document.getElementById('heroExpCustom');
+        const customVal = customInput ? customInput.value.trim() : '';
         const successMsg = document.getElementById('heroExpSuccess');
 
-        if (!phone || !sector) return;
+        if (!phone || phone.length !== 10 || !/^[6-9]\d{9}$/.test(phone)) {
+            alert('Please enter a valid 10-digit Indian mobile number.');
+            if (phoneInput) phoneInput.focus();
+            return;
+        }
+
+        let finalRequirement = sector;
+        if (sector === 'CUSTOM_OTHER' || !sector) {
+            if (!customVal) {
+                window.toggleHeroCustomReq(true);
+                if (customInput) {
+                    customInput.focus();
+                    customInput.placeholder = 'Please type your custom requirement here...';
+                    customInput.style.borderColor = '#ef4444';
+                }
+                return;
+            }
+            finalRequirement = customVal;
+        } else if (customVal) {
+            finalRequirement = `${sector} (${customVal})`;
+        }
 
         // Show instant visual success feedback
         if (successMsg) {
@@ -271,7 +318,7 @@
                 window.GPSPL_LEAD.capture({
                     type: 'hero_express',
                     phone: phone,
-                    service: sector,
+                    service: finalRequirement,
                     source: 'homepage_hero_5sec_bar'
                 });
             }
@@ -279,8 +326,22 @@
             console.warn('Lead capture tracker bypassed', e);
         }
 
+        // Backup lead to local storage
+        try {
+            const history = JSON.parse(localStorage.getItem('gpspl_captured_leads') || '[]');
+            history.unshift({
+                id: 'GPSPL/HERO/' + Math.floor(100000 + Math.random() * 900000),
+                category: 'HERO_EXPRESS_QUOTE',
+                date_time: new Date().toLocaleString('en-IN'),
+                phone: phone,
+                service: finalRequirement,
+                source: 'hero_express_inquiry'
+            });
+            localStorage.setItem('gpspl_captured_leads', JSON.stringify(history.slice(0, 25)));
+        } catch (e) {}
+
         // Construct customized WhatsApp intent URL
-        const text = `Hello GPSPL, I require urgent pricing & BOQ schedule for: ${sector}. My contact number is: ${phone}. Please connect with an engineer.`;
+        const text = `Hello GPSPL AV Engineering Team,\n\nI require urgent wholesale pricing & BOQ schedule for:\n*Requirement*: ${finalRequirement}\n*Mobile*: ${phone}\n\nPlease connect with an engineer immediately.`;
         const waUrl = `https://wa.me/918920830377?text=${encodeURIComponent(text)}`;
 
         setTimeout(() => {

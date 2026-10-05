@@ -1169,6 +1169,29 @@
   /* =========================================================================
    * 1-STEP EXPRESS FAST QUOTE HANDLER (15-Minute Priority Callback)
    * ========================================================================= */
+  window.enableFastQuoteCustomReq = function(enable) {
+    const wrap = document.getElementById('fqCustomWrap');
+    const sel = document.getElementById('fqService');
+    const input = document.getElementById('fqCustom');
+    if (!wrap || !sel || !input) return;
+
+    if (enable === true || sel.value === 'CUSTOM_OTHER') {
+      wrap.style.display = 'flex';
+      if (sel.value !== 'CUSTOM_OTHER') {
+        sel.value = 'CUSTOM_OTHER';
+      }
+      setTimeout(() => {
+        input.focus();
+        input.style.borderColor = '#ef4444';
+        input.style.boxShadow = '0 0 0 2px rgba(239, 68, 68, 0.2)';
+      }, 60);
+    } else {
+      wrap.style.display = 'none';
+      input.style.borderColor = '';
+      input.style.boxShadow = '';
+    }
+  };
+
   window.handleFastQuoteSubmit = async function(e) {
     e.preventDefault();
     const form = document.getElementById('fastQuoteForm');
@@ -1179,13 +1202,31 @@
 
     const name = (document.getElementById('fqName') ? document.getElementById('fqName').value.trim() : '') || 'Valued Client';
     const phone = (document.getElementById('fqPhone') ? document.getElementById('fqPhone').value.trim().replace(/\D/g, '').slice(-10) : '');
-    const service = (document.getElementById('fqService') ? document.getElementById('fqService').value : '') || 'Commercial AV Solution';
+    const serviceSel = document.getElementById('fqService');
+    const serviceVal = (serviceSel ? serviceSel.value : '') || 'Commercial AV Solution';
+    const customInput = document.getElementById('fqCustom');
+    const customVal = customInput ? customInput.value.trim() : '';
 
     if (!phone || phone.length !== 10 || !/^[6-9]\d{9}$/.test(phone)) {
       alert('Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9.');
       const pInput = document.getElementById('fqPhone');
       if (pInput) pInput.focus();
       return;
+    }
+
+    let service = serviceVal;
+    if (serviceVal === 'CUSTOM_OTHER' || !serviceVal) {
+      if (!customVal) {
+        window.enableFastQuoteCustomReq(true);
+        if (customInput) {
+          customInput.focus();
+          customInput.placeholder = 'Please type your custom requirement here...';
+        }
+        return;
+      }
+      service = customVal;
+    } else if (customVal) {
+      service = `${serviceVal} (${customVal})`;
     }
 
     btn.disabled = true;

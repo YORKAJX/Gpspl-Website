@@ -6237,3 +6237,39 @@ html body .copyright-section .copyright-text a:hover {
 }
 
 
+
+
+/* =========================================================================
+ * HERO & FAST QUOTE CUSTOM REQUIREMENT FIELD STYLING
+ * ========================================================================= */
+.hero-custom-wrap, #fqCustomWrap {
+    animation: fadeInSlideDown 0.22s ease-out;
+}
+
+@keyframes fadeInSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-custom-wrap input {
+    background: #fffcfb !important;
+    border: 1.5px solid var(--studio-accent, #d96538) !important;
+    color: var(--studio-ink, #161817) !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+}
+
+.hero-custom-wrap input:focus {
+    box-shadow: 0 0 0 3px rgba(217, 101, 56, 0.22) !important;
+    background: #ffffff !important;
+}
+
+.btn-hero-custom-link:hover {
+    color: var(--studio-accent-hover, #bf542a) !important;
+}
