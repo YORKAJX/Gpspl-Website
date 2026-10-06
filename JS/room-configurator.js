@@ -1312,6 +1312,15 @@
     if (successBox) {
       successBox.style.display = 'flex';
     }
+
+    // Auto-launch WhatsApp without popup block
+    const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const waFinalUrl = 'https://wa.me/918920830377?text=' + waMsg;
+    if (isMobile) {
+      window.location.href = waFinalUrl;
+    } else {
+      window.open(waFinalUrl, '_blank');
+    }
   };
 
   /* =========================================================================

@@ -1481,7 +1481,7 @@
                         <strong>Instant Project Estimate &bull; Direct OEM Wholesale Pricing</strong>
                         <span class="express-pill-time"><i class="fas fa-bolt"></i> 15-Min Response</span>
                     </div>
-                    <form class="hero-express-form" onsubmit="window.handleHeroExpressSubmit(event)">
+                    <form id="heroExpressForm" class="hero-express-form" data-custom-handler="true" onsubmit="window.handleHeroExpressSubmit(event)">
                         <div class="express-field-input">
                             <i class="fas fa-phone-alt"></i>
                             <input type="tel" id="heroExpPhone" name="phone" placeholder="Enter 10-Digit Mobile *" required pattern="[6-9][0-9]{9}" maxlength="10">
@@ -6015,6 +6015,19 @@
     });
     </script>
 
+    
     <!-- Mobile Sticky Direct Action Bar (Pure CSS - Zero JS) -->
+    <div class="mobile-sticky-action-bar" aria-label="Quick Mobile Direct Action Bar">
+        <a href="tel:+918920830377" class="mobile-bar-btn bar-call" aria-label="Direct Phone Call to Engineer">
+            <i class="fas fa-phone-alt"></i> <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20have%20an%20urgent%20AV%20%2F%20Wholesale%20Distribution%20requirement.%20Please%20connect%20with%20an%20engineer." target="_blank" rel="noopener noreferrer" class="mobile-bar-btn bar-wa" aria-label="Instant WhatsApp to Engineer">
+            <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
+        </a>
+        <a href="#instant-boq-planner" class="mobile-bar-btn bar-quote" aria-label="Get Instant Wholesale Quote">
+            <i class="fas fa-bolt"></i> <span>Fast Quote</span>
+        </a>
+    </div>
+
     </body>
 </html>

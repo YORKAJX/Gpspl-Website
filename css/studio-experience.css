@@ -6273,3 +6273,211 @@ html body .copyright-section .copyright-text a:hover {
 .btn-hero-custom-link:hover {
     color: var(--studio-accent-hover, #bf542a) !important;
 }
+
+
+/* =========================================================================
+ * FLOATING WHATSAPP & CONTACT CLUSTER (BULLETPROOF FIXED VISIBILITY)
+ * ========================================================================= */
+.floating-contact-cluster {
+    position: fixed !important;
+    bottom: 80px !important;
+    right: 22px !important;
+    z-index: 99999 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    gap: 10px !important;
+    pointer-events: auto !important;
+}
+
+.floating-contact-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(12px) scale(0.95);
+    pointer-events: none;
+    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-contact-cluster:hover .floating-contact-actions,
+.floating-contact-cluster:focus-within .floating-contact-actions {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.floating-contact-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0f172a;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    white-space: nowrap;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.floating-contact-action:hover {
+    background: #d96538;
+    transform: translateX(-4px);
+    color: #ffffff !important;
+}
+
+.floating-contact-action.action-call {
+    background: #1e293b;
+}
+
+.floating-contact-action.action-call:hover {
+    background: #0284c7;
+}
+
+.floating-whatsapp {
+    position: relative;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    background: #25d366 !important;
+    color: #ffffff !important;
+    height: 54px !important;
+    padding: 0 18px 0 16px !important;
+    border-radius: 999px !important;
+    font-weight: 800 !important;
+    font-size: 0.92rem !important;
+    text-decoration: none !important;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45) !important;
+    transition: all 0.25s ease !important;
+}
+
+.floating-whatsapp i {
+    font-size: 1.45rem !important;
+}
+
+.floating-whatsapp:hover {
+    background: #20ba59 !important;
+    transform: translateY(-2px) scale(1.03) !important;
+    box-shadow: 0 8px 26px rgba(37, 211, 102, 0.55) !important;
+}
+
+/* Radar pulse wave effect around WhatsApp button */
+.floating-whatsapp::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 999px;
+    border: 2px solid #25d366;
+    animation: waPulseRadar 2.2s infinite ease-out;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+@keyframes waPulseRadar {
+    0% {
+        transform: scale(0.96);
+        opacity: 0.85;
+    }
+    60% {
+        transform: scale(1.22);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.25);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .floating-contact-cluster {
+        bottom: 68px !important;
+        right: 14px !important;
+    }
+    .floating-whatsapp {
+        width: 50px !important;
+        height: 50px !important;
+        padding: 0 !important;
+        border-radius: 50% !important;
+    }
+    .floating-whatsapp span {
+        display: none !important;
+    }
+    .floating-whatsapp i {
+        font-size: 1.6rem !important;
+    }
+    .floating-whatsapp::before {
+        border-radius: 50% !important;
+    }
+}
+
+/* =========================================================================
+ * MOBILE STICKY DIRECT ACTION BAR (ZERO LEAKAGE 1-TAP CONVERSION)
+ * ========================================================================= */
+.mobile-sticky-action-bar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-sticky-action-bar {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        height: 54px !important;
+        background: #0f172a !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+        z-index: 999998 !important;
+        display: flex !important;
+        align-items: stretch !important;
+        box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.35) !important;
+    }
+
+    .mobile-bar-btn {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        text-decoration: none !important;
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        transition: background 0.15s ease;
+    }
+
+    .mobile-bar-btn.bar-call {
+        background: #1e293b;
+        color: #ffffff !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .mobile-bar-btn.bar-call i {
+        color: #38bdf8;
+    }
+
+    .mobile-bar-btn.bar-wa {
+        background: #25d366;
+        color: #ffffff !important;
+        flex: 1.25;
+    }
+    .mobile-bar-btn.bar-wa i {
+        font-size: 1.15rem;
+    }
+
+    .mobile-bar-btn.bar-quote {
+        background: #d96538;
+        color: #ffffff !important;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-bar-btn:active {
+        opacity: 0.9;
+        transform: scale(0.98);
+    }
+}

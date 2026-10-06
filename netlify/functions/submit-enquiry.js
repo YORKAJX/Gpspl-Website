@@ -230,10 +230,17 @@ export const handler = async (event = {}) => {
     }
 
     // 5. EXTRACT & SANITIZE FIELDS
-    const name = clean(body.name || body.full_name || '', 80);
-    const email = clean(body.email || '', 120).toLowerCase();
     const phoneRaw = clean(body.phone || body.mobile || '', 30);
     const phone = phoneRaw.replace(/\D/g, '').slice(-10); // Extract last 10 digits
+    let name = clean(body.name || body.full_name || '', 80);
+    // If phone is valid but name was omitted in fast 5-sec phone quote forms, provide clean fallback
+    if (!name && phone) {
+        name = `Express Client (${phone})`;
+    } else if (!name) {
+        name = 'Website Inquirer';
+    }
+
+    const email = clean(body.email || '', 120).toLowerCase();
     const company = clean(body.company || body.organization || '', 100);
     const location = clean(body.location || body.city || '', 100);
     const requirement = clean(body.requirement || body.service || body.category || 'General AV Enquiry', 120);
@@ -242,8 +249,8 @@ export const handler = async (event = {}) => {
     const turnstileToken = body['cf-turnstile-response'] || '';
 
     // 6. SERVER-SIDE STRICT VALIDATION
-    // Name validation
-    if (!name || name.length < 2 || !/[a-zA-Z]/.test(name)) {
+    // Name validation (allowed if has letters or if phone-first fallback)
+    if (!name || name.length < 2) {
         return json(400, { error: 'Please enter a valid full name.' }, baseHeaders);
     }
     if (/^(.)\1{4,}$/.test(name.toLowerCase())) {

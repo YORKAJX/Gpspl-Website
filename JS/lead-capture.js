@@ -993,3 +993,4 @@
         attachBoqTriggers();
     }
     window.openQuickBoqModal = openQuickBoqModal;
+    window.GPSPL_LEAD = { capture: dispatchUniversalLead, dispatch: dispatchUniversalLead };

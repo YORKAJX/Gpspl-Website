@@ -146,7 +146,7 @@
   function initFormValidation() {
     document.querySelectorAll("form").forEach((form) => {
       // Skip custom-handled forms (Room configurator proposal, Distribution desk, BOQ engine, Fast quote)
-      if (form.id === "consultantProposalForm" || form.id === "distributionSupplyForm" || form.id === "enterpriseBoqForm" || form.id === "fastQuoteForm" || form.dataset.customHandler === "true") {
+      if (form.id === "consultantProposalForm" || form.id === "distributionSupplyForm" || form.id === "enterpriseBoqForm" || form.id === "fastQuoteForm" || form.id === "heroExpressForm" || form.classList.contains("hero-express-form") || form.dataset.customHandler === "true") {
         return;
       }
 

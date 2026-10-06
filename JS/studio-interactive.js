@@ -286,7 +286,7 @@
         const successMsg = document.getElementById('heroExpSuccess');
 
         if (!phone || phone.length !== 10 || !/^[6-9]\d{9}$/.test(phone)) {
-            alert('Please enter a valid 10-digit Indian mobile number.');
+            alert('Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9.');
             if (phoneInput) phoneInput.focus();
             return;
         }
@@ -307,30 +307,32 @@
             finalRequirement = `${sector} (${customVal})`;
         }
 
-        // Show instant visual success feedback
-        if (successMsg) {
-            successMsg.style.display = 'flex';
-        }
+        const refNo = 'GPSPL/HERO/' + Math.floor(100000 + Math.random() * 900000);
+        const leadPayload = {
+            name: `Express Client (${phone})`,
+            phone: phone,
+            email: `inquiry-${phone}@gpspl.co.in`,
+            company: 'Direct Express Mobile Lead',
+            requirement: finalRequirement,
+            message: `1-Step 5-Second Hero Express Inquiry:\n• Reference: ${refNo}\n• Mobile: ${phone}\n• Solution: ${finalRequirement}\n• Priority: Urgent Wholesale Quote Requested`,
+            lead_source: 'Homepage 5-Sec Hero Express Bar'
+        };
 
-        // Send to Lead Capture API if available
+        // 1. Dispatch immediately to Netlify Serverless Function (Reliable background fetch)
         try {
-            if (window.GPSPL_LEAD && typeof window.GPSPL_LEAD.capture === 'function') {
-                window.GPSPL_LEAD.capture({
-                    type: 'hero_express',
-                    phone: phone,
-                    service: finalRequirement,
-                    source: 'homepage_hero_5sec_bar'
-                });
-            }
-        } catch (e) {
-            console.warn('Lead capture tracker bypassed', e);
-        }
+            fetch('/.netlify/functions/submit-enquiry', {
+                method: 'POST',
+                keepalive: true,
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(leadPayload)
+            }).catch(() => null);
+        } catch (e) {}
 
-        // Backup lead to local storage
+        // 2. Backup to Local Storage
         try {
             const history = JSON.parse(localStorage.getItem('gpspl_captured_leads') || '[]');
             history.unshift({
-                id: 'GPSPL/HERO/' + Math.floor(100000 + Math.random() * 900000),
+                id: refNo,
                 category: 'HERO_EXPRESS_QUOTE',
                 date_time: new Date().toLocaleString('en-IN'),
                 phone: phone,
@@ -340,13 +342,43 @@
             localStorage.setItem('gpspl_captured_leads', JSON.stringify(history.slice(0, 25)));
         } catch (e) {}
 
-        // Construct customized WhatsApp intent URL
-        const text = `Hello GPSPL AV Engineering Team,\n\nI require urgent wholesale pricing & BOQ schedule for:\n*Requirement*: ${finalRequirement}\n*Mobile*: ${phone}\n\nPlease connect with an engineer immediately.`;
+        // 3. Construct direct WhatsApp link with pre-filled technical inquiry
+        const text = `Hello GPSPL AV Engineering Team,\n\nI require urgent wholesale pricing & BOQ schedule for:\n*Requirement*: ${finalRequirement}\n*Mobile*: ${phone}\n*Ref*: ${refNo}\n\nPlease connect with an engineer immediately.`;
         const waUrl = `https://wa.me/918920830377?text=${encodeURIComponent(text)}`;
 
-        setTimeout(() => {
-            window.open(waUrl, '_blank');
-        }, 350);
+        // 4. Update UI with direct clickable actions
+        if (successMsg) {
+            successMsg.style.display = 'flex';
+            successMsg.innerHTML = `
+                <div style="display:flex; flex-direction:column; gap:6px; width:100%;">
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <i class="fas fa-circle-check" style="color:#22c55e; font-size:1.1rem;"></i>
+                        <span style="font-weight:700;">Inquiry recorded! Connecting to AV Engineering desk...</span>
+                    </div>
+                    <div style="display:flex; gap:10px; margin-top:4px; flex-wrap:wrap;">
+                        <a href="${waUrl}" target="_blank" rel="noopener noreferrer" style="background:#25d366; color:#ffffff; padding:7px 14px; border-radius:6px; font-weight:800; text-decoration:none; display:inline-flex; align-items:center; gap:6px; font-size:0.82rem;">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp Now
+                        </a>
+                        <a href="tel:+918920830377" style="background:#0f172a; color:#ffffff; padding:7px 14px; border-radius:6px; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:6px; font-size:0.82rem;">
+                            <i class="fas fa-phone-alt"></i> Call +91 89208 30377
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        // 5. Intelligent Device Routing:
+        // On Mobile devices, window.location.href to WhatsApp is 100% immune to popup blockers!
+        const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if (isMobile) {
+            window.location.href = waUrl;
+        } else {
+            const win = window.open(waUrl, '_blank');
+            if (!win) {
+                // If desktop blocked popup, fallback to redirect
+                window.location.href = waUrl;
+            }
+        }
     };
 
     // =========================================================================
