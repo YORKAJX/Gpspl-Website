@@ -10,9 +10,8 @@
 
 (function() {
     'use strict';
-    // Disabled: Zero AI touch requested by business owner. All customer inquiries route directly to human engineers.
-    return;
-    // 1. STATE & LOCALIZATION ENGINE
+    // Re-enabled: Human AV Systems Consultant Desk (Er. Karan & Engineering Team)
+// 1. STATE & LOCALIZATION ENGINE
     // -----------------------------------------------------------------
     let currentLanguage = sessionStorage.getItem('gpspl_chat_lang') || 'hinglish'; // 'english' | 'hinglish' | 'hindi'
     function persistLanguage(lang) {
@@ -656,6 +655,7 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
     // 6. BUILD CHATBOT DOM & UI
     // -----------------------------------------------------------------
     function injectChatbot() {
+
         if (document.getElementById('gpspl-ai-chat-root')) return;
 
         const rootEl = document.createElement('div');
@@ -664,14 +664,14 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
         rootEl.innerHTML = `
             <!-- Floating Launcher -->
             <div class="gpspl-chat-launcher" id="gpsplChatLauncher" role="button" aria-label="Open GPSPL AI AV Consultant Chat">
-                <div class="gpspl-launcher-avatar">
-                    <i class="fas fa-robot"></i>
-                    <span class="gpspl-launcher-pulse"></span>
-                </div>
-                <div class="gpspl-launcher-text">
-                    <strong>AI AV Consultant</strong>
-                    <span>Bilingual &bull; 16+ Brands Online</span>
-                </div>
+                <div class="gpspl-launcher-avatar" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);">
+    <i class="fas fa-headset"></i>
+    <span class="gpspl-launcher-pulse" style="background: #22c55e;"></span>
+</div>
+<div class="gpspl-launcher-text">
+    <strong>Senior AV Consultant</strong>
+    <span>Er. Karan &bull; Online 🟢</span>
+</div>
             </div>
 
             <!-- Chat Window -->
@@ -679,16 +679,18 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
                 <!-- Header -->
                 <div class="gpspl-chat-header">
                     <div class="gpspl-chat-header-info">
-                        <div class="gpspl-chat-header-avatar">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="gpspl-chat-header-title">
-                            <h4>GPSPL AI AV Guide</h4>
-                            <p>Online &bull; 16+ OEM Knowledge Base</p>
-                        </div>
+                        <div class="gpspl-chat-header-avatar" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);">
+    <i class="fas fa-user-tie"></i>
+</div>
+<div class="gpspl-chat-header-title">
+    <h4>Er. Karan &bull; Senior AV Consultant</h4>
+    <p style="color: #4ade80;"><i class="fas fa-circle" style="font-size: 7px; margin-right: 4px;"></i>Online &bull; B2B Pricing, BOQ &amp; OEM Support</p>
+</div>
                     </div>
-                    <div class="gpspl-chat-header-actions">
-                        <button class="gpspl-chat-header-btn" id="gpsplChatClose" aria-label="Close chat"><i class="fas fa-times"></i></button>
+                    <div class="gpspl-chat-header-actions" style="display: flex; align-items: center; gap: 8px;">
+    <a href="https://wa.me/918920830377?text=Hello%20Er.%20Karan%2C%20I%20need%20a%20project%20quote%20%2F%20B2B%20pricing." target="_blank" rel="noopener noreferrer" style="color: #25d366; font-size: 1.15rem; text-decoration: none;" title="Chat on WhatsApp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+918920830377" style="color: #38bdf8; font-size: 1.05rem; text-decoration: none;" title="Call Direct" aria-label="Phone"><i class="fas fa-phone-alt"></i></a>
+    <button class="gpspl-chat-header-btn" id="gpsplChatClose" aria-label="Close chat"><i class="fas fa-times"></i></button>
                     </div>
                 </div>
 
@@ -709,11 +711,24 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
                     <div class="gpspl-msg gpspl-msg-bot">
                         <div class="gpspl-msg-avatar"><i class="fas fa-robot"></i></div>
                         <div class="gpspl-msg-bubble">
-                            Namaste! 🙏 Welcome to **GPSPL AI AV Consultant**.
-                            <br><br>
-                            GPSPL is an authorized partner for **16+ Global Brands (Samsung, LG, Harman, Poly, Crestron, Shure)** designing **Active LED Video Walls, 4K PTZ Cameras, Audio Systems, Boardrooms &amp; Smart Classrooms**.
-                            <br><br>
-                            Ask me anything in **English, Hinglish or हिंदी**!
+                            Namaste! 🙏 Er. Karan here, Senior AV Systems Consultant at **GPSPL**.
+<br><br>
+We are authorized Tier-1 partners for **Samsung, LG, Harman/JBL, Sennheiser, Shure, Crestron &amp; Poly**.
+<br><br>
+How can I assist you with your project today?
+<ul style="margin: 8px 0 12px 18px; padding: 0; font-size: 0.88rem; line-height: 1.6;">
+    <li>📺 <strong>Samsung &amp; LG Commercial TVs &amp; Signage</strong></li>
+    <li>🎤 <strong>Sennheiser TCC2 &amp; JBL Conference Audio</strong></li>
+    <li>🏫 <strong>Smart Classroom 4K IFPDs (65"-86") &amp; Podiums</strong></li>
+    <li>🏢 <strong>Active LED Video Walls (P1.2 to P2.5)</strong></li>
+    <li>🎙️ <strong>Podcast &amp; Broadcast Studio Setup</strong></li>
+    <li>📄 <strong>Download OEM Brochures PDF</strong></li>
+</ul>
+<div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px;">
+    <a href="https://wa.me/918920830377?text=Hello%20Er.%20Karan%2C%20I%20am%20chatting%20from%20the%20website%20and%20need%20a%20quote." target="_blank" rel="noopener noreferrer" style="background: #25d366; color: #ffffff; padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+    <a href="tel:+918920830377" style="background: #0284c7; color: #ffffff; padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;"><i class="fas fa-phone"></i> Call Direct</a>
+    <a href="/downloads" style="background: #334155; color: #ffffff; padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;"><i class="fas fa-download"></i> Brochures PDF</a>
+</div>
                             <button type="button" class="gpspl-msg-speaker-btn" title="Listen" aria-label="Listen"><i class="fas fa-volume-high"></i></button>
                         </div>
                     </div>
@@ -721,17 +736,17 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
 
                 <!-- Starter Chips Tray -->
                 <div class="gpspl-chat-chips-tray" id="gpsplChatChips">
-                    <button class="gpspl-chip" data-query="Speak in English">🌐 Speak in English</button>
-                    <button class="gpspl-chip" data-query="School ke liye Smart Classroom setup kaise hota hai?">🎓 Smart Classroom Guide</button>
-                    <button class="gpspl-chip" data-query="Office Conference Room ke liye best setup kya hai?">🏢 Boardroom AV Guide</button>
-                    <button class="gpspl-chip" data-query="Active LED Video Wall pixel pitch and price in India?">📺 Active LED Walls &amp; Sizing</button>
-                    <button class="gpspl-chip" data-query="Commercial TV aur Normal TV me kya farq hai?">📺 Commercial vs Home TV</button>
-                    <button class="gpspl-chip" data-query="DSP audio processor echo kaise khatam karta hai?">🔊 Echo &amp; DSP Sound</button>
-                    <button class="gpspl-chip" data-query="PTZ Camera normal camera se kaise alag hai?">🎥 4K PTZ Cameras</button>
-                    <button class="gpspl-chip" data-query="GPSPL kya karti hai aur kiske partner hain?">🏆 About GPSPL &amp; 16+ Brands</button>
-                    <button class="gpspl-chip" data-query="Tell me a quick AV joke">😄 Ek Tech Joke Sunao!</button>
-                    <button class="gpspl-chip" data-query="Connect me with a Senior AV Consultant">📞 Consultant Se Baat Karein</button>
-                </div>
+    <button class="gpspl-chip" data-query="Connect me with Er. Karan on WhatsApp">💬 WhatsApp Er. Karan</button>
+    <button class="gpspl-chip" data-query="Samsung Commercial TV price list and BEFX brochure">📺 Samsung Commercial TV</button>
+    <button class="gpspl-chip" data-query="LG Commercial TV NU88C and CreateBoard TR3ER brochure">📺 LG Commercial TV &amp; Boards</button>
+    <button class="gpspl-chip" data-query="Sennheiser TeamConnect Ceiling 2 and JBL audio for conference room">🎤 Sennheiser &amp; JBL Audio</button>
+    <button class="gpspl-chip" data-query="Smart Classroom setup cost and 4K interactive flat panels">🎓 Smart Classroom Setup</button>
+    <button class="gpspl-chip" data-query="Active LED video wall cost per sq ft and pixel pitch guide">🏢 Active LED Video Walls</button>
+    <button class="gpspl-chip" data-query="Podcast and YouTube recording studio setup cost">🎙️ Podcast Studio Setup</button>
+    <button class="gpspl-chip" data-query="Official OEM brochure download link">📄 Download OEM Brochures</button>
+    <button class="gpspl-chip" data-query="Pan India technology distribution and wholesale inquiry">📦 Wholesale &amp; Dealer Supply</button>
+    <button class="gpspl-chip" data-query="Call Er. Karan directly">📞 Call +91 89208 30377</button>
+</div>
 
                 <!-- Input Area -->
                 <form class="gpspl-chat-input-area" id="gpsplChatForm">
@@ -747,6 +762,36 @@ Aap bas apna room size ya requirement batayein, main aasan shabdon me poora setu
         `;
 
         document.body.appendChild(rootEl);
+
+        // Proactive Human Callout Bubble (Slides in gently after 5 seconds if not yet opened)
+        setTimeout(() => {
+            const hasSeen = sessionStorage.getItem('gpspl_proactive_seen');
+            const chatWindow = document.getElementById('gpsplChatWindow');
+            if (!hasSeen && chatWindow && !chatWindow.classList.contains('active')) {
+                const bubble = document.createElement('div');
+                bubble.id = 'gpspl-proactive-callout';
+                bubble.style.cssText = 'position: fixed; bottom: 84px; right: 24px; max-width: 310px; background: #ffffff; border: 1.5px solid #0284c7; border-radius: 16px; padding: 14px 16px; box-shadow: 0 12px 36px rgba(0,0,0,0.22); z-index: 999998; font-family: sans-serif; animation: gpsplFadeIn 0.3s ease;';
+                bubble.innerHTML = `
+                    <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 8px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="width: 10px; height: 10px; background: #22c55e; border-radius: 50%; display: inline-block;"></span>
+                            <strong style="color: #0f172a; font-size: 13px;">Er. Karan &bull; GPSPL</strong>
+                        </div>
+                        <button type="button" onclick="this.parentElement.parentElement.remove()" style="background: none; border: none; color: #94a3b8; font-size: 14px; cursor: pointer;">&times;</button>
+                    </div>
+                    <p style="color: #334155; font-size: 12.5px; line-height: 1.45; margin: 0 0 10px;">
+                        Namaste! Looking for wholesale B2B pricing, project BOQ, or official OEM brochures?
+                    </p>
+                    <div style="display: flex; gap: 6px;">
+                        <a href="https://wa.me/918920830377?text=Hello%20Er.%20Karan%2C%20I%20am%20looking%20for%20project%20pricing%20and%20brochures." target="_blank" rel="noopener noreferrer" style="flex: 1; text-align: center; background: #25d366; color: #fff; font-size: 11px; font-weight: 700; padding: 6px 8px; border-radius: 6px; text-decoration: none;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <button type="button" onclick="document.getElementById('gpsplChatLauncher').click(); this.parentElement.parentElement.remove();" style="flex: 1; text-align: center; background: #0284c7; color: #fff; font-size: 11px; font-weight: 700; padding: 6px 8px; border-radius: 6px; border: none; cursor: pointer;"><i class="fas fa-comment-dots"></i> Chat Now</button>
+                    </div>
+                `;
+                document.body.appendChild(bubble);
+                sessionStorage.setItem('gpspl_proactive_seen', 'true');
+            }
+        }, 5000);
+
 
         const launcher = document.getElementById('gpsplChatLauncher');
         const windowEl = document.getElementById('gpsplChatWindow');
