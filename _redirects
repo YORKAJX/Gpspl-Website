@@ -255,6 +255,43 @@ https://www.gpspl.co.in/* https://gpspl.co.in/:splat 301!
 /blog/video-conferencing-teams-rooms-vs-zoom-rooms-byod-guide.html /blog/video-conferencing-teams-rooms-vs-zoom-rooms-byod-guide 301
 /blog/video-conferencing-teams-rooms-vs-zoom-rooms-byod-guide /blog/video-conferencing-teams-rooms-vs-zoom-rooms-byod-guide.html 200
 
+
+# Regional & Discovery Clean URLs
+/av-project-discovery-consultation.html /av-project-discovery-consultation 301
+/av-project-discovery-consultation /av-project-discovery-consultation.html 200
+
+/av-system-integrator-bangalore.html /av-system-integrator-bangalore 301
+/av-system-integrator-bangalore /av-system-integrator-bangalore.html 200
+
+/av-system-integrator-hyderabad.html /av-system-integrator-hyderabad 301
+/av-system-integrator-hyderabad /av-system-integrator-hyderabad.html 200
+
+/av-system-integrator-mumbai.html /av-system-integrator-mumbai 301
+/av-system-integrator-mumbai /av-system-integrator-mumbai.html 200
+
+
+# High-Intent Commercial Guides Clean URLs
+/blog/active-led-wall-cost-per-sq-ft-india-buyers-guide.html /blog/active-led-wall-cost-per-sq-ft-india-buyers-guide 301
+/blog/active-led-wall-cost-per-sq-ft-india-buyers-guide /blog/active-led-wall-cost-per-sq-ft-india-buyers-guide.html 200
+
+/blog/conference-room-video-conferencing-setup-cost-india.html /blog/conference-room-video-conferencing-setup-cost-india 301
+/blog/conference-room-video-conferencing-setup-cost-india /blog/conference-room-video-conferencing-setup-cost-india.html 200
+
+/blog/gym-fitness-studio-sound-system-installation-cost-india.html /blog/gym-fitness-studio-sound-system-installation-cost-india 301
+/blog/gym-fitness-studio-sound-system-installation-cost-india /blog/gym-fitness-studio-sound-system-installation-cost-india.html 200
+
+/blog/hospital-healthcare-av-integration-ot-streaming-telemedicine-guide.html /blog/hospital-healthcare-av-integration-ot-streaming-telemedicine-guide 301
+/blog/hospital-healthcare-av-integration-ot-streaming-telemedicine-guide /blog/hospital-healthcare-av-integration-ot-streaming-telemedicine-guide.html 200
+
+/blog/mandir-temple-sound-system-acoustic-tuning-led-wall-guide.html /blog/mandir-temple-sound-system-acoustic-tuning-led-wall-guide 301
+/blog/mandir-temple-sound-system-acoustic-tuning-led-wall-guide /blog/mandir-temple-sound-system-acoustic-tuning-led-wall-guide.html 200
+
+/blog/podcast-recording-broadcast-studio-setup-cost-india.html /blog/podcast-recording-broadcast-studio-setup-cost-india 301
+/blog/podcast-recording-broadcast-studio-setup-cost-india /blog/podcast-recording-broadcast-studio-setup-cost-india.html 200
+
+/blog/smart-classroom-setup-cost-schools-colleges-india.html /blog/smart-classroom-setup-cost-schools-colleges-india 301
+/blog/smart-classroom-setup-cost-schools-colleges-india /blog/smart-classroom-setup-cost-schools-colleges-india.html 200
+
 # 6. 404 Fallback
 /404.html /404 301
 /404 /404.html 200
