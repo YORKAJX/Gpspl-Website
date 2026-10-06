@@ -3859,7 +3859,7 @@ header.site-header {
     .av-bottom-strip-banner {
         left: 12px;
         right: 12px;
-        bottom: 12px;
+        bottom: 58px;
         width: auto;
         transform: translateY(160%);
         border-radius: 999px;

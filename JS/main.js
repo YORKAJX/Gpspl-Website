@@ -89,6 +89,16 @@ document.addEventListener("DOMContentLoaded", () => {
     function initFooterState() {
         const currentPath = window.location.pathname === "/" ? "/index.html" : window.location.pathname;
         document.body.classList.toggle("compact-footer", currentPath !== "/index.html");
+
+        // Deduplicate floating cluster and sticky bar if page already had inline elements
+        const clusters = document.querySelectorAll('.floating-contact-cluster');
+        if (clusters.length > 1) {
+            for (let i = 1; i < clusters.length; i++) clusters[i].remove();
+        }
+        const stickies = document.querySelectorAll('.mobile-sticky-action-bar');
+        if (stickies.length > 1) {
+            for (let i = 1; i < stickies.length; i++) stickies[i].remove();
+        }
     }
 
     function initProductDetailHeroStack() {

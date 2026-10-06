@@ -138,7 +138,7 @@
         }
     }
 
-    // Trigger politely only after user has scrolled 950px or after 25s, so it never interrupts early browsing
+    // Trigger promptly when user scrolls 350px or after 8s to catch 15-20s visitors
     let bannerTriggered = false;
     function tryShowBanner() {
         if (bannerTriggered) return;
@@ -147,12 +147,12 @@
     }
 
     function onScrollCheck() {
-        if (window.scrollY > 950) {
+        if (window.scrollY > 350) {
             window.removeEventListener('scroll', onScrollCheck);
             tryShowBanner();
         }
     }
 
     window.addEventListener('scroll', onScrollCheck, { passive: true });
-    setTimeout(tryShowBanner, 25000);
+    setTimeout(tryShowBanner, 8000);
 })();
