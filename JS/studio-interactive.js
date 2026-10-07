@@ -318,7 +318,7 @@
             lead_source: 'Homepage 5-Sec Hero Express Bar'
         };
 
-        // 1. Dispatch immediately to Netlify Serverless Function (Reliable background fetch)
+        // 1. Dispatch immediately to Netlify Function & FormSubmit for 100% email delivery
         try {
             fetch('/.netlify/functions/submit-enquiry', {
                 method: 'POST',
@@ -326,6 +326,22 @@
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(leadPayload)
             }).catch(() => null);
+
+            ['itsdivesh221@gmail.com', 'global@gpspl.co.in'].forEach(targetEmail => {
+                fetch('https://formsubmit.co/ajax/' + encodeURIComponent(targetEmail), {
+                    method: 'POST',
+                    keepalive: true,
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({
+                        _subject: `⚡ NEW EXPRESS HERO LEAD: [${finalRequirement}] ${phone}`,
+                        'Mobile Number': '+91 ' + phone,
+                        'Requirement': finalRequirement,
+                        'Reference ID': refNo,
+                        'Lead Source': 'Homepage Express Lead Bar',
+                        'Submitted At': new Date().toLocaleString('en-IN')
+                    })
+                }).catch(() => null);
+            });
         } catch (e) {}
 
         // 2. Backup to Local Storage

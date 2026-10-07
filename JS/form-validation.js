@@ -229,11 +229,29 @@
           body: new URLSearchParams(formData).toString()
         }).catch(() => null);
 
+        // 3. Direct FormSubmit email delivery
+        const formSubmitPromise = fetch("https://formsubmit.co/ajax/itsdivesh221@gmail.com", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify({
+            _subject: `⚡ NEW GPSPL LEAD: [${leadData.category}] ${leadData.name} - ${leadData.phone}`,
+            "Client Name": leadData.name,
+            "Phone Number": leadData.phone ? "+91 " + leadData.phone : "Not Provided",
+            "Email Address": leadData.email || "Not Provided",
+            "Company": leadData.company || "Not Specified",
+            "Requirement": leadData.category,
+            "Lead Source": label,
+            "Details": leadData.details,
+            "Page URL": window.location.href,
+            "Submission Time": new Date().toLocaleString("en-IN")
+          })
+        }).catch(() => null);
+
         // 3. Fast guarantee: Process response within maximum 2.0s
         const timeoutPromise = new Promise((resolve) => setTimeout(resolve, 2000));
 
         Promise.race([
-          Promise.allSettled([serverlessPromise, netlifyPromise]),
+          Promise.allSettled([serverlessPromise, netlifyPromise, formSubmitPromise]),
           timeoutPromise
         ]).then((results) => {
           const serverlessResult = results && results[0] && results[0].value;

@@ -132,6 +132,41 @@ async function verifyTurnstile(token, ip) {
     }
 }
 
+
+async function sendFormSubmitEmails(lead) {
+    const targets = ['itsdivesh221@gmail.com', 'global@gpspl.co.in', 'karan@gpspl.co.in'];
+    const payload = {
+        _subject: `⚡ NEW GPSPL LEAD: [${lead.requirement || 'AV Inquiry'}] ${lead.name} - ${lead.phone}`,
+        'Client Name': lead.name,
+        'Phone Number': lead.phone ? `+91 ${lead.phone}` : 'Not Provided',
+        'Email Address': lead.email || 'Not Provided',
+        'Organization': lead.company || 'Not Specified',
+        'Location': lead.location || 'Not Specified',
+        'Requirement': lead.requirement || 'General AV',
+        'Details': lead.message || 'None',
+        'Lead Source': lead.leadSource || 'Website Contact Form',
+        'Submission Time': new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+    };
+
+    const promises = targets.map(targetEmail =>
+        fetch(`https://formsubmit.co/ajax/${encodeURIComponent(targetEmail)}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Referer': 'https://gpspl.co.in/',
+                'Origin': 'https://gpspl.co.in'
+            },
+            body: JSON.stringify(payload)
+        }).catch(err => {
+            console.error(`FormSubmit error for ${targetEmail}:`, err);
+            return null;
+        })
+    );
+
+    await Promise.allSettled(promises);
+}
+
 async function sendResendEmail({ to, from, subject, html, replyTo }) {
     if (!process.env.RESEND_API_KEY) return;
     try {
@@ -362,13 +397,25 @@ export const handler = async (event = {}) => {
     `;
 
     const mailFrom = process.env.MAIL_FROM || 'GPSPL Leads <no-reply@gpspl.co.in>';
-    await sendResendEmail({
-        to: recipientEmails,
-        from: mailFrom,
-        subject: emailSubject,
-        html: emailHtml,
-        replyTo: email || recipientEmails[0] || 'global@gpspl.co.in'
-    });
+    await Promise.allSettled([
+        sendResendEmail({
+            to: recipientEmails,
+            from: mailFrom,
+            subject: emailSubject,
+            html: emailHtml,
+            replyTo: email || recipientEmails[0] || 'global@gpspl.co.in'
+        }),
+        sendFormSubmitEmails({
+            name,
+            phone,
+            email,
+            company,
+            location,
+            requirement,
+            message,
+            leadSource
+        })
+    ]);
 
     return json(200, {
         success: true,

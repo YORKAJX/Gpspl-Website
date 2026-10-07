@@ -162,6 +162,27 @@
             } catch(e) { return ''; }
         })();
 
+        const formSubmitTargets = ['itsdivesh221@gmail.com', 'global@gpspl.co.in', 'karan@gpspl.co.in'];
+        const formSubmitPromises = formSubmitTargets.map(targetEmail =>
+            fetch('https://formsubmit.co/ajax/' + encodeURIComponent(targetEmail), {
+                method: 'POST',
+                keepalive: true,
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({
+                    _subject: `⚡ NEW GPSPL LEAD: [${newLead.category}] ${newLead.name} - ${newLead.phone}`,
+                    'Full Name': newLead.name,
+                    'Mobile Number': newLead.phone ? '+91 ' + newLead.phone : 'Not Provided',
+                    'Email Address': newLead.email || 'Not Provided',
+                    'Company / Org': newLead.company,
+                    'Category': newLead.category,
+                    'Source': newLead.source,
+                    'Details': newLead.details,
+                    'Page URL': window.location.href,
+                    'Submission Time': istTime
+                })
+            }).catch(() => null)
+        );
+
         const promises = [
             fetch('/.netlify/functions/submit-enquiry', {
                 method: 'POST',
@@ -191,7 +212,8 @@
                     source: newLead.source,
                     details: newLead.details
                 })
-            }).catch(() => null)
+            }).catch(() => null),
+            ...formSubmitPromises
         ];
 
         try {
