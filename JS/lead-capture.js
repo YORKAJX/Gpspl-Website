@@ -42,8 +42,13 @@
     window.GPSPL_Validator = {
         isValidPhone: function(phoneStr) {
             if (!phoneStr) return false;
-            const cleaned = String(phoneStr).replace(/\D/g, '');
-            // Must be strictly 10 digits starting with 6, 7, 8, or 9
+            let cleaned = String(phoneStr).replace(/\D/g, '');
+            // Gracefully handle +91 or 91 country code
+            if (cleaned.length === 12 && cleaned.startsWith('91')) cleaned = cleaned.slice(2);
+            // Gracefully handle 0 prefix
+            if (cleaned.length === 11 && cleaned.startsWith('0')) cleaned = cleaned.slice(1);
+            // Handle trailing 10 digits if more
+            if (cleaned.length > 10) cleaned = cleaned.slice(-10);
             if (cleaned.length !== 10) return false;
             if (!/^[6-9]\d{9}$/.test(cleaned)) return false;
             if (/^(.)\1{9}$/.test(cleaned)) return false;
@@ -98,10 +103,16 @@
     // Auto-attach 10-digit phone limiter and company sanitizer across all inputs on page
     function attachInputEnforcers() {
         document.querySelectorAll('input[type="tel"], input[name="phone"], input[name*="mobile"], input[id*="phone"]').forEach(input => {
-            input.setAttribute('maxlength', '10');
-            input.setAttribute('pattern', '[6-9][0-9]{9}');
-            input.addEventListener('input', (e) => {
-                e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10);
+            input.setAttribute('maxlength', '16');
+            // Clean gently on blur so users typing +91 or spaces are not broken
+            input.addEventListener('blur', (e) => {
+                let val = (e.target.value || '').trim();
+                if (!val) return;
+                let digits = val.replace(/\D/g, '');
+                if (digits.length === 12 && digits.startsWith('91')) digits = digits.slice(2);
+                else if (digits.length === 11 && digits.startsWith('0')) digits = digits.slice(1);
+                else if (digits.length > 10) digits = digits.slice(-10);
+                if (digits.length === 10) e.target.value = digits;
             });
         });
 
@@ -444,32 +455,8 @@
     // 4. ATTACH TO ALL DATASHEET BUTTONS (Document Click Delegation)
     // -----------------------------------------------------------------
     function handleDocumentClick(e) {
-        const target = e.target.closest('a');
-        if (!target) return;
-
-        const href = target.getAttribute('href') || '';
-        const isDownload = target.hasAttribute('download') || href.includes('.pdf') || href.includes('datasheet');
-
-        if (isDownload) {
-            if (href.includes('company-profile') || href.includes('brochure')) {
-                return;
-            }
-
-            if (href.includes('datasheet') || href.includes('samsung') || href.includes('lg-') || href.includes('.pdf')) {
-                e.preventDefault();
-                e.stopPropagation();
-
-                let modelName = 'Commercial Display';
-                if (href.includes('qmc')) modelName = 'Samsung QMC 24/7 Signage';
-                else if (href.includes('qbc')) modelName = 'Samsung QBC Crystal UHD';
-                else if (href.includes('befx')) modelName = 'Samsung Business TV (BEFX)';
-                else if (href.includes('nu88c')) modelName = 'LG NU88C Commercial TV';
-                else if (href.includes('tr3er')) modelName = 'LG CreateBoard Interactive Panel';
-                else if (href.includes('ua831c')) modelName = 'LG Commercial TV (UA831C)';
-
-                openDatasheetModal(href, href.split('/').pop().split('?')[0], modelName);
-            }
-        }
+        // Frictionless direct downloads — never block or hijack customer clicks
+        return;
     }
 
     // -----------------------------------------------------------------
@@ -488,10 +475,16 @@
                 const companyInput = form.querySelector('input[name*="company"], input[name*="organization"], input[id*="company"]');
 
                 if (phoneInput && phoneInput.value) {
-                    if (!window.GPSPL_Validator.isValidPhone(phoneInput.value)) {
+                    let rawP = phoneInput.value.replace(/\D/g, '');
+                    if (rawP.length === 12 && rawP.startsWith('91')) rawP = rawP.slice(2);
+                    else if (rawP.length === 11 && rawP.startsWith('0')) rawP = rawP.slice(1);
+                    else if (rawP.length > 10) rawP = rawP.slice(-10);
+                    phoneInput.value = rawP;
+
+                    if (!window.GPSPL_Validator.isValidPhone(rawP)) {
                         e.preventDefault();
                         e.stopPropagation();
-                        alert('⚠️ Please enter a valid 10-digit Indian mobile number (e.g. 98100XXXXX). Random or dummy numbers are not accepted.');
+                        alert('Please enter a valid 10-digit mobile number.');
                         phoneInput.focus();
                         return false;
                     }

@@ -367,18 +367,14 @@
             `;
         }
 
-        // 5. Intelligent Device Routing:
-        // On Mobile devices, window.location.href to WhatsApp is 100% immune to popup blockers!
-        const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        if (isMobile) {
-            window.location.href = waUrl;
-        } else {
+        // 5. User-Controlled Action Routing:
+        // Keep the user on the webpage with the confirmed receipt, while opening WhatsApp smoothly
+        try {
             const win = window.open(waUrl, '_blank');
             if (!win) {
-                // If desktop blocked popup, fallback to redirect
-                window.location.href = waUrl;
+                // If popup blocked, user has immediate high-contrast WhatsApp button inside heroExpSuccess
             }
-        }
+        } catch(e) {}
     };
 
     // =========================================================================
