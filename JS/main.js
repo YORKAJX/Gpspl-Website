@@ -486,95 +486,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!response.ok) throw new Error('Static form submission failed');
         }
 
-        document.querySelectorAll('form[data-lead-form]').forEach(form => {
-            if (form.dataset.leadSubmitBound === 'true') return;
-            form.dataset.leadSubmitBound = 'true';
-
-            form.addEventListener('submit', async (event) => {
-                if (event.defaultPrevented) return;
-                event.preventDefault();
-
-                const source = form.getAttribute('data-lead-form') || 'GPSPL website enquiry';
-                const formName = form.getAttribute('name') || form.id || 'gpspl-lead-form';
-                const sourceInput = form.querySelector('input[name="lead_source"]');
-                const pageInput = form.querySelector('input[name="page_url"]');
-                const submittedInput = form.querySelector('input[name="submitted_at"]');
-                const status = form.querySelector('.form-submit-status');
-                const submitButton = form.querySelector('button[type="submit"]');
-                const originalButtonText = submitButton?.dataset.submitLabel || submitButton?.textContent || 'Send Enquiry';
-
-                if (sourceInput) sourceInput.value = source;
-                if (pageInput) pageInput.value = window.location.href;
-                if (submittedInput) submittedInput.value = new Date().toLocaleString('en-IN', {
-                    dateStyle: 'medium',
-                    timeStyle: 'short',
-                    timeZone: 'Asia/Kolkata'
-                });
-
-                if (status) {
-                    status.textContent = 'Sending your enquiry securely. Please wait...';
-                    status.classList.remove('is-success', 'is-error');
-                    status.classList.add('is-active');
-                }
-
-                if (submitButton) {
-                    submitButton.disabled = true;
-                    submitButton.setAttribute('aria-busy', 'true');
-                    submitButton.textContent = submitButton.dataset.loadingLabel || 'Sending...';
-                }
-
-                window.gpsplTrack?.('contact_form_submit', {
-                    form_name: formName,
-                    form_source: source
-                });
-
-                try {
-                    try {
-                        const handledByApi = await submitToLeadApi(form, formName, source);
-                        if (!handledByApi) await submitToStaticForm(form);
-                    } catch (apiError) {
-                        if (window.GPSPL_CONFIG?.leadApiEndpoint) await submitToStaticForm(form);
-                        else throw apiError;
-                    }
-
-                    if (status) {
-                        status.textContent = 'Thank you. Your enquiry has been received. GPSPL will contact you shortly.';
-                        status.classList.add('is-active', 'is-success');
-                    }
-
-                    if (submitButton) {
-                        submitButton.textContent = 'Enquiry Sent';
-                    }
-
-                    form.reset();
-                    document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', {
-                        detail: {
-                            form_name: formName,
-                            form_source: source
-                        }
-                    }));
-                } catch (error) {
-                    if (status) {
-                        status.textContent = 'The form could not be submitted right now. Please call GPSPL or send your requirement on WhatsApp.';
-                        status.classList.add('is-active', 'is-error');
-                    }
-
-                    if (submitButton) {
-                        submitButton.disabled = false;
-                        submitButton.removeAttribute('aria-busy');
-                        submitButton.textContent = originalButtonText;
-                    }
-
-                    document.dispatchEvent(new CustomEvent('gpspl:lead-form-error', {
-                        detail: {
-                            form_name: formName,
-                            form_source: source,
-                            error_message: error.message || 'Form submission failed'
-                        }
-                    }));
-                }
-            });
-        });
+        // form-validation.js owns validation, delivery and confirmed success.
+        ensureFormValidation();
+        window.gpsplInitFormValidation?.();
     }
 
     function initConversionTrackingHooks() {

@@ -105,7 +105,6 @@ function checkDuplicate(phone, email) {
     if (recentLeadHashes.has(key)) {
         return true; // Is duplicate
     }
-    recentLeadHashes.set(key, now);
     return false;
 }
 
@@ -134,59 +133,31 @@ async function verifyTurnstile(token, ip) {
 
 
 async function sendFormSubmitEmails(lead) {
-    const targets = ['itsdivesh221@gmail.com', 'global@gpspl.co.in', 'karan@gpspl.co.in'];
-    const payload = {
-        _subject: `⚡ NEW GPSPL LEAD: [${lead.requirement || 'AV Inquiry'}] ${lead.name} - ${lead.phone}`,
-        'Client Name': lead.name,
-        'Phone Number': lead.phone ? `+91 ${lead.phone}` : 'Not Provided',
-        'Email Address': lead.email || 'Not Provided',
-        'Organization': lead.company || 'Not Specified',
-        'Location': lead.location || 'Not Specified',
-        'Requirement': lead.requirement || 'General AV',
-        'Details': lead.message || 'None',
-        'Lead Source': lead.leadSource || 'Website Contact Form',
-        'Submission Time': new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
-    };
-
-    const promises = targets.map(targetEmail =>
-        fetch(`https://formsubmit.co/ajax/${encodeURIComponent(targetEmail)}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                'Referer': 'https://gpspl.co.in/',
-                'Origin': 'https://gpspl.co.in'
-            },
-            body: JSON.stringify(payload)
-        }).catch(err => {
-            console.error(`FormSubmit error for ${targetEmail}:`, err);
-            return null;
-        })
-    );
-
-    await Promise.allSettled(promises);
-}
-
-async function sendResendEmail({ to, from, subject, html, replyTo }) {
-    if (!process.env.RESEND_API_KEY) return;
-    try {
-        await fetch('https://api.resend.com/emails', {
-            method: 'POST',
-            headers: {
-                Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                from,
-                to,
-                subject,
-                html,
-                reply_to: replyTo
-            })
+    const targets = (process.env.LEAD_NOTIFICATION_EMAILS || 'global@gpspl.co.in,karan@gpspl.co.in,itsdivesh221@gmail.com').split(',').map(x=>x.trim()).filter(Boolean);
+    return Promise.any(targets.map(async target => {
+        const response = await fetch('https://formsubmit.co/ajax/' + encodeURIComponent(target), {
+            method: 'POST', signal: AbortSignal.timeout(10000),
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json', Referer: 'https://gpspl.co.in/', Origin: 'https://gpspl.co.in' },
+            body: JSON.stringify({ _subject: 'New GPSPL enquiry: ' + lead.requirement,
+                'Client Name': lead.name, Phone: lead.phone, Email: lead.email,
+                Company: lead.company, Location: lead.location, Requirement: lead.requirement,
+                Details: lead.message, Source: lead.leadSource })
         });
-    } catch (e) {
-        console.error('Resend email error:', e);
-    }
+        const receipt = await response.json().catch(()=>({}));
+        if (!response.ok || !(receipt.success === true || receipt.success === 'true')) throw Error('FormSubmit did not accept notification');
+        return 'formsubmit-accepted';
+    }));
+}
+async function sendResendEmail({ to, from, subject, html, replyTo }) {
+    if (!process.env.RESEND_API_KEY) throw Error('Resend is not configured');
+    const response = await fetch('https://api.resend.com/emails', {
+        method: 'POST', signal: AbortSignal.timeout(10000),
+        headers: { Authorization: 'Bearer ' + process.env.RESEND_API_KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ from, to, subject, html, reply_to: replyTo })
+    });
+    const receipt = await response.json().catch(()=>({}));
+    if (!response.ok || !receipt.id) throw Error('Resend did not accept notification');
+    return receipt.id;
 }
 
 export const handler = async (event = {}) => {
@@ -397,7 +368,9 @@ export const handler = async (event = {}) => {
     `;
 
     const mailFrom = process.env.MAIL_FROM || 'GPSPL Leads <no-reply@gpspl.co.in>';
-    await Promise.allSettled([
+    let deliveryId;
+    try {
+    deliveryId = await Promise.any([
         sendResendEmail({
             to: recipientEmails,
             from: mailFrom,
@@ -416,9 +389,15 @@ export const handler = async (event = {}) => {
             leadSource
         })
     ]);
+    } catch (error) {
+        console.error("GPSPL team notification failed:", error.message);
+        return json(503, { success: false, error: "Delivery was not confirmed. Please retry, call or WhatsApp GPSPL." }, baseHeaders);
+    }
+    recentLeadHashes.set(`${phone}_${email.toLowerCase()}`, Date.now());
 
     return json(200, {
         success: true,
+        deliveryId,
         message: 'Thank you for contacting GPSPL! Your enquiry has been routed to our project engineering desk. Our team will contact you within 2 business hours.'
     }, baseHeaders);
 };

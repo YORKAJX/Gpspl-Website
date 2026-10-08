@@ -201,72 +201,49 @@
           page: window.location.pathname
         };
 
-        // 1. Dispatch to hardened serverless handler
-        const serverlessPromise = fetch("/.netlify/functions/submit-enquiry", {
+        // Confirm one authoritative delivery before success or navigation.
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 20000);
+        fetch("/.netlify/functions/submit-enquiry", {
           method: "POST",
+          keepalive: true,
+          signal: controller.signal,
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            name: leadData.name,
-            email: leadData.email,
-            phone: leadData.phone,
-            company: formData.get("company") || leadData.company,
-            location: formData.get("location") || "",
+            name: leadData.name, email: leadData.email, phone: leadData.phone,
+            company: leadData.company, location: formData.get("location") || formData.get("city") || "",
             requirement: formData.get("requirement") || leadData.category,
-            message: formData.get("message") || leadData.details,
-            lead_source: label,
+            message: formData.get("message") || leadData.details, lead_source: label,
+            timeline: formData.get("timeline") || "", budget: formData.get("budget") || "",
+            "bot-field": formData.get("bot-field") || "",
             form_time_token: formData.get("form_time_token") || "",
             "cf-turnstile-response": formData.get("cf-turnstile-response") || ""
           })
-        }).then(async (res) => {
-          const data = await res.json().catch(() => ({}));
-          return { ok: res.ok, status: res.status, data };
-        }).catch(() => ({ ok: true }));
-
-        // 2. Netlify static form post
-        const netlifyPromise = fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString()
-        }).catch(() => null);
-
-        // 3. Direct FormSubmit email delivery
-        const formSubmitPromise = fetch("https://formsubmit.co/ajax/itsdivesh221@gmail.com", {
-          method: "POST",
-          headers: { "Content-Type": "application/json", "Accept": "application/json" },
-          body: JSON.stringify({
-            _subject: `⚡ NEW GPSPL LEAD: [${leadData.category}] ${leadData.name} - ${leadData.phone}`,
-            "Client Name": leadData.name,
-            "Phone Number": leadData.phone ? "+91 " + leadData.phone : "Not Provided",
-            "Email Address": leadData.email || "Not Provided",
-            "Company": leadData.company || "Not Specified",
-            "Requirement": leadData.category,
-            "Lead Source": label,
-            "Details": leadData.details,
-            "Page URL": window.location.href,
-            "Submission Time": new Date().toLocaleString("en-IN")
-          })
-        }).catch(() => null);
-
-        // 3. Fast guarantee: Process response within maximum 2.0s
-        const timeoutPromise = new Promise((resolve) => setTimeout(resolve, 2000));
-
-        Promise.race([
-          Promise.allSettled([serverlessPromise, netlifyPromise, formSubmitPromise]),
-          timeoutPromise
-        ]).then((results) => {
-          const serverlessResult = results && results[0] && results[0].value;
-          if (serverlessResult && !serverlessResult.ok && serverlessResult.data && serverlessResult.data.error) {
-            box.className = "form-submit-status is-error";
-            box.textContent = serverlessResult.data.error;
-            if (submitBtn) {
-              submitBtn.disabled = false;
-              if (submitBtn.tagName === "INPUT") submitBtn.value = "Submit Again";
-              else submitBtn.innerHTML = submitBtn.dataset.submitLabel || "Send Project Enquiry";
-            }
-            return;
+        }).then(async response => {
+          const data = await response.json().catch(() => ({}));
+          if (!response.ok || data.success !== true || data.skipped) {
+            throw new Error(data.error || "Your enquiry was not confirmed. Please retry or contact GPSPL directly.");
           }
-          const action = form.getAttribute("action") || "/thank-you";
-          window.location.href = action;
+          clearTimeout(timeout);
+          box.className = "form-submit-status is-success";
+          box.textContent = "Your enquiry has been accepted by the GPSPL project desk.";
+          document.dispatchEvent(new CustomEvent("gpspl:lead-form-success", { detail: { form_name: label, form_source: label } }));
+          const action = new URL(form.getAttribute("action") || "/thank-you", window.location.href);
+          if (action.origin === window.location.origin && /\/thank-you(?:\.html)?\/?$/.test(action.pathname)) {
+            window.location.assign(action.href);
+          }
+        }).catch(error => {
+          clearTimeout(timeout);
+          box.className = "form-submit-status is-error";
+          box.textContent = error.name === "AbortError"
+            ? "Delivery is taking longer than expected and is not confirmed. Please retry, call +91 89208 30377 or use WhatsApp."
+            : error.message;
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            if (submitBtn.tagName === "INPUT") submitBtn.value = "Submit Again";
+            else submitBtn.textContent = submitBtn.dataset.submitLabel || "Retry Enquiry";
+          }
+          document.dispatchEvent(new CustomEvent("gpspl:lead-form-error", { detail: { form_name: label, error_message: error.message } }));
         });
       });
     });

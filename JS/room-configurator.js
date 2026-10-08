@@ -839,8 +839,12 @@
       page: window.location.pathname
     };
 
-    if (window.GPSPL_LeadCapture && typeof window.GPSPL_LeadCapture.dispatchLead === 'function') {
+    try {
+      if (!window.GPSPL_LeadCapture?.dispatchLead) throw new Error('The enquiry service is unavailable. Please refresh or contact GPSPL directly.');
       await window.GPSPL_LeadCapture.dispatchLead(leadData);
+    } catch (error) {
+      btn.disabled = false; btn.textContent = 'Retry Project Enquiry';
+      alert(error.message); return;
     }
 
     generateExecutiveProposalPdf({
@@ -1097,34 +1101,21 @@
       } catch(err) { return ''; }
     })();
 
-    const promises = [
-      fetch('/.netlify/functions/submit-enquiry', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...leadData,
-          form_time_token: timeToken
-        })
-      }).catch(() => null),
-      fetch('/.netlify/functions/boq-lead-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          type: 'wholesale_distribution',
-          name: name,
-          email: email,
-          phone: phone,
-          company: company,
-          boqSummary: leadData.message,
-          projectDescription: req
-        })
-      }).catch(() => null)
-    ];
-
     try {
-      const timeout = new Promise(resolve => setTimeout(resolve, 1500));
-      await Promise.race([Promise.allSettled(promises), timeout]);
-    } catch(err) {}
+      const response = await fetch('/.netlify/functions/submit-enquiry', {
+        method: 'POST', keepalive: true, signal: AbortSignal.timeout(20000),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...leadData, email: /^inquiry[-@]/.test(leadData.email || '') ? '' : leadData.email,
+          form_time_token: timeToken, 'cf-turnstile-response': new FormData(form).get('cf-turnstile-response') || '' })
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok || data.success !== true || data.skipped) throw new Error(data.error || 'Delivery was not confirmed. Please retry or contact GPSPL directly.');
+      document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: form.id } }));
+    } catch (error) {
+      const button = form.querySelector('button[type="submit"]');
+      if (button) { button.disabled = false; button.textContent = 'Retry Enquiry'; }
+      alert(error.message); return;
+    }
 
     // 2. Backup to localStorage
     try {
@@ -1254,36 +1245,21 @@
       } catch(err) { return ''; }
     })();
 
-    const promises = [
-      fetch('/.netlify/functions/submit-enquiry', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...leadData,
-          form_time_token: timeToken
-        })
-      }).catch(() => null),
-      fetch('/.netlify/functions/boq-lead-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          type: 'express_fast_quote',
-          name: name,
-          email: 'inquiry-' + phone + '@gpspl.co.in',
-          phone: phone,
-          company: 'Express Client',
-          service: service,
-          refNumber: refNo,
-          boqSummary: leadData.message,
-          projectDescription: 'Customer requested express quote for ' + service
-        })
-      }).catch(() => null)
-    ];
-
     try {
-      const timeout = new Promise(resolve => setTimeout(resolve, 1500));
-      await Promise.race([Promise.allSettled(promises), timeout]);
-    } catch(err) {}
+      const response = await fetch('/.netlify/functions/submit-enquiry', {
+        method: 'POST', keepalive: true, signal: AbortSignal.timeout(20000),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...leadData, email: /^inquiry[-@]/.test(leadData.email || '') ? '' : leadData.email,
+          form_time_token: timeToken, 'cf-turnstile-response': new FormData(form).get('cf-turnstile-response') || '' })
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok || data.success !== true || data.skipped) throw new Error(data.error || 'Delivery was not confirmed. Please retry or contact GPSPL directly.');
+      document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: form.id } }));
+    } catch (error) {
+      const button = form.querySelector('button[type="submit"]');
+      if (button) { button.disabled = false; button.textContent = 'Retry Enquiry'; }
+      alert(error.message); return;
+    }
 
     // Backup to localStorage
     try {

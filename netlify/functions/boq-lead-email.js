@@ -72,11 +72,11 @@ exports.handler = async (event) => {
     }
 
     if (!process.env.ENABLE_BOQ_AUTO_EMAIL || process.env.ENABLE_BOQ_AUTO_EMAIL !== 'true') {
-        return json(200, { configured: false, skipped: true }, baseHeaders);
+        return json(503, { configured: false, sent: false }, baseHeaders);
     }
 
     if (!process.env.RESEND_API_KEY) {
-        return json(200, { configured: false, skipped: true }, baseHeaders);
+        return json(503, { configured: false, sent: false }, baseHeaders);
     }
 
     if (Number(event.headers['content-length'] || 0) > 50000) {
@@ -156,6 +156,6 @@ exports.handler = async (event) => {
 
         return json(200, { sent: true }, baseHeaders);
     } catch (error) {
-        return json(200, { sent: false }, baseHeaders);
+        return json(502, { sent: false }, baseHeaders);
     }
 };

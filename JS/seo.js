@@ -291,6 +291,10 @@
     };
 
     const pageSeo = {
+        "lg-commercial-tv-nu88c.html": { title: "LG NU88C Commercial TV Delhi NCR & India | GPSPL",
+            description: "LG NU88C commercial TV enquiries for Delhi NCR and Pan-India buyers. Request model-specific availability, pricing, delivery and installation scope.", type: "product" },
+        "lg-commercial-tv-ua831c.html": { title: "LG UA831C Commercial TV Delhi NCR & India | GPSPL",
+            description: "LG UA831C commercial TV enquiries for Delhi NCR and Pan-India buyers. Explore model details and request pricing, stock and installation scope.", type: "product" },
         "command-control-center-av-solutions.html": {
             title: "Best Command & Control Room (NOC/SOC) AV Solutions in Delhi NCR & India | GPSPL",
             description: "India's premier command & control room AV systems integrator. 24/7 mission-critical Active LED video walls, zero-latency KVM-over-IP matrix, ISO 11064 ergonomic consoles, and GeM tender MAF support.",
@@ -306,8 +310,8 @@
             image: "/assests/images/products/professional-audio-solutions.webp"
         },
         "av-technology-distribution.html": {
-            title: "AV Technology Distributor India | Wholesale Commercial Audio Visual Supply | GPSPL",
-            description: "India's authorized Tier-1 commercial AV distributor. Direct B2B wholesale pricing on Samsung & LG commercial displays, Harman Pro audio, Crestron, Poly, and Barco with deal registration and GeM MAF support.",
+            title: "AV Distribution Delhi NCR & Pan-India Supply | GPSPL",
+            description: "Commercial AV distribution from New Delhi for Delhi NCR and Pan-India buyers. Request equipment pricing, stock availability and project delivery terms.",
             type: "service",
             serviceType: "Commercial AV technology distribution and B2B wholesale supply",
             image: "/assests/images/milestones/harman-best-regional-distributor-2024.jpeg"
@@ -330,23 +334,23 @@
             type: "article"
         },
         "samsung-business-tv-befx-h2.html": {
-            title: "Samsung Business TV BEFX-H2 (43\" to 85\") 4K Commercial TV | GPSPL",
-            description: "Samsung BEFX-H2 Series Commercial Business TV with 400 nits, 16/7 duty cycle, Samsung VXT Cloud CMS, PlayLock security, and Business TV App.",
+            title: "Samsung Business TV Delhi NCR & India Supply | GPSPL",
+            description: "Samsung BEFX-H2 Business TV enquiries for Delhi NCR and Pan-India buyers. Request model-specific pricing, availability, delivery and installation scope.",
             type: "product"
         },
         "samsung-commercial-display-qbc.html": {
-            title: "Samsung QBC Series Crystal UHD Signage (43\" to 85\") | GPSPL",
-            description: "Samsung QBC Series 4K UHD Commercial Displays with ultra-slim 28.5mm depth, 350 nits, Dynamic Crystal Color, Tizen 7.0, and MagicINFO S10.",
+            title: "Samsung QBC Displays Delhi NCR & India Supply | GPSPL",
+            description: "Samsung QBC commercial displays for Delhi NCR and Pan-India supply enquiries. Request model-specific pricing, stock availability and installation support.",
             type: "product"
         },
         "samsung-commercial-display-qmc.html": {
-            title: "Samsung QMC Series 24/7 500-Nit Commercial Signage (43\" to 85\") | GPSPL",
-            description: "Samsung QMC Series Heavy-Duty 24/7 Displays with 500 nits high brightness, 25% non-glare haze, DP 1.2, and SmartView+ wireless collaboration.",
+            title: "Samsung QMC Displays Delhi NCR & India Supply | GPSPL",
+            description: "Samsung QMC commercial display enquiries for Delhi NCR and Pan-India buyers. Review model details and request pricing, availability and installation scope.",
             type: "product"
         },
         "index.html": {
-            title: "Spaces that Work. Technology that Lasts | Best AV Integrator & Technology Distributor India | GPSPL",
-            description: "GPSPL (Estd. 1997) is India's premier turnkey AV integrator & authorized technology distributor. We design, supply and integrate display, audio, collaboration, and control systems behind corporate boardrooms, campuses, command centers, and auditoriums across India.",
+            title: "AV Solutions & Distribution Delhi NCR, Pan-India | GPSPL",
+            description: "Delhi NCR AV integration and technology supply, with Pan-India project enquiries for conference rooms, Active LED, JBL audio, education and hospitality.",
             type: "home",
             image: "/assests/images/hero/image.jpg"
         },
@@ -373,15 +377,15 @@
             image: "/assests/images/milestones/lg-regional-distributor-2022.jpeg"
         },
         "audio-visual-integration.html": {
-            title: "Best AV Integrator & Turnkey AV Solutions Provider India | GPSPL",
-            description: "GPSPL is India's best AV integrator and turnkey audio visual solutions provider. Enterprise conference room AV solutions, active LED walls, auditoriums, and smart campuses engineered for 99.999% uptime with direct OEM pricing and 4-hour SLA.",
+            title: "End-to-End AV Integration Delhi NCR & India | GPSPL",
+            description: "End-to-end AV integration in Delhi NCR and for Pan-India projects: design, equipment supply, installation, commissioning, training and maintenance planning.",
             type: "service",
             serviceType: "Audio visual integration and enterprise AV system integration",
             image: "/assests/images/vision/conference-room-hero.jpg"
         },
         "conference-room-solutions.html": {
-            title: "Conference Room AV Solutions & Setup India | Turnkey Boardroom AV | GPSPL",
-            description: "India's premier conference room AV solution provider. Turnkey boardroom AV setup, Microsoft Teams & Zoom Rooms, Shure ceiling beamforming microphones, commercial 4K displays & Crestron automation with 4-hour SLA.",
+            title: "Conference Room AV Solutions Delhi NCR & India | GPSPL",
+            description: "Conference room AV in Delhi NCR, with Pan-India project planning: video conferencing, displays, microphones, control, installation and support. Request a BOQ.",
             type: "service",
             serviceType: "Conference room and boardroom AV solutions",
             image: "/assests/images/products/conference-room-solutions.webp"
@@ -401,8 +405,8 @@
             image: "/assests/images/hero/video-wall-command-center.webp"
         },
         "active-led-wall-solutions.html": {
-            title: "Active LED Wall Supplier & LED Video Wall Installation | GPSPL",
-            description: "GPSPL is a leading active LED wall supplier and installer in India with pixel pitch planning, structure coordination, display calibration, and AMC support.",
+            title: "Active LED Video Walls Delhi NCR & India | GPSPL",
+            description: "Active LED video walls for Delhi NCR and Pan-India projects. Plan pixel pitch, mounting, processing, installation and calibration with a site-specific quote.",
             type: "service",
             serviceType: "Active LED wall solutions and installation",
             image: "/assests/images/products/active-led-video-wall.webp"
@@ -436,22 +440,22 @@
             image: "/assests/images/products/interactive-display-solutions.webp"
         },
         "smart-classroom-solutions.html": {
-            title: "Smart Class Solutions & Setup Cost India | 4K Smart Board & Classroom AV | GPSPL",
-            description: "Complete smart class solutions & smart classroom setup in India by GPSPL (Estd. 1997). Turnkey 4K smart boards, hybrid lecture capture, school audio systems, CBSE compliance, and Pan-India AMC.",
+            title: "Smart Classroom AV Solutions Delhi NCR & India | GPSPL",
+            description: "Smart classroom AV for Delhi NCR schools and Pan-India campuses: interactive displays, teaching audio and hybrid learning. Request a project-specific BOQ.",
             type: "service",
             serviceType: "Smart classroom, interactive display and education AV integration",
             image: "/assests/images/projects/gpspl-real/polished/direct-education-classroom-panels.webp"
         },
         "hotel-hospitality-av-solutions.html": {
-            title: "Hotel Audio Visual Solutions India | Hospitality AV System Integrator | Banquet LED & Sound | GPSPL",
-            description: "India's premier hotel audio visual solutions provider. Turnkey grand ballroom Active LED video walls, banquet line-array sound systems, multi-zone restaurant audio matrices, LG & Samsung hospitality TVs with 4-hour SLA.",
+            title: "Hotel & Hospitality AV Delhi NCR & India | GPSPL",
+            description: "Hotel AV in Delhi NCR and for Pan-India projects: banquet LED walls, meeting rooms, sound, background music and commercial TVs. Discuss your venue scope.",
             type: "service",
             serviceType: "Hotel & hospitality audio visual system integration",
             image: "/assests/images/projects/gpspl-real/polished/real-hospitality-restaurant-led.jpg"
         },
         "professional-audio-solutions.html": {
-            title: "Professional Audio System Integrator India | GPSPL",
-            description: "GPSPL is a professional audio solution provider and auditorium sound system integrator in India for clear voice pickup, DSP tuning, and speaker coverage.",
+            title: "JBL Audio & Sound Systems Delhi NCR & India | GPSPL",
+            description: "JBL professional sound systems in Delhi NCR and for Pan-India projects: speaker coverage, microphones, DSP and installation for offices, hotels and venues.",
             type: "service",
             serviceType: "Professional audio, auditorium sound and DSP system integration",
             image: "/assests/images/products/professional-audio-solutions.webp"
@@ -534,14 +538,14 @@
             type: "webpage"
         },
         "av-system-integrator-gurgaon.html": {
-            title: "AV System Integrator in Gurgaon & Cyber City | GPSPL",
-            description: "Premier AV system integrator in Gurgaon. Turnkey boardroom AV, Microsoft Teams Rooms, Active LED walls, Crestron automation, and 4-hour SLA AMC support across Cyber City.",
+            title: "AV System Integrator Gurgaon & Gurugram | GPSPL",
+            description: "Plan corporate AV in Gurgaon and Gurugram: conference rooms, displays, audio and room control. Request a project BOQ, installation scope and support plan.",
             type: "service",
             serviceType: "Audio visual integration and enterprise boardroom solutions"
         },
         "active-led-wall-supplier-noida.html": {
-            title: "Active LED Wall Supplier & Installation in Noida | GPSPL",
-            description: "Leading Active LED display wall supplier and installer in Noida. Fine-pitch P1.25, P1.53, P1.86 indoor LED walls, outdoor displays, and NovaStar processors.",
+            title: "Active LED Wall Supply & Installation Noida | GPSPL",
+            description: "Plan Active LED walls in Noida and Greater Noida: pixel pitch selection, structure, processing and commissioning. Request a site-specific project quote.",
             type: "service",
             serviceType: "Active LED video wall systems and installation"
         },
@@ -556,13 +560,13 @@
             type: "webpage"
         },
         "corporate-projects.html": {
-            title: "Corporate AV Projects & Boardroom Solutions | GPSPL",
-            description: "Corporate AV projects, boardrooms, meeting rooms, displays, conferencing, automation and enterprise collaboration deployments by GPSPL.",
+            title: "Corporate AV Projects Delhi NCR & India | GPSPL",
+            description: "Explore GPSPL corporate AV project work for Delhi NCR and India: boardrooms, video conferencing and workplace displays. Discuss a similar office project.",
             type: "webpage"
         },
         "education-projects.html": {
-            title: "Education Technology Projects & Smart Classrooms | GPSPL",
-            description: "Education projects including smart classrooms, interactive displays, lecture capture, projectors, cameras, audio and hybrid learning systems.",
+            title: "Education AV Projects Delhi NCR & India | GPSPL",
+            description: "Explore GPSPL education AV project work for Delhi NCR and India: interactive displays, classroom audio and learning spaces. Discuss your campus requirements.",
             type: "webpage"
         },
         "government-projects.html": {
@@ -624,8 +628,8 @@
             noindex: true
         },
         "av-system-integrator-delhi-ncr.html": {
-            title: "AV System Integrator in Delhi NCR & India | GPSPL",
-            description: "GPSPL is a leading AV system integrator in Delhi NCR and India. We design and install conference room AV, active LED walls, smart classrooms and pro audio.",
+            title: "AV System Integrator Delhi NCR | Pan-India Projects | GPSPL",
+            description: "Delhi NCR AV integration for Delhi, Gurugram, Noida and nearby cities. Plan conference rooms, LED walls, audio and education AV, with Pan-India enquiries welcome.",
             type: "service",
             serviceType: "Audio visual system integration services in Delhi NCR"
         },

@@ -183,43 +183,18 @@
             }).catch(() => null)
         );
 
-        const promises = [
-            fetch('/.netlify/functions/submit-enquiry', {
-                method: 'POST',
-                keepalive: true,
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    name: newLead.name,
-                    email: newLead.email,
-                    phone: newLead.phone,
-                    company: newLead.company,
-                    requirement: newLead.category,
-                    message: newLead.details,
-                    lead_source: newLead.source,
-                    form_time_token: timeToken
-                })
-            }).catch(() => null),
-            fetch('/.netlify/functions/boq-lead-email', {
-                method: 'POST',
-                keepalive: true,
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    type: 'lead_inquiry',
-                    name: newLead.name,
-                    email: newLead.email,
-                    phone: newLead.phone,
-                    company: newLead.company,
-                    source: newLead.source,
-                    details: newLead.details
-                })
-            }).catch(() => null),
-            ...formSubmitPromises
-        ];
-
-        try {
-            const timeout = new Promise(resolve => setTimeout(resolve, 1200));
-            await Promise.race([Promise.allSettled(promises), timeout]);
-        } catch(e) {}
+        const response = await fetch('/.netlify/functions/submit-enquiry', {
+            method: 'POST', keepalive: true, signal: AbortSignal.timeout(20000),
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: newLead.name, email: /^inquiry[-@]/.test(newLead.email) ? '' : newLead.email,
+                phone: newLead.phone, company: newLead.company, requirement: newLead.category,
+                message: newLead.details, lead_source: newLead.source,
+                location: leadData.location || leadData.city || '',
+                'cf-turnstile-response': leadData['cf-turnstile-response'] || '', form_time_token: timeToken })
+        });
+        const receipt = await response.json().catch(() => ({}));
+        if (!response.ok || receipt.success !== true || receipt.skipped) throw new Error(receipt.error || 'Enquiry delivery was not confirmed. Please retry or contact GPSPL directly.');
+        document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: newLead.source } }));
 
         return newLead;
     }
@@ -386,7 +361,7 @@
         } catch(e) {}
     }
 
-    function handleModalSubmit(e) {
+    async function handleModalSubmit(e) {
         e.preventDefault();
 
         const nameInput = document.getElementById('gpspl-lead-name');
@@ -447,7 +422,8 @@
         };
 
         // 1. Dispatch lead info to email
-        dispatchUniversalLead(leadData);
+        try { await dispatchUniversalLead(leadData); }
+        catch (error) { btn.style.pointerEvents = 'auto'; btn.textContent = 'Retry Download'; alert(error.message); return; }
 
         // 2. Trigger instant download
         triggerFileDownload(pendingDownloadUrl, pendingDownloadFilename);
@@ -484,82 +460,7 @@
     // -----------------------------------------------------------------
     // 5. ATTACH TO ALL SITE FORMS (Career, BOQ, Contact, Quotes)
     // -----------------------------------------------------------------
-    function attachGlobalFormValidation() {
-        const forms = document.querySelectorAll('form:not(#gpspl-datasheet-form)');
-        forms.forEach(form => {
-            if (form.dataset.gpsplBound === 'true') return;
-            form.dataset.gpsplBound = 'true';
-
-            form.addEventListener('submit', function(e) {
-                const phoneInput = form.querySelector('input[type="tel"], input[name*="phone"], input[name*="mobile"], input[id*="phone"]');
-                const emailInput = form.querySelector('input[type="email"], input[name*="email"], input[id*="email"]');
-                const nameInput = form.querySelector('input[name*="name"], input[id*="name"], input[placeholder*="Name"]');
-                const companyInput = form.querySelector('input[name*="company"], input[name*="organization"], input[id*="company"]');
-
-                if (phoneInput && phoneInput.value) {
-                    let rawP = phoneInput.value.replace(/\D/g, '');
-                    if (rawP.length === 12 && rawP.startsWith('91')) rawP = rawP.slice(2);
-                    else if (rawP.length === 11 && rawP.startsWith('0')) rawP = rawP.slice(1);
-                    else if (rawP.length > 10) rawP = rawP.slice(-10);
-                    phoneInput.value = rawP;
-
-                    if (!window.GPSPL_Validator.isValidPhone(rawP)) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        alert('Please enter a valid 10-digit mobile number.');
-                        phoneInput.focus();
-                        return false;
-                    }
-                }
-
-                if (emailInput && emailInput.value) {
-                    if (!window.GPSPL_Validator.isValidEmail(emailInput.value)) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        alert('⚠️ Please enter a valid official/work email address. Disposable or test email domains are not accepted.');
-                        emailInput.focus();
-                        return false;
-                    }
-                }
-
-                let category = 'CONTACT INQUIRY';
-                let sourceTitle = form.id || form.className || 'Website Contact Form';
-
-                const formHtml = form.innerHTML.toLowerCase();
-                if (formHtml.includes('career') || formHtml.includes('resume') || formHtml.includes('job') || window.location.pathname.includes('career')) {
-                    category = 'CAREER APPLICATION';
-                    const roleField = form.querySelector('[name*="role"], [name*="position"], #careerModalRoleTitle');
-                    sourceTitle = roleField ? (roleField.value || roleField.textContent || 'Job Application') : 'Career Application';
-                } else if (formHtml.includes('boq') || formHtml.includes('calculator') || form.id === 'boq-form') {
-                    category = 'BOQ / PROJECT ESTIMATE';
-                    sourceTitle = 'AV BOQ Calculator';
-                } else if (formHtml.includes('quote') || formHtml.includes('inquiry')) {
-                    category = 'PROJECT QUOTE REQUEST';
-                }
-
-                const formData = new FormData(form);
-                const detailsArr = [];
-                formData.forEach((val, key) => {
-                    if (key !== 'bot-field' && key !== 'form-name' && val && typeof val === 'string') {
-                        detailsArr.push(`${key}: ${val}`);
-                    }
-                });
-
-                const leadData = {
-                    category: category,
-                    name: (nameInput ? nameInput.value : formData.get('name')) || 'Website Inquirer',
-                    company: (companyInput ? companyInput.value : formData.get('company')) || (category === 'CAREER APPLICATION' ? 'Job Candidate' : 'Not Specified'),
-                    phone: (phoneInput ? phoneInput.value : formData.get('phone')) || '',
-                    email: (emailInput ? emailInput.value : formData.get('email')) || '',
-                    source: sourceTitle,
-                    details: detailsArr.join(' | ') || 'Inquiry submitted from ' + window.location.pathname,
-                    page: window.location.pathname
-                };
-
-                dispatchUniversalLead(leadData);
-            });
-        });
-    }
+    function attachGlobalFormValidation() {}
 
     // -----------------------------------------------------------------
     // 6. CSV & EXCEL EXPORT ENGINE + ADMIN LEAD HUB MODAL

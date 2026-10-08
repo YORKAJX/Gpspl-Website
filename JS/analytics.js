@@ -100,8 +100,8 @@
             traffic_type: trafficType,
             referring_domain: referringDomain,
             referring_full_url: document.referrer || "Direct / Bookmark",
-            utm_source: utmSource || "organic_direct",
-            utm_medium: utmMedium || "none",
+            utm_source: utmSource || "",
+            utm_medium: utmMedium || "",
             utm_campaign: utmCampaign || "none",
             utm_term: utmTerm || "none",
             utm_content: utmContent || "none",
@@ -193,7 +193,11 @@
             page_type: pageType(),
             product_context: document.querySelector("[data-product-name]")?.dataset.productName || pageTitle(),
             timestamp: new Date().toISOString(),
-            ...trafficAttribution,
+            gpspl_traffic_type: trafficAttribution.traffic_type,
+            gpspl_referring_domain: trafficAttribution.referring_domain,
+            gpspl_utm_source: trafficAttribution.utm_source,
+            gpspl_utm_medium: trafficAttribution.utm_medium,
+            gpspl_utm_campaign: trafficAttribution.utm_campaign,
             ...deviceIntel,
             ...extra
         };
@@ -320,7 +324,7 @@
         lastTrackedTime = now;
 
         track("page_view", {
-            page_referrer: document.referrer || "Direct",
+            page_referrer: document.referrer || "",
             entry_landing_page: sessionStorage.getItem(SESSION_STORAGE_KEY) ? JSON.parse(sessionStorage.getItem(SESSION_STORAGE_KEY)).landing_page : window.location.pathname
         });
     }
@@ -472,7 +476,7 @@
         document.addEventListener("gpspl:lead-form-error", (event) => {
             track("form_submit_failed", {
                 lead_status: "ERROR",
-                error_message: event.detail?.error || "Unknown validation/network error"
+                error_message: event.detail?.error_message || event.detail?.error || "Unknown validation/network error"
             });
         });
     }

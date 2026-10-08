@@ -275,7 +275,7 @@
         }
     };
 
-    window.handleHeroExpressSubmit = function (event) {
+    window.handleHeroExpressSubmit = async function (event) {
         event.preventDefault();
         const phoneInput = document.getElementById('heroExpPhone');
         const phone = phoneInput ? phoneInput.value.trim().replace(/\D/g, '').slice(-10) : '';
@@ -318,31 +318,20 @@
             lead_source: 'Homepage 5-Sec Hero Express Bar'
         };
 
-        // 1. Dispatch immediately to Netlify Function & FormSubmit for 100% email delivery
         try {
-            fetch('/.netlify/functions/submit-enquiry', {
-                method: 'POST',
-                keepalive: true,
+            const response = await fetch('/.netlify/functions/submit-enquiry', {
+                method: 'POST', keepalive: true, signal: AbortSignal.timeout(20000),
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(leadPayload)
-            }).catch(() => null);
-
-            ['itsdivesh221@gmail.com', 'global@gpspl.co.in'].forEach(targetEmail => {
-                fetch('https://formsubmit.co/ajax/' + encodeURIComponent(targetEmail), {
-                    method: 'POST',
-                    keepalive: true,
-                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                    body: JSON.stringify({
-                        _subject: `⚡ NEW EXPRESS HERO LEAD: [${finalRequirement}] ${phone}`,
-                        'Mobile Number': '+91 ' + phone,
-                        'Requirement': finalRequirement,
-                        'Reference ID': refNo,
-                        'Lead Source': 'Homepage Express Lead Bar',
-                        'Submitted At': new Date().toLocaleString('en-IN')
-                    })
-                }).catch(() => null);
+                body: JSON.stringify({ ...leadPayload, email: '',
+                    'cf-turnstile-response': document.querySelector('#heroExpressForm [name="cf-turnstile-response"]')?.value || '' })
             });
-        } catch (e) {}
+            const data = await response.json().catch(() => ({}));
+            if (!response.ok || data.success !== true || data.skipped) throw new Error(data.error || 'Your enquiry was not confirmed. Please retry, call or WhatsApp GPSPL.');
+            document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: 'heroExpressForm' } }));
+        } catch (error) {
+            if (successMsg) { successMsg.style.display = 'flex'; successMsg.textContent = error.message; }
+            return;
+        }
 
         // 2. Backup to Local Storage
         try {
@@ -385,12 +374,7 @@
 
         // 5. User-Controlled Action Routing:
         // Keep the user on the webpage with the confirmed receipt, while opening WhatsApp smoothly
-        try {
-            const win = window.open(waUrl, '_blank');
-            if (!win) {
-                // If popup blocked, user has immediate high-contrast WhatsApp button inside heroExpSuccess
-            }
-        } catch(e) {}
+        // The visible WhatsApp button opens only when the visitor chooses it.
     };
 
     // =========================================================================
