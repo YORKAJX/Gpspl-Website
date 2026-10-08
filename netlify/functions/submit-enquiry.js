@@ -144,20 +144,27 @@ async function sendFormSubmitEmails(lead) {
                 Details: lead.message, Source: lead.leadSource })
         });
         const receipt = await response.json().catch(()=>({}));
-        if (!response.ok || !(receipt.success === true || receipt.success === 'true')) throw Error('FormSubmit did not accept notification');
+        if (!response.ok || !(receipt.success === true || receipt.success === 'true')) throw Error('formsubmit_http_' + response.status + (response.ok ? '_unconfirmed' : '_rejected'));
         return 'formsubmit-accepted';
     }));
 }
 async function sendResendEmail({ to, from, subject, html, replyTo }) {
-    if (!process.env.RESEND_API_KEY) throw Error('Resend is not configured');
+    if (!process.env.RESEND_API_KEY) throw Error('resend_not_configured');
     const response = await fetch('https://api.resend.com/emails', {
         method: 'POST', signal: AbortSignal.timeout(10000),
         headers: { Authorization: 'Bearer ' + process.env.RESEND_API_KEY, 'Content-Type': 'application/json' },
         body: JSON.stringify({ from, to, subject, html, reply_to: replyTo })
     });
     const receipt = await response.json().catch(()=>({}));
-    if (!response.ok || !receipt.id) throw Error('Resend did not accept notification');
+    if (!response.ok || !receipt.id) throw Error('resend_http_' + response.status + (response.ok ? '_unconfirmed' : '_rejected'));
     return receipt.id;
+}
+
+function deliveryFailureCodes(error) {
+    if (error?.errors) return [...new Set(error.errors.flatMap(deliveryFailureCodes))];
+    if (/^(formsubmit_http_|resend_http_|resend_not_configured)/.test(error?.message || '')) return [error.message];
+    if (error?.name === 'TimeoutError' || error?.name === 'AbortError') return ['provider_timeout'];
+    return ['provider_connection_failed'];
 }
 
 export const handler = async (event = {}) => {
@@ -390,8 +397,9 @@ export const handler = async (event = {}) => {
         })
     ]);
     } catch (error) {
-        console.error("GPSPL team notification failed:", error.message);
-        return json(503, { success: false, error: "Delivery was not confirmed. Please retry, call or WhatsApp GPSPL." }, baseHeaders);
+        const deliveryFailures = deliveryFailureCodes(error);
+        console.error("GPSPL team notification failed:", JSON.stringify(deliveryFailures));
+        return json(503, { success: false, code: "EMAIL_DELIVERY_UNAVAILABLE", deliveryFailures, error: "Delivery was not confirmed. Please retry, call or WhatsApp GPSPL." }, baseHeaders);
     }
     recentLeadHashes.set(`${phone}_${email.toLowerCase()}`, Date.now());
 

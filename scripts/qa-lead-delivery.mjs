@@ -12,7 +12,11 @@ const event = (phone, ip) => ({ httpMethod: 'POST', headers: { 'content-type': '
 try {
   delete process.env.RESEND_API_KEY;
   globalThis.fetch = async () => { throw Error('Unexpected network call'); };
-  assert.equal((await handler(event('9123456701', 'qa-missing'))).statusCode, 503);
+  const missing = await handler(event('9123456701', 'qa-missing'));
+  assert.equal(missing.statusCode, 503);
+  assert.equal(JSON.parse(missing.body).code, 'EMAIL_DELIVERY_UNAVAILABLE');
+  assert.ok(JSON.parse(missing.body).deliveryFailures.includes('resend_not_configured'));
+  assert.ok(!missing.body.includes('mock-key'));
   globalThis.fetch = async () => ({ ok: true, json: async () => ({ success: 'true' }) });
   const fallback = await handler(event('9123456709', 'qa-fallback'));
   assert.equal(fallback.statusCode, 200);
@@ -80,7 +84,7 @@ for (const file of ['index.html']) {
 }
 // Exercise the custom quote acceptance boundary without running page UI or network.
 for (const file of ['JS/room-configurator.js']) {
-  const text = fs.readFileSync(file, 'utf8');
+  const text = fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n');
   const start = text.indexOf("    try {\n      const response = await fetch('/.netlify/functions/submit-enquiry'");
   const end = text.indexOf('\n    // 2. Backup', start);
   assert.ok(start >= 0 && end > start, `${file}: quote acceptance boundary exists`);
