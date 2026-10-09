@@ -291,20 +291,24 @@
     };
 
     const pageSeo = {
+        "experience-center-av-solutions.html": { title: "Experience Center & Studio AV Delhi NCR, India | GPSPL",
+            description: "Plan AV for experience centers, showrooms and studios: LED displays, audio, interactive content and control. Discuss equipment supply or turnkey integration.", type: "service" },
+        "av-project-discovery-consultation.html": { title: "AV Project Consultation & Turnkey BOQ Delhi NCR | GPSPL",
+            description: "Discuss equipment supply, room upgrades or complete turnkey AV projects in Delhi NCR and across India. Share your sector, city, quantities and project scope.", type: "service" },
         "lg-commercial-tv-nu88c.html": { title: "LG NU88C Commercial TV Delhi NCR & India | GPSPL",
             description: "LG NU88C commercial TV enquiries for Delhi NCR and Pan-India buyers. Request model-specific availability, pricing, delivery and installation scope.", type: "product" },
         "lg-commercial-tv-ua831c.html": { title: "LG UA831C Commercial TV Delhi NCR & India | GPSPL",
             description: "LG UA831C commercial TV enquiries for Delhi NCR and Pan-India buyers. Explore model details and request pricing, stock and installation scope.", type: "product" },
         "command-control-center-av-solutions.html": {
-            title: "Best Command & Control Room (NOC/SOC) AV Solutions in Delhi NCR & India | GPSPL",
-            description: "India's premier command & control room AV systems integrator. 24/7 mission-critical Active LED video walls, zero-latency KVM-over-IP matrix, ISO 11064 ergonomic consoles, and GeM tender MAF support.",
+            title: "Command & Control Room AV Delhi NCR, India | GPSPL",
+            description: "Discuss control room video walls, KVM switching, operator displays, power backup and integration for NOC and SOC projects in Delhi NCR and across India.",
             type: "service",
             serviceType: "Command and control center, NOC, SOC, and mission-critical AV systems integration",
             image: "/assests/images/hero/video-technologies-boardroom.webp"
         },
         "auditorium-av-solutions.html": {
-            title: "Auditorium AV Integration, Line Arrays & Acoustic Engineering India | GPSPL",
-            description: "Turnkey auditorium AV integration for 300 to 1,500+ seaters. EASE 3D acoustic RT60 tuning, Harman JBL line arrays, stage Active LED backdrops, Shure wireless audio, and CPWD/GeM compliance across India.",
+            title: "Auditorium Sound & AV Delhi NCR, Pan-India | GPSPL",
+            description: "Plan auditorium audio, microphones, stage displays, presentation and AV control. Discuss venue capacity, acoustics and installation in Delhi NCR or across India.",
             type: "service",
             serviceType: "Auditorium audio-visual integration, line array sound, and acoustic engineering",
             image: "/assests/images/products/professional-audio-solutions.webp"
@@ -317,8 +321,8 @@
             image: "/assests/images/milestones/harman-best-regional-distributor-2024.jpeg"
         },
         "coworking-space-av-solutions.html": {
-            title: "Coworking Space AV Solutions | Flexible Meeting Room & BYOD Audio Visual | GPSPL",
-            description: "Turnkey AV solutions for coworking spaces and flex offices: plug-and-play BYOD meeting rooms, video bars, digital signage totems, and sound masking systems across India.",
+            title: "Coworking & Shared Office AV Delhi NCR, India | GPSPL",
+            description: "Plan meeting rooms, collaboration displays, conferencing and room booking for coworking spaces in Delhi NCR and India. Discuss supply or complete installation.",
             type: "service",
             serviceType: "Coworking and flexible workspace audio-visual solutions",
             image: "/assests/images/products/conference-room-solutions.webp"
@@ -391,15 +395,15 @@
             image: "/assests/images/products/conference-room-solutions.webp"
         },
         "unified-communication-collaboration.html": {
-            title: "Video Conferencing & UC Collaboration Systems | GPSPL",
-            description: "GPSPL is a leading video conferencing solution provider and unified communication collaboration integrator for enterprise hybrid workspaces.",
+            title: "Video Conferencing & Collaboration Delhi NCR | GPSPL",
+            description: "Plan video conferencing, meeting room cameras, microphones, displays and collaboration systems. Discuss Teams, Zoom and BYOD requirements in Delhi NCR and India.",
             type: "service",
             serviceType: "Unified communication and collaboration systems",
             image: "/assests/images/products/conference-room-solutions.webp"
         },
         "video-wall-solutions.html": {
-            title: "Control Room Solutions & Video Wall Supplier India | GPSPL",
-            description: "GPSPL designs and supplies control room solutions and multi-display LCD/LED video walls for command centers, lobbies, and mission-critical monitoring.",
+            title: "Video Wall Solutions Delhi NCR & Pan-India | GPSPL",
+            description: "Plan video walls for control rooms, retail, corporate and public spaces. Discuss display technology, controllers, mounting, installation and maintenance.",
             type: "service",
             serviceType: "Video wall solutions and display systems",
             image: "/assests/images/hero/video-wall-command-center.webp"
@@ -412,8 +416,8 @@
             image: "/assests/images/products/active-led-video-wall.webp"
         },
         "active-led-wall-installation.html": {
-            title: "LED Video Wall Installer India | Calibration & AMC | GPSPL",
-            description: "GPSPL is a leading LED video wall installer in India, offering structure coordination, pixel pitch planning, display calibration, and long-term AMC support.",
+            title: "Active LED Wall Installation Delhi NCR & India | GPSPL",
+            description: "Discuss LED wall site surveys, mounting, power, processing, commissioning and support for indoor and outdoor projects in Delhi NCR and across India.",
             type: "service",
             serviceType: "Active LED wall installation and commissioning",
             image: "/assests/images/products/active-led-video-wall.webp"
@@ -426,15 +430,15 @@
             image: "/assests/images/products/active-led-video-wall.webp"
         },
         "digital-signage-solutions.html": {
-            title: "Digital Signage Solutions & Commercial Display Systems | GPSPL",
-            description: "GPSPL supplies, installs, and supports digital signage solutions including menu boards, hotel TVs, lobby screens, and media player scheduling systems.",
+            title: "Digital Signage Solutions Delhi NCR & India | GPSPL",
+            description: "Plan commercial digital signage for shops, hotels, offices and campuses. Request displays, players, content management and installation for single or multiple sites.",
             type: "service",
             serviceType: "Digital signage and commercial display solutions",
             image: "/assests/images/products/digital-signage-solutions.webp"
         },
         "interactive-display-solutions.html": {
-            title: "Smart Board Price India | 4K Interactive Flat Panel for Schools & Smart Class | GPSPL",
-            description: "Get direct OEM pricing on smart boards & interactive flat panels in India. Authorized distributor for LG CreateBoard, Samsung Flip, BenQ & Maxhub with Pan-India installation, teacher training, and instant BOQ.",
+            title: "Interactive Displays & Smart Boards Delhi NCR | GPSPL",
+            description: "Explore interactive displays and smart boards for teaching, meeting rooms and training. Discuss sizes, software, supply and installation in Delhi NCR and India.",
             type: "service",
             serviceType: "Smart board and interactive flat panel display solutions",
             image: "/assests/images/products/interactive-display-solutions.webp"
@@ -475,45 +479,45 @@
             image: "/assests/images/hero/video-technologies-boardroom.webp"
         },
         "control-automation.html": {
-            title: "Meeting Room Automation & AV Control Systems India | GPSPL",
-            description: "Meeting room automation and AV control systems for touch panels, Crestron, AMX, lighting, and source switching integrations by GPSPL.",
+            title: "AV Control & Room Automation Delhi NCR, India | GPSPL",
+            description: "Plan AV control for meeting rooms, auditoriums and hospitality spaces. Discuss touch panels, switching, user workflows and integration in Delhi NCR and India.",
             type: "service",
             serviceType: "Control systems and AV automation",
             image: "/assests/images/hero/av.webp"
         },
         "kvm-av-switching-solutions.html": {
-            title: "KVM & AV Switching Solutions | ATEN Systems | GPSPL",
-            description: "KVM switching, AV routing, source selection, signal extension and ATEN AV switching solutions for command rooms, meeting rooms and enterprise environments.",
+            title: "KVM & AV Switching Solutions Delhi NCR, India | GPSPL",
+            description: "Discuss KVM, AV switching, signal distribution and operator connectivity for offices and control rooms. Request supply or integration in Delhi NCR and India.",
             type: "service",
             serviceType: "KVM and AV switching solutions"
         },
         "it-infrastructure-solutions.html": {
-            title: "IT Infrastructure Solutions & Integrator Delhi | GPSPL",
-            description: "GPSPL is an enterprise IT infrastructure system integrator in Delhi NCR for servers, storage, networking, racks, online UPS, and lifecycle IT support.",
+            title: "IT Infrastructure Solutions Delhi NCR & India | GPSPL",
+            description: "Discuss networking, computing and IT infrastructure for offices, institutions and multi-site projects. Request equipment supply, upgrades or project integration.",
             type: "service",
             serviceType: "IT infrastructure and networking solutions"
         },
         "ups-power-backup-solutions.html": {
-            title: "UPS & Power Backup Solutions | Luminous | GPSPL",
-            description: "UPS, batteries, inverter backup, online UPS, offline UPS and power protection solutions for AV rooms, IT rooms and enterprise spaces by GPSPL.",
+            title: "UPS & Power Backup Supply Delhi NCR, India | GPSPL",
+            description: "Discuss UPS capacity, runtime and power backup for AV, IT and control rooms. Share your load, site and quantity for supply or installation in Delhi NCR and India.",
             type: "service",
             serviceType: "UPS and power backup solutions"
         },
         "peripheral-solutions.html": {
-            title: "Wacom, Creative Displays & IT Peripheral Solutions | GPSPL",
-            description: "Wacom Cintiq, DTH, DTC, creative pen displays, workstation accessories, IT peripherals, RAM, SSD, printers and business computing support by GPSPL.",
+            title: "Creative & Business Peripherals Delhi NCR | GPSPL",
+            description: "Discuss creative displays, input devices and business peripherals for studios, education and offices. Request model-specific supply pricing in Delhi NCR and India.",
             type: "service",
             serviceType: "Creative display and peripheral solutions"
         },
         "projector-accessories.html": {
-            title: "Projectors, Screens, Mounts & Accessories | GPSPL",
-            description: "Business projectors, Epson projectors, presentation systems, screens, mounts, HDMI accessories, cables and installation support from GPSPL.",
+            title: "Projectors & AV Accessories Delhi NCR, India | GPSPL",
+            description: "Discuss projectors, lenses, screens, mounting and AV accessories for offices, education and venues. Share room size and quantities for supply or installation.",
             type: "service",
             serviceType: "Projectors and presentation accessories"
         },
         "amc-maintenance-services.html": {
-            title: "AV AMC & Maintenance Services India | GPSPL",
-            description: "AV AMC and maintenance support for meeting rooms, displays, LED walls, audio systems, UPS, IT infrastructure, warranty coordination and troubleshooting.",
+            title: "AV AMC & Maintenance Delhi NCR, India | GPSPL",
+            description: "Discuss AV maintenance, troubleshooting, upgrades and support for installed systems. Share equipment details and site location to confirm coverage and AMC scope.",
             type: "service",
             serviceType: "AMC maintenance and lifecycle support"
         },
@@ -533,8 +537,8 @@
             type: "product"
         },
         "industries.html": {
-            title: "Turnkey AV Solutions by Industry | Corporate, Education, Hospital & Hotel AV | GPSPL",
-            description: "Turnkey audio visual solutions and authorized technology distribution for Corporate Boardrooms, Education & Smart Classrooms, Hospitals & Healthcare, Hotels & Hospitality, Auditoriums & Command Centers across India.",
+            title: "AV Solutions by Industry Delhi NCR & India | GPSPL",
+            description: "Explore AV supply, upgrades and turnkey projects for offices, education, hotels, healthcare, retail, government, BFSI, property, media, automotive and gyms.",
             type: "webpage"
         },
         "av-system-integrator-gurgaon.html": {
