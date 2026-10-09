@@ -4140,23 +4140,23 @@ input[name="b_field_honey"] {
 }
 
 /* Buyer scope section: readable service paths on every page theme. */
-#project-supply-and-turnkey {
+:is(#project-supply-and-turnkey, #category-buying-guide) {
   padding: clamp(40px, 6vw, 72px) 0;
   background: #f4f6f8 !important;
   color: #142236 !important;
 }
-#project-supply-and-turnkey .product-range-panel {
+:is(#project-supply-and-turnkey, #category-buying-guide) .product-range-panel {
   display: block !important;
   max-width: 1060px;
   background: none !important;
 }
-#project-supply-and-turnkey .product-range-panel :is(h2, h3, p, a) {
+:is(#project-supply-and-turnkey, #category-buying-guide) .product-range-panel :is(h2, h3, p, a) {
   color: #142236 !important;
   -webkit-text-fill-color: #142236 !important;
 }
-#project-supply-and-turnkey .product-range-panel h2 { max-width: 800px; }
-#project-supply-and-turnkey .product-range-panel h3 { margin: 24px 0 8px; font-size: 1.18rem; }
-#project-supply-and-turnkey .product-range-panel p { line-height: 1.8; margin: 0 0 16px; }
-#project-supply-and-turnkey .product-range-panel a { text-decoration: underline; text-underline-offset: 3px; }
-#project-supply-and-turnkey .product-range-panel a:hover { text-decoration-thickness: 2px; }
-#project-supply-and-turnkey .product-range-panel .section-eyebrow { font-size: .8rem; font-weight: 700; letter-spacing: .06em; }
+:is(#project-supply-and-turnkey, #category-buying-guide) .product-range-panel h2 { max-width: 800px; }
+:is(#project-supply-and-turnkey, #category-buying-guide) .product-range-panel h3 { margin: 24px 0 8px; font-size: 1.18rem; }
+:is(#project-supply-and-turnkey, #category-buying-guide) .product-range-panel p { line-height: 1.8; margin: 0 0 16px; }
+:is(#project-supply-and-turnkey, #category-buying-guide) .product-range-panel a { text-decoration: underline; text-underline-offset: 3px; }
+:is(#project-supply-and-turnkey, #category-buying-guide) .product-range-panel a:hover { text-decoration-thickness: 2px; }
+:is(#project-supply-and-turnkey, #category-buying-guide) .product-range-panel .section-eyebrow { font-size: .8rem; font-weight: 700; letter-spacing: .06em; }

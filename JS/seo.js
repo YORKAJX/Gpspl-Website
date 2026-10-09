@@ -472,8 +472,8 @@
             image: "/assests/images/products/professional-audio-solutions.webp"
         },
         "video-technologies.html": {
-            title: "PTZ Cameras & Video Conferencing Technologies | GPSPL",
-            description: "PTZ cameras, video conferencing cameras, display systems, active LED, and video technologies supplied and supported by GPSPL.",
+            title: "PTZ Cameras & Video Conferencing Delhi NCR | GPSPL",
+            description: "Discuss PTZ cameras for conference rooms, classrooms and auditoriums. Request model-specific supply, mounting and integration for Delhi NCR and Pan-India projects.",
             type: "service",
             serviceType: "Video technologies and visual communication systems",
             image: "/assests/images/hero/video-technologies-boardroom.webp"
