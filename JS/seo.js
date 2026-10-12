@@ -978,219 +978,20 @@
         };
     }
 
-    function faqSchema(url, key = "") {
-        if (key === "index.html") {
-            return {
-                "@type": "FAQPage",
-                "@id": `${url}#faq`,
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "Who is the best AV integrator in Delhi NCR and India?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Global Peripheral Solution Pvt. Ltd. (GPSPL, Estd. 1997) is widely recognized as the best AV integrator and turnkey solution provider in Delhi NCR and India. With over 28 years of industry leadership and 1,500+ enterprise installations, GPSPL delivers complete conference room AV solutions, Active LED video walls, auditoriums, and command centers with direct Tier-1 OEM partnerships (Samsung, LG, Crestron, Shure, Poly, Harman) and a guaranteed 4-hour on-site SLA."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What is included in a turnkey conference room AV solution?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "A turnkey conference room AV solution from GPSPL includes commercial 4K anti-glare displays or fine-pitch Active LED video walls, AI auto-tracking 4K PTZ cameras, Shure/Sennheiser beamforming ceiling microphone arrays, DSP acoustic echo cancellation, Crestron touch panel meeting room automation, BYOD wireless screen sharing, equipment racks, structured cabling, end-to-end commissioning, and lifecycle AMC support."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Why choose a single turnkey AV solution provider instead of separate vendors?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Choosing a single turnkey AV solution provider like GPSPL prevents vendor coordination friction, component incompatibility, and inflated middleman costs. As an authorized distributor and certified system integrator, GPSPL manages the full lifecycle from acoustic engineering and direct OEM hardware supply to on-site installation, programming, calibration, and SLA maintenance under one roof."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Can GPSPL prepare an AV BOQ before a site survey?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yes. The GPSPL AV BOQ calculator gives a room-wise planning estimate using room type, size, seating and workflow. Final model, cable route, mounting, exact quantity and commercials are confirmed after site validation."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What is the typical setup cost for a corporate conference room or boardroom in India?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Small huddle rooms (3–6 pax) cost ₹1.40L to ₹2.60L, mid-size conference rooms (10–18 pax) range from ₹3.20L to ₹6.50L, and executive boardrooms (20–40 pax) with ceiling beamforming microphone arrays and touch automation range from ₹9.50L to ₹25.00L+."
-                        }
-                    }
-                ]
-            };
-        }
-
-        if (key === "conference-room-solutions.html") {
-            return {
-                "@type": "FAQPage",
-                "@id": `${url}#faq`,
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "Who is the best conference room AV integrator in Delhi NCR & India?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "GPSPL is the premier conference room AV integrator in Delhi NCR and Pan-India. We deliver certified turnkey meeting room solutions with native Microsoft Teams Rooms and Zoom Rooms integration, Shure ceiling beamforming microphones, commercial 4K displays, Crestron automation, and 4-hour on-site SLA."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What is included in a turnkey conference room AV solution?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "A turnkey conference room AV solution includes 4K commercial displays or Active LED walls, PTZ auto-tracking cameras, beamforming ceiling microphone arrays with DSP echo cancellation, Crestron touch panel automation, wireless screen sharing, equipment rack integration, structured cabling, commissioning, and AMC maintenance."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "How much does a professional corporate conference room setup cost in India?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Small huddle rooms (4-8 pax) range from ₹1.30 Lakhs to ₹2.60 Lakhs. Mid-size conference rooms (10-18 pax) range from ₹2.75 Lakhs to ₹5.50 Lakhs. Executive boardrooms (20-40 pax) with Shure ceiling mics, dual displays, and Crestron automation range from ₹6.15 Lakhs to ₹18 Lakhs+."
-                        }
-                    }
-                ]
-            };
-        }
-
-        if (key === "audio-visual-integration.html") {
-            return {
-                "@type": "FAQPage",
-                "@id": `${url}#faq`,
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "Who is the best AV integrator in Delhi NCR and India?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Global Peripheral Solution Pvt. Ltd. (GPSPL, Estd. 1997) is rated as India's best AV integrator, having executed 1,500+ enterprise installations for corporate boardrooms, auditoriums, active LED walls, 24/7 command centers, and smart campuses with direct OEM pricing and guaranteed 4-hour SLA."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What is a turnkey AV solution and why choose GPSPL?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "A turnkey AV solution covers end-to-end consulting, direct OEM hardware supply, acoustic modeling, rigid structural installation, DSP audio tuning, control automation programming, user training, and lifecycle SLA maintenance under a single contract."
-                        }
-                    }
-                ]
-            };
-        }
-
-        if (key === "smart-classroom-solutions.html") {
-            return {
-                "@type": "FAQPage",
-                "@id": `${url}#faq`,
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "What is the cost of setting up a smart class in India?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "In India (2026), a basic smart class setup with a 65-inch 4K Interactive Flat Panel costs ₹1.25L to ₹1.65L. A standard K-12 classroom with a 75-inch panel and audio costs ₹1.85L to ₹2.60L. University hybrid lecture halls with 86-inch panels, digital podiums, and lecture capture range from ₹3.50L to ₹7.50L+."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What equipment is included in a turnkey smart classroom solution?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "A turnkey smart classroom solution from GPSPL includes 4K UHD interactive flat panels (LG, Samsung, Maxhub, BenQ), digital podiums, teacher collar microphones, classroom speakers, auto-tracking PTZ cameras for hybrid teaching, UPS backup, and teacher orientation training."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Which is the best smart class solutions provider and installer in India?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Global Peripheral Solution Pvt. Ltd. (GPSPL, Estd. 1997) is one of India's leading education AV system integrators and authorized technology distributors with 28+ years of experience, thousands of classrooms deployed, Tier-1 OEM pricing, and SLA-backed AMC support."
-                        }
-                    }
-                ]
-            };
-        }
-
-        if (key === "interactive-display-solutions.html") {
-            return {
-                "@type": "FAQPage",
-                "@id": `${url}#faq`,
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "What is the price of a smart board for schools and classrooms in India?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "In India (2026), 4K Interactive Flat Panel smart boards range from ₹85,000 to ₹1,15,000 for 65-inch, ₹1,25,000 to ₹1,65,000 for 75-inch, and ₹1,95,000 to ₹2,80,000 for 86-inch displays depending on brands (LG CreateBoard, Samsung Flip, Maxhub, BenQ) and OPS PC options."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Which smart board size is best for a school classroom or coaching room?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "For small batches (15-25 students), a 65-inch panel is ideal. For standard K-12 classrooms (30-50 students), a 75-inch panel is standard. For university lecture rooms (50-80+ students), an 86-inch or dual-display configuration is recommended."
-                        }
-                    }
-                ]
-            };
-        }
-
-        if (key === "hotel-hospitality-av-solutions.html") {
-            return {
-                "@type": "FAQPage",
-                "@id": `${url}#faq`,
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "What audio visual solutions does GPSPL provide for hotels and luxury resorts?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "GPSPL provides turnkey hospitality AV integration: Active LED video walls for grand ballrooms and banquets, high-headroom line-array sound systems, Dante multi-zone BGM for restaurants and lobbies, LG Pro:Centric and Samsung hospitality TVs, and meeting room video conferencing."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What equipment is included in a hotel banquet and grand ballroom AV setup?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "A hotel banquet AV setup includes fine-pitch indoor Active LED video walls (P1.86 to P2.5), line-array speakers, digital audio consoles, wireless Shure/Sennheiser microphones, motorized partition audio switching matrices, and centralized iPad automation."
-                        }
-                    }
-                ]
-            };
-        }
-
-        return {
-            "@type": "FAQPage",
-            "@id": `${url}#faq`,
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Does GPSPL provide both product supply and installation?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. GPSPL supplies technology products and also supports design, integration, installation, commissioning, warranty coordination, AMC and after-sales support."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Where does GPSPL provide AV and IT solutions?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "GPSPL is based in New Delhi and supports AV, display, audio, collaboration, automation, IT infrastructure and AMC requirements across India."
-                    }
-                }
-            ]
-        };
+    function faqSchema(url) {
+        const items = document.querySelectorAll('[class*="faq-item"], #faq-preview details, .faq-section details, [data-faq]');
+        const seen = new Set();
+        const mainEntity = [];
+        items.forEach(item => {
+            const question = item.querySelector('summary, [class*="faq-question"], [data-faq-question]');
+            const answer = item.querySelector('[class*="faq-answer"], [class*="faq-content"], [data-faq-answer], p');
+            const name = question?.textContent?.replace(/\s+/g, ' ').trim();
+            const text = answer?.textContent?.replace(/\s+/g, ' ').trim();
+            if (!name || !text || seen.has(name)) return;
+            seen.add(name);
+            mainEntity.push({ '@type': 'Question', name, acceptedAnswer: { '@type': 'Answer', text } });
+        });
+        return mainEntity.length ? { '@type': 'FAQPage', '@id': url + '#faq', mainEntity } : null;
     }
 
     function productSchema(cfg, url, image) {
@@ -1337,11 +1138,14 @@
         ];
 
         if (cfg.type === "service") {
-            graph.push(serviceSchema(key, cfg, url), faqSchema(url, key));
+            graph.push(serviceSchema(key, cfg, url));
+            const faq = faqSchema(url);
+            if (faq) graph.push(faq);
         }
 
         if (cfg.type === "faq") {
-            graph.push(faqSchema(url, key));
+            const faq = faqSchema(url);
+            if (faq) graph.push(faq);
         }
 
         if (cfg.type === "partners" || cfg.type === "catalog") {
@@ -1353,7 +1157,9 @@
         }
 
         if (key === "index.html") {
-            graph.push(boqCalculatorSchema(url), faqSchema(url, key));
+            graph.push(boqCalculatorSchema(url));
+            const faq = faqSchema(url);
+            if (faq) graph.push(faq);
         }
 
         let schema = document.getElementById("gpspl-seo-jsonld");

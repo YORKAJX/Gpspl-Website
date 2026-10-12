@@ -38,88 +38,95 @@
 
     <!-- Schema.org Comprehensive Structured Data Graph -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Service",
-                "@id": "https://gpspl.co.in/amc-maintenance-services#service",
-                "name": "Multi-Brand Enterprise AV AMC & Maintenance Support",
-                "serviceType": "Audio Visual Maintenance, SLA Support & Preventative Engineering",
-                "url": "https://gpspl.co.in/amc-maintenance-services",
-                "description": "Comprehensive and non-comprehensive Annual Maintenance Contracts (AMC) for corporate boardrooms, Active LED display walls, 24/7 NOC command centers, auditoriums, and educational institutions across Delhi NCR and India.",
-                "provider": {
-                    "@type": "Organization",
-                    "name": "Global Peripheral Solution Pvt. Ltd.",
-                    "alternateName": "GPSPL",
-                    "url": "https://gpspl.co.in/",
-                    "telephone": "+918920830377",
-                    "logo": "https://gpspl.co.in/assests/images/gpspl.png"
-                },
-                "areaServed": [
-                    { "@type": "Country", "name": "India" },
-                    { "@type": "AdministrativeArea", "name": "Delhi NCR" }
-                ],
-                "hasOfferCatalog": {
-                    "@type": "OfferCatalog",
-                    "name": "AV Maintenance SLA Scope",
-                    "itemListElement": [
-                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Scheduled Quarterly Preventive Maintenance Audits" } },
-                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Guaranteed 4-Hour On-Site Emergency Breakdown SLA (Delhi NCR)" } },
-                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Multi-Brand OEM Warranty & RMA Part Coordination" } },
-                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "24/7 Mission-Critical Resident Engineer Deputation" } }
-                    ]
-                }
-            },
-            {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gpspl.co.in/" },
-                    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://gpspl.co.in/#services" },
-                    { "@type": "ListItem", "position": 3, "name": "Multi-Brand AV AMC Support", "item": "https://gpspl.co.in/amc-maintenance-services" }
-                ]
-            },
-            {
-                "@type": "FAQPage",
-                "@id": "https://gpspl.co.in/amc-maintenance-services#faq",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "What is covered under a GPSPL Multi-Brand AV AMC contract?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "A standard GPSPL AMC contract covers scheduled quarterly preventive health checks, display color/brightness recalibration, DSP audio acoustic tuning, microphone feedback suppression, firmware security updates, cable continuity tests, direct OEM factory warranty coordination, and guaranteed 4-hour on-site breakdown resolution in Delhi NCR."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Can GPSPL take over AMC maintenance for AV systems installed by other integrators?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yes. A significant portion of our enterprise AMC portfolio consists of existing corporate systems originally installed by other vendors. GPSPL begins with an exhaustive on-site audit of all cabling, controller programming, DSP audio parameters, and display panels, providing a comprehensive audit report and custom SLA coverage proposal."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What is the emergency response SLA for clients in Delhi NCR?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Under our Gold and Platinum SLA plans, GPSPL guarantees a 4-hour on-site engineer response window across Delhi NCR (including Gurugram CyberCity, Noida Film City, Central Delhi, and Okhla). We also stock hot-standby switchers, microphones, and display controllers at our Nehru Place dispatch hub to ensure zero meeting downtime."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What is the difference between Comprehensive and Non-Comprehensive AV AMC?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "A Non-Comprehensive AMC covers all engineer labor, scheduled preventive visits, emergency breakdown dispatches, firmware updates, and OEM warranty logistics, with replacement spare parts billed at actuals. A Comprehensive AMC includes all labor plus the cost of replacement electronic components and spare modules under agreed terms."
-                        }
-                    }
-                ]
+      "@type": "Service",
+      "@id": "https://gpspl.co.in/amc-maintenance-services#service",
+      "name": "Multi-Brand Enterprise AV AMC & Maintenance Support",
+      "serviceType": "Audio Visual Maintenance, SLA Support & Preventative Engineering",
+      "url": "https://gpspl.co.in/amc-maintenance-services",
+      "description": "Comprehensive and non-comprehensive Annual Maintenance Contracts (AMC) for corporate boardrooms, Active LED display walls, 24/7 NOC command centers, auditoriums, and educational institutions across Delhi NCR and India.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Global Peripheral Solution Pvt. Ltd.",
+        "alternateName": "GPSPL",
+        "url": "https://gpspl.co.in/",
+        "telephone": "+918920830377",
+        "logo": "https://gpspl.co.in/assests/images/gpspl.png"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Delhi NCR"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AV Maintenance SLA Scope",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Scheduled Quarterly Preventive Maintenance Audits"
             }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Guaranteed 4-Hour On-Site Emergency Breakdown SLA (Delhi NCR)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Multi-Brand OEM Warranty & RMA Part Coordination"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "24/7 Mission-Critical Resident Engineer Deputation"
+            }
+          }
         ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://gpspl.co.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://gpspl.co.in/#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Multi-Brand AV AMC Support",
+          "item": "https://gpspl.co.in/amc-maintenance-services"
+        }
+      ]
     }
-    </script>
+  ]
+}
+</script>
     <link rel="stylesheet" href="/css/ai-chat.css?v=20260902-mobile-fix">
 </head>
 <body class="amc-page">

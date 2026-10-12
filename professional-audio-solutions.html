@@ -33,61 +33,64 @@
     <script src="JS/seo.js" defer></script>
     <script src="JS/analytics.js" defer></script>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Service",
-                "@id": "https://gpspl.co.in/professional-audio-solutions#service",
-                "name": "Professional Audio System Integration",
-                "serviceType": "Auditorium, seminar hall, conference room, classroom and PA audio system integration",
-                "url": "https://gpspl.co.in/professional-audio-solutions",
-                "description": "Professional audio design, supply, installation, DSP programming, amplifier sizing, microphone planning, speaker coverage, tuning, testing, commissioning and AMC support.",
-                "provider": {
-                    "@type": "Organization",
-                    "name": "Global Peripheral Solution Pvt. Ltd.",
-                    "alternateName": "GPSPL",
-                    "url": "https://gpspl.co.in/",
-                    "logo": "https://gpspl.co.in/assests/images/gpspl.png"
-                },
-                "areaServed": [
-                    { "@type": "Country", "name": "India" },
-                    { "@type": "AdministrativeArea", "name": "Delhi NCR" }
-                ],
-                "hasOfferCatalog": {
-                    "@type": "OfferCatalog",
-                    "name": "Professional Audio Integration Scope",
-                    "itemListElement": [
-                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Auditorium sound system design and installation" } },
-                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conference room audio and DSP integration" } },
-                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Microphone, speaker and amplifier system commissioning" } }
-                    ]
-                }
-            },
-            {
-                "@type": "FAQPage",
-                "@id": "https://gpspl.co.in/professional-audio-solutions#faq",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "How is speaker quantity calculated for an auditorium or seminar hall?",
-                        "acceptedAnswer": { "@type": "Answer", "text": "Speaker quantity depends on coverage angle, listener distance, ceiling height, audience area, required speech level, speaker sensitivity, amplifier headroom, acoustic overlap and room reflections. GPSPL avoids fixed seat-count rules and validates coverage after site review." }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Do all meeting rooms need DSP audio?",
-                        "acceptedAnswer": { "@type": "Answer", "text": "No. Small rooms may work with an integrated audio device. DSP is recommended when the room needs echo cancellation, multiple microphones, speaker routing, gain control, conferencing audio, audio tuning or future scalability." }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Which microphone type is best for conference rooms?",
-                        "acceptedAnswer": { "@type": "Answer", "text": "The best microphone type depends on table layout, ceiling height, room acoustics, user movement and audience participation. GPSPL may recommend ceiling microphones, table microphones, boundary microphones, wireless microphones or beamforming pickup based on the room." }
-                    }
-                ]
+      "@type": "Service",
+      "@id": "https://gpspl.co.in/professional-audio-solutions#service",
+      "name": "Professional Audio System Integration",
+      "serviceType": "Auditorium, seminar hall, conference room, classroom and PA audio system integration",
+      "url": "https://gpspl.co.in/professional-audio-solutions",
+      "description": "Professional audio design, supply, installation, DSP programming, amplifier sizing, microphone planning, speaker coverage, tuning, testing, commissioning and AMC support.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Global Peripheral Solution Pvt. Ltd.",
+        "alternateName": "GPSPL",
+        "url": "https://gpspl.co.in/",
+        "logo": "https://gpspl.co.in/assests/images/gpspl.png"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Delhi NCR"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Professional Audio Integration Scope",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Auditorium sound system design and installation"
             }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Conference room audio and DSP integration"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Microphone, speaker and amplifier system commissioning"
+            }
+          }
         ]
+      }
     }
-    </script>
+  ]
+}
+</script>
 
     <script type="application/ld+json">
     {

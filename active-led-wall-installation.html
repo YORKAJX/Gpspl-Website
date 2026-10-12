@@ -39,101 +39,71 @@
 
     <!-- Structured Data Schemas -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Service",
+      "@id": "https://gpspl.co.in/active-led-wall-installation#service",
+      "name": "Turnkey Active LED Video Wall Installation, System Integration & AMC",
+      "serviceType": "Commercial Audio Visual System Integration, Active LED Video Wall Installation",
+      "provider": {
+        "@type": "Organization",
+        "name": "Global Peripheral Solution Pvt. Ltd.",
+        "url": "https://gpspl.co.in/",
+        "telephone": "+91-8920830377",
+        "email": "global@gpspl.co.in",
+        "logo": "https://gpspl.co.in/assests/images/gpspl.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Padma Palace, Nehru Place",
+          "addressLocality": "New Delhi",
+          "addressRegion": "Delhi NCR",
+          "postalCode": "110019",
+          "addressCountry": "IN"
+        }
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "description": "Turnkey commercial active LED wall engineering, micro-pitch COB/SMD mounting, Sony, Newline, Samsung, LG & Absen wholesale supply, NovaStar 4K/8K optical calibration, and 4-hour on-site SLA AMC."
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://gpspl.co.in/active-led-wall-installation#process",
+      "name": "The GPSPL 5-Stage Active LED Installation Lifecycle",
+      "step": [
         {
-          "@type": "Service",
-          "@id": "https://gpspl.co.in/active-led-wall-installation#service",
-          "name": "Turnkey Active LED Video Wall Installation, System Integration & AMC",
-          "serviceType": "Commercial Audio Visual System Integration, Active LED Video Wall Installation",
-          "provider": {
-            "@type": "Organization",
-            "name": "Global Peripheral Solution Pvt. Ltd.",
-            "url": "https://gpspl.co.in/",
-            "telephone": "+91-8920830377",
-            "email": "global@gpspl.co.in",
-            "logo": "https://gpspl.co.in/assests/images/gpspl.png",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Padma Palace, Nehru Place",
-              "addressLocality": "New Delhi",
-              "addressRegion": "Delhi NCR",
-              "postalCode": "110019",
-              "addressCountry": "IN"
-            }
-          },
-          "areaServed": {
-            "@type": "Country",
-            "name": "India"
-          },
-          "description": "Turnkey commercial active LED wall engineering, micro-pitch COB/SMD mounting, Sony, Newline, Samsung, LG & Absen wholesale supply, NovaStar 4K/8K optical calibration, and 4-hour on-site SLA AMC."
+          "@type": "HowToStep",
+          "name": "Civil & CAD Structure Survey",
+          "text": "Wall load calculations, civil surface flatness inspection, thermal ventilation pathways, optical sightline modeling, and dedicated 3-phase power distribution planning."
         },
         {
-          "@type": "HowTo",
-          "@id": "https://gpspl.co.in/active-led-wall-installation#process",
-          "name": "The GPSPL 5-Stage Active LED Installation Lifecycle",
-          "step": [
-            {
-              "@type": "HowToStep",
-              "name": "Civil & CAD Structure Survey",
-              "text": "Wall load calculations, civil surface flatness inspection, thermal ventilation pathways, optical sightline modeling, and dedicated 3-phase power distribution planning."
-            },
-            {
-              "@type": "HowToStep",
-              "name": "Precision Cabinet Mounting",
-              "text": "CNC aluminum structural fabrication and laser-leveled die-cast cabinet mounting with less than 0.1mm alignment tolerance."
-            },
-            {
-              "@type": "HowToStep",
-              "name": "Dual-Loop Redundant Cabling",
-              "text": "Installation of hot-swappable dual redundant power supplies (PSUs), LSZH internal power harnesses, and dual CAT6/fiber ring signal loops."
-            },
-            {
-              "@type": "HowToStep",
-              "name": "NovaStar 4K Optical Calibration",
-              "text": "Screen pixel-to-pixel coordinate mapping, 16-bit color temperature balancing, optical luminance uniforming, and 3,840Hz genlock synchronization."
-            },
-            {
-              "@type": "HowToStep",
-              "name": "Handover & 4-Hour SLA AMC",
-              "text": "Complete OEM serial warranty registration, buffer spare module indexing, operator hands-on training, and guaranteed 4-hour on-site SLA activation."
-            }
-          ]
+          "@type": "HowToStep",
+          "name": "Precision Cabinet Mounting",
+          "text": "CNC aluminum structural fabrication and laser-leveled die-cast cabinet mounting with less than 0.1mm alignment tolerance."
         },
         {
-          "@type": "FAQPage",
-          "@id": "https://gpspl.co.in/active-led-wall-installation#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is the typical cost per sq ft for commercial Active LED video walls in India?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Commercial Active LED wall pricing in India ranges from ₹3,500 to ₹18,000+ per sq ft depending on pixel pitch (P0.9 MicroLED to P4.0 Outdoor), packaging technology (COB vs SMD), refresh rate (3,840Hz broadcast vs 1,920Hz), and processor grade (NovaStar COEX/VX series). GPSPL provides Tier-1 factory-direct pricing with zero middleman markups."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is the difference between Chip-on-Board (COB) and Surface Mount Device (SMD) LED displays?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "COB (Chip-on-Board) binds LED flip-chips directly onto the PCB substrate and encapsulates them in a protective epoxy resin, offering IP54/IP65 surface protection, dust/water resistance, wider 170° viewing angles, and zero physical module damage. SMD mounts individual packaged diodes onto the board, making it cost-effective for larger auditoriums (P1.8 to P4.0)."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can GPSPL provide Manufacturer Authorization Format (MAF) letters for GeM and government tenders?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. As an authorized Tier-1 enterprise partner for Sony, Newline, Samsung, LG, Absen, and NovaStar, GPSPL issues official OEM Manufacturer Authorization Formats (MAF), BIS safety testing certificates, and CPWD technical compliance undertakings."
-              }
-            }
-          ]
+          "@type": "HowToStep",
+          "name": "Dual-Loop Redundant Cabling",
+          "text": "Installation of hot-swappable dual redundant power supplies (PSUs), LSZH internal power harnesses, and dual CAT6/fiber ring signal loops."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "NovaStar 4K Optical Calibration",
+          "text": "Screen pixel-to-pixel coordinate mapping, 16-bit color temperature balancing, optical luminance uniforming, and 3,840Hz genlock synchronization."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Handover & 4-Hour SLA AMC",
+          "text": "Complete OEM serial warranty registration, buffer spare module indexing, operator hands-on training, and guaranteed 4-hour on-site SLA activation."
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body class="led-active-page">
 

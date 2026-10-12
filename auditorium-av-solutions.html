@@ -24,99 +24,121 @@
     <script src="/JS/analytics.js" defer></script>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Service",
-                "@id": "https://gpspl.co.in/auditorium-av-solutions#service",
-                "name": "Auditorium AV & Acoustic Sound Solutions",
-                "serviceType": "Line Array Pro Audio, RT60 Acoustic Treatment & Stage Lighting",
-                "url": "https://gpspl.co.in/auditorium-av-solutions",
-                "description": "Turnkey engineering for corporate, institutional, and government auditoriums. Includes EASE 3D acoustic simulation, Harman JBL line arrays, Dante network distribution, Shure wireless microphones, motorized stage lighting, and 4K PTZ live broadcasting.",
-                "provider": {
-                    "@type": "Organization",
-                    "name": "Global Peripheral Solution Pvt. Ltd. (GPSPL)",
-                    "url": "https://gpspl.co.in",
-                    "foundingDate": "1997",
-                    "telephone": "+91-8920830377"
-                },
-                "areaServed": [
-                    { "@type": "City", "name": "New Delhi" },
-                    { "@type": "City", "name": "Noida" },
-                    { "@type": "City", "name": "Gurgaon" },
-                    { "@type": "Country", "name": "India" }
-                ],
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "86"
-                }
-            },
-            {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gpspl.co.in/" },
-                    { "@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://gpspl.co.in/#solutions" },
-                    { "@type": "ListItem", "position": 3, "name": "Auditorium AV & Acoustics", "item": "https://gpspl.co.in/auditorium-av-solutions" }
-                ]
-            },
-            {
-                "@type": "FAQPage",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "Why is RT60 acoustic treatment critical for auditoriums?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "RT60 measures reverberation time—how long sound takes to decay by 60 dB. For speech clarity in auditoriums, an optimal RT60 between 0.9 and 1.3 seconds is required. Without acoustic fabric panels, bass traps, and diffusers, sound echoes excessively, rendering speech unintelligible."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Why are line array speakers preferred over standard point-source speakers?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Line array speakers project sound as a cylindrical wavefront that attenuates at only 3 dB per doubling of distance (compared to 6 dB for point-source). This guarantees uniform sound pressure levels (SPL ±2 dB) from the front VIP row to the very last balcony seat."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "How do you avoid wireless microphone dropouts in high-interference areas?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "We deploy digital wireless systems (Shure Axient Digital / ULX-D / Sennheiser EW-DX) with remote active directional antennas, antenna distribution amplifiers, and automated frequency coordinators that switch channels instantly upon detecting 5G or RF interference."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What display options work best as an auditorium stage backdrop?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "For contemporary stages, Fine-Pitch Active LED Video Walls (P1.8 to P2.5) are preferred because they deliver 800+ nits brightness, allowing stage spotlights without washing out presentations. For ultra-wide panoramic backdrops, high-lumen 3-chip DLP laser projectors (20,000+ ANSI lumens) with motorized tensioned screens are also deployed."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Can an auditorium be operated by non-technical staff?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yes. While a sound engineer console (Yamaha/Soundcraft) is available in the control booth for complex live shows, we program custom Crestron or AMX touch panels with pre-configured scenarios (e.g., 'Keynote Presentation', 'Panel Discussion', 'Cultural Play') that adjust audio, lights, and displays automatically with a single button press."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Are your auditorium installations compliant with GeM and CPWD standards?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yes, GPSPL complies with CPWD electrical and acoustic specifications, fire-retardant fabric classifications (Class 1 / Class A), and provides complete OEM Manufacturer Authorization (MAF) and BIS certificates for Government e-Marketplace (GeM) tenders."
-                        }
-                    }
-                ]
-            }
-        ]
+      "@type": "Service",
+      "@id": "https://gpspl.co.in/auditorium-av-solutions#service",
+      "name": "Auditorium AV & Acoustic Sound Solutions",
+      "serviceType": "Line Array Pro Audio, RT60 Acoustic Treatment & Stage Lighting",
+      "url": "https://gpspl.co.in/auditorium-av-solutions",
+      "description": "Turnkey engineering for corporate, institutional, and government auditoriums. Includes EASE 3D acoustic simulation, Harman JBL line arrays, Dante network distribution, Shure wireless microphones, motorized stage lighting, and 4K PTZ live broadcasting.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Global Peripheral Solution Pvt. Ltd. (GPSPL)",
+        "url": "https://gpspl.co.in",
+        "foundingDate": "1997",
+        "telephone": "+91-8920830377"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "New Delhi"
+        },
+        {
+          "@type": "City",
+          "name": "Noida"
+        },
+        {
+          "@type": "City",
+          "name": "Gurgaon"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://gpspl.co.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Solutions",
+          "item": "https://gpspl.co.in/#solutions"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Auditorium AV & Acoustics",
+          "item": "https://gpspl.co.in/auditorium-av-solutions"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is RT60 acoustic treatment critical for auditoriums?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RT60 measures reverberation time—how long sound takes to decay by 60 dB. For speech clarity in auditoriums, an optimal RT60 between 0.9 and 1.3 seconds is required. Without acoustic fabric panels, bass traps, and diffusers, sound echoes excessively, rendering speech unintelligible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are line array speakers preferred over standard point-source speakers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Line array speakers project sound as a cylindrical wavefront that attenuates at only 3 dB per doubling of distance (compared to 6 dB for point-source). This guarantees uniform sound pressure levels (SPL ±2 dB) from the front VIP row to the very last balcony seat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you avoid wireless microphone dropouts in high-interference areas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We deploy digital wireless systems (Shure Axient Digital / ULX-D / Sennheiser EW-DX) with remote active directional antennas, antenna distribution amplifiers, and automated frequency coordinators that switch channels instantly upon detecting 5G or RF interference."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What display options work best as an auditorium stage backdrop?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For contemporary stages, Fine-Pitch Active LED Video Walls (P1.8 to P2.5) are preferred because they deliver 800+ nits brightness, allowing stage spotlights without washing out presentations. For ultra-wide panoramic backdrops, high-lumen 3-chip DLP laser projectors (20,000+ ANSI lumens) with motorized tensioned screens are also deployed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an auditorium be operated by non-technical staff?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. While a sound engineer console (Yamaha/Soundcraft) is available in the control booth for complex live shows, we program custom Crestron or AMX touch panels with pre-configured scenarios (e.g., 'Keynote Presentation', 'Panel Discussion', 'Cultural Play') that adjust audio, lights, and displays automatically with a single button press."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your auditorium installations compliant with GeM and CPWD standards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, GPSPL complies with CPWD electrical and acoustic specifications, fire-retardant fabric classifications (Class 1 / Class A), and provides complete OEM Manufacturer Authorization (MAF) and BIS certificates for Government e-Marketplace (GeM) tenders."
+          }
+        }
+      ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body class="service-detail-template">
 

@@ -27,73 +27,93 @@
     <script src="/JS/analytics.js" defer></script>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "LocalBusiness",
-                "@id": "https://gpspl.co.in/av-system-integrator-gurgaon#business",
-                "name": "Global Peripheral Solution Pvt. Ltd. (GPSPL) - Gurgaon AV Division",
-                "url": "https://gpspl.co.in/av-system-integrator-gurgaon",
-                "logo": "https://gpspl.co.in/assests/images/gpspl.png",
-                "image": "https://gpspl.co.in/assests/images/vision/conference-room-hero.jpg",
-                "telephone": "+91-8920830377",
-                "priceRange": "₹₹₹",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Gurgaon",
-                    "addressRegion": "Haryana",
-                    "addressCountry": "IN"
-                },
-                "geo": {
-                    "@type": "GeoCoordinates",
-                    "latitude": "28.4595",
-                    "longitude": "77.0266"
-                },
-                "areaServed": [
-                    { "@type": "AdministrativeArea", "name": "DLF Cyber City, Gurgaon" },
-                    { "@type": "AdministrativeArea", "name": "Golf Course Road, Gurgaon" },
-                    { "@type": "AdministrativeArea", "name": "Golf Course Extension Road" },
-                    { "@type": "AdministrativeArea", "name": "Udyog Vihar Phase 1-5" },
-                    { "@type": "AdministrativeArea", "name": "Sohna Road Tech Parks" },
-                    { "@type": "AdministrativeArea", "name": "Manesar Industrial Hub" }
-                ],
-                "hasOfferCatalog": {
-                    "@type": "OfferCatalog",
-                    "name": "Gurgaon Enterprise AV Solutions",
-                    "itemListElement": [
-                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Executive Boardroom AV & Teams Rooms Integration" } },
-                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fine-Pitch Active LED Video Walls (P1.25 - P1.86)" } },
-                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Crestron / AMX Tabletop Automation Systems" } },
-                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Annual Maintenance Contracts (AMC) with 4-Hour On-Site SLA" } }
-                    ]
-                }
-            },
-            {
-                "@type": "FAQPage",
-                "@id": "https://gpspl.co.in/av-system-integrator-gurgaon#faq",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "How quickly can GPSPL conduct a physical site survey in Cyber City or Golf Course Road?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "GPSPL provides same-day or 24-hour physical site audits across Cyber City, Golf Course Road, and Udyog Vihar. Our senior AV design engineers arrive with acoustic meters and cable route analyzers to generate an itemized BOQ."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What is GPSPL's SLA response time for AV AMC breakdown support in Gurgaon?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "For enterprise clients in Gurgaon with active AMC contracts, GPSPL guarantees a 4-hour on-site engineer response time with dedicated standby hot-spare units (video bars, amplifiers, transmitters) to ensure zero meeting downtime."
-                        }
-                    }
-                ]
+      "@type": "LocalBusiness",
+      "@id": "https://gpspl.co.in/av-system-integrator-gurgaon#business",
+      "name": "Global Peripheral Solution Pvt. Ltd. (GPSPL) - Gurgaon AV Division",
+      "url": "https://gpspl.co.in/av-system-integrator-gurgaon",
+      "logo": "https://gpspl.co.in/assests/images/gpspl.png",
+      "image": "https://gpspl.co.in/assests/images/vision/conference-room-hero.jpg",
+      "telephone": "+91-8920830377",
+      "priceRange": "₹₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gurgaon",
+        "addressRegion": "Haryana",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "28.4595",
+        "longitude": "77.0266"
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "DLF Cyber City, Gurgaon"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Golf Course Road, Gurgaon"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Golf Course Extension Road"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Udyog Vihar Phase 1-5"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Sohna Road Tech Parks"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Manesar Industrial Hub"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Gurgaon Enterprise AV Solutions",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Executive Boardroom AV & Teams Rooms Integration"
             }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fine-Pitch Active LED Video Walls (P1.25 - P1.86)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Crestron / AMX Tabletop Automation Systems"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Annual Maintenance Contracts (AMC) with 4-Hour On-Site SLA"
+            }
+          }
         ]
+      }
     }
-    </script>
+  ]
+}
+</script>
     <link rel="stylesheet" href="css/home-hero-fix.css?v=20260909-lead-v1">
     <link rel="stylesheet" href="/css/ai-chat.css?v=20260902-mobile-fix">
 </head>

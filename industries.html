@@ -32,201 +32,149 @@
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gpspl.co.in/" },
-            { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://gpspl.co.in/industries" }
-          ]
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://gpspl.co.in/"
         },
         {
-          "@type": "CollectionPage",
-          "@id": "https://gpspl.co.in/industries#webpage",
-          "url": "https://gpspl.co.in/industries",
-          "name": "Turnkey AV Solutions by Industry | Corporate, Education, Hotel & Hospital AV | GPSPL",
-          "description": "AV and IT integration solutions categorized across 10 key industry verticals: Corporate, Education, Hospitality, Government, Healthcare, Retail, Real Estate, Banking, Media, and Automotive.",
-          "publisher": {
-            "@type": "Organization",
-            "name": "Global Peripheral Solution Pvt. Ltd.",
-            "url": "https://gpspl.co.in"
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Industries",
+          "item": "https://gpspl.co.in/industries"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://gpspl.co.in/industries#webpage",
+      "url": "https://gpspl.co.in/industries",
+      "name": "Turnkey AV Solutions by Industry | Corporate, Education, Hotel & Hospital AV | GPSPL",
+      "description": "AV and IT integration solutions categorized across 10 key industry verticals: Corporate, Education, Hospitality, Government, Healthcare, Retail, Real Estate, Banking, Media, and Automotive.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Global Peripheral Solution Pvt. Ltd.",
+        "url": "https://gpspl.co.in"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://gpspl.co.in/industries#solutions-list",
+      "name": "Turnkey Industry AV Solutions Portfolio",
+      "numberOfItems": 10,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Service",
+            "name": "Corporate & Enterprise AV Solutions",
+            "url": "https://gpspl.co.in/conference-room-solutions",
+            "description": "Boardroom AV integration, Microsoft Teams Rooms, Zoom Rooms, wireless BYOD screen sharing, Shure ceiling beamforming microphones, and Crestron room automation."
           }
         },
         {
-          "@type": "ItemList",
-          "@id": "https://gpspl.co.in/industries#solutions-list",
-          "name": "Turnkey Industry AV Solutions Portfolio",
-          "numberOfItems": 10,
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "item": {
-                "@type": "Service",
-                "name": "Corporate & Enterprise AV Solutions",
-                "url": "https://gpspl.co.in/conference-room-solutions",
-                "description": "Boardroom AV integration, Microsoft Teams Rooms, Zoom Rooms, wireless BYOD screen sharing, Shure ceiling beamforming microphones, and Crestron room automation."
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "item": {
-                "@type": "Service",
-                "name": "Education & Smart Classroom AV Solutions",
-                "url": "https://gpspl.co.in/smart-classroom-solutions",
-                "description": "4K Interactive Flat Panels (IFPD), digital podiums, hybrid classroom audio, teacher voice-lift, and lecture capture systems for schools, coaching and universities."
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "item": {
-                "@type": "Service",
-                "name": "Hotel & Hospitality Audio Visual Solutions",
-                "url": "https://gpspl.co.in/hotel-hospitality-av-solutions",
-                "description": "Grand ballroom seamless Active LED video walls, banquet line-array sound systems, multi-zone restaurant background music (BGM), and guest digital signage."
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
-              "item": {
-                "@type": "Service",
-                "name": "Government & Command Center (NOC/SOC) Solutions",
-                "url": "https://gpspl.co.in/command-control-center-av-solutions",
-                "description": "24/7 mission-critical operations centers, fine-pitch active LED video walls, zero-latency KVM-over-IP matrix switching, and secure command monitoring infrastructure."
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 5,
-              "item": {
-                "@type": "Service",
-                "name": "Healthcare & Hospital AV Integration",
-                "url": "https://gpspl.co.in/industries#industry-healthcare",
-                "description": "Medical-grade 4K OT surgical video recording and streaming, doctor training seminar AV, telemedicine conference rooms, and patient OPD queue digital signage."
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 6,
-              "item": {
-                "@type": "Service",
-                "name": "Retail & Food Chain Digital Signage & AV",
-                "url": "https://gpspl.co.in/digital-signage-solutions",
-                "description": "Storefront active LED video walls, cloud-managed 4K digital menu boards, interactive touch kiosks, commercial displays, and background music sound systems."
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 7,
-              "item": {
-                "@type": "Service",
-                "name": "Real Estate Sales Gallery & Experience Center AV",
-                "url": "https://gpspl.co.in/experience-center-av-solutions",
-                "description": "Turnkey real estate sales gallery displays, interactive touch projection walls, architectural scale model lighting automation, and executive presentation rooms."
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 8,
-              "item": {
-                "@type": "Service",
-                "name": "Banking & Financial Services (BFSI) AV Solutions",
-                "url": "https://gpspl.co.in/industries#industry-bfsi",
-                "description": "Ultra-secure financial boardroom video conferencing, multi-screen trading floor data walls, encrypted audio matrices, and compliance-grade AV recording."
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 9,
-              "item": {
-                "@type": "Service",
-                "name": "Media & Broadcast Studio AV Solutions",
-                "url": "https://gpspl.co.in/peripheral-solutions",
-                "description": "Authorized Wacom pen displays (Cintiq Pro 27), color-accurate editing monitors, production control room AV, acoustic soundproofing, and studio workstation distribution."
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 10,
-              "item": {
-                "@type": "Service",
-                "name": "Automotive Showroom Displays & Training Room AV",
-                "url": "https://gpspl.co.in/active-led-wall-solutions",
-                "description": "Showroom curved fine-pitch active LED display backdrops, interactive digital car configurator touchscreens, service center digital signage, and technician training AV."
-              }
-            }
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Service",
+            "name": "Education & Smart Classroom AV Solutions",
+            "url": "https://gpspl.co.in/smart-classroom-solutions",
+            "description": "4K Interactive Flat Panels (IFPD), digital podiums, hybrid classroom audio, teacher voice-lift, and lecture capture systems for schools, coaching and universities."
+          }
         },
         {
-          "@type": "FAQPage",
-          "@id": "https://gpspl.co.in/industries#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Which industries does GPSPL provide turnkey AV solutions for in India?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "GPSPL provides specialized, turnkey AV integration and technology distribution across 10 core industries: Corporate Workplaces, Education & Coaching, Hotels & Hospitality, Government & Defense (NOC/SOC), Healthcare & Hospitals, Retail & Food, Real Estate Experience Centers, Banking & Financial Services (BFSI), Media & Broadcast Studios, and Automotive Showrooms."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is included in corporate boardroom and conference room AV integration?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Corporate AV integration by GPSPL includes commercial 4K displays or fine-pitch active LED walls, Shure/Sennheiser beamforming ceiling microphones, AI auto-tracking PTZ cameras, Biamp/Q-SYS DSP echo cancellation, native Microsoft Teams Rooms or Zoom Rooms compute, wireless BYOD presentation, and Crestron one-touch automation."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What smart classroom and education AV solutions does GPSPL deliver?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "GPSPL equips K-12 schools, coaching institutes, and universities with 65-inch to 86-inch 4K Interactive Flat Panels (Samsung Flip, LG CreateBoard, Newline), digital interactive podiums, wireless teacher voice-lift microphones, acoustic audio reinforcement, and multi-camera hybrid lecture capture systems."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What audio and video systems are needed for hotel ballrooms, banquets, and hospitality venues?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "For luxury hospitality venues, GPSPL supplies and installs large seamless active LED video walls for wedding and conference stages, JBL/Harman line-array sound systems with EASE acoustic RT60 tuning, multi-zone background music (BGM) matrices, and cloud-managed guest digital signage."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How does GPSPL engineer 24/7 command and control rooms (NOC/SOC) for government and public sector?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "For mission-critical government command centers, GPSPL integrates continuous 24/7-rated fine-pitch Active LED video walls with redundant power supplies, zero-latency KVM-over-IP matrix switching, and ISO 11064 ergonomic operator workstations with multi-feed visualization."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What medical-grade video and telemedicine solutions does GPSPL integrate for hospitals?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "GPSPL integrates 4K medical-grade surgical camera streaming from Operation Theaters (OT) to lecture halls and remote specialists, doctor training seminar AV, telemedicine boardroom video conferencing, and centralized hospital OPD patient queue displays."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Does GPSPL provide commercial AV technology distribution and wholesale supply?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, GPSPL is a tier-1 authorized distributor for world-leading brands including Samsung, LG, Poly, Sennheiser, Shure, Crestron, Epson, Absen, and Wacom, offering direct institutional and reseller pricing, warranty coordination, and 4-hour SLA support across India."
-              }
-            }
-          ]
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Service",
+            "name": "Hotel & Hospitality Audio Visual Solutions",
+            "url": "https://gpspl.co.in/hotel-hospitality-av-solutions",
+            "description": "Grand ballroom seamless Active LED video walls, banquet line-array sound systems, multi-zone restaurant background music (BGM), and guest digital signage."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Service",
+            "name": "Government & Command Center (NOC/SOC) Solutions",
+            "url": "https://gpspl.co.in/command-control-center-av-solutions",
+            "description": "24/7 mission-critical operations centers, fine-pitch active LED video walls, zero-latency KVM-over-IP matrix switching, and secure command monitoring infrastructure."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Service",
+            "name": "Healthcare & Hospital AV Integration",
+            "url": "https://gpspl.co.in/industries#industry-healthcare",
+            "description": "Medical-grade 4K OT surgical video recording and streaming, doctor training seminar AV, telemedicine conference rooms, and patient OPD queue digital signage."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Service",
+            "name": "Retail & Food Chain Digital Signage & AV",
+            "url": "https://gpspl.co.in/digital-signage-solutions",
+            "description": "Storefront active LED video walls, cloud-managed 4K digital menu boards, interactive touch kiosks, commercial displays, and background music sound systems."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Service",
+            "name": "Real Estate Sales Gallery & Experience Center AV",
+            "url": "https://gpspl.co.in/experience-center-av-solutions",
+            "description": "Turnkey real estate sales gallery displays, interactive touch projection walls, architectural scale model lighting automation, and executive presentation rooms."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "Service",
+            "name": "Banking & Financial Services (BFSI) AV Solutions",
+            "url": "https://gpspl.co.in/industries#industry-bfsi",
+            "description": "Ultra-secure financial boardroom video conferencing, multi-screen trading floor data walls, encrypted audio matrices, and compliance-grade AV recording."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "Service",
+            "name": "Media & Broadcast Studio AV Solutions",
+            "url": "https://gpspl.co.in/peripheral-solutions",
+            "description": "Authorized Wacom pen displays (Cintiq Pro 27), color-accurate editing monitors, production control room AV, acoustic soundproofing, and studio workstation distribution."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "item": {
+            "@type": "Service",
+            "name": "Automotive Showroom Displays & Training Room AV",
+            "url": "https://gpspl.co.in/active-led-wall-solutions",
+            "description": "Showroom curved fine-pitch active LED display backdrops, interactive digital car configurator touchscreens, service center digital signage, and technician training AV."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 
 <style id="industries-premium-redesign">
 /* ======================================================
