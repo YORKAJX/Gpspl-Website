@@ -224,7 +224,7 @@
         let lastTime = performance.now();
 
         function render(now) {
-            const dt = (now - lastTime) / 1000;
+            const dt = Math.max(0, (now - lastTime) / 1000);
             lastTime = now;
 
             // Auto-switch speaker every 3.2s if no mouse interaction
@@ -237,7 +237,8 @@
             speakers.forEach(function (s, idx) {
                 const isTarget = idx === activeSpeakerIndex;
                 const targetEnergy = isTarget ? 1.0 : 0.05;
-                s.speakingEnergy += (targetEnergy - s.speakingEnergy) * (dt * 6);
+                // Exponential smoothing stays bounded after a suspended tab or slow frame.
+                s.speakingEnergy += (targetEnergy - s.speakingEnergy) * (1 - Math.exp(-dt * 6));
             });
 
             // Update DOM telemetry indicators
