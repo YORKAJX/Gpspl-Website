@@ -528,7 +528,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const encodedMsg = encodeURIComponent(customMessage);
         document.querySelectorAll('.floating-whatsapp, .whatsapp-button, a[href*="wa.me"]').forEach(btn => {
-            btn.href = `https://wa.me/918920830377?text=${encodedMsg}`;
+            // Preserve the product, industry or calculator brief authored by the page.
+            // Only supply a default message for a bare WhatsApp contact link.
+            const href = btn.getAttribute('href');
+            if (href) {
+                try {
+                    const url = new URL(href, window.location.href);
+                    if (url.hostname !== 'wa.me') return;
+                    if ((url.searchParams.get('text') || '').trim()) return;
+                    url.searchParams.set('text', customMessage);
+                    btn.href = url.href;
+                } catch (_) {
+                    return;
+                }
+            } else {
+                btn.href = `https://wa.me/918920830377?text=${encodedMsg}`;
+            }
         });
     }
 

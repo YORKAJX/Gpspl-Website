@@ -1,0 +1,22 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+
+const source=fs.readFileSync('JS/main.js','utf8');
+const start=source.indexOf('    function initContextualWhatsApp() {');
+const end=source.indexOf('\n    initHeroSlider();',start);
+assert(start>=0&&end>start);
+const specific='https://wa.me/918920830377?text='+encodeURIComponent('JBL speaker quantity 4, Delhi');
+const links=[specific,'https://wa.me/918920830377','https://wa.me/919999999999?text=','https://example.com/quote',null].map(href=>({href,getAttribute:()=>href}));
+const context={URL,encodeURIComponent,window:{location:{pathname:'/active-led-wall-solutions',href:'https://gpspl.co.in/active-led-wall-solutions'}},document:{title:'GPSPL',querySelector:()=>({textContent:'Active LED'}),querySelectorAll:()=>links}};
+vm.runInNewContext(source.slice(start,end)+'\ninitContextualWhatsApp();',context);
+assert.equal(links[0].href,specific,'Authored buyer brief must survive');
+assert(new URL(links[1].href).searchParams.get('text').includes('Active LED'));
+assert.equal(new URL(links[2].href).pathname,'/919999999999','Existing destination must survive');
+assert.equal(links[3].href,'https://example.com/quote','Non-WhatsApp link must not be rewritten');
+assert(new URL(links[4].href).searchParams.get('text').includes('Active LED'));
+const firstPass=links.map(l=>l.href);
+for(const link of links) link.getAttribute=()=>link.href;
+vm.runInNewContext(source.slice(start,end)+'\ninitContextualWhatsApp();',context);
+assert.deepEqual(links.map(l=>l.href),firstPass,'Repeated initialization must preserve context');
+console.log('PASS: authored briefs, destination numbers, fallback messages and repeated initialization.');
