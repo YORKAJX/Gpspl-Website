@@ -21,6 +21,12 @@
     updateScrollProgress();
 
     const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
+
+    const pageTitleRewrites = {
+        "/amc-maintenance-services": "Support that begins before something fails."
+    };
+    const rewrittenTitle = document.querySelector("main h1");
+    if (rewrittenTitle && pageTitleRewrites[currentPath]) rewrittenTitle.textContent = pageTitleRewrites[currentPath];
     document.querySelectorAll(".site-header a[href]").forEach((link) => {
         try {
             const path = new URL(link.href, window.location.origin).pathname.replace(/\/$/, "") || "/";

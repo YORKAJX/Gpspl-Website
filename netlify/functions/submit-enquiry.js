@@ -110,7 +110,6 @@ function checkDuplicate(phone, email) {
     if (recentLeadHashes.has(key)) {
         return true; // Is duplicate
     }
-    recentLeadHashes.set(key, now);
     return false;
 }
 
@@ -138,10 +137,10 @@ async function verifyTurnstile(token, ip) {
 }
 
 async function sendResendEmail({ to, from, subject, html, replyTo }) {
-    if (!process.env.RESEND_API_KEY) return;
-    try {
-        await fetch('https://api.resend.com/emails', {
+    if (!process.env.RESEND_API_KEY) throw new Error('Email delivery is not configured');
+        const response = await fetch('https://api.resend.com/emails', {
             method: 'POST',
+            signal: AbortSignal.timeout(10000),
             headers: {
                 Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
                 'Content-Type': 'application/json'
@@ -154,9 +153,9 @@ async function sendResendEmail({ to, from, subject, html, replyTo }) {
                 reply_to: replyTo
             })
         });
-    } catch (e) {
-        console.error('Resend email error:', e);
-    }
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || !result.id) throw new Error(`Email provider rejected delivery (${response.status})`);
+    return result.id;
 }
 
 export const handler = async (event = {}) => {
@@ -404,28 +403,35 @@ export const handler = async (event = {}) => {
             </div>
         </div>`;
 
-    const deliveries = [sendResendEmail({
+    let deliveryId;
+    try {
+      deliveryId = await sendResendEmail({
         to: recipientEmails,
         from: mailFrom,
         subject: emailSubject,
         html: emailHtml,
         replyTo: email || recipientEmails[0] || 'global@gpspl.co.in'
-    })];
+      });
+    } catch (error) {
+      console.error('GPSPL team notification failed:', error.message);
+      return json(503, { success: false, error: 'Your enquiry could not be confirmed. Please retry, or contact GPSPL by phone or WhatsApp.' }, baseHeaders);
+    }
+    // Only suppress retries after the provider accepts the team notification.
+    recentLeadHashes.set(`${phone}_${email.toLowerCase()}`, Date.now());
 
     if (email) {
-        deliveries.push(sendResendEmail({
+        await sendResendEmail({
             to: [email],
             from: mailFrom,
             subject: `We received your GPSPL project enquiry — ${requirement}`,
             html: acknowledgementHtml,
             replyTo: recipientEmails[0] || 'global@gpspl.co.in'
-        }));
+        }).catch(error => console.error('GPSPL acknowledgement failed:', error.message));
     }
-
-    await Promise.allSettled(deliveries);
 
     return json(200, {
         success: true,
+        deliveryId,
         leadQuality,
         message: 'Thank you for contacting GPSPL. Your enquiry has been routed to our project team for review.'
     }, baseHeaders);

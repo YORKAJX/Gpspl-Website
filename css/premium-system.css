@@ -951,12 +951,143 @@ html body .full-width-btn {
     word-spacing: .12em !important;
 }
 
+/* About: company story told through real work, without dashboard-style stat cards. */
+html body.about-gpspl-page .about-modern-hero {
+    min-height: auto !important;
+    padding: 0 !important;
+    background: #111 !important;
+}
+html body.about-gpspl-page .about-modern-hero::after { display: none !important; }
+html body.about-gpspl-page .about-modern-hero-grid {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 760px;
+    grid-template-columns: minmax(0, .92fr) minmax(560px, 1.08fr) !important;
+    gap: 0 !important;
+    align-items: stretch !important;
+}
+html body.about-gpspl-page .about-modern-copy {
+    display: flex;
+    max-width: none !important;
+    padding: clamp(70px, 8vw, 132px) clamp(42px, 7vw, 110px);
+    flex-direction: column;
+    justify-content: center;
+}
+html body.about-gpspl-page .about-modern-hero .breadcrumbs { margin-bottom: auto; }
+html body.about-gpspl-page .about-modern-hero .section-eyebrow { margin-top: 54px; color: rgba(255,255,255,.58) !important; }
+html body.about-gpspl-page .about-modern-hero h1 {
+    max-width: 760px !important;
+    color: #fff !important;
+    font-size: clamp(4rem, 6.25vw, 7.2rem) !important;
+    font-weight: 500 !important;
+    letter-spacing: -.07em !important;
+    line-height: .88 !important;
+}
+html body.about-gpspl-page .about-modern-hero h1 em {
+    color: #ef3438;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+}
+html body.about-gpspl-page .about-modern-hero h1 + p { max-width: 650px; margin-top: 30px; color: rgba(255,255,255,.68); }
+.about-proof-gallery {
+    position: relative;
+    display: grid;
+    min-width: 0;
+    overflow: hidden;
+    background: #ddd7cd;
+    grid-template-columns: 1.4fr .6fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 6px;
+}
+.about-proof-gallery figure { position: relative; min-width: 0; min-height: 0; margin: 0; overflow: hidden; }
+.about-proof-gallery-main { grid-row: 1 / 3; }
+.about-proof-gallery img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.9); transition: transform 1s cubic-bezier(.16,1,.3,1), filter .4s ease; }
+.about-proof-gallery figure::after { position: absolute; inset: 48% 0 0; background: linear-gradient(transparent, rgba(0,0,0,.82)); content: ""; }
+.about-proof-gallery figcaption { position: absolute; z-index: 1; right: 20px; bottom: 20px; left: 20px; color: #fff; font-size: .8rem; }
+.about-proof-gallery figcaption span { display: block; margin-bottom: 5px; color: rgba(255,255,255,.6); font-size: .6rem; letter-spacing: .13em; text-transform: uppercase; }
+.about-proof-gallery figure:hover img { filter: saturate(1.04); transform: scale(1.035); }
+.about-proof-stamp { display: flex; padding: 28px; background: #ef3438; color: #fff; flex-direction: column; justify-content: space-between; }
+.about-proof-stamp strong { font-size: clamp(3.2rem, 5vw, 6rem); font-weight: 500; letter-spacing: -.07em; line-height: .85; }
+.about-proof-stamp span { font-size: .72rem; letter-spacing: .08em; line-height: 1.45; text-transform: uppercase; }
+
+.nav-links .nav-link-careers { display: none !important; }
+
+/* Case-study pages show only claims that can be supported by visible project evidence. */
+html body .case-card-client-strip,
+html body .case-metrics-strip,
+html body .case-phase-item.phase-outcome { display: none !important; }
+html body .case-card-visual-overlay { background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,.62)) !important; }
+html body .case-phase-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+html body .case-card { overflow: hidden; border-radius: 2px !important; box-shadow: none !important; }
+html body .case-card-visual { min-height: 420px; }
+html body .case-card-visual img { filter: saturate(.92); transition: transform .9s cubic-bezier(.16,1,.3,1), filter .35s ease; }
+html body .case-card:hover .case-card-visual img { filter: saturate(1.04); transform: scale(1.035); }
+
+/* Industries: replace the claim-heavy dashboard with a photographic index. */
+html body .ind-hero { padding: 0 !important; background: #101010 !important; }
+html body .ind-hero::before { display: none !important; }
+html body .ind-hero-grid {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 730px;
+    grid-template-columns: minmax(0, .88fr) minmax(620px, 1.12fr) !important;
+    gap: 0 !important;
+    align-items: stretch !important;
+}
+html body .ind-hero-copy { display: flex; padding: clamp(70px, 8vw, 124px) clamp(44px, 7vw, 108px); flex-direction: column; justify-content: center; }
+html body .ind-breadcrumbs { margin-bottom: auto !important; }
+html body .ind-eyebrow { margin-top: 50px !important; color: rgba(255,255,255,.56) !important; }
+html body .ind-hero h1 { max-width: 800px !important; color: #fff !important; font-size: clamp(3.6rem, 5.6vw, 6.5rem) !important; font-weight: 500 !important; letter-spacing: -.065em !important; line-height: .92 !important; }
+html body .ind-hero-lead { max-width: 690px !important; color: rgba(255,255,255,.68) !important; font-size: 1.04rem !important; line-height: 1.65 !important; }
+.ind-photo-story { display: grid; min-width: 0; overflow: hidden; background: #ded8ce; grid-template-columns: 1.4fr .6fr; grid-template-rows: 1fr 1fr; gap: 6px; }
+.ind-photo-story figure { position: relative; min-width: 0; min-height: 0; margin: 0; overflow: hidden; }
+.ind-photo-story-main { grid-row: 1 / 3; }
+.ind-photo-story img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.92); transition: transform .9s cubic-bezier(.16,1,.3,1); }
+.ind-photo-story figure::after { position: absolute; inset: 58% 0 0; background: linear-gradient(transparent, rgba(0,0,0,.78)); content: ""; }
+.ind-photo-story figcaption { position: absolute; z-index: 1; right: 18px; bottom: 18px; left: 18px; color: #fff; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; }
+.ind-photo-story figure:hover img { transform: scale(1.04); }
+
+/* Contact: make the enquiry path feel human and project-led. */
+html body .contact-hero { padding: 0 !important; background: #111 !important; }
+html body .contact-hero::before { display: none !important; }
+html body .contact-hero-grid {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 720px;
+    grid-template-columns: minmax(0, .92fr) minmax(560px, 1.08fr) !important;
+    gap: 0 !important;
+    align-items: stretch !important;
+}
+html body .contact-hero-copy { display: flex; padding: clamp(70px, 8vw, 124px) clamp(44px, 7vw, 108px); flex-direction: column; justify-content: center; }
+html body .contact-breadcrumb { margin-bottom: auto !important; }
+html body .contact-hero .section-eyebrow { margin-top: 48px !important; color: rgba(255,255,255,.56) !important; }
+html body .contact-hero h1 { max-width: 820px !important; color: #fff !important; font-size: clamp(3.7rem, 5.7vw, 6.6rem) !important; font-weight: 500 !important; letter-spacing: -.068em !important; line-height: .9 !important; }
+html body .contact-hero-copy > p:not(.section-eyebrow) { max-width: 690px !important; color: rgba(255,255,255,.68) !important; }
+html body .contact-proof-strip { margin-top: auto !important; padding-top: 24px !important; border-top: 1px solid rgba(255,255,255,.18) !important; }
+html body .contact-proof-strip span { color: rgba(255,255,255,.58) !important; }
+html body .contact-proof-strip strong { color: #fff !important; }
+.contact-project-visual { position: relative; min-width: 0; min-height: 720px; margin: 0; overflow: hidden; background: #222; }
+.contact-project-visual::after { position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, rgba(0,0,0,.82)); content: ""; }
+.contact-project-visual img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.9); transition: transform 1s cubic-bezier(.16,1,.3,1), filter .35s ease; }
+.contact-project-visual:hover img { filter: saturate(1.03); transform: scale(1.035); }
+.contact-project-visual figcaption { position: absolute; z-index: 1; right: clamp(28px, 5vw, 72px); bottom: 54px; left: clamp(28px, 5vw, 72px); color: #fff; }
+.contact-project-visual figcaption span { display: block; margin-bottom: 10px; color: rgba(255,255,255,.62); font-size: .66rem; letter-spacing: .13em; text-transform: uppercase; }
+.contact-project-visual figcaption strong { display: block; max-width: 570px; font-size: clamp(1.8rem, 3.2vw, 4rem); font-weight: 500; letter-spacing: -.055em; line-height: .96; }
+html body .live-status-bar { border-radius: 2px !important; background: #f1eee7 !important; color: #313431 !important; }
+html body .live-status-bar .pulse-dot { display: none !important; }
+
 @media (max-width: 1050px) {
     .editorial-hero-grid { grid-template-columns: 1fr; }
     .editorial-hero-copy { min-height: 650px; }
     .editorial-showcase { min-height: 680px; }
     .gpspl-project-rail-grid { grid-template-columns: 1.2fr 1fr; }
     .gpspl-project-rail-card:last-child { display: none; }
+    html body.about-gpspl-page .about-modern-hero-grid { grid-template-columns: 1fr !important; }
+    .about-proof-gallery { min-height: 620px; }
+    html body .ind-hero-grid { grid-template-columns: 1fr !important; }
+    .ind-photo-story { min-height: 650px; }
+    html body .contact-hero-grid { grid-template-columns: 1fr !important; }
+    .contact-project-visual { min-height: 640px; }
 }
 
 @media (max-width: 700px) {
@@ -991,4 +1122,22 @@ html body .full-width-btn {
     body:has(.gpspl-editorial-hero) .home-project-filmstrip figure,
     body:has(.gpspl-editorial-hero) .home-project-filmstrip figure:nth-child(even) { height: 300px; margin-top: 0; }
     body:has(.gpspl-editorial-hero) .home-project-filmstrip .home-project-filmstrip-wide { grid-column: span 2; }
+    html body.about-gpspl-page .about-modern-copy { min-height: 680px; padding: 56px 22px 44px; }
+    html body.about-gpspl-page .about-modern-hero .breadcrumbs { margin-bottom: 56px; }
+    html body.about-gpspl-page .about-modern-hero .section-eyebrow { margin-top: 0; }
+    html body.about-gpspl-page .about-modern-hero h1 { font-size: clamp(3.8rem, 17vw, 5.4rem) !important; }
+    .about-proof-gallery { min-height: 640px; grid-template-columns: 1fr 1fr; grid-template-rows: 1.3fr .7fr; }
+    .about-proof-gallery-main { grid-column: 1 / 3; grid-row: auto; }
+    html body .case-phase-grid { grid-template-columns: 1fr !important; }
+    html body .ind-hero-copy { min-height: 660px; padding: 56px 22px 44px; }
+    html body .ind-breadcrumbs { margin-bottom: 52px !important; }
+    html body .ind-eyebrow { margin-top: 0 !important; }
+    html body .ind-hero h1 { font-size: clamp(3.3rem, 15vw, 5rem) !important; }
+    .ind-photo-story { min-height: 660px; grid-template-columns: 1fr 1fr; grid-template-rows: 1.25fr .75fr; }
+    .ind-photo-story-main { grid-column: 1 / 3; grid-row: auto; }
+    html body .contact-hero-copy { min-height: 700px; padding: 56px 22px 44px; }
+    html body .contact-breadcrumb { margin-bottom: 52px !important; }
+    html body .contact-hero .section-eyebrow { margin-top: 0 !important; }
+    html body .contact-hero h1 { font-size: clamp(3.35rem, 15vw, 5rem) !important; }
+    .contact-project-visual { min-height: 540px; }
 }
