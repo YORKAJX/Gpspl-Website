@@ -1,0 +1,1373 @@
+/* ==========================================================================
+   GPSPL ACTIVE LED ENTERPRISE SUITE (Architectural Warm Paper System)
+   - Color Palette: Warm Alabaster Paper (#faf8f5), Carbon Ink (#161817), Warm Terracotta (#d96538)
+   - Typography: Plus Jakarta Sans with Playfair Display Luxury Editorial Italics
+   - ZERO generic dark blue AI slop, ZERO harsh artificial grids
+   - High-contrast precision engineering monitors for 3840Hz slider & calculator
+   ========================================================================== */
+
+:root {
+    /* Architectural Paper & Ink System (Homepage Equivalent) */
+    --led-paper: #faf8f5;
+    --led-paper-card: #ffffff;
+    --led-paper-warm: #f2eee7;
+    --led-paper-tint: #eae5dc;
+    --led-line: #e3ded6;
+    --led-line-soft: #ede8e1;
+    --led-ink: #161817;
+    --led-text: #191b1a;
+    --led-muted: #5e6460;
+    --led-muted-light: #8e9490;
+    
+    /* Warm Terracotta & Copper Accents */
+    --led-accent: #d96538;
+    --led-accent-hover: #c25327;
+    --led-accent-subtle: #fbf0eb;
+    --led-accent-border: #f0c9ba;
+
+    /* High-Tech Contrast Module Colors (For Monitor Consoles Only) */
+    --led-console-bg: #141716;
+    --led-console-card: #1c201e;
+    --led-console-border: #2e3531;
+    --led-console-text: #f4f6f5;
+
+    /* Typography */
+    --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-italic: 'Playfair Display', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Page Reset & Global Scope */
+body.led-active-page {
+    background-color: var(--led-paper) !important;
+    color: var(--led-text) !important;
+    font-family: var(--font-body) !important;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body.led-active-page * {
+    box-sizing: border-box;
+}
+
+/* Universal Editorial Italics & Kickers */
+body.led-active-page em,
+body.led-active-page .led-italic,
+body.led-active-page .studio-headline em,
+body.led-active-page .section-title-wrapper h2 em {
+    font-family: var(--font-italic) !important;
+    font-style: italic !important;
+    font-weight: 600 !important;
+    color: var(--led-accent) !important;
+    letter-spacing: -0.01em;
+}
+
+.led-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.led-kicker-bar {
+    display: inline-block;
+    width: 28px;
+    height: 3px;
+    background: var(--led-accent);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.led-kicker-italic {
+    font-family: var(--font-italic);
+    font-style: italic;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--led-accent);
+    letter-spacing: 0.02em;
+}
+
+.led-kicker-badge {
+    background: var(--led-accent-subtle);
+    border: 1px solid var(--led-accent-border);
+    color: var(--led-accent);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border-radius: 50px;
+}
+
+/* Common Container */
+.led-container {
+    width: min(calc(100% - 48px), 1320px);
+    max-width: 1320px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Section Structure */
+.led-section {
+    padding: clamp(60px, 7vw, 100px) 0;
+    position: relative;
+}
+
+.led-section-warm {
+    background: var(--led-paper-warm);
+    border-top: 1px solid var(--led-line);
+    border-bottom: 1px solid var(--led-line);
+}
+
+.led-section-white {
+    background: #ffffff;
+    border-top: 1px solid var(--led-line);
+    border-bottom: 1px solid var(--led-line);
+}
+
+.section-title-wrapper {
+    margin-bottom: clamp(36px, 4.5vw, 56px);
+}
+
+.section-title-wrapper.center {
+    text-align: center;
+}
+
+.section-title-wrapper.center .led-kicker {
+    justify-content: center;
+}
+
+.section-title-wrapper h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3.5vw, 3.1rem);
+    font-weight: 850;
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+    color: var(--led-ink);
+    margin: 0 0 16px 0;
+}
+
+.section-title-wrapper p {
+    font-size: clamp(1rem, 1.2vw, 1.12rem);
+    color: var(--led-muted);
+    max-width: 720px;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.section-title-wrapper.center p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================================================
+   1. HERO SECTION (Warm Paper & Architectural Typography)
+   ========================================================================== */
+.led-hero-section {
+    background: var(--led-paper);
+    padding: clamp(48px, 6vw, 84px) 0 clamp(40px, 5vw, 64px);
+    border-bottom: 1px solid var(--led-line);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle architectural warm glow (Zero AI blue grid) */
+.led-hero-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(217, 101, 56, 0.08) 0%, transparent 68%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.led-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(380px, 0.95fr);
+    gap: clamp(36px, 4.5vw, 64px);
+    align-items: center;
+}
+
+.led-hero-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.led-breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--led-muted);
+    margin-bottom: 20px;
+}
+
+.led-breadcrumb a {
+    color: var(--led-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.led-breadcrumb a:hover {
+    color: var(--led-accent);
+}
+
+.led-hero-headline {
+    font-family: var(--font-heading);
+    font-size: clamp(2.6rem, 4.8vw, 4.2rem);
+    font-weight: 850;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    color: var(--led-ink);
+    margin: 0 0 20px 0;
+}
+
+.led-hero-desc {
+    font-size: clamp(1.05rem, 1.25vw, 1.18rem);
+    color: var(--led-muted);
+    line-height: 1.65;
+    margin: 0 0 28px 0;
+    max-width: 620px;
+}
+
+.led-hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.led-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid var(--led-line);
+    padding: 8px 14px;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--led-ink);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.led-pill i {
+    color: var(--led-accent);
+}
+
+.led-hero-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 36px;
+}
+
+.btn-terracotta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--led-accent);
+    color: #ffffff !important;
+    font-size: 0.96rem;
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.22s ease;
+    box-shadow: 0 4px 16px rgba(217, 101, 56, 0.25);
+}
+
+.btn-terracotta:hover {
+    background: var(--led-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(217, 101, 56, 0.35);
+}
+
+.btn-outline-paper {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    color: var(--led-ink) !important;
+    border: 1px solid var(--led-line);
+    font-size: 0.96rem;
+    font-weight: 700;
+    padding: 14px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.22s ease;
+}
+
+.btn-outline-paper:hover {
+    border-color: var(--led-accent);
+    color: var(--led-accent) !important;
+    background: var(--led-accent-subtle);
+}
+
+.led-hero-trust-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--led-line);
+    width: 100%;
+}
+
+.trust-metric {
+    display: flex;
+    flex-direction: column;
+}
+
+.trust-metric strong {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: var(--led-ink);
+    letter-spacing: -0.02em;
+}
+
+.trust-metric span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--led-muted);
+}
+
+.trust-metric-divider {
+    width: 1px;
+    height: 32px;
+    background: var(--led-line);
+}
+
+/* ==========================================================================
+   2. HERO VISUAL: LIVE ENGINEERING CONSOLE (Deep Carbon Architectural Device)
+   ========================================================================== */
+.led-console-card {
+    background: var(--led-console-bg);
+    border: 1px solid var(--led-console-border);
+    border-radius: 20px;
+    box-shadow: 0 24px 60px rgba(22, 24, 23, 0.16);
+    overflow: hidden;
+    position: relative;
+}
+
+.console-header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid var(--led-console-border);
+}
+
+.console-title-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.console-status-dot {
+    width: 10px;
+    height: 10px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.7);
+    animation: statusPulse 2s infinite ease-in-out;
+}
+
+@keyframes statusPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.console-title-group span {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--led-console-text);
+}
+
+.console-tag {
+    background: rgba(217, 101, 56, 0.2);
+    border: 1px solid rgba(217, 101, 56, 0.4);
+    color: #ff8c5a;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/* Interactive Tabs */
+.console-nav-tabs {
+    display: flex;
+    background: #101211;
+    border-bottom: 1px solid var(--led-console-border);
+    padding: 0 16px;
+    gap: 6px;
+}
+
+.console-tab-btn {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #8e9490;
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.console-tab-btn.active,
+.console-tab-btn:hover {
+    color: #ffffff;
+    border-bottom-color: var(--led-accent);
+}
+
+/* Console Body */
+.console-body {
+    padding: 24px;
+}
+
+.console-preview-stage {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid var(--led-console-border);
+    aspect-ratio: 16 / 9;
+    background: #000000;
+}
+
+.console-preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.console-live-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.console-live-badge i {
+    color: #22c55e;
+    font-size: 0.6rem;
+}
+
+.console-resolution-tag {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(217, 101, 56, 0.9);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+}
+
+/* Real-Time Spec Grid */
+.console-spec-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.spec-meter-box {
+    background: var(--led-console-card);
+    border: 1px solid var(--led-console-border);
+    padding: 12px 14px;
+    border-radius: 10px;
+}
+
+.spec-meter-label {
+    font-size: 0.72rem;
+    color: #8e9490;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.spec-meter-val {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    font-family: 'Space Grotesk', monospace, sans-serif;
+}
+
+.spec-meter-val small {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #ff8c5a;
+    margin-left: 2px;
+}
+
+/* ==========================================================================
+   3. TIER-1 OEM BRAND ECOSYSTEM (Sony, Newline, Samsung, LG, Absen, Barco)
+   ========================================================================== */
+.led-ecosystem-section {
+    background: #ffffff;
+    padding: 38px 0;
+    border-bottom: 1px solid var(--led-line);
+}
+
+.ecosystem-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.ecosystem-heading-wrap h3 {
+    font-size: 1.12rem;
+    font-weight: 800;
+    color: var(--led-ink);
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.ecosystem-heading-wrap span {
+    font-size: 0.84rem;
+    color: var(--led-muted);
+}
+
+.gem-authorization-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--led-accent-subtle);
+    border: 1px solid var(--led-accent-border);
+    color: var(--led-accent);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.brand-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 16px;
+    align-items: center;
+}
+
+.brand-card-item {
+    background: var(--led-paper);
+    border: 1px solid var(--led-line);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.22s ease;
+    min-height: 86px;
+}
+
+.brand-card-item:hover {
+    border-color: var(--led-accent);
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.brand-logo-img {
+    max-height: 30px;
+    max-width: 100px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: all 0.22s ease;
+}
+
+.brand-card-item:hover .brand-logo-img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.brand-subtext {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--led-muted);
+    margin-top: 6px;
+    letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   4. INTERACTIVE 3840Hz BROADCAST CAMERA COMPARISON TOOL
+   ========================================================================== */
+.led-slider-module {
+    background: var(--led-console-bg);
+    border: 1px solid var(--led-console-border);
+    border-radius: 24px;
+    padding: clamp(24px, 4vw, 44px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.slider-controls-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.slider-controls-header h3 {
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.03em;
+}
+
+.slider-controls-header h3 em {
+    font-family: var(--font-italic);
+    font-style: italic;
+    color: #ff8c5a;
+}
+
+.slider-controls-header p {
+    color: #9ea3a0;
+    font-size: 0.92rem;
+    margin: 0;
+    max-width: 600px;
+}
+
+.slider-instruction {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.comparison-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 21 / 9;
+    border-radius: 16px;
+    overflow: hidden;
+    user-select: none;
+    border: 1px solid var(--led-console-border);
+    background: #000000;
+}
+
+@media (max-width: 768px) {
+    .comparison-wrapper {
+        aspect-ratio: 16 / 10;
+    }
+}
+
+.comparison-image-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.comparison-image-layer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 1920Hz Side (Right) */
+.layer-before {
+    position: relative;
+}
+
+/* Simulation overlay for 1920Hz flicker */
+.flicker-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.45) 0px,
+        rgba(0, 0, 0, 0.45) 3px,
+        transparent 3px,
+        transparent 6px
+    );
+    pointer-events: none;
+}
+
+/* 3840Hz Side (Left - Clipped) */
+.layer-after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+    z-index: 2;
+    border-right: 2px solid #ffffff;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.layer-after img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200%; /* Keeps image aspect ratio correct when clipped at 50% */
+    max-width: none;
+}
+
+/* Draggable Handle */
+.slider-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: #ffffff;
+    z-index: 5;
+    cursor: ew-resize;
+    transform: translateX(-50%);
+}
+
+.slider-handle-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #141716;
+    font-size: 0.95rem;
+    gap: 4px;
+}
+
+/* Side Labels */
+.slider-badge-side {
+    position: absolute;
+    top: 20px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    z-index: 4;
+}
+
+.badge-3840 {
+    left: 20px;
+    background: rgba(34, 197, 94, 0.95);
+    color: #ffffff;
+    box-shadow: 0 4px 16px rgba(34, 197, 94, 0.4);
+}
+
+.badge-1920 {
+    right: 20px;
+    background: rgba(220, 38, 38, 0.85);
+    color: #ffffff;
+    box-shadow: 0 4px 16px rgba(220, 38, 38, 0.4);
+}
+
+/* Comparison Feature Highlights */
+.comparison-points-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 28px;
+}
+
+.point-card {
+    background: var(--led-console-card);
+    border: 1px solid var(--led-console-border);
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.point-card h4 {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.point-card h4 i {
+    color: #ff8c5a;
+}
+
+.point-card p {
+    color: #9ea3a0;
+    font-size: 0.86rem;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* ==========================================================================
+   5. LIVE ACTIVE LED RESOLUTION & POWER ENGINEERING CALCULATOR
+   ========================================================================== */
+.calculator-card-wrapper {
+    background: #ffffff;
+    border: 1px solid var(--led-line);
+    border-radius: 24px;
+    padding: clamp(28px, 4.5vw, 48px);
+    box-shadow: 0 12px 40px rgba(22, 24, 23, 0.05);
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: start;
+}
+
+@media (max-width: 992px) {
+    .calculator-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.calc-inputs-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.calc-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.calc-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calc-label-row label {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--led-ink);
+}
+
+.calc-slider-val {
+    font-family: 'Space Grotesk', monospace, sans-serif;
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: var(--led-accent);
+}
+
+.calc-range-slider {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--led-line);
+    outline: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.calc-range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--led-accent);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(217, 101, 56, 0.4);
+    transition: transform 0.15s ease;
+}
+
+.calc-range-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.18);
+}
+
+.pitch-select-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.pitch-option-btn {
+    background: var(--led-paper);
+    border: 1px solid var(--led-line);
+    padding: 12px 10px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pitch-option-btn strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--led-ink);
+}
+
+.pitch-option-btn span {
+    font-size: 0.72rem;
+    color: var(--led-muted);
+}
+
+.pitch-option-btn.active,
+.pitch-option-btn:hover {
+    border-color: var(--led-accent);
+    background: var(--led-accent-subtle);
+}
+
+.pitch-option-btn.active strong {
+    color: var(--led-accent);
+}
+
+/* Calculator Output Readout */
+.calc-results-col {
+    background: var(--led-paper-warm);
+    border: 1px solid var(--led-line);
+    border-radius: 18px;
+    padding: 28px;
+}
+
+.results-header-tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--led-line);
+    margin-bottom: 20px;
+}
+
+.results-header-tag span {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--led-muted);
+}
+
+.ready-badge {
+    background: #22c55e;
+    color: #ffffff;
+    font-size: 0.74rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 50px;
+}
+
+.results-metric-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.calc-metric-card {
+    background: #ffffff;
+    border: 1px solid var(--led-line);
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.calc-metric-card label {
+    display: block;
+    font-size: 0.74rem;
+    color: var(--led-muted);
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.calc-metric-card .calc-data {
+    font-family: 'Space Grotesk', monospace, sans-serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--led-ink);
+}
+
+.calc-metric-card .calc-data small {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--led-accent);
+}
+
+.calc-cta-box {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.calc-cta-box p {
+    font-size: 0.84rem;
+    color: var(--led-muted);
+    margin: 0 0 16px 0;
+}
+
+/* ==========================================================================
+   6. VERIFIED REAL PROJECTS GALLERY (Zero AI Slop)
+   ========================================================================== */
+.projects-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 28px;
+}
+
+.project-showcase-card {
+    background: #ffffff;
+    border: 1px solid var(--led-line);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.24s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-showcase-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--led-accent);
+    box-shadow: 0 16px 40px rgba(217, 101, 56, 0.12);
+}
+
+.project-thumb-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #141716;
+}
+
+.project-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-showcase-card:hover .project-thumb-img {
+    transform: scale(1.04);
+}
+
+.project-tag-pill {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(22, 24, 23, 0.85);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.project-card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-card-italic-kicker {
+    font-family: var(--font-italic);
+    font-style: italic;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--led-accent);
+    margin-bottom: 6px;
+}
+
+.project-card-content h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--led-ink);
+    margin: 0 0 12px 0;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+}
+
+.project-card-content p {
+    font-size: 0.9rem;
+    color: var(--led-muted);
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    flex: 1;
+}
+
+.project-spec-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 16px;
+    border-top: 1px solid var(--led-line);
+}
+
+.spec-chip {
+    background: var(--led-paper);
+    border: 1px solid var(--led-line);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: var(--led-ink);
+}
+
+/* ==========================================================================
+   7. 5-STAGE TURNKEY ACTIVE LED LIFECYCLE
+   ========================================================================== */
+.lifecycle-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    position: relative;
+}
+
+.lifecycle-card {
+    background: #ffffff;
+    border: 1px solid var(--led-line);
+    border-radius: 16px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.22s ease;
+}
+
+.lifecycle-card:hover {
+    border-color: var(--led-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.lifecycle-num {
+    font-family: 'Space Grotesk', monospace, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--led-accent-border);
+    margin-bottom: 14px;
+    line-height: 1;
+}
+
+.lifecycle-card:hover .lifecycle-num {
+    color: var(--led-accent);
+}
+
+.lifecycle-card h3 {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--led-ink);
+    margin: 0 0 10px 0;
+    letter-spacing: -0.02em;
+}
+
+.lifecycle-card p {
+    font-size: 0.86rem;
+    color: var(--led-muted);
+    line-height: 1.58;
+    margin: 0;
+}
+
+/* ==========================================================================
+   8. SPEC COMPARISON MATRIX (COB vs SMD vs MicroLED)
+   ========================================================================== */
+.table-responsive-box {
+    overflow-x: auto;
+    background: #ffffff;
+    border: 1px solid var(--led-line);
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.led-spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+.led-spec-table th {
+    background: var(--led-paper-warm);
+    padding: 18px 22px;
+    text-align: left;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--led-ink);
+    border-bottom: 1px solid var(--led-line);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.led-spec-table td {
+    padding: 16px 22px;
+    font-size: 0.9rem;
+    color: var(--led-text);
+    border-bottom: 1px solid var(--led-line);
+    vertical-align: middle;
+}
+
+.led-spec-table tr:last-child td {
+    border-bottom: none;
+}
+
+.led-spec-table tr:hover td {
+    background: var(--led-paper);
+}
+
+.tech-featured-cell {
+    background: var(--led-accent-subtle) !important;
+    font-weight: 700;
+    color: var(--led-accent) !important;
+}
+
+/* ==========================================================================
+   9. FREQUENTLY ASKED QUESTIONS (Warm Editorial Accordion)
+   ========================================================================== */
+.faq-accordion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.led-faq-item {
+    background: #ffffff;
+    border: 1px solid var(--led-line);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.led-faq-item[open] {
+    border-color: var(--led-accent);
+    box-shadow: 0 8px 24px rgba(217, 101, 56, 0.08);
+}
+
+.led-faq-item summary {
+    padding: 20px 24px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--led-ink);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.led-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.led-faq-item summary::after {
+    content: '\f078';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 0.85rem;
+    color: var(--led-muted);
+    transition: transform 0.22s ease;
+}
+
+.led-faq-item[open] summary::after {
+    transform: rotate(180deg);
+    color: var(--led-accent);
+}
+
+.led-faq-content {
+    padding: 0 24px 22px 24px;
+    font-size: 0.94rem;
+    line-height: 1.68;
+    color: var(--led-muted);
+}
+
+.led-faq-content strong {
+    color: var(--led-ink);
+}
+
+/* ==========================================================================
+   10. BOTTOM CONSULTATION BANNER
+   ========================================================================== */
+.consultation-cta-box {
+    background: var(--led-ink);
+    color: #ffffff;
+    border-radius: 24px;
+    padding: clamp(36px, 5vw, 60px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.cta-text-left h3 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 850;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.03em;
+}
+
+.cta-text-left h3 em {
+    font-family: var(--font-italic);
+    font-style: italic;
+    color: #ff8c5a;
+}
+
+.cta-text-left p {
+    color: #9ea3a0;
+    font-size: 1.05rem;
+    margin: 0;
+    max-width: 620px;
+}
+
+.cta-buttons-right {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .led-hero-grid {
+        grid-template-columns: 1fr;
+    }
+}

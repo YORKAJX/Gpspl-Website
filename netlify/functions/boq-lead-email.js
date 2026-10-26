@@ -72,11 +72,11 @@ exports.handler = async (event) => {
     }
 
     if (!process.env.ENABLE_BOQ_AUTO_EMAIL || process.env.ENABLE_BOQ_AUTO_EMAIL !== 'true') {
-        return json(503, { configured: false, sent: false, error: 'BOQ email delivery is disabled.' }, baseHeaders);
+        return json(503, { configured: false, sent: false }, baseHeaders);
     }
 
     if (!process.env.RESEND_API_KEY) {
-        return json(503, { configured: false, sent: false, error: 'BOQ email delivery is not configured.' }, baseHeaders);
+        return json(503, { configured: false, sent: false }, baseHeaders);
     }
 
     if (Number(event.headers['content-length'] || 0) > 50000) {
@@ -156,6 +156,6 @@ exports.handler = async (event) => {
 
         return json(200, { sent: true }, baseHeaders);
     } catch (error) {
-        return json(502, { sent: false, error: 'BOQ email delivery failed. Please retry.' }, baseHeaders);
+        return json(502, { sent: false }, baseHeaders);
     }
 };

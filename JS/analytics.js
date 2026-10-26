@@ -476,7 +476,7 @@
         document.addEventListener("gpspl:lead-form-error", (event) => {
             track("form_submit_failed", {
                 lead_status: "ERROR",
-                error_message: event.detail?.error_message || event.detail?.error_message || event.detail?.error_message || event.detail?.error || "Unknown validation/network error"
+                error_message: event.detail?.error_message || event.detail?.error || "Unknown validation/network error"
             });
         });
     }

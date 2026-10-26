@@ -46,10 +46,25 @@
         "index.html": [
             "best AV integrator",
             "best AV integrator India",
+            "pan india av distributor wholesale pricing",
+            "tier 1 oem technology distributor india",
+            "direct oem av hardware supplier nehru place delhi",
+            "commercial av equipment wholesale b2b supplier india",
+            "gem portal av tender authorized oem supplier",
             "turnkey AV solution",
             "turnkey AV solutions provider India",
             "conference room AV solutions",
+            "4K AI auto tracking PTZ camera India",
+            "PTZ camera conference room setup",
+            "ceiling tile microphone array Shure Sennheiser",
+            "gym sound system installation cost India",
+            "fitness studio commercial audio system",
+            "commercial gym fitness sound system supplier india",
+            "digital podium smart classroom India",
+            "smart classroom digital podium wholesale price india",
+            "university lecture capture system India",
             "turnkey AV system integrator India",
+            "turnkey av system integrator delhi gurgaon noida bangalore mumbai",
             "top AV system integrators India",
             "technology distributor India",
             "boardroom video conferencing setup",
@@ -63,6 +78,7 @@
             "auditorium sound system installation",
             "active LED video wall supplier India",
             "commercial AV distribution",
+            "end to end AV solution provider Delhi NCR",
             "AV BOQ calculator India",
             "conference room BOQ estimate",
             "AV cost calculator India",
@@ -83,52 +99,73 @@
             "AV AMC support"
         ],
         "conference-room-solutions.html": [
-            "conference room AV solutions",
-            "conference room AV solution",
-            "turnkey conference room AV solutions",
-            "best conference room AV solutions",
-            "conference room AV integrator Delhi NCR",
-            "boardroom AV setup",
-            "meeting room AV solutions",
-            "video conferencing room setup",
-            "Teams Zoom room setup",
-            "conference room audio video",
-            "wireless presentation system"
+            "conference room AV solutions india",
+            "turnkey executive boardroom av setup",
+            "microsoft teams rooms certified hardware integrator",
+            "zoom rooms native hardware setup delhi gurgaon",
+            "shure mxa920 ceiling tile microphone price india",
+            "sennheiser teamconnect ceiling 2 installer delhi",
+            "biamp tesira qsys core audio conferencing dsp",
+            "4k dual eye auto framing speaker tracking ptz camera",
+            "barco clickshare cx-50 wireless presentation supplier",
+            "boardroom acoustic echo cancellation aec fix",
+            "motorized cable cubby pop up box hdmi type c",
+            "crestron 10 inch touch panel boardroom automation",
+            "corporate boardroom av setup cost india",
+            "ceiling speaker setup for corporate office room",
+            "best conference room av solutions delhi ncr",
+            "gpspl boardroom integration"
         ],
         "unified-communication-collaboration.html": ["video conferencing solutions India", "unified communication integrator", "hybrid meeting room solutions", "PTZ camera meeting room", "collaboration room AV"],
         "video-wall-solutions.html": ["video wall supplier India", "video wall integrator Delhi", "control room video wall", "LCD video wall systems", "commercial display wall"],
-        "active-led-wall-solutions.html": ["active LED wall supplier India", "active LED wall installer India", "LED video wall installation", "indoor LED wall Delhi NCR", "outdoor LED display supplier", "fine pitch LED wall", "LED wall AMC"],
+        "active-led-wall-solutions.html": [
+            "active led wall supplier india",
+            "active led wall installer india",
+            "p1.2 p1.5 p1.8 indoor active led video wall cost per sq ft india",
+            "cob vs smd active led screen for boardroom reception",
+            "novastar video wall controller processor supplier delhi",
+            "curved active led wall for news channel tv studio",
+            "active led video wall gem registered vendor",
+            "fine pitch led display wall delhi ncr",
+            "active led wall amc maintenance services",
+            "led video wall installation gurgaon noida"
+        ],
         "digital-signage-solutions.html": ["digital signage solutions India", "digital signage display supplier", "menu board display", "commercial signage screen", "retail digital signage"],
         "interactive-display-solutions.html": [
-            "smart board price india",
-            "smartboard for school",
-            "smart board price",
-            "interactive flat panel display price",
-            "4k smart board for classroom",
-            "interactive touch screen board for teaching",
-            "smart class board price",
-            "digital smart board for teaching",
-            "smart board supplier india",
-            "interactive display for classrooms",
-            "LG CreateBoard TR3ER",
-            "Samsung Flip",
-            "Maxhub interactive panel",
-            "IFPD installation"
+            "smart board price in india",
+            "4k interactive flat panel display price 65 75 86 98 inch",
+            "interactive touch screen board for teaching price",
+            "digital smart board for school classroom cbse",
+            "smart board on heavy duty mobile trolley cart",
+            "interactive flat panel with windows 11 ops i5 i7",
+            "lg createboard 75 inch price india",
+            "samsung wac interactive display dealer delhi",
+            "maxhub interactive panel price india",
+            "optical bonding zero lag stylus smart board",
+            "smart board for online teaching and coaching institute",
+            "gem portal interactive flat panel rate contract",
+            "smart board distributor delhi nehru place",
+            "touch screen tv for office presentation",
+            "interactive flat panel installation support"
         ],
         "smart-classroom-solutions.html": [
-            "smart class solutions",
-            "smart classroom solutions india",
-            "smart class setup",
-            "smart class setup cost india",
-            "digital classroom setup",
-            "smartboard for school",
-            "interactive flat panel for classroom",
-            "smart classroom provider",
-            "education av solutions india",
-            "college smart classroom setup",
-            "digital classroom AV integrator",
-            "lecture capture classroom",
-            "CBSE smart class setup"
+            "smart class solutions india",
+            "smart classroom setup cost india 2026",
+            "turnkey smart class solutions for schools",
+            "digital classroom setup cost cbse icse",
+            "smart classroom interactive flat panel 75 86 inch",
+            "smart classroom digital podium with touch screen mic",
+            "ai auto tracking ptz camera for smart classroom",
+            "voice lift sound system for university lecture hall",
+            "smart classroom boq tender specification",
+            "gem registered smart classroom vendor delhi ncr",
+            "university lecture theatre audio visual setup",
+            "hybrid classroom lecture capture recording streaming",
+            "smart board for coaching institute price",
+            "smart classroom integrators delhi ncr noida gurgaon",
+            "digital podium price in india",
+            "ceiling speaker setup for school classroom",
+            "education av solutions provider india"
         ],
         "hotel-hospitality-av-solutions.html": [
             "hotel audio visual solutions",
@@ -151,10 +188,60 @@
         "kvm-av-switching-solutions.html": ["ATEN KVM supplier India", "KVM switching solutions", "AV switching matrix", "control room KVM", "enterprise KVM extender"],
         "it-infrastructure-solutions.html": ["IT infrastructure solutions India", "server storage networking supplier", "enterprise IT hardware", "UPS and networking support", "IT AMC Delhi"],
         "ups-power-backup-solutions.html": ["UPS supplier India", "Luminous UPS solutions", "online UPS for AV IT", "power backup for conference room", "UPS AMC support"],
-        "amc-maintenance-services.html": ["AV AMC services India", "AV maintenance support", "video wall AMC", "conference room AMC", "technical support 48 to 72 hours"],
+        "amc-maintenance-services.html": [
+            "av amc services delhi ncr",
+            "conference room audio visual amc contract",
+            "video wall amc maintenance cost india",
+            "4 hour emergency onsite av sla support",
+            "crestron programming engineer on demand delhi",
+            "qsys dsp audio calibration amc",
+            "shure ceiling microphone troubleshooting and repair",
+            "polycom cisco video conferencing amc",
+            "novastar led video wall spare module maintenance",
+            "resident av technician outsourcing delhi gurgaon noida",
+            "boardroom audio echo cancellation repair service",
+            "preventive av maintenance audit checklist corporate",
+            "multi brand av system maintenance support"
+        ],
+        "av-system-integrator-delhi-ncr.html": [
+            "best av system integrator delhi ncr",
+            "top av solution provider in delhi nehru place",
+            "commercial av contractors delhi ncr gurgaon noida",
+            "boardroom av setup cyber city gurugram",
+            "conference room video conferencing noida sector 62",
+            "active led wall manufacturer supplier delhi",
+            "auditorium acoustic sound system contractor delhi",
+            "ceiling tile microphone installer delhi ncr",
+            "command and control center video wall integrator delhi",
+            "gem registered av contractor new delhi",
+            "turnkey corporate boardroom boq planning delhi",
+            "av-over-ip dante audio integrator delhi ncr",
+            "shure sennheiser crestron dealer delhi"
+        ],
         "av-system-integrator-gurgaon.html": ["AV system integrator Gurgaon", "Cyber City AV integrator", "boardroom setup Gurgaon", "Teams Rooms Gurugram", "Active LED wall Gurgaon", "Crestron automation Gurgaon"],
         "active-led-wall-supplier-noida.html": ["Active LED wall supplier Noida", "LED video wall Noida Sector 62", "fine pitch LED display Greater Noida", "NovaStar LED controller Noida", "outdoor LED wall Noida Expressway"],
-        "industries.html": ["turnkey AV solutions India", "hospital AV integration India", "hotel audio visual solutions", "smart classroom university setup", "corporate boardroom AV integrator", "hospitality Active LED displays", "command center video wall", "technology distributor India"],
+        "industries.html": [
+            "turnkey AV solutions India",
+            "gym sound system installation cost india",
+            "fitness studio multi zone audio system",
+            "commercial gym pro sound setup delhi ncr",
+            "gym active led video wall cardio cinema",
+            "fitness instructor wireless headset microphone",
+            "commercial gym av integrator delhi gurgaon noida",
+            "corporate boardroom AV integrator",
+            "4k ai auto tracking ptz camera price india",
+            "boardroom ptz camera speaker tracking setup",
+            "conference room ceiling mic and ptz camera integrator",
+            "smart classroom university setup",
+            "digital podium with touch screen price india",
+            "university lecture theater audio visual boq",
+            "hospital AV integration India",
+            "hotel audio visual solutions",
+            "hospitality Active LED displays",
+            "command center video wall",
+            "end to end av solution provider india",
+            "technology distributor India"
+        ],
         "samsung-business-tv-befx-h2.html": ["Samsung Business TV BEFX-H2", "Samsung Commercial TV India", "BE43FH", "BE50FH", "BE55FH", "BE65FH", "BE75FH", "BE85FH", "LH43BEFH8GULXL", "Samsung VXT CMS", "PlayLock PIN"],
         "samsung-commercial-display-qbc.html": ["Samsung QBC Series", "Samsung QB43C", "Samsung QB55C", "Samsung QB65C", "Samsung QB75C", "Samsung QB85C", "LH55QBCEBGCLXL", "Samsung digital signage India", "MagicINFO S10"],
         "samsung-commercial-display-qmc.html": ["Samsung QMC Series", "Samsung QM43C", "Samsung QM55C", "Samsung QM65C", "Samsung QM75C", "Samsung QM85C", "LH55QMCEBGCLXL", "24/7 commercial display India", "500 nits signage"],
@@ -163,16 +250,83 @@
         "lg-createboard-tr3er.html": ["LG CreateBoard TR3ER", "LG interactive flat panel", "LG TR3ER smart board", "smart classroom panel"],
         "blog/samsung-business-tv-commercial-signage-guide.html": ["Samsung Business TV guide", "Samsung BEFX-H2", "Samsung QBC signage", "Samsung QMC 24/7", "LH55QBCEBGCLXL", "LH55QMCEBGCLXL", "commercial display Delhi NCR"],
         "blog/hospital-healthcare-av-integration-ot-streaming-telemedicine-guide.html": ["hospital AV integration", "operation theater 4K streaming", "telemedicine AV setup", "medical AV system integrator", "surgical video transmission OT", "hospital digital signage India", "doctor seminar room AV"],
-        "contact.html": ["request AV quote", "AV system integrator contact Delhi", "GPSPL enquiry", "technology supply quote India", "conference room quote"]
+        "contact.html": ["request AV quote", "AV system integrator contact Delhi", "GPSPL enquiry", "technology supply quote India", "conference room quote"],
+        "command-control-center-av-solutions.html": [
+            "command control center av solutions",
+            "noc soc video wall setup delhi ncr",
+            "control room video wall solutions india",
+            "24 7 mission critical video wall integration",
+            "scada video wall solutions",
+            "kvm over ip matrix switcher",
+            "gem registered control room supplier",
+            "disaster management war room av"
+        ],
+        "auditorium-av-solutions.html": [
+            "auditorium av solutions",
+            "auditorium av integration india",
+            "line array sound system installation",
+            "jbl pro line array delhi ncr",
+            "ease 3d acoustic modeling",
+            "auditorium rt60 acoustic treatment",
+            "auditorium stage active led wall",
+            "cpwd gem compliant auditorium av"
+        ],
+        "av-technology-distribution.html": [
+            "av technology distributor india",
+            "commercial av wholesale supplier",
+            "samsung commercial display distributor",
+            "lg business tv wholesale delhi ncr",
+            "harman pro audio distributor india",
+            "crestron distributor india",
+            "system integrator deal registration b2b",
+            "gem tender maf letters av"
+        ],
+        "coworking-space-av-solutions.html": [
+            "coworking space av solutions",
+            "shared workspace meeting room av",
+            "hot desk meeting pod av setup",
+            "byod wireless conferencing coworking",
+            "digital signage for coworking spaces"
+        ]
     };
 
     const pageSeo = {
+        "experience-center-av-solutions.html": { title: "Experience Center & Studio AV Delhi NCR, India | GPSPL",
+            description: "Plan AV for experience centers, showrooms and studios: LED displays, audio, interactive content and control. Discuss equipment supply or turnkey integration.", type: "service" },
+        "av-project-discovery-consultation.html": { title: "AV Project Consultation & Turnkey BOQ Delhi NCR | GPSPL",
+            description: "Discuss equipment supply, room upgrades or complete turnkey AV projects in Delhi NCR and across India. Share your sector, city, quantities and project scope.", type: "service" },
         "lg-commercial-tv-nu88c.html": { title: "LG NU88C Commercial TV Delhi NCR & India | GPSPL",
             description: "LG NU88C commercial TV enquiries for Delhi NCR and Pan-India buyers. Request model-specific availability, pricing, delivery and installation scope.", type: "product" },
         "lg-commercial-tv-ua831c.html": { title: "LG UA831C Commercial TV Delhi NCR & India | GPSPL",
             description: "LG UA831C commercial TV enquiries for Delhi NCR and Pan-India buyers. Explore model details and request pricing, stock and installation scope.", type: "product" },
-        "av-technology-distribution.html": { title: "AV Distribution Delhi NCR & Pan-India Supply | GPSPL",
-            description: "Commercial AV distribution from New Delhi for Delhi NCR and Pan-India buyers. Request equipment pricing, stock availability and project delivery terms.", type: "service" },
+        "command-control-center-av-solutions.html": {
+            title: "Command & Control Room AV Delhi NCR, India | GPSPL",
+            description: "Discuss control room video walls, KVM switching, operator displays, power backup and integration for NOC and SOC projects in Delhi NCR and across India.",
+            type: "service",
+            serviceType: "Command and control center, NOC, SOC, and mission-critical AV systems integration",
+            image: "/assests/images/hero/video-technologies-boardroom.webp"
+        },
+        "auditorium-av-solutions.html": {
+            title: "Auditorium Sound & AV Delhi NCR, Pan-India | GPSPL",
+            description: "Plan auditorium audio, microphones, stage displays, presentation and AV control. Discuss venue capacity, acoustics and installation in Delhi NCR or across India.",
+            type: "service",
+            serviceType: "Auditorium audio-visual integration, line array sound, and acoustic engineering",
+            image: "/assests/images/products/professional-audio-solutions.webp"
+        },
+        "av-technology-distribution.html": {
+            title: "AV Distribution Delhi NCR & Pan-India Supply | GPSPL",
+            description: "Commercial AV distribution from New Delhi for Delhi NCR and Pan-India buyers. Request equipment pricing, stock availability and project delivery terms.",
+            type: "service",
+            serviceType: "Commercial AV technology distribution and B2B wholesale supply",
+            image: "/assests/images/milestones/harman-best-regional-distributor-2024.jpeg"
+        },
+        "coworking-space-av-solutions.html": {
+            title: "Coworking & Shared Office AV Delhi NCR, India | GPSPL",
+            description: "Plan meeting rooms, collaboration displays, conferencing and room booking for coworking spaces in Delhi NCR and India. Discuss supply or complete installation.",
+            type: "service",
+            serviceType: "Coworking and flexible workspace audio-visual solutions",
+            image: "/assests/images/products/conference-room-solutions.webp"
+        },
         "blog/samsung-business-tv-commercial-signage-guide.html": {
             title: "Samsung Business TV & Commercial Signage Guide: BEFX, QBC & QMC Series Compared (2026) | GPSPL",
             description: "Complete 2026 guide comparing Samsung Business TV BEFX-H2, Crystal UHD QBC, and 24/7 Heavy-Duty QMC displays with SKU codes, VXT CMS, and MagicINFO S10.",
@@ -241,15 +395,15 @@
             image: "/assests/images/products/conference-room-solutions.webp"
         },
         "unified-communication-collaboration.html": {
-            title: "Video Conferencing & UC Collaboration Systems | GPSPL",
-            description: "GPSPL is a leading video conferencing solution provider and unified communication collaboration integrator for enterprise hybrid workspaces.",
+            title: "Video Conferencing & Collaboration Delhi NCR | GPSPL",
+            description: "Plan video conferencing, meeting room cameras, microphones, displays and collaboration systems. Discuss Teams, Zoom and BYOD requirements in Delhi NCR and India.",
             type: "service",
             serviceType: "Unified communication and collaboration systems",
             image: "/assests/images/products/conference-room-solutions.webp"
         },
         "video-wall-solutions.html": {
-            title: "Control Room Solutions & Video Wall Supplier India | GPSPL",
-            description: "GPSPL designs and supplies control room solutions and multi-display LCD/LED video walls for command centers, lobbies, and mission-critical monitoring.",
+            title: "Video Wall Solutions Delhi NCR & Pan-India | GPSPL",
+            description: "Plan video walls for control rooms, retail, corporate and public spaces. Discuss display technology, controllers, mounting, installation and maintenance.",
             type: "service",
             serviceType: "Video wall solutions and display systems",
             image: "/assests/images/hero/video-wall-command-center.webp"
@@ -262,8 +416,8 @@
             image: "/assests/images/products/active-led-video-wall.webp"
         },
         "active-led-wall-installation.html": {
-            title: "LED Video Wall Installer India | Calibration & AMC | GPSPL",
-            description: "GPSPL is a leading LED video wall installer in India, offering structure coordination, pixel pitch planning, display calibration, and long-term AMC support.",
+            title: "Active LED Wall Installation Delhi NCR & India | GPSPL",
+            description: "Discuss LED wall site surveys, mounting, power, processing, commissioning and support for indoor and outdoor projects in Delhi NCR and across India.",
             type: "service",
             serviceType: "Active LED wall installation and commissioning",
             image: "/assests/images/products/active-led-video-wall.webp"
@@ -276,15 +430,15 @@
             image: "/assests/images/products/active-led-video-wall.webp"
         },
         "digital-signage-solutions.html": {
-            title: "Digital Signage Solutions & Commercial Display Systems | GPSPL",
-            description: "GPSPL supplies, installs, and supports digital signage solutions including menu boards, hotel TVs, lobby screens, and media player scheduling systems.",
+            title: "Digital Signage Solutions Delhi NCR & India | GPSPL",
+            description: "Plan commercial digital signage for shops, hotels, offices and campuses. Request displays, players, content management and installation for single or multiple sites.",
             type: "service",
             serviceType: "Digital signage and commercial display solutions",
             image: "/assests/images/products/digital-signage-solutions.webp"
         },
         "interactive-display-solutions.html": {
-            title: "Smart Board Price India | 4K Interactive Flat Panel for Schools & Smart Class | GPSPL",
-            description: "Get direct OEM pricing on smart boards & interactive flat panels in India. Authorized distributor for LG CreateBoard, Samsung Flip, BenQ & Maxhub with Pan-India installation, teacher training, and instant BOQ.",
+            title: "Interactive Displays & Smart Boards Delhi NCR | GPSPL",
+            description: "Explore interactive displays and smart boards for teaching, meeting rooms and training. Discuss sizes, software, supply and installation in Delhi NCR and India.",
             type: "service",
             serviceType: "Smart board and interactive flat panel display solutions",
             image: "/assests/images/products/interactive-display-solutions.webp"
@@ -318,52 +472,52 @@
             image: "/assests/images/products/professional-audio-solutions.webp"
         },
         "video-technologies.html": {
-            title: "PTZ Cameras & Video Conferencing Technologies | GPSPL",
-            description: "PTZ cameras, video conferencing cameras, display systems, active LED, and video technologies supplied and supported by GPSPL.",
+            title: "PTZ Cameras & Video Conferencing Delhi NCR | GPSPL",
+            description: "Discuss PTZ cameras for conference rooms, classrooms and auditoriums. Request model-specific supply, mounting and integration for Delhi NCR and Pan-India projects.",
             type: "service",
             serviceType: "Video technologies and visual communication systems",
             image: "/assests/images/hero/video-technologies-boardroom.webp"
         },
         "control-automation.html": {
-            title: "Meeting Room Automation & AV Control Systems India | GPSPL",
-            description: "Meeting room automation and AV control systems for touch panels, Crestron, AMX, lighting, and source switching integrations by GPSPL.",
+            title: "AV Control & Room Automation Delhi NCR, India | GPSPL",
+            description: "Plan AV control for meeting rooms, auditoriums and hospitality spaces. Discuss touch panels, switching, user workflows and integration in Delhi NCR and India.",
             type: "service",
             serviceType: "Control systems and AV automation",
             image: "/assests/images/hero/av.webp"
         },
         "kvm-av-switching-solutions.html": {
-            title: "KVM & AV Switching Solutions | ATEN Systems | GPSPL",
-            description: "KVM switching, AV routing, source selection, signal extension and ATEN AV switching solutions for command rooms, meeting rooms and enterprise environments.",
+            title: "KVM & AV Switching Solutions Delhi NCR, India | GPSPL",
+            description: "Discuss KVM, AV switching, signal distribution and operator connectivity for offices and control rooms. Request supply or integration in Delhi NCR and India.",
             type: "service",
             serviceType: "KVM and AV switching solutions"
         },
         "it-infrastructure-solutions.html": {
-            title: "IT Infrastructure Solutions & Integrator Delhi | GPSPL",
-            description: "GPSPL is an enterprise IT infrastructure system integrator in Delhi NCR for servers, storage, networking, racks, online UPS, and lifecycle IT support.",
+            title: "IT Infrastructure Solutions Delhi NCR & India | GPSPL",
+            description: "Discuss networking, computing and IT infrastructure for offices, institutions and multi-site projects. Request equipment supply, upgrades or project integration.",
             type: "service",
             serviceType: "IT infrastructure and networking solutions"
         },
         "ups-power-backup-solutions.html": {
-            title: "UPS & Power Backup Solutions | Luminous | GPSPL",
-            description: "UPS, batteries, inverter backup, online UPS, offline UPS and power protection solutions for AV rooms, IT rooms and enterprise spaces by GPSPL.",
+            title: "UPS & Power Backup Supply Delhi NCR, India | GPSPL",
+            description: "Discuss UPS capacity, runtime and power backup for AV, IT and control rooms. Share your load, site and quantity for supply or installation in Delhi NCR and India.",
             type: "service",
             serviceType: "UPS and power backup solutions"
         },
         "peripheral-solutions.html": {
-            title: "Wacom, Creative Displays & IT Peripheral Solutions | GPSPL",
-            description: "Wacom Cintiq, DTH, DTC, creative pen displays, workstation accessories, IT peripherals, RAM, SSD, printers and business computing support by GPSPL.",
+            title: "Creative & Business Peripherals Delhi NCR | GPSPL",
+            description: "Discuss creative displays, input devices and business peripherals for studios, education and offices. Request model-specific supply pricing in Delhi NCR and India.",
             type: "service",
             serviceType: "Creative display and peripheral solutions"
         },
         "projector-accessories.html": {
-            title: "Projectors, Screens, Mounts & Accessories | GPSPL",
-            description: "Business projectors, Epson projectors, presentation systems, screens, mounts, HDMI accessories, cables and installation support from GPSPL.",
+            title: "Projectors & AV Accessories Delhi NCR, India | GPSPL",
+            description: "Discuss projectors, lenses, screens, mounting and AV accessories for offices, education and venues. Share room size and quantities for supply or installation.",
             type: "service",
             serviceType: "Projectors and presentation accessories"
         },
         "amc-maintenance-services.html": {
-            title: "AV AMC & Maintenance Services India | GPSPL",
-            description: "AV AMC and maintenance support for meeting rooms, displays, LED walls, audio systems, UPS, IT infrastructure, warranty coordination and troubleshooting.",
+            title: "AV AMC & Maintenance Delhi NCR, India | GPSPL",
+            description: "Discuss AV maintenance, troubleshooting, upgrades and support for installed systems. Share equipment details and site location to confirm coverage and AMC scope.",
             type: "service",
             serviceType: "AMC maintenance and lifecycle support"
         },
@@ -383,8 +537,8 @@
             type: "product"
         },
         "industries.html": {
-            title: "Turnkey AV Solutions by Industry | Corporate, Education, Hospital & Hotel AV | GPSPL",
-            description: "Turnkey audio visual solutions and authorized technology distribution for Corporate Boardrooms, Education & Smart Classrooms, Hospitals & Healthcare, Hotels & Hospitality, Auditoriums & Command Centers across India.",
+            title: "AV Solutions by Industry Delhi NCR & India | GPSPL",
+            description: "Explore AV supply, upgrades and turnkey projects for offices, education, hotels, healthcare, retail, government, BFSI, property, media, automotive and gyms.",
             type: "webpage"
         },
         "av-system-integrator-gurgaon.html": {
@@ -824,219 +978,20 @@
         };
     }
 
-    function faqSchema(url, key = "") {
-        if (key === "index.html") {
-            return {
-                "@type": "FAQPage",
-                "@id": `${url}#faq`,
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "Who is the best AV integrator in Delhi NCR and India?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Global Peripheral Solution Pvt. Ltd. (GPSPL, Estd. 1997) is widely recognized as the best AV integrator and turnkey solution provider in Delhi NCR and India. With over 28 years of industry leadership and 1,500+ enterprise installations, GPSPL delivers complete conference room AV solutions, Active LED video walls, auditoriums, and command centers with direct Tier-1 OEM partnerships (Samsung, LG, Crestron, Shure, Poly, Harman) and a guaranteed 4-hour on-site SLA."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What is included in a turnkey conference room AV solution?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "A turnkey conference room AV solution from GPSPL includes commercial 4K anti-glare displays or fine-pitch Active LED video walls, AI auto-tracking 4K PTZ cameras, Shure/Sennheiser beamforming ceiling microphone arrays, DSP acoustic echo cancellation, Crestron touch panel meeting room automation, BYOD wireless screen sharing, equipment racks, structured cabling, end-to-end commissioning, and lifecycle AMC support."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Why choose a single turnkey AV solution provider instead of separate vendors?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Choosing a single turnkey AV solution provider like GPSPL prevents vendor coordination friction, component incompatibility, and inflated middleman costs. As an authorized distributor and certified system integrator, GPSPL manages the full lifecycle from acoustic engineering and direct OEM hardware supply to on-site installation, programming, calibration, and SLA maintenance under one roof."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Can GPSPL prepare an AV BOQ before a site survey?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yes. The GPSPL AV BOQ calculator gives a room-wise planning estimate using room type, size, seating and workflow. Final model, cable route, mounting, exact quantity and commercials are confirmed after site validation."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What is the typical setup cost for a corporate conference room or boardroom in India?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Small huddle rooms (3–6 pax) cost ₹1.40L to ₹2.60L, mid-size conference rooms (10–18 pax) range from ₹3.20L to ₹6.50L, and executive boardrooms (20–40 pax) with ceiling beamforming microphone arrays and touch automation range from ₹9.50L to ₹25.00L+."
-                        }
-                    }
-                ]
-            };
-        }
-
-        if (key === "conference-room-solutions.html") {
-            return {
-                "@type": "FAQPage",
-                "@id": `${url}#faq`,
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "Who is the best conference room AV integrator in Delhi NCR & India?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "GPSPL is the premier conference room AV integrator in Delhi NCR and Pan-India. We deliver certified turnkey meeting room solutions with native Microsoft Teams Rooms and Zoom Rooms integration, Shure ceiling beamforming microphones, commercial 4K displays, Crestron automation, and 4-hour on-site SLA."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What is included in a turnkey conference room AV solution?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "A turnkey conference room AV solution includes 4K commercial displays or Active LED walls, PTZ auto-tracking cameras, beamforming ceiling microphone arrays with DSP echo cancellation, Crestron touch panel automation, wireless screen sharing, equipment rack integration, structured cabling, commissioning, and AMC maintenance."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "How much does a professional corporate conference room setup cost in India?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Small huddle rooms (4-8 pax) range from ₹1.30 Lakhs to ₹2.60 Lakhs. Mid-size conference rooms (10-18 pax) range from ₹2.75 Lakhs to ₹5.50 Lakhs. Executive boardrooms (20-40 pax) with Shure ceiling mics, dual displays, and Crestron automation range from ₹6.15 Lakhs to ₹18 Lakhs+."
-                        }
-                    }
-                ]
-            };
-        }
-
-        if (key === "audio-visual-integration.html") {
-            return {
-                "@type": "FAQPage",
-                "@id": `${url}#faq`,
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "Who is the best AV integrator in Delhi NCR and India?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Global Peripheral Solution Pvt. Ltd. (GPSPL, Estd. 1997) is rated as India's best AV integrator, having executed 1,500+ enterprise installations for corporate boardrooms, auditoriums, active LED walls, 24/7 command centers, and smart campuses with direct OEM pricing and guaranteed 4-hour SLA."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What is a turnkey AV solution and why choose GPSPL?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "A turnkey AV solution covers end-to-end consulting, direct OEM hardware supply, acoustic modeling, rigid structural installation, DSP audio tuning, control automation programming, user training, and lifecycle SLA maintenance under a single contract."
-                        }
-                    }
-                ]
-            };
-        }
-
-        if (key === "smart-classroom-solutions.html") {
-            return {
-                "@type": "FAQPage",
-                "@id": `${url}#faq`,
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "What is the cost of setting up a smart class in India?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "In India (2026), a basic smart class setup with a 65-inch 4K Interactive Flat Panel costs ₹1.25L to ₹1.65L. A standard K-12 classroom with a 75-inch panel and audio costs ₹1.85L to ₹2.60L. University hybrid lecture halls with 86-inch panels, digital podiums, and lecture capture range from ₹3.50L to ₹7.50L+."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What equipment is included in a turnkey smart classroom solution?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "A turnkey smart classroom solution from GPSPL includes 4K UHD interactive flat panels (LG, Samsung, Maxhub, BenQ), digital podiums, teacher collar microphones, classroom speakers, auto-tracking PTZ cameras for hybrid teaching, UPS backup, and teacher orientation training."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Which is the best smart class solutions provider and installer in India?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Global Peripheral Solution Pvt. Ltd. (GPSPL, Estd. 1997) is one of India's leading education AV system integrators and authorized technology distributors with 28+ years of experience, thousands of classrooms deployed, Tier-1 OEM pricing, and SLA-backed AMC support."
-                        }
-                    }
-                ]
-            };
-        }
-
-        if (key === "interactive-display-solutions.html") {
-            return {
-                "@type": "FAQPage",
-                "@id": `${url}#faq`,
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "What is the price of a smart board for schools and classrooms in India?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "In India (2026), 4K Interactive Flat Panel smart boards range from ₹85,000 to ₹1,15,000 for 65-inch, ₹1,25,000 to ₹1,65,000 for 75-inch, and ₹1,95,000 to ₹2,80,000 for 86-inch displays depending on brands (LG CreateBoard, Samsung Flip, Maxhub, BenQ) and OPS PC options."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Which smart board size is best for a school classroom or coaching room?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "For small batches (15-25 students), a 65-inch panel is ideal. For standard K-12 classrooms (30-50 students), a 75-inch panel is standard. For university lecture rooms (50-80+ students), an 86-inch or dual-display configuration is recommended."
-                        }
-                    }
-                ]
-            };
-        }
-
-        if (key === "hotel-hospitality-av-solutions.html") {
-            return {
-                "@type": "FAQPage",
-                "@id": `${url}#faq`,
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "What audio visual solutions does GPSPL provide for hotels and luxury resorts?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "GPSPL provides turnkey hospitality AV integration: Active LED video walls for grand ballrooms and banquets, high-headroom line-array sound systems, Dante multi-zone BGM for restaurants and lobbies, LG Pro:Centric and Samsung hospitality TVs, and meeting room video conferencing."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What equipment is included in a hotel banquet and grand ballroom AV setup?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "A hotel banquet AV setup includes fine-pitch indoor Active LED video walls (P1.86 to P2.5), line-array speakers, digital audio consoles, wireless Shure/Sennheiser microphones, motorized partition audio switching matrices, and centralized iPad automation."
-                        }
-                    }
-                ]
-            };
-        }
-
-        return {
-            "@type": "FAQPage",
-            "@id": `${url}#faq`,
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Does GPSPL provide both product supply and installation?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. GPSPL supplies technology products and also supports design, integration, installation, commissioning, warranty coordination, AMC and after-sales support."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Where does GPSPL provide AV and IT solutions?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "GPSPL is based in New Delhi and supports AV, display, audio, collaboration, automation, IT infrastructure and AMC requirements across India."
-                    }
-                }
-            ]
-        };
+    function faqSchema(url) {
+        const items = document.querySelectorAll('[class*="faq-item"], #faq-preview details, .faq-section details, [data-faq]');
+        const seen = new Set();
+        const mainEntity = [];
+        items.forEach(item => {
+            const question = item.querySelector('summary, [class*="faq-question"], [data-faq-question]');
+            const answer = item.querySelector('[class*="faq-answer"], [class*="faq-content"], [data-faq-answer], p');
+            const name = question?.textContent?.replace(/\s+/g, ' ').trim();
+            const text = answer?.textContent?.replace(/\s+/g, ' ').trim();
+            if (!name || !text || seen.has(name)) return;
+            seen.add(name);
+            mainEntity.push({ '@type': 'Question', name, acceptedAnswer: { '@type': 'Answer', text } });
+        });
+        return mainEntity.length ? { '@type': 'FAQPage', '@id': url + '#faq', mainEntity } : null;
     }
 
     function productSchema(cfg, url, image) {
@@ -1183,11 +1138,14 @@
         ];
 
         if (cfg.type === "service") {
-            graph.push(serviceSchema(key, cfg, url), faqSchema(url, key));
+            graph.push(serviceSchema(key, cfg, url));
+            const faq = faqSchema(url);
+            if (faq) graph.push(faq);
         }
 
         if (cfg.type === "faq") {
-            graph.push(faqSchema(url, key));
+            const faq = faqSchema(url);
+            if (faq) graph.push(faq);
         }
 
         if (cfg.type === "partners" || cfg.type === "catalog") {
@@ -1199,7 +1157,9 @@
         }
 
         if (key === "index.html") {
-            graph.push(boqCalculatorSchema(url), faqSchema(url, key));
+            graph.push(boqCalculatorSchema(url));
+            const faq = faqSchema(url);
+            if (faq) graph.push(faq);
         }
 
         let schema = document.getElementById("gpspl-seo-jsonld");

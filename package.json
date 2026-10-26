@@ -5,11 +5,11 @@
   "type": "module",
   "description": "Static GPSPL website with SEO, analytics and production asset tooling.",
   "scripts": {
-    "build": "node --check JS/analytics.js && node --check JS/form-validation.js && node --check JS/room-configurator.js && node -e \"console.log('Production build validation successful')\"",
+    "build": "node --check JS/analytics.js && node --check JS/form-validation.js && node --check JS/room-configurator.js && node --check JS/active-led-experience.js && node --check JS/conference-room-experience.js && node --check JS/av-integration-experience.js && node --check JS/interactive-display-experience.js && node --check JS/smart-classroom-experience.js && node --check JS/amc-experience.js && node --check JS/delhi-ncr-experience.js && node -e \"console.log('Production build validation successful')\"",
     "start": "node server.js",
     "serve": "node server.js",
     "dev": "node server.js",
-    "check:js": "node --check JS/analytics.js && node --check JS/form-validation.js && node --check JS/room-configurator.js && node --check scripts/optimize-images.mjs && node --check scripts/qa-room-configurator.mjs",
+    "check:js": "node --check JS/analytics.js && node --check JS/form-validation.js && node --check JS/room-configurator.js && node --check JS/active-led-experience.js && node --check JS/conference-room-experience.js && node --check JS/av-integration-experience.js && node --check JS/interactive-display-experience.js && node --check JS/smart-classroom-experience.js && node --check JS/amc-experience.js && node --check JS/delhi-ncr-experience.js && node --check scripts/optimize-images.mjs && node --check scripts/qa-room-configurator.mjs",
     "qa:boq": "node scripts/qa-room-configurator.mjs",
     "qa:boq:100": "node scripts/qa-room-configurator-100.mjs",
     "optimize:images": "node scripts/optimize-images.mjs --source=assests/images --out=assests/images/optimized --quality=78",

@@ -89,6 +89,16 @@ document.addEventListener("DOMContentLoaded", () => {
     function initFooterState() {
         const currentPath = window.location.pathname === "/" ? "/index.html" : window.location.pathname;
         document.body.classList.toggle("compact-footer", currentPath !== "/index.html");
+
+        // Deduplicate floating cluster and sticky bar if page already had inline elements
+        const clusters = document.querySelectorAll('.floating-contact-cluster');
+        if (clusters.length > 1) {
+            for (let i = 1; i < clusters.length; i++) clusters[i].remove();
+        }
+        const stickies = document.querySelectorAll('.mobile-sticky-action-bar');
+        if (stickies.length > 1) {
+            for (let i = 1; i < stickies.length; i++) stickies[i].remove();
+        }
     }
 
     function initProductDetailHeroStack() {
@@ -392,26 +402,35 @@ document.addEventListener("DOMContentLoaded", () => {
             experience.classList.remove('industry-cycle');
             void experience.offsetWidth;
             experience.classList.add('industry-cycle');
-        }
 
-        function start() {
-            clearInterval(timer);
-            timer = setInterval(() => showIndustry(activeIndex + 1), 6500);
+            const currentTab = tabs[activeIndex];
+            const tabContainer = experience.querySelector('.industry-tabs');
+            if (currentTab && tabContainer) {
+                const tabLeft = currentTab.offsetLeft;
+                const tabWidth = currentTab.offsetWidth;
+                const containerWidth = tabContainer.offsetWidth;
+                const scrollLeft = tabContainer.scrollLeft;
+                if (tabLeft < scrollLeft || tabLeft + tabWidth > scrollLeft + containerWidth) {
+                    tabContainer.scrollTo({
+                        left: Math.max(0, tabLeft - 24),
+                        behavior: 'smooth'
+                    });
+                }
+            }
         }
 
         tabs.forEach((tab, index) => {
-            tab.addEventListener('click', () => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
                 showIndustry(index);
-                start();
             });
         });
 
-        experience.addEventListener('mouseenter', () => clearInterval(timer));
-        experience.addEventListener('mouseleave', start);
-        experience.addEventListener('focusin', () => clearInterval(timer));
-        experience.addEventListener('focusout', start);
         showIndustry(0);
-        start();
+        const tabContainer = experience.querySelector('.industry-tabs');
+        if (tabContainer) {
+            tabContainer.scrollLeft = 0;
+        }
     }
 
     function initLeadForms() {
@@ -509,7 +528,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const encodedMsg = encodeURIComponent(customMessage);
         document.querySelectorAll('.floating-whatsapp, .whatsapp-button, a[href*="wa.me"]').forEach(btn => {
-            btn.href = `https://wa.me/918920830377?text=${encodedMsg}`;
+            // Preserve the product, industry or calculator brief authored by the page.
+            // Only supply a default message for a bare WhatsApp contact link.
+            const href = btn.getAttribute('href');
+            if (href) {
+                try {
+                    const url = new URL(href, window.location.href);
+                    if (url.hostname !== 'wa.me') return;
+                    if ((url.searchParams.get('text') || '').trim()) return;
+                    url.searchParams.set('text', customMessage);
+                    btn.href = url.href;
+                } catch (_) {
+                    return;
+                }
+            } else {
+                btn.href = `https://wa.me/918920830377?text=${encodedMsg}`;
+            }
         });
     }
 

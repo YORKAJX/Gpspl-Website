@@ -17,6 +17,15 @@
 /404.html
   X-Robots-Tag: noindex, nofollow
 
+/404
+  X-Robots-Tag: noindex, nofollow
+
+/thank-you
+  X-Robots-Tag: noindex, nofollow
+
+/tools/*
+  X-Robots-Tag: noindex
+
 /thank-you.html
   X-Robots-Tag: noindex, nofollow
 
@@ -53,7 +62,9 @@
   Cache-Control: public, max-age=604800
 
 /modules/*
+  X-Robots-Tag: noindex
   Cache-Control: public, max-age=604800
 
 /data/*
+  X-Robots-Tag: noindex
   Cache-Control: no-cache

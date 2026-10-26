@@ -1,16 +1,8 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Googlebot-Image
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
 User-agent: *
 Allow: /
-Disallow: /thank-you
-Disallow: /404
 Disallow: /tmp/
+
+# Thank-you and error pages remain crawlable so crawlers can read noindex.
+# Keep CSS, JavaScript, images and shared modules available for rendering.
 
 Sitemap: https://gpspl.co.in/sitemap.xml

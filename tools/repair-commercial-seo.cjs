@@ -83,7 +83,7 @@ for (const [file, [title, description, heading]] of Object.entries(pages)) {
   head = head.replace(/<meta\s+(name="description"|property="og:description"|name="twitter:description")\s+content="[^>]*>/g, (_, attr) => `<meta ${attr} content="${escape(description)}">`);
   head = head.replace(/(<meta\s+(?:property="og:title"|name="twitter:title")\s+content=")[^"]*(")/g, (_, a, b) => a + escape(title) + b);
   html = head + html.slice(headEnd);
-  if (heading) html = html.replace(/(<h1\b[^>]*>)[\s\S]*?(<\/h1>)/i, (_, a, b) => a + escape(heading) + b);
+  if (heading && !["conference-room-solutions.html", "smart-classroom-solutions.html", "hotel-hospitality-av-solutions.html", "audio-visual-integration.html"].includes(file)) html = html.replace(/(<h1\b[^>]*>)[\s\S]*?(<\/h1>)/i, (_, a, b) => a + escape(heading) + b);
   if (coverageTopics[file]) {
     const topic = escape(coverageTopics[file]);
     const coverage = `<section class="product-range-section section-padding" id="regional-project-coverage" aria-labelledby="regional-coverage-heading">
@@ -98,7 +98,7 @@ for (const [file, [title, description, heading]] of Object.entries(pages)) {
       </div>
     </section>`;
     const existingCoverage = /<section\b[^>]*id="regional-project-coverage"[\s\S]*?<\/section>/;
-    html = existingCoverage.test(html) ? html.replace(existingCoverage, coverage) : html.replace('</main>', coverage + '\n</main>');
+    html = existingCoverage.test(html) ? html.replace(existingCoverage, coverage) : html.includes('</main>') ? html.replace('</main>', coverage + '\n</main>') : html.replace('</body>', coverage + '\n</body>');
   }
   fs.writeFileSync(target, html.replace(/\r\n/g, '\n').replace(/[ \t]+$/gm, ''));
   const key = file.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

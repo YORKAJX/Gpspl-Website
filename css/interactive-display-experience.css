@@ -1,0 +1,989 @@
+/* ==========================================================================
+   GPSPL INTERACTIVE DISPLAY & SMART BOARD SUITE
+   - Design System: Warm Alabaster Paper (#faf8f5), Carbon Ink (#161817), Warm Terracotta (#d96538)
+   - Typography: Plus Jakarta Sans + Playfair Display (Luxury Editorial Italics) + Space Grotesk
+   - Zero card whitespace bugs, zero artificial boxiness
+   ========================================================================== */
+
+:root {
+    --ifp-paper: #faf8f5;
+    --ifp-paper-card: #ffffff;
+    --ifp-paper-warm: #f3efe9;
+    --ifp-paper-tint: #eae5dc;
+    --ifp-line: #e3ded6;
+    --ifp-line-soft: #ede8e1;
+    --ifp-ink: #161817;
+    --ifp-text: #191b1a;
+    --ifp-muted: #5e6460;
+    --ifp-muted-light: #8e9490;
+    
+    --ifp-accent: #d96538;
+    --ifp-accent-hover: #c25327;
+    --ifp-accent-subtle: #fbf0eb;
+    --ifp-accent-border: #f0c9ba;
+
+    --ifp-emerald: #10b981;
+    --ifp-emerald-subtle: #ecfdf5;
+    --ifp-emerald-border: #a7f3d0;
+
+    --ifp-blue: #0284c7;
+    --ifp-blue-subtle: #e0f2fe;
+
+    --ifp-console-bg: #141716;
+    --ifp-console-card: #1c201e;
+    --ifp-console-border: #2e3531;
+    --ifp-console-text: #f4f6f5;
+
+    --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-italic: 'Playfair Display', Georgia, serif;
+    --font-mono: 'Space Grotesk', monospace;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body.ifp-page {
+    background-color: var(--ifp-paper) !important;
+    color: var(--ifp-text) !important;
+    font-family: var(--font-body) !important;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body.ifp-page * {
+    box-sizing: border-box;
+}
+
+body.ifp-page em,
+body.ifp-page .editorial-italic {
+    font-family: var(--font-italic) !important;
+    font-style: italic !important;
+    font-weight: 500 !important;
+    color: var(--ifp-accent) !important;
+}
+
+/* Container */
+.ifp-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ==========================================================================
+   HERO SECTION & LIVE 4K TELEMETRY CONSOLE
+   ========================================================================== */
+.ifp-hero {
+    position: relative;
+    padding: clamp(60px, 8vw, 100px) 0 clamp(48px, 6vw, 80px);
+    background: radial-gradient(ellipse 90% 60% at 50% -10%, #fff7f2 0%, var(--ifp-paper) 100%);
+    border-bottom: 1px solid var(--ifp-line);
+    overflow: hidden;
+}
+
+.ifp-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.95fr);
+    gap: clamp(32px, 5vw, 64px);
+    align-items: center;
+}
+
+.ifp-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--ifp-accent-subtle);
+    border: 1px solid var(--ifp-accent-border);
+    color: var(--ifp-accent);
+    padding: 7px 16px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.ifp-kicker-beacon {
+    width: 8px;
+    height: 8px;
+    background: var(--ifp-accent);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(217, 101, 56, 0.7);
+    animation: ifpBeaconPulse 2s infinite;
+}
+
+@keyframes ifpBeaconPulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(217, 101, 56, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(217, 101, 56, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(217, 101, 56, 0); }
+}
+
+.ifp-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.3rem, 4.5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: var(--ifp-ink);
+    margin: 0 0 22px;
+}
+
+.ifp-hero-sub {
+    font-size: clamp(1.02rem, 1.25vw, 1.18rem);
+    color: var(--ifp-muted);
+    line-height: 1.7;
+    margin: 0 0 32px;
+    max-width: 620px;
+}
+
+.ifp-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 36px;
+}
+
+.ifp-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--ifp-accent);
+    color: #ffffff !important;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 20px rgba(217, 101, 56, 0.28);
+}
+
+.ifp-btn-primary:hover {
+    background: var(--ifp-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(217, 101, 56, 0.35);
+}
+
+.ifp-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--ifp-paper-card);
+    color: var(--ifp-ink) !important;
+    border: 1px solid var(--ifp-line);
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.ifp-btn-secondary:hover {
+    background: var(--ifp-paper-warm);
+    border-color: var(--ifp-accent-border);
+}
+
+.ifp-trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    padding-top: 24px;
+    border-top: 1px solid var(--ifp-line-soft);
+}
+
+.ifp-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--ifp-text);
+}
+
+.ifp-trust-item i {
+    color: var(--ifp-emerald);
+}
+
+/* 4K Live Telemetry Console (Dark Contrast Architectural Element) */
+.ifp-telemetry-console {
+    background: var(--ifp-console-bg);
+    border: 1px solid var(--ifp-console-border);
+    border-radius: 20px;
+    padding: 28px;
+    color: var(--ifp-console-text);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+.ifp-console-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--ifp-console-border);
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+}
+
+.ifp-console-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ifp-emerald);
+}
+
+.ifp-console-status-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--ifp-emerald);
+    border-radius: 50%;
+}
+
+.ifp-console-res {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ifp-muted-light);
+}
+
+/* Size Switcher Pills */
+.ifp-size-switcher {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: var(--ifp-console-card);
+    padding: 6px;
+    border-radius: 12px;
+    border: 1px solid var(--ifp-console-border);
+    margin-bottom: 24px;
+}
+
+.ifp-size-btn {
+    background: transparent;
+    border: none;
+    color: var(--ifp-muted-light);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.95rem;
+    padding: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.ifp-size-btn:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.ifp-size-btn.active {
+    background: var(--ifp-accent);
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(217, 101, 56, 0.4);
+}
+
+/* Console Metrics Grid */
+.ifp-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.ifp-metric-card {
+    background: var(--ifp-console-card);
+    border: 1px solid var(--ifp-console-border);
+    border-radius: 12px;
+    padding: 14px 16px;
+}
+
+.ifp-metric-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ifp-muted-light);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.ifp-metric-val {
+    font-family: var(--font-mono);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.ifp-metric-sub {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    margin-top: 2px;
+}
+
+.ifp-console-summary {
+    background: rgba(217, 101, 56, 0.1);
+    border: 1px solid rgba(217, 101, 56, 0.3);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 0.84rem;
+    color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ifp-console-summary i {
+    color: var(--ifp-accent);
+    font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   OEM BRAND AUTHORIZATION MARQUEE
+   ========================================================================== */
+.ifp-brands-section {
+    padding: 36px 0;
+    background: var(--ifp-paper-warm);
+    border-bottom: 1px solid var(--ifp-line);
+}
+
+.ifp-brands-label {
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ifp-muted);
+    margin-bottom: 20px;
+}
+
+.ifp-brands-track {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(20px, 4vw, 48px);
+}
+
+.ifp-brand-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--ifp-paper-card);
+    border: 1px solid var(--ifp-line);
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: var(--ifp-text);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.ifp-brand-item img {
+    height: 22px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* ==========================================================================
+   PRODUCT PORTFOLIO CARDS (PERMANENTLY FIXING BLANK VOID DEFECT)
+   ========================================================================== */
+.ifp-portfolio-section {
+    padding: clamp(60px, 7vw, 90px) 0;
+    background: var(--ifp-paper);
+}
+
+.ifp-section-header {
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto clamp(36px, 5vw, 54px);
+}
+
+.ifp-section-header .section-eyebrow {
+    color: var(--ifp-accent);
+    font-weight: 800;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.ifp-section-header h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--ifp-ink);
+    margin: 0 0 14px;
+}
+
+.ifp-section-header p {
+    color: var(--ifp-muted);
+    font-size: 1rem;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Clean, Balanced 3-Column Grid without stretching defects */
+.ifp-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 28px;
+    align-items: start; /* Prevents artificial card stretching */
+}
+
+.ifp-product-card {
+    background: var(--ifp-paper-card);
+    border: 1px solid var(--ifp-line);
+    border-radius: 18px;
+    padding: 28px 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.ifp-product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+    border-color: var(--ifp-accent-border);
+}
+
+.ifp-card-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.ifp-category-badge {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 12px;
+    border-radius: 999px;
+}
+
+.ifp-badge-red { background: #fee2e2; color: #b91c1c; }
+.ifp-badge-blue { background: #e0f2fe; color: #0369a1; }
+.ifp-badge-purple { background: #ede9fe; color: #6d28d9; }
+.ifp-badge-emerald { background: #d1fae5; color: #047857; }
+
+.ifp-oem-logo {
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: var(--ifp-muted);
+}
+
+.ifp-card-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--ifp-ink);
+    margin: 0 0 10px;
+    line-height: 1.3;
+}
+
+.ifp-card-desc {
+    font-size: 0.88rem;
+    color: var(--ifp-muted);
+    line-height: 1.55;
+    margin: 0 0 18px;
+}
+
+/* Feature Pill Tags Grid */
+.ifp-pill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.ifp-tag {
+    background: var(--ifp-paper-warm);
+    border: 1px solid var(--ifp-line);
+    color: var(--ifp-text);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* Bullet Feature Specs */
+.ifp-spec-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    font-size: 0.84rem;
+    color: var(--ifp-text);
+}
+
+.ifp-spec-list li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.ifp-spec-list li i {
+    color: var(--ifp-emerald);
+    font-size: 0.95rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.ifp-card-cta-row {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--ifp-line-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ifp-price-indicative {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--ifp-ink);
+}
+
+.ifp-price-indicative span {
+    font-size: 0.72rem;
+    color: var(--ifp-muted-light);
+    display: block;
+    font-family: var(--font-body);
+    font-weight: 500;
+}
+
+.ifp-card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--ifp-accent);
+    color: #ffffff !important;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.ifp-card-btn:hover {
+    background: var(--ifp-accent-hover);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   INTERACTIVE SIZER & AVIXA DISCAS SIZING TOOL
+   ========================================================================== */
+.ifp-sizer-section {
+    padding: clamp(60px, 7vw, 90px) 0;
+    background: var(--ifp-paper-warm);
+    border-top: 1px solid var(--ifp-line);
+    border-bottom: 1px solid var(--ifp-line);
+}
+
+.ifp-sizer-card {
+    background: var(--ifp-paper-card);
+    border: 1px solid var(--ifp-line);
+    border-radius: 20px;
+    padding: clamp(28px, 4vw, 44px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+}
+
+.ifp-sizer-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.9fr);
+    gap: clamp(32px, 4vw, 50px);
+    align-items: center;
+}
+
+.ifp-control-group {
+    margin-bottom: 24px;
+}
+
+.ifp-control-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.ifp-control-label {
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: var(--ifp-ink);
+}
+
+.ifp-control-badge {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--ifp-accent);
+}
+
+.ifp-slider {
+    width: 100%;
+    height: 7px;
+    border-radius: 5px;
+    background: var(--ifp-line);
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.ifp-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--ifp-accent);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(217, 101, 56, 0.4);
+    transition: transform 0.15s ease;
+}
+
+.ifp-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+/* Radio buttons for OS and Mounting */
+.ifp-options-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.ifp-radio-chip {
+    border: 1px solid var(--ifp-line);
+    background: var(--ifp-paper-warm);
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--ifp-text);
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.ifp-radio-chip.selected {
+    background: var(--ifp-accent-subtle);
+    border-color: var(--ifp-accent);
+    color: var(--ifp-accent);
+}
+
+/* Sizer Result Monitor */
+.ifp-result-box {
+    background: var(--ifp-console-bg);
+    border: 1px solid var(--ifp-console-border);
+    border-radius: 16px;
+    padding: 28px;
+    color: #ffffff;
+}
+
+.ifp-result-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ifp-emerald);
+    margin-bottom: 12px;
+}
+
+.ifp-result-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 6px;
+}
+
+.ifp-result-scope {
+    font-size: 0.86rem;
+    color: #94a3b8;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.ifp-result-table {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+    border-top: 1px solid var(--ifp-console-border);
+    padding-top: 16px;
+}
+
+.ifp-res-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.84rem;
+}
+
+.ifp-res-row span:first-child {
+    color: #94a3b8;
+}
+
+.ifp-res-row span:last-child {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.ifp-price-card {
+    background: rgba(217, 101, 56, 0.15);
+    border: 1px solid var(--ifp-accent-border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ifp-price-tag {
+    font-family: var(--font-mono);
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   3-TIER INSTITUTIONAL SPECTRUM (Coaching to University)
+   ========================================================================== */
+.ifp-tiers-section {
+    padding: clamp(60px, 7vw, 90px) 0;
+    background: var(--ifp-paper);
+}
+
+.ifp-tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 26px;
+}
+
+.ifp-tier-card {
+    background: var(--ifp-paper-card);
+    border: 1px solid var(--ifp-line);
+    border-radius: 18px;
+    padding: 32px 26px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.ifp-tier-card.featured-tier {
+    border-color: var(--ifp-accent);
+    box-shadow: 0 8px 30px rgba(217, 101, 56, 0.12);
+}
+
+.ifp-tier-pill {
+    position: absolute;
+    top: -12px;
+    left: 26px;
+    background: var(--ifp-accent);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 999px;
+}
+
+.ifp-tier-header {
+    margin-bottom: 18px;
+}
+
+.ifp-tier-tier {
+    font-size: 0.76rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ifp-muted);
+}
+
+.ifp-tier-title {
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--ifp-ink);
+    margin: 4px 0 8px;
+}
+
+.ifp-tier-budget {
+    font-family: var(--font-mono);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--ifp-accent);
+}
+
+.ifp-tier-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    font-size: 0.88rem;
+    color: var(--ifp-text);
+}
+
+.ifp-tier-specs li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.ifp-tier-specs li i {
+    color: var(--ifp-emerald);
+    font-size: 1rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   PHOTO GALLERY OF VERIFIED SITES
+   ========================================================================== */
+.ifp-gallery-section {
+    padding: clamp(60px, 7vw, 90px) 0;
+    background: var(--ifp-paper-warm);
+    border-top: 1px solid var(--ifp-line);
+}
+
+.ifp-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.ifp-gallery-card {
+    background: var(--ifp-paper-card);
+    border: 1px solid var(--ifp-line);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.ifp-gallery-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.ifp-gallery-card-body {
+    padding: 16px;
+}
+
+.ifp-gallery-tag {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--ifp-accent);
+    margin-bottom: 4px;
+    display: block;
+}
+
+.ifp-gallery-card-body h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ifp-ink);
+    margin: 0 0 6px;
+}
+
+.ifp-gallery-card-body p {
+    font-size: 0.82rem;
+    color: var(--ifp-muted);
+    margin: 0;
+}
+
+/* ==========================================================================
+   EDITORIAL FAQ ACCORDION
+   ========================================================================== */
+.ifp-faq-section {
+    padding: clamp(60px, 7vw, 90px) 0;
+    background: var(--ifp-paper);
+    border-top: 1px solid var(--ifp-line);
+}
+
+.ifp-faq-list {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ifp-faq-item {
+    background: var(--ifp-paper-card);
+    border: 1px solid var(--ifp-line);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+}
+
+.ifp-faq-item.active {
+    border-color: var(--ifp-accent-border);
+}
+
+.ifp-faq-question {
+    padding: 20px 24px;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ifp-ink);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.ifp-faq-icon {
+    font-size: 0.88rem;
+    color: var(--ifp-accent);
+    transition: transform 0.25s ease;
+}
+
+.ifp-faq-item.active .ifp-faq-icon {
+    transform: rotate(180deg);
+}
+
+.ifp-faq-answer {
+    padding: 0 24px 20px;
+    font-size: 0.94rem;
+    color: var(--ifp-muted);
+    line-height: 1.65;
+    display: none;
+}
+
+.ifp-faq-item.active .ifp-faq-answer {
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .ifp-hero-grid,
+    .ifp-sizer-grid {
+        grid-template-columns: 1fr;
+    }
+}

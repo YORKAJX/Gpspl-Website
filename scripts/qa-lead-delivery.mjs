@@ -12,7 +12,15 @@ const event = (phone, ip) => ({ httpMethod: 'POST', headers: { 'content-type': '
 try {
   delete process.env.RESEND_API_KEY;
   globalThis.fetch = async () => { throw Error('Unexpected network call'); };
-  assert.equal((await handler(event('9123456701', 'qa-missing'))).statusCode, 503);
+  const missing = await handler(event('9123456701', 'qa-missing'));
+  assert.equal(missing.statusCode, 503);
+  assert.equal(JSON.parse(missing.body).code, 'EMAIL_DELIVERY_UNAVAILABLE');
+  assert.ok(JSON.parse(missing.body).deliveryFailures.includes('resend_not_configured'));
+  assert.ok(!missing.body.includes('mock-key'));
+  globalThis.fetch = async () => ({ ok: true, json: async () => ({ success: 'true' }) });
+  const fallback = await handler(event('9123456709', 'qa-fallback'));
+  assert.equal(fallback.statusCode, 200);
+  assert.equal(JSON.parse(fallback.body).deliveryId, 'formsubmit-accepted');
   process.env.RESEND_API_KEY = 'mock-key-for-test-only';
   globalThis.fetch = async () => ({ ok: false, status: 429, json: async () => ({ error: 'provider rejection' }) });
   assert.equal((await handler(event('9123456702', 'qa-retry'))).statusCode, 503);
@@ -21,8 +29,9 @@ try {
   const retry = await handler(event('9123456702', 'qa-retry'));
   assert.equal(retry.statusCode, 200);
   assert.equal(JSON.parse(retry.body).deliveryId, 'mock-receipt');
+  const callsAfterReceipt = calls;
   assert.equal(JSON.parse((await handler(event('9123456702', 'qa-retry'))).body).isDuplicate, true);
-  assert.equal(calls, 1);
+  assert.equal(calls, callsAfterReceipt);
   globalThis.fetch = async () => { throw Error('Mock network outage'); };
   assert.equal((await handler(event('9123456703', 'qa-network'))).statusCode, 503);
   globalThis.fetch = async () => ({ ok: true, status: 200, json: async () => ({}) });
@@ -63,19 +72,19 @@ async function frontendCase(file, response) {
   assert.equal(successes, accepted ? 1 : 0);
   if (!accepted) { assert.equal(button.disabled, false); assert.equal(status.className, 'form-submit-status is-error'); }
 }
-for (const file of ['JS/form-validation.js', 'outputs/lead-delivery-repair/form-validation.js']) {
+for (const file of ['JS/form-validation.js']) {
   for (const response of [new Error('Network failed'), { ok: false, data: { error: 'Provider failed' } },
     { ok: true, data: {} }, { ok: true, data: { success: true, skipped: true } }, { ok: true, data: { success: true } }]) await frontendCase(file, response);
 }
-for (const file of ['index.html', 'outputs/lead-delivery-repair/index.html']) {
+for (const file of ['index.html']) {
   const html = fs.readFileSync(file, 'utf8');
   for (const [, attrs, body] of html.matchAll(/<script([^>]*)>([\s\S]*?)<\/script>/gi)) {
     if (!attrs.includes('application/ld+json') && body.trim()) new vm.Script(body);
   }
 }
 // Exercise the custom quote acceptance boundary without running page UI or network.
-for (const file of ['JS/room-configurator.js', 'outputs/lead-delivery-repair/room-configurator.js']) {
-  const text = fs.readFileSync(file, 'utf8');
+for (const file of ['JS/room-configurator.js']) {
+  const text = fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n');
   const start = text.indexOf("    try {\n      const response = await fetch('/.netlify/functions/submit-enquiry'");
   const end = text.indexOf('\n    // 2. Backup', start);
   assert.ok(start >= 0 && end > start, `${file}: quote acceptance boundary exists`);

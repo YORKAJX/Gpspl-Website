@@ -3,12 +3,15 @@
    ========================================================================== */
 
 #gpspl-ai-chat-root,
-.gpspl-chat-launcher {
+.gpspl-chat-launcher,
+#gpspl-proactive-callout,
+.gpspl-chat-window {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
     pointer-events: none !important;
 }
+
     --chat-primary: #ef3438;
     --chat-primary-dark: #cc2226;
     --chat-dark: #071526;
@@ -717,7 +720,7 @@
         right: auto !important;
     }
     #gpspl-ai-chat-root {
-        bottom: 20px !important;
+        bottom: 75px !important;
         right: 16px !important;
         left: auto !important;
     }

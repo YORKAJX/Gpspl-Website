@@ -1,0 +1,1211 @@
+/* ==========================================================================
+   GPSPL CONFERENCE ROOM & BOARDROOM AV ENTERPRISE SUITE
+   - Aesthetic: Architectural Warm Paper (#faf8f5), Carbon Ink (#161817), Warm Terracotta (#d96538)
+   - Typography: Plus Jakarta Sans paired with Playfair Display Luxury Editorial Italics
+   - ZERO generic dark-blue AI slop
+   - Interactive Telemetry Console & Beamforming Audio Coverage Visualizer
+   - Live Turnkey Conference Room AV & BOQ Sizing Calculator
+   ========================================================================== */
+
+:root {
+    /* Architectural Paper & Ink System (Homepage & Active LED Equivalent) */
+    --cr-paper: #faf8f5;
+    --cr-paper-card: #ffffff;
+    --cr-paper-warm: #f2eee7;
+    --cr-paper-tint: #eae5dc;
+    --cr-line: #e3ded6;
+    --cr-line-soft: #ede8e1;
+    --cr-ink: #161817;
+    --cr-text: #191b1a;
+    --cr-muted: #5e6460;
+    --cr-muted-light: #8e9490;
+    
+    /* Warm Terracotta & Copper Accents */
+    --cr-accent: #d96538;
+    --cr-accent-hover: #c25327;
+    --cr-accent-subtle: #fbf0eb;
+    --cr-accent-border: #f0c9ba;
+
+    /* High-Tech Contrast Module Colors (For Architectural Telemetry Monitor) */
+    --cr-console-bg: #141716;
+    --cr-console-card: #1c201e;
+    --cr-console-border: #2e3531;
+    --cr-console-text: #f4f6f5;
+
+    /* Typography */
+    --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-italic: 'Playfair Display', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Page Reset & Global Scope */
+body.conference-page {
+    background-color: var(--cr-paper) !important;
+    color: var(--cr-text) !important;
+    font-family: var(--font-body) !important;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body.conference-page * {
+    box-sizing: border-box;
+}
+
+/* Universal Editorial Italics & Kickers */
+body.conference-page em,
+body.conference-page .cr-italic,
+body.conference-page .studio-headline em,
+body.conference-page .section-title-wrapper h2 em {
+    font-family: var(--font-italic) !important;
+    font-style: italic !important;
+    font-weight: 600 !important;
+    color: var(--cr-accent) !important;
+    letter-spacing: -0.01em;
+    display: inline-block;
+    margin: 0 0.18em;
+}
+
+.cr-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.cr-kicker-bar {
+    display: inline-block;
+    width: 28px;
+    height: 3px;
+    background: var(--cr-accent);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.cr-kicker-italic {
+    font-family: var(--font-italic);
+    font-style: italic;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--cr-accent);
+    letter-spacing: 0.02em;
+}
+
+.cr-kicker-badge {
+    background: var(--cr-accent-subtle);
+    border: 1px solid var(--cr-accent-border);
+    color: var(--cr-accent);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border-radius: 50px;
+}
+
+/* Common Container */
+.cr-container {
+    width: min(calc(100% - 48px), 1320px);
+    max-width: 1320px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Section Structure */
+.cr-section {
+    padding: clamp(60px, 7vw, 100px) 0;
+    position: relative;
+}
+
+.cr-section-warm {
+    background: var(--cr-paper-warm);
+    border-top: 1px solid var(--cr-line);
+    border-bottom: 1px solid var(--cr-line);
+}
+
+.cr-section-white {
+    background: #ffffff;
+    border-top: 1px solid var(--cr-line);
+    border-bottom: 1px solid var(--cr-line);
+}
+
+.section-title-wrapper {
+    margin-bottom: clamp(36px, 4.5vw, 56px);
+}
+
+.section-title-wrapper.center {
+    text-align: center;
+}
+
+.section-title-wrapper.center .cr-kicker {
+    justify-content: center;
+}
+
+.section-title-wrapper h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3.5vw, 3.1rem);
+    font-weight: 850;
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+    color: var(--cr-ink);
+    margin: 0 0 16px 0;
+}
+
+.section-title-wrapper p {
+    font-size: clamp(1rem, 1.2vw, 1.12rem);
+    color: var(--cr-muted);
+    max-width: 740px;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.section-title-wrapper.center p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================================================
+   1. HERO SECTION (Warm Paper & Architectural Typography)
+   ========================================================================== */
+.cr-hero-section {
+    background: var(--cr-paper);
+    padding: clamp(48px, 6vw, 84px) 0 clamp(40px, 5vw, 64px);
+    border-bottom: 1px solid var(--cr-line);
+    position: relative;
+    overflow: hidden;
+}
+
+.cr-hero-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(217, 101, 56, 0.08) 0%, transparent 68%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cr-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(380px, 0.95fr);
+    gap: clamp(36px, 4.5vw, 64px);
+    align-items: center;
+}
+
+.cr-hero-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cr-breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--cr-muted);
+    margin-bottom: 20px;
+}
+
+.cr-breadcrumb a {
+    color: var(--cr-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.cr-breadcrumb a:hover {
+    color: var(--cr-accent);
+}
+
+.cr-hero-headline {
+    font-family: var(--font-heading);
+    font-size: clamp(2.6rem, 4.8vw, 4.2rem);
+    font-weight: 850;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    color: var(--cr-ink);
+    margin: 0 0 20px 0;
+}
+
+.cr-hero-desc {
+    font-size: clamp(1.05rem, 1.25vw, 1.18rem);
+    color: var(--cr-muted);
+    line-height: 1.65;
+    margin: 0 0 28px 0;
+    max-width: 620px;
+}
+
+.cr-hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.cr-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid var(--cr-line);
+    padding: 8px 14px;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--cr-ink);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.cr-pill i {
+    color: var(--cr-accent);
+}
+
+.cr-hero-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 36px;
+}
+
+.btn-terracotta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--cr-accent);
+    color: #ffffff !important;
+    font-size: 0.96rem;
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.22s ease;
+    box-shadow: 0 4px 16px rgba(217, 101, 56, 0.25);
+}
+
+.btn-terracotta:hover {
+    background: var(--cr-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(217, 101, 56, 0.35);
+}
+
+.btn-outline-paper {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    color: var(--cr-ink) !important;
+    border: 1px solid var(--cr-line);
+    font-size: 0.96rem;
+    font-weight: 700;
+    padding: 14px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.22s ease;
+}
+
+.btn-outline-paper:hover {
+    border-color: var(--cr-accent);
+    color: var(--cr-accent) !important;
+    background: var(--cr-accent-subtle);
+}
+
+.cr-hero-trust-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--cr-line);
+    width: 100%;
+}
+
+.trust-metric {
+    display: flex;
+    flex-direction: column;
+}
+
+.trust-metric strong {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: var(--cr-ink);
+    letter-spacing: -0.02em;
+}
+
+.trust-metric span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--cr-muted);
+}
+
+.trust-metric-divider {
+    width: 1px;
+    height: 32px;
+    background: var(--cr-line);
+}
+
+/* ==========================================================================
+   2. HERO VISUAL: LIVE BOARDROOM TELEMETRY CONSOLE
+   ========================================================================== */
+.cr-console-card {
+    background: var(--cr-console-bg);
+    border: 1px solid var(--cr-console-border);
+    border-radius: 20px;
+    box-shadow: 0 24px 60px rgba(22, 24, 23, 0.16);
+    overflow: hidden;
+    position: relative;
+}
+
+.console-header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid var(--cr-console-border);
+}
+
+.console-title-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.console-status-dot {
+    width: 10px;
+    height: 10px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.7);
+    animation: statusPulse 2s infinite ease-in-out;
+}
+
+@keyframes statusPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.console-title-group span {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--cr-console-text);
+}
+
+.console-tag {
+    background: rgba(217, 101, 56, 0.2);
+    border: 1px solid rgba(217, 101, 56, 0.4);
+    color: #ff8c5a;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/* Interactive Tabs */
+.console-nav-tabs {
+    display: flex;
+    background: #101211;
+    border-bottom: 1px solid var(--cr-console-border);
+    padding: 0 16px;
+    gap: 6px;
+}
+
+.console-tab-btn {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #8e9490;
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.console-tab-btn.active,
+.console-tab-btn:hover {
+    color: #ffffff;
+    border-bottom-color: var(--cr-accent);
+}
+
+/* Console Body */
+.console-body {
+    padding: 24px;
+}
+
+.console-preview-stage {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid var(--cr-console-border);
+    aspect-ratio: 16 / 9;
+    background: #000000;
+}
+
+.console-preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.console-live-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.console-live-badge i {
+    color: #22c55e;
+    font-size: 0.6rem;
+}
+
+.console-resolution-tag {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(217, 101, 56, 0.9);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+}
+
+/* Real-Time Spec Grid */
+.console-spec-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.spec-meter-box {
+    background: var(--cr-console-card);
+    border: 1px solid var(--cr-console-border);
+    padding: 12px 14px;
+    border-radius: 10px;
+}
+
+.spec-meter-label {
+    font-size: 0.72rem;
+    color: #8e9490;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.spec-meter-val {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #ffffff;
+    font-family: 'Space Grotesk', monospace, sans-serif;
+}
+
+.spec-meter-val small {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #ff8c5a;
+    margin-left: 2px;
+}
+
+/* ==========================================================================
+   3. TIER-1 UC TECHNOLOGY PARTNERS (Shure, Sennheiser, Crestron, Poly, etc.)
+   ========================================================================== */
+.cr-ecosystem-section {
+    background: #ffffff;
+    padding: 38px 0;
+    border-bottom: 1px solid var(--cr-line);
+}
+
+.ecosystem-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.ecosystem-heading-wrap h3 {
+    font-size: 1.12rem;
+    font-weight: 800;
+    color: var(--cr-ink);
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.ecosystem-heading-wrap span {
+    font-size: 0.84rem;
+    color: var(--cr-muted);
+}
+
+.brand-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    align-items: center;
+}
+
+@media (max-width: 992px) {
+    .brand-showcase-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .brand-showcase-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.brand-card-item {
+    background: var(--cr-paper);
+    border: 1px solid var(--cr-line);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.22s ease;
+    min-height: 86px;
+}
+
+.brand-card-item:hover {
+    border-color: var(--cr-accent);
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.brand-logo-img {
+    max-height: 30px;
+    max-width: 100px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: all 0.22s ease;
+}
+
+.brand-card-item:hover .brand-logo-img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.brand-subtext {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--cr-muted);
+    margin-top: 6px;
+    letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   4. INTERACTIVE BEAMFORMING CEILING MIC VISUALIZER
+   ========================================================================== */
+.cr-mic-visualizer-module {
+    background: var(--cr-console-bg);
+    border: 1px solid var(--cr-console-border);
+    border-radius: 24px;
+    padding: clamp(24px, 4vw, 44px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.visualizer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.visualizer-header h3 {
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
+    font-weight: 850;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.03em;
+}
+
+.visualizer-header h3 em {
+    font-family: var(--font-italic);
+    font-style: italic;
+    color: #ff8c5a;
+}
+
+.visualizer-header p {
+    color: #9ea3a0;
+    font-size: 0.92rem;
+    margin: 0;
+    max-width: 620px;
+}
+
+.mic-stage-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 21 / 9;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--cr-console-border);
+    background: radial-gradient(circle at center, #1b201d 0%, #0d0f0e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .mic-stage-wrapper {
+        aspect-ratio: 16 / 10;
+    }
+}
+
+#micCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mic-stage-overlay {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+}
+
+.mic-tile-icon {
+    width: 84px;
+    height: 84px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(217, 101, 56, 0.6);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    box-shadow: 0 0 30px rgba(217, 101, 56, 0.35);
+}
+
+.mic-tile-icon i {
+    font-size: 1.8rem;
+    color: #ff8c5a;
+    margin-bottom: 4px;
+}
+
+.mic-tile-icon span {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.mic-lobe-info-strip {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: auto;
+}
+
+.mic-status-pill {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 0.76rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mic-status-pill i {
+    color: #22c55e;
+}
+
+/* ==========================================================================
+   5. LIVE CONFERENCE ROOM SIZING & BOQ CALCULATOR
+   ========================================================================== */
+.calculator-card-wrapper {
+    background: #ffffff;
+    border: 1px solid var(--cr-line);
+    border-radius: 24px;
+    padding: clamp(28px, 4.5vw, 48px);
+    box-shadow: 0 12px 40px rgba(22, 24, 23, 0.05);
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: start;
+}
+
+@media (max-width: 992px) {
+    .calculator-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.calc-inputs-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.calc-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.calc-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calc-label-row label {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--cr-ink);
+}
+
+.calc-slider-val {
+    font-family: 'Space Grotesk', monospace, sans-serif;
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: var(--cr-accent);
+}
+
+.calc-range-slider {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--cr-line);
+    outline: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.calc-range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--cr-accent);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(217, 101, 56, 0.4);
+    transition: transform 0.15s ease;
+}
+
+.calc-range-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.18);
+}
+
+.calc-select-btn-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 8px;
+}
+
+.calc-toggle-btn {
+    background: var(--cr-paper);
+    border: 1px solid var(--cr-line);
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--cr-ink);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.calc-toggle-btn.active,
+.calc-toggle-btn:hover {
+    background: var(--cr-accent-subtle);
+    border-color: var(--cr-accent);
+    color: var(--cr-accent);
+}
+
+/* Calculator Output Readout */
+.calc-results-col {
+    background: var(--cr-paper-warm);
+    border: 1px solid var(--cr-line);
+    border-radius: 18px;
+    padding: 28px;
+}
+
+.results-header-tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--cr-line);
+    margin-bottom: 20px;
+}
+
+.results-header-tag span {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--cr-muted);
+}
+
+.ready-badge {
+    background: #22c55e;
+    color: #ffffff;
+    font-size: 0.74rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 50px;
+}
+
+.results-metric-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.calc-metric-card {
+    background: #ffffff;
+    border: 1px solid var(--cr-line);
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.calc-metric-card label {
+    display: block;
+    font-size: 0.74rem;
+    color: var(--cr-muted);
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.calc-metric-card .calc-data {
+    font-family: 'Space Grotesk', monospace, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--cr-ink);
+}
+
+.calc-metric-card .calc-data small {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--cr-accent);
+}
+
+/* ==========================================================================
+   6. VERIFIED REAL BOARDROOM PROJECTS GALLERY
+   ========================================================================== */
+.projects-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 28px;
+}
+
+.project-showcase-card {
+    background: #ffffff;
+    border: 1px solid var(--cr-line);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.24s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-showcase-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--cr-accent);
+    box-shadow: 0 16px 40px rgba(217, 101, 56, 0.12);
+}
+
+.project-thumb-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #141716;
+}
+
+.project-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-showcase-card:hover .project-thumb-img {
+    transform: scale(1.04);
+}
+
+.project-tag-pill {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(22, 24, 23, 0.85);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.project-card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-card-italic-kicker {
+    font-family: var(--font-italic);
+    font-style: italic;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--cr-accent);
+    margin-bottom: 6px;
+}
+
+.project-card-content h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--cr-ink);
+    margin: 0 0 12px 0;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+}
+
+.project-card-content p {
+    font-size: 0.9rem;
+    color: var(--cr-muted);
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    flex: 1;
+}
+
+.project-spec-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 16px;
+    border-top: 1px solid var(--cr-line);
+}
+
+.spec-chip {
+    background: var(--cr-paper);
+    border: 1px solid var(--cr-line);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: var(--cr-ink);
+}
+
+/* ==========================================================================
+   7. 5-STAGE TURNKEY DEPLOYMENT TIMELINE
+   ========================================================================== */
+.lifecycle-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.lifecycle-card {
+    background: #ffffff;
+    border: 1px solid var(--cr-line);
+    border-radius: 16px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.22s ease;
+}
+
+.lifecycle-card:hover {
+    border-color: var(--cr-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.lifecycle-num {
+    font-family: 'Space Grotesk', monospace, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--cr-accent-border);
+    margin-bottom: 14px;
+    line-height: 1;
+}
+
+.lifecycle-card:hover .lifecycle-num {
+    color: var(--cr-accent);
+}
+
+.lifecycle-card h3 {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--cr-ink);
+    margin: 0 0 10px 0;
+    letter-spacing: -0.02em;
+}
+
+.lifecycle-card p {
+    font-size: 0.86rem;
+    color: var(--cr-muted);
+    line-height: 1.58;
+    margin: 0;
+}
+
+/* ==========================================================================
+   8. FREQUENTLY ASKED QUESTIONS (Warm Editorial Accordion)
+   ========================================================================== */
+.faq-accordion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cr-faq-item {
+    background: #ffffff;
+    border: 1px solid var(--cr-line);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.cr-faq-item[open] {
+    border-color: var(--cr-accent);
+    box-shadow: 0 8px 24px rgba(217, 101, 56, 0.08);
+}
+
+.cr-faq-item summary {
+    padding: 20px 24px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--cr-ink);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.cr-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.cr-faq-item summary::after {
+    content: '\f078';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 0.85rem;
+    color: var(--cr-muted);
+    transition: transform 0.22s ease;
+}
+
+.cr-faq-item[open] summary::after {
+    transform: rotate(180deg);
+    color: var(--cr-accent);
+}
+
+.cr-faq-content {
+    padding: 0 24px 22px 24px;
+    font-size: 0.94rem;
+    line-height: 1.68;
+    color: var(--cr-muted);
+}
+
+.cr-faq-content strong {
+    color: var(--cr-ink);
+}
+
+/* ==========================================================================
+   9. BOTTOM CONSULTATION BANNER
+   ========================================================================== */
+.consultation-cta-box {
+    background: var(--cr-ink);
+    color: #ffffff;
+    border-radius: 24px;
+    padding: clamp(36px, 5vw, 60px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.cta-text-left h3 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 850;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.03em;
+}
+
+.cta-text-left h3 em {
+    font-family: var(--font-italic);
+    font-style: italic;
+    color: #ff8c5a;
+}
+
+.cta-text-left p {
+    color: #9ea3a0;
+    font-size: 1.05rem;
+    margin: 0;
+    max-width: 620px;
+}
+
+.cta-buttons-right {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 992px) {
+    .cr-hero-grid {
+        grid-template-columns: 1fr;
+    }
+}
