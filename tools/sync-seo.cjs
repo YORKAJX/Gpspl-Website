@@ -50,7 +50,7 @@ function cleanHead(html) {
 }
 
 function canonicalFor(file) {
-  return file === "index.html" ? `${BASE_URL}/` : `${BASE_URL}/${file}`;
+  return file === "index.html" ? `${BASE_URL}/` : `${BASE_URL}/${file.replace(/\.html$/, "")}`;
 }
 
 function absoluteImage(image) {
