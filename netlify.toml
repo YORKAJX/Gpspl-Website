@@ -3,5 +3,10 @@
   command = "npm run build"
   functions = "netlify/functions"
 
+# Explicit clean-URL redirects are defined in _redirects. Disable Netlify's
+# automatic HTML rewrite so legacy .html URLs return their intended 301.
+[build.processing.html]
+  pretty_urls = false
+
 [functions]
   node_bundler = "esbuild"
