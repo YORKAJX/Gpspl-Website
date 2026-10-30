@@ -203,13 +203,14 @@ const GPSPL_ARCHIVED_JOBS = [
 // Current openings are deliberately kept in one small list so HR can add or
 // remove vacancies without touching the form or page structure.
 const GPSPL_JOBS = [
+  ...GPSPL_ARCHIVED_JOBS,
   {
     id: "junior-project-manager-av-digital-signage",
     slug: "junior-project-manager-av-digital-signage",
     title: "Junior Project Manager – AV & Digital Signage",
     department: "Projects & Operations",
-    experience: "1–3 Years",
-    experienceRequirement: "1–3 years in AV, ELV, digital signage or system integration",
+    experience: "2+ Years",
+    experienceRequirement: "Minimum 2 years in AV, ELV, digital signage or system integration",
     employmentType: "Full-Time",
     location: "Delhi NCR",
     shortDescription: "Coordinate the execution of AV and digital signage projects from planning and material tracking through commissioning and handover.",
@@ -226,7 +227,7 @@ const GPSPL_JOBS = [
     ],
     requirements: [
       "Diploma or Bachelor's Degree in Electronics, Electrical, IT, Computer Science or a related field",
-      "1–3 years of experience in AV, ELV, Digital Signage or System Integration",
+      "Minimum 2 years of experience in AV, ELV, Digital Signage or System Integration",
       "Basic understanding of Audio Visual equipment and installations",
       "Knowledge of LED displays, video conferencing and professional audio systems",
       "Basic networking knowledge including IP, LAN and switches",
