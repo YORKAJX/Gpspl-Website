@@ -3,7 +3,7 @@
  * Future-Ready Architecture: Add or edit jobs in GPSPL_JOBS array.
  */
 
-const GPSPL_JOBS = [
+const GPSPL_ARCHIVED_JOBS = [
   {
     id: "presales-av-engineer",
     slug: "presales-av-engineer",
@@ -196,6 +196,45 @@ const GPSPL_JOBS = [
       "Client Relationship Management", "MS Excel", "PowerPoint", "Presentation Skills", "CRM"
     ],
     roleType: "business-growth",
+    status: "open"
+  }
+];
+
+// Current openings are deliberately kept in one small list so HR can add or
+// remove vacancies without touching the form or page structure.
+const GPSPL_JOBS = [
+  {
+    id: "junior-project-manager-av-digital-signage",
+    slug: "junior-project-manager-av-digital-signage",
+    title: "Junior Project Manager – AV & Digital Signage",
+    department: "Projects & Operations",
+    experience: "1–3 Years",
+    experienceRequirement: "1–3 years in AV, ELV, digital signage or system integration",
+    employmentType: "Full-Time",
+    location: "Delhi NCR",
+    shortDescription: "Coordinate the execution of AV and digital signage projects from planning and material tracking through commissioning and handover.",
+    aboutRole: "GPSPL is seeking a Junior Project Manager to support on-site delivery of AV and digital signage projects. You will work with engineers, technicians, vendors and clients to keep project schedules, materials, installation quality and documentation on track.",
+    responsibilities: [
+      "Coordinate day-to-day execution of AV and Digital Signage projects",
+      "Assist in project planning, scheduling and progress tracking",
+      "Coordinate with site engineers, technicians, vendors and clients",
+      "Monitor installation of LED displays, video walls, professional audio systems and digital signage displays",
+      "Conduct site visits and coordinate project requirements",
+      "Track material procurement, delivery and installation schedules",
+      "Assist in preparing BOQs, project reports and documentation",
+      "Support testing, commissioning and final project handover"
+    ],
+    requirements: [
+      "Diploma or Bachelor's Degree in Electronics, Electrical, IT, Computer Science or a related field",
+      "1–3 years of experience in AV, ELV, Digital Signage or System Integration",
+      "Basic understanding of Audio Visual equipment and installations",
+      "Knowledge of LED displays, video conferencing and professional audio systems",
+      "Basic networking knowledge including IP, LAN and switches",
+      "Good communication, coordination, MS Excel and project tracking skills",
+      "Willingness to travel to project sites"
+    ],
+    preferredSkills: ["Project Coordination", "AV & ELV", "Digital Signage", "LED Displays", "BOQ", "MS Excel", "IP Networking", "Site Execution"],
+    roleType: "project-manager",
     status: "open"
   }
 ];
@@ -740,31 +779,43 @@ async function handleApplicationSubmit(e) {
     candidateStatus: form.querySelector('input[name="candidate_status"]:checked')?.value || '',
     totalExperience: form.querySelector('input[name="total_experience"]')?.value || '',
     currentCompany: form.querySelector('input[name="current_company"]')?.value || '',
+    currentCtc: form.querySelector('input[name="current_ctc"]')?.value || '',
     noticePeriod: form.querySelector('select[name="notice_period"]')?.value || '',
     expectedSalary: form.querySelector('input[name="expected_salary"]')?.value || '',
     linkedinProfile: form.querySelector('input[name="linkedin_profile"]')?.value || '',
+    additionalMessage: form.querySelector('textarea[name="additional_message"]')?.value || '',
     selectedSkills: checkedSkills.join(', '),
     resumeFileName: resumeFileName,
     resumeFileBase64: resumeBase64,
     botField: form.querySelector('input[name="bot-field"]')?.value || ''
   };
 
-  // 1. Asynchronously send email with attachment via Netlify Function
-  fetch('/.netlify/functions/career-lead-email', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(emailPayload)
-  }).catch(() => {});
+  // Send the application first. Never show a success state unless the secure
+  // server-side mail delivery confirms that it accepted the application.
+  try {
+    const emailResponse = await fetch('/.netlify/functions/career-lead-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(emailPayload)
+    });
+    const emailResult = await emailResponse.json().catch(() => ({}));
+    if (!emailResponse.ok || !emailResult.sent) {
+      throw new Error(emailResult.error || 'We could not submit your application right now.');
+    }
+  } catch (err) {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalText;
+    alert(err.message || 'We could not submit your application. Please try again or contact GPSPL directly.');
+    return;
+  }
 
-  // 2. Submit form to Netlify Forms (native multipart submission)
+  // Also preserve the native Netlify Forms submission for the recruitment record.
   try {
     await fetch('/', {
       method: 'POST',
       body: formData
     });
-  } catch (err) {
-    console.log('Form submission completed.');
-  }
+  } catch (err) { /* Email delivery above is the required success path. */ }
 
   form.reset();
   submitBtn.disabled = false;

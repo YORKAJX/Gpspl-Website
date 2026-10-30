@@ -73,7 +73,7 @@ exports.handler = async (event) => {
     }
 
     if (!process.env.RESEND_API_KEY) {
-        return json(200, { configured: false, skipped: true }, baseHeaders);
+        return json(503, { error: 'Recruitment delivery is temporarily unavailable. Please try again later.' }, baseHeaders);
     }
 
     let app;
@@ -105,13 +105,24 @@ exports.handler = async (event) => {
     const currentCompany = clean(app.currentCompany, 140);
     const noticePeriod = clean(app.noticePeriod, 80);
     const expectedSalary = clean(app.expectedSalary, 80);
+    const currentCtc = clean(app.currentCtc, 80);
     const linkedin = clean(app.linkedinProfile, 240);
     const selectedSkills = clean(app.selectedSkills, 500);
+    const additionalMessage = clean(app.additionalMessage, 1000);
 
     const attachments = [];
+    if (!app.resumeFileBase64 || !app.resumeFileName) {
+        return json(400, { error: 'A resume in PDF, DOC or DOCX format is required.' }, baseHeaders);
+    }
+    const resumeName = clean(app.resumeFileName, 120);
+    const allowedResume = /\.(pdf|doc|docx)$/i.test(resumeName);
+    const decodedBytes = Math.floor(String(app.resumeFileBase64).length * 0.75);
+    if (!allowedResume || decodedBytes > 5 * 1024 * 1024) {
+        return json(400, { error: 'Resume must be a PDF, DOC or DOCX file up to 5MB.' }, baseHeaders);
+    }
     if (app.resumeFileBase64 && app.resumeFileName) {
         attachments.push({
-            filename: clean(app.resumeFileName, 120),
+            filename: resumeName,
             content: app.resumeFileBase64
         });
     }
@@ -137,10 +148,12 @@ exports.handler = async (event) => {
                     <tr><td style="padding:6px 0;width:180px;color:#64748b;"><strong>Highest Qualification:</strong></td><td>${qualification} ${specialization ? `(${specialization})` : ''}</td></tr>
                     <tr><td style="padding:6px 0;color:#64748b;"><strong>Status / Experience:</strong></td><td>${candidateStatus} ${totalExp ? `• ${totalExp}` : ''}</td></tr>
                     <tr><td style="padding:6px 0;color:#64748b;"><strong>Current Company:</strong></td><td>${currentCompany || 'Not specified'}</td></tr>
+                    <tr><td style="padding:6px 0;color:#64748b;"><strong>Current CTC:</strong></td><td>${currentCtc || 'Not specified'}</td></tr>
                     <tr><td style="padding:6px 0;color:#64748b;"><strong>Notice Period:</strong></td><td>${noticePeriod || 'Immediate'}</td></tr>
                     <tr><td style="padding:6px 0;color:#64748b;"><strong>Expected Salary / CTC:</strong></td><td>${expectedSalary || 'Negotiable'}</td></tr>
                     ${linkedin ? `<tr><td style="padding:6px 0;color:#64748b;"><strong>LinkedIn:</strong></td><td><a href="${linkedin}" target="_blank">${linkedin}</a></td></tr>` : ''}
                     ${selectedSkills ? `<tr><td style="padding:6px 0;color:#64748b;"><strong>Skills:</strong></td><td>${selectedSkills}</td></tr>` : ''}
+                    ${additionalMessage ? `<tr><td style="padding:6px 0;color:#64748b;"><strong>Message:</strong></td><td>${additionalMessage}</td></tr>` : ''}
                 </table>
 
                 ${attachments.length > 0 ? `
@@ -171,6 +184,6 @@ exports.handler = async (event) => {
 
         return json(200, { sent: true }, baseHeaders);
     } catch (error) {
-        return json(200, { sent: false, error: error.message }, baseHeaders);
+        return json(502, { sent: false, error: 'Application delivery failed. Please try again later.' }, baseHeaders);
     }
 };
