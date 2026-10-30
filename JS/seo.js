@@ -293,8 +293,8 @@
     const pageSeo = {
         "experience-center-av-solutions.html": { title: "Experience Center & Studio AV Delhi NCR, India | GPSPL",
             description: "Plan AV for experience centers, showrooms and studios: LED displays, audio, interactive content and control. Discuss equipment supply or turnkey integration.", type: "service" },
-        "av-project-discovery-consultation.html": { title: "AV Project Consultation & Turnkey BOQ Delhi NCR | GPSPL",
-            description: "Discuss equipment supply, room upgrades or complete turnkey AV projects in Delhi NCR and across India. Share your sector, city, quantities and project scope.", type: "service" },
+        "av-project-discovery-consultation.html": { title: "AV Solutions India: Single Equipment to Turnkey Projects | GPSPL",
+            description: "One commercial camera, display or speaker—or a complete classroom, retail, digital-signage or enterprise AV project. Get equipment supply, BOQ, design, integration and support from GPSPL.", type: "service" },
         "lg-commercial-tv-nu88c.html": { title: "LG NU88C Commercial TV Delhi NCR & India | GPSPL",
             description: "LG NU88C commercial TV enquiries for Delhi NCR and Pan-India buyers. Request model-specific availability, pricing, delivery and installation scope.", type: "product" },
         "lg-commercial-tv-ua831c.html": { title: "LG UA831C Commercial TV Delhi NCR & India | GPSPL",
@@ -314,8 +314,8 @@
             image: "/assests/images/products/professional-audio-solutions.webp"
         },
         "av-technology-distribution.html": {
-            title: "AV Distribution Delhi NCR & Pan-India Supply | GPSPL",
-            description: "Commercial AV distribution from New Delhi for Delhi NCR and Pan-India buyers. Request equipment pricing, stock availability and project delivery terms.",
+            title: "AV Equipment Distributor India | Bulk Commercial TV, JBL & PTZ Supply | GPSPL",
+            description: "B2B AV equipment distribution for bulk commercial TVs, displays, JBL professional audio, PTZ cameras and meeting-room technology. Request stock, quotation, delivery and installation scope.",
             type: "service",
             serviceType: "Commercial AV technology distribution and B2B wholesale supply",
             image: "/assests/images/milestones/harman-best-regional-distributor-2024.jpeg"
@@ -458,8 +458,8 @@
             image: "/assests/images/projects/gpspl-real/polished/real-hospitality-restaurant-led.jpg"
         },
         "professional-audio-solutions.html": {
-            title: "JBL Audio & Sound Systems Delhi NCR & India | GPSPL",
-            description: "JBL professional sound systems in Delhi NCR and for Pan-India projects: speaker coverage, microphones, DSP and installation for offices, hotels and venues.",
+            title: "JBL Professional Speaker Supplier India | Bulk Supply & Sound System Integration | GPSPL",
+            description: "JBL professional speaker and sound-system supply for businesses, institutions and venues. Get a B2B quotation for speakers, microphones, DSP, installation and commissioning.",
             type: "service",
             serviceType: "Professional audio, auditorium sound and DSP system integration",
             image: "/assests/images/products/professional-audio-solutions.webp"
@@ -472,8 +472,8 @@
             image: "/assests/images/products/professional-audio-solutions.webp"
         },
         "video-technologies.html": {
-            title: "PTZ Cameras & Video Conferencing Delhi NCR | GPSPL",
-            description: "Discuss PTZ cameras for conference rooms, classrooms and auditoriums. Request model-specific supply, mounting and integration for Delhi NCR and Pan-India projects.",
+            title: "PTZ Camera Supplier India | Bulk Supply & Video Conferencing Integration | GPSPL",
+            description: "PTZ camera supply for conference rooms, lecture capture, auditoriums and studios. Request a B2B quotation for model, quantity, mounting, control and integration across India.",
             type: "service",
             serviceType: "Video technologies and visual communication systems",
             image: "/assests/images/hero/video-technologies-boardroom.webp"
@@ -609,8 +609,8 @@
             type: "about"
         },
         "careers.html": {
-            title: "Careers at GPSPL | AV, IT & Technology Roles",
-            description: "Career areas at GPSPL across technology sales, AV engineering, project coordination, service support and operations.",
+            title: "Careers at GPSPL | Join Our AV & Digital Signage Team",
+            description: "Explore career opportunities at Global Peripheral Solutions Pvt. Ltd. Join our team in Audio Visual, Digital Signage, LED Displays and Integrated Technology Solutions.",
             type: "webpage"
         },
         "privacy-policy.html": {
