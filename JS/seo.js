@@ -381,14 +381,14 @@
             image: "/assests/images/milestones/lg-regional-distributor-2022.jpeg"
         },
         "audio-visual-integration.html": {
-            title: "End-to-End AV Integration Delhi NCR & India | GPSPL",
+            title: "Turnkey AV System Integrator Delhi NCR & India | GPSPL",
             description: "End-to-end AV integration in Delhi NCR and for Pan-India projects: design, equipment supply, installation, commissioning, training and maintenance planning.",
             type: "service",
             serviceType: "Audio visual integration and enterprise AV system integration",
             image: "/assests/images/vision/conference-room-hero.jpg"
         },
         "conference-room-solutions.html": {
-            title: "Conference Room AV Solutions Delhi NCR & India | GPSPL",
+            title: "Turnkey Conference Room Builder & AV Integrator | GPSPL",
             description: "Conference room AV in Delhi NCR, with Pan-India project planning: video conferencing, displays, microphones, control, installation and support. Request a BOQ.",
             type: "service",
             serviceType: "Conference room and boardroom AV solutions",
