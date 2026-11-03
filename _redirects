@@ -297,6 +297,13 @@ https://www.gpspl.co.in/* https://gpspl.co.in/:splat 301!
 /resources/av-over-ip-network-design-dante-audio-guide /blog/av-over-ip-network-architecture-dante-sdvoe-enterprise-guide 301
 /resources/boardroom-acoustic-treatment-dsp-echo-cancellation /blog/boardroom-acoustic-treatment-dsp-tuning-echo-cancellation-guide 301
 
+/religious-place-av-solutions.html /religious-place-av-solutions 301!
+/religious-place-av-solutions /religious-place-av-solutions.html 200
+/digital-standee-supplier-india.html /digital-standee-supplier-india 301!
+/digital-standee-supplier-india /digital-standee-supplier-india.html 200
+/turnkey-av-projects-india.html /turnkey-av-projects-india 301!
+/turnkey-av-projects-india /turnkey-av-projects-india.html 200
+
 # 6. 404 Fallback (must follow every explicit route)
 /404.html /404 301!
 /404 /404.html 200
