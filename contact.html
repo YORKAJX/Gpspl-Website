@@ -794,6 +794,10 @@
             // 1. Dynamic Contact Form Selection Routing
             const routingCards = document.querySelectorAll('.contact-routing-card');
             const selectEl = document.getElementById('contact-service');
+            const requestedSolution = new URLSearchParams(window.location.search).get('solution');
+            if (requestedSolution && Array.from(selectEl.options).some(option => option.value === requestedSolution)) {
+                selectEl.value = requestedSolution;
+            }
             const nameEl = document.getElementById('contact-name');
             const formPanel = document.querySelector('.contact-form-panel');
 
