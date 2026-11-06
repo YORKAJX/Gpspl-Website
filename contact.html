@@ -293,14 +293,14 @@
                             </div>
                             <div class="form-group">
                                 <label for="contact-company">Company / institution (optional)</label>
-                                <input id="contact-company" type="text" name="company" placeholder="Company / institution name" autocomplete="organization" required>
+                                <input id="contact-company" type="text" name="company" placeholder="Company / institution name" autocomplete="organization">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="contact-email">Email for your quotation (optional)</label>
-                                <input id="contact-email" type="email" name="email" placeholder="name@company.com" autocomplete="email" required>
+                                <input id="contact-email" type="email" name="email" placeholder="name@company.com" autocomplete="email">
                             </div>
                             <div class="form-group">
                                 <label for="contact-phone">Mobile Number <span style="color: #ef3438;">*</span></label>
@@ -313,6 +313,10 @@
                                 <label for="contact-service">Requirement Sector / Solution <span style="color: #ef3438;">*</span></label>
                                 <select id="contact-service" name="requirement" required>
                                     <option value="">Select your sector or solution</option>
+                                    <option value="Audio Visual Integration">Turnkey AV design, supply and installation</option>
+                                    <option value="Religious Venue AV">Religious venue sound systems and LED displays</option>
+                                    <option value="Professional Audio">JBL professional audio and speaker systems</option>
+                                    <option value="Product Supply">Single-unit or bulk supply: digital standees, PTZ cameras and KVM switches</option>
                                     <option value="Conference Room Solutions">Conference Room &amp; Boardroom AV (Teams/Zoom Rooms)</option>
                                     <option value="Smart Classroom Solutions">Smart Classroom &amp; Interactive Flat Panels (Education)</option>
                                     <option value="Hotel & Hospitality AV">Hotel &amp; Hospitality AV (Ballroom LED, Banquet Sound, Hotel TVs)</option>
@@ -592,24 +596,24 @@
                     </div>
 
                     <!-- Form Body -->
-                    <form id="contact-project-form" class="contact-form-enhanced" style="display: flex; flex-direction: column; gap: 18px;">
+                    <form id="contact-project-form" data-lead-form="contact_project" class="contact-form-enhanced" style="display: flex; flex-direction: column; gap: 18px;">
                         
                         <!-- 1. Name & Company Row -->
                         <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;">
                             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
-                                <label for="contact-name" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Full Name <span style="color: #ef4444;">*</span></label>
+                                <label for="project-name" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Full Name <span style="color: #ef4444;">*</span></label>
                                 <div style="position: relative;">
                                     <i class="fas fa-user" style="position: absolute; left: 14px; top: 15px; color: #94a3b8; font-size: 14px;"></i>
-                                    <input id="contact-name" type="text" name="name" placeholder="e.g. Rahul Sharma" autocomplete="name" required style="width: 100%; padding: 13px 16px 13px 40px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; box-sizing: border-box; transition: all 0.2s ease;">
+                                    <input id="project-name" type="text" name="name" placeholder="e.g. Rahul Sharma" autocomplete="name" required style="width: 100%; padding: 13px 16px 13px 40px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; box-sizing: border-box; transition: all 0.2s ease;">
                                 </div>
                                 <span class="field-error" id="err-name" style="color: #ef4444; font-size: 0.76rem; display: none;"></span>
                             </div>
 
                             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
-                                <label for="contact-company" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Company / School / Org Name <span style="color: #ef4444;">*</span></label>
+                                <label for="project-company" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Company / School / Org Name <span style="color: #ef4444;">*</span></label>
                                 <div style="position: relative;">
                                     <i class="fas fa-building" style="position: absolute; left: 14px; top: 15px; color: #94a3b8; font-size: 14px;"></i>
-                                    <input id="contact-company" type="text" name="company" placeholder="e.g. DPS International / TechCorp" autocomplete="organization" style="width: 100%; padding: 13px 16px 13px 40px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; box-sizing: border-box; transition: all 0.2s ease;">
+                                    <input id="project-company" type="text" name="company" placeholder="e.g. DPS International / TechCorp" autocomplete="organization" style="width: 100%; padding: 13px 16px 13px 40px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; box-sizing: border-box; transition: all 0.2s ease;">
                                 </div>
                                 <span class="field-error" id="err-company" style="color: #ef4444; font-size: 0.76rem; display: none;"></span>
                             </div>
@@ -618,19 +622,19 @@
                         <!-- 2. Email & Phone Row -->
                         <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;">
                             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
-                                <label for="contact-email" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Work / Official Email <span style="color: #ef4444;">*</span></label>
+                                <label for="project-email" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Work / Official Email <span style="color: #ef4444;">*</span></label>
                                 <div style="position: relative;">
                                     <i class="fas fa-envelope" style="position: absolute; left: 14px; top: 15px; color: #94a3b8; font-size: 14px;"></i>
-                                    <input id="contact-email" type="email" name="email" placeholder="e.g. rahul@company.com" autocomplete="email" style="width: 100%; padding: 13px 16px 13px 40px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; box-sizing: border-box; transition: all 0.2s ease;">
+                                    <input id="project-email" type="email" name="email" placeholder="e.g. rahul@company.com" autocomplete="email" style="width: 100%; padding: 13px 16px 13px 40px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; box-sizing: border-box; transition: all 0.2s ease;">
                                 </div>
                                 <span class="field-error" id="err-email" style="color: #ef4444; font-size: 0.76rem; display: none;"></span>
                             </div>
 
                             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
-                                <label for="contact-phone" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Mobile Number (10 Digits) <span style="color: #ef4444;">*</span></label>
+                                <label for="project-phone" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Mobile Number (10 Digits) <span style="color: #ef4444;">*</span></label>
                                 <div style="display: flex; gap: 8px;">
                                     <span style="background: #f1f5f9; border: 1.5px solid #cbd5e1; border-radius: 10px; padding: 13px 14px; font-weight: 800; color: #475569; font-size: 0.92rem; display: grid; place-items: center;">+91</span>
-                                    <input id="contact-phone" type="tel" name="phone" maxlength="10" placeholder="e.g. 98100 12345" autocomplete="tel" required style="width: 100%; padding: 13px 16px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; box-sizing: border-box; transition: all 0.2s ease;">
+                                    <input id="project-phone" type="tel" name="phone" maxlength="10" placeholder="e.g. 98100 12345" autocomplete="tel" required style="width: 100%; padding: 13px 16px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; box-sizing: border-box; transition: all 0.2s ease;">
                                 </div>
                                 <span class="field-error" id="err-phone" style="color: #ef4444; font-size: 0.76rem; display: none;"></span>
                             </div>
@@ -638,36 +642,36 @@
 
                         <!-- 3. Interactive Category Pill Selector -->
                         <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
-                            <label style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Select Solution / Requirement Area <span style="color: #ef4444;">*</span></label>
+                            <label style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Solution / requirement area (optional)</label>
                             
                             <div class="requirement-pills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px;">
                                 <label class="req-pill-card" style="border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; transition: all 0.2s ease; background: #f8fafc;">
-                                    <input type="radio" name="requirement_area" value="Smart Classroom & Education" checked style="accent-color: #ef3438;">
+                                    <input type="radio" name="requirement" value="Smart Classroom & Education" style="accent-color: #ef3438;">
                                     <span style="font-size: 0.84rem; font-weight: 700; color: #1e293b;"><i class="fas fa-chalkboard-user" style="color: #ef3438; margin-right: 4px;"></i> Smart Classroom</span>
                                 </label>
 
                                 <label class="req-pill-card" style="border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; transition: all 0.2s ease; background: #f8fafc;">
-                                    <input type="radio" name="requirement_area" value="Boardroom & Video Conferencing" style="accent-color: #ef3438;">
+                                    <input type="radio" name="requirement" value="Boardroom & Video Conferencing" style="accent-color: #ef3438;">
                                     <span style="font-size: 0.84rem; font-weight: 700; color: #1e293b;"><i class="fas fa-video" style="color: #2563eb; margin-right: 4px;"></i> Boardroom VC</span>
                                 </label>
 
                                 <label class="req-pill-card" style="border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; transition: all 0.2s ease; background: #f8fafc;">
-                                    <input type="radio" name="requirement_area" value="Active LED Video Wall (Up to 320 inch)" style="accent-color: #ef3438;">
+                                    <input type="radio" name="requirement" value="Active LED Video Wall (Up to 320 inch)" style="accent-color: #ef3438;">
                                     <span style="font-size: 0.84rem; font-weight: 700; color: #1e293b;"><i class="fas fa-border-all" style="color: #7c3aed; margin-right: 4px;"></i> 320" LED Video Wall</span>
                                 </label>
 
                                 <label class="req-pill-card" style="border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; transition: all 0.2s ease; background: #f8fafc;">
-                                    <input type="radio" name="requirement_area" value="Samsung / LG Commercial TV Supply" style="accent-color: #ef3438;">
+                                    <input type="radio" name="requirement" value="Samsung / LG Commercial TV Supply" style="accent-color: #ef3438;">
                                     <span style="font-size: 0.84rem; font-weight: 700; color: #1e293b;"><i class="fas fa-tv" style="color: #0284c7; margin-right: 4px;"></i> Commercial TV / Signage</span>
                                 </label>
 
                                 <label class="req-pill-card" style="border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; transition: all 0.2s ease; background: #f8fafc;">
-                                    <input type="radio" name="requirement_area" value="Professional Audio & Line Arrays" style="accent-color: #ef3438;">
+                                    <input type="radio" name="requirement" value="Professional Audio & Line Arrays" style="accent-color: #ef3438;">
                                     <span style="font-size: 0.84rem; font-weight: 700; color: #1e293b;"><i class="fas fa-volume-high" style="color: #ea580c; margin-right: 4px;"></i> Pro Audio / DSP / Mics</span>
                                 </label>
 
                                 <label class="req-pill-card" style="border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; transition: all 0.2s ease; background: #f8fafc;">
-                                    <input type="radio" name="requirement_area" value="AMC & Maintenance Services" style="accent-color: #ef3438;">
+                                    <input type="radio" name="requirement" value="AMC & Maintenance Services" style="accent-color: #ef3438;">
                                     <span style="font-size: 0.84rem; font-weight: 700; color: #1e293b;"><i class="fas fa-shield-alt" style="color: #16a34a; margin-right: 4px;"></i> AMC &amp; 4-Hr SLA Support</span>
                                 </label>
                             </div>
@@ -676,10 +680,10 @@
                         <!-- 4. Project Location & Expected Timeline -->
                         <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;">
                             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
-                                <label for="contact-location" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Project Location / City <span style="color: #ef4444;">*</span></label>
+                                <label for="project-location" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Project Location / City <span style="color: #ef4444;">*</span></label>
                                 <div style="position: relative;">
                                     <i class="fas fa-map-marker-alt" style="position: absolute; left: 14px; top: 15px; color: #94a3b8; font-size: 14px;"></i>
-                                    <input id="contact-location" type="text" name="location" placeholder="e.g. Delhi NCR, Noida, Gurgaon, Mumbai" required style="width: 100%; padding: 13px 16px 13px 40px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; box-sizing: border-box; transition: all 0.2s ease;">
+                                    <input id="project-location" type="text" name="location" placeholder="e.g. Delhi NCR, Noida, Gurgaon, Mumbai" required style="width: 100%; padding: 13px 16px 13px 40px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; box-sizing: border-box; transition: all 0.2s ease;">
                                 </div>
                             </div>
 
@@ -696,8 +700,8 @@
 
                         <!-- 5. Scope / Requirement Details -->
                         <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
-                            <label for="contact-message" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Describe Your Room, Use Case, or Preferred Hardware <span style="color: #ef4444;">*</span></label>
-                            <textarea id="contact-message" name="message" rows="4" placeholder="e.g. Need a 20-seater executive boardroom AV setup with Samsung 85-inch display, ceiling beamforming mics, and Microsoft Teams integration. Require site survey in Gurgaon." required style="width: 100%; padding: 13px 16px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; font-family: inherit; resize: vertical; box-sizing: border-box; transition: all 0.2s ease;"></textarea>
+                            <label for="project-message" style="font-size: 0.86rem; font-weight: 700; color: #1e293b;">Describe Your Room, Use Case, or Preferred Hardware <span style="color: #ef4444;">*</span></label>
+                            <textarea id="project-message" name="message" rows="4" placeholder="e.g. Need a 20-seater executive boardroom AV setup with Samsung 85-inch display, ceiling beamforming mics, and Microsoft Teams integration. Require site survey in Gurgaon." required style="width: 100%; padding: 13px 16px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 0.94rem; outline: none; background: #ffffff; font-family: inherit; resize: vertical; box-sizing: border-box; transition: all 0.2s ease;"></textarea>
                         </div>
 
                         <!-- Privacy Note -->
@@ -801,7 +805,7 @@
                     if (routeType === 'projects') {
                         selectEl.value = 'Audio Visual Integration';
                     } else if (routeType === 'support') {
-                        selectEl.value = 'AMC & Maintenance';
+                        selectEl.value = 'AMC Maintenance Services';
                     } else if (routeType === 'consult') {
                         selectEl.value = 'Other Requirement';
                     }
