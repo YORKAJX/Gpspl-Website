@@ -322,12 +322,12 @@
             const response = await fetch('/.netlify/functions/submit-enquiry', {
                 method: 'POST', keepalive: true, signal: AbortSignal.timeout(20000),
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ ...leadPayload, email: '',
+                body: JSON.stringify({ attribution: window.gpsplLeadAttribution?.() || {}, ...leadPayload, email: '',
                     'cf-turnstile-response': document.querySelector('#heroExpressForm [name="cf-turnstile-response"]')?.value || '' })
             });
             const data = await response.json().catch(() => ({}));
             if (!response.ok || data.success !== true || data.skipped) throw new Error(data.error || 'Your enquiry was not confirmed. Please retry, call or WhatsApp GPSPL.');
-            document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: 'heroExpressForm' } }));
+            document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: 'heroExpressForm', lead_id: data.leadId || "", is_duplicate: data.isDuplicate === true } }));
         } catch (error) {
             if (successMsg) { successMsg.style.display = 'flex'; successMsg.textContent = error.message; }
             return;

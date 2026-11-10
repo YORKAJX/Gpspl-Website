@@ -5648,6 +5648,7 @@
                     form_time_token: timeToken
                 };
 
+                leadPayload.attribution = window.gpsplLeadAttribution?.() || {};
                 leadPayload['cf-turnstile-response'] = new FormData(boqForm).get('cf-turnstile-response') || '';
                 const leadResponse = await fetch('/.netlify/functions/submit-enquiry', {
                     method: 'POST', keepalive: true, signal: AbortSignal.timeout(20000),
@@ -5655,7 +5656,7 @@
                 });
                 const receipt = await leadResponse.json().catch(() => ({}));
                 if (!leadResponse.ok || receipt.success !== true || receipt.skipped) throw new Error(receipt.error || 'Enquiry delivery was not confirmed. Please retry or contact GPSPL directly.');
-                document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: 'enterpriseBoqForm' } }));
+                document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: 'enterpriseBoqForm', lead_id: receipt.leadId || "", is_duplicate: receipt.isDuplicate === true } }));
 
                 try {
                     var leadHistory = JSON.parse(localStorage.getItem('gpspl_captured_leads') || '[]');

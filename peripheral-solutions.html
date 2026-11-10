@@ -82,6 +82,7 @@
 }
     </script>
     <link rel="stylesheet" href="/css/ai-chat.css?v=20260902-mobile-fix">
+<link rel="stylesheet" href="/css/vertical-enquiry.css?v=20261110-2">
 </head>
 <body>
     <div id="header-container"></div>
@@ -109,7 +110,30 @@
         <section class="product-rfq-section section-padding bg-light" data-admin-section="product-rfq-checklist">
             <div class="container"><div class="section-title"><p class="section-eyebrow">RFQ Checklist</p><h2>Details that help us quote faster.</h2><p>Share these details and GPSPL can recommend the right brand, model family, accessories, installation scope and support plan.</p><div class="line"></div></div><div class="product-rfq-grid"><article data-detail="Share existing setup, preferred brand, quantity and location details."><span>01</span><p>Creative application</p></article><article data-detail="Mention site condition, timeline, installation scope and usage pattern."><span>02</span><p>Display size preference</p></article><article data-detail="Tell us warranty, service expectation, support level and handover needs."><span>03</span><p>Computer/workstation details</p></article><article data-detail="Share existing setup, preferred brand, quantity and location details."><span>04</span><p>Pen/tablet requirement</p></article><article data-detail="Mention site condition, timeline, installation scope and usage pattern."><span>05</span><p>Quantity</p></article><article data-detail="Tell us warranty, service expectation, support level and handover needs."><span>06</span><p>Warranty/service support</p></article></div></div>
         </section>
-    </main>
+
+<section class="vertical-enquiry section-padding" id="vertical-enquiry" aria-labelledby="vertical-enquiry-heading">
+ <div class="container">
+  <h2 id="vertical-enquiry-heading">Request a quotation for AV equipment supply</h2>
+  <p>Model or product category, quantity, delivery city and required date. Share what you know and the team can clarify the remaining scope.</p>
+  <div class="vertical-enquiry-actions">
+   <a href="tel:+918920830377" class="btn-primary">Call +91 89208 30377</a>
+   <a href="https://wa.me/918920830377?text=Hello%20GPSPL%2C%20I%20need%20a%20quotation%20for%20Creative%20%26%20Peripheral%20Solutions.%20City%3A%20__.%20Quantity%20or%20project%20size%3A%20__.%20Required%20date%3A%20__." class="btn-secondary">WhatsApp your requirement</a>
+   <a href="mailto:global@gpspl.co.in?subject=Creative%20%26%20Peripheral%20Solutions%20enquiry">Email the project desk</a>
+  </div>
+  <form name="peripheral-solutions-enquiry" action="/thank-you" method="POST" data-lead-form="peripheral-solutions" class="vertical-enquiry-form">
+   <input type="hidden" name="requirement" value="AV equipment supply">
+   <input type="hidden" name="page_url" value="">
+   <input name="bot-field" tabindex="-1" autocomplete="off" aria-hidden="true" class="vertical-enquiry-honeypot">
+   <label for="vertical-enquiry-name">Name<input id="vertical-enquiry-name" name="name" autocomplete="name" required maxlength="80"></label>
+   <label for="vertical-enquiry-phone">Mobile number<input id="vertical-enquiry-phone" name="phone" type="tel" autocomplete="tel" required maxlength="20"></label>
+   <label for="vertical-enquiry-email">Email (optional)<input id="vertical-enquiry-email" name="email" type="email" autocomplete="email" maxlength="120"></label>
+   <label class="vertical-enquiry-scope" for="vertical-enquiry-message">Requirement<textarea id="vertical-enquiry-message" name="message" rows="3" required maxlength="2000" placeholder="Model or product category, quantity, delivery city and required date"></textarea></label>
+   <p class="vertical-enquiry-scope">By submitting, you agree to GPSPL contacting you about this enquiry. <a href="/privacy-policy">Privacy policy</a></p>
+   <button type="submit" class="btn-primary" data-submit-label="Request quotation">Request quotation</button>
+  </form>
+ </div>
+</section>
+</main>
     <div id="footer-container"></div><script src="JS/main.js?v=20260909-boq-v1" defer></script><script src="JS/cms-seo-schema.js?v=20260716-product-depth" defer></script>
     <script src="/JS/ai-av-consultant.js?v=20260830-fix" defer></script>
 
@@ -151,5 +175,5 @@
     </a>
 </nav>
 
-</body>
+<script src="/JS/form-validation.js" defer></script></body>
 </html>

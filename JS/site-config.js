@@ -5,7 +5,7 @@
         siteUrl: "https://gpspl.co.in",
         ga4MeasurementId: "G-DWG4ZQNV0W",
         googleTagManagerId: "",
-        googleSearchConsoleVerification: "",
+        googleSearchConsoleVerification: "9jzmy1pvNrd9mbPeeJ_pVPu6Ov-NiYixFnBzbPM8yMU",
         microsoftClarityProjectId: "",
         vercelAnalytics: false,
         googleReviewsEndpoint: "/.netlify/functions/google-reviews",

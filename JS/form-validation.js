@@ -210,6 +210,7 @@
           signal: controller.signal,
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
+            attribution: window.gpsplLeadAttribution?.() || {},
             name: leadData.name, email: leadData.email, phone: leadData.phone,
             company: leadData.company, location: formData.get("location") || formData.get("city") || "",
             requirement: formData.get("requirement") || leadData.category,
@@ -227,7 +228,7 @@
           clearTimeout(timeout);
           box.className = "form-submit-status is-success";
           box.textContent = "Your enquiry has been accepted by the GPSPL project desk.";
-          document.dispatchEvent(new CustomEvent("gpspl:lead-form-success", { detail: { form_name: label, form_source: label } }));
+          document.dispatchEvent(new CustomEvent("gpspl:lead-form-success", { detail: { form_name: label, form_source: label, lead_id: data.leadId || "", is_duplicate: data.isDuplicate === true } }));
           const action = new URL(form.getAttribute("action") || "/thank-you", window.location.href);
           if (action.origin === window.location.origin && /\/thank-you(?:\.html)?\/?$/.test(action.pathname)) {
             window.location.assign(action.href);

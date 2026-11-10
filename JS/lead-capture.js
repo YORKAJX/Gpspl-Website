@@ -165,7 +165,7 @@
         const response = await fetch('/.netlify/functions/submit-enquiry', {
             method: 'POST', keepalive: true, signal: AbortSignal.timeout(20000),
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name: newLead.name, email: /^inquiry[-@]/.test(newLead.email) ? '' : newLead.email,
+            body: JSON.stringify({ attribution: window.gpsplLeadAttribution?.() || {}, name: newLead.name, email: /^inquiry[-@]/.test(newLead.email) ? '' : newLead.email,
                 phone: newLead.phone, company: newLead.company, requirement: newLead.category,
                 message: newLead.details, lead_source: newLead.source,
                 location: leadData.location || leadData.city || '',
@@ -173,7 +173,7 @@
         });
         const receipt = await response.json().catch(() => ({}));
         if (!response.ok || receipt.success !== true || receipt.skipped) throw new Error(receipt.error || 'Enquiry delivery was not confirmed. Please retry or contact GPSPL directly.');
-        document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: newLead.source } }));
+        document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: newLead.source, lead_id: receipt.leadId || "", is_duplicate: receipt.isDuplicate === true } }));
 
         return newLead;
     }

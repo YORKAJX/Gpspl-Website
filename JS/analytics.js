@@ -120,10 +120,27 @@
             }
         } catch (_) {}
 
+        if (!urlParams.has("utm_source") && !gclid && !fbclid && (!referrer || referrer.hostname === window.location.hostname)) {
+            try {
+                const firstVisit = JSON.parse(sessionStorage.getItem(SESSION_STORAGE_KEY) || "null");
+                if (firstVisit) return firstVisit;
+            } catch (_) {}
+        }
         return attribution;
     }
 
     const trafficAttribution = parseTrafficSource();
+
+    window.gpsplLeadAttribution = function () {
+        let firstVisit = {};
+        try { firstVisit = JSON.parse(sessionStorage.getItem(SESSION_STORAGE_KEY) || "{}"); } catch (_) {}
+        return {
+            landing_page: firstVisit.landing_page || window.location.pathname,
+            submission_page: window.location.pathname,
+            source: trafficAttribution.utm_source || trafficAttribution.referring_domain || "Direct",
+            medium: trafficAttribution.utm_medium || trafficAttribution.traffic_type || "Direct"
+        };
+    };
 
     // 3. Detect Device, Browser, OS, Screen, Timezone
     function getDeviceIntelligence() {
@@ -366,7 +383,7 @@
         if (lowerHref.includes("wa.me") || lowerHref.includes("whatsapp.com/send") || lowerHref.includes("api.whatsapp.com")) {
             return ["whatsapp_lead_click", {
                 contact_method: "WhatsApp Chat",
-                whatsapp_url: href,
+                whatsapp_destination: "GPSPL business WhatsApp",
                 cta_label: text || "WhatsApp GPSPL"
             }];
         }
@@ -465,8 +482,15 @@
             });
         }, { capture: true });
 
+        const recordedReceipts = new Set();
         document.addEventListener("gpspl:lead-form-success", (event) => {
+            const detail = event.detail || {};
+            if (detail.is_duplicate || /career|application/i.test(detail.form_name || "")) return;
+            if (detail.lead_id && recordedReceipts.has(detail.lead_id)) return;
+            if (detail.lead_id) recordedReceipts.add(detail.lead_id);
             track("generate_lead", {
+                lead_id: detail.lead_id || "",
+                qualification_status: "pending_sales_review",
                 lead_status: "SUCCESS",
                 form_name: event.detail?.form_name || "Enterprise Lead Form",
                 lead_type: event.detail?.lead_type || "B2B AV/IT Enquiry"

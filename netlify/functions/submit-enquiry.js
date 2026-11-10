@@ -136,12 +136,12 @@ async function sendFormSubmitEmails(lead) {
     const targets = (process.env.LEAD_NOTIFICATION_EMAILS || 'global@gpspl.co.in,karan@gpspl.co.in,itsdivesh221@gmail.com').split(',').map(x=>x.trim()).filter(Boolean);
     return Promise.any(targets.map(async target => {
         const response = await fetch('https://formsubmit.co/ajax/' + encodeURIComponent(target), {
-            method: 'POST', signal: AbortSignal.timeout(10000),
+            method: 'POST', signal: AbortSignal.timeout(7000),
             headers: { 'Content-Type': 'application/json', Accept: 'application/json', Referer: 'https://gpspl.co.in/', Origin: 'https://gpspl.co.in' },
             body: JSON.stringify({ _subject: 'New GPSPL enquiry: ' + lead.requirement,
                 'Client Name': lead.name, Phone: lead.phone, Email: lead.email,
                 Company: lead.company, Location: lead.location, Requirement: lead.requirement,
-                Details: lead.message, Source: lead.leadSource })
+                Details: lead.message, Source: lead.leadSource, 'Enquiry Reference': lead.leadId, Attribution: lead.attributionText })
         });
         const receipt = await response.json().catch(()=>({}));
         if (!response.ok || !(receipt.success === true || receipt.success === 'true')) throw Error('formsubmit_http_' + response.status + (response.ok ? '_unconfirmed' : '_rejected'));
@@ -151,7 +151,7 @@ async function sendFormSubmitEmails(lead) {
 async function sendResendEmail({ to, from, subject, html, replyTo }) {
     if (!process.env.RESEND_API_KEY) throw Error('resend_not_configured');
     const response = await fetch('https://api.resend.com/emails', {
-        method: 'POST', signal: AbortSignal.timeout(10000),
+        method: 'POST', signal: AbortSignal.timeout(7000),
         headers: { Authorization: 'Bearer ' + process.env.RESEND_API_KEY, 'Content-Type': 'application/json' },
         body: JSON.stringify({ from, to, subject, html, reply_to: replyTo })
     });
@@ -259,6 +259,13 @@ export const handler = async (event = {}) => {
     const requirement = clean(body.requirement || body.service || body.category || 'General AV Enquiry', 120);
     const message = clean(body.message || body.details || '', 2000);
     const leadSource = clean(body.lead_source || body.source || 'Website Contact Form', 100);
+    const leadId = crypto.randomUUID();
+    const attribution = Object.fromEntries(
+        ['landing_page', 'submission_page', 'source', 'medium'].map(key => [key, clean(body.attribution?.[key], 180)])
+    );
+    const attributionText = Object.entries(attribution).filter(([, value]) => value).map(([key, value]) => key + '=' + value).join(' | ');
+    const safeAttribution = attributionText.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+
     const turnstileToken = body['cf-turnstile-response'] || '';
 
     // 6. SERVER-SIDE STRICT VALIDATION
@@ -360,7 +367,7 @@ export const handler = async (event = {}) => {
                     </tr>
                     <tr style="border-bottom: 1px solid #f1f5f9;">
                         <td style="padding: 10px 0; color: #64748b; font-weight: bold;">Lead Source</td>
-                        <td style="padding: 10px 0; color: #475569;">${leadSource}</td>
+                        <td style="padding: 10px 0; color: #475569;">${leadSource}<br>Reference ${leadId}<br>${safeAttribution}</td>
                     </tr>
                     <tr>
                         <td style="padding: 12px 0; color: #64748b; font-weight: bold; vertical-align: top;">Project Scope</td>
@@ -377,35 +384,27 @@ export const handler = async (event = {}) => {
     const mailFrom = process.env.MAIL_FROM || 'GPSPL Leads <no-reply@gpspl.co.in>';
     let deliveryId;
     try {
-    deliveryId = await Promise.any([
-        sendResendEmail({
-            to: recipientEmails,
-            from: mailFrom,
-            subject: emailSubject,
-            html: emailHtml,
+        deliveryId = await sendResendEmail({
+            to: recipientEmails, from: mailFrom, subject: emailSubject, html: emailHtml,
             replyTo: email || recipientEmails[0] || 'global@gpspl.co.in'
-        }),
-        sendFormSubmitEmails({
-            name,
-            phone,
-            email,
-            company,
-            location,
-            requirement,
-            message,
-            leadSource
-        })
-    ]);
-    } catch (error) {
-        const deliveryFailures = deliveryFailureCodes(error);
-        console.error("GPSPL team notification failed:", JSON.stringify(deliveryFailures));
-        return json(503, { success: false, code: "EMAIL_DELIVERY_UNAVAILABLE", deliveryFailures, error: "Delivery was not confirmed. Please retry, call or WhatsApp GPSPL." }, baseHeaders);
+        });
+    } catch (primaryError) {
+        try {
+            deliveryId = await sendFormSubmitEmails({
+                name, phone, email, company, location, requirement, message, leadSource, leadId, attributionText
+            });
+        } catch (fallbackError) {
+            const deliveryFailures = [...deliveryFailureCodes(primaryError), ...deliveryFailureCodes(fallbackError)];
+            console.error("GPSPL team notification failed:", JSON.stringify(deliveryFailures));
+            return json(503, { success: false, code: "EMAIL_DELIVERY_UNAVAILABLE", deliveryFailures, error: "Delivery was not confirmed. Please retry, call or WhatsApp GPSPL." }, baseHeaders);
+        }
     }
     recentLeadHashes.set(`${phone}_${email.toLowerCase()}`, Date.now());
 
     return json(200, {
         success: true,
         deliveryId,
+        leadId,
         message: 'Thank you for contacting GPSPL! Your enquiry has been routed to our project engineering desk. Our team will contact you within 2 business hours.'
     }, baseHeaders);
 };

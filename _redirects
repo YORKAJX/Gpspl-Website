@@ -307,4 +307,6 @@ https://www.gpspl.co.in/* https://gpspl.co.in/:splat 301!
 # 6. 404 Fallback (must follow every explicit route)
 /404.html /404 301!
 /404 /404.html 200
+/newsroom-broadcast-av-solutions.html /newsroom-broadcast-av-solutions 301!
+/newsroom-broadcast-av-solutions /newsroom-broadcast-av-solutions.html 200
 /* /404.html 404

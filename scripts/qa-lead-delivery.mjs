@@ -94,7 +94,7 @@ for (const file of ['JS/room-configurator.js']) {
     const button = { disabled: true };
     const check = vm.runInNewContext(`(async () => { ${block} return 'continue'; })`, {
       fetch: async () => ({ ok: accepted, json: async () => accepted ? { success: true } : { error: 'Mock failure' } }),
-      AbortSignal, FormData: class { get() { return ''; } }, leadData: { name: 'QA Buyer' }, timeToken: '',
+      window: {}, AbortSignal, FormData: class { get() { return ''; } }, leadData: { name: 'QA Buyer' }, timeToken: '',
       form: { id: 'distributionSupplyForm', querySelector: () => button }, alert: () => failed++,
       document: { dispatchEvent: () => success++ }, CustomEvent: class { constructor(type) { this.type = type; } }
     });

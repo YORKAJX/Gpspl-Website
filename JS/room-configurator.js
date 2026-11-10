@@ -1105,12 +1105,12 @@
       const response = await fetch('/.netlify/functions/submit-enquiry', {
         method: 'POST', keepalive: true, signal: AbortSignal.timeout(20000),
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...leadData, email: /^inquiry[-@]/.test(leadData.email || '') ? '' : leadData.email,
+        body: JSON.stringify({ attribution: window.gpsplLeadAttribution?.() || {}, ...leadData, email: /^inquiry[-@]/.test(leadData.email || '') ? '' : leadData.email,
           form_time_token: timeToken, 'cf-turnstile-response': new FormData(form).get('cf-turnstile-response') || '' })
       });
       const data = await response.json().catch(() => ({}));
       if (!response.ok || data.success !== true || data.skipped) throw new Error(data.error || 'Delivery was not confirmed. Please retry or contact GPSPL directly.');
-      document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: form.id } }));
+      document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: form.id, lead_id: data.leadId || "", is_duplicate: data.isDuplicate === true } }));
     } catch (error) {
       const button = form.querySelector('button[type="submit"]');
       if (button) { button.disabled = false; button.textContent = 'Retry Enquiry'; }
@@ -1249,12 +1249,12 @@
       const response = await fetch('/.netlify/functions/submit-enquiry', {
         method: 'POST', keepalive: true, signal: AbortSignal.timeout(20000),
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...leadData, email: /^inquiry[-@]/.test(leadData.email || '') ? '' : leadData.email,
+        body: JSON.stringify({ attribution: window.gpsplLeadAttribution?.() || {}, ...leadData, email: /^inquiry[-@]/.test(leadData.email || '') ? '' : leadData.email,
           form_time_token: timeToken, 'cf-turnstile-response': new FormData(form).get('cf-turnstile-response') || '' })
       });
       const data = await response.json().catch(() => ({}));
       if (!response.ok || data.success !== true || data.skipped) throw new Error(data.error || 'Delivery was not confirmed. Please retry or contact GPSPL directly.');
-      document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: form.id } }));
+      document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: form.id, lead_id: data.leadId || "", is_duplicate: data.isDuplicate === true } }));
     } catch (error) {
       const button = form.querySelector('button[type="submit"]');
       if (button) { button.disabled = false; button.textContent = 'Retry Enquiry'; }
