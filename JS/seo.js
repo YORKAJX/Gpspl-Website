@@ -706,7 +706,7 @@
         ensureLink("manifest", "/site.webmanifest");
         if (runtimeConfig.googleSearchConsoleVerification) {
             ensureMeta(
-                'meta[name="google-site-verification"]',
+                `meta[name="google-site-verification"][content="${runtimeConfig.googleSearchConsoleVerification}"]`,
                 { name: "google-site-verification" },
                 "content",
                 runtimeConfig.googleSearchConsoleVerification
