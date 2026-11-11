@@ -239,6 +239,25 @@
           box.textContent = error.name === "AbortError"
             ? "Delivery is taking longer than expected and is not confirmed. Please retry, call +91 89208 30377 or use WhatsApp."
             : error.message;
+          const recovery = document.createElement("p");
+          recovery.textContent = "Your details are still in this form. You can send your requirement through WhatsApp or call the project desk: ";
+          const whatsapp = document.createElement("a");
+          const requirement = String(formData.get("requirement") || "AV equipment or integration").slice(0, 120);
+          const message = String(formData.get("message") || "").slice(0, 1500);
+          whatsapp.href = "https://wa.me/918920830377?text=" + encodeURIComponent(
+            "Hello GPSPL, my website enquiry was not confirmed. Requirement: " + requirement +
+            (message ? "\n" + message : "")
+          );
+          whatsapp.textContent = "Continue on WhatsApp";
+          whatsapp.target = "_blank";
+          whatsapp.rel = "noopener noreferrer";
+          recovery.appendChild(whatsapp);
+          const call = document.createElement("a");
+          call.href = "tel:+918920830377";
+          call.textContent = "Call +91 89208 30377";
+          call.style.marginLeft = "16px";
+          recovery.appendChild(call);
+          box.appendChild(recovery);
           if (submitBtn) {
             submitBtn.disabled = false;
             if (submitBtn.tagName === "INPUT") submitBtn.value = "Submit Again";
