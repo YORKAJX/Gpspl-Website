@@ -10,9 +10,9 @@
     const runtimeConfig = window.GPSPL_CONFIG || {};
 
     const sameAs = [
-        "https://www.instagram.com/gpspl_official/",
-        "https://www.linkedin.com/company/global-peripheral-solution-pvt-ltd/",
-        "https://www.facebook.com/people/Global-Peripheral-Solution-Pvt-Ltd/61556122034787/",
+        "https://www.instagram.com/gpspl/",
+        "https://www.linkedin.com/company/global-peripheral-solutions-pvt-ltd",
+        "https://www.facebook.com/gpspl.co.in",
         "https://www.youtube.com/@GPSPL1997"
     ];
 
@@ -794,14 +794,14 @@
             "geo": {
                 "@type": "GeoCoordinates",
                 "latitude": 28.548581,
-                "longitude": 77.253968
+                "longitude": 77.251393
             },
-            "hasMap": "https://www.google.com/maps/place/Global+Peripheral+Solution+Pvt.+Ltd./@28.548581,77.253968,17z/",
+            "hasMap": "https://www.google.com/maps/place/Global+Peripheral+Solution+Pvt.+Ltd./@28.548581,77.251393,17z/",
             "openingHoursSpecification": [
                 {
                     "@type": "OpeningHoursSpecification",
                     "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                    "opens": "10:00",
+                    "opens": "09:30",
                     "closes": "18:30"
                 }
             ],
@@ -821,7 +821,7 @@
                 "geoMidpoint": {
                     "@type": "GeoCoordinates",
                     "latitude": 28.548581,
-                    "longitude": 77.253968
+                    "longitude": 77.251393
                 },
                 "geoRadius": "250000"
             },
