@@ -314,8 +314,8 @@
             image: "/assests/images/products/professional-audio-solutions.webp"
         },
         "av-technology-distribution.html": {
-            title: "AV Equipment Distributor India | Bulk Commercial TV, JBL & PTZ Supply | GPSPL",
-            description: "B2B AV equipment distribution for bulk commercial TVs, displays, JBL professional audio, PTZ cameras and meeting-room technology. Request stock, quotation, delivery and installation scope.",
+            title: "AV Distributor & Equipment Supply Delhi NCR, India | GPSPL",
+            description: "Buy commercial TVs, JBL audio, PTZ cameras and interactive panels for your business. Request model, quantity, availability and installation details from GPSPL.",
             type: "service",
             serviceType: "Commercial AV technology distribution and B2B wholesale supply",
             image: "/assests/images/milestones/harman-best-regional-distributor-2024.jpeg"
@@ -353,8 +353,8 @@
             type: "product"
         },
         "index.html": {
-            title: "AV Solutions & Distribution Delhi NCR, Pan-India | GPSPL",
-            description: "Delhi NCR AV integration and technology supply, with Pan-India project enquiries for conference rooms, Active LED, JBL audio, education and hospitality.",
+            title: "AV Integrator & Equipment Supplier Delhi NCR | GPSPL",
+            description: "Plan conference room setup, classroom AV, active LED and professional audio with GPSPL. Equipment supply and turnkey integration for businesses and institutions.",
             type: "home",
             image: "/assests/images/hero/image.jpg"
         },
@@ -381,15 +381,15 @@
             image: "/assests/images/milestones/lg-regional-distributor-2022.jpeg"
         },
         "audio-visual-integration.html": {
-            title: "Turnkey AV System Integrator Delhi NCR & India | GPSPL",
-            description: "End-to-end AV integration in Delhi NCR and for Pan-India projects: design, equipment supply, installation, commissioning, training and maintenance planning.",
+            title: "Turnkey AV System Integrator Delhi NCR | GPSPL",
+            description: "AV design, equipment supply, installation and commissioning for offices, education and hospitality. Discuss your site, existing equipment and project timeline.",
             type: "service",
             serviceType: "Audio visual integration and enterprise AV system integration",
             image: "/assests/images/vision/conference-room-hero.jpg"
         },
         "conference-room-solutions.html": {
-            title: "Turnkey Conference Room Builder & AV Integrator | GPSPL",
-            description: "Conference room AV in Delhi NCR, with Pan-India project planning: video conferencing, displays, microphones, control, installation and support. Request a BOQ.",
+            title: "Conference Room Setup & Boardroom AV Delhi NCR | GPSPL",
+            description: "Conference room AV setup for your office: cameras, microphones, displays, installation and commissioning. Share seating, city and timeline for an itemised BOQ.",
             type: "service",
             serviceType: "Conference room and boardroom AV solutions",
             image: "/assests/images/products/conference-room-solutions.webp"
@@ -444,8 +444,8 @@
             image: "/assests/images/products/interactive-display-solutions.webp"
         },
         "smart-classroom-solutions.html": {
-            title: "Smart Classroom AV Solutions Delhi NCR & India | GPSPL",
-            description: "Smart classroom AV for Delhi NCR schools and Pan-India campuses: interactive displays, teaching audio and hybrid learning. Request a project-specific BOQ.",
+            title: "Smart Classroom Setup & Education AV Delhi NCR | GPSPL",
+            description: "Classroom AV setup for schools, colleges and coaching centres: interactive panels, teaching audio and hybrid learning. Discuss one room or a campus rollout.",
             type: "service",
             serviceType: "Smart classroom, interactive display and education AV integration",
             image: "/assests/images/projects/gpspl-real/polished/direct-education-classroom-panels.webp"
