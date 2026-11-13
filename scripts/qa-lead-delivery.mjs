@@ -54,20 +54,23 @@ async function frontendCase(file, response) {
   const recoveryNodes = [];
   const status = { className: '', textContent: '', appendChild(node) { recoveryNodes.push(node); } };
   const time = { value: '' };
-  let submit, redirects = 0, successes = 0, requests = 0;
+  let submit, submittedPayload, redirects = 0, successes = 0, requests = 0;
   const form = { id: 'contact', classList: { contains: () => false }, dataset: {}, setAttribute() {}, appendChild() {}, getAttribute(k) { return k === 'action' ? '/thank-you' : 'contact'; },
     querySelectorAll() { return []; }, querySelector(s) { if (s === '.form-submit-status') return status; if (s.includes('form_time_token')) return time; if (s.includes('button[type=')) return button; return null; },
     addEventListener(name, fn) { if (name === 'submit') submit = fn; } };
   const document = { readyState: 'complete', createElement(tag) { return { tag, style: {}, children: [], appendChild(node) { this.children.push(node); } }; }, querySelectorAll: () => [form], addEventListener() {}, dispatchEvent(e) { if (e.type === 'gpspl:lead-form-success') successes++; } };
   const context = { document, window: { location: { href: 'https://gpspl.co.in/contact', pathname: '/contact', origin: 'https://gpspl.co.in', assign() { redirects++; } } },
     URL, AbortController, CustomEvent: class { constructor(type, options) { this.type = type; this.detail = options?.detail; } },
-    FormData: class { get(key) { return ({ name: 'QA Buyer', phone: '9123456706' })[key] || ''; } entries() { return [['name', 'QA Buyer'], ['phone', '9123456706']][Symbol.iterator](); } },
+    FormData: class { get(key) { return ({ name: 'QA Buyer', phone: '9123456706', buyer_role: 'Buying for our own organisation / premises', city: 'Noida', timeline: 'Within 30 days', message: 'Upgrade our meeting room' })[key] || ''; } entries() { return [['name', 'QA Buyer'], ['phone', '9123456706']][Symbol.iterator](); } },
     btoa: s => Buffer.from(s).toString('base64'), setTimeout(fn, ms) { assert.equal(ms, 20000); return 1; }, clearTimeout() {},
-    fetch: async () => { requests++; if (response instanceof Error) throw response; return { ok: response.ok, status: response.status || 200, json: async () => response.data }; } };
+    fetch: async (url, options) => { submittedPayload = JSON.parse(options.body); requests++; if (response instanceof Error) throw response; return { ok: response.ok, status: response.status || 200, json: async () => response.data }; } };
   vm.runInNewContext(fs.readFileSync(file, 'utf8'), context);
   submit({ preventDefault() {} });
   for (let i = 0; i < 6; i++) await new Promise(resolve => setImmediate(resolve));
   assert.equal(requests, 1);
+  assert.ok(submittedPayload.message.includes('Buyer role: Buying for our own organisation'));
+  assert.ok(submittedPayload.message.includes('Project city: Noida'));
+  assert.ok(submittedPayload.message.includes('Upgrade our meeting room'));
   const accepted = !(response instanceof Error) && response.ok && response.data.success === true && !response.data.skipped;
   assert.equal(redirects, accepted ? 1 : 0);
   assert.equal(successes, accepted ? 1 : 0);
@@ -78,6 +81,7 @@ async function frontendCase(file, response) {
     const [whatsapp, call] = recoveryNodes[0].children;
     assert.equal(new URL(whatsapp.href).hostname, 'wa.me');
     assert.ok(new URL(whatsapp.href).searchParams.get('text').includes('not confirmed'));
+    assert.ok(new URL(whatsapp.href).searchParams.get('text').includes('Project city: Noida'));
     assert.equal(call.href, 'tel:+918920830377');
   } else { assert.equal(recoveryNodes.length, 0); }
 }

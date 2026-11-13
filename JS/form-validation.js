@@ -190,6 +190,12 @@
         track("lead_form_validated", { form_name: label, page_url: window.location.href });
 
         const formData = new FormData(form);
+        const projectContext = [
+          ["Buyer role", formData.get("buyer_role")],
+          ["Company / institution", formData.get("company")],
+          ["Project city", formData.get("city")],
+          ["Expected timing", formData.get("timeline")]
+        ].filter(([, value]) => value).map(([label, value]) => label + ": " + String(value).slice(0, 100)).join("\n");
         const leadData = {
           category: form.getAttribute("name") && form.getAttribute("name").includes("career") ? "CAREER APPLICATION" : "CONTACT INQUIRY",
           name: formData.get("name") || formData.get("full_name") || "Website Inquirer",
@@ -214,7 +220,7 @@
             name: leadData.name, email: leadData.email, phone: leadData.phone,
             company: leadData.company, location: formData.get("location") || formData.get("city") || "",
             requirement: formData.get("requirement") || leadData.category,
-            message: formData.get("message") || leadData.details, lead_source: label,
+            message: [projectContext, formData.get("message") || leadData.details].filter(Boolean).join("\n\n"), lead_source: label,
             timeline: formData.get("timeline") || "", budget: formData.get("budget") || "",
             "bot-field": formData.get("bot-field") || "",
             form_time_token: formData.get("form_time_token") || "",
@@ -243,7 +249,7 @@
           recovery.textContent = "Your details are still in this form. You can send your requirement through WhatsApp or call the project desk: ";
           const whatsapp = document.createElement("a");
           const requirement = String(formData.get("requirement") || "AV equipment or integration").slice(0, 120);
-          const message = String(formData.get("message") || "").slice(0, 1500);
+          const message = [projectContext, String(formData.get("message") || "").slice(0, 1500)].filter(Boolean).join("\n\n");
           whatsapp.href = "https://wa.me/918920830377?text=" + encodeURIComponent(
             "Hello GPSPL, my website enquiry was not confirmed. Requirement: " + requirement +
             (message ? "\n" + message : "")
