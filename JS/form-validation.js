@@ -241,6 +241,14 @@
           }
         }).catch(error => {
           clearTimeout(timeout);
+          if (form.getAttribute("data-netlify") === "true") {
+            try {
+              box.className = "form-submit-status is-success";
+              box.textContent = "Submitting your enquiry securely...";
+              HTMLFormElement.prototype.submit.call(form);
+              return;
+            } catch (_) {}
+          }
           box.className = "form-submit-status is-error";
           box.textContent = error.name === "AbortError"
             ? "Delivery is taking longer than expected and is not confirmed. Please retry, call +91 89208 30377 or use WhatsApp."
