@@ -4160,3 +4160,144 @@ input[name="b_field_honey"] {
 :is(#project-supply-and-turnkey, #category-buying-guide) .product-range-panel a { text-decoration: underline; text-underline-offset: 3px; }
 :is(#project-supply-and-turnkey, #category-buying-guide) .product-range-panel a:hover { text-decoration-thickness: 2px; }
 :is(#project-supply-and-turnkey, #category-buying-guide) .product-range-panel .section-eyebrow { font-size: .8rem; font-weight: 700; letter-spacing: .06em; }
+
+
+/* ====== ARCHITECTURAL TURNKEY SCOPE & BUYER PLANNING CARDS ====== */
+section[aria-label="Buying and project planning"],
+section#buyer-scope-check {
+    padding: clamp(48px, 6vw, 80px) 20px !important;
+    background: transparent !important;
+}
+
+section[aria-label="Buying and project planning"] > .container,
+section#buyer-scope-check > .container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: clamp(32px, 5vw, 48px) clamp(24px, 5vw, 44px) !important;
+    border-radius: 20px !important;
+    background: linear-gradient(135deg, #071526 0%, #0d223a 55%, #081220 100%) !important;
+    border: 1px solid rgba(239, 52, 56, 0.35) !important;
+    box-shadow: 0 20px 50px rgba(7, 21, 38, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
+    color: #f1f5f9 !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+section[aria-label="Buying and project planning"] > .container::before,
+section#buyer-scope-check > .container::before {
+    content: "TURNKEY AV SCOPE & EXECUTION BLUEPRINT" !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    font-size: 0.76rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    color: #ff6b6e !important;
+    background: rgba(239, 52, 56, 0.15) !important;
+    border: 1px solid rgba(239, 52, 56, 0.3) !important;
+    padding: 6px 14px !important;
+    border-radius: 999px !important;
+    margin-bottom: 18px !important;
+}
+
+section[aria-label="Buying and project planning"] > .container::after,
+section#buyer-scope-check > .container::after {
+    content: "" !important;
+    position: absolute !important;
+    top: -60px !important;
+    right: -60px !important;
+    width: 280px !important;
+    height: 280px !important;
+    background: radial-gradient(circle, rgba(239, 52, 56, 0.22) 0%, transparent 70%) !important;
+    pointer-events: none !important;
+    border-radius: 50% !important;
+}
+
+section[aria-label="Buying and project planning"] h2,
+section#buyer-scope-check h2 {
+    color: #ffffff !important;
+    font-size: clamp(1.6rem, 2.6vw, 2.2rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.28 !important;
+    margin: 0 0 16px 0 !important;
+    letter-spacing: -0.01em !important;
+}
+
+section[aria-label="Buying and project planning"] p,
+section#buyer-scope-check p {
+    color: rgba(226, 232, 240, 0.88) !important;
+    font-size: clamp(0.95rem, 1.15vw, 1.05rem) !important;
+    line-height: 1.75 !important;
+    max-width: 960px !important;
+    margin: 0 0 20px 0 !important;
+}
+
+section[aria-label="Buying and project planning"] p a:not(.btn-primary),
+section#buyer-scope-check p a:not(.btn-primary) {
+    color: #7dd3fc !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
+    font-weight: 600 !important;
+    transition: color 0.2s ease !important;
+}
+
+section[aria-label="Buying and project planning"] p a:not(.btn-primary):hover,
+section#buyer-scope-check p a:not(.btn-primary):hover {
+    color: #ffffff !important;
+}
+
+section[aria-label="Buying and project planning"] .btn-primary,
+section#buyer-scope-check .btn-primary {
+    background: linear-gradient(135deg, #ef3438 0%, #c62828 100%) !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    font-size: 0.95rem !important;
+    padding: 13px 26px !important;
+    border-radius: 8px !important;
+    border: none !important;
+    box-shadow: 0 6px 20px rgba(239, 52, 56, 0.35) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+}
+
+section[aria-label="Buying and project planning"] .btn-primary:hover,
+section#buyer-scope-check .btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 28px rgba(239, 52, 56, 0.5) !important;
+}
+
+section[aria-label="Buying and project planning"] p:has(a[href^="tel:"]),
+section#buyer-scope-check p:has(a[href^="tel:"]) {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 14px !important;
+    margin-top: 24px !important;
+    margin-bottom: 0 !important;
+}
+
+section[aria-label="Buying and project planning"] a[href^="tel:"],
+section#buyer-scope-check a[href^="tel:"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+    color: #ffffff !important;
+    padding: 12px 22px !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    font-size: 0.92rem !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+}
+
+section[aria-label="Buying and project planning"] a[href^="tel:"]:hover,
+section#buyer-scope-check a[href^="tel:"]:hover {
+    background: rgba(255, 255, 255, 0.16) !important;
+    border-color: rgba(255, 255, 255, 0.45) !important;
+    color: #ffffff !important;
+}
