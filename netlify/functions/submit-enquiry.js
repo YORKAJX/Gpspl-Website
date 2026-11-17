@@ -310,7 +310,7 @@ export const handler = async (event = {}) => {
 
     // 9. DISPATCH ALERTS TO TEAM
     const istTime = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' });
-    const defaultTeamEmails = 'global@gpspl.co.in, karan@gpspl.co.in';
+    const defaultTeamEmails = 'global@gpspl.co.in';
     const recipientEmails = (process.env.LEAD_NOTIFICATION_EMAILS || defaultTeamEmails)
         .split(',')
         .map(e => e.trim())
