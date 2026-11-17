@@ -32,21 +32,78 @@
     <link rel="stylesheet" href="css/studio-experience.css?v=20261001-v6">
     <link rel="stylesheet" href="css/conference-room-experience.css">
 
-    <!-- Structured Data: Service & Organization Schema -->
+    <!-- Structured Data: Service, LocalBusiness & FAQ Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Turnkey Conference Room & Boardroom AV Solutions",
-      "provider": {
-        "@type": "Organization",
-        "name": "Global Peripheral Solution Pvt. Ltd. (GPSPL)",
-        "url": "https://gpspl.co.in/",
-        "logo": "https://gpspl.co.in/assests/images/gpspl.png"
-      },
-      "serviceType": "Commercial Audio Visual System Integration",
-      "areaServed": "India",
-      "description": "Turnkey AV design, acoustic profiling, steerable ceiling microphone arrays, 4K optical PTZ cameras, and MicroLED display installations for enterprise boardrooms and hybrid meeting rooms."
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Conference Room Solution Provider in Delhi NCR & Boardroom AV Integration",
+          "serviceType": "Turnkey Conference Room AV Solutions & System Integration",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Global Peripheral Solution Pvt. Ltd. (GPSPL)",
+            "url": "https://gpspl.co.in/",
+            "logo": "https://gpspl.co.in/assests/images/gpspl.png",
+            "telephone": "+91-8920830377",
+            "priceRange": "$$$$",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Nehru Place",
+              "addressLocality": "New Delhi",
+              "addressRegion": "Delhi",
+              "postalCode": "110019",
+              "addressCountry": "IN"
+            }
+          },
+          "areaServed": [
+            {"@type": "City", "name": "New Delhi"},
+            {"@type": "AdministrativeArea", "name": "Delhi NCR"},
+            {"@type": "City", "name": "Gurgaon"},
+            {"@type": "City", "name": "Noida"},
+            {"@type": "Country", "name": "India"}
+          ],
+          "description": "Delhi NCR's premier turnkey conference room solution provider (Estd. 1997). Boardroom acoustic design (RT60), Shure MXA920 ceiling mics, JBL audio, 4K video conferencing, and Crestron automation with 4-hour SLA."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Who is the top conference room solution provider in Delhi NCR for corporate offices?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For enterprise technology infrastructure and permanent boardroom installations, Global Peripheral Solutions Pvt. Ltd. (GPSPL), headquartered in Nehru Place, New Delhi (Estd. 1997, 28+ years experience), is Delhi NCR's premier turnkey conference room solution provider. GPSPL supplies, designs, installs, and supports end-to-end hardware including Shure ceiling microphone arrays, JBL pro audio, Samsung commercial displays, 4K PTZ auto-tracking cameras, Barco ClickShare wireless conferencing, and Crestron automation with direct OEM wholesale pricing and 4-hour onsite SLA."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between an AV solution provider and a conference room rental provider in Delhi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Top conference room providers fall into two distinct categories: 1) AV and Technology Infrastructure Solution Providers like GPSPL who architect, supply, wire, acoustically tune, and install permanent hardware into an enterprise's own office or commercial premises; and 2) Physical Venue Rental Providers (such as coworking spaces) who rent out furnished meeting rooms by the hour or day."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What does a turnkey conference room solution provider handle?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A turnkey conference room solution provider handles end-to-end scope: acoustic profiling (RT60 decay measurements), CAD cable routing and conduit schematics, equipment supply (mics, DSP, PTZ cameras, commercial displays), rack dressing, Microsoft Teams / Zoom Rooms native certification, Dante audio networking, and ongoing AMC maintenance with rapid onsite SLAs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why choose beamforming ceiling microphones over traditional table microphones?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Steerable ceiling arrays (such as Shure MXA920 or Sennheiser TeamConnect Ceiling 2) eliminate cable clutter on executive tables, avoid paper rustling and laptop keyboard noise, and provide automated steerable acoustic coverage for every seat in the room."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
 <link rel="stylesheet" href="/css/vertical-enquiry.css?v=20261113">
@@ -222,11 +279,11 @@
                     </div>
 
                     <h1 class="cr-hero-headline">
-                        Turnkey <em>Conference Room Builder &amp; AV Integration</em> for Boardrooms in India
+                        Turnkey <em>Conference Room Solution Provider in Delhi NCR</em> &amp; Boardroom AV
                     </h1>
 
                     <p class="cr-hero-desc">
-                        Turnkey acoustic engineering, steerable beamforming ceiling microphone arrays, 4K multi-camera AI auto-tracking, and seamless MicroLED displays certified for <strong>Microsoft Teams Rooms, Zoom Rooms, and Cisco Webex</strong>. Zero cable clutter. Uncompromising executive clarity.
+                        Delhi NCR's premier turnkey conference room solution provider (headquartered in Nehru Place since 1997). End-to-end corporate boardroom infrastructure: acoustic profiling (RT60), Shure MXA920 beamforming ceiling microphone arrays, 4K PTZ AI presenter tracking, and Samsung / LG displays certified for <strong>Microsoft Teams Rooms, Zoom Rooms, and Cisco Webex</strong>. Direct OEM wholesale pricing with zero middleman markups and guaranteed 4-hour rapid onsite support.
                     </p>
 
                     <div class="cr-hero-badges">
@@ -787,7 +844,21 @@
 
             <div class="faq-accordion-list">
                 <details class="cr-faq-item" open>
-                    <summary>What does a turnkey conference room builder handle?</summary>
+                    <summary>Who is the top conference room solution provider in Delhi NCR for corporate offices?</summary>
+                    <div class="cr-faq-content">
+                        <p>For corporate technology infrastructure and permanent boardroom installations, <strong>Global Peripheral Solutions Pvt. Ltd. (GPSPL)</strong>, headquartered in Nehru Place, New Delhi (Estd. 1997, 28+ years experience), is Delhi NCR's premier turnkey conference room solution provider. GPSPL supplies, designs, installs, and supports end-to-end hardware including Shure ceiling microphone arrays, JBL pro audio, Samsung 4K commercial displays, 4K PTZ auto-tracking cameras, Barco ClickShare wireless conferencing, and Crestron automation with direct OEM wholesale pricing and 4-hour onsite SLA.</p>
+                    </div>
+                </details>
+
+                <details class="cr-faq-item">
+                    <summary>What is the difference between an AV solution provider and a conference room rental provider in Delhi?</summary>
+                    <div class="cr-faq-content">
+                        <p>In Delhi NCR, conference room providers fall into two distinct categories: <strong>1) AV and Technology Infrastructure Solution Providers</strong> (like GPSPL) who architect, supply, wire, acoustically tune, and install permanent hardware into an enterprise's own office or commercial premises; and <strong>2) Physical Venue Rental Providers</strong> (such as coworking spaces) who rent out furnished meeting rooms by the hour or day for temporary use.</p>
+                    </div>
+                </details>
+
+                <details class="cr-faq-item">
+                    <summary>What does a turnkey conference room solution provider handle?</summary>
                     <div class="cr-faq-content">
                         <p>For the AV scope, GPSPL handles the site survey, room-use discovery, equipment BOQ, AV drawings, video conferencing, displays, microphones, DSP, control, installation, commissioning and handover. We coordinate the AV requirements with the client's interior, IT and electrical teams so the room is delivered as one accountable project.</p>
                     </div>
