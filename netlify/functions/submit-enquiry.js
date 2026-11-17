@@ -132,22 +132,6 @@ async function verifyTurnstile(token, ip) {
 }
 
 
-async function sendFormSubmitEmails(lead) {
-    const targets = (process.env.LEAD_NOTIFICATION_EMAILS || 'global@gpspl.co.in,karan@gpspl.co.in,itsdivesh221@gmail.com').split(',').map(x=>x.trim()).filter(Boolean);
-    return Promise.any(targets.map(async target => {
-        const response = await fetch('https://formsubmit.co/ajax/' + encodeURIComponent(target), {
-            method: 'POST', signal: AbortSignal.timeout(7000),
-            headers: { 'Content-Type': 'application/json', Accept: 'application/json', Referer: 'https://gpspl.co.in/', Origin: 'https://gpspl.co.in' },
-            body: JSON.stringify({ _subject: 'New GPSPL enquiry: ' + lead.requirement,
-                'Client Name': lead.name, Phone: lead.phone, Email: lead.email,
-                Company: lead.company, Location: lead.location, Requirement: lead.requirement,
-                Details: lead.message, Source: lead.leadSource, 'Enquiry Reference': lead.leadId, Attribution: lead.attributionText })
-        });
-        const receipt = await response.json().catch(()=>({}));
-        if (!response.ok || !(receipt.success === true || receipt.success === 'true')) throw Error('formsubmit_http_' + response.status + (response.ok ? '_unconfirmed' : '_rejected'));
-        return 'formsubmit-accepted';
-    }));
-}
 async function sendResendEmail({ to, from, subject, html, replyTo }) {
     if (!process.env.RESEND_API_KEY) throw Error('resend_not_configured');
     const response = await fetch('https://api.resend.com/emails', {
@@ -162,7 +146,7 @@ async function sendResendEmail({ to, from, subject, html, replyTo }) {
 
 function deliveryFailureCodes(error) {
     if (error?.errors) return [...new Set(error.errors.flatMap(deliveryFailureCodes))];
-    if (/^(formsubmit_http_|resend_http_|resend_not_configured)/.test(error?.message || '')) return [error.message];
+    if (/^(resend_http_|resend_not_configured)/.test(error?.message || '')) return [error.message];
     if (error?.name === 'TimeoutError' || error?.name === 'AbortError') return ['provider_timeout'];
     return ['provider_connection_failed'];
 }
@@ -326,7 +310,7 @@ export const handler = async (event = {}) => {
 
     // 9. DISPATCH ALERTS TO TEAM
     const istTime = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' });
-    const defaultTeamEmails = 'global@gpspl.co.in, karan@gpspl.co.in, itsdivesh221@gmail.com';
+    const defaultTeamEmails = 'global@gpspl.co.in, karan@gpspl.co.in';
     const recipientEmails = (process.env.LEAD_NOTIFICATION_EMAILS || defaultTeamEmails)
         .split(',')
         .map(e => e.trim())
@@ -381,7 +365,7 @@ export const handler = async (event = {}) => {
         </div>
     `;
 
-    const mailFrom = process.env.MAIL_FROM || 'GPSPL Leads <no-reply@gpspl.co.in>';
+    const mailFrom = process.env.RESEND_FROM_EMAIL || process.env.MAIL_FROM || 'GPSPL Leads <no-reply@gpspl.co.in>';
     let deliveryId;
     try {
         deliveryId = await sendResendEmail({
@@ -389,15 +373,14 @@ export const handler = async (event = {}) => {
             replyTo: email || recipientEmails[0] || 'global@gpspl.co.in'
         });
     } catch (primaryError) {
-        try {
-            deliveryId = await sendFormSubmitEmails({
-                name, phone, email, company, location, requirement, message, leadSource, leadId, attributionText
-            });
-        } catch (fallbackError) {
-            const deliveryFailures = [...deliveryFailureCodes(primaryError), ...deliveryFailureCodes(fallbackError)];
-            console.error("GPSPL team notification failed:", JSON.stringify(deliveryFailures));
-            return json(503, { success: false, code: "EMAIL_DELIVERY_UNAVAILABLE", deliveryFailures, error: "Delivery was not confirmed. Please retry, call or WhatsApp GPSPL." }, baseHeaders);
-        }
+        const deliveryFailures = deliveryFailureCodes(primaryError);
+        console.error("GPSPL team notification failed via Resend:", JSON.stringify(deliveryFailures));
+        return json(503, {
+            success: false,
+            code: "EMAIL_DELIVERY_UNAVAILABLE",
+            deliveryFailures,
+            error: "Delivery was not confirmed. Please retry, call +91 89208 30377 or WhatsApp GPSPL directly."
+        }, baseHeaders);
     }
     recentLeadHashes.set(`${phone}_${email.toLowerCase()}`, Date.now());
 

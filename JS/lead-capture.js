@@ -13,7 +13,7 @@
     const ADMIN_CONFIG = {
         email: 'global@gpspl.co.in',
         secondaryEmail: 'karan@gpspl.co.in',
-        allEmails: ['global@gpspl.co.in', 'karan@gpspl.co.in', 'itsdivesh221@gmail.com'],
+        allEmails: ['global@gpspl.co.in', 'karan@gpspl.co.in'],
         phone: '8920830377',
         whatsappCountryCode: '91'
     };

@@ -17,10 +17,6 @@ try {
   assert.equal(JSON.parse(missing.body).code, 'EMAIL_DELIVERY_UNAVAILABLE');
   assert.ok(JSON.parse(missing.body).deliveryFailures.includes('resend_not_configured'));
   assert.ok(!missing.body.includes('mock-key'));
-  globalThis.fetch = async () => ({ ok: true, json: async () => ({ success: 'true' }) });
-  const fallback = await handler(event('9123456709', 'qa-fallback'));
-  assert.equal(fallback.statusCode, 200);
-  assert.equal(JSON.parse(fallback.body).deliveryId, 'formsubmit-accepted');
   process.env.RESEND_API_KEY = 'mock-key-for-test-only';
   globalThis.fetch = async () => ({ ok: false, status: 429, json: async () => ({ error: 'provider rejection' }) });
   assert.equal((await handler(event('9123456702', 'qa-retry'))).statusCode, 503);
