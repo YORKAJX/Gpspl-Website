@@ -1,0 +1,321 @@
+[
+  {
+    "path": "/conference-room-solutions",
+    "url": "https://gpspl.co.in/conference-room-solutions",
+    "status": 200,
+    "title": "Conference Room Solution Provider in Delhi NCR &amp; Boardroom AV | GPSPL",
+    "h1": "Turnkey <em>Conference Room Builder &amp; AV Integration</em> for Boardrooms in India",
+    "desc": "Turnkey conference room solution provider in Delhi NCR (Nehru Place since 1997). Complete boardroom setup, video conferencing, Shure ceiling mics, JBL audio &amp; displays. Get direct OEM BOQ.",
+    "canonical": "https://gpspl.co.in/conference-room-solutions",
+    "robots": "index, follow, max-image-preview:large",
+    "schemas": [
+      "Service"
+    ],
+    "cta_wa": true,
+    "cta_tel": true,
+    "cta_form": true,
+    "cookie_banner": true,
+    "scope_blueprint": false
+  },
+  {
+    "path": "/interactive-display-solutions",
+    "url": "https://gpspl.co.in/interactive-display-solutions",
+    "status": 200,
+    "title": "Interactive Displays &amp; Smart Boards Delhi NCR | GPSPL",
+    "h1": "Smart Boards &amp; 4K Interactive Flat Panels <em class=\"editorial-italic\">Engineered for Modern Teaching</em>",
+    "desc": "Explore interactive displays and smart boards for teaching, meeting rooms and training. Discuss sizes, software, supply and installation in Delhi NCR and India.",
+    "canonical": "https://gpspl.co.in/interactive-display-solutions",
+    "robots": "index, follow, max-image-preview:large",
+    "schemas": [
+      "Product",
+      "BreadcrumbList"
+    ],
+    "cta_wa": true,
+    "cta_tel": true,
+    "cta_form": true,
+    "cookie_banner": false,
+    "scope_blueprint": false
+  },
+  {
+    "path": "/active-led-wall-solutions",
+    "url": "https://gpspl.co.in/active-led-wall-solutions",
+    "status": 200,
+    "title": "Active LED Video Wall Solution Provider Delhi NCR | GPSPL",
+    "h1": "Active LED Video Wall Solutions",
+    "desc": "Direct active LED video wall solution provider in Delhi NCR (Nehru Place since 1997). Fine pitch P1.2, P1.5, P1.8 indoor and outdoor display walls. Call +91 89208 30377.",
+    "canonical": "https://gpspl.co.in/active-led-wall-solutions",
+    "robots": "index, follow, max-image-preview:large",
+    "schemas": [
+      "Service",
+      "BreadcrumbList"
+    ],
+    "cta_wa": true,
+    "cta_tel": true,
+    "cta_form": true,
+    "cookie_banner": false,
+    "scope_blueprint": false
+  },
+  {
+    "path": "/digital-signage-solutions",
+    "url": "https://gpspl.co.in/digital-signage-solutions",
+    "status": 200,
+    "title": "Commercial Display &amp; Digital Signage Solutions India | GPSPL",
+    "h1": "Digital Signage Displays, Content Management &amp; Installation",
+    "desc": "Commercial display and digital signage solutions for retail, hotels, offices and campuses. Discuss Samsung or LG signage screens, players, CMS, installation and multi-site rollout.",
+    "canonical": "https://gpspl.co.in/digital-signage-solutions",
+    "robots": "index, follow, max-image-preview:large",
+    "schemas": [
+      "BreadcrumbList"
+    ],
+    "cta_wa": true,
+    "cta_tel": true,
+    "cta_form": true,
+    "cookie_banner": false,
+    "scope_blueprint": false
+  },
+  {
+    "path": "/auditorium-av-solutions",
+    "url": "https://gpspl.co.in/auditorium-av-solutions",
+    "status": 200,
+    "title": "Auditorium AV Solution Provider in Delhi NCR (100 to 1000+ Seater) | GPSPL",
+    "h1": "Auditorium AV Integration, Line Arrays &amp; Acoustic Engineering",
+    "desc": "Turnkey auditorium AV solution provider in Delhi NCR for 100, 200, 300, 500, 1000+ seater venues. JBL line array, acoustic RT60 treatment, stage lighting &amp; LED walls. Call +91 89208 30377.",
+    "canonical": "https://gpspl.co.in/auditorium-av-solutions",
+    "robots": "index, follow, max-image-preview:large",
+    "schemas": [
+      "Service",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "cta_wa": true,
+    "cta_tel": true,
+    "cta_form": true,
+    "cookie_banner": false,
+    "scope_blueprint": false
+  },
+  {
+    "path": "/professional-audio-solutions",
+    "url": "https://gpspl.co.in/professional-audio-solutions",
+    "status": 200,
+    "title": "Commercial Gym &amp; Pro Audio Solution Provider Delhi NCR | JBL &amp; Crown | GPSPL",
+    "h1": "JBL, Bose &amp; Crown Professional Audio Solutions",
+    "desc": "Commercial gym, fitness studio &amp; pro audio solution provider in Delhi NCR. Direct OEM wholesale supply of JBL Commercial, Crown amplifiers, Shure wireless mics &amp; Bose Panaray. Call +91 89208 30377.",
+    "canonical": "https://gpspl.co.in/professional-audio-solutions",
+    "robots": "index, follow, max-image-preview:large",
+    "schemas": [
+      "Service",
+      "BreadcrumbList"
+    ],
+    "cta_wa": true,
+    "cta_tel": true,
+    "cta_form": true,
+    "cookie_banner": false,
+    "scope_blueprint": false
+  },
+  {
+    "path": "/amc-maintenance-services",
+    "url": "https://gpspl.co.in/amc-maintenance-services",
+    "status": 200,
+    "title": "AV AMC &amp; Maintenance Delhi NCR, India | GPSPL",
+    "h1": "Multi-Brand AMC, Installation &amp; Service Support <em class=\"amc-italic\">for Zero-Downtime Operations</em>",
+    "desc": "Discuss AV maintenance, troubleshooting, upgrades and support for installed systems. Share equipment details and site location to confirm coverage and AMC scope.",
+    "canonical": "https://gpspl.co.in/amc-maintenance-services",
+    "robots": "index, follow, max-image-preview:large",
+    "schemas": [
+      "Service",
+      "BreadcrumbList"
+    ],
+    "cta_wa": true,
+    "cta_tel": true,
+    "cta_form": true,
+    "cookie_banner": false,
+    "scope_blueprint": false
+  },
+  {
+    "path": "/av-system-integrator-delhi-ncr",
+    "url": "https://gpspl.co.in/av-system-integrator-delhi-ncr",
+    "status": 200,
+    "title": "AV System Integrator Delhi NCR | Turnkey AV Projects | GPSPL",
+    "h1": "Premier <span>AV System Integrator</span> in Delhi NCR &amp; India",
+    "desc": "GPSPL is a Delhi NCR AV system integrator for turnkey conference rooms, boardrooms, LED walls, education AV and enterprise audio. Request a site survey and project BOQ.",
+    "canonical": "https://gpspl.co.in/av-system-integrator-delhi-ncr",
+    "robots": "index, follow, max-image-preview:large",
+    "schemas": [
+      "LocalBusiness",
+      "Service",
+      "BreadcrumbList"
+    ],
+    "cta_wa": true,
+    "cta_tel": true,
+    "cta_form": true,
+    "cookie_banner": false,
+    "scope_blueprint": false
+  },
+  {
+    "path": "/av-system-integrator-gurgaon",
+    "url": "https://gpspl.co.in/av-system-integrator-gurgaon",
+    "status": 200,
+    "title": "AV System Integrator Gurgaon &amp; Gurugram | GPSPL",
+    "h1": "Turnkey AV System Integrator in Gurgaon &amp; Cyber City",
+    "desc": "Plan corporate AV in Gurgaon and Gurugram: conference rooms, displays, audio and room control. Request a project BOQ, installation scope and support plan.",
+    "canonical": "https://gpspl.co.in/av-system-integrator-gurgaon",
+    "robots": "index, follow, max-image-preview:large",
+    "schemas": [
+      "LocalBusiness"
+    ],
+    "cta_wa": true,
+    "cta_tel": true,
+    "cta_form": true,
+    "cookie_banner": false,
+    "scope_blueprint": false
+  },
+  {
+    "path": "/av-system-integrator-noida",
+    "url": "https://gpspl.co.in/av-system-integrator-noida",
+    "status": 200,
+    "title": "AV System Integrator in Noida & Greater Noida | GPSPL",
+    "h1": "AV system integration, technology supply and support for Noida",
+    "desc": "GPSPL plans and delivers AV systems in Noida and Greater Noida: boardroom conferencing, LED walls, smart classrooms, professional audio, technology supply and AMC support.",
+    "canonical": "https://gpspl.co.in/av-system-integrator-noida",
+    "robots": "index, follow, max-image-preview:large",
+    "schemas": [
+      "WebPage",
+      "Service",
+      "FAQPage"
+    ],
+    "cta_wa": true,
+    "cta_tel": true,
+    "cta_form": true,
+    "cookie_banner": false,
+    "scope_blueprint": false
+  },
+  {
+    "path": "/active-led-wall-supplier-noida",
+    "url": "https://gpspl.co.in/active-led-wall-supplier-noida",
+    "status": 200,
+    "title": "Active LED Wall Supply &amp; Installation Noida | GPSPL",
+    "h1": "Active LED Video Wall Supplier &amp; Installation in Noida",
+    "desc": "Plan Active LED walls in Noida and Greater Noida: pixel pitch selection, structure, processing and commissioning. Request a site-specific project quote.",
+    "canonical": "https://gpspl.co.in/active-led-wall-supplier-noida",
+    "robots": "index, follow, max-image-preview:large",
+    "schemas": [
+      "LocalBusiness"
+    ],
+    "cta_wa": true,
+    "cta_tel": true,
+    "cta_form": true,
+    "cookie_banner": false,
+    "scope_blueprint": false
+  },
+  {
+    "path": "/samsung-business-tv-befx-h2",
+    "url": "https://gpspl.co.in/samsung-business-tv-befx-h2",
+    "status": 200,
+    "title": "Samsung Business TV Delhi NCR &amp; India Supply | GPSPL",
+    "h1": "Samsung Business TV BEFX-H2 Series (BE43FH to BE85FH)",
+    "desc": "Samsung BEFX-H2 Business TV enquiries for Delhi NCR and Pan-India buyers. Request model-specific pricing, availability, delivery and installation scope.",
+    "canonical": "https://gpspl.co.in/samsung-business-tv-befx-h2",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "schemas": [
+      "Product"
+    ],
+    "cta_wa": true,
+    "cta_tel": true,
+    "cta_form": true,
+    "cookie_banner": false,
+    "scope_blueprint": false
+  },
+  {
+    "path": "/samsung-commercial-display-qbc",
+    "url": "https://gpspl.co.in/samsung-commercial-display-qbc",
+    "status": 200,
+    "title": "Samsung QBC Displays Delhi NCR &amp; India Supply | GPSPL",
+    "h1": "Samsung QBC Series Ultra-Slim 4K UHD Signage (QB43C to QB85C)",
+    "desc": "Samsung QBC commercial displays for Delhi NCR and Pan-India supply enquiries. Request model-specific pricing, stock availability and installation support.",
+    "canonical": "https://gpspl.co.in/samsung-commercial-display-qbc",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "schemas": [
+      "Product"
+    ],
+    "cta_wa": true,
+    "cta_tel": true,
+    "cta_form": true,
+    "cookie_banner": false,
+    "scope_blueprint": false
+  },
+  {
+    "path": "/samsung-commercial-display-qmc",
+    "url": "https://gpspl.co.in/samsung-commercial-display-qmc",
+    "status": 200,
+    "title": "Samsung QMC Displays Delhi NCR &amp; India Supply | GPSPL",
+    "h1": "Samsung QMC Series 24/7 Commercial Display (QM43C to QM85C)",
+    "desc": "Samsung QMC commercial display enquiries for Delhi NCR and Pan-India buyers. Review model details and request pricing, availability and installation scope.",
+    "canonical": "https://gpspl.co.in/samsung-commercial-display-qmc",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "schemas": [
+      "Product"
+    ],
+    "cta_wa": true,
+    "cta_tel": true,
+    "cta_form": true,
+    "cookie_banner": false,
+    "scope_blueprint": false
+  },
+  {
+    "path": "/lg-createboard-tr3er",
+    "url": "https://gpspl.co.in/lg-createboard-tr3er",
+    "status": 200,
+    "title": "LG CreateBoard TR3ER Brochure PDF &amp; Price India (65\" 75\" 86\") | 4K Interactive Flat Panel | GPSPL",
+    "h1": "LG CreateBoard TR3ER Interactive Display",
+    "desc": "Download official LG CreateBoard TR3ER interactive digital board brochure PDF. 40-point multi-touch, Android 13, wireless screen sharing for smart classrooms and corporate meeting rooms. Authorized B2B pricing across India for 65TR3ER, 75TR3ER, 86TR3ER.",
+    "canonical": "https://gpspl.co.in/lg-createboard-tr3er",
+    "robots": "index, follow, max-image-preview:large",
+    "schemas": [
+      "Product",
+      "BreadcrumbList"
+    ],
+    "cta_wa": true,
+    "cta_tel": true,
+    "cta_form": true,
+    "cookie_banner": true,
+    "scope_blueprint": false
+  },
+  {
+    "path": "/lg-commercial-tv-nu88c",
+    "url": "https://gpspl.co.in/lg-commercial-tv-nu88c",
+    "status": 200,
+    "title": "LG NU88C Commercial TV Delhi NCR &amp; India | GPSPL",
+    "h1": "LG NU88C Commercial TV: Supply &amp; Installation",
+    "desc": "LG NU88C commercial TV enquiries for Delhi NCR and Pan-India buyers. Request model-specific availability, pricing, delivery and installation scope.",
+    "canonical": "https://gpspl.co.in/lg-commercial-tv-nu88c",
+    "robots": "index, follow, max-image-preview:large",
+    "schemas": [
+      "Product",
+      "BreadcrumbList"
+    ],
+    "cta_wa": true,
+    "cta_tel": true,
+    "cta_form": true,
+    "cookie_banner": true,
+    "scope_blueprint": false
+  },
+  {
+    "path": "/lg-commercial-tv-ua831c",
+    "url": "https://gpspl.co.in/lg-commercial-tv-ua831c",
+    "status": 200,
+    "title": "LG UA831C Commercial TV Delhi NCR &amp; India | GPSPL",
+    "h1": "LG UA831C 4K Commercial TV",
+    "desc": "LG UA831C commercial TV enquiries for Delhi NCR and Pan-India buyers. Explore model details and request pricing, stock and installation scope.",
+    "canonical": "https://gpspl.co.in/lg-commercial-tv-ua831c",
+    "robots": "index, follow, max-image-preview:large",
+    "schemas": [
+      "Product",
+      "BreadcrumbList"
+    ],
+    "cta_wa": true,
+    "cta_tel": true,
+    "cta_form": true,
+    "cookie_banner": true,
+    "scope_blueprint": false
+  }
+]

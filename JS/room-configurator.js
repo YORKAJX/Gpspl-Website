@@ -615,8 +615,8 @@
             <!-- PROMINENT LOCKED INVESTMENT BANNER -->
             <div style="background: linear-gradient(135deg, #071526 0%, #1e293b 100%); border: 2px solid rgba(239, 52, 56, 0.4); border-radius: 20px; padding: 24px 26px; color: #ffffff; box-shadow: 0 12px 30px rgba(7,21,38,0.25); margin-bottom: 20px;">
               <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-                <span style="background: rgba(239, 52, 56, 0.25); color: #ef3438; border: 1px solid #ef3438; font-size: 0.72rem; font-weight: 900; padding: 3px 8px; border-radius: 6px; letter-spacing: 0.06em; text-transform: uppercase;">🔒 ESTIMATE LOCKED</span>
-                <span style="font-size: 0.74rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em;">TURNKEY AV PROJECT ESTIMATE</span>
+                <span style="background: rgba(239, 52, 56, 0.25); color: #ef3438; border: 1px solid #ef3438; font-size: 0.72rem; font-weight: 900; padding: 3px 8px; border-radius: 6px; letter-spacing: 0.06em; text-transform: uppercase;">🔒 INDICATIVE ESTIMATE BAND</span>
+                <span style="font-size: 0.74rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em;">INDICATIVE AV PROJECT ESTIMATE</span>
               </div>
               <strong style="font-size: 1.25rem; font-weight: 900; color: #ffffff; letter-spacing: -0.01em; display: block; margin-bottom: 6px; line-height: 1.3;">
                 WANT TO KNOW FULL TURNKEY COST &amp; ITEMIZED BOQ?

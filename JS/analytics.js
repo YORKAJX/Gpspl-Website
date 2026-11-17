@@ -7,6 +7,16 @@
     const SESSION_STORAGE_KEY = "gpspl_session_data_v2";
     const VISITOR_STORAGE_KEY = "gpspl_visitor_profile_v2";
     const SESSION_TRAIL_KEY = "gpspl_journey_trail_v2";
+    const CONSENT_STORAGE_KEY = "gpspl_cookie_consent_v1";
+    let isAnalyticsInitialized = false;
+
+    function hasAnalyticsConsent() {
+        try {
+            return localStorage.getItem(CONSENT_STORAGE_KEY) === "accepted";
+        } catch (_) {
+            return false;
+        }
+    }
 
     // Production Domain Verification & Bot Filter
     function isProductionDomain() {
@@ -249,6 +259,12 @@
         // Append to local journey trail for lead forms
         appendJourneyTrail(cleanEvent, params);
 
+        // Privacy Gate: Strictly block external telemetry until explicit consent is given
+        if (!hasAnalyticsConsent()) {
+            document.dispatchEvent(new CustomEvent("gpspl:analytics-event", { detail: { event: cleanEvent, payload } }));
+            return;
+        }
+
         // Security & Quality Gate: Only send external telemetry from real humans on official production domains
         if (!isProductionDomain() || isAutomatedBotOrCrawler()) {
             document.dispatchEvent(new CustomEvent("gpspl:analytics-event", { detail: { event: cleanEvent, payload } }));
@@ -286,6 +302,7 @@
 
     // 9. Initialize GA4 with Enhanced Config
     function initGa4() {
+        if (!hasAnalyticsConsent()) return;
         // Enforce production domain & human visitor check
         if (!isProductionDomain() || isAutomatedBotOrCrawler()) {
             return;
@@ -315,6 +332,7 @@
 
     // 10. Initialize GTM
     function initGtm() {
+        if (!hasAnalyticsConsent()) return;
         if (!isProductionDomain() || isAutomatedBotOrCrawler() || !config.googleTagManagerId) return;
         dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
         injectScript(`https://www.googletagmanager.com/gtm.js?id=${encodeURIComponent(config.googleTagManagerId)}`);
@@ -322,6 +340,7 @@
 
     // 11. Initialize Microsoft Clarity (Session Recording & Heatmaps)
     function initClarity() {
+        if (!hasAnalyticsConsent()) return;
         if (!isProductionDomain() || isAutomatedBotOrCrawler()) return;
         const clarityId = config.microsoftClarityProjectId;
         if (!clarityId) return;
@@ -566,10 +585,34 @@
         };
     };
 
-    // Initialize Subsystems
-    initGtm();
-    initGa4();
-    initClarity();
+    // Privacy-Gated Subsystem Lifecycle
+    function startAnalyticsIfConsented() {
+        if (isAnalyticsInitialized) return;
+        if (!hasAnalyticsConsent()) return;
+        isAnalyticsInitialized = true;
+        initGtm();
+        initGa4();
+        initClarity();
+        trackPageView(true);
+    }
+
+    function disableAnalytics() {
+        const gaId = config.ga4MeasurementId || "G-DWG4ZQNV0W";
+        if (gaId) {
+            window["ga-disable-" + gaId] = true;
+        }
+        isAnalyticsInitialized = false;
+    }
+
+    window.addEventListener("gpspl:cookie_consent_changed", (event) => {
+        const status = event.detail?.consent;
+        if (status === "accepted") {
+            startAnalyticsIfConsented();
+        } else if (status === "declined") {
+            disableAnalytics();
+        }
+    });
+
     patchNavigationTracking();
 
     if (document.readyState === "loading") {
@@ -578,13 +621,13 @@
             bindFormTracking();
             bindScrollDepthTracking();
             bindEngagementHeartbeat();
-            trackPageView(true);
+            startAnalyticsIfConsented();
         });
     } else {
         bindClickTracking();
         bindFormTracking();
         bindScrollDepthTracking();
         bindEngagementHeartbeat();
-        trackPageView(true);
+        startAnalyticsIfConsented();
     }
 }());
