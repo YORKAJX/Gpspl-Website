@@ -1,0 +1,28 @@
+{
+  "campaign_name": "Procurement - Direct OEM Sourcing & Middlemen Removal",
+  "target_persona": "Head of Purchase, Procurement Managers, Sourcing Directors, Commercial Heads",
+  "sender_account": "getgpspl@gmail.com",
+  "cc": [],
+  "touchpoints": [
+    {
+      "step": 1,
+      "delay_days": 0,
+      "subject": "direct oem av pricing // {{company_name}}",
+      "body_template": "Hi {{first_name}},\n\nNoticed {{company_name}} manages significant corporate office infrastructure. Reaching out because most enterprise procurement teams currently overpay 18% to 25% on Audio-Visual and Boardroom setups simply because equipment passes through multi-tier local traders and sub-distributors.\n\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL) has been leading enterprise AV systems integration since 1997. We source directly from Tier-1 OEMs—including Samsung, LG, Crestron, Shure, and Harman Professional—bypassing middleman margins entirely.\n\nOur company profile and enterprise credentials are documented here:\nhttps://gpspl.co.in/brochure.pdf\n\nWould you be open to sharing your next upcoming AV or Boardroom BOQ for a 10-minute price benchmark against our direct OEM wholesale pricing?\n\nThanks and regards,\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL)\nDirect / WhatsApp: +91 89208 30377\nOfficial Enquiries: global@gpspl.co.in | Web: https://gpspl.co.in"
+    },
+    {
+      "step": 2,
+      "delay_days": 3,
+      "is_thread_reply": true,
+      "subject": "Re: direct oem av pricing // {{company_name}}",
+      "body_template": "Hi {{first_name}},\n\nFollowing up briefly on my earlier note.\n\nIf you have any current or planned procurement for conference rooms, Active LED video walls, or annual AV maintenance (AMC), our engineering team can provide an apple-to-apple cost audit within 24 hours.\n\nYou keep full OEM warranty and certified tier-1 support while eliminating distributor markups from your CAPEX.\n\nHappy to review a line-item BOQ whenever convenient.\n\nThanks and regards,\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL)\nDirect / WhatsApp: +91 89208 30377\nOfficial Enquiries: global@gpspl.co.in | Web: https://gpspl.co.in"
+    },
+    {
+      "step": 3,
+      "delay_days": 7,
+      "is_thread_reply": true,
+      "subject": "Re: direct oem av pricing // {{company_name}}",
+      "body_template": "Hi {{first_name}},\n\nI imagine your calendar is packed, so I will pause reaching out.\n\nIf {{company_name}} evaluates boardroom upgrades, campus AV expansions, or AMC renewals later this quarter, feel free to reach me directly at +91 89208 30377 or global@gpspl.co.in.\n\nWishing you and your team a productive week ahead.\n\nThanks and regards,\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL)\nDirect / WhatsApp: +91 89208 30377\nOfficial Enquiries: global@gpspl.co.in | Web: https://gpspl.co.in"
+    }
+  ]
+}

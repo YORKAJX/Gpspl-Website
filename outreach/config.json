@@ -1,0 +1,56 @@
+{
+  "sender": {
+    "name": "Global Peripheral Solutions",
+    "email": "getgpspl@gmail.com",
+    "reply_to": "getgpspl@gmail.com",
+    "inbound_official": "global@gpspl.co.in",
+    "phone": "+91 89208 30377",
+    "signature": "Thanks and regards,\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL)\nDirect / WhatsApp: +91 89208 30377\nOfficial Enquiries: global@gpspl.co.in | Web: https://gpspl.co.in\nEnterprise AV Systems Integration & Direct OEM Sourcing Since 1997",
+    "cc": []
+  },
+  "company_profile": {
+    "legal_name": "Global Peripheral Solutions Pvt. Ltd.",
+    "brand_name": "GPSPL",
+    "established_year": 1997,
+    "experience_years": 28,
+    "core_specializations": [
+      "Boardroom & Conference Room AV Integration (MTR / Zoom Rooms certified)",
+      "Fine-Pitch Active LED Video Walls (Indoor P0.9 - P2.5 & Outdoor Displays)",
+      "Direct OEM Equipment Sourcing (Eliminating Multi-Tier Distributor Markups)",
+      "Enterprise Multi-Brand AMC & 4-Hour Onsite SLA Support",
+      "Auditorium Acoustic Engineering & Sound Reinforcement",
+      "Smart Interactive Flat Panels (IFP) for Training & Classrooms"
+    ],
+    "oem_tier1_partnerships": [
+      "Samsung (Smart Signage, The Wall, Interactive Displays)",
+      "LG Business Solutions (CreateBoard TR3ER, Direct View LED, Digital Signage)",
+      "Crestron Electronics (Automated Control, XiO Cloud, DM NVX AVoIP)",
+      "Harman Professional / JBL / BSS / Crown (Enterprise Audio & DSP)",
+      "Shure (Microflex Advance MXA920, Ceiling Array Microphones)",
+      "Poly / HP (Studio X Series, Enterprise Video Collaboration)",
+      "Barco (ClickShare Wireless Presentation & Conferencing)",
+      "ATEN (AV Matrix Switching & Infrastructure Control)"
+    ],
+    "value_propositions": {
+      "middlemen_elimination": "Direct factory / tier-1 OEM sourcing bypasses sub-distributor and trader margin stacking, delivering 15% to 25% verified capex savings on enterprise BOQs.",
+      "turnkey_execution": "In-house engineering from architectural CAD and acoustic RT60 planning to cable pull, OEM programming, and post-installation tuning.",
+      "sla_commitment": "4-Hour guaranteed onsite technician response across Delhi-NCR with dedicated spare hot-swaps.",
+      "brochure_url": "https://gpspl.co.in/brochure.pdf"
+    }
+  },
+  "sending_rules": {
+    "daily_send_limit": 30,
+    "min_delay_seconds": 90,
+    "max_delay_seconds": 180,
+    "allowed_sending_days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "allowed_sending_hours": {
+      "start": "09:30",
+      "end": "17:30",
+      "timezone": "Asia/Kolkata"
+    },
+    "attachment_policy": "NO_RAW_ATTACHMENTS",
+    "attachment_recommendation": "Use clean HTTPS link to https://gpspl.co.in/brochure.pdf instead of raw PDF attachments to protect sender domain reputation and ensure 100% inbox landing.",
+    "track_opens": false,
+    "track_clicks": false
+  }
+}

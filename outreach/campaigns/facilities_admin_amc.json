@@ -1,0 +1,28 @@
+{
+  "campaign_name": "Facilities & Admin - 4-Hour Onsite AMC & Zero VIP Downtime",
+  "target_persona": "Head of Facilities, VP Administration, Workplace Experience Director, Campus Ops Head",
+  "sender_account": "getgpspl@gmail.com",
+  "cc": [],
+  "touchpoints": [
+    {
+      "step": 1,
+      "delay_days": 0,
+      "subject": "quick question on {{company_name}} av maintenance",
+      "body_template": "Hi {{first_name}},\n\nReaching out because facility and workplace heads frequently tell us that dealing with fragmented AV vendors is exhausting—especially when equipment fails 10 minutes before a high-profile board meeting and the service technician takes 48 hours to arrive.\n\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL) has supported enterprise AV infrastructure across India since 1997. We provide consolidated, multi-brand comprehensive AMC backed by a committed 4-Hour onsite technician response across Delhi-NCR and major commercial hubs.\n\nOur full enterprise credentials and service scope are available here:\nhttps://gpspl.co.in/brochure.pdf\n\nWould it make sense to connect for 5 minutes to see how we help facility teams ensure zero VIP downtime through scheduled preventive health checks?\n\nThanks and regards,\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL)\nDirect / WhatsApp: +91 89208 30377\nOfficial Enquiries: global@gpspl.co.in | Web: https://gpspl.co.in"
+    },
+    {
+      "step": 2,
+      "delay_days": 3,
+      "is_thread_reply": true,
+      "subject": "Re: quick question on {{company_name}} av maintenance",
+      "body_template": "Hi {{first_name}},\n\nBriefly checking in regarding {{company_name}}'s annual AV maintenance setup.\n\nRather than waiting for emergency breakdowns, our AMC contracts include quarterly preventive audits, firmware updates, and standby hot-swap units for executive boardrooms, Active LED video walls, and town halls.\n\nIf your current AV maintenance contract is up for review in the next 1–3 months, we would be pleased to provide an unbundled, competitive proposal.\n\nThanks and regards,\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL)\nDirect / WhatsApp: +91 89208 30377\nOfficial Enquiries: global@gpspl.co.in | Web: https://gpspl.co.in"
+    },
+    {
+      "step": 3,
+      "delay_days": 7,
+      "is_thread_reply": true,
+      "subject": "Re: quick question on {{company_name}} av maintenance",
+      "body_template": "Hi {{first_name}},\n\nUnderstood you may be fully satisfied with your current AV support provider, so I will wrap up here.\n\nKeep our direct number (+91 89208 30377) on file should you ever require rapid 4-hour emergency support or direct OEM replacement hardware.\n\nWishing you and the facilities team at {{company_name}} all the best.\n\nThanks and regards,\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL)\nDirect / WhatsApp: +91 89208 30377\nOfficial Enquiries: global@gpspl.co.in | Web: https://gpspl.co.in"
+    }
+  ]
+}

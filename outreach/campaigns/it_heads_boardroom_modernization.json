@@ -1,0 +1,28 @@
+{
+  "campaign_name": "IT & Infrastructure - Boardroom Modernization & Zero-Downtime AV",
+  "target_persona": "Head of IT, CIO, CTO, IT Infrastructure Director, AV/UC Manager",
+  "sender_account": "getgpspl@gmail.com",
+  "cc": [],
+  "touchpoints": [
+    {
+      "step": 1,
+      "delay_days": 0,
+      "subject": "boardroom av reliability at {{company_name}}",
+      "body_template": "Hi {{first_name}},\n\nReaching out because enterprise IT teams often face an ongoing headache: boardroom meetings delayed by loose HDMI cables, microphone echo, or audio drops during critical Teams and Zoom calls.\n\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL) has engineered and deployed turnkey AV systems for Indian enterprises since 1997. We design standardized Microsoft Teams Rooms (MTR) and Zoom Rooms using ceiling beamforming mics (Shure MXA920), 4K commercial switching, and wireless BYOD (Barco ClickShare), monitored centrally via cloud dashboards.\n\nOur complete technical capabilities and OEM certifications are summarized here:\nhttps://gpspl.co.in/brochure.pdf\n\nWould you be open to a 10-minute technical exchange next Tuesday or Thursday to see how we help IT teams achieve single-touch meeting starts and eliminate room downtime?\n\nThanks and regards,\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL)\nDirect / WhatsApp: +91 89208 30377\nOfficial Enquiries: global@gpspl.co.in | Web: https://gpspl.co.in"
+    },
+    {
+      "step": 2,
+      "delay_days": 3,
+      "is_thread_reply": true,
+      "subject": "Re: boardroom av reliability at {{company_name}}",
+      "body_template": "Hi {{first_name}},\n\nQuick follow-up on my note regarding {{company_name}}'s meeting room infrastructure.\n\nOne common issue we solve for IT leaders is eliminating vendor finger-pointing between audio, display, and network providers when a room glitches. GPSPL handles turnkey engineering in-house—from architectural acoustics and DSP calibration to automated Crestron touch controls.\n\nIf you have a problematic meeting room or an upcoming office fitout, our team can conduct a complimentary 30-minute onsite acoustic and video audit.\n\nLet me know if this would be helpful for your team.\n\nThanks and regards,\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL)\nDirect / WhatsApp: +91 89208 30377\nOfficial Enquiries: global@gpspl.co.in | Web: https://gpspl.co.in"
+    },
+    {
+      "step": 3,
+      "delay_days": 7,
+      "is_thread_reply": true,
+      "subject": "Re: boardroom av reliability at {{company_name}}",
+      "body_template": "Hi {{first_name}},\n\nClosing the loop on this for now.\n\nShould you need certified AV engineering, direct Tier-1 OEM pricing, or technical troubleshooting for your executive spaces in the future, please feel free to connect directly at +91 89208 30377.\n\nBest regards to the IT team at {{company_name}}.\n\nThanks and regards,\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL)\nDirect / WhatsApp: +91 89208 30377\nOfficial Enquiries: global@gpspl.co.in | Web: https://gpspl.co.in"
+    }
+  ]
+}
