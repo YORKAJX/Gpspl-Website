@@ -172,7 +172,7 @@
                 'cf-turnstile-response': leadData['cf-turnstile-response'] || '', form_time_token: timeToken })
         });
         const receipt = await response.json().catch(() => ({}));
-        if (!response.ok || receipt.success !== true || receipt.skipped) throw new Error(receipt.error || 'Enquiry delivery was not confirmed. Please retry or contact GPSPL directly.');
+        if (!response.ok || receipt.success !== true || receipt.skipped || receipt.status === "queued") throw new Error(receipt.error || 'Enquiry delivery was not confirmed. Please retry or contact GPSPL directly.');
         document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: newLead.source, lead_id: receipt.leadId || "", is_duplicate: receipt.isDuplicate === true } }));
 
         return newLead;

@@ -1138,7 +1138,7 @@
         ];
 
         if (cfg.type === "service") {
-            graph.push(serviceSchema(key, cfg, url));
+            graph.push(serviceSchema(key, { ...cfg, title, description }, url));
             const faq = faqSchema(url);
             if (faq) graph.push(faq);
         }
@@ -1153,7 +1153,7 @@
         }
 
         if (productPages.has(key)) {
-            graph.push(productSchema(cfg, url, image));
+            graph.push(productSchema({ ...cfg, title, description }, url, image));
         }
 
         if (key === "index.html") {
