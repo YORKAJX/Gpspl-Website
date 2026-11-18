@@ -9,3 +9,5 @@ backend/logs/*.log
 backend/uploads/*
 !backend/uploads/.gitkeep
 scratch/
+outreach/*.csv
+outreach/*.bat
