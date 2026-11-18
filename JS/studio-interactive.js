@@ -275,7 +275,7 @@
         }
     };
 
-    window.handleHeroExpressSubmit = async function (event) {
+    window.handleHeroExpressSubmit = function (event) {
         event.preventDefault();
         const phoneInput = document.getElementById('heroExpPhone');
         const phone = phoneInput ? phoneInput.value.trim().replace(/\D/g, '').slice(-10) : '';
@@ -308,45 +308,6 @@
         }
 
         const refNo = 'GPSPL/HERO/' + Math.floor(100000 + Math.random() * 900000);
-        const leadPayload = {
-            name: `Express Client (${phone})`,
-            phone: phone,
-            email: `inquiry-${phone}@gpspl.co.in`,
-            company: 'Direct Express Mobile Lead',
-            requirement: finalRequirement,
-            message: `1-Step 5-Second Hero Express Inquiry:\n• Reference: ${refNo}\n• Mobile: ${phone}\n• Solution: ${finalRequirement}\n• Priority: Urgent Wholesale Quote Requested`,
-            lead_source: 'Homepage 5-Sec Hero Express Bar'
-        };
-
-        try {
-            const response = await fetch('/.netlify/functions/submit-enquiry', {
-                method: 'POST', keepalive: true, signal: AbortSignal.timeout(20000),
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ attribution: window.gpsplLeadAttribution?.() || {}, ...leadPayload, email: '',
-                    'cf-turnstile-response': document.querySelector('#heroExpressForm [name="cf-turnstile-response"]')?.value || '' })
-            });
-            const data = await response.json().catch(() => ({}));
-            if (!response.ok || data.success !== true || data.skipped) throw new Error(data.error || 'Your enquiry was not confirmed. Please retry, call or WhatsApp GPSPL.');
-            document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: 'heroExpressForm', lead_id: data.leadId || "", is_duplicate: data.isDuplicate === true } }));
-        } catch (error) {
-            if (successMsg) { successMsg.style.display = 'flex'; successMsg.textContent = error.message; }
-            return;
-        }
-
-        // 2. Backup to Local Storage
-        try {
-            const history = JSON.parse(localStorage.getItem('gpspl_captured_leads') || '[]');
-            history.unshift({
-                id: refNo,
-                category: 'HERO_EXPRESS_QUOTE',
-                date_time: new Date().toLocaleString('en-IN'),
-                phone: phone,
-                service: finalRequirement,
-                source: 'hero_express_inquiry'
-            });
-            localStorage.setItem('gpspl_captured_leads', JSON.stringify(history.slice(0, 25)));
-        } catch (e) {}
-
         // 3. Construct direct WhatsApp link with pre-filled technical inquiry
         const text = `Hello GPSPL AV Engineering Team,\n\nI require urgent wholesale pricing & BOQ schedule for:\n*Requirement*: ${finalRequirement}\n*Mobile*: ${phone}\n*Ref*: ${refNo}\n\nPlease connect with an engineer immediately.`;
         const waUrl = `https://wa.me/918920830377?text=${encodeURIComponent(text)}`;
@@ -358,11 +319,11 @@
                 <div style="display:flex; flex-direction:column; gap:6px; width:100%;">
                     <div style="display:flex; align-items:center; gap:8px;">
                         <i class="fas fa-circle-check" style="color:#22c55e; font-size:1.1rem;"></i>
-                        <span style="font-weight:700;">Inquiry recorded! Connecting to AV Engineering desk...</span>
+                        <span style="font-weight:700;">Your message is ready. Tap Send in WhatsApp to submit your enquiry.</span>
                     </div>
                     <div style="display:flex; gap:10px; margin-top:4px; flex-wrap:wrap;">
                         <a href="${waUrl}" target="_blank" rel="noopener noreferrer" style="background:#25d366; color:#ffffff; padding:7px 14px; border-radius:6px; font-weight:800; text-decoration:none; display:inline-flex; align-items:center; gap:6px; font-size:0.82rem;">
-                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp Now
+                            <i class="fab fa-whatsapp"></i> Open WhatsApp to Send
                         </a>
                         <a href="tel:+918920830377" style="background:#0f172a; color:#ffffff; padding:7px 14px; border-radius:6px; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:6px; font-size:0.82rem;">
                             <i class="fas fa-phone-alt"></i> Call +91 89208 30377
@@ -372,9 +333,9 @@
             `;
         }
 
-        // 5. User-Controlled Action Routing:
-        // Keep the user on the webpage with the confirmed receipt, while opening WhatsApp smoothly
-        // The visible WhatsApp button opens only when the visitor chooses it.
+        // Navigate synchronously from the submit gesture; no email service or popup dependency.
+        // This prepares a message, not a confirmed or received lead.
+        window.location.assign(waUrl);
     };
 
     // =========================================================================
