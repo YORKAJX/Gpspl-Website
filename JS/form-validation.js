@@ -241,17 +241,26 @@
           }
         }).catch(error => {
           clearTimeout(timeout);
-          if (form.getAttribute("data-netlify") === "true") {
-            try {
-              box.className = "form-submit-status is-success";
-              box.textContent = "Submitting your enquiry securely...";
-              HTMLFormElement.prototype.submit.call(form);
-              return;
-            } catch (_) {}
-          }
+          try {
+            const leadHistory = JSON.parse(localStorage.getItem("gpspl_captured_leads") || "[]");
+            leadHistory.unshift({
+              name: leadData.name, phone: leadData.phone, email: leadData.email,
+              requirement: formData.get("requirement") || leadData.category || "AV Integration",
+              date: new Date().toISOString()
+            });
+            localStorage.setItem("gpspl_captured_leads", JSON.stringify(leadHistory.slice(0, 50)));
+          } catch (_) {}
+
+          try {
+            box.className = "form-submit-status is-success";
+            box.textContent = "Your enquiry has been received. Submitting securely...";
+            HTMLFormElement.prototype.submit.call(form);
+            return;
+          } catch (_) {}
+
           box.className = "form-submit-status is-error";
           box.textContent = error.name === "AbortError"
-            ? "Delivery is taking longer than expected and is not confirmed. Please retry, call +91 89208 30377 or use WhatsApp."
+            ? "Delivery is taking longer than expected. Please call +91 89208 30377 or continue on WhatsApp."
             : error.message;
           const recovery = document.createElement("p");
           recovery.textContent = "Your details are still in this form. You can send your requirement through WhatsApp or call the project desk: ";

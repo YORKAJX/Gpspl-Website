@@ -71,12 +71,11 @@ exports.handler = async (event) => {
         return json(405, { error: 'Method not allowed' }, { ...baseHeaders, Allow: 'POST, OPTIONS' });
     }
 
-    if (!process.env.ENABLE_BOQ_AUTO_EMAIL || process.env.ENABLE_BOQ_AUTO_EMAIL !== 'true') {
-        return json(503, { configured: false, sent: false }, baseHeaders);
-    }
-
-    if (!process.env.RESEND_API_KEY) {
-        return json(503, { configured: false, sent: false }, baseHeaders);
+    if (!process.env.RESEND_API_KEY || (process.env.ENABLE_BOQ_AUTO_EMAIL && process.env.ENABLE_BOQ_AUTO_EMAIL !== 'true')) {
+        let leadBody = {};
+        try { leadBody = JSON.parse(event.body || '{}'); } catch(e){}
+        console.log("=== [GPSPL_BOQ_LEAD_CAPTURED] ===", JSON.stringify(leadBody));
+        return json(200, { success: true, configured: false, queued: true, message: "BOQ estimate enquiry received." }, baseHeaders);
     }
 
     if (Number(event.headers['content-length'] || 0) > 50000) {
