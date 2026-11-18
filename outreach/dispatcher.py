@@ -87,11 +87,13 @@ def check_spam_score(subject, body):
 def preview_campaigns(csv_file):
     config = load_config()
     campaigns = load_campaigns()
+    cc_display = ", ".join(config['sender'].get('cc', [])) or "None"
     
     print("\n=======================================================")
     print("      GPSPL OUTREACH CAMPAIGN PREVIEW ENGINE")
     print("=======================================================")
-    print(f"Sender Email  : {config['sender']['email']} (Strictly NO CC)")
+    print(f"Sender Email  : {config['sender']['email']}")
+    print(f"Carbon Copy   : {cc_display}")
     print(f"Direct Phone  : {config['sender']['phone']}")
     print(f"Official Desk : {config['sender']['inbound_official']}")
     print(f"Brochure Link : {config['company_profile']['value_propositions']['brochure_url']}")
@@ -146,6 +148,7 @@ def export_for_sellbird(csv_file, output_csv):
             t2 = campaign["touchpoints"][1]
             t3 = campaign["touchpoints"][2]
             
+            cc_str = ", ".join(config["sender"].get("cc", []))
             out_rows.append({
                 "email": row.get("email"),
                 "first_name": row.get("first_name"),
@@ -154,7 +157,9 @@ def export_for_sellbird(csv_file, output_csv):
                 "job_title": row.get("job_title"),
                 "persona_category": row.get("persona_category"),
                 "city": row.get("city"),
+                "estimated_av_scope": row.get("estimated_av_scope", "Turnkey AV / Hardware Supply"),
                 "sender_account": config["sender"]["email"],
+                "cc": cc_str,
                 "subject_touch1": render_template(t1["subject"], row),
                 "body_touch1": render_template(t1["body_template"], row),
                 "subject_touch2": render_template(t2["subject"], row),
@@ -197,11 +202,15 @@ def send_live_test(to_email, app_password, persona="procurement"):
     msg["To"] = to_email
     msg["Reply-To"] = config['sender']['email']
     
-    # Strictly NO CC as instructed
+    cc_list = config['sender'].get('cc', [])
+    if cc_list:
+        msg["Cc"] = ", ".join(cc_list)
+        
     part = MIMEText(body, "plain", "utf-8")
     msg.attach(part)
     
     sender_user = config["sender"]["email"]
+    all_recipients = [to_email] + cc_list
     
     print(f"\n[+] Connecting to smtp.gmail.com:587 via TLS...")
     try:
@@ -209,14 +218,13 @@ def send_live_test(to_email, app_password, persona="procurement"):
         server.ehlo()
         server.starttls()
         server.login(sender_user, app_password)
-        server.sendmail(sender_user, [to_email], msg.as_string())
+        server.sendmail(sender_user, all_recipients, msg.as_string())
         server.quit()
         print(f"[SUCCESS] Test outreach email delivered successfully to {to_email}!")
-        print("          Sent from: getgpspl@gmail.com (No CC)")
+        print(f"          Sent from: {sender_user} | CC: {', '.join(cc_list) or 'None'}")
     except Exception as e:
-        print(f"[ERROR] Failed to send via Gmail SMTP: {e}")
-        print("Note: To send via getgpspl@gmail.com, you need a Google 16-character App Password.")
-        print("      Generate one at: https://myaccount.google.com/apppasswords")
+        print(f"[ERROR] Failed to send via SMTP: {e}")
+        print(f"Note: Ensure {sender_user} has SMTP enabled or Google Workspace App Password configured.")
 
 def main():
     parser = argparse.ArgumentParser(description="GPSPL B2B Sellbird Outreach Dispatcher")

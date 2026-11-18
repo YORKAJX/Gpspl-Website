@@ -1,8 +1,8 @@
 {
   "campaign_name": "Facilities & Admin - 4-Hour Onsite AMC & Zero VIP Downtime",
   "target_persona": "Head of Facilities, VP Administration, Workplace Experience Director, Campus Ops Head",
-  "sender_account": "getgpspl@gmail.com",
-  "cc": [],
+  "sender_account": "global@gpspl.co.in",
+  "cc": ["karan@gpspl.co.in"],
   "touchpoints": [
     {
       "step": 1,

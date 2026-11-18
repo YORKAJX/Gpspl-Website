@@ -1,12 +1,14 @@
 {
   "sender": {
     "name": "Global Peripheral Solutions",
-    "email": "getgpspl@gmail.com",
-    "reply_to": "getgpspl@gmail.com",
+    "email": "global@gpspl.co.in",
+    "reply_to": "global@gpspl.co.in",
     "inbound_official": "global@gpspl.co.in",
     "phone": "+91 89208 30377",
     "signature": "Thanks and regards,\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL)\nDirect / WhatsApp: +91 89208 30377\nOfficial Enquiries: global@gpspl.co.in | Web: https://gpspl.co.in\nEnterprise AV Systems Integration & Direct OEM Sourcing Since 1997",
-    "cc": []
+    "cc": [
+      "karan@gpspl.co.in"
+    ]
   },
   "company_profile": {
     "legal_name": "Global Peripheral Solutions Pvt. Ltd.",

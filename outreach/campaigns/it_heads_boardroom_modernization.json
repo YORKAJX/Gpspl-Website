@@ -1,8 +1,8 @@
 {
   "campaign_name": "IT & Infrastructure - Boardroom Modernization & Zero-Downtime AV",
   "target_persona": "Head of IT, CIO, CTO, IT Infrastructure Director, AV/UC Manager",
-  "sender_account": "getgpspl@gmail.com",
-  "cc": [],
+  "sender_account": "global@gpspl.co.in",
+  "cc": ["karan@gpspl.co.in"],
   "touchpoints": [
     {
       "step": 1,

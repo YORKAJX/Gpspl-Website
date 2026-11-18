@@ -1,8 +1,8 @@
 {
   "campaign_name": "Procurement - Direct OEM Sourcing & Middlemen Removal",
   "target_persona": "Head of Purchase, Procurement Managers, Sourcing Directors, Commercial Heads",
-  "sender_account": "getgpspl@gmail.com",
-  "cc": [],
+  "sender_account": "global@gpspl.co.in",
+  "cc": ["karan@gpspl.co.in"],
   "touchpoints": [
     {
       "step": 1,
