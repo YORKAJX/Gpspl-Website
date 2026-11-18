@@ -375,19 +375,11 @@ export const handler = async (event = {}) => {
     } catch (primaryError) {
         const deliveryFailures = deliveryFailureCodes(primaryError);
         console.warn("GPSPL team notification pending email provider setup:", JSON.stringify(deliveryFailures));
-        console.log("=== [GPSPL_INCOMING_LEAD_CAPTURED] ===", JSON.stringify({
-            leadId,
-            name,
-            phone,
-            email,
-            company,
-            requirement,
-            message,
-            timeline: body.timeline,
-            budget: body.budget,
-            timestamp: new Date().toISOString()
-        }));
-        deliveryId = "queued_" + leadId;
+        // Logs are not a durable delivery queue. Keep failed attempts retryable.
+        return json(503, {
+            success: false, code: 'EMAIL_DELIVERY_UNAVAILABLE', leadId, deliveryFailures,
+            error: 'Email delivery was not confirmed. Please retry, call or WhatsApp GPSPL.'
+        }, baseHeaders);
     }
     recentLeadHashes.set(`${phone}_${email.toLowerCase()}`, Date.now());
 
@@ -395,7 +387,7 @@ export const handler = async (event = {}) => {
         success: true,
         deliveryId,
         leadId,
-        status: deliveryId.startsWith("queued_") ? "queued" : "delivered",
-        message: 'Thank you for contacting GPSPL! Your enquiry has been routed to our project engineering desk. Our team will contact you within 2 business hours.'
+        status: 'delivered',
+        message: 'Thank you for contacting GPSPL! Your enquiry has been routed to our project engineering desk. Our team will review your requirement.'
     }, baseHeaders);
 };

@@ -67,7 +67,7 @@ async function frontendCase(file, response) {
   assert.ok(submittedPayload.message.includes('Buyer role: Buying for our own organisation'));
   assert.ok(submittedPayload.message.includes('Project city: Noida'));
   assert.ok(submittedPayload.message.includes('Upgrade our meeting room'));
-  const accepted = !(response instanceof Error) && response.ok && response.data.success === true && !response.data.skipped;
+  const accepted = !(response instanceof Error) && response.ok && response.data.success === true && !response.data.skipped && response.data.status !== "queued";
   assert.equal(redirects, accepted ? 1 : 0);
   assert.equal(successes, accepted ? 1 : 0);
   if (!accepted) {
@@ -82,7 +82,7 @@ async function frontendCase(file, response) {
   } else { assert.equal(recoveryNodes.length, 0); }
 }
 for (const file of ['JS/form-validation.js']) {
-  for (const response of [new Error('Network failed'), { ok: false, data: { error: 'Provider failed' } },
+  for (const response of [{ ok: true, data: { success: true, status: 'queued' } }, new Error('Network failed'), { ok: false, data: { error: 'Provider failed' } },
     { ok: true, data: {} }, { ok: true, data: { success: true, skipped: true } }, { ok: true, data: { success: true } }]) await frontendCase(file, response);
 }
 for (const file of ['index.html']) {
@@ -103,9 +103,9 @@ for (const file of ['JS/room-configurator.js']) {
     const button = { disabled: true };
     const check = vm.runInNewContext(`(async () => { ${block} return 'continue'; })`, {
       fetch: async () => ({ ok: accepted, json: async () => accepted ? { success: true } : { error: 'Mock failure' } }),
-      window: {}, AbortSignal, FormData: class { get() { return ''; } }, leadData: { name: 'QA Buyer' }, timeToken: '',
+      window: {}, refNo: 'mock-reference', AbortSignal, FormData: class { get() { return ''; } }, leadData: { name: 'QA Buyer' }, timeToken: '',
       form: { id: 'distributionSupplyForm', querySelector: () => button }, alert: () => failed++,
-      document: { dispatchEvent: () => success++ }, CustomEvent: class { constructor(type) { this.type = type; } }
+      document: { dispatchEvent: e => { if (e.type === "gpspl:lead-form-success") success++; } }, CustomEvent: class { constructor(type) { this.type = type; } }
     });
     assert.equal(await check(), accepted ? 'continue' : undefined);
     assert.equal(success, accepted ? 1 : 0);
@@ -113,4 +113,4 @@ for (const file of ['JS/room-configurator.js']) {
     if (!accepted) assert.equal(button.disabled, false);
   }
 }
-console.log('PASS: mocked backend failures/retries/duplicates, 10 frontend delivery outcomes, and inline script syntax. No real messages sent.');
+console.log('PASS: mocked backend failures/retries/duplicates, frontend delivery outcomes, and inline script syntax. No real messages sent.');

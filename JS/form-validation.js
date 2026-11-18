@@ -228,7 +228,7 @@
           })
         }).then(async response => {
           const data = await response.json().catch(() => ({}));
-          if (!response.ok || data.success !== true || data.skipped) {
+          if (!response.ok || data.success !== true || data.skipped || data.status === "queued") {
             throw new Error(data.error || "Your enquiry was not confirmed. Please retry or contact GPSPL directly.");
           }
           clearTimeout(timeout);
@@ -241,23 +241,6 @@
           }
         }).catch(error => {
           clearTimeout(timeout);
-          try {
-            const leadHistory = JSON.parse(localStorage.getItem("gpspl_captured_leads") || "[]");
-            leadHistory.unshift({
-              name: leadData.name, phone: leadData.phone, email: leadData.email,
-              requirement: formData.get("requirement") || leadData.category || "AV Integration",
-              date: new Date().toISOString()
-            });
-            localStorage.setItem("gpspl_captured_leads", JSON.stringify(leadHistory.slice(0, 50)));
-          } catch (_) {}
-
-          try {
-            box.className = "form-submit-status is-success";
-            box.textContent = "Your enquiry has been received. Submitting securely...";
-            HTMLFormElement.prototype.submit.call(form);
-            return;
-          } catch (_) {}
-
           box.className = "form-submit-status is-error";
           box.textContent = error.name === "AbortError"
             ? "Delivery is taking longer than expected. Please call +91 89208 30377 or continue on WhatsApp."

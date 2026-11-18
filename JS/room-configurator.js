@@ -1109,10 +1109,16 @@
           form_time_token: timeToken, 'cf-turnstile-response': new FormData(form).get('cf-turnstile-response') || '' })
       });
       const data = await response.json().catch(() => ({}));
-      document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: form.id, lead_id: data.leadId || refNo, is_duplicate: data.isDuplicate === true } }));
+      if (!response.ok || data.success !== true || data.skipped || data.status === 'queued') {
+        throw new Error('Your enquiry delivery was not confirmed. Please retry, call +91 89208 30377 or use WhatsApp.');
+      }
+      document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: form.id, lead_id: data.leadId || "", is_duplicate: data.isDuplicate === true } }));
     } catch (error) {
-      console.warn('Network notice during lead submission:', error);
-      document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: form.id, lead_id: refNo } }));
+      const retryButton = form.querySelector('[type="submit"]');
+      if (retryButton) retryButton.disabled = false;
+      alert('Your enquiry delivery was not confirmed. Your details are still in the form. Please retry, call +91 89208 30377 or use WhatsApp.');
+      document.dispatchEvent(new CustomEvent('gpspl:lead-form-error', { detail: { form_name: form.id } }));
+      return;
     }
 
     // 2. Backup to localStorage
@@ -1251,10 +1257,16 @@
           form_time_token: timeToken, 'cf-turnstile-response': new FormData(form).get('cf-turnstile-response') || '' })
       });
       const data = await response.json().catch(() => ({}));
-      document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: form.id, lead_id: data.leadId || refNo, is_duplicate: data.isDuplicate === true } }));
+      if (!response.ok || data.success !== true || data.skipped || data.status === 'queued') {
+        throw new Error('Your enquiry delivery was not confirmed. Please retry, call +91 89208 30377 or use WhatsApp.');
+      }
+      document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: form.id, lead_id: data.leadId || "", is_duplicate: data.isDuplicate === true } }));
     } catch (error) {
-      console.warn('Network notice during lead submission:', error);
-      document.dispatchEvent(new CustomEvent('gpspl:lead-form-success', { detail: { form_name: form.id, lead_id: refNo } }));
+      const retryButton = form.querySelector('[type="submit"]');
+      if (retryButton) retryButton.disabled = false;
+      alert('Your enquiry delivery was not confirmed. Your details are still in the form. Please retry, call +91 89208 30377 or use WhatsApp.');
+      document.dispatchEvent(new CustomEvent('gpspl:lead-form-error', { detail: { form_name: form.id } }));
+      return;
     }
 
     // Backup to localStorage
