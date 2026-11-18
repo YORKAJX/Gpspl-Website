@@ -1,0 +1,28 @@
+{
+  "campaign_name": "Education & Campuses - Smart Classrooms, IFPDs & Campus AV",
+  "target_persona": "Head of Campus Infrastructure, Dean of Administration, Director of Sourcing & Purchase, EdTech Lead",
+  "sender_account": "global@gpspl.co.in",
+  "cc": ["karan@gpspl.co.in"],
+  "touchpoints": [
+    {
+      "step": 1,
+      "delay_days": 0,
+      "subject": "smart classroom ifpd & av setup // {{company_name}}",
+      "body_template": "Hi {{first_name}},\n\nReaching out as {{company_name}} continues expanding academic and campus infrastructure. Most institutions face two main issues with classroom AV: paying heavy middleman distributor markups on interactive displays and dealing with delayed technical service during active classes.\n\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL) has engineered and deployed turnkey academic technology across Delhi-NCR since 1997. We supply directly from Tier-1 OEMs—including LG (CreateBoard TR3ER), Samsung, and Harman Professional—at direct wholesale pricing:\n• Interactive Flat Panels (65\" / 75\" / 86\" 4K Touch Displays)\n• Digital Interactive Teaching Podiums & Classroom PA Speakers\n• AI Auto-Tracking Lecture Cameras & Campus IP CCTV Infrastructure\n\nOur full campus credentials and past deployments are summarized here:\nhttps://gpspl.co.in/brochure.pdf\n\nWould you be open to sharing your upcoming interactive display or smart classroom requirement for a direct OEM wholesale quote?\n\nThanks and regards,\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL)\nDirect / WhatsApp: +91 89208 30377 | Official: global@gpspl.co.in | Web: https://gpspl.co.in\nHQ: 304, Padma Palace, Nehru Place, New Delhi - 110019\nEnterprise AV Integration • Direct OEM Wholesale Sourcing • Since 1997\nAuthorized Lines: Samsung • LG • Crestron • Shure • Harman/JBL • Poly • Barco • ATEN\nTurnkey Scope: Boardrooms • Active LED Walls • Auditoriums • Smart Classrooms • CCTV • AMC"
+    },
+    {
+      "step": 2,
+      "delay_days": 3,
+      "is_thread_reply": true,
+      "subject": "Re: smart classroom ifpd & av setup // {{company_name}}",
+      "body_template": "Hi {{first_name}},\n\nQuick follow-up regarding classroom technology and interactive panels for {{company_name}}.\n\nBecause GPSPL is a direct Tier-1 partner for LG and Samsung, we eliminate distributor margins on bulk IFPD and speaker orders while providing full OEM on-site warranty backed by our dedicated 4-hour Delhi-NCR engineer dispatch.\n\nIf you are planning to upgrade classrooms, computer labs, or seminar halls, our engineering team can provide a complimentary line-item BOQ comparison within 24 hours.\n\nHappy to connect briefly at your convenience.\n\nThanks and regards,\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL)\nDirect / WhatsApp: +91 89208 30377 | Official: global@gpspl.co.in | Web: https://gpspl.co.in\nHQ: 304, Padma Palace, Nehru Place, New Delhi - 110019\nEnterprise AV Integration • Direct OEM Wholesale Sourcing • Since 1997\nAuthorized Lines: Samsung • LG • Crestron • Shure • Harman/JBL • Poly • Barco • ATEN\nTurnkey Scope: Boardrooms • Active LED Walls • Auditoriums • Smart Classrooms • CCTV • AMC"
+    },
+    {
+      "step": 3,
+      "delay_days": 7,
+      "is_thread_reply": true,
+      "subject": "Re: smart classroom ifpd & av setup // {{company_name}}",
+      "body_template": "Hi {{first_name}},\n\nClosing the loop on this for now.\n\nShould {{company_name}} require direct OEM quotes for interactive flat panels, digital podiums, campus PA systems, or integrated CCTV in the coming term, please feel free to reach me directly at +91 89208 30377 or global@gpspl.co.in.\n\nWishing you and the academic administration team a productive semester.\n\nThanks and regards,\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL)\nDirect / WhatsApp: +91 89208 30377 | Official: global@gpspl.co.in | Web: https://gpspl.co.in\nHQ: 304, Padma Palace, Nehru Place, New Delhi - 110019\nEnterprise AV Integration • Direct OEM Wholesale Sourcing • Since 1997\nAuthorized Lines: Samsung • LG • Crestron • Shure • Harman/JBL • Poly • Barco • ATEN\nTurnkey Scope: Boardrooms • Active LED Walls • Auditoriums • Smart Classrooms • CCTV • AMC"
+    }
+  ]
+}

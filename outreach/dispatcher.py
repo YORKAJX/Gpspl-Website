@@ -43,9 +43,13 @@ def load_campaigns():
 def map_persona_to_campaign(persona_category):
     cat = (persona_category or "").strip().lower()
     tokens = set(cat.replace("_", " ").replace("-", " ").split())
-    if any(t in tokens or t in cat for t in ["facility", "facilities", "admin", "workplace", "amc", "ops"]):
+    if any(t in tokens or t in cat for t in ["education", "school", "university", "college", "campus", "edtech", "classroom"]):
+        return "education_smart_classrooms"
+    elif any(t in tokens or t in cat for t in ["auditorium", "led", "active_led", "sound", "line_array", "stage"]):
+        return "auditorium_active_led_turnkey"
+    elif any(t in tokens or t in cat for t in ["facility", "facilities", "admin", "workplace", "amc", "ops"]):
         return "facilities_admin_amc"
-    elif any(t in tokens for t in ["it", "cio", "cto", "tech", "technology", "network", "infrastructure", "av"]):
+    elif any(t in tokens for t in ["it", "cio", "cto", "tech", "technology", "network", "infrastructure", "av", "telecom"]):
         return "it_heads_boardroom_modernization"
     else:
         return "procurement_direct_oem"
@@ -75,10 +79,10 @@ def check_spam_score(subject, body):
         warnings.append("Official brochure link missing from body")
         
     word_count = len(body.split())
-    if word_count > 160:
+    if word_count > 260:
         score -= 10
-        warnings.append(f"Email body is too long ({word_count} words). Recommended: 75-125 words.")
-    elif word_count < 40:
+        warnings.append(f"Email body is too long ({word_count} words). Recommended: 75-200 words.")
+    elif word_count < 35:
         score -= 10
         warnings.append(f"Email body is too short ({word_count} words).")
         

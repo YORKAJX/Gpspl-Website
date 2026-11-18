@@ -1,0 +1,28 @@
+{
+  "campaign_name": "Auditoriums & Large Displays - Active LED & Sound Reinforcement",
+  "target_persona": "VP Facilities, Director of Engineering, Head of Infrastructure, Convention & Events Head",
+  "sender_account": "global@gpspl.co.in",
+  "cc": ["karan@gpspl.co.in"],
+  "touchpoints": [
+    {
+      "step": 1,
+      "delay_days": 0,
+      "subject": "auditorium sound & active led setup // {{company_name}}",
+      "body_template": "Hi {{first_name}},\n\nReaching out as {{company_name}} operates significant auditorium or public gathering infrastructure. Large venues often struggle with poor speech intelligibility, echo in the rear rows, or outdated projection systems that look washed out under ambient light.\n\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL) has engineered and deployed turnkey AV and acoustic systems across Delhi-NCR since 1997. We deliver end-to-end integration with direct Tier-1 OEM pricing:\n• High-Impact Fine-Pitch Active LED Walls (Indoor P0.9 to P2.5 with Novastar 4K processing)\n• Professional Sound Reinforcement: JBL / Harman Line Arrays, Crown amplification & digital DSP\n• Complete RT60 Acoustic Treatment, Stage Lighting, and Centralized Crestron Touch Control\n• Comprehensive AMC with a committed 4-hour onsite response across Delhi-NCR\n\nOur full enterprise credentials and landmark projects are available here:\nhttps://gpspl.co.in/brochure.pdf\n\nWould you be open to an initial 10-minute technical exchange to benchmark your upcoming auditorium or LED wall requirements?\n\nThanks and regards,\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL)\nDirect / WhatsApp: +91 89208 30377 | Official: global@gpspl.co.in | Web: https://gpspl.co.in\nHQ: 304, Padma Palace, Nehru Place, New Delhi - 110019\nEnterprise AV Integration • Direct OEM Wholesale Sourcing • Since 1997\nAuthorized Lines: Samsung • LG • Crestron • Shure • Harman/JBL • Poly • Barco • ATEN\nTurnkey Scope: Boardrooms • Active LED Walls • Auditoriums • Smart Classrooms • CCTV • AMC"
+    },
+    {
+      "step": 2,
+      "delay_days": 3,
+      "is_thread_reply": true,
+      "subject": "Re: auditorium sound & active led setup // {{company_name}}",
+      "body_template": "Hi {{first_name}},\n\nQuick follow-up on my note regarding {{company_name}}'s auditorium or presentation venue.\n\nBecause we handle turnkey engineering in-house—from architectural CAD modeling and acoustic RT60 simulations to direct OEM hardware sourcing—we eliminate multi-tier contractor markups and eliminate vendor finger-pointing between audio and video suppliers.\n\nIf you have a venue planned for modernization or sound upgrade, our Senior Systems Engineers can conduct a complimentary onsite acoustic and sightline audit.\n\nLet me know if this would be helpful for your facilities team.\n\nThanks and regards,\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL)\nDirect / WhatsApp: +91 89208 30377 | Official: global@gpspl.co.in | Web: https://gpspl.co.in\nHQ: 304, Padma Palace, Nehru Place, New Delhi - 110019\nEnterprise AV Integration • Direct OEM Wholesale Sourcing • Since 1997\nAuthorized Lines: Samsung • LG • Crestron • Shure • Harman/JBL • Poly • Barco • ATEN\nTurnkey Scope: Boardrooms • Active LED Walls • Auditoriums • Smart Classrooms • CCTV • AMC"
+    },
+    {
+      "step": 3,
+      "delay_days": 7,
+      "is_thread_reply": true,
+      "subject": "Re: auditorium sound & active led setup // {{company_name}}",
+      "body_template": "Hi {{first_name}},\n\nClosing the loop on this for now.\n\nWhenever {{company_name}} evaluates auditorium acoustic upgrades, fine-pitch active LED video walls, or annual AV maintenance, keep our direct number (+91 89208 30377) on file.\n\nWishing you and your engineering team all the best.\n\nThanks and regards,\nGlobal Peripheral Solutions Pvt. Ltd. (GPSPL)\nDirect / WhatsApp: +91 89208 30377 | Official: global@gpspl.co.in | Web: https://gpspl.co.in\nHQ: 304, Padma Palace, Nehru Place, New Delhi - 110019\nEnterprise AV Integration • Direct OEM Wholesale Sourcing • Since 1997\nAuthorized Lines: Samsung • LG • Crestron • Shure • Harman/JBL • Poly • Barco • ATEN\nTurnkey Scope: Boardrooms • Active LED Walls • Auditoriums • Smart Classrooms • CCTV • AMC"
+    }
+  ]
+}
