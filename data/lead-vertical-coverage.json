@@ -138,5 +138,12 @@
     "call": true,
     "whatsapp": true,
     "form": true
+  },
+  {
+    "path": "/healthcare-projects",
+    "title": "Hospital OPD Displays, Queue Signage & Healthcare AV | GPSPL",
+    "call": true,
+    "whatsapp": true,
+    "form": true
   }
 ]
