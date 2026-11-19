@@ -353,8 +353,8 @@
             type: "product"
         },
         "index.html": {
-            title: "AV Integrator & Equipment Supplier Delhi NCR | GPSPL",
-            description: "Plan conference room setup, classroom AV, active LED and professional audio with GPSPL. Equipment supply and turnkey integration for businesses and institutions.",
+            title: "AV System Integrator Delhi NCR | Turnkey Solutions | GPSPL",
+            description: "Plan conference rooms, Active LED walls, professional audio, signage and classroom AV with GPSPL. Request equipment supply or turnkey integration.",
             type: "home",
             image: "/assests/images/hero/image.jpg"
         },
@@ -381,15 +381,15 @@
             image: "/assests/images/milestones/lg-regional-distributor-2022.jpeg"
         },
         "audio-visual-integration.html": {
-            title: "Turnkey AV System Integrator Delhi NCR | GPSPL",
-            description: "AV design, equipment supply, installation and commissioning for offices, education and hospitality. Discuss your site, existing equipment and project timeline.",
+            title: "AV System Integrator Delhi NCR | Turnkey Projects | GPSPL",
+            description: "AV design, equipment supply, installation and commissioning for corporate, education, hospitality and commercial projects. Request a scoped proposal.",
             type: "service",
             serviceType: "Audio visual integration and enterprise AV system integration",
             image: "/assests/images/vision/conference-room-hero.jpg"
         },
         "conference-room-solutions.html": {
-            title: "Conference Room Setup & Boardroom AV Delhi NCR | GPSPL",
-            description: "Conference room AV setup for your office: cameras, microphones, displays, installation and commissioning. Share seating, city and timeline for an itemised BOQ.",
+            title: "Conference Room Setup Delhi NCR | Boardroom AV | GPSPL",
+            description: "Plan a conference room or boardroom with displays, PTZ cameras, ceiling microphones, Teams or Zoom integration, installation and commissioning.",
             type: "service",
             serviceType: "Conference room and boardroom AV solutions",
             image: "/assests/images/products/conference-room-solutions.webp"
@@ -409,8 +409,8 @@
             image: "/assests/images/hero/video-wall-command-center.webp"
         },
         "active-led-wall-solutions.html": {
-            title: "Active LED Video Walls Delhi NCR & India | GPSPL",
-            description: "Active LED video walls for Delhi NCR and Pan-India projects. Plan pixel pitch, mounting, processing, installation and calibration with a site-specific quote.",
+            title: "Active LED Video Wall Delhi NCR | Installation | GPSPL",
+            description: "Plan an indoor or outdoor Active LED wall: pixel pitch, processor, mounting, power, installation and calibration. Request a site-specific quotation.",
             type: "service",
             serviceType: "Active LED wall solutions and installation",
             image: "/assests/images/products/active-led-video-wall.webp"
@@ -430,8 +430,8 @@
             image: "/assests/images/products/active-led-video-wall.webp"
         },
         "digital-signage-solutions.html": {
-            title: "Digital Signage Solutions Delhi NCR & India | GPSPL",
-            description: "Plan commercial digital signage for shops, hotels, offices and campuses. Request displays, players, content management and installation for single or multiple sites.",
+            title: "Digital Signage Company Delhi NCR | LG & Samsung | GPSPL",
+            description: "Commercial displays, digital standees and signage CMS for retail, offices, hotels and hospitals. Request LG or Samsung supply and installation.",
             type: "service",
             serviceType: "Digital signage and commercial display solutions",
             image: "/assests/images/products/digital-signage-solutions.webp"
@@ -444,8 +444,8 @@
             image: "/assests/images/products/interactive-display-solutions.webp"
         },
         "smart-classroom-solutions.html": {
-            title: "Smart Classroom Setup & Education AV Delhi NCR | GPSPL",
-            description: "Classroom AV setup for schools, colleges and coaching centres: interactive panels, teaching audio and hybrid learning. Discuss one room or a campus rollout.",
+            title: "Smart Classroom Setup Delhi NCR | Education AV | GPSPL",
+            description: "Interactive panels, teaching audio, digital podiums and hybrid-learning cameras for schools and colleges. Discuss one classroom or a campus rollout.",
             type: "service",
             serviceType: "Smart classroom, interactive display and education AV integration",
             image: "/assests/images/projects/gpspl-real/polished/direct-education-classroom-panels.webp"
@@ -458,8 +458,8 @@
             image: "/assests/images/projects/gpspl-real/polished/real-hospitality-restaurant-led.jpg"
         },
         "professional-audio-solutions.html": {
-            title: "JBL Professional Speaker Supplier India | Bulk Supply & Sound System Integration | GPSPL",
-            description: "JBL professional speaker and sound-system supply for businesses, institutions and venues. Get a B2B quotation for speakers, microphones, DSP, installation and commissioning.",
+            title: "JBL Professional Audio Integrator Delhi NCR | GPSPL",
+            description: "Plan JBL speakers, microphones, amplifiers and DSP for offices, auditoriums, hospitality and religious venues. Request supply or sound-system integration.",
             type: "service",
             serviceType: "Professional audio, auditorium sound and DSP system integration",
             image: "/assests/images/products/professional-audio-solutions.webp"
@@ -579,8 +579,8 @@
             type: "webpage"
         },
         "healthcare-projects.html": {
-            title: "Healthcare AV, Display & IT Projects | GPSPL",
-            description: "Healthcare technology projects including display systems, conferencing, audio, training rooms, IT infrastructure and support for connected care environments.",
+            title: "Hospital OPD Displays & Healthcare AV Delhi NCR | GPSPL",
+            description: "Plan OPD token displays, waiting-area signage, announcement audio, training-room AV and hospital conference rooms. Request supply or integration.",
             type: "webpage"
         },
         "case-studies.html": {

@@ -1,0 +1,105 @@
+{
+  "sitemapPages": 98,
+  "brokenInternalLinks": [],
+  "missingH1": [],
+  "multipleH1": [],
+  "missingTitle": [],
+  "duplicateTitles": [],
+  "orphans": [],
+  "lowLinkPages": [
+    {
+      "pathname": "/featured-projects",
+      "incoming": 1,
+      "sources": [
+        "/projects"
+      ]
+    },
+    {
+      "pathname": "/team",
+      "incoming": 1,
+      "sources": [
+        "/about-gpspl"
+      ]
+    },
+    {
+      "pathname": "/blog/samsung-business-tv-commercial-signage-guide",
+      "incoming": 2,
+      "sources": [
+        "/industries",
+        "/resources"
+      ]
+    },
+    {
+      "pathname": "/blog/hospital-healthcare-av-integration-ot-streaming-telemedicine-guide",
+      "incoming": 2,
+      "sources": [
+        "/",
+        "/industries"
+      ]
+    },
+    {
+      "pathname": "/av-system-integrator-mumbai",
+      "incoming": 1,
+      "sources": [
+        "/audio-visual-integration"
+      ]
+    },
+    {
+      "pathname": "/av-system-integrator-bangalore",
+      "incoming": 1,
+      "sources": [
+        "/audio-visual-integration"
+      ]
+    },
+    {
+      "pathname": "/av-system-integrator-hyderabad",
+      "incoming": 1,
+      "sources": [
+        "/audio-visual-integration"
+      ]
+    },
+    {
+      "pathname": "/blog/gym-fitness-studio-sound-system-installation-cost-india",
+      "incoming": 1,
+      "sources": [
+        "/industries"
+      ]
+    },
+    {
+      "pathname": "/newsroom-broadcast-av-solutions",
+      "incoming": 2,
+      "sources": [
+        "/video-technologies",
+        "/turnkey-av-projects-india"
+      ]
+    },
+    {
+      "pathname": "/av-system-integrator-noida",
+      "incoming": 1,
+      "sources": [
+        "/audio-visual-integration"
+      ]
+    },
+    {
+      "pathname": "/resources/active-led-pixel-pitch-guide",
+      "incoming": 1,
+      "sources": [
+        "/resources"
+      ]
+    },
+    {
+      "pathname": "/resources/av-over-ip-vs-hdbaset",
+      "incoming": 1,
+      "sources": [
+        "/resources"
+      ]
+    },
+    {
+      "pathname": "/resources/boardroom-acoustic-planning",
+      "incoming": 1,
+      "sources": [
+        "/resources"
+      ]
+    }
+  ]
+}

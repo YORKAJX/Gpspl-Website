@@ -2,6 +2,9 @@ User-agent: *
 Allow: /
 Disallow: /tmp/
 
+# The wildcard policy allows Googlebot, OAI-SearchBot and other compliant
+# search or answer-engine crawlers to read public pages and assets.
+
 # Thank-you and error pages remain crawlable so crawlers can read noindex.
 # Keep CSS, JavaScript, images and shared modules available for rendering.
 
