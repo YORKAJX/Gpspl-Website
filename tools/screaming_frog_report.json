@@ -1,0 +1,2955 @@
+{
+  "summary": {
+    "total_pages": 100,
+    "broken_links_count": 0,
+    "broken_images_count": 0,
+    "redirect_links_count": 0,
+    "canonical_issues_count": 0,
+    "robots_issues_count": 0,
+    "title_issues_count": 0,
+    "duplicate_titles_count": 0,
+    "desc_issues_count": 0,
+    "duplicate_descs_count": 0,
+    "heading_issues_count": 0,
+    "duplicate_h1_count": 0,
+    "missing_alt_count": 0,
+    "missing_dim_count": 0,
+    "lazy_hero_count": 0,
+    "og_issues_count": 0,
+    "schema_issues_count": 0
+  },
+  "broken_links": [],
+  "broken_images": [],
+  "redirect_chain_links": [],
+  "canonical_issues": [],
+  "robots_issues": [],
+  "title_issues": [],
+  "duplicate_titles": {},
+  "desc_issues": [],
+  "duplicate_descriptions": {},
+  "heading_issues": [],
+  "duplicate_h1s": {},
+  "missing_alt_images": [],
+  "missing_dim_images": [],
+  "lazy_hero_images": [],
+  "og_issues": [],
+  "schema_issues": [],
+  "pages": {
+    "404.html": {
+      "rel_path": "404.html",
+      "title": "Page Not Found (404) | GPSPL Technology Solutions",
+      "title_len": 49,
+      "title_status": "OK",
+      "desc": "The requested GPSPL website page could not be found.",
+      "desc_len": 52,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/404",
+      "canonical_status": "OK",
+      "robots": "noindex, nofollow",
+      "robots_status": "OK",
+      "h1s": [
+        "Page not found."
+      ],
+      "h2_count": 0,
+      "h3_count": 1,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "WebPage"
+      ],
+      "schema_valid": true
+    },
+    "about-gpspl.html": {
+      "rel_path": "about-gpspl.html",
+      "title": "About GPSPL | AV System Integrator & Distributor India",
+      "title_len": 54,
+      "title_status": "OK",
+      "desc": "About GPSPL (Global Peripheral Solution Pvt. Ltd.). Turnkey AV system integration, technology distribution, and AMC support in Delhi NCR and India.",
+      "desc_len": 147,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/about-gpspl",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Built on supply. Proven in the room."
+      ],
+      "h2_count": 9,
+      "h3_count": 30,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "BreadcrumbList",
+        "AboutPage"
+      ],
+      "schema_valid": true
+    },
+    "active-led-wall-installation.html": {
+      "rel_path": "active-led-wall-installation.html",
+      "title": "LED Wall Installation & Commissioning Delhi NCR | GPSPL",
+      "title_len": 55,
+      "title_status": "OK",
+      "desc": "Plan LED wall mounting, site readiness, power, commissioning and handover in Delhi NCR and across India. Request a site-specific installation scope.",
+      "desc_len": 148,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/active-led-wall-installation",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Active LED Wall Installation & Commissioning"
+      ],
+      "h2_count": 10,
+      "h3_count": 18,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "active-led-wall-solutions.html": {
+      "rel_path": "active-led-wall-solutions.html",
+      "title": "Active LED Video Wall Solution Provider Delhi NCR | GPSPL",
+      "title_len": 57,
+      "title_status": "OK",
+      "desc": "Direct active LED video wall solution provider in Delhi NCR. Fine pitch P1.2, P1.5, P1.8 indoor and outdoor display walls. Request an OEM wholesale quote from GPSPL.",
+      "desc_len": 165,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/active-led-wall-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Active LED Video Wall Solution Provider in Delhi NCR | Fine Pitch P1.2 to P2.5"
+      ],
+      "h2_count": 21,
+      "h3_count": 34,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Service",
+        "BreadcrumbList"
+      ],
+      "schema_valid": true
+    },
+    "active-led-wall-supplier-noida.html": {
+      "rel_path": "active-led-wall-supplier-noida.html",
+      "title": "Active LED Wall Supplier & Installation Noida | GPSPL",
+      "title_len": 53,
+      "title_status": "OK",
+      "desc": "Authorized Active LED video wall supplier in Noida & Greater Noida. P0.9 to P2.5 indoor & outdoor displays for boardrooms & atriums. Call +91 89208 30377.",
+      "desc_len": 154,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/active-led-wall-supplier-noida",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Active LED Video Wall Supplier & Installation in Noida"
+      ],
+      "h2_count": 3,
+      "h3_count": 4,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown",
+        "FAQPage"
+      ],
+      "schema_valid": true
+    },
+    "amc-maintenance-services.html": {
+      "rel_path": "amc-maintenance-services.html",
+      "title": "AV AMC Maintenance Services in Delhi NCR & SLA Support | GPSPL",
+      "title_len": 62,
+      "title_status": "OK",
+      "desc": "Enterprise AV AMC maintenance services in Delhi NCR. 4-hour emergency SLA for boardrooms, video walls, Crestron, Shure & auditoriums. Call +91 89208 30377.",
+      "desc_len": 155,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/amc-maintenance-services",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "AV AMC Maintenance Services in Delhi NCR & SLA Support"
+      ],
+      "h2_count": 8,
+      "h3_count": 1,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "audio-technologies.html": {
+      "rel_path": "audio-technologies.html",
+      "title": "Pro Audio Equipment Supply: Speakers, Microphones & DSP | GPSPL",
+      "title_len": 63,
+      "title_status": "OK",
+      "desc": "Enquire about speakers, microphones, amplifiers and DSP equipment. Share models, quantities and compatibility requirements for Delhi NCR or Pan-India supply.",
+      "desc_len": 157,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/audio-technologies",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Professional Audio Equipment Supply & Compatibility"
+      ],
+      "h2_count": 9,
+      "h3_count": 13,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "audio-visual-integration.html": {
+      "rel_path": "audio-visual-integration.html",
+      "title": "Turnkey AV System Integrator Delhi NCR | GPSPL",
+      "title_len": 46,
+      "title_status": "OK",
+      "desc": "AV design, equipment supply, installation and commissioning for offices, education and hospitality. Discuss your site, existing equipment and project timeline.",
+      "desc_len": 159,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/audio-visual-integration",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Turnkey Audio Visual Integration Engineered For Zero-Downtime Enterprise Spaces."
+      ],
+      "h2_count": 13,
+      "h3_count": 21,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "auditorium-av-solutions.html": {
+      "rel_path": "auditorium-av-solutions.html",
+      "title": "Auditorium AV Solutions & Sound Systems | GPSPL",
+      "title_len": 47,
+      "title_status": "OK",
+      "desc": "Turnkey auditorium AV solution provider in Delhi NCR for 100 to 1000+ seat venues. Line arrays, stage LED walls & acoustic design. Get direct OEM pricing from GPSPL.",
+      "desc_len": 165,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/auditorium-av-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Auditorium AV. Line arrays & acoustics."
+      ],
+      "h2_count": 6,
+      "h3_count": 10,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "av-project-discovery-consultation.html": {
+      "rel_path": "av-project-discovery-consultation.html",
+      "title": "AV Solutions India: Single Equipment to Turnkey Projects | GPSPL",
+      "title_len": 64,
+      "title_status": "OK",
+      "desc": "Book a turnkey AV consultation in Delhi NCR. Get expert site surveys, BOQ estimates, and CAD drawings for boardrooms and LED walls. Contact GPSPL engineers today.",
+      "desc_len": 162,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/av-project-discovery-consultation",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "AV Solutions: From One Device to Complete Turnkey Projects"
+      ],
+      "h2_count": 5,
+      "h3_count": 20,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Service"
+      ],
+      "schema_valid": true
+    },
+    "av-system-integrator-bangalore.html": {
+      "rel_path": "av-system-integrator-bangalore.html",
+      "title": "AV System Integrator Bangalore | Boardrooms & LED | GPSPL",
+      "title_len": 57,
+      "title_status": "OK",
+      "desc": "Leading AV system integrator in Bangalore. Turnkey boardrooms, fine-pitch active LED walls, and auditorium audio for tech campuses. Request an OEM quote from GPSPL.",
+      "desc_len": 164,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/av-system-integrator-bangalore",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Best AV System Integrator in Bangalore \u2014 Boardrooms, Active LED & Auditoriums"
+      ],
+      "h2_count": 3,
+      "h3_count": 4,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "av-system-integrator-delhi-ncr.html": {
+      "rel_path": "av-system-integrator-delhi-ncr.html",
+      "title": "AV System Integrator Delhi NCR | Turnkey AV Setup | GPSPL",
+      "title_len": 57,
+      "title_status": "OK",
+      "desc": "Leading turnkey AV system integrator in Delhi NCR (Nehru Place since 1997). Boardrooms, active LED walls, auditoriums & commercial audio. Call +91 89208 30377.",
+      "desc_len": 159,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/av-system-integrator-delhi-ncr",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Premier AV System Integrator in Delhi NCR & India"
+      ],
+      "h2_count": 8,
+      "h3_count": 26,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown",
+        "FAQPage"
+      ],
+      "schema_valid": true
+    },
+    "av-system-integrator-gurgaon.html": {
+      "rel_path": "av-system-integrator-gurgaon.html",
+      "title": "AV System Integrator Gurgaon | Boardroom AV Setup | GPSPL",
+      "title_len": 57,
+      "title_status": "OK",
+      "desc": "Premier turnkey AV system integrator in Gurgaon & Cyber City. Boardrooms, video conferencing, active LED walls & pro audio with 4-hr SLA. Call +91 89208 30377.",
+      "desc_len": 159,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/av-system-integrator-gurgaon",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Turnkey AV System Integrator in Gurgaon & Cyber City"
+      ],
+      "h2_count": 4,
+      "h3_count": 4,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown",
+        "FAQPage"
+      ],
+      "schema_valid": true
+    },
+    "av-system-integrator-hyderabad.html": {
+      "rel_path": "av-system-integrator-hyderabad.html",
+      "title": "AV System Integrator Hyderabad | Active LED & AV | GPSPL",
+      "title_len": 56,
+      "title_status": "OK",
+      "desc": "Top AV system integrator in Hyderabad. Turnkey boardroom AV, active LED walls, and conference systems for HITEC City enterprises. Contact GPSPL for direct OEM BOQ.",
+      "desc_len": 163,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/av-system-integrator-hyderabad",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Best AV System Integrator in Hyderabad \u2014 Boardrooms, Active LED & Auditoriums"
+      ],
+      "h2_count": 3,
+      "h3_count": 4,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "av-system-integrator-mumbai.html": {
+      "rel_path": "av-system-integrator-mumbai.html",
+      "title": "AV System Integrator Mumbai | Active LED & AV | GPSPL",
+      "title_len": 53,
+      "title_status": "OK",
+      "desc": "Premier AV system integrator in Mumbai. Turnkey corporate boardrooms, active LED walls, and studio setups for BKC enterprises. Contact GPSPL for wholesale pricing.",
+      "desc_len": 163,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/av-system-integrator-mumbai",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Best AV System Integrator in Mumbai \u2014 Boardrooms, Active LED & Auditoriums"
+      ],
+      "h2_count": 3,
+      "h3_count": 4,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "av-system-integrator-noida.html": {
+      "rel_path": "av-system-integrator-noida.html",
+      "title": "AV System Integrator Noida | Control Rooms & AV | GPSPL",
+      "title_len": 55,
+      "title_status": "OK",
+      "desc": "Turnkey AV system integrator in Noida. 24/7 command control rooms, active LED walls, and corporate boardrooms with direct OEM pricing. Request a GPSPL quote today.",
+      "desc_len": 163,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/av-system-integrator-noida",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "AV system integration, technology supply and support for Noida"
+      ],
+      "h2_count": 4,
+      "h3_count": 7,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "av-technology-distribution.html": {
+      "rel_path": "av-technology-distribution.html",
+      "title": "AV Distributor & Equipment Supply Delhi NCR, India | GPSPL",
+      "title_len": 58,
+      "title_status": "OK",
+      "desc": "Buy commercial TVs, JBL audio, PTZ cameras and interactive panels for your business. Request model, quantity, availability and installation details from GPSPL.",
+      "desc_len": 159,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/av-technology-distribution",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "AV Equipment Supply for Businesses, Institutions & Integrators"
+      ],
+      "h2_count": 12,
+      "h3_count": 20,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Service",
+        "FAQPage"
+      ],
+      "schema_valid": true
+    },
+    "blog/active-led-wall-cost-per-sq-ft-india-buyers-guide.html": {
+      "rel_path": "blog/active-led-wall-cost-per-sq-ft-india-buyers-guide.html",
+      "title": "Active LED Wall Cost per Sq Ft India (2026 Guide) | GPSPL",
+      "title_len": 57,
+      "title_status": "OK",
+      "desc": "Detailed guide on active LED wall cost per sq ft in India (2026). Compare P1.2 to P2.5 indoor and outdoor display pricing. Request an OEM quote from GPSPL today.",
+      "desc_len": 161,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/active-led-wall-cost-per-sq-ft-india-buyers-guide",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Active LED Wall Cost per Sq Ft in India (2026 Price & BOQ Guide)"
+      ],
+      "h2_count": 4,
+      "h3_count": 5,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/active-led-wall-pixel-pitch-sizing-cost-guide.html": {
+      "rel_path": "blog/active-led-wall-pixel-pitch-sizing-cost-guide.html",
+      "title": "Active LED Wall Pixel Pitch (P1.2-P2.5) & Cost Guide | GPSPL",
+      "title_len": 60,
+      "title_status": "OK",
+      "desc": "Complete guide to active LED pixel pitch, sizing calculations, and installation costs in India. Choose between P1.2 to P2.5 with expert assistance from GPSPL.",
+      "desc_len": 158,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/active-led-wall-pixel-pitch-sizing-cost-guide",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Active LED Video Wall Guide: Pixel Pitch (P1.2 to P2.5), Sizing, Cost & Maintenance"
+      ],
+      "h2_count": 5,
+      "h3_count": 4,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/active-led-wall-vs-cob-microled-buying-cost-guide-india.html": {
+      "rel_path": "blog/active-led-wall-vs-cob-microled-buying-cost-guide-india.html",
+      "title": "Active LED Wall vs COB vs MicroLED 2026 Buying Guide | GPSPL",
+      "title_len": 60,
+      "title_status": "OK",
+      "desc": "Compare SMD vs COB vs MicroLED video walls for enterprise boardrooms in India. Understand heat, contrast, and cost differences with turnkey insights from GPSPL.",
+      "desc_len": 160,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/active-led-wall-vs-cob-microled-buying-cost-guide-india",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Active LED Wall vs COB vs MicroLED: 2026 Buying & Cost Guide for Indian Enterprises"
+      ],
+      "h2_count": 5,
+      "h3_count": 5,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/amc-vs-one-time-repair.html": {
+      "rel_path": "blog/amc-vs-one-time-repair.html",
+      "title": "AMC vs One-Time Repair for AV Systems in Delhi NCR | GPSPL",
+      "title_len": 58,
+      "title_status": "OK",
+      "desc": "Should your enterprise choose an annual maintenance contract or one-time repair? Compare response SLAs, spare costs, and uptime reliability with GPSPL AMC teams.",
+      "desc_len": 161,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/amc-vs-one-time-repair",
+      "canonical_status": "OK",
+      "robots": "index, follow",
+      "robots_status": "OK",
+      "h1s": [
+        "AMC vs One-Time Repair: What's Better for AV Systems in Delhi NCR?"
+      ],
+      "h2_count": 8,
+      "h3_count": 4,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/av-over-ip-network-architecture-dante-sdvoe-enterprise-guide.html": {
+      "rel_path": "blog/av-over-ip-network-architecture-dante-sdvoe-enterprise-guide.html",
+      "title": "AV-over-IP Network Architecture & Dante Audio Guide 2026 | GPSPL",
+      "title_len": 64,
+      "title_status": "OK",
+      "desc": "Enterprise guide to AV-over-IP network architecture. Learn Dante audio, SDVoE 4K video, VLAN switching, and multicast routing from GPSPL certified AV engineers.",
+      "desc_len": 160,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/av-over-ip-network-architecture-dante-sdvoe-enterprise-guide",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "AV-over-IP Network Architecture & Dante Audio Integration: 2026 Enterprise Campus Guide"
+      ],
+      "h2_count": 5,
+      "h3_count": 5,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/boardroom-acoustic-treatment-dsp-tuning-echo-cancellation-guide.html": {
+      "rel_path": "blog/boardroom-acoustic-treatment-dsp-tuning-echo-cancellation-guide.html",
+      "title": "Boardroom Acoustic Treatment & DSP Tuning Guide 2026 | GPSPL",
+      "title_len": 60,
+      "title_status": "OK",
+      "desc": "Master boardroom acoustic planning, RT60 reverberation control, DSP tuning, and AEC echo cancellation with practical integration guidelines from GPSPL engineers.",
+      "desc_len": 161,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/boardroom-acoustic-treatment-dsp-tuning-echo-cancellation-guide",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Boardroom Acoustic Treatment & DSP Echo Cancellation: 2026 Engineering Guide"
+      ],
+      "h2_count": 5,
+      "h3_count": 5,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/boardroom-automation-amx-crestron-touch-panel-guide.html": {
+      "rel_path": "blog/boardroom-automation-amx-crestron-touch-panel-guide.html",
+      "title": "Boardroom Automation: AMX, Crestron & Control Guide | GPSPL",
+      "title_len": 59,
+      "title_status": "OK",
+      "desc": "Complete guide to boardroom automation with Crestron, AMX, and Extron touch panels. Streamline lighting, audio, and video switching with turnkey setup by GPSPL.",
+      "desc_len": 160,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/boardroom-automation-amx-crestron-touch-panel-guide",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Boardroom Automation & Control: AMX, Crestron & Touch Panel Integration Guide"
+      ],
+      "h2_count": 6,
+      "h3_count": 4,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/command-control-center-video-wall-guide.html": {
+      "rel_path": "blog/command-control-center-video-wall-guide.html",
+      "title": "Command & Control Center Video Wall Architecture Guide | GPSPL",
+      "title_len": 62,
+      "title_status": "OK",
+      "desc": "Engineering guide for 24/7 NOC and SOC video walls. Learn ultra-narrow bezel LCD vs active LED, KVM switching, and redundancy from GPSPL control room experts.",
+      "desc_len": 158,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/command-control-center-video-wall-guide",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Command & Control Center Video Wall Guide: 24/7 Operations, KVM & SCADA Monitoring"
+      ],
+      "h2_count": 5,
+      "h3_count": 4,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/commercial-tv-vs-consumer-tv-guide.html": {
+      "rel_path": "blog/commercial-tv-vs-consumer-tv-guide.html",
+      "title": "Commercial TV vs Consumer TV: Why Home TVs Fail in AV | GPSPL",
+      "title_len": 61,
+      "title_status": "OK",
+      "desc": "Understand the differences between commercial and consumer TVs: 16/7 vs 24/7 duty, 500 nits brightness, anti-glare, and commercial warranties explained by GPSPL.",
+      "desc_len": 161,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/commercial-tv-vs-consumer-tv-guide",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Commercial TV vs Consumer TV: Why Home TVs Fail in Hotels, Hospitals & Offices"
+      ],
+      "h2_count": 5,
+      "h3_count": 4,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/conference-room-av-setup-guide.html": {
+      "rel_path": "blog/conference-room-av-setup-guide.html",
+      "title": "Conference Room AV Setup Guide (2026 Equipment) | GPSPL",
+      "title_len": 55,
+      "title_status": "OK",
+      "desc": "Complete 2026 guide to conference room AV setup in India. Equipment checklists, Shure ceiling mics, PTZ cameras, and BOQ estimates for IT leaders from GPSPL.",
+      "desc_len": 157,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/conference-room-av-setup-guide",
+      "canonical_status": "OK",
+      "robots": "index, follow",
+      "robots_status": "OK",
+      "h1s": [
+        "Conference Room AV Setup Guide 2026 \u2014 Equipment, Cost & BOQ"
+      ],
+      "h2_count": 9,
+      "h3_count": 6,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/conference-room-video-conferencing-setup-cost-india.html": {
+      "rel_path": "blog/conference-room-video-conferencing-setup-cost-india.html",
+      "title": "Conference Room AV Setup Cost in India (2026 BOQ Guide) | GPSPL",
+      "title_len": 63,
+      "title_status": "OK",
+      "desc": "Comprehensive breakdown of video conferencing room setup costs in India. Compare small, medium, and large boardroom BOQ budgets with turnkey guidance from GPSPL.",
+      "desc_len": 161,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/conference-room-video-conferencing-setup-cost-india",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Conference Room AV Setup Cost in India (2026 BOQ Breakdown)"
+      ],
+      "h2_count": 4,
+      "h3_count": 5,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/digital-podium-smart-lectern-integration-guide.html": {
+      "rel_path": "blog/digital-podium-smart-lectern-integration-guide.html",
+      "title": "Digital Podium & Smart Lectern Setup Guide 2026 | GPSPL",
+      "title_len": 55,
+      "title_status": "OK",
+      "desc": "Guide to digital podiums and smart lecterns for auditoriums and classrooms. Learn touch controls, document cameras, and PA amplifier integration from GPSPL.",
+      "desc_len": 156,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/digital-podium-smart-lectern-integration-guide",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Digital Podium & Smart Electronic Lectern Guide 2026: Setup, Features & BOQ"
+      ],
+      "h2_count": 4,
+      "h3_count": 4,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/enterprise-digital-signage-network-cms-guide.html": {
+      "rel_path": "blog/enterprise-digital-signage-network-cms-guide.html",
+      "title": "Enterprise Digital Signage & Cloud CMS Guide 2026 | GPSPL",
+      "title_len": 57,
+      "title_status": "OK",
+      "desc": "How to deploy and manage enterprise digital signage networks across multiple branches. Cloud CMS, MagicINFO, webOS, and hardware selection guide from GPSPL.",
+      "desc_len": 156,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/enterprise-digital-signage-network-cms-guide",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Enterprise Digital Signage & Cloud CMS Architecture Guide 2026"
+      ],
+      "h2_count": 4,
+      "h3_count": 4,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/gym-fitness-studio-sound-system-installation-cost-india.html": {
+      "rel_path": "blog/gym-fitness-studio-sound-system-installation-cost-india.html",
+      "title": "Commercial Gym Sound System Cost in India (2026) | GPSPL",
+      "title_len": 56,
+      "title_status": "OK",
+      "desc": "Commercial gym and fitness studio sound system installation cost guide in India. Speaker placement, multi-zone audio, and subwoofers engineered by GPSPL.",
+      "desc_len": 153,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/gym-fitness-studio-sound-system-installation-cost-india",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Commercial Gym Sound System Installation Cost India (2026): Equipment, Multi-Zone Audio & BOQ Guide"
+      ],
+      "h2_count": 4,
+      "h3_count": 7,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/hospital-healthcare-av-integration-ot-streaming-telemedicine-guide.html": {
+      "rel_path": "blog/hospital-healthcare-av-integration-ot-streaming-telemedicine-guide.html",
+      "title": "Hospital & OT 4K Telemedicine AV Setup Guide | GPSPL",
+      "title_len": 52,
+      "title_status": "OK",
+      "desc": "Complete guide to hospital AV systems, OT 4K live streaming, telemedicine carts, and medical display integration. Consult GPSPL healthcare technology specialists.",
+      "desc_len": 162,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/hospital-healthcare-av-integration-ot-streaming-telemedicine-guide",
+      "canonical_status": "OK",
+      "robots": "",
+      "robots_status": "OK",
+      "h1s": [
+        "Hospital & Healthcare AV Integration: From Surgical OT Streaming to Patient Digital Signage"
+      ],
+      "h2_count": 3,
+      "h3_count": 2,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/huddle-room-video-conferencing-setup-guide.html": {
+      "rel_path": "blog/huddle-room-video-conferencing-setup-guide.html",
+      "title": "Huddle Room Video Conferencing Setup Guide | GPSPL",
+      "title_len": 50,
+      "title_status": "OK",
+      "desc": "Design efficient huddle room video conferencing setups. USB-C all-in-one video bars, display mounting, and bring-your-own-device workflows explained by GPSPL.",
+      "desc_len": 158,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/huddle-room-video-conferencing-setup-guide",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Huddle Room Video Conferencing Setup Guide 2026: Equipment, Audio, Camera & BOQ"
+      ],
+      "h2_count": 6,
+      "h3_count": 7,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/led-wall-vs-projector.html": {
+      "rel_path": "blog/led-wall-vs-projector.html",
+      "title": "LED Video Wall vs Projector: Office Display Guide | GPSPL",
+      "title_len": 57,
+      "title_status": "OK",
+      "desc": "Active LED video wall vs high-lumen laser projector: which is best for your office boardroom or auditorium? Compare ambient light, contrast, and cost with GPSPL.",
+      "desc_len": 161,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/led-wall-vs-projector",
+      "canonical_status": "OK",
+      "robots": "index, follow",
+      "robots_status": "OK",
+      "h1s": [
+        "LED Video Wall vs Projector: Which is Better for Your Office?"
+      ],
+      "h2_count": 8,
+      "h3_count": 4,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/mandir-temple-sound-system-acoustic-tuning-led-wall-guide.html": {
+      "rel_path": "blog/mandir-temple-sound-system-acoustic-tuning-led-wall-guide.html",
+      "title": "Mandir & Temple Sound System & LED Wall Guide | GPSPL",
+      "title_len": 53,
+      "title_status": "OK",
+      "desc": "Acoustic design and active LED video wall engineering guide for mandirs, temples, and religious halls in India. Deliver pristine speech clarity with GPSPL audio.",
+      "desc_len": 161,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/mandir-temple-sound-system-acoustic-tuning-led-wall-guide",
+      "canonical_status": "OK",
+      "robots": "",
+      "robots_status": "OK",
+      "h1s": [
+        "Mandir & Temple Sound Systems: Solving Reverberant Echo & Live Darshan LED Displays"
+      ],
+      "h2_count": 6,
+      "h3_count": 2,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/modern-smart-classroom-architecture-interactive-flat-panels-digital-podium-india.html": {
+      "rel_path": "blog/modern-smart-classroom-architecture-interactive-flat-panels-digital-podium-india.html",
+      "title": "Smart Classroom Architecture: IFP & Digital Podiums | GPSPL",
+      "title_len": 59,
+      "title_status": "OK",
+      "desc": "Architecture guide for modern smart classrooms in India. Interactive flat panels, digital podiums, lecture capture, and acoustics engineered by GPSPL specialists.",
+      "desc_len": 162,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/modern-smart-classroom-architecture-interactive-flat-panels-digital-podium-india",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Modern Smart Classroom Architecture: Interactive Flat Panels, Digital Podiums & Hybrid Recording in India"
+      ],
+      "h2_count": 4,
+      "h3_count": 5,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/podcast-recording-broadcast-studio-setup-cost-india.html": {
+      "rel_path": "blog/podcast-recording-broadcast-studio-setup-cost-india.html",
+      "title": "Podcast & Broadcast Studio Setup Cost India | GPSPL",
+      "title_len": 51,
+      "title_status": "OK",
+      "desc": "Complete guide to podcast and broadcast studio setup costs in India. Acoustic isolation, Shure SM7B mics, Blackmagic switchers, and lighting designed by GPSPL.",
+      "desc_len": 159,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/podcast-recording-broadcast-studio-setup-cost-india",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "robots_status": "OK",
+      "h1s": [
+        "Podcast, Recording & Broadcast Studio AV Setup Cost in India (2026 Complete Guide)"
+      ],
+      "h2_count": 6,
+      "h3_count": 3,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/professional-audio-auditorium-guide.html": {
+      "rel_path": "blog/professional-audio-auditorium-guide.html",
+      "title": "Auditorium Professional Audio System Buyer Guide | GPSPL",
+      "title_len": 56,
+      "title_status": "OK",
+      "desc": "Auditorium professional audio engineering guide: line array sizing, acoustic simulation, wireless microphone coordination, and DSP tuning explained by GPSPL.",
+      "desc_len": 157,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/professional-audio-auditorium-guide",
+      "canonical_status": "OK",
+      "robots": "index, follow",
+      "robots_status": "OK",
+      "h1s": [
+        "Professional Audio System for Auditorium \u2014 Complete Buyer's Guide"
+      ],
+      "h2_count": 6,
+      "h3_count": 11,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/retail-digital-signage-video-wall-guide.html": {
+      "rel_path": "blog/retail-digital-signage-video-wall-guide.html",
+      "title": "Retail Digital Signage & Commercial Display Guide 2026 | GPSPL",
+      "title_len": 62,
+      "title_status": "OK",
+      "desc": "Guide to retail digital signage, ultra-bright window displays, and LED video walls for shopping malls and brand showrooms across India by GPSPL engineers.",
+      "desc_len": 154,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/retail-digital-signage-video-wall-guide",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Retail Digital Signage & Commercial Display Guide 2026: LED Walls, Menu Boards & CMS"
+      ],
+      "h2_count": 7,
+      "h3_count": 8,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/samsung-business-tv-commercial-signage-guide.html": {
+      "rel_path": "blog/samsung-business-tv-commercial-signage-guide.html",
+      "title": "Samsung Business TV & Signage: BEFX, QBC & QMC Guide | GPSPL",
+      "title_len": 60,
+      "title_status": "OK",
+      "desc": "Buyer's guide to Samsung Business TVs and commercial signage displays. Compare BEFX, QBC, and QMC series for 16/7 and 24/7 business applications with GPSPL.",
+      "desc_len": 156,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/samsung-business-tv-commercial-signage-guide",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Samsung Business TV & Commercial Signage Guide: BEFX, QBC & QMC Series Compared (2026)"
+      ],
+      "h2_count": 5,
+      "h3_count": 8,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/smart-classroom-setup-cost-schools-colleges-india.html": {
+      "rel_path": "blog/smart-classroom-setup-cost-schools-colleges-india.html",
+      "title": "Smart Classroom Setup Cost in India (2026 BOQ) | GPSPL",
+      "title_len": 54,
+      "title_status": "OK",
+      "desc": "Smart classroom setup cost breakdown for schools and colleges in India. 4K interactive panels, OPS computers, and audio BOQ budgets explained by GPSPL.",
+      "desc_len": 151,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/smart-classroom-setup-cost-schools-colleges-india",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Smart Classroom Setup Cost in India (2026 BOQ & Equipment Guide)"
+      ],
+      "h2_count": 3,
+      "h3_count": 5,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/smart-classroom-solutions-interactive-displays-hybrid.html": {
+      "rel_path": "blog/smart-classroom-solutions-interactive-displays-hybrid.html",
+      "title": "Smart Classroom Solutions: Interactive Displays & AV | GPSPL",
+      "title_len": 60,
+      "title_status": "OK",
+      "desc": "Turnkey smart classroom solutions for hybrid education in India. Interactive displays, OPS computing, digital podiums, and teaching sound systems from GPSPL.",
+      "desc_len": 157,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/smart-classroom-solutions-interactive-displays-hybrid",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Smart Classroom Solutions 2026: Interactive Displays, Audio & Hybrid Teaching Setup"
+      ],
+      "h2_count": 6,
+      "h3_count": 4,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/top-av-system-integrators-india-buyers-guide.html": {
+      "rel_path": "blog/top-av-system-integrators-india-buyers-guide.html",
+      "title": "Top AV System Integrators in India: 2026 Guide | GPSPL",
+      "title_len": 54,
+      "title_status": "OK",
+      "desc": "Enterprise buyer's guide for choosing top AV system integrators in India. Evaluate direct OEM tier-1 sourcing, SLAs, engineering certifications, and GPSPL scope.",
+      "desc_len": 161,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/top-av-system-integrators-india-buyers-guide",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Top AV System Integrators in India: 2026 Enterprise Buyer's Guide & Evaluation Framework"
+      ],
+      "h2_count": 8,
+      "h3_count": 11,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "blog/video-conferencing-teams-rooms-vs-zoom-rooms-byod-guide.html": {
+      "rel_path": "blog/video-conferencing-teams-rooms-vs-zoom-rooms-byod-guide.html",
+      "title": "Teams Rooms vs Zoom Rooms vs BYOD Comparison Guide | GPSPL",
+      "title_len": 58,
+      "title_status": "OK",
+      "desc": "Microsoft Teams Rooms vs Zoom Rooms vs BYOD: compare native conferencing room systems, touch controllers, and wireless sharing with turnkey guidance from GPSPL.",
+      "desc_len": 160,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/blog/video-conferencing-teams-rooms-vs-zoom-rooms-byod-guide",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Microsoft Teams Rooms vs Zoom Rooms vs BYOD: 2026 Architecture Comparison"
+      ],
+      "h2_count": 5,
+      "h3_count": 4,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "brand-detail.html": {
+      "rel_path": "brand-detail.html",
+      "title": "Brand Detail | GPSPL Technology Distribution & Integration",
+      "title_len": 58,
+      "title_status": "OK",
+      "desc": "Brand-specific technology supply, pricing, integration, warranty coordination, installation and support from GPSPL.",
+      "desc_len": 115,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/brand-detail",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Brand Details"
+      ],
+      "h2_count": 4,
+      "h3_count": 1,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "ItemPage"
+      ],
+      "schema_valid": true
+    },
+    "careers.html": {
+      "rel_path": "careers.html",
+      "title": "Careers at GPSPL | Join Our AV & Digital Signage Team",
+      "title_len": 53,
+      "title_status": "OK",
+      "desc": "Explore career opportunities at Global Peripheral Solutions Pvt. Ltd. Join our enterprise team in Audio Visual, Active LED displays, and smart classrooms.",
+      "desc_len": 154,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/careers",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Build Your Career With GPSPL"
+      ],
+      "h2_count": 4,
+      "h3_count": 18,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "case-studies.html": {
+      "rel_path": "case-studies.html",
+      "title": "Enterprise AV & IT Integration Case Studies India | GPSPL",
+      "title_len": 57,
+      "title_status": "OK",
+      "desc": "Explore real GPSPL AV and IT case studies across Delhi NCR: enterprise boardrooms, smart classrooms, hotel LED walls, and railway command control centers.",
+      "desc_len": 154,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/case-studies",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Real AV & IT Engineering Case Studies"
+      ],
+      "h2_count": 2,
+      "h3_count": 11,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "command-control-center-av-solutions.html": {
+      "rel_path": "command-control-center-av-solutions.html",
+      "title": "CCTV Command & Control Room Solution Provider Delhi NCR | GPSPL",
+      "title_len": 63,
+      "title_status": "OK",
+      "desc": "Turnkey command and control room AV solutions in Delhi NCR. 24x7 NOC/SOC video walls, PTZ monitoring, KVM switching, and UPS backup. Request a GPSPL quote.",
+      "desc_len": 155,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/command-control-center-av-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "CCTV Command & Control Room (NOC / SOC) Video Wall Integration"
+      ],
+      "h2_count": 7,
+      "h3_count": 15,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "conference-room-solutions.html": {
+      "rel_path": "conference-room-solutions.html",
+      "title": "Conference Room AV Solutions Delhi NCR | GPSPL",
+      "title_len": 46,
+      "title_status": "OK",
+      "desc": "Turnkey conference room solution provider in Delhi NCR. Complete boardroom setup, video conferencing, Shure ceiling mics, and displays. Get direct OEM pricing.",
+      "desc_len": 159,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/conference-room-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Turnkey Conference Room Solution Provider in Delhi NCR & Boardroom AV"
+      ],
+      "h2_count": 12,
+      "h3_count": 19,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "contact.html": {
+      "rel_path": "contact.html",
+      "title": "Contact GPSPL | AV, IT & Automation Enquiry",
+      "title_len": 43,
+      "title_status": "OK",
+      "desc": "Contact GPSPL for AV integration, conference room setup, active LED walls, digital signage, IT infrastructure, professional audio, UPS and AMC support.",
+      "desc_len": 151,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/contact",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Discuss product supply, integration, or support with GPSPL."
+      ],
+      "h2_count": 7,
+      "h3_count": 10,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "control-automation.html": {
+      "rel_path": "control-automation.html",
+      "title": "AV Control & Room Automation Delhi NCR, India | GPSPL",
+      "title_len": 53,
+      "title_status": "OK",
+      "desc": "Plan AV control for meeting rooms, auditoriums and hospitality spaces. Discuss touch panels, switching, user workflows and integration in Delhi NCR and India.",
+      "desc_len": 158,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/control-automation",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Meeting Room Automation & AV Control Systems"
+      ],
+      "h2_count": 8,
+      "h3_count": 17,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "corporate-projects.html": {
+      "rel_path": "corporate-projects.html",
+      "title": "Corporate AV Projects Delhi NCR & India | GPSPL",
+      "title_len": 47,
+      "title_status": "OK",
+      "desc": "Explore GPSPL corporate AV project work for Delhi NCR and India: boardrooms, video conferencing and workplace displays. Discuss a similar office project.",
+      "desc_len": 153,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/corporate-projects",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Corporate AV, Boardroom & Conference Room Projects"
+      ],
+      "h2_count": 6,
+      "h3_count": 15,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "coworking-space-av-solutions.html": {
+      "rel_path": "coworking-space-av-solutions.html",
+      "title": "Coworking & Commercial Office AV Solutions | GPSPL",
+      "title_len": 50,
+      "title_status": "OK",
+      "desc": "Turnkey commercial office fitout and coworking AV solutions in Delhi NCR. Meeting pods, interactive boardrooms, and digital signage. Contact GPSPL today.",
+      "desc_len": 153,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/coworking-space-av-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Commercial Office & Real Estate AV Solution Provider in Delhi NCR"
+      ],
+      "h2_count": 5,
+      "h3_count": 9,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Service",
+        "FAQPage"
+      ],
+      "schema_valid": true
+    },
+    "digital-signage-solutions.html": {
+      "rel_path": "digital-signage-solutions.html",
+      "title": "Digital Signage Displays & Solutions Delhi NCR | GPSPL",
+      "title_len": 54,
+      "title_status": "OK",
+      "desc": "Premier digital signage company in Delhi NCR. Samsung MagicINFO & LG SuperSign displays, 4K digital standees, video walls & cloud CMS. Call +91 89208 30377.",
+      "desc_len": 156,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/digital-signage-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Digital Signage Company in Delhi NCR & Commercial Displays"
+      ],
+      "h2_count": 15,
+      "h3_count": 25,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "BreadcrumbList"
+      ],
+      "schema_valid": true
+    },
+    "digital-standee-supplier-india.html": {
+      "rel_path": "digital-standee-supplier-india.html",
+      "title": "Digital Standee Supplier India | Single & Bulk Enquiries | GPSPL",
+      "title_len": 64,
+      "title_status": "OK",
+      "desc": "Commercial digital standees and vertical totem displays in India. Hardware supply, cloud CMS, and installation support across Delhi NCR from GPSPL.",
+      "desc_len": 147,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/digital-standee-supplier-india",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Digital standee supply and installation for businesses"
+      ],
+      "h2_count": 8,
+      "h3_count": 1,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Service"
+      ],
+      "schema_valid": true
+    },
+    "directors-message.html": {
+      "rel_path": "directors-message.html",
+      "title": "Director's Message | Sanjay Khurana | GPSPL Leadership",
+      "title_len": 54,
+      "title_status": "OK",
+      "desc": "Read the leadership message from Sanjay Khurana, Director of GPSPL, on AV distribution, turnkey integration, quality installations, and AMC support.",
+      "desc_len": 148,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/directors-message",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Leadership built on trust, ownership and long-term support."
+      ],
+      "h2_count": 4,
+      "h3_count": 4,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "ProfilePage"
+      ],
+      "schema_valid": true
+    },
+    "downloads.html": {
+      "rel_path": "downloads.html",
+      "title": "Download Product Brochures & Catalogs PDF | GPSPL",
+      "title_len": 49,
+      "title_status": "OK",
+      "desc": "Download official manufacturer datasheets and brochures for Samsung TVs, LG CreateBoard panels, JBL audio, and Active LED walls directly from GPSPL.",
+      "desc_len": 148,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/downloads",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Official Product Datasheets & Guides"
+      ],
+      "h2_count": 2,
+      "h3_count": 10,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "WebPage"
+      ],
+      "schema_valid": true
+    },
+    "education-projects.html": {
+      "rel_path": "education-projects.html",
+      "title": "Education AV Projects Delhi NCR & India | GPSPL",
+      "title_len": 47,
+      "title_status": "OK",
+      "desc": "Explore GPSPL education AV project work for Delhi NCR and India: interactive displays, classroom audio and learning spaces. Discuss your campus requirements.",
+      "desc_len": 157,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/education-projects",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "School, College & University AV Projects"
+      ],
+      "h2_count": 6,
+      "h3_count": 15,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "experience-center-av-solutions.html": {
+      "rel_path": "experience-center-av-solutions.html",
+      "title": "Experience Center & Studio AV Delhi NCR, India | GPSPL",
+      "title_len": 54,
+      "title_status": "OK",
+      "desc": "Plan AV for experience centers, showrooms and studios: LED displays, audio, interactive content and control. Discuss equipment supply or turnkey integration.",
+      "desc_len": 157,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/experience-center-av-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Customer Experience Center (CEC) & Immersive Display Studios"
+      ],
+      "h2_count": 5,
+      "h3_count": 10,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "faq.html": {
+      "rel_path": "faq.html",
+      "title": "FAQ | GPSPL AV, IT, Display & Support Questions",
+      "title_len": 47,
+      "title_status": "OK",
+      "desc": "Frequently asked questions about GPSPL technology supply, AV integration, project delivery, warranty support, AMC and enterprise deployments.",
+      "desc_len": 141,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/faq",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Frequently Asked Questions"
+      ],
+      "h2_count": 10,
+      "h3_count": 1,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "featured-projects.html": {
+      "rel_path": "featured-projects.html",
+      "title": "Featured AV Integration Projects India | GPSPL Case Proof",
+      "title_len": 57,
+      "title_status": "OK",
+      "desc": "View featured AV integration projects by GPSPL, showcasing boardrooms, active LED video walls, smart classrooms, and pro audio setups in India.",
+      "desc_len": 143,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/featured-projects",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Featured AV, display and classroom projects built around real site needs."
+      ],
+      "h2_count": 7,
+      "h3_count": 19,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "government-projects.html": {
+      "rel_path": "government-projects.html",
+      "title": "Government & PSU Turnkey AV Solutions | GPSPL",
+      "title_len": 45,
+      "title_status": "OK",
+      "desc": "GeM-registered government AV solution provider in Delhi NCR. 24/7 CCTV command centers, NOC video walls, and PSU auditoriums with direct OEM authorization.",
+      "desc_len": 155,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/government-projects",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Government & PSU AV Solution Provider in Delhi NCR | GeM Partner & Command Centers"
+      ],
+      "h2_count": 5,
+      "h3_count": 11,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "healthcare-projects.html": {
+      "rel_path": "healthcare-projects.html",
+      "title": "Hospital OPD Displays, Queue Signage & Healthcare AV | GPSPL",
+      "title_len": 60,
+      "title_status": "OK",
+      "desc": "Hospital OPD token displays, waiting-area signage, announcement audio and conference-room AV. Request display supply or integration in Delhi NCR and India.",
+      "desc_len": 155,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/healthcare-projects",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Hospital OPD Displays, Digital Signage & Healthcare AV"
+      ],
+      "h2_count": 7,
+      "h3_count": 16,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "hotel-hospitality-av-solutions.html": {
+      "rel_path": "hotel-hospitality-av-solutions.html",
+      "title": "Hotel & Hospitality AV Solution Provider Delhi NCR | GPSPL",
+      "title_len": 58,
+      "title_status": "OK",
+      "desc": "Hotel and hospitality AV solution provider in Delhi NCR: banquet LED walls, hotel TVs, meeting rooms, architectural sound & background music. Call +91 89208 30377.",
+      "desc_len": 163,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/hotel-hospitality-av-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Hotel & Hospitality AV Solution Provider in Delhi NCR | Banquet LED Walls & Pro Audio"
+      ],
+      "h2_count": 8,
+      "h3_count": 14,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "schema_valid": true
+    },
+    "index.html": {
+      "rel_path": "index.html",
+      "title": "Turnkey AV System Integrator Delhi NCR & India | GPSPL",
+      "title_len": 54,
+      "title_status": "OK",
+      "desc": "Delhi NCR's turnkey AV system integrator and direct OEM distributor since 1997. Conference rooms, active LED walls, auditoriums, and smart classrooms.",
+      "desc_len": 150,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "AV integration. Complete solutions."
+      ],
+      "h2_count": 23,
+      "h3_count": 102,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "industries.html": {
+      "rel_path": "industries.html",
+      "title": "AV Solutions by Industry Delhi NCR & India | GPSPL",
+      "title_len": 50,
+      "title_status": "OK",
+      "desc": "Explore AV supply, upgrades and turnkey projects for offices, education, hotels, healthcare, retail, government, BFSI, property, media, automotive and gyms.",
+      "desc_len": 156,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/industries",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Enterprise AV, Display & Automation Engineered by Industry"
+      ],
+      "h2_count": 15,
+      "h3_count": 37,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "interactive-display-solutions.html": {
+      "rel_path": "interactive-display-solutions.html",
+      "title": "Interactive Displays & 4K Smart Boards | GPSPL",
+      "title_len": 46,
+      "title_status": "OK",
+      "desc": "Tier-1 interactive display supplier in Delhi NCR. 4K IFPDs (65, 75, 86, 98 inch) with Google EDLA, Android 14/15, LG CreateBoard & Samsung. Call +91 89208 30377.",
+      "desc_len": 161,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/interactive-display-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Interactive Display Supplier in Delhi NCR & 4K Smart Boards"
+      ],
+      "h2_count": 8,
+      "h3_count": 7,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "it-infrastructure-solutions.html": {
+      "rel_path": "it-infrastructure-solutions.html",
+      "title": "IT Equipment & Printer Supply Delhi NCR, India | GPSPL",
+      "title_len": 54,
+      "title_status": "OK",
+      "desc": "Enterprise IT equipment, Epson printers, and server infrastructure supply in Delhi NCR and across India. Share your requirements for a direct GPSPL quote.",
+      "desc_len": 154,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/it-infrastructure-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "IT Equipment, Printers & Infrastructure Solutions"
+      ],
+      "h2_count": 11,
+      "h3_count": 14,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "BreadcrumbList"
+      ],
+      "schema_valid": true
+    },
+    "kvm-av-switching-solutions.html": {
+      "rel_path": "kvm-av-switching-solutions.html",
+      "title": "KVM & AV Switching Solutions Delhi NCR, India | GPSPL",
+      "title_len": 53,
+      "title_status": "OK",
+      "desc": "Discuss KVM, AV switching, signal distribution and operator connectivity for offices and control rooms. Request supply or integration in Delhi NCR and India.",
+      "desc_len": 157,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/kvm-av-switching-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "KVM & AV Switching Solutions"
+      ],
+      "h2_count": 11,
+      "h3_count": 13,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "BreadcrumbList"
+      ],
+      "schema_valid": true
+    },
+    "lg-commercial-tv-nu88c.html": {
+      "rel_path": "lg-commercial-tv-nu88c.html",
+      "title": "LG NU88C Commercial TV Price India (43\"-65\") | GPSPL",
+      "title_len": 52,
+      "title_status": "OK",
+      "desc": "Authorized LG NU88C commercial hotel TV supplier Delhi NCR & India. Pro:Centric hospitality management, 4K UHD commercial panel, hotel mode. Call +91 89208 30377.",
+      "desc_len": 162,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/lg-commercial-tv-nu88c",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "LG NU88C Commercial TV: Supply & Installation"
+      ],
+      "h2_count": 9,
+      "h3_count": 9,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown",
+        "FAQPage"
+      ],
+      "schema_valid": true
+    },
+    "lg-commercial-tv-ua831c.html": {
+      "rel_path": "lg-commercial-tv-ua831c.html",
+      "title": "LG UA831C 4K Commercial TV Price in India | GPSPL",
+      "title_len": 49,
+      "title_status": "OK",
+      "desc": "Authorized LG UA831C commercial TV supplier Delhi NCR & Pan-India. 4K UHD, HDR10 Pro, commercial-grade components, 3-yr warranty. Call +91 89208 30377.",
+      "desc_len": 151,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/lg-commercial-tv-ua831c",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "LG UA831C 4K Commercial TV"
+      ],
+      "h2_count": 10,
+      "h3_count": 8,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown",
+        "FAQPage"
+      ],
+      "schema_valid": true
+    },
+    "lg-createboard-tr3er.html": {
+      "rel_path": "lg-createboard-tr3er.html",
+      "title": "LG CreateBoard TR3ER Price & Specs India | GPSPL",
+      "title_len": 48,
+      "title_status": "OK",
+      "desc": "Authorized LG CreateBoard TR3ER supplier Delhi NCR & India. 4K 50-point multi-touch, Android 16 EDLA, and LG ConnectedCare. Request wholesale GPSPL pricing.",
+      "desc_len": 156,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/lg-createboard-tr3er",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "LG CreateBoard TR3ER Interactive Display"
+      ],
+      "h2_count": 10,
+      "h3_count": 10,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown",
+        "FAQPage"
+      ],
+      "schema_valid": true
+    },
+    "milestones.html": {
+      "rel_path": "milestones.html",
+      "title": "Milestones, Awards & Authorized Partnerships | GPSPL",
+      "title_len": 52,
+      "title_status": "OK",
+      "desc": "Explore GPSPL milestones, awards, authorized regional distributor recognitions and technology partnership achievements since 1997.",
+      "desc_len": 130,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/milestones",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Milestones"
+      ],
+      "h2_count": 4,
+      "h3_count": 26,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "newsroom-broadcast-av-solutions.html": {
+      "rel_path": "newsroom-broadcast-av-solutions.html",
+      "title": "Newsroom & Broadcast Studio AV Integration | GPSPL",
+      "title_len": 50,
+      "title_status": "OK",
+      "desc": "Plan newsroom displays, studio audio, cameras, lighting and control-room AV with GPSPL. Share your production workflow for a scoped supply and integration quotation.",
+      "desc_len": 165,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/newsroom-broadcast-av-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Newsroom and broadcast studio AV integration"
+      ],
+      "h2_count": 7,
+      "h3_count": 1,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Service"
+      ],
+      "schema_valid": true
+    },
+    "our-vision.html": {
+      "rel_path": "our-vision.html",
+      "title": "Our Vision | Technology Driven AV & IT | GPSPL",
+      "title_len": 46,
+      "title_status": "OK",
+      "desc": "The GPSPL vision is to deliver dependable AV, IT, display and support solutions through innovation, trusted partnerships and long-term customer focus.",
+      "desc_len": 150,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/our-vision",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Distributing Trusted Technology. Engineering Intelligent Spaces."
+      ],
+      "h2_count": 8,
+      "h3_count": 22,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "peripheral-solutions.html": {
+      "rel_path": "peripheral-solutions.html",
+      "title": "Creative & Business Peripherals Delhi NCR | GPSPL",
+      "title_len": 49,
+      "title_status": "OK",
+      "desc": "Discuss creative displays, input devices and business peripherals for studios, education and offices. Request model-specific supply pricing in Delhi NCR and India.",
+      "desc_len": 163,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/peripheral-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Creative & Peripheral Solutions"
+      ],
+      "h2_count": 5,
+      "h3_count": 6,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "privacy-policy.html": {
+      "rel_path": "privacy-policy.html",
+      "title": "Privacy Policy & Data Protection Practices | GPSPL",
+      "title_len": 50,
+      "title_status": "OK",
+      "desc": "Official Privacy Policy of Global Peripheral Solutions Pvt. Ltd. (GPSPL). Learn how we protect client enquiry data in compliance with India's DPDP Act 2023.",
+      "desc_len": 156,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/privacy-policy",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Privacy Policy"
+      ],
+      "h2_count": 8,
+      "h3_count": 2,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "WebPage"
+      ],
+      "schema_valid": true
+    },
+    "product-catalog.html": {
+      "rel_path": "product-catalog.html",
+      "title": "AV & IT Product Catalog | Commercial Displays | GPSPL",
+      "title_len": 53,
+      "title_status": "OK",
+      "desc": "Browse GPSPL's AV and IT product catalog: Samsung Business TVs, LG commercial displays, interactive flat panels, active LED walls, and pro audio systems.",
+      "desc_len": 153,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/product-catalog",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Enterprise Technology Product Catalog"
+      ],
+      "h2_count": 5,
+      "h3_count": 21,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "professional-audio-solutions.html": {
+      "rel_path": "professional-audio-solutions.html",
+      "title": "Professional Audio & Sound System Setup NCR | GPSPL",
+      "title_len": 51,
+      "title_status": "OK",
+      "desc": "Commercial gym, fitness studio, and pro audio solution provider in Delhi NCR. Wholesale supply of JBL Commercial, Crown amps, and Shure mics from GPSPL.",
+      "desc_len": 152,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/professional-audio-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Commercial Gym & Pro Audio Solution Provider in Delhi NCR | JBL & Crown"
+      ],
+      "h2_count": 22,
+      "h3_count": 20,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown",
+        "BreadcrumbList"
+      ],
+      "schema_valid": true
+    },
+    "projector-accessories.html": {
+      "rel_path": "projector-accessories.html",
+      "title": "Projectors & AV Accessories Delhi NCR, India | GPSPL",
+      "title_len": 52,
+      "title_status": "OK",
+      "desc": "Discuss projectors, lenses, screens, mounting and AV accessories for offices, education and venues. Share room size and quantities for supply or installation.",
+      "desc_len": 158,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/projector-accessories",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Projectors & Accessories"
+      ],
+      "h2_count": 7,
+      "h3_count": 9,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "projects.html": {
+      "rel_path": "projects.html",
+      "title": "Enterprise AV, Display & IT Projects India | GPSPL Portfolio",
+      "title_len": 60,
+      "title_status": "OK",
+      "desc": "Explore GPSPL enterprise AV, display, smart classroom, Active LED, video wall, professional audio, IT infrastructure and support projects across India.",
+      "desc_len": 151,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/projects",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Enterprise AV, display and IT projects delivered with accountable support."
+      ],
+      "h2_count": 10,
+      "h3_count": 25,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "ptz-camera-solutions.html": {
+      "rel_path": "ptz-camera-solutions.html",
+      "title": "PTZ Cameras for Conference & Smart Classrooms | GPSPL",
+      "title_len": 53,
+      "title_status": "OK",
+      "desc": "Enterprise PTZ camera supply and integration for conference rooms, smart classrooms, and auditoriums across India. Request an OEM wholesale quote from GPSPL.",
+      "desc_len": 157,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/ptz-camera-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "PTZ Camera Solutions for Rooms, Campuses & Venues"
+      ],
+      "h2_count": 5,
+      "h3_count": 9,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "religious-place-av-solutions.html": {
+      "rel_path": "religious-place-av-solutions.html",
+      "title": "Religious Place Sound & AV Solution Provider Delhi NCR | GPSPL",
+      "title_len": 62,
+      "title_status": "OK",
+      "desc": "Religious place sound and AV solutions in Delhi NCR. Clear speech, JBL column speakers for Mandirs and Gurudwaras, outdoor coverage, and LED walls from GPSPL.",
+      "desc_len": 158,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/religious-place-av-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Religious Place Sound & AV Solution Provider in Delhi NCR | Gurudwara & Mandir Acoustics"
+      ],
+      "h2_count": 10,
+      "h3_count": 2,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Service"
+      ],
+      "schema_valid": true
+    },
+    "resources.html": {
+      "rel_path": "resources.html",
+      "title": "AV Resources, Buying Guides & Technology Insights | GPSPL",
+      "title_len": 57,
+      "title_status": "OK",
+      "desc": "Explore AV buyer guides, technology comparisons, conference room BOQ estimates, LED wall sizing calculators, and smart classroom blueprints from GPSPL.",
+      "desc_len": 151,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/resources",
+      "canonical_status": "OK",
+      "robots": "index, follow",
+      "robots_status": "OK",
+      "h1s": [
+        "Expert Guides for Smarter AV Decisions"
+      ],
+      "h2_count": 24,
+      "h3_count": 1,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "resources/active-led-pixel-pitch-guide.html": {
+      "rel_path": "resources/active-led-pixel-pitch-guide.html",
+      "title": "Active LED Pixel Pitch Guide | P1.8 vs P2.5 | GPSPL India",
+      "title_len": 57,
+      "title_status": "OK",
+      "desc": "A comprehensive technical guide to active LED wall pixel pitch selections. Calculate viewing distance, resolution ratios, and thermal requirements.",
+      "desc_len": 147,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/resources/active-led-pixel-pitch-guide",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "How to Choose the Right Pixel Pitch for Indoor Active LED Walls (P1.8 vs P2.5)"
+      ],
+      "h2_count": 4,
+      "h3_count": 1,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "resources/av-over-ip-vs-hdbaset.html": {
+      "rel_path": "resources/av-over-ip-vs-hdbaset.html",
+      "title": "AV-over-IP vs HDBaseT | Campus Signal Routing | GPSPL India",
+      "title_len": 59,
+      "title_status": "OK",
+      "desc": "Technical comparison between HDBaseT and AV-over-IP. Learn about bandwidth, latency, network switch requirements, and corporate campus installations.",
+      "desc_len": 149,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/resources/av-over-ip-vs-hdbaset",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "AV-over-IP vs. HDBaseT: Designing Campus-Wide Signal Distribution"
+      ],
+      "h2_count": 5,
+      "h3_count": 1,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "resources/boardroom-acoustic-planning.html": {
+      "rel_path": "resources/boardroom-acoustic-planning.html",
+      "title": "Boardroom Acoustic Planning | RT60 & Mic Arrays | GPSPL India",
+      "title_len": 61,
+      "title_status": "OK",
+      "desc": "Technical guide to boardroom acoustic design. Learn how to calculate RT60 reverberation times, NC noise ratings, and integrate beamforming microphone arrays.",
+      "desc_len": 157,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/resources/boardroom-acoustic-planning",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Corporate Boardroom Acoustic Planning: Sound Absorption, DSP, and Mic Arrays"
+      ],
+      "h2_count": 5,
+      "h3_count": 1,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "samsung-business-tv-befx-h2.html": {
+      "rel_path": "samsung-business-tv-befx-h2.html",
+      "title": "Samsung Business TV BEFX-H2 Price in India | GPSPL",
+      "title_len": 50,
+      "title_status": "OK",
+      "desc": "Authorized Samsung BEFX-H2 Business TV wholesale supplier in Delhi NCR & Pan-India. 43",
+      "desc_len": 86,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/samsung-business-tv-befx-h2",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "robots_status": "OK",
+      "h1s": [
+        "Samsung Business TV BEFX-H2 Series (BE43FH to BE85FH)"
+      ],
+      "h2_count": 8,
+      "h3_count": 8,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Product",
+        "FAQPage"
+      ],
+      "schema_valid": true
+    },
+    "samsung-commercial-display-qbc.html": {
+      "rel_path": "samsung-commercial-display-qbc.html",
+      "title": "Samsung QBC 4K Signage Display Price (43\"-85\") | GPSPL",
+      "title_len": 54,
+      "title_status": "OK",
+      "desc": "Authorized Samsung QBC commercial display supplier Delhi NCR & India. 4K UHD slim signage (QB43C to QB85C) with 16/7 runtime. Request a GPSPL wholesale quote.",
+      "desc_len": 158,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/samsung-commercial-display-qbc",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "robots_status": "OK",
+      "h1s": [
+        "Samsung QBC Series Ultra-Slim 4K UHD Signage (QB43C to QB85C)"
+      ],
+      "h2_count": 7,
+      "h3_count": 8,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Product",
+        "FAQPage"
+      ],
+      "schema_valid": true
+    },
+    "samsung-commercial-display-qmc.html": {
+      "rel_path": "samsung-commercial-display-qmc.html",
+      "title": "Samsung QMC 24/7 Commercial Display Price | GPSPL",
+      "title_len": 49,
+      "title_status": "OK",
+      "desc": "Authorized Samsung QMC 24/7 commercial display supplier Delhi NCR & India. 500 nit non-glare 4K UHD panel (QM43C to QM85C). Get direct OEM quotes from GPSPL.",
+      "desc_len": 157,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/samsung-commercial-display-qmc",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "robots_status": "OK",
+      "h1s": [
+        "Samsung QMC Series 24/7 Commercial Display (QM43C to QM85C)"
+      ],
+      "h2_count": 8,
+      "h3_count": 8,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Product",
+        "FAQPage"
+      ],
+      "schema_valid": true
+    },
+    "smart-classroom-solutions.html": {
+      "rel_path": "smart-classroom-solutions.html",
+      "title": "Smart Classroom Solutions & Interactive Panels | GPSPL",
+      "title_len": 54,
+      "title_status": "OK",
+      "desc": "Direct smart classroom solution provider in Delhi NCR for schools and colleges. 4K interactive panels, digital podiums, and teaching audio from GPSPL.",
+      "desc_len": 150,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/smart-classroom-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Turnkey Smart Classroom Solution Provider in Delhi NCR & Education AV"
+      ],
+      "h2_count": 9,
+      "h3_count": 4,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "team.html": {
+      "rel_path": "team.html",
+      "title": "GPSPL Team | Leadership, Engineering & Support",
+      "title_len": 46,
+      "title_status": "OK",
+      "desc": "GPSPL team structure across leadership, technology consultation, AV engineering, project delivery, operations and support.",
+      "desc_len": 122,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/team",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "People Behind Supply, Integration and Support"
+      ],
+      "h2_count": 3,
+      "h3_count": 7,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "technology-partners.html": {
+      "rel_path": "technology-partners.html",
+      "title": "Technology Partners & Distributor Ecosystem | GPSPL",
+      "title_len": 51,
+      "title_status": "OK",
+      "desc": "GPSPL works with LG, Harman, JBL, Samsung, Sony, HP Poly, Wacom, Lumens, Crestron, AMX, ATEN, Epson and Luminous for enterprise projects.",
+      "desc_len": 137,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/technology-partners",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Technology brands GPSPL supplies, integrates and supports."
+      ],
+      "h2_count": 6,
+      "h3_count": 37,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "terms-disclaimer.html": {
+      "rel_path": "terms-disclaimer.html",
+      "title": "Terms & Disclaimer | Commercial Policies | GPSPL",
+      "title_len": 48,
+      "title_status": "OK",
+      "desc": "Official Terms of Use, Commercial Scope Conditions, and Warranty Disclaimers of Global Peripheral Solutions Pvt. Ltd. (GPSPL) New Delhi.",
+      "desc_len": 136,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/terms-disclaimer",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Terms & Disclaimer"
+      ],
+      "h2_count": 7,
+      "h3_count": 1,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "WebPage"
+      ],
+      "schema_valid": true
+    },
+    "thank-you.html": {
+      "rel_path": "thank-you.html",
+      "title": "Thank You for Contacting GPSPL",
+      "title_len": 30,
+      "title_status": "OK",
+      "desc": "Thank you for contacting GPSPL. Our team will review your technology supply, integration, support or AMC enquiry and respond shortly.",
+      "desc_len": 133,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/thank-you",
+      "canonical_status": "OK",
+      "robots": "noindex, nofollow",
+      "robots_status": "OK",
+      "h1s": [
+        "Thank you for contacting GPSPL."
+      ],
+      "h2_count": 0,
+      "h3_count": 1,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "WebPage"
+      ],
+      "schema_valid": true
+    },
+    "turnkey-av-projects-india.html": {
+      "rel_path": "turnkey-av-projects-india.html",
+      "title": "Turnkey AV System Integrator in Delhi NCR & India | GPSPL",
+      "title_len": 57,
+      "title_status": "OK",
+      "desc": "Turnkey AV project planning across India: corporate offices, smart classrooms, auditoriums, commercial TVs, LED walls, and pro sound systems from GPSPL.",
+      "desc_len": 152,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/turnkey-av-projects-india",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Turnkey AV system integration for conference rooms, campuses and commercial venues"
+      ],
+      "h2_count": 5,
+      "h3_count": 10,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "unified-communication-collaboration.html": {
+      "rel_path": "unified-communication-collaboration.html",
+      "title": "Teams, Zoom & BYOD Meeting Room Planning | GPSPL",
+      "title_len": 48,
+      "title_status": "OK",
+      "desc": "Compare dedicated meeting-room and laptop-based collaboration workflows. Plan Teams, Zoom, guest access and IT requirements with GPSPL in Delhi NCR and India.",
+      "desc_len": 158,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/unified-communication-collaboration",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Teams, Zoom & BYOD Collaboration Planning"
+      ],
+      "h2_count": 23,
+      "h3_count": 55,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "ups-power-backup-solutions.html": {
+      "rel_path": "ups-power-backup-solutions.html",
+      "title": "UPS & Power Backup Supply Delhi NCR, India | GPSPL",
+      "title_len": 50,
+      "title_status": "OK",
+      "desc": "Discuss UPS capacity, runtime and power backup for AV, IT and control rooms. Share your load, site and quantity for supply or installation in Delhi NCR and India.",
+      "desc_len": 162,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/ups-power-backup-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "UPS & Power Backup Solutions"
+      ],
+      "h2_count": 10,
+      "h3_count": 13,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "BreadcrumbList"
+      ],
+      "schema_valid": true
+    },
+    "video-technologies.html": {
+      "rel_path": "video-technologies.html",
+      "title": "PTZ Cameras & Video Conferencing Tech India | GPSPL",
+      "title_len": 51,
+      "title_status": "OK",
+      "desc": "PTZ camera supply for conference rooms, lecture capture, auditoriums, and studios across India. Request a direct OEM wholesale quote from GPSPL engineers.",
+      "desc_len": 154,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/video-technologies",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "PTZ Cameras & Video Conferencing Solutions"
+      ],
+      "h2_count": 10,
+      "h3_count": 20,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    },
+    "video-wall-solutions.html": {
+      "rel_path": "video-wall-solutions.html",
+      "title": "Video Wall Solutions Delhi NCR & Pan-India | GPSPL",
+      "title_len": 50,
+      "title_status": "OK",
+      "desc": "Plan video walls for control rooms, retail, corporate and public spaces. Discuss display technology, controllers, mounting, installation and maintenance.",
+      "desc_len": 153,
+      "desc_status": "OK",
+      "canonical": "https://gpspl.co.in/video-wall-solutions",
+      "canonical_status": "OK",
+      "robots": "index, follow, max-image-preview:large",
+      "robots_status": "OK",
+      "h1s": [
+        "Control Room Solutions & Video Wall Integration"
+      ],
+      "h2_count": 23,
+      "h3_count": 41,
+      "h1_status": "OK",
+      "broken_internal_links": [],
+      "redirect_links": [],
+      "missing_alt_count": 0,
+      "missing_dim_count": 0,
+      "lazy_hero_count": 0,
+      "og_status": "OK",
+      "schema_types": [
+        "Unknown"
+      ],
+      "schema_valid": true
+    }
+  }
+}
