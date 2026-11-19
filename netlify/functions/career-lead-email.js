@@ -87,11 +87,8 @@ exports.handler = async (event) => {
     if (!isGenuineEmail(app.email)) return json(400, { error: 'Invalid email' }, baseHeaders);
 
     const from = process.env.CAREER_MAIL_FROM || process.env.MAIL_FROM || 'GPSPL Careers <careers@gpspl.co.in>';
-    const defaultCareerEmails = 'global@gpspl.co.in';
-    const team = (process.env.CAREER_TEAM_EMAILS || process.env.LEAD_NOTIFICATION_EMAILS || defaultCareerEmails)
-        .split(',')
-        .map((email) => email.trim())
-        .filter(Boolean);
+    // All company enquiry notifications go to the user-designated sales inbox.
+    const team = ['global@gpspl.co.in'];
 
     const candidateName = clean(app.fullName, 120) || 'Candidate';
     const email = clean(app.email, 180);

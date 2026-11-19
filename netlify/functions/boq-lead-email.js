@@ -93,11 +93,8 @@ exports.handler = async (event) => {
     if (!isGenuineEmail(lead.email)) return json(400, { error: 'Invalid email' }, baseHeaders);
 
     const from = process.env.BOQ_MAIL_FROM || process.env.MAIL_FROM || 'GPSPL <no-reply@gpspl.co.in>';
-    const defaultTeamEmails = 'global@gpspl.co.in';
-    const team = (process.env.BOQ_TEAM_EMAILS || process.env.LEAD_NOTIFICATION_EMAILS || defaultTeamEmails)
-        .split(',')
-        .map((email) => email.trim())
-        .filter(Boolean);
+    // All company enquiry notifications go to the user-designated sales inbox.
+    const team = ['global@gpspl.co.in'];
 
     const clientName = clean(lead.name, 120) || 'there';
     const company = clean(lead.company, 160) || 'Not shared';
@@ -116,7 +113,7 @@ exports.handler = async (event) => {
             <p><strong>Planning estimate:</strong> ${estimate || 'Shared in downloaded proposal'}<br>
             <strong>Rooms:</strong> ${roomCount || 'As selected in calculator'}</p>
             <p>For final pricing, GPSPL will validate site condition, equipment selection, cable routes, mounting, warranty and installation scope.</p>
-            <p style="margin-top:18px"><strong>GPSPL</strong><br>www.gpspl.co.in<br>info@gpspl.co.in<br>+91 89208 30377</p>
+            <p style="margin-top:18px"><strong>GPSPL</strong><br>www.gpspl.co.in<br>global@gpspl.co.in<br>+91 89208 30377</p>
         </div>
     `;
 

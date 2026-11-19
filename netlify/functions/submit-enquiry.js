@@ -310,11 +310,8 @@ export const handler = async (event = {}) => {
 
     // 9. DISPATCH ALERTS TO TEAM
     const istTime = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' });
-    const defaultTeamEmails = 'global@gpspl.co.in';
-    const recipientEmails = (process.env.LEAD_NOTIFICATION_EMAILS || defaultTeamEmails)
-        .split(',')
-        .map(e => e.trim())
-        .filter(Boolean);
+    // All company enquiry notifications go to the user-designated sales inbox.
+    const recipientEmails = ['global@gpspl.co.in'];
 
     const emailSubject = `⚡ NEW VERIFIED LEAD: [${requirement}] ${name} - ${company || 'Individual'}`;
     const emailHtml = `
