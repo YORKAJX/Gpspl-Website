@@ -295,10 +295,10 @@
             description: "Plan AV for experience centers, showrooms and studios: LED displays, audio, interactive content and control. Discuss equipment supply or turnkey integration.", type: "service" },
         "av-project-discovery-consultation.html": { title: "AV Solutions India: Single Equipment to Turnkey Projects | GPSPL",
             description: "One commercial camera, display or speaker—or a complete classroom, retail, digital-signage or enterprise AV project. Get equipment supply, BOQ, design, integration and support from GPSPL.", type: "service" },
-        "lg-commercial-tv-nu88c.html": { title: "LG NU88C Commercial TV Delhi NCR & India | GPSPL",
-            description: "LG NU88C commercial TV enquiries for Delhi NCR and Pan-India buyers. Request model-specific availability, pricing, delivery and installation scope.", type: "product" },
-        "lg-commercial-tv-ua831c.html": { title: "LG UA831C Commercial TV Delhi NCR & India | GPSPL",
-            description: "LG UA831C commercial TV enquiries for Delhi NCR and Pan-India buyers. Explore model details and request pricing, stock and installation scope.", type: "product" },
+        "lg-commercial-tv-nu88c.html": { title: "LG NU88C Commercial TV Pricing & Bulk Supply | GPSPL",
+            description: "Request LG NU88C commercial TV pricing for hotels, hospitals and corporate spaces. Compare 43-inch to 65-inch models, quantity and installation scope.", type: "product" },
+        "lg-commercial-tv-ua831c.html": { title: "LG UA831C Commercial TV Pricing & Bulk Supply | GPSPL",
+            description: "Request LG UA831C commercial TV pricing for retail, hospitality and meeting spaces. Compare 43-inch to 75-inch models, quantities and installation scope.", type: "product" },
         "command-control-center-av-solutions.html": {
             title: "Command & Control Room AV Delhi NCR, India | GPSPL",
             description: "Discuss control room video walls, KVM switching, operator displays, power backup and integration for NOC and SOC projects in Delhi NCR and across India.",
@@ -338,8 +338,8 @@
             type: "article"
         },
         "samsung-business-tv-befx-h2.html": {
-            title: "Samsung Business TV Delhi NCR & India Supply | GPSPL",
-            description: "Samsung BEFX-H2 Business TV enquiries for Delhi NCR and Pan-India buyers. Request model-specific pricing, availability, delivery and installation scope.",
+            title: "Samsung BEFX-H2 Business TV Pricing & Bulk Supply | GPSPL",
+            description: "Request Samsung BEFX-H2 Business TV pricing for 43-inch to 85-inch retail, office and hospitality requirements. Single units and bulk supply enquiries.",
             type: "product"
         },
         "samsung-commercial-display-qbc.html": {
