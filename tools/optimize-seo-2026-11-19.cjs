@@ -12,7 +12,7 @@ const pages = {
   'audio-visual-integration.html': ['AV System Integrator Delhi NCR | Turnkey Projects | GPSPL', 'One accountable team for AV design, BOQ, supply, installation, programming and handover across conference rooms, campuses, hotels and public venues.']
 };
 
-const attr = (value) => value.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+const attr = (value) => value.replace(/&amp;/g, '&').replace(/&/g, '&amp;').replace(/"/g, '&quot;');
 
 for (const [file, [title, description, h1]] of Object.entries(pages)) {
   let source = fs.readFileSync(file, 'utf8');
