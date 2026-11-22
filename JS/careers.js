@@ -207,14 +207,14 @@ const GPSPL_JOBS = [
   {
     id: "junior-project-manager-av-digital-signage",
     slug: "junior-project-manager-av-digital-signage",
-    title: "Junior Project Manager – AV & Digital Signage",
+    title: "Project Manager – AV & Digital Signage",
     department: "Projects & Operations",
     experience: "2+ Years",
     experienceRequirement: "Minimum 2 years in AV, ELV, digital signage or system integration",
     employmentType: "Full-Time",
     location: "Delhi NCR",
     shortDescription: "Coordinate the execution of AV and digital signage projects from planning and material tracking through commissioning and handover.",
-    aboutRole: "GPSPL is seeking a Junior Project Manager to support on-site delivery of AV and digital signage projects. You will work with engineers, technicians, vendors and clients to keep project schedules, materials, installation quality and documentation on track.",
+    aboutRole: "GPSPL is seeking a Project Manager to support on-site delivery of AV and digital signage projects. You will work with engineers, technicians, vendors and clients to keep project schedules, materials, installation quality and documentation on track.",
     responsibilities: [
       "Coordinate day-to-day execution of AV and Digital Signage projects",
       "Assist in project planning, scheduling and progress tracking",
