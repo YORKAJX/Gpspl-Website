@@ -765,13 +765,6 @@
             "telephone": PHONE,
             "email": EMAIL,
             "priceRange": "$$",
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "148",
-                "bestRating": "5",
-                "worstRating": "1"
-            },
             "description": "GPSPL is a New Delhi based AV system integrator, enterprise technology distributor and project support partner for conference rooms, boardrooms, smart classrooms, Active LED walls, video walls, professional audio, IT infrastructure and AMC across Delhi NCR and India.",
             "contactPoint": [
                 {
@@ -994,27 +987,6 @@
         return mainEntity.length ? { '@type': 'FAQPage', '@id': url + '#faq', mainEntity } : null;
     }
 
-    function productSchema(cfg, url, image) {
-        return {
-            "@type": "Product",
-            "@id": `${url}#product`,
-            "name": cfg.title.replace(/\s*\|\s*GPSPL.*$/i, ""),
-            "description": cfg.description,
-            "image": image,
-            "brand": {
-                "@type": "Brand",
-                "name": "GPSPL Technology Portfolio"
-            },
-            "offers": {
-                "@type": "Offer",
-                "url": url,
-                "priceCurrency": "INR",
-                "availability": "https://schema.org/InStock",
-                "seller": { "@id": `${BASE_URL}/#organization` }
-            }
-        };
-    }
-
     function boqCalculatorSchema(url) {
         return {
             "@type": "WebApplication",
@@ -1152,9 +1124,9 @@
             graph.push(itemListSchema(url));
         }
 
-        if (productPages.has(key)) {
-            graph.push(productSchema({ ...cfg, title, description }, url, image));
-        }
+        // Quote-only pages retain WebPage and breadcrumb metadata. Do not fabricate
+        // a generic product brand, stock status or price-less Offer. Product-specific
+        // markup belongs to the page and must reflect its published information.
 
         if (key === "index.html") {
             graph.push(boqCalculatorSchema(url));

@@ -6,7 +6,7 @@ for(const file of fs.readdirSync('.').filter(x=>x.endsWith('.html'))) {
  const html=fs.readFileSync(file,'utf8');pages++;
  for(const [,json] of html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)){assert.doesNotThrow(()=>JSON.parse(json),file);blocks++;}
 }
-const source=fs.readFileSync('JS/seo.js','utf8');const start=source.indexOf('    function faqSchema('),end=source.indexOf('    function productSchema(',start);const code=source.slice(start,end);
+const source=fs.readFileSync('JS/seo.js','utf8');const start=source.indexOf('    function faqSchema('),end=source.indexOf('    function boqCalculatorSchema(',start);const code=source.slice(start,end);
 function schema(items){const get=vm.runInNewContext(code+'\nfaqSchema',{document:{querySelectorAll:()=>items}});return get('https://gpspl.co.in/example');}
 const item=(question,answer)=>({querySelector:s=>s.startsWith('summary')?{textContent:question}:{textContent:answer}});
 assert.equal(schema([]),null);
@@ -39,3 +39,8 @@ const nested=cmsBreadcrumb([['Home','/'],['Section',null],['Partners','/technolo
 assert.deepEqual(Array.from(nested.itemListElement,x=>x.position),[1,2,3]);
 assert.equal(nested.itemListElement[1].item,'https://gpspl.co.in/technology-partners');
 console.log('PASS: CMS breadcrumb item URLs, relative links, final canonical and intermediate labels.');
+
+assert.ok(!source.includes('"GPSPL Technology Portfolio"'), 'No invented generic product brand');
+assert.ok(!source.includes('"reviewCount": "148"'), 'No hardcoded company review count');
+assert.ok(!source.includes('graph.push(productSchema('), 'No duplicate price-less product offer');
+console.log('PASS: shared SEO omits unverified ratings and generic product offers.');
