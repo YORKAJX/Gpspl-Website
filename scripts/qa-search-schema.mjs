@@ -17,3 +17,25 @@ assert.equal(faq.mainEntity[0].name,'What is supplied?');
 assert.equal(faq.mainEntity[0].acceptedAnswer.text,'Displays, cameras and audio.');
 assert.ok(!JSON.stringify(faq).includes('4.9'));
 console.log(`PASS: ${pages} root pages / ${blocks} valid JSON-LD blocks; FAQs use actual DOM answers, skip empty answers and deduplicate questions.`);
+
+// Regression: CMS breadcrumbs previously omitted item URLs (GSC missing item).
+const cmsSource=fs.readFileSync('JS/cms-seo-schema.js','utf8');
+function cmsBreadcrumb(labels){
+ let output;
+ const canonical='https://gpspl.co.in/careers';
+ vm.runInNewContext(cmsSource,{URL,window:{location:{href:canonical}},document:{
+  title:'Careers',body:{dataset:{}},
+  querySelector:s=>s==='link[rel="canonical"]'?{href:canonical}:null,
+  querySelectorAll:()=>labels.map(([textContent,href])=>({textContent,getAttribute:()=>href})),
+  createElement:()=>({dataset:{}}),head:{appendChild:s=>{output=JSON.parse(s.text);}}
+ }});
+ return output['@graph'].find(x=>x['@type']==='BreadcrumbList');
+}
+const crumb=cmsBreadcrumb([['Home','/'],['/',null],['Careers',null]]);
+assert.deepEqual(Array.from(crumb.itemListElement,x=>x.item),['https://gpspl.co.in/','https://gpspl.co.in/careers']);
+assert.deepEqual(Array.from(crumb.itemListElement,x=>x.position),[1,2]);
+assert.equal(cmsBreadcrumb([['Home','/']]),undefined);
+const nested=cmsBreadcrumb([['Home','/'],['Section',null],['Partners','/technology-partners'],['Careers',null]]);
+assert.deepEqual(Array.from(nested.itemListElement,x=>x.position),[1,2,3]);
+assert.equal(nested.itemListElement[1].item,'https://gpspl.co.in/technology-partners');
+console.log('PASS: CMS breadcrumb item URLs, relative links, final canonical and intermediate labels.');

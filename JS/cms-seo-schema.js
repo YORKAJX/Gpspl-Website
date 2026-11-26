@@ -36,19 +36,23 @@
         }
     ];
 
-    const breadcrumbLinks = Array.from(document.querySelectorAll('.breadcrumbs a, .breadcrumbs span'))
-        .map((item) => item.textContent.trim())
-        .filter(Boolean)
-        .filter((item) => item !== '/');
+    const breadcrumbNodes = Array.from(document.querySelectorAll('.breadcrumbs a, .breadcrumbs span'))
+        .filter((node) => node.textContent.trim() && node.textContent.trim() !== '/');
+    const breadcrumbItems = breadcrumbNodes.map((node, index) => {
+        const href = node.getAttribute('href');
+        // Intermediate crumbs must identify a linked page. The final label is this page.
+        if (!href && index !== breadcrumbNodes.length - 1) return null;
+        return {
+            '@type': 'ListItem',
+            name: node.textContent.trim(),
+            item: href ? new URL(href, canonical).href : canonical
+        };
+    }).filter(Boolean).map((item, index) => ({ ...item, position: index + 1 }));
 
-    if (breadcrumbLinks.length) {
+    if (breadcrumbItems.length > 1) {
         graph.push({
             '@type': 'BreadcrumbList',
-            itemListElement: breadcrumbLinks.map((name, index) => ({
-                '@type': 'ListItem',
-                position: index + 1,
-                name
-            }))
+            itemListElement: breadcrumbItems
         });
     }
 
