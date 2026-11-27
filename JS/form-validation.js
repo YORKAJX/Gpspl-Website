@@ -192,6 +192,8 @@
         const formData = new FormData(form);
         const projectContext = [
           ["Buyer role", formData.get("buyer_role")],
+          ["Purchase scope", formData.get("purchase_scope")],
+          ["Quantity / rooms / sites", formData.get("quantity_scope")],
           ["Company / institution", formData.get("company")],
           ["Project city", formData.get("city")],
           ["Expected timing", formData.get("timeline")]

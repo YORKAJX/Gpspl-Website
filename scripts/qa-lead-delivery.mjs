@@ -57,7 +57,7 @@ async function frontendCase(file, response) {
   const document = { readyState: 'complete', createElement(tag) { return { tag, style: {}, children: [], appendChild(node) { this.children.push(node); } }; }, querySelectorAll: () => [form], addEventListener() {}, dispatchEvent(e) { if (e.type === 'gpspl:lead-form-success') successes++; } };
   const context = { document, window: { location: { href: 'https://gpspl.co.in/contact', pathname: '/contact', origin: 'https://gpspl.co.in', assign() { redirects++; } } },
     URL, AbortController, CustomEvent: class { constructor(type, options) { this.type = type; this.detail = options?.detail; } },
-    FormData: class { get(key) { return ({ name: 'QA Buyer', phone: '9123456706', buyer_role: 'Buying for our own organisation / premises', city: 'Noida', timeline: 'Within 30 days', message: 'Upgrade our meeting room' })[key] || ''; } entries() { return [['name', 'QA Buyer'], ['phone', '9123456706']][Symbol.iterator](); } },
+    FormData: class { get(key) { return ({ name: 'QA Buyer', phone: '9123456706', buyer_role: 'Buying for our own organisation / premises', purchase_scope: 'Supply and installation', quantity_scope: '2 rooms', city: 'Noida', timeline: 'Within 30 days', message: 'Upgrade our meeting room' })[key] || ''; } entries() { return [['name', 'QA Buyer'], ['phone', '9123456706']][Symbol.iterator](); } },
     btoa: s => Buffer.from(s).toString('base64'), setTimeout(fn, ms) { assert.equal(ms, 20000); return 1; }, clearTimeout() {},
     fetch: async (url, options) => { submittedPayload = JSON.parse(options.body); requests++; if (response instanceof Error) throw response; return { ok: response.ok, status: response.status || 200, json: async () => response.data }; } };
   vm.runInNewContext(fs.readFileSync(file, 'utf8'), context);
@@ -65,6 +65,8 @@ async function frontendCase(file, response) {
   for (let i = 0; i < 6; i++) await new Promise(resolve => setImmediate(resolve));
   assert.equal(requests, 1);
   assert.ok(submittedPayload.message.includes('Buyer role: Buying for our own organisation'));
+  assert.ok(submittedPayload.message.includes('Purchase scope: Supply and installation'));
+  assert.ok(submittedPayload.message.includes('Quantity / rooms / sites: 2 rooms'));
   assert.ok(submittedPayload.message.includes('Project city: Noida'));
   assert.ok(submittedPayload.message.includes('Upgrade our meeting room'));
   const accepted = !(response instanceof Error) && response.ok && response.data.success === true && !response.data.skipped && response.data.status !== "queued";
