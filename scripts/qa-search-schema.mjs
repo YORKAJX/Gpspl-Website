@@ -44,3 +44,19 @@ assert.ok(!source.includes('"GPSPL Technology Portfolio"'), 'No invented generic
 assert.ok(!source.includes('"reviewCount": "148"'), 'No hardcoded company review count');
 assert.ok(!source.includes('graph.push(productSchema('), 'No duplicate price-less product offer');
 console.log('PASS: shared SEO omits unverified ratings and generic product offers.');
+
+// Quote-only pages must not advertise unsupported product prices or stock.
+for (const slug of ['lg-commercial-tv-ua831c', 'lg-commercial-tv-nu88c', 'samsung-commercial-display-qmc']) {
+ const html=fs.readFileSync(slug+'.html','utf8');
+ const nodes=[];
+ for (const [,raw] of html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)) {
+  const data=JSON.parse(raw); nodes.push(...(data['@graph'] || [data]));
+ }
+ const page=nodes.find(node=>node['@type']==='WebPage');
+ assert.equal(page?.url, 'https://gpspl.co.in/'+slug);
+ assert.ok(page?.about?.name, slug+': retain the named product subject');
+ assert.ok(!nodes.some(node=>node['@type']==='Product'), slug+': no unsupported rich-product eligibility');
+ assert.ok(!JSON.stringify(nodes).match(/"(?:offers|lowPrice|highPrice|availability|aggregateRating)"/), slug+': no unverified commercial claims in schema');
+ if(slug.startsWith('lg-')) assert.ok(nodes.some(node=>node['@type']==='BreadcrumbList'), 'Preserve existing breadcrumbs');
+}
+console.log('PASS: three quotation pages retain identity and omit unsupported commercial offers.');
