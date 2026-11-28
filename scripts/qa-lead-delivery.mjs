@@ -62,6 +62,8 @@ async function frontendCase(file, response) {
     fetch: async (url, options) => { submittedPayload = JSON.parse(options.body); requests++; if (response instanceof Error) throw response; return { ok: response.ok, status: response.status || 200, json: async () => response.data }; } };
   vm.runInNewContext(fs.readFileSync(file, 'utf8'), context);
   submit({ preventDefault() {} });
+  assert.equal(status.className, 'form-submit-status is-active', 'Pending delivery must not display success styling');
+  submit({ preventDefault() {} });
   for (let i = 0; i < 6; i++) await new Promise(resolve => setImmediate(resolve));
   assert.equal(requests, 1);
   assert.ok(submittedPayload.message.includes('Buyer role: Buying for our own organisation'));
@@ -81,6 +83,9 @@ async function frontendCase(file, response) {
     assert.ok(new URL(whatsapp.href).searchParams.get('text').includes('not confirmed'));
     assert.ok(new URL(whatsapp.href).searchParams.get('text').includes('Project city: Noida'));
     assert.equal(call.href, 'tel:+918920830377');
+    submit({ preventDefault() {} });
+    for (let i = 0; i < 6; i++) await new Promise(resolve => setImmediate(resolve));
+    assert.equal(requests, 2, 'A failed delivery must allow a deliberate retry');
   } else { assert.equal(recoveryNodes.length, 0); }
 }
 for (const file of ['JS/form-validation.js']) {

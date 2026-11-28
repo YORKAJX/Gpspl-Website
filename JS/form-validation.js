@@ -153,8 +153,13 @@
       if (form.dataset.validationBound === "true") return;
       form.dataset.validationBound = "true";
       form.setAttribute("novalidate", "novalidate");
+      let submissionPending = false;
 
       form.addEventListener("submit", (event) => {
+        if (submissionPending) {
+          event.preventDefault();
+          return;
+        }
         clearErrors(form);
         enrichHiddenFields(form);
         const errors = validate(form);
@@ -177,6 +182,7 @@
         // Form is valid - process submission
         event.preventDefault();
 
+        submissionPending = true;
         const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
         if (submitBtn) {
           submitBtn.disabled = true;
@@ -185,7 +191,7 @@
         }
 
         const box = statusBox(form);
-        box.className = "form-submit-status is-success";
+        box.className = "form-submit-status is-active";
         box.textContent = "Submitting your enquiry securely...";
         track("lead_form_validated", { form_name: label, page_url: window.location.href });
 
@@ -242,6 +248,7 @@
             window.location.assign(action.href);
           }
         }).catch(error => {
+          submissionPending = false;
           clearTimeout(timeout);
           box.className = "form-submit-status is-error";
           box.textContent = error.name === "AbortError"
