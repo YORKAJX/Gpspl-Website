@@ -22,14 +22,6 @@
       ]
     },
     {
-      "pathname": "/blog/samsung-business-tv-commercial-signage-guide",
-      "incoming": 2,
-      "sources": [
-        "/industries",
-        "/resources"
-      ]
-    },
-    {
       "pathname": "/blog/hospital-healthcare-av-integration-ot-streaming-telemedicine-guide",
       "incoming": 2,
       "sources": [
@@ -60,9 +52,10 @@
     },
     {
       "pathname": "/blog/gym-fitness-studio-sound-system-installation-cost-india",
-      "incoming": 1,
+      "incoming": 2,
       "sources": [
-        "/industries"
+        "/industries",
+        "/professional-audio-solutions"
       ]
     },
     {
@@ -78,27 +71,6 @@
       "incoming": 1,
       "sources": [
         "/audio-visual-integration"
-      ]
-    },
-    {
-      "pathname": "/resources/active-led-pixel-pitch-guide",
-      "incoming": 1,
-      "sources": [
-        "/resources"
-      ]
-    },
-    {
-      "pathname": "/resources/av-over-ip-vs-hdbaset",
-      "incoming": 1,
-      "sources": [
-        "/resources"
-      ]
-    },
-    {
-      "pathname": "/resources/boardroom-acoustic-planning",
-      "incoming": 1,
-      "sources": [
-        "/resources"
       ]
     }
   ]
